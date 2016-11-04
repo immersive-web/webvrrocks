@@ -21,7 +21,6 @@ module.exports = React.createClass({
     }
   },
   render () {
-    const docsActive = includes(this.props.location.pathname, '/docs/')
     const examplesActive = includes(this.props.location.pathname, '/examples/')
 
     return (
@@ -90,23 +89,6 @@ module.exports = React.createClass({
                   }}
                 >
                   Examples
-                </Link>
-                <Link
-                  to={prefixLink('/docs/')}
-                  style={{
-                    background: docsActive ? activeColors.bg : colors.bg,
-                    color: docsActive ? activeColors.fg : colors.fg,
-                    float: 'right',
-                    textDecoration: 'none',
-                    paddingLeft: rhythm(1/2),
-                    paddingRight: rhythm(1/2),
-                    paddingBottom: rhythm(3/4),
-                    marginBottom: rhythm(-1),
-                    paddingTop: rhythm(1),
-                    marginTop: rhythm(-1),
-                  }}
-                >
-                  Documentation
                 </Link>
               </Span>
             </Grid>
