@@ -168,6 +168,8 @@ WebVR is a platform for building and experiencing Virtual Reality content for We
              * Mozilla.org
                  * San Francisco
                  * Mountain View
+             * [NotionVR Arcade](https://notiontheory.com/notionvr)
+                 * [Washington, DC](https://www.google.com/maps/place/MakeOffices+at+Dupont+Circle/@38.9131022,-77.050476,15z/data=!4m8!1m2!2m1!1smake+office!3m4!1s0x89b7b7b861e28c81:0xf9046ae9d8ff2cf0!8m2!3d38.9059452!4d-77.0418754)
     * Configure and test
     * Quick 5-minute guide
         * View [demos](/demos/) and [showcase](/demos/showcase/)
