@@ -21,6 +21,281 @@
 
 # WebVR Rocks
 
+## Home
+
+### Header nav
+
+* WebVR + WebVR Rocks logos
+* Navigation
+    * How it works
+    * Download browsers
+    * Demos
+    * FAQ
+    * Documentation
+    * Community
+    * Blog posts
+* Chanelog/news updates banner
+
+### Main content
+
+WebVR is a platform for building and experiencing Virtual Reality content for Web browsers.
+
+* Download WebVR browser!
+    * Watch video
+* Open, browser-standard specification
+    * W3C Specification (Editor's Draft)
+    * W3C Community Group
+* Have a headset?
+    * Detected?
+        * Yes? Show directions
+        * No? Show where to purchase
+    * Show compatibility of browsers (with small icons) next to each heaedset
+* WebVR Animation
+    * Showing flow for experiencing WebVR
+* Experience WebVR
+    * Browsers
+    * Headsets
+    * News, updates, & tutorials
+        * Blog articles
+        * Changelog
+        * Guides
+        * Case studies
+    * Demos
+        * Tests (compatability, acid)
+        * Showcase
+            * Directory
+* Develop for WebVR
+    * News, updates, & tutorials
+        * Blog articles
+        * Changelog
+        * Tutorials
+        * Case studies
+    * Documentation
+    * Tests
+        * Compatibility (acid) tests
+        * Peformance tests
+    * Tools
+        * Frameworks
+            * A-Frame
+            * React VR
+            * Primrose
+            * three.js
+            * Babylon.js
+            * PlayCanvas
+        * Graphical editors
+            * A-Frame Inspector
+            * Vizor
+        * Simulators
+            * Chrome
+        * Recorder
+            * Firefox
+            * Chrome
+        * Debugging
+            * Firefox
+            * Chrome
+            * Samsung Internet Browser (Gear VR)
+
+### Footer
+
+* About WebVR Rocks
+    * [Contribute articles](/contributing/#articles)
+    * [Typos and Corrections](/contributing/#corrections)
+    * [Feedback](/contact/#feedback)
+    * [Report an issue)(/contact/#issue)
+* Community
+    * [W3C WebVR Community Group](/contributing/#w3c-commmunity-group)
+    * [WebVR Code of Conduct](/code-of-conduct/)
+    * [Ways to contribute](/contributing/)
+    * [WebVR email discussion list](https://mail.mozilla.org/listinfo/web-vr-discuss)
+    * [WebVR chat on Slack](https://chat.webvr.rocks/)
+    * [Events & Groups](/events-and-groups/)
+    * [@WebVRRocks on GitHub](https://github.com/webvrrocks)
+    * [@WebVRRocks on Twitter](https://twitter.com/webvrrocks)
+* Licenses
+    * WebVR API specification
+        * Apache
+    * Site content, posts
+        * Creative Commons PD0
+    * Site code
+
+## Documentation
+
+### Using the WebVR API
+
+* What is WebVR?
+    * Why?
+    * How?
+    * What?
+* Get started
+    * How it works
+    * Download browsers
+    * Headsets
+        * WebVR-ready browsers
+             * (use JS feature detection with user-toggleable radio buttons; if VR headset connected, highlight available options and dim out other out-of-date and strike-through unsupported selecions)
+             * Mozilla Firefox
+                 * Download for Windows
+             * Google Chrome
+                 * Download for Google Daydream
+                 * Download experimental Windows builds
+             * Samsung Internet Browser for Gear VR
+                 * Download for Samsung Gear VR
+             * Microsoft Edge
+             * Oculus Carmel
+                 * Download for Samsung Gear VR
+             * Mozilla Servo
+                 * Download for Windows
+         * Supported VR headsets
+             * Oculus Rift
+             * HTC Vive
+             * Samsung Gear VR
+             * Google Daydream
+             * OSVR DK2
+             - Notes
+                 * Use JS feature detection, with user-toggleable radio buttons (if VR headset connected, highlight available options and dim out others)
+                 * Common sections
+                     * Info
+                         * Requirements
+                             * PC/mobile hardware
+                             * Operating systems
+                             * Browsers
+                     * Buy
+                     * Setup instructions
+                     * Demos
+                         * Testing
+                     * Troubleshooting
+         * Find a VR hackerspace
+             * Roomscale.org
+             * Mozilla.org
+                 * San Francisco
+                 * Mountain View
+    * Configure and test
+    * Quick 5-minute guide
+        * View [demos](/demos/) and [showcase](/demos/showcase/)
+* FAQ
+* Roadmap
+* Specification
+    * W3C Community Group
+    * View source on GitHub
+    * How to contribute
+    * Known issues
+    * Roadmap
+    * Code of Conduct
+* Integrations
+    - Third-party tools, helpers, frameworks, boilerplates
+* Troubeleshooting Tips
+    * Firefox
+    * Chrome
+    * Samsung Internet Browser (Gear VR)
+    - Common sections
+        * Scene recorders (motion capture, with annotations)
+* Feedback
+    * Reporting issues
+         * Browsers
+         * VR headsets
+         * WebVR sites in the wild
+         * WebVR Rocks
+         * Other help!
+    * Reporting issues
+* External links
+
+### Making WebVR content
+
+* Tools
+    * Frameworks
+        * A-Frame
+        * React VR
+    * Primrose
+    * three.js
+    * Babylon.js
+    * PlayCanvas
+* WebVR Cookbook
+    * Code snippets/recipes for common patterns
+    * Low-level API
+    * WebGL
+    * three.js
+    * A-Frame
+    * Babylon.js
+    * stack.gl
+    * regl
+    * Advanced usage
+        * Shaders
+* Tests
+    * Compatibility (acid) tests
+    * Peformance tests
+* Boilerplates: download and remix (downloadable .zip, remixable, open source + fork-able on GitHub, with case studies)
+    * A-Painter drawing
+    * 360°-video player
+    * 3D-model explorer
+    * Theatre-seat viewer
+    * Voxel-world builder/explorer
+    * Real-time social classroom
+    * Living-room karaoke
+    * Postcard box
+* Graphical editors
+    * A-Frame Inspector
+    * Vizor
+* Simulators (for API + headsets)
+    * Chrome
+* Scene-capture recorders (browser extensions)
+    * Firefox
+    * Chrome
+* Integrations
+    - Third-party tools, frameworks, boilerplates
+* Troubeleshooting Tips
+    * Firefox
+    * Chrome
+    * Samsung Internet Browser (Gear VR)
+    - Common sections
+        * Developer tools
+        * Debugging tools
+        * Simulators (for API + headsets)
+        * Scene recorders
+* Feedback
+    * Reporting issues
+         * Browsers
+         * VR headsets
+         * WebVR sites in the wild
+         * WebVR Rocks
+         * Other help!
+    * Reporting issues
+* External links
+
+### WebVR Demos
+
+* Tests
+* Example boilerplates
+    * A-Painter drawing
+    * 360°-video player
+    * 3D-model explorer
+    * Theatre-seat viewer
+    * Voxel-world builder/explorer
+    * Real-time social classroom
+    * Living-room karaoke
+    * Social postcards
+    * Progressive WebVR App
+    * Storyboarding
+* Showcase
+    * Highlights
+    * Directory
+    * Case studies
+
+### Commmunity
+
+* Events & Groups
+    * Events
+       * Upcoming
+       * Past
+    * Groups
+        * Roomscale.org
+        * Mozilla VR
+
+### 
+
+
+<hr>
+
+
+# WebVR Rocks
 
 ## Header
 
@@ -34,8 +309,9 @@ _(Editor's Note: condense this list.)_
 * [Getting Started](/docs/getting-started/)
 * [Docs](/docs/)
 * [Downloads](/downloads/)
-* [Tests](/samples/)
-* [Showcase](/directory/)
+* [Demos](/demos/)
+    * [Tests](/samples/)
+    * [Showcase](/directory/)
 * [Compatibility](/compatibility)
 * [Roadmap](/docs/roadmap)
 * [FAQ](/docs/faq)
@@ -87,6 +363,16 @@ You can also view WebVR content on IOS or Android phones using browsers that do 
 * [Directory.](/directory)
 
 ### WebVR-capable browsers
+
+#### Mozilla Firefox
+
+#### Google Chrome
+
+#### Samsung Internet Browser for Gear VR
+
+#### Microsoft Edge
+
+#### Oculus Carmel
 
 ### Supported VR headsets
 
