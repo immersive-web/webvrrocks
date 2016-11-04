@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { Container, Grid, Span } from 'react-responsive-grid'
+import find from 'lodash/find'
 import { prefixLink } from 'gatsby-helpers'
 import includes from 'underscore.string/include'
 import { colors, activeColors } from 'utils/colors'
@@ -22,6 +23,36 @@ module.exports = React.createClass({
   },
   render () {
     const examplesActive = includes(this.props.location.pathname, '/examples/')
+
+    const childPages = config.docPages.map((p) => {
+      const page = find(this.props.route.pages, (_p) => _p.path === p)
+      return {
+        title: page.data.title,
+        path: page.path,
+      }
+    })
+
+    const docOptions = childPages.map((child) =>
+      <option
+        key={prefixLink(child.path)}
+        value={prefixLink(child.path)}
+      >
+        {child.title}
+      </option>
+    )
+
+    const docPages = childPages.map((child) => {
+      const isActive = prefixLink(child.path) === this.props.location.pathname
+      return (
+        <li
+          key={child.path}>
+          <Link
+            to={prefixLink(child.path)}>
+            {isActive ? <strong>{child.title}</strong> : child.title}
+          </Link>
+        </li>
+      )
+    })
 
     return (
       <div>
@@ -103,6 +134,16 @@ module.exports = React.createClass({
         >
           {this.props.children}
         </Container>
+
+        <ul
+          style={{
+            listStyle: 'none',
+            marginLeft: 0,
+            marginTop: rhythm(1/2),
+          }}
+        >
+          {docPages}
+        </ul>
       </div>
     )
   },
