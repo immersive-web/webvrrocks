@@ -1,0 +1,11 @@
+siteTitle = "WebVR Rocks"
+baseColor = "#849"
+linkPrefix = "/webvrrocks"
+docPages = [
+  "/docs/",
+  "/docs/getting-started/",
+  "/docs/how-to-run/",
+  "/docs/some-react-code/",
+  "/docs/the-next-step/",
+  "/docs/conclusion/"
+]
