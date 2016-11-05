@@ -1,5 +1,5 @@
 ---
-title: How to Run
+title: WebVR enabled Browsers
 ---
 
 Mostly you need to move your legs and arms together in coordinated
