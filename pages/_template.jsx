@@ -134,44 +134,42 @@ module.exports = React.createClass({
           </Container>
         </div>
 
-        <div>
+        <Container
+          style={{
+            maxWidth: 960,
+            padding: rhythm(3/4),
+          }}
+        >
           <Breakpoint
             mobile
           >
-            <Container
+            <nav id="nav" className="nav"
               style={{
-                maxWidth: 960,
-                paddingLeft: rhythm(3/4),
+                overflowY: 'auto',
+                paddingRight: `calc(${rhythm(1/2)} - 1px)`,
+                position: 'absolute',
+                width: `calc(${rhythm(8)} - 1px)`,
+                borderRight: '1px solid lightgrey',
               }}
             >
-              <nav id="nav" className="nav"
+              <ul
                 style={{
-                  overflowY: 'auto',
-                  paddingRight: `calc(${rhythm(1/2)} - 1px)`,
-                  position: 'absolute',
-                  width: `calc(${rhythm(8)} - 1px)`,
-                  borderRight: '1px solid lightgrey',
+                  listStyle: 'none',
+                  marginLeft: 0,
+                  marginTop: rhythm(1/2),
                 }}
               >
-                <ul
-                  style={{
-                    listStyle: 'none',
-                    marginLeft: 0,
-                    marginTop: rhythm(1/2),
-                  }}
-                >
-                  {docPages}
-                </ul>
-              </nav>
+                {docPages}
+              </ul>
+            </nav>
 
-              <div
-                style={{
-                  padding: `0 ${rhythm(1)} 0 calc(${rhythm(8)} + ${rhythm(1)})`,
-                }}
-              >
-                {this.props.children}
-              </div>
-            </Container>
+            <div
+              style={{
+                padding: `0 ${rhythm(1)} 0 calc(${rhythm(8)} + ${rhythm(1)})`,
+              }}
+            >
+              {this.props.children}
+            </div>
           </Breakpoint>
           <Breakpoint>
             <strong>Topics:</strong>
@@ -185,7 +183,7 @@ module.exports = React.createClass({
             <br />
             {this.props.children}
           </Breakpoint>
-        </div>
+        </Container>
       </div>
     )
   },
