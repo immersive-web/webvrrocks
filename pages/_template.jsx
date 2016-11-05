@@ -125,15 +125,7 @@ module.exports = React.createClass({
             </Grid>
           </Container>
         </div>
-        <ul
-          style={{
-            listStyle: 'none',
-            marginLeft: 0,
-            marginTop: rhythm(1/2),
-          }}
-        >
-          {docPages}
-        </ul>
+
         <Container
           style={{
             maxWidth: 960,
@@ -141,7 +133,33 @@ module.exports = React.createClass({
             paddingTop: 0,
           }}
         >
-          {this.props.children}
+          <nav id="nav" className="nav"
+            style={{
+              overflowY: 'auto',
+              paddingRight: `calc(${rhythm(1/2)} - 1px)`,
+              position: 'absolute',
+              width: `calc(${rhythm(8)} - 1px)`,
+              borderRight: '1px solid lightgrey',
+            }}
+          >
+            <ul
+              style={{
+                listStyle: 'none',
+                marginLeft: 0,
+                marginTop: rhythm(1/2),
+              }}
+            >
+              {docPages}
+            </ul>
+          </nav>
+
+          <div
+            style={{
+              padding: `0 ${rhythm(1)} 0 calc(${rhythm(8)} + ${rhythm(1)})`,
+            }}
+          >
+            {this.props.children}
+          </div>
         </Container>
       </div>
     )
