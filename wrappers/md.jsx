@@ -1,17 +1,18 @@
-import React from 'react'
-import DocumentTitle from 'react-document-title'
-import { config } from 'config'
+import React from 'react';
+import DocumentTitle from 'react-document-title';
+import { config } from 'config';
+import { prefixLink } from 'gatsby-helpers';
 
 module.exports = React.createClass({
   propTypes () {
     return {
-      route: React.PropTypes.object,
+      route: React.PropTypes.object
     }
   },
   render () {
-    const homeActive = this.props.location.pathname === '/'
-    const post = this.props.route.page.data
-    const title = homeActive ? config.siteTitle : `${post.title} | ${config.siteTitle}`
+    const isHome = this.props.location.pathname === prefixLink('/');
+    const post = this.props.route.page.data;
+    const title = isHome ? config.siteTitle : `${post.title} | ${config.siteTitle}`;
 
     return (
       <DocumentTitle title={title}>
@@ -20,6 +21,7 @@ module.exports = React.createClass({
           <div dangerouslySetInnerHTML={{ __html: post.body }} />
         </div>
       </DocumentTitle>
-    )
+    );
   },
-})
+});
+
