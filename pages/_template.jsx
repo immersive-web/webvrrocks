@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import Breakpoint from 'components/Breakpoint'
 import { Container, Grid, Span } from 'react-responsive-grid'
 import find from 'lodash/find'
 import { prefixLink } from 'gatsby-helpers'
@@ -21,6 +22,13 @@ module.exports = React.createClass({
       children: React.PropTypes.object,
     }
   },
+  contextTypes: {
+    router: React.PropTypes.object.isRequired,
+  },
+  handleTopicChange (e) {
+    return this.context.router.push(e.target.value)
+  },
+
   render () {
     const examplesActive = includes(this.props.location.pathname, '/examples/')
 
@@ -126,41 +134,51 @@ module.exports = React.createClass({
           </Container>
         </div>
 
-        <Container
-          style={{
-            maxWidth: 960,
-            padding: `${rhythm(1)} ${rhythm(3/4)}`,
-            paddingTop: 0,
-          }}
-        >
-          <nav id="nav" className="nav"
-            style={{
-              overflowY: 'auto',
-              paddingRight: `calc(${rhythm(1/2)} - 1px)`,
-              position: 'absolute',
-              width: `calc(${rhythm(8)} - 1px)`,
-              borderRight: '1px solid lightgrey',
-            }}
+        <div>
+          <Breakpoint
+            mobile
           >
-            <ul
+            <nav id="nav" className="nav"
               style={{
-                listStyle: 'none',
-                marginLeft: 0,
-                marginTop: rhythm(1/2),
+                overflowY: 'auto',
+                paddingRight: `calc(${rhythm(1/2)} - 1px)`,
+                position: 'absolute',
+                width: `calc(${rhythm(8)} - 1px)`,
+                borderRight: '1px solid lightgrey',
               }}
             >
-              {docPages}
-            </ul>
-          </nav>
+              <ul
+                style={{
+                  listStyle: 'none',
+                  marginLeft: 0,
+                  marginTop: rhythm(1/2),
+                }}
+              >
+                {docPages}
+              </ul>
+            </nav>
 
-          <div
-            style={{
-              padding: `0 ${rhythm(1)} 0 calc(${rhythm(8)} + ${rhythm(1)})`,
-            }}
-          >
+            <div
+              style={{
+                padding: `0 ${rhythm(1)} 0 calc(${rhythm(8)} + ${rhythm(1)})`,
+              }}
+            >
+              {this.props.children}
+            </div>
+          </Breakpoint>
+          <Breakpoint>
+            <strong>Topics:</strong>
+            {' '}
+            <select
+              defaultValue={this.props.location.pathname}
+              onChange={this.handleTopicChange}>
+              {docOptions}
+            </select>
+            <br />
+            <br />
             {this.props.children}
-          </div>
-        </Container>
+          </Breakpoint>
+        </div>
       </div>
     )
   },
