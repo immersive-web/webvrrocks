@@ -125,16 +125,6 @@ module.exports = React.createClass({
             </Grid>
           </Container>
         </div>
-        <Container
-          style={{
-            maxWidth: 960,
-            padding: `${rhythm(1)} ${rhythm(3/4)}`,
-            paddingTop: 0,
-          }}
-        >
-          {this.props.children}
-        </Container>
-
         <ul
           style={{
             listStyle: 'none',
@@ -144,6 +134,15 @@ module.exports = React.createClass({
         >
           {docPages}
         </ul>
+        <Container
+          style={{
+            maxWidth: 960,
+            padding: `${rhythm(1)} ${rhythm(3/4)}`,
+            paddingTop: 0,
+          }}
+        >
+          {this.props.children}
+        </Container>
       </div>
     )
   },
