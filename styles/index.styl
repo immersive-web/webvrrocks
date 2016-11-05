@@ -1,0 +1,225 @@
+@import 'syntax.styl'
+@import 'system-font.styl'
+@import 'monospace-font.styl'
+
+color-main = rgb(76,96,255)
+color-main-darker = darken(rgb(76,96,255), 10%)
+color-text = #666
+color-link = #222
+
+font-body = 'system'
+font-code = 'monospace'
+
+logo-width = 300px
+nav-width = 30%
+column-max-width = 600px
+mobile-width = 600px
+
+github-repo-padding = 20px
+github-repo-size = 30px
+
+z-index-github-repo-link = 10
+
+// utils / mixins
+
+.fancy-font
+  font-family font-body
+
+.normal-font
+  font-family font-body
+
+.code-font
+  font-family font-code
+
+.centerer
+  display block
+  text-align center
+
+// global
+
+*, *:before, *:after
+  box-sizing border-box
+
+*
+  margin 0
+  padding 0
+
+html
+  font-size 14px
+
+body
+  font 1rem/1.5 font-body
+  color color-text
+  font-size 1.1rem
+  margin 0
+  padding 0
+  transition all 0.3s
+
+a
+  color color-link
+
+h2, h3, h4, h5, h6, p, dl, ol, ul
+  margin 1.5rem 0
+
+h1, h2, h3, h4, h5, h6
+  @extend .fancy-font
+  margin-top 3rem
+  a
+    display block
+    text-decoration none
+
+h2, h3, h4, h5, h6
+  border-bottom 1px solid #eee
+  padding-bottom .5rem
+  &:hover
+    border-bottom-color #ddd
+
+h1
+  color #999
+  font-size 1.2rem
+  text-transform uppercase
+  font-weight 300
+  padding-bottom 1.5rem
+
+h1, h1 a
+  color color-main-darker
+
+h2, h2 a
+  color #333
+
+h3, h3 a
+  color #666
+  font-size 1.5rem
+
+p, ol, ul
+  a
+    color color-main
+
+.highlight
+  margin-bottom 16px
+
+code
+  @extend .code-font
+  font-size 1rem
+
+pre
+  background-color rgba(0,0,0,.05)
+  border-radius 3px
+  line-height 1.45
+  margin 0
+  overflow auto
+  padding 10px
+  word-break normal
+  word-wrap normal
+  pre
+    background none
+
+p code
+  background #f4f4f4
+  border-radius 3px
+  font-size 0.9rem
+  padding 3px 5px
+
+
+// components
+
+nav
+  @extend .fancy-font
+  background color-main
+  color white
+  font-weight 300
+  height 100%
+  overflow-y scroll
+  padding-top 40px
+  position fixed
+  right 0
+  top 0
+  width nav-width
+  a
+    color white
+    display block
+    font-size 1rem
+    opacity 0.7
+    padding 8px 30px
+    text-decoration none
+    transition all 0.2s
+    &:hover, &:active, &.active
+      background color-main-darker
+      opacity 1
+      transition all 0s
+  @media screen and (max-width: mobile-width)
+    display none
+
+#github-repo-link
+  height github-repo-size
+  left github-repo-padding
+  opacity .2
+  position absolute
+  top github-repo-padding
+  transition all 0.3s
+  width github-repo-size
+  z-index z-index-github-repo-link
+  img
+   width 100%
+  &:hover
+    opacity .8
+  @media screen and (max-width: mobile-width)
+    left 50%
+    transform translateX(-50%)
+
+#content
+  padding 60px
+  position relative
+  width (100% - nav-width)
+  @media screen and (max-width: mobile-width)
+    width 100%
+    padding 30px
+
+#column
+  margin 0 auto
+  max-width column-max-width
+  position relative
+
+.logo
+  img
+    display block
+    margin 0 auto
+    max-width 200px
+
+  @media screen and (max-width: mobile-width)
+    margin-top 40px
+
+.tagline
+  color #999
+
+table.routes
+  border-collapse collapse
+  width 100%
+  tr
+    border-top 1px solid #ccc
+    &:first-child
+      border-top none
+  th, td
+    line-height 1.8
+    text-align left
+    &:first-child:after
+      display block
+      float right
+      margin-right 20px
+      content "→"
+      text-align right
+      opacity 0.5
+
+img
+  display block
+  max-width 100%
+
+hr
+  background none
+  border none
+  border-top 1px dotted #eee
+  height 0
+
+// TODO: Remove when https://github.com/zeke/jus/issues/36 is fixed.
+#__bs_notify__
+  display none !important

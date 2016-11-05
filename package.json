@@ -1,30 +1,20 @@
 {
   "name": "webvrrocks",
-  "description": "WebVR Rocks",
+  "description": "Your one-stop resource for everything about WebVR.",
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
-  "dependencies": {
-    "chroma-js": "^0.7.2",
-    "color-pairs-picker": "^1.3.5",
-    "gatsby": "^0.12.6",
-    "lodash": "^4.15.0",
-    "react-document-title": "^2.0.1",
-    "react-motion": "^0.1.0",
-    "react-responsive-grid": "^0.3.3",
-    "react-typography": "^0.14.0",
-    "typography": "^0.14.0",
-    "typography-plugin-code": "^0.14.0",
-    "underscore.string": "^3.2.2"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "gh-pages": "^0.11.0"
+    "gh-pages": "^0.11.0",
+    "jus": "^0.21.0"
   },
   "scripts": {
     "start": "npm run dev",
-    "dev": "gatsby develop",
-    "build": "gatsby build",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "deploy": "gatsby build --prefix-links && gh-pages -d public"
+    "dev": "jus serve",
+    "build": "jus build . _prod",
+    "lint": "semistandard",
+    "deploy": "npm run build && gh-pages -d _prod",
+    "open": "open https://webvrrocks.github.io/"
   }
 }

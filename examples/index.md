@@ -1,8 +1,4 @@
----
-title: Examples
----
-
-Examples:
+# Examples
 
 * [Samples](/samples)
 * [Directory](/directory)

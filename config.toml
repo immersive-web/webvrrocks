@@ -1,8 +1,0 @@
-siteTitle = "WebVR Rocks"
-baseColor = "#849"
-linkPrefix = "/webvrrocks"
-docPages = [
-  "/",
-  "/getting-started/",
-  "/browsers/"
-]
