@@ -1,20 +1,16 @@
-# WebVR-enabled browsers
+## Browser Support
 
-WebVR enabled browsers come in two different flavours:
+### Firefox
+* [Downloads and Setup instructions](/browsers/firefox)
 
-* desktop browsers that can display VR content as a additional supplement to existing 2D pages
-* VR-enabled, VR-first browsers which can render both the 2D page views in addition to WebVR content entirely in immersive VR
+### Chromium
+* [Downloads and Setup instructions](/browsers/chromium)
 
-## Desktop WebVR-enabled browser experience
+### Samsung Gear VR
+[Samsung Internet Browser](https://t.co/od5cnI1QO2)
 
-In this example, we use Firefox web browser. After navigating to a website with WebVR enabled content and clicking on an "Enter VR" button, the content is presented into the VR headset.
+### Mobile
+You can also view WebVR content on IOS or Android phones using browsers that do not support WebVR through the [WebVR polyfill](https://github.com/googlevr/webvr-polyfill) and using a [Google Cardboard](https://vr.google.com/cardboard/) viewer.
 
-## Full WebVR browser experience
-
-Full VR web browsing in Samsung Internet Browser for GearVR This browser includes the ability to view traditional 2D web content as well as well as WebVR enabled content.
-
-![Samsung Internet Browser for GearVR](/img/samsung-internet-browser-gear-vr.jpg "Samsung Internet Browser for GearVR")
-
-## WebVR on mobile browsers using the WebVR Polyfill
-
-You can also view WebVR content on iOS or Android phones using browsers that do not support WebVR through the [WebVR Polyfill](https://github.com/googlevr/webvr-polyfill) and using a [Google Cardboard](https://vr.google.com/cardboard/) viewer.
+### Support status
+Browser support status at [iswebvrready.com](https://iswebvrready.com)
