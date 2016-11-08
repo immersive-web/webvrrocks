@@ -10,10 +10,10 @@ title: WebVR-enabled browsers
 There are a few common flavors of WebVR-enabled browsers:
 
 * Classic desktop browsers with WebVR support
-    * Supported: [Mozilla Firefox](/browsers/firefox) and [Chromium](/browsers/chrome)
+    * Supported: **[Mozilla Firefox](/browsers/firefox)** and **[Chromium](/browsers/chrome)**
     * Coming soon: [Google Chrome](/browsers/chrome) and [Microsoft Edge](/browsers/edge)
 * WebVR-enabled browsers (with backwards compatibility for 2D, non-VR content)
-    * Supported: [Samsung Internet Browser for Gear VR](/browsers/samsung-internet-browser-for-gear-vr)
+    * Supported: **[Samsung Internet Browser for Gear VR](/browsers/samsung-internet-browser-for-gear-vr)**
     * Soon: [Google Daydream](/browsers/chrome-daydream)
 * WebVR-only browsers (without backwards compatibility)
     * Soon: [Oculus Carmel](/browsers/oculus-carmel)
