@@ -4,30 +4,24 @@ title: Oculus Rift
 
 # Oculus Rift
 
+* [Oculus Rift product page](https://www3.oculus.com/rift/)
 
-## VR hardware requirements
+## Browser Support
 
-* [**Oculus Rift** (consumer version 1.0) VR headset](https://www3.oculus.com/rift/)
+* [Firefox Nightly setup instructions](/browsers/firefox)
+* [Chromium setup instructions](/browsers/chromium)
 
-If you have an [Oculus Rift Development Kit 2](https://www3.oculus.com/dk2/) (DK2), you may still be able to follow these same instructions to use WebVR, but there are no guarantees of stability nor performance.
+
+## Hardware requirements
+
+* [See Oculus Rift Recommended Specifications](https://www3.oculus.com/en-us/oculus-ready-pcs/)
+* You may download and run the [Oculus Rift Compatibility Check](http://ocul.us/compat-tool) tool to ensure your machine meets the minimum requirements to enjoy VR in the Oculus Rift.
+
+
+## Oculus Remote and Touch motion controller support
 
 The [Oculus Remote](https://support.oculus.com/835449819935261) is [supported](https://iswebvrready.org/#gamepad-extensions) by the [Gamepad API (Extensions)](https://w3c.github.io/gamepad/extensions.html) in [these experimental Chromium WebVR builds](#instructions-1). Support for the upcoming hand-tracked [Oculus Touch](https://www3.oculus.com/touch/) motion controllers will be added soon once the product is released on the consumer market.
 
-
-## Platform requirements
-
-* **Graphics card:** [NVIDIA GeForce GTX 970](http://www.geforce.com/hardware/desktop-gpus/geforce-gtx-970) / [AMD Radeon R9 290](https://www.amd.com/en-us/products/graphics/desktop/r9), or better.
-* **CPU:** [Intel i5-4590](http://ark.intel.com/products/80815/Intel-Core-i5-4590-Processor-6M-Cache-up-to-3_70-GHz) or better.
-* **Memory:** 8GB+ RAM.
-* **Video ports:** HDMI 1.3 video output.
-* **USB ports:** three USB 3.0 ports plus one USB 2.0 port.
-* **OS:** [Windows 7 SP1](https://support.microsoft.com/en-us/help/15090/windows-7-install-service-pack-1-sp1) (64-bit) or newer.
-
-You may download and run the [Oculus Rift Compatibility Check](http://ocul.us/compat-tool) tool to ensure your machine meets the minimum requirements to enjoy VR in the Oculus Rift.
-
-### Software requirements
-
-* Download, install, launch, and configure [Oculus Home](https://www3.oculus.com/setup/) (application for browsing, purchasing, downloading, and installing VR experiences and the required runtime to render experiences to the Oculus Rift).
 
 ### Enabling `Unknown Sources` setting for WebVR content
 
@@ -53,15 +47,10 @@ To resolve this, you will need to enable an option for "Unknown Sources" from wi
 8. Now, you can freely experience WebVR content, without needing to follow this process again (even if you log in to another PC with your same user account).
 
 
-## Browsers
+## Oculus Rift DK2 and DK1 devices
 
-* [**Mozilla Firefox** (desktop, Windows)](/browsers/firefox)
-* [**Chromium** (desktop, Windows/64-bit only)](/browsers/chrome)
-* [**Samsung Internet Browser for Gear VR** (mobile, Android)](/browsers/samsung-internet-browser-for-gear-vr)
+Oculus Rift DK1 and DK2 were early pre-consumer VR development kits offered by Oculus and are no longer sold or supported by Oculus.
 
-Coming soon:
+* DK2 headsets may still be used with WebVR as long as driver support is maintained.
+* DK1 devices are no longer supported.
 
-* [**Google Chrome** (desktop, Windows)](/browsers/chrome)
-* [**Google Daydream** (mobile, Android)](/browsers/chrome)
-* [**Oculus Project Carmel** (mobile, Android)](/browsers/carmel)
-* [**Microsoft Edge**](/browsers/edge)

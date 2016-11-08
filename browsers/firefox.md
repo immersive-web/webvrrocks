@@ -20,9 +20,8 @@ title: Firefox Nightly Setup Instructions
 ## Oculus Rift
 
 0. Download and install [Firefox Nightly](https://nightly.mozilla.org/).
-0. Ensure that your Oculus settings [allow for Unknown Sources](/headsets/oculus-rift#instructions).
+0. Ensure that your Oculus settings [allow for Unknown Sources](/headsets/oculus-rift#enabling-unknown-sources-setting-for-webvr-content).
 0. Enjoy WebVR content!
-
 
 ## Notes
 
