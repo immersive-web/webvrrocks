@@ -74,6 +74,33 @@ dl
   ol
     margin .5rem 0 .5rem 2.5rem
 
+ol
+  counter-reset item
+
+li
+  display block
+
+li:before
+  color rgba(0,0,0,.35)
+  display inline-block
+
+ul,
+ol
+  li:before
+    display inline-block
+    margin-left -4ch
+    margin-right 1ch
+    padding-right 0
+    text-align right
+    width 3ch
+
+ol li:before
+  content counters(item, '.') '. '
+  counter-increment item
+
+ul li:before
+  content: '• '
+
 h1, h2, h3, h4, h5, h6
   @extend .fancy-font
   margin-top 3rem
