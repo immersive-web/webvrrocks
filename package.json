@@ -5,6 +5,7 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
+    "delayed-scroll-restoration-polyfill": "^0.1.0",
     "domready": "^1.0.8"
   },
   "devDependencies": {
