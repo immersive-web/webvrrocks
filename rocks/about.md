@@ -11,3 +11,5 @@ You can reach us on [social media](https://twitter.com/webvrrocks) and view the 
 * [WebVR Rocks web site source code on GitHub](https://github.com/webvrrocks/webvrrocks)
     * [list of open issues](https://github.com/webvrrocks/webvrrocks/issues)
     * [file a new issue/request](https://github.com/webvrrocks/webvrrocks/issues/new)
+
+* [Code of conduct](/rocks/code-of-conduct)
