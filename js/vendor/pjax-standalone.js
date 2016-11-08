@@ -253,6 +253,17 @@
 			}
 		}
 
+		var elWithPageFile = html.querySelector('[data-current-file]');
+		if (elWithPageFile) {
+			var pageFile = elWithPageFile.getAttribute('data-current-file');
+			if (pageFile) {
+				elWithPageFile = document.querySelector('[data-current-file]');
+				if (elWithPageFile) {
+					elWithPageFile.setAttribute('data-current-file', pageFile);
+				}
+			}
+		}
+
 		// Going by caniuse all browsers that support the pushstate API also support querySelector's
 		// see: http://caniuse.com/#search=push
 		// see: http://caniuse.com/#search=querySelector

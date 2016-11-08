@@ -15,7 +15,7 @@
     <script async defer src="/js/index.js"></script>
   </head>
   <body>
-    <nav id="nav" class="nav" role="navigation" data-current-path="{{page.href}}">
+    <nav id="nav" class="nav" role="navigation" data-current-path="{{page.href}}" data-current-file="{{page.path.relative}}">
       <a href="/">Introduction</a>
       <a href="/getting-started">Getting Started</a>
       <a href="/browsers">Browsers</a>
@@ -43,7 +43,7 @@
           {{{body}}}
         </main>
         <footer id="footer" class="footer">
-          <a href="https://github.com/webvrrocks/webvrrocks/edit/master{{page.path.relative}}" class="github-edit-page-link  edit-page-link"><span>Edit this page</span></a>
+          <a href="https://github.com/webvrrocks/webvrrocks/edit/master{{page.path.relative}}" data-default-href="https://github.com/webvrrocks/webvrrocks/edit/master{path}" class="github-edit-page-link edit-page-link" id="edit-page-link"><span>Edit this page</span></a>
         </footer>
       </div>
     </div>
