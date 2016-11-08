@@ -1,3 +1,7 @@
 # WebVR specifications
 
-The [Spec Editor's Draft](https://w3c.github.io/webvr/) is hosted on [GitHub](https://github.com/w3c/webvr).
+* [Spec Editor's Draft](https://w3c.github.io/webvr/).
+* [W3C Community Group](https://www.w3.org/community/webvr/)
+* [GitHub](https://github.com/w3c/webvr)
+* How to contribute
+* Code of Conduct

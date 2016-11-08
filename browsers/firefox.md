@@ -23,3 +23,4 @@ Save the `openvr_api.dll` file somewhere on your computer where the user running
 ## Notes
 
 * HTC VIVE controllers are not yet supported.   [Bugzilla issue](https://bugzilla.mozilla.org/show_bug.cgi?id=1299926)
+* How to report issues

@@ -22,3 +22,4 @@
 ## Notes
 
 * There is no installer for experimental builds of Chromium.  Once unarchived, launched `chrome.exe` directly from the `chrome-bin` folder.
+* How to report issues
