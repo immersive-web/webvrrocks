@@ -1,8 +1,8 @@
 <!--
-title: Getting Started
+title: Getting started
 -->
 
-# Getting Started
+# Getting started
 
 ## Setting up
 
