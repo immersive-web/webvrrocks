@@ -1,18 +1,24 @@
-# WebVR enabled Browsers
+# WebVR-enabled browsers
 
 * [See supported VR headsets](/get-started/headsets)
 * [Detailed support status](https://iswebvrready.com)
 
-## Firefox
-* [Downloads and Setup instructions](/browsers/firefox)
+There are a few common flavors of WebVR-enabled browsers:
 
-## Chromium
-* [Downloads and Setup instructions](/browsers/chromium)
+* Classic desktop browsers with WebVR support
+    * Supported: [Mozilla Firefox](/browsers/firefox) and [Chromium](/browsers/chrome)
+    * Coming soon: [Google Chrome](/browsers/chrome) and [Microsoft Edge](/browsers/edge)
+* WebVR-enabled browsers (with backwards compatibility for 2D, non-VR content)
+    * Supported: [Samsung Internet Browser for Gear VR](/browsers/samsung-internet-browser-for-gear-vr)
+    * Soon: [Google Daydream](/browsers/chrome-daydream)
+* WebVR-only browsers (without backwards compatibility)
+    * Soon: [Oculus Carmel](/browsers/oculus-carmel)
 
-## Samsung GearVR Internet Browser
-* [Samsung Internet Browser](http://developer.samsung.com/internet#gearvr-overview)
 
 ## Mobile
-You can also view WebVR content on IOS or Android phones using browsers that do not support WebVR through the [WebVR polyfill](https://github.com/googlevr/webvr-polyfill) and using a [Google Cardboard](https://vr.google.com/cardboard/) viewer.
 
-* [See Mobile compatible sites.](/directory)
+* [See mobile-compatible WebVR sites.](/directory/?platform=mobile)
+
+You can also view WebVR content in a browser on iOS or Android phones using a [Google Cardboard viewer](https://vr.google.com/cardboard/manufacturers/), if the web site uses [WebVR polyfill](https://github.com/googlevr/webvr-polyfill) library.
+
+*Disclaimer:* The [WebVR Polyfill](https://github.com/borismus/webvr-polyfil) supports most (but not all) of the functionality (and not the performance) of the WebVR API properly supported in the WebVR-capable browsers on the available platforms.

@@ -1,5 +1,5 @@
-# troubleshooting
+# Troubleshooting
 
-Doesn't work?
+WebVR doesn't seem to work?
 
-Try this:
+Try this one clever solution!

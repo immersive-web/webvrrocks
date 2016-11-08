@@ -9,7 +9,12 @@ To view WebVR content, you will need a compatible browser and VR headset.
 
 ## Try an example
 
-* [WebVR test samples](https://webvr.info/samples/)
+* [Compatible headsets](/headsets/)
+* [Browser setup instructions](/browsers/)
+* [See browser support](https://iswebvrready.org/)
+* [View directory of WebVR content](/directory/)
+
 
 ## Having troubles?
+
 * [Troubleshooting Guide](/getting-started/troubleshooting)

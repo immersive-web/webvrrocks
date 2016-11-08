@@ -1,25 +1,33 @@
 # Supported VR headsets
 
+
 ## Oculus Rift
 
-* [Firefox Nightly Setup Instructions](/browsers/firefox)
-* [Chromium Setup Instructions](/browsers/chromium)
+* [Firefox Nightly setup instructions](/browsers/firefox)
+* [Chromium setup instructions](/browsers/chromium)
 
-## HTC VIVE
 
-* [Firefox Nightly Setup Instructions](/browsers/firefox)
-* [Chromium Setup Instructions](/browsers/chromium)
+## HTC Vive
+
+* [Firefox Nightly setup instructions](/browsers/firefox)
+* [Chromium setup instructions](/browsers/chromium)
+
 
 ## Samsung Gear VR
-* [Samsung Internet Browser](http://developer.samsung.com/internet#gearvr-overview)
+
+* [Samsung Internet Browser guide](http://developer.samsung.com/internet#gearvr-overview)
+
 
 ## Mobile
 
-* [See Mobile compatible sites.](/directory)
+* [See mobile-compatible WebVR sites.](/directory/?platform=mobile)
 
-* You can also view WebVR content on IOS or Android phones using browsers that do not support WebVR through the [WebVR polyfill](https://github.com/googlevr/webvr-polyfill) and using a  [Google Cardboard](https://vr.google.com/cardboard/) viewer.
+You can also view WebVR content in a browser on iOS or Android phones using a [Google Cardboard viewer](https://vr.google.com/cardboard/manufacturers/), if the web site uses [WebVR polyfill](https://github.com/googlevr/webvr-polyfill) library.
+
+*Disclaimer:* The [WebVR Polyfill](https://github.com/borismus/webvr-polyfil) supports most (but not all) of the functionality (and not the performance) of the WebVR API properly supported in the WebVR-capable browsers on the available platforms.
 
 
 ## OSVR HDK2
 
-* [Purchase.](http://www.osvr.org/hdk2.html)
+* [Purchase developer kit headset.](http://www.osvr.org/hdk2.html)
+* [OSVR platform supported in Firefox.](/browsers/firefox)

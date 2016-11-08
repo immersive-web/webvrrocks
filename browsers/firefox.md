@@ -1,26 +1,30 @@
 # Firefox Nightly Setup Instructions
 
-## Download
-[Get Firefox Nightly](https://nightly.mozilla.org/)
+[Get Firefox Nightly](https://nightly.mozilla.org/) (the early, unstable release version of the Firefox browser).
 
 
-## HTC VIVE
+## HTC Vive
 
-1. Download and Install Firefox Nightly
-2. Download version 1.02 of the `openvr_api.dll` file from the OpenVR GitHub repository: [32-bit](https://github.com/ValveSoftware/openvr/raw/master/bin/win32/openvr_api.dll), [64-bit](https://github.com/ValveSoftware/openvr/raw/master/bin/win64/openvr_api.dll).
-Save the `openvr_api.dll` file somewhere on your computer where the user running Firefox can read it.  (ie: `c:\openvr`)
-3. In Firefox Nightly, enter `about:config` in the address bar; change the value of `dom.vr.openvr.enabled` to `true` and `gfx.vr.openvr-runtime` to the full path of the `openvr_api.dll` file. (ie: `c:\openvr\openvr_api.dll`)
-4. Restart Firefox Nightly.
-5. Enjoy WebVR content
+0. Download and install [Firefox Nightly](https://nightly.mozilla.org/).
+0. Download version 1.02 of the `openvr_api.dll` file from the [OpenVR GitHub repository](https://github.com/ValveSoftware/openvr/): [32-bit](https://github.com/ValveSoftware/openvr/raw/master/bin/win32/openvr_api.dll), [64-bit](https://github.com/ValveSoftware/openvr/raw/master/bin/win64/openvr_api.dll) (preferred, if running a 64-bit PC).
+0. Save the `openvr_api.dll` file somewhere on your computer where the user running Firefox can read it (e.g., `c:\openvr\`).
+0. In Firefox Nightly, navigate to `about:config`; change the value of `dom.vr.openvr.enabled` to `true` and `gfx.vr.openvr-runtime` to the full path of the `openvr_api.dll` file (e.g., `c:\openvr\openvr_api.dll`).
+0. Restart Firefox Nightly.
+0. Enjoy WebVR content!
 
 
 ## Oculus Rift
 
-1. Download and Install Firefox Nightly
-2. Ensure that your Oculus settings [allow for Unknown Sources](https://blog.mozvr.com/oculus-home-rift-cv1-webvr/#enablingunknownsources).
-3. Enjoy WebVR content
+0. Download and install [Firefox Nightly](https://nightly.mozilla.org/).
+0. Ensure that your Oculus settings [allow for Unknown Sources](/headsets/oculus-rift#instructions).
+0. Enjoy WebVR content!
+
 
 ## Notes
 
-* HTC VIVE controllers are not yet supported.   [Bugzilla issue](https://bugzilla.mozilla.org/show_bug.cgi?id=1299926)
-* How to report issues
+* HTC Vive controllers are not yet supported. (See this [tracking issue](https://bugzilla.mozilla.org/showdependencytree.cgi?id=1299926&hide_resolved=1) to monitor progress.)
+
+
+## Issues
+
+* Please report Firefox WebVR issues by [filing a bug on the Firefox bug tracker](https://bugzilla.mozilla.org/enter_bug.cgi?product=Core&component=General&status_whiteboard=[webvr]&cc=kgilbert@mozilla.com), or you can contact at us on [Twitter](https://twitter.com/) at [@mozillavr](https://twitter.com/mozillavr) (or by simply tweeting with the the Twitter hash #FirefoxWebVRBug).
