@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="none">  <!-- TODO: Change when launch. -->
     <title>
-      {{page.title}} | WebVR Rocks
+      {{#if page.use_default_title}}
+        WebVR Rocks | Your one-stop resource for everything about WebVR
+      {{else}}
+        {{page.title}} | WebVR Rocks
+      {{/if}}
     </title>
     <link rel="stylesheet" href="/styles/index.css">
     <meta name="theme-color" content="#111">

@@ -1,5 +1,6 @@
 <!--
-title: Your one-stop resource for everything about WebVR
+title: What is WebVR?
+use_default_title: true
 keywords: [reference]
 date_published: 2017-11-04
 date_updated: 2017-11-07
