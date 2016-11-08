@@ -1,3 +1,7 @@
+<!--
+title: Samsung Internet Browser for Gear VR
+-->
+
 # Samsung Internet Browser for Gear VR
 
 ## Instructions

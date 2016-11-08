@@ -1,3 +1,7 @@
+<!--
+title: HTC Vive
+-->
+
 # HTC Vive
 
 ## VR hardware requirements

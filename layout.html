@@ -7,7 +7,13 @@
     <meta name="robots" content="none">  <!-- TODO: Change when launch. -->
     <link rel="manifest.json">
     <link rel="stylesheet" href="/styles/index.css">
-    <title>WebVR Rocks | Your one-stop resource for everything about WebVR</title>
+    <title>
+      {{#if page.title}}
+        {{{page.title}}} | WebVR Rocks
+      {{else}}
+        WebVR Rocks | Your one-stop resource for everything about WebVR
+      {{/if}}
+    </title>
   </head>
   <body>
     <nav>

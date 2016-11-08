@@ -1,3 +1,7 @@
+<!--
+title: Samsung Gear VR
+-->
+
 # Samsung Gear VR
 
 

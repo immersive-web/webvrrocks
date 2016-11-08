@@ -1,3 +1,7 @@
+<!--
+title: WebVR-enabled browsers
+-->
+
 # WebVR-enabled browsers
 
 * [See supported VR headsets](/get-started/headsets)

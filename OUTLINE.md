@@ -1,3 +1,7 @@
+<!--
+title: Outline notes
+-->
+
 # Outline notes
 
 ## Inspiration
@@ -18,6 +22,10 @@
 
 <hr>
 
+
+<!--
+title: WebVR Rocks
+-->
 
 # WebVR Rocks
 
@@ -291,11 +299,15 @@ WebVR is a platform for building and experiencing Virtual Reality content for We
         * Roomscale.org
         * Mozilla VR
 
-### 
+###
 
 
 <hr>
 
+
+<!--
+title: WebVR Rocks
+-->
 
 # WebVR Rocks
 

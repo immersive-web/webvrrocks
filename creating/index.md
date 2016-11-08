@@ -1,3 +1,7 @@
+<!--
+title: Creating WebVR
+-->
+
 # Creating WebVR
 
 Tutorials and tools for making WebVR content.

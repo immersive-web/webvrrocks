@@ -1,3 +1,7 @@
+<!--
+title: Firefox Nightly Setup Instructions
+-->
+
 # Firefox Nightly Setup Instructions
 
 [Get Firefox Nightly](https://nightly.mozilla.org/) (the early, unstable release version of the Firefox browser).

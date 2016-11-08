@@ -1,3 +1,7 @@
+<!--
+title: Chromium Setup Instructions
+-->
+
 # Chromium Setup Instructions
 
 ## Download

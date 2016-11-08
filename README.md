@@ -1,3 +1,7 @@
+<!--
+title: WebVR Rocks
+-->
+
 # WebVR Rocks
 
 Your one-stop resource for everything about WebVR.

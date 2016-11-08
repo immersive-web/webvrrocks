@@ -1,3 +1,7 @@
+<!--
+title: Getting Started
+-->
+
 # Getting Started
 
 ## Setting up

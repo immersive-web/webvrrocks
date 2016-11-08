@@ -1,3 +1,7 @@
+<!--
+title: Directory
+-->
+
 # Directory
 
 ## Showcase

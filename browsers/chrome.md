@@ -1,3 +1,7 @@
+<!--
+title: Chromium
+-->
+
 # Chromium
 
 [Get *experimental* Chromium build with WebVR support.](https://webvr.info/get-chrome)

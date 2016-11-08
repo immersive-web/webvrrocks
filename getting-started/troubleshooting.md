@@ -1,3 +1,7 @@
+<!--
+title: Troubleshooting
+-->
+
 # Troubleshooting
 
 WebVR doesn't seem to work?
