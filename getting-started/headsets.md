@@ -3,12 +3,12 @@
 ## Oculus Rift
 
 * [Firefox Nightly Setup Instructions](/browsers/firefox)
-* [Chromium](/browsers/chromium)
+* [Chromium Setup Instructions](/browsers/chromium)
 
 ## HTC VIVE
 
 * [Firefox Nightly Setup Instructions](/browsers/firefox)
-* [Chromium](/browsers/chromium)
+* [Chromium Setup Instructions](/browsers/chromium)
 
 ## Samsung Gear VR
 * [Samsung Internet Browser](http://developer.samsung.com/internet#gearvr-overview)
