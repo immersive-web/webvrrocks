@@ -44,9 +44,6 @@ z-index-github-repo-link = 10
   margin 0
   padding 0
 
-// html, body, .content
-//   height 100%
-
 html, body
   background-color #fff
 
@@ -219,19 +216,25 @@ nav
   position relative
 
 .tagline
+  align-self center
   color #999
-  display inline-block
-  margin-left 1rem
-  vertical-align bottom
+  margin-left 2rem
+
+  strong
+    font-size 2rem
 
 .logo
+  color #fff
+  align-items flex-start
+  display flex
   text-decoration none
+  width 100%
 
   &:hover .tagline
     color #666
 
   img
-    display inline-block
+    display block
     max-width 200px
 
   @media screen and (max-width: mobile-width)
