@@ -13,3 +13,9 @@ WebVR is an experimental JavaScript API that provides access to Virtual Reality 
 **[Get started!](/getting-started)**
 
 See the [supported platforms](/docs/supported-platforms).
+
+## Recent Updates
+
+Tags: Browser, API, Headsets, News, ...
+
+[See All Updates]()
