@@ -1,9 +1,13 @@
 'use strict';
 
-if (window.history.pushState) {
+var polyfill = module.exports.polyfill = function (opts) {
+  if (!window.history.pushState) {
+    return false;
+  }
+  opts = opts || {};
   (function () {
-    var SCROLL_RESTORATION_TIMEOUT_MS = 3000;
-    var TRY_TO_SCROLL_INTERVAL_MS = 50;
+    var SCROLL_RESTORATION_TIMEOUT_MS = 'scrollTimeout' in opts ? opts.scrollTimeout : 3000;
+    var TRY_TO_SCROLL_INTERVAL_MS = 'scrollInterval' in opts ? opts.scrollInterval : 50;
 
     var originalPushState = window.history.pushState;
     var originalReplaceState = window.history.replaceState;
@@ -75,4 +79,4 @@ if (window.history.pushState) {
 
     window.addEventListener('popstate', onPopState, true);
   })();
-}
+};
