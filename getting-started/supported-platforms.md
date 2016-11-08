@@ -1,4 +1,4 @@
-## Supported Platforms
+## Supported Operating Systems
 
 ### Desktop
 

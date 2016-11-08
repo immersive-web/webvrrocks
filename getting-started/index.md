@@ -8,3 +8,7 @@ To view WebVR content, you will need a compatible browser and VR headset.
 * [WebVR enabled browsers](/browsers/)
 
 You can also view WebVR content on IOS or Android phones using browsers that do not support WebVR through the [WebVR polyfill](https://github.com/googlevr/webvr-polyfill) and using a  [Google Cardboard](https://vr.google.com/cardboard/) viewer.
+
+
+### Notes
+* [Supported Operating Systems](/getting-started/supported-platforms)
