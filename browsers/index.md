@@ -21,7 +21,7 @@ There are two flavors of WebVR-enabled browsers:
 
 ## Mobile
 
-* [See mobile-compatible WebVR sites.](/directory/?platform=mobile)
+* [See mobile-compatible WebVR sites](/directory/?platform=mobile)
 
 You can also view WebVR content in a browser on iOS or Android phones using a [Google Cardboard viewer](https://vr.google.com/cardboard/manufacturers/), if the web site uses [WebVR polyfill](https://github.com/googlevr/webvr-polyfill) library.
 
