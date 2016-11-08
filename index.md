@@ -1,5 +1,5 @@
 <!--
-title: What is WebVR?
+title: Your one-stop resource for everything about WebVR
 keywords: [reference]
 date_published: 2017-11-04
 date_updated: 2017-11-07
