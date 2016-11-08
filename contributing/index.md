@@ -46,3 +46,8 @@ WebVR is currently being developed as an open standard by a [W3C Community Group
 * [W3C Specification (Editor's Draft)](https://w3c.github.io/webvr/)
 * [W3C Community Group](https://www.w3.org/community/webvr/)
 * [GitHub](https://github.com/w3c/webvr)
+
+
+# Code of Conduct
+
+We pride ourselves on maintaining civilized discourse, and to that end contributors are expected to follow our [Code of Conduct](/contributing/code-of-conduct).
