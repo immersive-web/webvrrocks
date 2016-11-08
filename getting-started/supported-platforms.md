@@ -1,10 +1,10 @@
-## Supported Operating Systems
+# Supported Operating Systems
 
-### Desktop
+## Desktop
 
 Windows only.
 No Mac, Linux support at the moment from any vendors.
 
-### Mobile
+## Mobile
 
 GearVR Samsung Internet browser.
