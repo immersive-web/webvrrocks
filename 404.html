@@ -27,6 +27,7 @@ layout: inline
         color: #fff;
         font-weight: 600;
         padding-bottom: 2px;
+        transition: .1s border-bottom ease-in-out, .1s color ease-in-out;
         text-decoration: none;
       }
 
@@ -48,6 +49,23 @@ layout: inline
     <h1>404 Not Found</h1>
     <p>Sorry, we could not find the page or file you requested.</p>
     <p>It's possible that the link you clicked is out of date or the address was typed incorrectly.</p>
-    <p>Visit <a href="/">home</a>.</p>
+    <p>Visit the <a href="/" id="home-link">WebVR Rocks homepage</a>.</p>
+    <script>
+      (function () {
+        var homeLink = document.querySelector('#home-link');
+        if (!homeLink) {
+          return;
+        }
+        if (window.location.protocol === 'file:') {
+          homeLink.setAttribute('href', 'index.html');
+          return;
+        }
+        if (window.location.pathname.indexOf('/webvrrocks/') === 0) {
+          // Check if we are being served from GitHub Pages.
+          // Change URL for the "home" page.
+          homeLink.setAttribute('href', '/webvrrocks/');
+        }
+      })();
+    </script>
   </body>
 </html>
