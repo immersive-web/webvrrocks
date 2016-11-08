@@ -1,4 +1,28 @@
 {
   "name": "WebVR Rocks",
-  "description": "Your one-stop resource for everything about WebVR."
+  "description": "Your one-stop resource for everything about WebVR.",
+  "start_url": "./?src=manifest",
+  "theme_color": "#111",
+  "icons": [
+    {
+      "src": "images/webvr-favicon.svg",
+      "sizes": "200x200",
+      "type": "image/svg"
+    },
+    {
+      "src": "images/webvr-favicon.png",
+      "sizes": "200x200",
+      "type": "image/png"
+    },
+    {
+      "src": "images/webvr-favicon-small.svg",
+      "sizes": "64x64",
+      "type": "image/svg"
+    },
+    {
+      "src": "images/webvr-favicon-small.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ]
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>webvr-favicon-small</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="64" height="64"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="64" height="64" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="webvr-favicon-small">
+            <g id="Group">
+                <use id="Rectangle" stroke="#111111" mask="url(#mask-2)" stroke-width="20" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <ellipse id="Oval" fill="#111111" cx="21.4" cy="32.16" rx="5.6" ry="5.6"></ellipse>
+                <ellipse id="Oval" fill="#111111" cx="42.6" cy="32.16" rx="5.6" ry="5.6"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

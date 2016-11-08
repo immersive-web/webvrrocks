@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="none">  <!-- TODO: Change when launch. -->
-    <link rel="manifest.json">
-    <link rel="stylesheet" href="/styles/index.css">
     <title>
       {{#if page.title}}
         {{{page.title}}} | WebVR Rocks
@@ -14,6 +12,10 @@
         WebVR Rocks | Your one-stop resource for everything about WebVR
       {{/if}}
     </title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <meta name="theme-color" content="#111">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="/img/webvr-favicon-small.png">
   </head>
   <body>
     <nav>
@@ -37,7 +39,7 @@
       <div id="column" class="column">
         <div class="centerer">
           <a id="logo" class="logo" href="/">
-            <img src="/img/logo.svg" width="200" height="100" alt="WebVR" title="WebVR">
+            <img src="/img/webvr-logo.svg" width="200" height="100" alt="WebVR" title="WebVR">
           </a>
           <span class="tagline">
             <strong>WebVR Rocks</strong><br>
