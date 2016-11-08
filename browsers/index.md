@@ -10,7 +10,7 @@ There are two flavors of WebVR-enabled browsers:
     * Supported: **[Mozilla Firefox](/browsers/firefox)** and **[Chromium](/browsers/chromium)**
     * Coming soon: [Google Chrome](/browsers/chrome) and [Microsoft Edge](/browsers/edge)
 
-* Full-VR browsers with WebVR support (Browsing is done entirely in VR and may include compatibility with existing 2D web content)
+* Full-VR browsers with WebVR support (browsing is done entirely in VR and may include compatibility with existing 2D web content)
     * Supported: **[Samsung Internet Browser for Gear VR](/browsers/samsung-internet-browser-for-gear-vr)**
     * Soon: [Google Daydream](/browsers/chrome-daydream)
     * Soon: [Oculus Carmel](/browsers/carmel) (WebVR only)
