@@ -189,16 +189,16 @@ p code
     &:hover, &:active, &.active
       @extend .nav-item-selected
 
-[data-page-path="/"] .nav a[href="/"],
-[data-page-path^="/getting-started"]:not([data-page-path^="/getting-started/troubleshooting"]) .nav a[href^="/getting-started"]:not([href^="/getting-started/troubleshooting"]),
-[data-page-path^="/browsers"]:not([data-page-path^="/browsers/changelog"]) .nav a[href^="/browsers"]:not([href^="/browsers/changelog"]),
-[data-page-path^="/browsers/changelog"] .nav a[href^="/browsers/changelog"],
-[data-page-path^="/getting-started/troubleshooting"] .nav a[href^="/getting-started/troubleshooting"],
-[data-page-path^="/directory"] .nav a[href^="/directory"],
-[data-page-path^="/creating"] .nav a[href^="/creating"],
-[data-page-path^="/community"] .nav a[href^="/community"],
-[data-page-path^="/spec"] .nav a[href^="/spec"],
-[data-page-path^="/about"] .nav a[href^="/about"]
+.nav[data-current-path="/"] a[href="/"],
+.nav[data-current-path^="/getting-started"]:not([data-current-path^="/getting-started/troubleshooting"]) a[href^="/getting-started"]:not([href^="/getting-started/troubleshooting"]),
+.nav[data-current-path^="/browsers"]:not([data-current-path^="/browsers/changelog"]) a[href^="/browsers"]:not([href^="/browsers/changelog"]),
+.nav[data-current-path^="/browsers/changelog"] a[href^="/browsers/changelog"],
+.nav[data-current-path^="/getting-started/troubleshooting"] a[href^="/getting-started/troubleshooting"],
+.nav[data-current-path^="/directory"] a[href^="/directory"],
+.nav[data-current-path^="/creating"] a[href^="/creating"],
+.nav[data-current-path^="/community"] a[href^="/community"],
+.nav[data-current-path^="/spec"] a[href^="/spec"],
+.nav[data-current-path^="/about"] a[href^="/about"]
   @extend .nav-item-selected
 
 .footer
