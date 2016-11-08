@@ -1,7 +1,8 @@
-import domready from 'domready'
+var domready = require('domready');
+require('delayed-scroll-restoration-polyfill');
 
-import pjax from './js/vendor/pjax-standalone'
+require('./vendor/pjax-standalone');  // NOTE: module does not support CommonJS atm.
 
 domready(() => {
-  pjax.connect({container: 'main'});
+  window.pjax.connect({container: 'main', returnToTop: false});
 });
