@@ -1,8 +1,8 @@
 <!--
-title: WebVR specifications
+title: WebVR specification
 -->
 
-# WebVR specifications
+# WebVR specification
 
 * [W3C Specification (Editor's Draft)](https://w3c.github.io/webvr/)
 * [W3C Community Group](https://www.w3.org/community/webvr/)
