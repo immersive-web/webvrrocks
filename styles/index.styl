@@ -15,10 +15,13 @@ nav-width = 30%
 column-max-width = 600px
 mobile-width = 600px
 
-github-repo-padding = 20px
-github-repo-size = 30px
+github-repo-size = 20
+github-repo-size-with-units = github-repo-size px
 
-z-index-github-repo-link = 10
+github-repo-padding = 10
+github-repo-padding-with-units = github-repo-padding px
+
+z-index-github-repo-link = 1
 
 // utils / mixins
 
@@ -198,21 +201,24 @@ p code
 [data-page-path^="/about"] .nav a[href^="/about"]
   @extend .nav-item-selected
 
-.github-repo-link
-  height github-repo-size
-  left github-repo-padding
-  opacity .2
-  position absolute
-  top github-repo-padding
-  width github-repo-size
+.footer
+  border-top 1px dotted #eee
+  margin-top 3rem
+
+.edit-page-link
+  display block
+  padding 1.5rem 0
+
+.github-edit-page-link
+  background url(/img/github-octocat.svg) 0 1.5rem no-repeat
+  background-size github-repo-size-with-units auto
+  line-height github-repo-size-with-units
+  min-height github-repo-size-with-units
+  opacity .4
+  padding-left (github-repo-size + github-repo-padding)px
   z-index z-index-github-repo-link
-  img
-    width 100%
   &:hover
     opacity .8
-  @media screen and (max-width: mobile-width)
-    left 50%
-    transform translateX(-50%)
 
 .content
   background #fff
