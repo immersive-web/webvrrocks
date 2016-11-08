@@ -4,7 +4,7 @@ title: WebVR-enabled browsers
 
 # WebVR-enabled browsers
 
-* [See supported VR headsets](/get-started/headsets)
+* [See supported VR headsets](/headsets/)
 * [Detailed support status](https://iswebvrready.com)
 
 There are a few common flavors of WebVR-enabled browsers:

@@ -159,13 +159,18 @@ p code
 
 // components
 
-nav
+.nav-item-selected
+  background color-main-darker
+  opacity 1
+  transition all 0s
+
+.nav
   @extend .fancy-font
   background color-main
   color white
   font-weight 300
   height 100%
-  overflow-y scroll
+  overflow-y auto
   padding-top 40px
   position fixed
   right 0
@@ -179,11 +184,19 @@ nav
     padding 8px 30px
     text-decoration none
     &:hover, &:active, &.active
-      background color-main-darker
-      opacity 1
-      transition all 0s
-  @media screen and (max-width: mobile-width)
-    display none
+      @extend .nav-item-selected
+
+[data-page-path="/"] .nav a[href="/"],
+[data-page-path^="/getting-started"]:not([data-page-path^="/getting-started/troubleshooting"]) .nav a[href^="/getting-started"]:not([href^="/getting-started/troubleshooting"]),
+[data-page-path^="/browsers"]:not([data-page-path^="/browsers/changelog"]) .nav a[href^="/browsers"]:not([href^="/browsers/changelog"]),
+[data-page-path^="/browsers/changelog"] .nav a[href^="/browsers/changelog"],
+[data-page-path^="/getting-started/troubleshooting"] .nav a[href^="/getting-started/troubleshooting"],
+[data-page-path^="/directory"] .nav a[href^="/directory"],
+[data-page-path^="/creating"] .nav a[href^="/creating"],
+[data-page-path^="/community"] .nav a[href^="/community"],
+[data-page-path^="/spec"] .nav a[href^="/spec"],
+[data-page-path^="/about"] .nav a[href^="/about"]
+  @extend .nav-item-selected
 
 .github-repo-link
   height github-repo-size
@@ -207,8 +220,8 @@ nav
   position relative
   width (100% - nav-width)
   @media screen and (max-width: mobile-width)
-    width 100%
     padding 30px
+    width 100%
 
 .column
   margin 0 auto
