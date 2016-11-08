@@ -18,7 +18,7 @@ domready(() => {
   window.pjax.connect({
     container: 'main',
     returnToTop: true,
-    complete: function () {
+    complete: () => {
       var elWithPagePath = document.querySelector('[data-current-file]');
       if (elWithPagePath) {
         var editPageLink = document.querySelector('#edit-page-link');
@@ -26,6 +26,11 @@ domready(() => {
           editPageLink.setAttribute('href', editPageLink.getAttribute('data-default-href').replace('{path}', elWithPagePath.getAttribute('data-current-file')));
         }
       }
+    },
+    error: event => {
+      console.error(event);
+      console.log('Fallback to synchronous page load', event.data.url);
+      window.location.href = event.data.url;
     }
   });
 });
