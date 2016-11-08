@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "domready": "^1.0.8"
+  },
   "devDependencies": {
     "gh-pages": "^0.11.0",
     "jus": "^0.21.0",
