@@ -62,7 +62,7 @@ body
 
 a
   color color-link
-  transition all .15s
+  transition .15s all ease-in-out
 
 h2, h3, h4, h5, h6, p, dl, ol, ul
   margin 1.5rem 0
@@ -103,9 +103,6 @@ ul li:before
 
 ul ul li:before
   content "○"
-
-a
-  transition
 
 h1, h2, h3, h4, h5, h6
   @extend .fancy-font
@@ -242,6 +239,7 @@ p code
   align-self center
   color #999
   margin-left 2rem
+  transition .15s color ease-in-out
 
   strong
     font-size 2rem
