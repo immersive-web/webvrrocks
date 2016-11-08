@@ -88,6 +88,7 @@ ul,
 ol
   li:before
     display inline-block
+    position absolute
     margin-left -4ch
     margin-right 1ch
     padding-right 0
@@ -99,7 +100,7 @@ ol li:before
   counter-increment item
 
 ul li:before
-  content '● '
+  content "●"
 
 ul ul li:before
   content "○"
