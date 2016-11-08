@@ -7,14 +7,23 @@
   "dependencies": {},
   "devDependencies": {
     "gh-pages": "^0.11.0",
-    "jus": "^0.21.0"
+    "jus": "^0.21.0",
+    "surge": "^0.18.0"
   },
   "scripts": {
     "start": "npm run dev",
     "dev": "jus serve",
     "build": "jus build . _prod",
     "lint": "semistandard",
-    "deploy": "npm run build && gh-pages -d _prod",
-    "open": "open https://webvrrocks.github.io/"
+    "surge": "surge -d webvrrocks.surge.sh",
+    "deploy": "npm run deploy:ghpages",
+    "deploy:ghpages": "ghpages -d _prod",
+    "deploy:surge": "surge _prod -d webvrrocks.surge.sh",
+    "predeploy:ghpages": "npm run build",
+    "predeploy:surge": "npm run build",
+    "open": "npm run surge",
+    "open:prod": "open https://webvr.rocks/",
+    "open:surge": "open https://webvrrocks.surge.sh/",
+    "open:ghpages": "open https://webvrrocks.github.io/"
   }
 }

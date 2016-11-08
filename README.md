@@ -25,11 +25,18 @@ Built using [jus](http://jus.js.org/).
 
 ## Deployment
 
-To deploy the static pages to production:
+To deploy the static pages to staging:
 
 ```sh
 npm run deploy
 ```
+
+To deploy the static pages to production:
+
+```sh
+npm run deploy:prod
+```
+
 
 ## License
 
