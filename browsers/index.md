@@ -1,4 +1,4 @@
-## Browser Support
+## Browser with WebVR support
 
 ### Firefox
 * [Downloads and Setup instructions](/browsers/firefox)

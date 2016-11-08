@@ -1,4 +1,6 @@
-## How to view WebVR content?
+## Getting Started
+
+### How to view WebVR content?
 
 To view WebVR content, you will need a compatible browser and VR headset.
 
