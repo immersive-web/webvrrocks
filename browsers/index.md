@@ -13,7 +13,7 @@ There are two flavors of WebVR-enabled browsers:
 * Full-VR browsers with WebVR support (Browsing is done entirely in VR and may include compatibility with existing 2D web content)
     * Supported: **[Samsung Internet Browser for Gear VR](/browsers/samsung-internet-browser-for-gear-vr)**
     * Soon: [Google Daydream](/browsers/chrome-daydream)
-    * Soon: [Oculus Carmel](/browsers/oculus-carmel) (WebVR only)
+    * Soon: [Oculus Carmel](/browsers/carmel) (WebVR only)
 
 * [See supported VR headsets](/headsets/)
 * [Detailed support status](https://iswebvrready.com)
