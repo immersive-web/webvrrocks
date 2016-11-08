@@ -21,6 +21,7 @@
     "surge": "surge -d https://webvrrocks.surge.sh",
     "deploy": "npm run deploy:surge",
     "deploy:prod": "npm run deploy:surge",
+    "deploy:splash": "gh-pages --dist _splash/",
     "deploy:surge": "surge _prod -d https://webvrrocks.surge.sh",
     "deploy:ghpages": "gh-pages --dist _prod/",
     "predeploy:surge": "npm run build",
