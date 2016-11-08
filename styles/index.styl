@@ -59,10 +59,10 @@ body
   font-size 1.1rem
   margin 0
   padding 0
-  transition all 0.3s
 
 a
   color color-link
+  transition all .15s
 
 h2, h3, h4, h5, h6, p, dl, ol, ul
   margin 1.5rem 0
@@ -100,6 +100,9 @@ ol li:before
 
 ul li:before
   content: '• '
+
+a
+  transition
 
 h1, h2, h3, h4, h5, h6
   @extend .fancy-font
@@ -178,7 +181,6 @@ nav
     opacity 0.7
     padding 8px 30px
     text-decoration none
-    transition all 0.2s
     &:hover, &:active, &.active
       background color-main-darker
       opacity 1
@@ -192,11 +194,10 @@ nav
   opacity .2
   position absolute
   top github-repo-padding
-  transition all 0.3s
   width github-repo-size
   z-index z-index-github-repo-link
   img
-   width 100%
+    width 100%
   &:hover
     opacity .8
   @media screen and (max-width: mobile-width)
@@ -217,17 +218,24 @@ nav
   max-width column-max-width
   position relative
 
+.tagline
+  color #999
+  display inline-block
+  margin-left 1rem
+  vertical-align bottom
+
 .logo
+  text-decoration none
+
+  &:hover .tagline
+    color #666
+
   img
-    display block
-    margin 0 auto 1.5rem
+    display inline-block
     max-width 200px
 
   @media screen and (max-width: mobile-width)
     margin-top 40px
-
-.tagline
-  color #999
 
 table.routes
   border-collapse collapse
