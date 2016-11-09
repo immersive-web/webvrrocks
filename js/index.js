@@ -35,7 +35,7 @@ domready(() => {
     },
     success: () => {
       nav.setAttribute('data-state', 'closed');
-    }
+    },
     error: event => {
       console.error(event);
       console.log('Fallback to synchronous page load', event.data.url);
