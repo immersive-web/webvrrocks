@@ -186,7 +186,6 @@ p code
   height 100%
   overflow-y auto
   position fixed
-  right 0
   top 0
   padding-top nav-height
   width nav-width
@@ -275,8 +274,10 @@ p code
   background #fff
   padding 60px
   position relative
+  left nav-width
   width (100% - nav-width)
   @media screen and (max-width: mobile-width)
+    left 0
     padding 30px
     width 100%
 
