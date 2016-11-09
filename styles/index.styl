@@ -210,6 +210,9 @@ p code
   opacity 0.7
   padding 8px 30px
   text-decoration none
+  text-align right
+  @media screen and (max-width: mobile-width)
+    text-align center
   &:hover, &:active, &.active
     @extend .nav-item-selected
 
@@ -230,6 +233,9 @@ p code
   width 100%
   bottom 0
   padding 30px
+  text-align right
+  @media screen and (max-width: mobile-width)
+    text-align center
   > a
     color white
     font-size 1rem
@@ -242,8 +248,12 @@ p code
 
 .nav-social
   height 40px
-  padding 10px 0 0 30px
+  padding 10px 30px 0 0
   width 100%
+  text-align right
+  @media screen and (max-width: mobile-width)
+    padding 10px
+    text-align center
 
 .social-link svg
   width 20px
