@@ -15,6 +15,12 @@ ga('send', 'pageview');
 require('./vendor/pjax-standalone');  // NOTE: module does not support CommonJS atm.
 
 domready(() => {
+  var nav = document.querySelector('.nav');
+
+  document.querySelector('.nav-toggle').addEventListener('click', () => {
+    nav.setAttribute('data-state', nav.getAttribute('data-state') === 'open' ? 'closed' : 'open');
+  });
+
   window.pjax.connect({
     container: 'main',
     returnToTop: true,
@@ -27,6 +33,9 @@ domready(() => {
         }
       }
     },
+    success: () => {
+      nav.setAttribute('data-state', 'closed');
+    }
     error: event => {
       console.error(event);
       console.log('Fallback to synchronous page load', event.data.url);
