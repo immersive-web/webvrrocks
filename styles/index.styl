@@ -235,6 +235,11 @@ p code
   top 0
   padding-top nav-height
   width nav-width
+  display flex
+  flex-direction column
+
+.nav-content
+  flex 1
 
 @media screen and (max-width: mobile-width)
   .nav
@@ -281,9 +286,7 @@ p code
     bottom auto
 
 .nav-footer
-  bottom 0
   padding 30px
-  position absolute
   transition .15s bottom ease-in-out
   text-align right
   width 100%
