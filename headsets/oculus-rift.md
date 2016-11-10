@@ -6,7 +6,7 @@ title: Oculus Rift
 
 * [Oculus Rift product page](https://www3.oculus.com/rift/)
 
-## Browser Support
+## Browser support
 
 * [Firefox Nightly setup instructions](/browsers/firefox)
 * [Chromium setup instructions](/browsers/chromium)
