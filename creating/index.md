@@ -6,9 +6,10 @@ title: Creating WebVR
 
 Tutorials and tools for making WebVR content.
 
-## Tutorials
+## 5-minute guides
+  * [Exporting Blender Models from Sketchfab to A-Frame](/creating/export-blender-to-aframe/)
   * Debugging WebVR using Chrome
-  * Remotely debugging WebVR on GearVR
+  * Remotely debugging WebVR on Gear VR
 
 ## Example boilerplates
   * A-Painter drawing
@@ -29,6 +30,8 @@ Tutorials and tools for making WebVR content.
   * three.js
   * Babylon.js
   * PlayCanvas
+  * regl
+  * stack.gl
 
 ### A-Frame
 
@@ -43,7 +46,5 @@ Hey there!
   * Vizor
 
 ## Other tools
-  * WebVR Simulator add-on
-  * Pose Recorder
-
-
+  * WebVR Simulator (browser extension)
+  * WebVR Recorder (browser extension)

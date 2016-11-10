@@ -1,0 +1,34 @@
+<!--
+layout: inline
+-->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exporting Blender Models from Sketchfab to A-Frame – WebVR Rocks</title>
+    <style>
+      html, body {
+        background: #3a91aa;
+      }
+    </style>
+    <script src="assets/js/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="cup-obj" src="assets/models/cup.obj"></a-asset-item>
+        <a-asset-item id="cup-mtl" src="assets/models/cup.mtl"></a-asset-item>
+      </a-assets>
+
+      <a-entity obj-model="obj: #cup-obj; mtl: #cup-mtl" position="0 -2 -2">
+        <a-animation attribute="rotation" dur="12000" easing="linear" repeat="indefinite"
+                     to="0 360 0"></a-animation>
+      </a-entity>
+
+      <a-entity light="color: #67ba6d; intensity: 0.25" position="-1 0 0"></a-entity>
+      <a-entity light="color: #d7f096; intensity: 1" position="1 2 0"></a-entity>
+      <a-sky color="#3a91aa"></a-sky>
+    </a-scene>
+  </body>
+</html>
