@@ -39,6 +39,7 @@ domready(() => {
   window.pjax.connect({
     container: 'main',
     returnToTop: true,
+    excludeClass: 'nav-toggle-anchor',
     complete: () => {
       var elWithPagePath = document.querySelector('[data-current-file]');
       if (elWithPagePath) {
@@ -49,7 +50,7 @@ domready(() => {
       }
     },
     success: () => {
-      nav.setAttribute('data-state', 'closed');
+      html.setAttribute('data-nav-open', false);
     },
     error: event => {
       console.error(event);
