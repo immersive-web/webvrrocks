@@ -1,4 +1,4 @@
-/* global ga */
+/* global ga, URLSearchParams */
 var domready = require('domready');
 
 /* jshint ignore:start */
@@ -15,11 +15,13 @@ domready(() => {
   var html = document.documentElement;
   var nav = document.querySelector('#nav');
   var navToggleAnchor = nav.querySelector('#nav-toggle-anchor');
+  var directory = require('./directory');
 
-  navToggleAnchor.addEventListener('click', e => {
-    e.preventDefault();
-    html.setAttribute('data-nav-open', html.getAttribute('data-nav-open') === 'true' ? 'false' : 'true');
-  });
+  if (window.location.pathname.indexOf('/directory') === 0) {
+    directory.init();
+  }
+
+  var nav = document.querySelector('.nav');
 
   // TODO: Debounce.
   window.addEventListener('resize', () => {

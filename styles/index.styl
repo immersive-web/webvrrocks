@@ -320,6 +320,59 @@ p code
     padding 0
     position static
 
+[data-current-path^="/directory"]
+  .column
+    max-width 1000px
+
+  &[data-qs-headset*="vive"] .list-item:not([data-support-for-htc-vive="yes"]):not([data-requires-for-htc-vive="yes"]),
+  &[data-qs-supports*="vive"] .list-item:not([data-support-for-htc-vive="yes"]),
+  &[data-qs-requires*="vive"] .list-item:not([data-requires-for-htc-vive="yes"]),
+
+  &[data-qs-headset*="rift"] .list-item:not([data-support-for-oculus-rift="yes"]):not([data-requires-for-oculus-rift="yes"]),
+  &[data-qs-supports*="rift"] .list-item:not([data-support-for-oculus-rift="yes"]),
+  &[data-qs-requires*="rift"] .list-item:not([data-requires-for-oculus-rift="yes"]),
+
+  &[data-qs-headset*="gear"] .list-item:not([data-support-for-samsung-gear-vr="yes"]):not([data-requires-for-samsung-gear-vr="yes"]),
+  &[data-qs-supports*="gear"] .list-item:not([data-support-for-samsung-gear-vr="yes"]),
+  &[data-qs-requires*="gear"] .list-item:not([data-requires-for-samsung-gear-vr="yes"]),
+
+  &[data-qs-headset*="osvr"] .list-item:not([data-support-for-osvr="yes"]):not([data-requires-for-osvr="yes"]),
+  &[data-qs-supports*="osvr"] .list-item:not([data-support-for-osvr="yes"]),
+  &[data-qs-requires*="osvr"] .list-item:not([data-requires-for-osvr="yes"]),
+
+  &[data-qs-browser*="firefox"] .list-item:not([data-support-for-firefox-desktop="yes"]):not([data-requires-for-firefox-desktop="yes"]),
+  &[data-qs-supports*="firefox"] .list-item:not([data-support-for-firefox-desktop="yes"]),
+  &[data-qs-requires*="firefox"] .list-item:not([data-requires-for-firefox-desktop="yes"]),
+
+  &[data-qs-browser*="chromium"] .list-item:not([data-support-for-chromium-desktop="yes"]):not([data-requires-for-chromium-desktop="yes"]),
+  &[data-qs-supports*="chromium"] .list-item:not([data-support-for-chromium-desktop="yes"]),
+  &[data-qs-requires*="chromium"] .list-item:not([data-requires-for-chromium-desktop="yes"]),
+
+  &[data-qs-browser*="chrome"] .list-item:not([data-support-for-chromium-desktop="yes"]):not([data-requires-for-chromium-desktop="yes"]),
+  &[data-qs-supports*="chrome"] .list-item:not([data-support-for-chromium-desktop="yes"]),
+  &[data-qs-requires*="chrome"] .list-item:not([data-requires-for-chromium-desktop="yes"]),
+
+  &[data-qs-browser*="chrome"] .list-item:not([data-support-for-chrome-desktop="yes"]):not([data-requires-for-chrome-desktop="yes"]),
+  &[data-qs-supports*="chrome"] .list-item:not([data-support-for-chrome-desktop="yes"]),
+  &[data-qs-requires*="chrome"] .list-item:not([data-requires-for-chrome-desktop="yes"]),
+
+  &[data-qs-browser*="samsung"] .list-item:not([data-support-for-samsung-internet-browser-for-gear-vr="yes"]):not([data-requires-for-samsung-internet-browser-for-gear-vr="yes"]),
+  &[data-qs-supports*="samsung"] .list-item:not([data-support-for-samsung-internet-browser-for-gear-vr="yes"]),
+  &[data-qs-requires*="samsung"] .list-item:not([data-requires-for-samsung-internet-browser-for-gear-vr="yes"]),
+
+  &[data-qs-browser*="carmel"] .list-item:not([data-support-for-oculus-carmel="yes"]):not([data-requires-for-oculus-carmel="yes"]),
+  &[data-qs-supports*="carmel"] .list-item:not([data-support-for-oculus-carmel="yes"]),
+  &[data-qs-requires*="carmel"] .list-item:not([data-requires-for-oculus-carmel="yes"]),
+
+  &[data-qs-browser*="cardboard"] .list-item:not([data-support-for-google-cardboard="yes"]):not([data-requires-for-google-cardboard="yes"]),
+  &[data-qs-supports*="cardboard"] .list-item:not([data-support-for-google-cardboard="yes"]),
+  &[data-qs-requires*="cardboard"] .list-item:not([data-requires-for-google-cardboard="yes"]),
+
+  &[data-qs-browser*="daydream"] .list-item:not([data-support-for-google-daydream="yes"]):not([data-requires-for-google-daydream="yes"]),
+  &[data-qs-supports*="daydream"] .list-item:not([data-support-for-google-daydream="yes"]),
+  &[data-qs-requires*="daydream"] .list-item:not([data-requires-for-google-daydream="yes"])
+    display none
+
 [data-nav-open="true"]
   .nav
     height 100%
@@ -386,25 +439,37 @@ p code
     padding 10px
     text-align center
 
-.footer
-  border-top 1px dotted #eee
-  margin-top 3rem
-
 .edit-page-link
   display block
-  padding 1.5rem 0
-
-.github-edit-page-link
-  background url(/img/github-octocat.svg) 0 1.5rem no-repeat
-  background-size github-repo-size-with-units auto
   font-size .9rem
   line-height github-repo-size-with-units
   min-height github-repo-size-with-units
   opacity .4
-  padding-left (github-repo-size + github-repo-padding)px
-  z-index z-index-github-repo-link
+  padding .5rem 0
   &:hover
     opacity .8
+
+.github-edit-page-link
+  background url(/img/github-octocat.svg) no-repeat
+  background-size github-repo-size-with-units auto
+  line-height github-repo-size-with-units
+  display block
+  min-height github-repo-size-with-units
+  padding-left (github-repo-size + github-repo-padding)px
+  z-index z-index-github-repo-link
+
+.page-header .edit-options
+  border-bottom 1px dotted #eee
+  margin 0 0 2rem
+  padding-bottom 1.5rem
+
+.page-footer .edit-options
+  border-top 1px dotted #eee
+  margin-top 3rem
+  padding 1.5rem 0
+
+  .github-edit-page-link
+    background-position 0 .4rem
 
 .tagline
   align-self center
@@ -459,6 +524,137 @@ hr
   border none
   border-top 1px dotted #eee
   height 0
+
+.directory-list li:before
+  content ""
+
+.directory-item
+  + .directory-item
+    margin-top 2rem
+
+.directory-anchor
+  border 0
+  text-decoration none
+
+  img
+    display block
+    margin-bottom .5rem
+    max-width 400px
+    transition .15s opacity ease-in-out
+    opacity .8
+
+  &:hover
+    img
+      opacity 1
+
+.list-item
+  border .25rem solid color-black
+  box-shadow .25rem .25rem color-text-light
+  position relative
+
+.list-item + .list-item
+  margin-top 2.5rem
+
+a.list-item-link
+  color color-text-darker
+  display flex
+  padding 1rem
+  text-decoration none
+
+  &:hover
+    color color-link
+
+.list-item-name
+  flex 1
+  font-size 1.5rem
+  font-weight 400
+  // padding-left .75rem
+  padding-right .75rem
+  width 30%
+
+.list-item-screenshots
+  flex 1
+  // order -1
+  // padding-right .75rem
+  padding-left .75rem
+  width 40%
+
+.list-item-screenshot
+  display block
+
+.list-item-screenshot ~ .list-item-screenshot
+  display none
+
+a.list-item-source-code-url,
+a.list-item-video-link,
+a.list-item-text-link
+  color color-text-light
+  display block
+  font-size .9rem
+  padding 0 1.5rem 1.5rem
+
+  &:hover
+    color color-link
+
+a.list-item-source-code-url.github-edit-page-link
+  background-position 1.5rem 0
+  padding-left 3.5rem
+  padding-bottom 0
+  margin-bottom 1.5rem
+
+a.list-item-video-link
+  font-size .8rem
+  padding-top .75rem
+
+.list-item-video-wrap
+  margin-top .75rem
+  position relative
+  padding-bottom 56.25%  /* 16:9 */
+  height 0
+
+  iframe
+    height 300px
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    width 100%
+
+.list-item-description
+  color color-text-light
+  display block
+  flex 2
+  min-width 30%
+  padding-left 1.5rem
+
+  > *:first-child
+    margin-top 0
+  > *:last-child
+    margin-bottom 0
+
+.directory-form
+  padding-bottom 1rem
+
+  label
+    display block
+
+    + label
+      margin-top .5rem
+
+    .label-text
+      display inline-block
+      min-width 5rem
+
+fieldset
+  border 6px solid lighten(color-main, 25%)
+  padding .75rem
+
+legend
+  background color-main
+  color color-text-darker
+  font-weight 600
+  padding 0 1rem
 
 // TODO: Remove when https://github.com/zeke/jus/issues/36 is fixed.
 #__bs_notify__
