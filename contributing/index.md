@@ -1,3 +1,7 @@
+<!--
+title: Contributing
+-->
+
 # Contributing
 
 We'd love your help!
@@ -6,9 +10,9 @@ The [WebVR community](/community/) is a friendly open-source community that welc
 [WebVR specification](/contributing#webvr-specification),
 [testing and filing issues](/contributing/#testing),
 [translation](/contributing/#translation),
-[documentation](/contributing/#documentation), 
-[blog posts](/contributing/#blog-posts), and 
-[tutorials](/contributing/#tutorials) 
+[documentation](/contributing/#documentation),
+[blog posts](/contributing/#blog-posts), and
+[tutorials](/contributing/#tutorials)
 
 # WebVR Rocks
 
