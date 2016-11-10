@@ -15,10 +15,25 @@ ga('send', 'pageview');
 require('./vendor/pjax-standalone');  // NOTE: module does not support CommonJS atm.
 
 domready(() => {
-  var nav = document.querySelector('.nav');
+  var html = document.documentElement;
+  var nav = document.querySelector('#nav');
+  var navToggleAnchor = nav.querySelector('#nav-toggle-anchor');
 
-  document.querySelector('.nav-toggle').addEventListener('click', () => {
-    nav.setAttribute('data-state', nav.getAttribute('data-state') === 'open' ? 'closed' : 'open');
+  navToggleAnchor.addEventListener('click', e => {
+    e.preventDefault();
+    html.setAttribute('data-nav-open', html.getAttribute('data-nav-open') === 'true' ? 'false' : 'true');
+  });
+
+  // TODO: Debounce.
+  window.addEventListener('resize', () => {
+// - document.querySelector('#nav-footer').offsetHeight
+
+    if (nav.scrollHeight > nav.clientHeight) {
+      nav.classList.add('elastic');
+    } else {
+      nav.classList.remove('elastic');
+    }
+
   });
 
   window.pjax.connect({

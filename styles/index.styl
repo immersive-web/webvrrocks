@@ -2,10 +2,17 @@
 @import 'system-font.styl'
 @import 'monospace-font.styl'
 
+color-black = #111
 color-main = #efefef
-color-main-darker = #333333
+color-main-darker = #333
+color-text-darker = #111
 color-text = #666
-color-link = #154CBD
+color-text-light = #666
+color-primary = rgb(42,170,125)
+color-link = #154cbd
+color-link-active = #2b43ff
+color-link-visited = #2b43ff
+color-link-hover = darken(#154cbd, 30%)
 
 font-body = system
 font-code = monospace
@@ -65,6 +72,15 @@ a
   color color-link
   transition .15s all ease-in-out
 
+a:visited
+  color color-link-visited
+
+a:active
+  color color-link-active
+
+a:hover
+  color color-link-hover
+
 h2, h3, h4, h5, h6, p, dl, ol, ul
   margin 1.5rem 0
 
@@ -106,37 +122,65 @@ ul li:before
 ul ul li:before
   content "○"
 
+.nav-list
+  margin 0
+
+  li:before
+    display none
+
 h1, h2, h3, h4, h5, h6
   @extend .fancy-font
-  margin-top 3rem
   a
     display block
     text-decoration none
 
-h2, h3, h4, h5, h6
-  border-bottom 1px solid #eee
-  padding-bottom .5rem
-  &:hover
-    border-bottom-color #ddd
+.main
+  padding-top 2rem
 
-h1
-  color #999
-  font-weight 400
+  h1, h2, h3, h4, h5, h6
+    font-weight 400
+    margin 2.5rem 0 1.5rem
 
-h1, h1 a
-  color color-main-darker
+  h1
+    color #999
+    line-height 1.2
+    margin-bottom 2.5rem
 
-h2, h2 a
+  h2, h3, h4, h5, h6
+    border-bottom 1px solid #eee
+
+    &:hover
+      border-bottom-color #ddd
+    a
+      padding-bottom .5rem
+
+h1,
+h1 a,
+h1 a:hover,
+h1 a:target
+  color color-primary
+
+h2,
+h2 a,
+h2 a:hover,
+h2 a:visited
   color #333
-  font-weight 400
 
-h3, h3 a
+h2:target
+  a,
+  a:hover,
+  a:visited
+    color color-black
+
+h2:target,
+h2:target:hover
+  border-bottom-color color-black
+
+h3,
+h3 a,
+h3 a:hover
   color #666
   font-size 1.5rem
-
-p, ol, ul
-  a
-    color color-link
 
 .highlight
   margin-bottom 16px
@@ -165,21 +209,21 @@ p code
 
 // components
 
-.nav-item-selected
+.nav-primary-item-anchor-selected
   background #fff
+  color color-black
   font-weight 400
-  color #000
   opacity 1
   transition all 0s
 
 .nav-toggle
-  color #000
-  width 100%
+  color color-black
+  display none
+  font-weight 400
   height nav-height
   line-height nav-height
-  font-weight 400
   text-align center
-  display none
+  width 100%
 
 .nav
   @extend .fancy-font
@@ -191,23 +235,26 @@ p code
   top 0
   padding-top nav-height
   width nav-width
-  @media screen and (max-width: mobile-width)
-    height nav-height
-    width 100%
-    padding-top 0
-    .nav-toggle
-      display block
-    .nav-items
-      display none
 
-.nav[data-state="open"]
-  height 100%
-  .nav-items
+@media screen and (max-width: mobile-width)
+  .nav
+    height nav-height
+    padding-top 0
+    width 100%
+  .nav-list
+    display none
+  .nav-toggle
     display block
 
-.nav-items > a
+[data-nav-state="open"]
+  .nav
+    height 100%
+  .nav-list
+    display block
+
+.nav-primary-item a
   display block
-  color #000
+  color color-black
   font-size 1.2rem
   padding 8px 30px
   text-decoration none
@@ -215,7 +262,7 @@ p code
   @media screen and (max-width: mobile-width)
     text-align center
   &:hover, &:active, &.active
-    @extend .nav-item-selected
+    @extend .nav-primary-item-anchor-selected
 
 .nav[data-current-path="/"] a[href="/"],
 .nav[data-current-path^="/getting-started"]:not([data-current-path^="/getting-started/troubleshooting"]) a[href^="/getting-started"]:not([href^="/getting-started/troubleshooting"]),
@@ -227,39 +274,64 @@ p code
 .nav[data-current-path^="/community"] a[href^="/community"],
 .nav[data-current-path^="/spec"] a[href^="/spec"],
 .nav[data-current-path^="/about"] a[href^="/about"]
-  @extend .nav-item-selected
+  @extend .nav-primary-item-anchor-selected
 
-.nav-bottom
-  position absolute
-  width 100%
+.nav.elastic
+  .nav-footer
+    bottom auto
+
+.nav-footer
   bottom 0
   padding 30px
+  position absolute
+  transition .15s bottom ease-in-out
   text-align right
-  @media screen and (max-width: mobile-width)
-    text-align center
-  > a
-    color #000
-    font-size 1rem
-    opacity 0.4
-    text-decoration none
-    white-space nowrap
-    margin 0 10px 0 0
-    &:hover
-      opacity 1
-
-.nav-social
-  height 40px
-  padding 10px 30px 0 0
   width 100%
+
+.nav-footer-item a
+  color color-text
+  font-size 1rem
+  margin 0 10px 0 0
+  text-decoration none
+  white-space nowrap
+  &:hover
+    color color-text-darker
+    opacity 1
+
+.nav-social-list
+  font-size 0
+  padding 20px 30px 0 0
   text-align right
-  @media screen and (max-width: mobile-width)
+  width 100%
+
+.nav-social-item
+  display inline-block
+  margin 0
+  + .nav-social-item
+    margin-left 20px
+
+.social-link
+  svg
+    height 20px
+    transition .15s transform ease-in-out
+    transform scale(1)
+    width 20px
+  path
+    fill color-text
+    transition .15s fill ease-in-out
+  &:hover
+    path
+      fill color-text-darker
+    svg
+      transform scale(1.2)
+
+@media screen and (max-width: mobile-width)
+  .nav-footer
+    text-align center
+
+  .nav-social-list
     padding 10px
     text-align center
-
-.social-link svg
-  width 20px
-  height 20px
-  margin 0 5px 0 0
 
 .footer
   border-top 1px dotted #eee
