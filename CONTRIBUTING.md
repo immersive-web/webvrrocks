@@ -41,7 +41,7 @@ on the WebVR Rocks site.
 
 ## Conduct
 
-In all WebVR Rocks-related forums, we follow [this Code of Conduct](/contributing/code-of-conduct). For escalation or moderation issues, please contact Chris Van Wiemeersch (hearcomestreble@gmail.com) and Casey Yee (casey.yee@gmail.com).
+In all WebVR Rocks-related forums, we follow [this Code of Conduct](https://webvr.rocks/contributing/code-of-conduct). For escalation or moderation issues, please contact Chris Van Wiemeersch (hearcomestreble@gmail.com) and Casey Yee (caseyyee.ca@gmail.com).
 
 
 ## Communication
