@@ -36,26 +36,26 @@ domready(() => {
 
   });
 
-  window.pjax.connect({
-    container: 'main',
-    returnToTop: true,
-    excludeClass: 'nav-toggle-anchor',
-    complete: () => {
-      var elWithPagePath = document.querySelector('[data-current-file]');
-      if (elWithPagePath) {
-        var editPageLink = document.querySelector('#edit-page-link');
-        if (editPageLink) {
-          editPageLink.setAttribute('href', editPageLink.getAttribute('data-default-href').replace('{path}', elWithPagePath.getAttribute('data-current-file')));
-        }
-      }
-    },
-    success: () => {
-      html.setAttribute('data-nav-open', false);
-    },
-    error: event => {
-      console.error(event);
-      console.log('Fallback to synchronous page load', event.data.url);
-      window.location.href = event.data.url;
-    }
-  });
+  // window.pjax.connect({
+  //   container: 'main',
+  //   returnToTop: true,
+  //   excludeClass: 'nav-toggle-anchor',
+  //   complete: () => {
+  //     var elWithPagePath = document.querySelector('[data-current-file]');
+  //     if (elWithPagePath) {
+  //       var editPageLink = document.querySelector('#edit-page-link');
+  //       if (editPageLink) {
+  //         editPageLink.setAttribute('href', editPageLink.getAttribute('data-default-href').replace('{path}', elWithPagePath.getAttribute('data-current-file')));
+  //       }
+  //     }
+  //   },
+  //   success: () => {
+  //     html.setAttribute('data-nav-open', false);
+  //   },
+  //   error: event => {
+  //     console.error(event);
+  //     console.log('Fallback to synchronous page load', event.data.url);
+  //     window.location.href = event.data.url;
+  //   }
+  // });
 });
