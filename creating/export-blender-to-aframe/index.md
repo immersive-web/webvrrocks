@@ -9,7 +9,7 @@ date_updated: 2017-11-09
 
 # 5-Minute Guide: Exporting Blender Models from Sketchfab to A-Frame
 
-![Image of Blender Home Page](https://github.com/WebVRRocks/webvrrocks/tree/master/creating/export-blender-to-aframe/img/ExportOBJ.png)
+![Image of Blender Home Page](../img/ExportOBJ.png)
 
 Using [A-Frame](https://aframe.io/), we will show you how to export a Blender model from Sketchfab to A-Frame.
 
