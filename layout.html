@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="none">  <!-- TODO: Change when launch. -->
     <title>
-      {{#if page.use_default_title}}
+      {% if page.use_default_title %}
         WebVR Rocks – Your one-stop resource for everything about WebVR
-      {{else}}
-        {{page.title}} – WebVR Rocks
-      {{/if}}
+      {% else %}
+        {{ page.title }} – WebVR Rocks
+      {% endif %}
     </title>
     <link rel="stylesheet" href="/styles/index.css">
     <meta name="theme-color" content="#111">
@@ -22,15 +22,15 @@
     <div id="content" class="content">
       <div id="column" class="column">
         <main id="main" class="main" role="main">
-          {{{body}}}
+          {{ body|safe }}
         </main>
         <footer id="footer" class="footer">
-          <a href="https://github.com/webvrrocks/webvrrocks/edit/master{{page.path.relative}}" data-default-href="https://github.com/webvrrocks/webvrrocks/edit/master{path}" class="github-edit-page-link edit-page-link" id="edit-page-link"><span>Edit this page</span></a>
+          <a href="https://github.com/webvrrocks/webvrrocks/edit/master{{ page.path.relative }}" data-default-href="https://github.com/webvrrocks/webvrrocks/edit/master{path}" class="github-edit-page-link edit-page-link" id="edit-page-link"><span>Edit this page</span></a>
         </footer>
       </div>
     </div>
 
-    <nav id="nav" class="nav" role="navigation" data-current-path="{{page.href}}" data-current-file="{{page.path.relative}}">
+    <nav id="nav" class="nav" role="navigation" data-current-path="{{ page.href }}" data-current-file="{{ page.path.relative }}">
       <h1 class="nav-toggle"><a href="" id="nav-toggle-anchor" class="nav-toggle-anchor">Table of contents</a></h1>
       <div id="nav-content" class="nav-content">
         <ul id="nav-primary-list" class="nav-list nav-primary-list">
@@ -75,6 +75,5 @@
         </footer>
       </div>
     </nav>
-    <!-- TODO: Add GA script. -->
   </body>
 </html>
