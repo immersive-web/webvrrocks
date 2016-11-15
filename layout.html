@@ -19,17 +19,6 @@
     <script async defer src="/js/index.js"></script>
   </head>
   <body>
-    <div id="content" class="content">
-      <div id="column" class="column">
-        <main id="main" class="main" role="main">
-          {{ body|safe }}
-        </main>
-        <footer id="footer" class="footer">
-          <a href="https://github.com/webvrrocks/webvrrocks/edit/master{{ page.path.relative }}" data-default-href="https://github.com/webvrrocks/webvrrocks/edit/master{path}" class="github-edit-page-link edit-page-link" id="edit-page-link"><span>Edit this page</span></a>
-        </footer>
-      </div>
-    </div>
-
     <nav id="nav" class="nav" role="navigation" data-current-path="{{ page.href }}" data-current-file="{{ page.path.relative }}">
       <h1 class="nav-toggle"><a href="" id="nav-toggle-anchor" class="nav-toggle-anchor">Table of contents</a></h1>
       <div id="nav-content" class="nav-content">
@@ -75,5 +64,16 @@
         </footer>
       </div>
     </nav>
+
+    <div id="content" class="content">
+      <div id="column" class="column">
+        <main id="main" class="main" role="main">
+          {{ body|safe }}
+        </main>
+        <footer id="footer" class="footer">
+          <a href="https://github.com/webvrrocks/webvrrocks/edit/master{{ page.path.relative }}" data-default-href="https://github.com/webvrrocks/webvrrocks/edit/master{path}" class="github-edit-page-link edit-page-link" id="edit-page-link"><span>Edit this page</span></a>
+        </footer>
+      </div>
+    </div>
   </body>
 </html>
