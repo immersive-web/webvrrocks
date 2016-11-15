@@ -9,7 +9,7 @@ date_updated: 2017-11-09
 
 # 5-Minute Guide: Exporting Blender Models from Sketchfab to A-Frame
 
-![Image of Blender Home Page](../img/ExportOBJ.png)
+![Demo Scene](/img/DemoCV1Model.png)
 
 Using [A-Frame](https://aframe.io/), we will show you how to export a Blender model from Sketchfab to A-Frame.
 
@@ -131,7 +131,7 @@ It will be a zip file.
 ## Unzip/extract the blend file
 Right click on the .zip file and select Extract All. Save the extracted contents to a directory you can find easily.
 
-![Image of Blender Home Page](https://github.com/WebVRRocks/webvrrocks/tree/master/creating/export-blender-to-aframe/img/ExtractAll.png)
+![Extract Zip Contents](https://github.com/WebVRRocks/webvrrocks/tree/master/creating/export-blender-to-aframe/img/ExtractAll.png)
 
 ## Open the blend file with Blender
 Take a quick look at the Blender user interface. It has a high learning curve, but can be a powerful tool for creating 3D graphics. For now, we’ll just use it as an exporter for the CV1 model.
@@ -139,7 +139,7 @@ Take a quick look at the Blender user interface. It has a high learning curve, b
 ## Export the model: File → Export → Wavefront (.obj)
 Name and save the .obj file (saved by default in same directory with the blend file)
 
-![Image of Blender Home Page](https://github.com/WebVRRocks/webvrrocks/tree/master/creating/export-blender-to-aframe/img/ExportOBJ.png)
+![Export .obj from Blender](https://github.com/WebVRRocks/webvrrocks/tree/master/creating/export-blender-to-aframe/img/ExportOBJ.png)
 
 ## Copy the .obj and .mtl files into the directory with your index.html file
 Go back to the blend file in Blender and export as Collada (.dae)
