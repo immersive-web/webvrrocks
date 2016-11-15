@@ -14,7 +14,7 @@ title: HTC Vive
 
 ## Hardware requirements
 
-* [See HTC VIVE recommended conputer specifications]()
+* [See HTC VIVE recommended computer specifications]()
 
 
 ## Motion controller support
