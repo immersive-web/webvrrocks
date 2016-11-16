@@ -17,11 +17,12 @@ color-link-hover = darken(#154cbd, 30%)
 font-body = system
 font-code = monospace
 
-logo-width = 300px
-nav-width = 30%
-nav-height = 40px
 column-max-width = 600px
+logo-width = 300px
 mobile-width = 600px
+
+nav-height = 3rem
+nav-width = 30%
 
 github-repo-size = 20
 github-repo-size-with-units = github-repo-size px
@@ -144,7 +145,7 @@ h1, h2, h3, h4, h5, h6
   h1
     color #999
     line-height 1.2
-    margin-bottom 2.5rem
+    margin 0 0 2.5rem
 
   h2, h3, h4, h5, h6
     border-bottom 1px solid #eee
@@ -228,68 +229,52 @@ p code
 .nav
   @extend .fancy-font
   background color-main
+  display flex
+  flex-direction column
   font-weight 300
   height 100%
   overflow-y auto
+  padding nav-height 0
   position fixed
   top 0
-  padding-top nav-height
   width nav-width
-  display flex
-  flex-direction column
 
-.nav-content
-  flex 1
-
-@media screen and (max-width: mobile-width)
-  .nav
-    z-index 100
-    height nav-height
-    padding-top 0
+.content
+  background #fff
+  padding 3rem
+  position relative
+  left nav-width
+  width (100% - nav-width)
+  @media screen and (max-width: mobile-width)
+    left 0
+    padding 2rem
     width 100%
-  .nav-list
-    display none
-  .nav-toggle
-    display block
 
-[data-nav-open="true"]
-  .nav
-    height 100%
-  .nav-list
-    display block
+.column
+  margin 0 auto
+  max-width column-max-width
+  position relative
 
 .nav-primary-item a
-  display block
   color color-black
+  display block
   font-size 1.2rem
-  padding 8px 30px
+  padding 8px 2rem
   text-decoration none
   text-align right
   @media screen and (max-width: mobile-width)
     text-align center
-  &:hover, &:active, &.active
+  &:hover,
+  &:active,
+  &.active
     @extend .nav-primary-item-anchor-selected
-
-.nav[data-current-path="/"] a[href="/"],
-.nav[data-current-path^="/getting-started"]:not([data-current-path^="/getting-started/troubleshooting"]) a[href^="/getting-started"]:not([href^="/getting-started/troubleshooting"]),
-.nav[data-current-path^="/browsers"]:not([data-current-path^="/browsers/changelog"]) a[href^="/browsers"]:not([href^="/browsers/changelog"]),
-.nav[data-current-path^="/browsers/changelog"] a[href^="/browsers/changelog"],
-.nav[data-current-path^="/headsets"] a[href^="/headsets"],
-.nav[data-current-path^="/getting-started/troubleshooting"] a[href^="/getting-started/troubleshooting"],
-.nav[data-current-path^="/directory"] a[href^="/directory"],
-.nav[data-current-path^="/creating"] a[href^="/creating"],
-.nav[data-current-path^="/community"] a[href^="/community"],
-.nav[data-current-path^="/spec"] a[href^="/spec"],
-.nav[data-current-path^="/contributing"] a[href^="/contributing"],
-.nav[data-current-path^="/rocks/about"] a[href^="/rocks/about"]
-  @extend .nav-primary-item-anchor-selected
 
 .nav.elastic
   .nav-footer
     bottom auto
 
 .nav-footer
-  padding 30px
+  padding nav-height
   transition .15s bottom ease-in-out
   text-align right
   width 100%
@@ -304,9 +289,68 @@ p code
     color color-text-darker
     opacity 1
 
+[data-current-path="/"]
+  body
+    display flex
+    flex-direction column
+  .nav
+    background none
+    border-top 1px dotted #eee
+    margin 3rem auto
+    max-width column-max-width
+    order 1
+    overflow-y visible
+    padding 2.25rem 0 0 0
+    position static
+    width 70%
+  .nav-primary-item a,
+  .nav-footer
+    padding 0
+    text-align left
+  .nav-primary-item + .nav-primary-item a
+    padding .25rem 0
+  .nav-footer
+    padding 1rem 0
+  .content
+    left auto
+    margin 0 auto
+    padding 0
+    position static
+
+[data-nav-open="true"]
+  .nav
+    height 100%
+  .nav-list
+    display block
+
+@media screen and (max-width: mobile-width)
+  .nav
+    height nav-height
+    padding-top 0
+    width 100%
+    z-index 100
+  .nav-list
+    display none
+  .nav-toggle
+    display block
+
+[data-current-path="/"] nav a[href="/"],
+[data-current-path^="/getting-started"]:not([data-current-path^="/getting-started/troubleshooting"]) nav a[href^="/getting-started"]:not([href^="/getting-started/troubleshooting"]),
+[data-current-path^="/browsers"]:not([data-current-path^="/browsers/changelog"]) nav a[href^="/browsers"]:not([href^="/browsers/changelog"]) a,
+[data-current-path^="/browsers/changelog"] nav a[href^="/browsers/changelog"],
+[data-current-path^="/headsets"] nav a[href^="/headsets"],
+[data-current-path^="/getting-started/troubleshooting"] nav a[href^="/getting-started/troubleshooting"],
+[data-current-path^="/directory"] nav a[href^="/directory"],
+[data-current-path^="/creating"] nav a[href^="/creating"],
+[data-current-path^="/community"] nav a[href^="/community"],
+[data-current-path^="/spec"] nav a[href^="/spec"],
+[data-current-path^="/contributing"] nav a[href^="/contributing"],
+[data-current-path^="/rocks/about"] nav a[href^="/rocks/about"]
+  @extend .nav-primary-item-anchor-selected
+
 .nav-social-list
   font-size 0
-  padding 20px 30px 0 0
+  padding 20px 2rem 0 0
   text-align right
   width 100%
 
@@ -359,22 +403,6 @@ p code
   &:hover
     opacity .8
 
-.content
-  background #fff
-  padding 0 60px
-  position relative
-  left nav-width
-  width (100% - nav-width)
-  @media screen and (max-width: mobile-width)
-    left 0
-    padding 30px
-    width 100%
-
-.column
-  margin 0 auto
-  max-width column-max-width
-  position relative
-
 .tagline
   align-self center
   color #999
@@ -399,7 +427,7 @@ p code
     max-width 200px
 
   @media screen and (max-width: mobile-width)
-    margin-top 40px
+    margin-top nav-height
 
 table.routes
   border-collapse collapse

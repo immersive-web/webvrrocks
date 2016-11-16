@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-current-path="{{ page.href }}" data-current-file="{{ page.path.relative }}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -71,7 +71,10 @@
           {{ body|safe }}
         </main>
         <footer id="footer" class="footer">
-          <a href="https://github.com/webvrrocks/webvrrocks/edit/master{{ page.path.relative }}" data-default-href="https://github.com/webvrrocks/webvrrocks/edit/master{path}" class="github-edit-page-link edit-page-link" id="edit-page-link"><span>Edit this page</span></a>
+          <a href="{% if page.edit_url %}{{ page.edit_url }}{% else %}https://github.com/webvrrocks/webvrrocks/edit/master{{ page.path.relative }}{% endif %}" class="github-edit-page-link edit-page-link" id="edit-page-link"><span>Edit this page</span></a>
+          {% if page.date_published %}
+            Date published: <time class="page__publish-date" title="{{ page.date_published }}" data-date="{{ page.date_published }}" data-format="%B %Y">{{ page.date_published }}</time>
+          {% endif %}
         </footer>
       </div>
     </div>
