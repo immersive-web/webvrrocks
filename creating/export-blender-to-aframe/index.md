@@ -162,17 +162,17 @@ In the boilerplate, notice that I’ve provided attribution to the model’s cre
 Because the 3D model files are in the same directory with your index.html, the file paths to them simply consist of their names. Go to line 26, which is within `<a-assets>`. This is where we’ll initially load the assets for the scene. In `src=”cv1_FF.obj”` change `cv1_FF.obj` to match the `.obj` filename. Do the same for the `.mtl` and the `.dae` asset items on lines 27 and 28.
 Using an asset system like this has the advantage of pre-loading your models, and you can then instantiate them as many times as you want using their IDs, without sacrificing as much performance.
 
-### Start up your local http server 
-Open the command prompt. Using [Git Bash](https://git-scm.com/) is recommended. Type:
-
+### Start up your local Browsersync server 
+Open the command prompt. Using [Git Bash](https://git-scm.com/) is recommended. `cd` into the directory which contains `index.html` and then type:
 ```
-http-server [C:\Users\webvr\Documents\WebVRrocks\creating\export-blender-to-aframe\demo\index.html] -o -c-1
+browser-sync start --server --files "*.html, stylesheets/*.css"
 ```
-
-The default port it uses is 8080; there’s a option to change this, if you want: https://www.npmjs.com/package/http-server
+Browsersync will serve your `index.html` file from `https://localhost:3000`. The default browser will open this page automatically when you start the Browsersync server.
 
 ### Testing Your WebVR Scene
 The COLLADA `.dae` will be on your left, and the Wavefront `.obj` on your left. Click-and-drag to rotate the camera and look around. You can also move with the traditional WASD keys. If you can’t see the models, check the file paths in `<a-assets>` and also the IDs in the obj-model and collada-model entities.
 You can view your locally served webpage in VR with either a phone and Google Cardboard, or with Vive or Rift using a vr-enabled browser. For quick viewing on Cardboard: In the command prompt with Browsersync running, you should see "Local" and "External URLs that each contain an IP address and a port number. Enter the "External" URL into the address bar of your phone browser, and load the URL on the phone browser.
+
+
 
 
