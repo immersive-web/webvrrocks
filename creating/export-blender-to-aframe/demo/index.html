@@ -1,33 +1,35 @@
-<!--.....................................................
+<!-- .....................................................
 Attribution for 3D model used in this scene: Oculus Rift CV1 by Ti is licensed under CC Attribution-NonCommercial
-.........................................................-->
+https://sketchfab.com/models/591ff55a0f7b401cbb14fe454175b8b2
+https://creativecommons.org/licenses/by-nc/4.0/
+......................................................... -->
 
 <!DOCTYPE html>
    <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Exporting Blender Models from Sketchfab to A-Frame – WebVR Rocks</title>
-    <script src="assets/js/aframe.min.js"></script>
-    <link rel="icon" sizes="192x192" href="https://aframe.io/images/aframe-logo-192.png">
+    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
    </head>
   <body>
-<!--All of the entities in your scene must be between the <a-scene> tags!-->
+    <!-- All of the entities in your scene must be between the <a-scene> tags! -->
     <a-scene>
-<!--......................................
-It's a good idea to pre-load and cache your assets (stuff in the scene) by using an Asset System. This is an example of an Asset System. Everything in <a-assets> can be used as many times as you want in the scene! You can also use entities inline, without an Asset System: quicker to write, but slower to render. <asset-item> can include geometry, models, and materials
-..........................................-->
-    <a-assets>
-    <a-asset-item id="Oculus-CV1-obj" src="assets/cv1_FF.obj"></a-asset-item>
-    <a-asset-item id="Oculus-CV1-mtl" src="assets/cv1_FF.mtl"></a-asset-item>
-    <a-asset-item id="Oculus-CV1-collada" src="assets/cv1_FF.dae"></a-asset-item>
-    </a-assets>
+      <!-- ......................................
+       It's a good idea to preload and cache your assets (stuff in the scene) by using an Asset System. This is an example of an Asset System. Everything in <a-assets> can be used as many times as you want in the scene! You can also use entities inline  without an Asset System: quicker to write, but slower to render. <asset-item> can include geometry, models, and materials.
+      .......................................... -->
+      <a-assets>
+       <a-asset-item id="Oculus-CV1-obj" src="assets/models/cv1_FF.obj"></a-asset-item>
+       <a-asset-item id="Oculus-CV1-mtl" src="assets/models/cv1_FF.mtl"></a-asset-item>
+       <a-asset-item id="Oculus-CV1-collada" src="assets/models/cv1_FF.dae"></a-asset-item>
+      </a-assets>
 
-<!--Sky color can be adjusted-->
-    <a-sky color="#5CAAEB"></a-sky>
+      <!-- Sky color can be adjusted -->
+      <a-sky color="#5CAAEB"></a-sky>
 
-<!--Camera has WASD controls by default. In desktop (non VR) mode, click and drag to look around.-->
-    <a-camera position="0, 1.8, 5"></a-camera>
+      <!-- Camera has WASD controls by default. In non-VR mode click/touch and drag to look around. -->
+      <a-camera position="0 1.8 5"></a-camera>
 
-<!--Here are the .obj and .dae models.-->
+      <!-- Here are the .obj and .dae models. -->
       <a-entity obj-model="obj: #Oculus-CV1-obj; mtl: #Oculus-CV1-mtl" position="-5 0 -5"></a-entity>
       <a-entity collada-model="#Oculus-CV1-collada" position="5 0 -5"></a-entity>
 
