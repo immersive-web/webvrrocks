@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "domready": "^1.0.8",
+    "domvm": "^1.2.10",
     "firebase": "^3.6.0",
     "form-serialize": "^0.7.1"
   },
