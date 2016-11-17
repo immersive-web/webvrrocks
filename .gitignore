@@ -1,6 +1,5 @@
 .DS_Store
 .config/
-.gatsby-context.js
 .travis.config.tgz
 data/*
 node_modules/
