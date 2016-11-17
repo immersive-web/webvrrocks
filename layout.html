@@ -1,5 +1,11 @@
+<!--
+engine: nunjucks
+-->
 <!doctype html>
-<html lang="en" data-current-path="{{ page.href }}" data-current-file="{{ page.path.relative }}">
+<html lang="en"
+      data-current-path="{{ page.href }}"
+      data-current-file="{{ page.path.relative }}"
+>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +22,38 @@
     <meta name="theme-color" content="#111">
     <link rel="manifest" href="manifest.json">
     <link rel="shortcut icon" href="/img/webvr-favicon-small.png">
+    <script>
+      (function () {
+        var html = document.documentElement;
+        if (window.location.search && 'URLSearchParams' in window) {
+          var searchParams = new window.URLSearchParams(window.location.search);
+          var qs = {};
+
+          for (var key of searchParams.keys()) {
+            var value = searchParams.get(key);
+            html.setAttribute('data-qs-' + key, value);
+            qs[key] = value;
+          }
+
+          var refreshForm = function () {
+            Object.keys(qs).forEach(function (key) {
+              var el = document.querySelector('form [name="' + key + '"]');
+              if (el) {
+                el.value = qs[key];
+              }
+            });
+          };
+
+          window.qs = qs;
+
+          refreshForm();
+
+          window.addEventListener('load', function () {
+            refreshForm();
+          });
+        }
+      })();
+    </script>
     <script async defer src="/js/index.js"></script>
   </head>
   <body>
@@ -68,14 +106,27 @@
     <div id="content" class="content">
       <div id="column" class="column">
         <main id="main" class="main" role="main">
-          {{ body|safe }}
+          <header id="page-header" class="page-header">
+            {% block header %}
+              {% block header_top %}{% endblock %}
+              {% block header_bottom %}{% endblock %}
+            {% endblock %}
+          </header>
+
+          {% block body %}{{ body|safe }}{% endblock %}
+
+          <footer id="page-footer" class="page-footer">
+            {% block footer_top %}
+              <p class="edit-options">
+                <a href="{% if page.edit_url %}{{ page.edit_url }}{% else %}https://github.com/webvrrocks/webvrrocks/edit/master{{ page.path.relative }}{% endif %}" class="github-edit-page-link edit-page-link" id="edit-page-link"><span>Edit this page</span></a>
+              </p>
+            {% endblock %}
+
+            {% if page.date_published %}
+              <p class="date-published">Date published: <time class="page__publish-date" title="{{ page.date_published }}" data-date="{{ page.date_published }}" data-format="%B %Y">{{ page.date_published }}</time></p>
+            {% endif %}
+          </footer>
         </main>
-        <footer id="footer" class="footer">
-          <a href="{% if page.edit_url %}{{ page.edit_url }}{% else %}https://github.com/webvrrocks/webvrrocks/edit/master{{ page.path.relative }}{% endif %}" class="github-edit-page-link edit-page-link" id="edit-page-link"><span>Edit this page</span></a>
-          {% if page.date_published %}
-            Date published: <time class="page__publish-date" title="{{ page.date_published }}" data-date="{{ page.date_published }}" data-format="%B %Y">{{ page.date_published }}</time>
-          {% endif %}
-        </footer>
       </div>
     </div>
   </body>

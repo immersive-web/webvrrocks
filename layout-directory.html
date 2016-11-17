@@ -1,0 +1,55 @@
+<!--
+source_url: https://webvr-6345b.firebaseio.com/webvrrocks/webvr_scenes.json
+edit_url: https://docs.google.com/spreadsheets/d/1K8HArN12v_XQqv8NiNcFNmRW0bGv4Zkn7XAJlY3vth0/edit
+-->
+
+{% extends 'layout.html' %}
+
+{% block header_top %}
+  <p class="edit-options">
+    <a href="{{ page.edit_url }}" data-default-href="{{page.edit_url}}" class="googlesheets-edit-page-link edit-page-link edit-sheets-link" id="edit-sheets-link"><span>Edit this list</span></a>
+  </p>
+{% endblock %}
+
+{% block footer_top %}
+  <p class="edit-options">
+    <a href="{{ page.edit_url }}" data-default-href="{{page.edit_url}}" class="googlesheets-edit-page-link edit-page-link edit-sheets-link" id="edit-sheets-link"><span>Edit this list</span></a>
+  </p>
+{% endblock %}
+
+{% block body %}
+  {{ body|safe }}
+  <div id="directory-container" class="directory-container">
+    <form id="directory-form" class="directory-form" action="" method="get">
+      <fieldset>
+        <legend>Filters</legend>
+        <label>
+          <span class="label-text">Headset</span>
+          <select name="headset">
+            <option value="">Any</option>
+            <option value="htc-vive">HTC Vive</option>
+            <option value="oculus-rift">Oculus Rift</option>
+            <option value="samsung-gear-vr">Samsung Gear VR</option>
+            <option value="osvr-hdk2">OSVR HDK2</option>
+          </select>
+        </label>
+        <label>
+          <span class="label-text">Browser</span>
+          <select name="browser">
+            <option value="">Any</option>
+            <option value="firefox">Mozilla Firefox</option>
+            <option value="chromium">Chromium</option>
+            <option value="samsung-internet-browser-for-gear-vr">Samsung Gear VR</option>
+            <option value="google-cardboard">Google Cardboard</option>
+            <option value="google-daydream">Google Daydream</option>
+          </select>
+        </label>
+      </fieldset>
+    </form>
+    <ul id="directory-list" class="directory-list">
+      {% for item in page.data.index|sort(false, false, 'name') %}
+        {% include 'fragment-directory-item.html' %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
