@@ -12,11 +12,13 @@ date_updated: 2017-11-07
 
 # What is WebVR?
 
-## Experience the Web in Virtual Reality in your Browser.
+## Experience the web in virtual reality in your browser.
 
 WebVR is an experimental JavaScript API that provides access to Virtual Reality devices, such as the [Oculus Rift](https://www3.oculus.com/rift/), [HTC Vive](https://www.vive.com/), [Samsung Gear VR](http://www.samsung.com/global/galaxy/gear-vr/), in your browser.
 
-**[I have a headset, help me get setup!](/getting-started)**
+**[Help me get setup!](/getting-started)**
+
+[Not working? See troubleshooting guide](/getting-started/troubleshooting)
 
 **[Watch video](/getting-started)**
 
@@ -24,11 +26,12 @@ WebVR is an experimental JavaScript API that provides access to Virtual Reality 
 * WebVR Jargon and Terms: [Glossary](/getting-started/glossary)
 
 ## Learn more
+* [Directory](/directory)
 * [Browsers](/browsers)
-* [VR Headsets](/headsets)
-* [Making WebVR](/creating)
+* [Headsets](/headsets)
+* [Creating WebVR](/creating)
 * [News]()
-* [Support](/getting-started/troubleshooting)
+
 
 # Why WebVR?
 
@@ -40,9 +43,3 @@ require downloading and
 installing specialized
 software per experience
 * **Open, Accessible, and Linked**
-
-# Recent Updates
-
-Tags: Browser, API, Headsets, News, ...
-
-[See All Updates]()
