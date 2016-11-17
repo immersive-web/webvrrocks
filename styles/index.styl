@@ -274,20 +274,23 @@ p code
     bottom auto
 
 .nav-footer
-  padding nav-height
+  padding 2rem
   transition .15s bottom ease-in-out
   text-align right
   width 100%
 
 .nav-footer-item a
   color color-text
+  display block
   font-size 1rem
-  margin 0 10px 0 0
   text-decoration none
   white-space nowrap
   &:hover
     color color-text-darker
     opacity 1
+
+.nav-footer-item + .nav-footer-item a
+  padding-top .5rem
 
 [data-current-path="/"]
   body
