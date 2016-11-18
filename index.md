@@ -26,12 +26,32 @@ WebVR is an experimental JavaScript API that provides access to Virtual Reality 
 * WebVR Jargon and Terms: [Glossary](/getting-started/glossary)
 
 ## Learn more
-* [Directory](/directory)
-* [Browsers](/browsers)
-* [Headsets](/headsets)
-* [Creating WebVR](/creating)
-* [News]()
 
+<div class="column-container">
+  <div class="column gutter">
+    <a href="/directory">Directory</a>
+  </div>
+  <div class="column gutter">
+    <a href="/browsers">Browsers</a>
+  </div>
+  <div class="column gutter">
+    <a href="/headsets">Headsets</a>
+  </div>
+</div>
+
+<div class="column-container">
+  <div class="column gutter">
+    <a href="/creating">Creating</a>
+  </div>
+  <div class="column gutter">
+    <a href="/news">News</a>
+  </div>
+  <div class="column gutter">
+    <a href="/community">Community</a>
+  </div>
+</div>
+
+<br/>
 
 # Why WebVR?
 
