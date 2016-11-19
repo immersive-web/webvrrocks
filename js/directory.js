@@ -1,4 +1,3 @@
-var domvm = require('domvm');
 var formSerialize = require('form-serialize');
 var firebase = require('firebase');
 
