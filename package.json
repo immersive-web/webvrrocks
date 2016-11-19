@@ -38,7 +38,8 @@
     "open:prod": "open https://webvr.rocks/",
     "open:surge": "open https://webvrrocks.surge.sh/",
     "open:ghpages": "open https://webvrrocks.github.io/",
-    "syncdb": "npm run syncdb:webvr_scenes",
-    "syncdb:webvr_scenes": "curl https://webvr-6345b.firebaseio.com/webvrrocks/webvr_scenes.json > directory/index.json"
+    "syncdb": "npm run syncdb:webvr_scenes && npm run syncdb:webvr_assets",
+    "syncdb:webvr_scenes": "curl https://webvr-6345b.firebaseio.com/webvrrocks/webvr_scenes.json > directory/index.json",
+    "syncdb:webvr_assets": "curl https://webvr-6345b.firebaseio.com/webvrrocks/webvr_assets.json > assets/index.json"
   }
 }
