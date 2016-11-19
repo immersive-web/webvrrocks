@@ -321,7 +321,8 @@ p code
     padding 0
     position static
 
-[data-current-path^="/directory"]
+[data-current-path^="/directory"],
+[data-current-path^="/assets"]
   .column
     max-width 1000px
 
@@ -398,6 +399,7 @@ p code
 [data-current-path^="/headsets"] nav a[href^="/headsets"],
 [data-current-path^="/getting-started/troubleshooting"] nav a[href^="/getting-started/troubleshooting"],
 [data-current-path^="/directory"] nav a[href^="/directory"],
+[data-current-path^="/assets"] nav a[href^="/assets"],
 [data-current-path^="/creating"] nav a[href^="/creating"],
 [data-current-path^="/community"] nav a[href^="/community"],
 [data-current-path^="/spec"] nav a[href^="/spec"],
@@ -656,6 +658,63 @@ legend
   color color-text-darker
   font-weight 600
   padding 0 1rem
+
+.btn
+  background linear-gradient(#5fddff, #53addf)
+  border-bottom 5px solid steelblue
+  border-left none
+  border-radius 10px
+  border-right none
+  border-top none
+  box-shadow 0 2px 2px #ccc
+  color #fff
+  cursor pointer
+  display inline-block
+  font-family inherit
+  font-size 1rem
+  font-weight 600
+  height 4rem
+  line-height 4rem
+  max-width 500px
+  opacity .8
+  outline none
+  padding 0 4rem
+  position relative
+  transition 150ms ease-inout
+
+  &:hover
+    opacity .9
+
+  &:active
+    border none
+    border-bottom 2px solid steelblue
+    box-shadow 0 1px 4px #aaa
+    background linear-gradient(#53aff, #5fcdff)
+    color #fff
+    line-height 4.35rem
+    opacity 1
+
+ul.asset-files-list
+  background rgba(255,255,255,0.1)
+  box-shadow 0 10px 20px inset red
+  font-family font-code
+  font-size 1rem
+  margin-top 2rem
+
+  &:empty
+    display none
+
+  li + li
+    margin-top 0.75rem
+
+  a
+    border-bottom 1px dashed rgba(255,255,255,.4)
+
+    &:hover
+      border-bottom-color rgba(255,255,255,.8)
+
+.uploadcare-widget
+  display none
 
 // TODO: Remove when https://github.com/zeke/jus/issues/36 is fixed.
 #__bs_notify__

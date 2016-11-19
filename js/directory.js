@@ -15,9 +15,9 @@ internal.config = {
     storageBucket: 'webvr-6345b.appspot.com',
     messagingSenderId: '689640619063'
   },
-  firebasePath: 'webvrrocks/webvr_scenes',
-  formSelector: '#directory-form',
-  containerSelector: '#directory-list',
+  firebasePathDirectory: 'webvrrocks/webvr_scenes',
+  formSelectorDirectory: '#directory-form',
+  containerSelectorDirectory: '#directory-list',
 };
 
 var refreshParams = () => {
@@ -69,7 +69,7 @@ module.exports.init = function () {
     // Initialise Firebase.
     firebaseApp = firebase.initializeApp(internal.config.firebase);
 
-    var form = document.querySelector(internal.config.formSelector);
+    var form = document.querySelector(internal.config.formSelectorDirectory);
 
     form.addEventListener('change', function (e) {
       e.preventDefault();
@@ -87,9 +87,9 @@ module.exports.init = function () {
     secondLoad = true;
   }
 
-  var container = document.querySelector(internal.config.containerSelector);
+  var container = document.querySelector(internal.config.containerSelectorDirectory);
 
-  firebaseApp.database().ref(internal.config.firebasePath).on('value', snapshot => {
+  firebaseApp.database().ref(internal.config.firebasePathDirectory).on('value', snapshot => {
     var items = snapshot.val();
     console.log('value', items);
   }, function (err) {

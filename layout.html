@@ -55,6 +55,7 @@ engine: nunjucks
       })();
     </script>
     <script async defer src="/js/index.js"></script>
+    {% block scripts %}{% endblock %}
   </head>
   <body>
     <nav id="nav" class="nav" role="navigation" data-current-path="{{ page.href }}" data-current-file="{{ page.path.relative }}">
@@ -67,6 +68,7 @@ engine: nunjucks
           <li class="nav-item nav-primary-item"><a href="/headsets">Headsets</a></li>
           <li class="nav-item nav-primary-item"><a href="/getting-started/troubleshooting">Troubleshooting</a></li>
           <li class="nav-item nav-primary-item"><a href="/directory">Directory</a></li>
+          <li class="nav-item nav-primary-item"><a href="/assets">Assets</a></li>
           <li class="nav-item nav-primary-item"><a href="/creating">Creating</a></li>
           <li class="nav-item nav-primary-item"><a href="/community">Community</a></li>
           <li class="nav-item nav-primary-item"><a href="/spec">Specification</a></li>
