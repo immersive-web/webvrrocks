@@ -294,27 +294,15 @@ p code
   padding-top .5rem
 
 [data-current-path="/"]
-  body
-    display flex
-    flex-direction column
   .nav
-    background none
-    border-top 1px dotted #eee
-    margin 3rem auto
-    max-width column-max-width
-    order 1
-    overflow-y visible
-    padding 2.25rem 0 0 0
-    position static
-    width 70%
-  .nav-primary-item a,
-  .nav-footer
-    padding 0
-    text-align left
-  .nav-primary-item + .nav-primary-item a
-    padding .25rem 0
-  .nav-footer
-    padding 1rem 0
+    height nav-height
+    padding-top 0
+    width 100%
+    z-index 100
+  .nav-list
+    display none
+  .nav-toggle
+    display block
   .content
     left auto
     margin 0 auto
