@@ -23,6 +23,11 @@ domready(() => {
 
   var nav = document.querySelector('.nav');
 
+  navToggleAnchor.addEventListener('click', e => {
+    e.preventDefault();
+    html.setAttribute('data-nav-open', html.getAttribute('data-nav-open') === 'true' ? 'false' : 'true');
+  });
+
   // TODO: Debounce.
   window.addEventListener('resize', () => {
     if (nav.scrollHeight > nav.clientHeight) {
