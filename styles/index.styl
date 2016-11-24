@@ -250,8 +250,10 @@ p code
   margin 0 10px
   color #3A46FF
 
-.nav-toggle-anchor
-  padding 0 10px 0 0
+.nav-menu
+  background url('/img/menu-icon.svg') no-repeat transparent center center
+  width nav-height
+  height nav-height
   display none
 
 .nav-primary-item a
@@ -365,6 +367,8 @@ p code
     height 100%
   .nav-list
     display block
+  .nav-menu
+    background url('/img/close-icon.svg') no-repeat transparent center center
 
 @media screen and (max-width: mobile-width)
   .nav
@@ -374,7 +378,7 @@ p code
     width 100%
     z-index 100
     visibility visible
-  .nav-toggle-anchor
+  .nav-menu
     display block
   .nav-list
     display none

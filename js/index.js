@@ -14,7 +14,7 @@ ga('send', 'pageview');
 domready(() => {
   var html = document.documentElement;
   var nav = document.querySelector('#nav');
-  var navToggleAnchor = nav.querySelector('#nav-toggle-anchor');
+  var navToggleAnchor = nav.querySelector('#nav-menu');
   var directory = require('./directory');
 
   if (window.location.pathname.indexOf('/directory') === 0) {
