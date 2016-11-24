@@ -59,17 +59,15 @@ engine: nunjucks
   </head>
   <body>
     <nav id="nav" class="nav" role="navigation" data-current-path="{{ page.href }}" data-current-file="{{ page.path.relative }}">
-      <header class="nav-header">
+      <a href="/" class="nav-header">
         <div class="site-logo">
-          <img class="site-logo-image" src="img/rocks-logo.svg" alt="WebVR.Rocks"/>
-          <span class="site-logo-text">WebVR.ROCKS</span>
+          <span class="site-logo-image"></span><span class="site-logo-text">WebVR.ROCKS</span>
         </div>
         <div id="nav-menu" class="nav-menu"></div>
-      </header>
+      </a>
 
       <div id="nav-content" class="nav-content">
         <ul id="nav-primary-list" class="nav-list nav-primary-list">
-          <li class="nav-item nav-primary-item"><a href="/">Introduction</a></li>
           <li class="nav-item nav-primary-item"><a href="/getting-started">Getting Started</a></li>
           <li class="nav-item nav-primary-item"><a href="/browsers">Browsers</a></li>
           <li class="nav-item nav-primary-item"><a href="/headsets">Headsets</a></li>
