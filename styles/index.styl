@@ -235,16 +235,16 @@ p code
   flex-direction row
   height nav-height
 
-.nav-brand
+.site-logo
   flex 1
   display flex
   justify-content center
   align-items center
 
-.nav-logo
+.site-logo-image
   height 30px
 
-.nav-logo-text
+.site-logo-text
   font-size 1.3rem
   font-weight 400
   margin 0 10px
@@ -307,6 +307,10 @@ p code
   margin 0 auto
   max-width column-max-width
   position relative
+
+[data-current-path="/"]
+  .nav-header
+    display none
 
 [data-current-path^="/directory"],
 [data-current-path^="/assets"]
@@ -371,6 +375,11 @@ p code
     background url('/img/close-icon.svg') no-repeat transparent center center
 
 @media screen and (max-width: mobile-width)
+  [data-current-path="/"]
+    .nav-header
+      display flex
+    #main .site-logo
+      display none
   .nav
     height nav-height
     overflow hidden
@@ -464,18 +473,6 @@ p code
 
   .github-edit-page-link
     background-position 0 .4rem
-
-.site-logo
-  display flex
-  height 100%
-  flex 1
-  img
-    height nav-height
-  span
-    padding 0 10px
-    color #3A46FF
-    font-weight 400
-    font-size 1.5rem
 
 .site-tagline
   font-size 2rem
