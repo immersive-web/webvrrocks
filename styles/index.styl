@@ -22,7 +22,7 @@ column-max-width = 600px
 logo-width = 300px
 mobile-width = 600px
 
-nav-height = 3rem
+nav-height = 3.3rem
 nav-width = 30%
 
 github-repo-size = 20
@@ -218,20 +218,9 @@ p code
   opacity 1
   transition all 0s
 
-.nav-toggle
-  color color-black
-  display none
-  font-weight 400
-  height nav-height
-  line-height nav-height
-  text-align center
-  width 100%
-
 .nav
   @extend .fancy-font
   background color-main
-  display flex
-  flex-direction column
   font-weight 300
   height 100%
   overflow-y auto
@@ -241,20 +230,29 @@ p code
   right 0
   width nav-width
 
-.content
-  background #fff
-  padding 3rem
-  position relative
-  width (100% - nav-width)
-  @media screen and (max-width: mobile-width)
-    left 0
-    padding 2rem
-    width 100%
+.nav-header
+  display flex
+  flex-direction row
+  height nav-height
 
-.column
-  margin 0 auto
-  max-width column-max-width
-  position relative
+.nav-brand
+  flex 1
+  display flex
+  justify-content center
+  align-items center
+
+.nav-logo
+  height 30px
+
+.nav-logo-text
+  font-size 1.3rem
+  font-weight 400
+  margin 0 10px
+  color #3A46FF
+
+.nav-toggle-anchor
+  padding 0 10px 0 0
+  display none
 
 .nav-primary-item a
   color color-black
@@ -292,6 +290,21 @@ p code
 
 .nav-footer-item + .nav-footer-item a
   padding-top .5rem
+
+.content
+  background #fff
+  padding 3rem
+  position relative
+  width (100% - nav-width)
+  @media screen and (max-width: mobile-width)
+    left 0
+    padding 2rem
+    width 100%
+
+.column
+  margin 0 auto
+  max-width column-max-width
+  position relative
 
 [data-current-path^="/directory"],
 [data-current-path^="/assets"]
@@ -356,13 +369,15 @@ p code
 @media screen and (max-width: mobile-width)
   .nav
     height nav-height
+    overflow hidden
     padding-top 0
     width 100%
     z-index 100
+    visibility visible
+  .nav-toggle-anchor
+    display block
   .nav-list
     display none
-  .nav-toggle
-    display block
 
 [data-current-path="/"] nav a[href="/"],
 [data-current-path^="/getting-started"]:not([data-current-path^="/getting-started/troubleshooting"]) nav a[href^="/getting-started"]:not([href^="/getting-started/troubleshooting"]),
@@ -446,31 +461,22 @@ p code
   .github-edit-page-link
     background-position 0 .4rem
 
-.tagline
-  align-self center
-  color #999
-  margin-left 2rem
-  transition .15s color ease-in-out
-
-  strong
-    font-size 2rem
-
-.logo
-  color #fff
-  align-items flex-start
+.site-logo
   display flex
-  text-decoration none
-  width 100%
-
-  &:hover .tagline
-    color #666
-
+  height 100%
+  flex 1
   img
-    display block
-    max-width 200px
+    height nav-height
+  span
+    padding 0 10px
+    color #3A46FF
+    font-weight 400
+    font-size 1.5rem
 
-  @media screen and (max-width: mobile-width)
-    margin-top nav-height
+.site-tagline
+  font-size 2rem
+  font-weight 300
+  color black
 
 table.routes
   border-collapse collapse
