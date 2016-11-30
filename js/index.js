@@ -1,5 +1,7 @@
 /* global ga, URLSearchParams */
-var domready = require('domready');
+const domready = require('domready');
+
+const MEDIA_QUERY_STRING = 'screen and (min-width: 800px)';
 
 /* jshint ignore:start */
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){  // eslint-disable-line
@@ -16,6 +18,7 @@ domready(() => {
   var cssLoaded = cssMain ? cssMain.sheet.cssRules.length : false;
   var hash = window.location.hash;
   var html = document.documentElement;
+  var main = document.querySelector('#main');
   var navToggle = document.querySelector('#nav-toggle');
   var nav = document.querySelector('#nav');
   var navOpen = false;
@@ -25,7 +28,7 @@ domready(() => {
     html.setAttribute('data-nav-open', shouldOpenNav);
     navToggle.classList.toggle('is-active', shouldOpenNav);
     nav.setAttribute('aria-expanded', shouldOpenNav);
-    navOpen = shouldOpenNav;
+    navOpen = !!shouldOpenNav;
   };
   var openNav = () => setNav(true);
   var closeNav = () => setNav(false);
@@ -34,13 +37,20 @@ domready(() => {
     setNav(shouldOpenNav);
   };
 
-  nav.addEventListener('click', e => {
+  var mq = window.matchMedia(MEDIA_QUERY_STRING);
+  mq.addListener(() => {
+    if (navOpen && mq.matches) {
+      closeNav();
+    }
+  });
+
+  html.addEventListener('click', e => {
     var clickedEl = e.target;
     if (clickedEl.matches && clickedEl.matches('.nav-item-page a')) {
       clickedEl.classList.add('active');
       return;
     }
-    if (navOpen && !clickedEl.closest('#nav')) {
+    if (navOpen && clickedEl === main) {
       closeNav();
     }
   });
