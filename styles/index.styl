@@ -1,52 +1,9 @@
-@import 'syntax.styl'
-@import 'system-font.styl'
-@import 'monospace-font.styl'
-@import 'grid.styl'
-
-color-black = #111
-color-main = #efefef
-color-main-darker = #333
-color-text-darker = #111
-color-text = #666
-color-text-light = #666
-color-primary = rgb(42,170,125)
-color-link = #154cbd
-color-link-active = #2b43ff
-color-link-visited = #2b43ff
-color-link-hover = darken(#154cbd, 30%)
-
-font-body = 'Helvetica Neue', Helvetica, Arial, sans-serif
-font-code = monospace
-
-column-max-width = 600px
-logo-width = 300px
-mobile-width = 600px
-
-nav-height = 3.3rem
-nav-width = 30%
-
-github-repo-size = 20
-github-repo-size-with-units = github-repo-size px
-
-github-repo-padding = 10
-github-repo-padding-with-units = github-repo-padding px
-
-z-index-github-repo-link = 1
-
-// utils / mixins
-
-.fancy-font
-  font-family font-body
-
-.normal-font
-  font-family font-body
-
-.code-font
-  font-family font-code
-
-.centerer
-  display block
-  text-align center
+@import 'system-font'
+@import 'monospace-font'
+@import 'settings'
+@import 'syntax'
+@import 'grid'
+@import 'hamburgers'
 
 // global
 
@@ -57,8 +14,9 @@ z-index-github-repo-link = 1
   margin 0
   padding 0
 
-html, body
-  background-color #fff
+html,
+body
+  background-color color-white
 
 html
   font-size 14px
@@ -100,11 +58,13 @@ li
   display block
 
 li:before
-  color rgba(0,0,0,.35)
+  color rgba(0,0,0,.25)
   display inline-block
 
 ul,
 ol
+  margin-left 2.5rem
+
   li:before
     display inline-block
     position absolute
@@ -113,6 +73,9 @@ ol
     padding-right 0
     text-align right
     width 3ch
+
+  li + li
+    margin-top .25rem
 
 ol li:before
   content counters(item, '.') '. '
@@ -124,31 +87,71 @@ ul li:before
 ul ul li:before
   content "○"
 
-.nav-list
+ul.nav-list
   margin 0
 
   li:before
     display none
 
-h1, h2, h3, h4, h5, h6
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
   @extend .fancy-font
+
   a
     display block
     text-decoration none
 
-.main
-  padding-top 2rem
+/*main*/.main
+  padding padding-content
 
-  h1, h2, h3, h4, h5, h6
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
     font-weight 400
     margin 2.5rem 0 1.5rem
 
-  h1
-    color #999
-    line-height 1.2
-    margin 0 0 2.5rem
+  h1,
+  h1 a
+    color color-white
 
-  h2, h3, h4, h5, h6
+  > :first-child
+    margin-top -(padding-content)
+
+  h1
+    background color-black
+    font-weight 600
+    line-height 1.2
+    margin-bottom 2.5rem
+    margin-left -(padding-content-int)rem
+    margin-right -(padding-content-int)rem
+    padding (padding-content-int / 2)rem padding-content
+
+    a
+      border 0
+      margin -(padding-content / 2) -(padding-content)
+      padding 1rem padding-content
+      &:hover
+        color color-link-bright
+
+  h1:first-child,
+  .page-header + h1
+    margin-top 0
+
+  h2
+    font-weight 500
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
     border-bottom 1px solid #eee
 
     &:hover
@@ -160,7 +163,7 @@ h1,
 h1 a,
 h1 a:hover,
 h1 a:target
-  color color-primary
+  color color-branding-primary
 
 h2,
 h2 a,
@@ -187,7 +190,8 @@ h3 a:hover
 .highlight
   margin-bottom 16px
 
-code
+code,
+pre
   @extend .code-font
   font-size 1rem
 
@@ -209,115 +213,150 @@ p code
   font-size 0.9rem
   padding 3px 5px
 
-// components
-
-.nav-primary-item-anchor-selected
-  background #fff
-  color color-black
-  font-weight 400
+.nav-item-page-anchor-selected
+  color color-white
+  font-weight 600
   opacity 1
   transition all 0s
 
 .nav
   @extend .fancy-font
-  background color-main
-  font-weight 300
-  height 100%
-  overflow-y auto
-  padding nav-height 0
-  position fixed
-  top 0
+  background color-branding-primary
+  height 400px
+  overflow hidden
+  position absolute
   right 0
-  width nav-width
+  text-align center
+  top 0
+  transition-delay .2s
+  width 100%
+  z-index z-index-nav
 
-.nav-header
-  display flex
-  flex-direction row
-  height nav-height
-  text-decoration none
+.nav,
+.main
+  transition width .4s, height .4s, opacity .4s, transform .4s
+  transition-timing-function cubic-bezier(.7,0,.3,1)
 
-.site-logo
-  flex 1
+.nav,
+.nav > *
+  @extend .disappear
+
+[data-nav-open="true"]
+  body
+    overflow-y hidden
+
+  .main
+    opacity .1
+    transition-delay 0s
+    transform translate3d(0,400px,0)
+
+  .nav,
+  .nav > *
+    @extend .reappear
+
+  .nav
+    overflow-y auto
+    transform translate3d(0,nav-height,0)
+    // transition-delay 0s
+    a
+      opacity 1
+      transition opacity .4s .4s
+
+  /*a*/.nav-toggle
+    padding-right 2.1rem
+
+/*header*/.rocks-header
+  background color-white
+  background yellow  // XXX: temporary until homepage done
   display flex
-  justify-content center
+  height height-header-small
   align-items center
-
-.site-logo-image
-  background url('/img/rocks-logo.svg') no-repeat transparent center center
-  height 30px
-  width 50px
-
-.site-logo-text
-  font-size 1.3rem
-  font-weight 400
-  margin 0 10px
-  color #3A46FF
-
-.nav-menu
-  background url('/img/menu-icon.svg') no-repeat transparent center center
-  width nav-height
-  height nav-height
-  display none
-
-.nav-primary-item a
-  color color-black
-  display block
-  font-size 1.2rem
-  padding 8px 2rem
-  text-decoration none
-  text-align right
-  @media screen and (max-width: mobile-width)
-    text-align center
-  &:hover,
-  &:active,
-  &.active
-    @extend .nav-primary-item-anchor-selected
-
-.nav.elastic
-  .nav-footer
-    bottom auto
-
-.nav-footer
-  padding 2rem
-  transition .15s bottom ease-in-out
-  text-align right
+  padding 1.5rem
   width 100%
 
-.nav-footer-item a
-  color color-text
+/*h1*/.rocks-logo
+  color color-branding-primary
+  font-size 1.5rem
+  font-weight 600
+  width 100%
+  width calc(100% - 60px)
+
+/*a*/.rocks-link
+  align-items center
+  display flex
+  height 100%
+  width 100%
+
+/*strong*/.rocks-wordmark-webvr
+  color color-branding-primary
+
+/*span*/.rocks-wordmark-rocks
+  color color-black
+
+/*svg*/.rocks-icon
+  height auto
+  margin-right 1rem
+
+  path
+    fill color-branding-primary
+
+/*a*/.nav-toggle
+  outline unset
+  padding padding-content padding-content .5rem
+  position absolute
+  right 0
+  top 0
+  z-index z-index-nav-toggle
+
+/*span*/.nav-toggle-text
+  @extend .hidden-text
+
+/*li*/.nav-item-page a
+  color color-white-soft
+  display block
+  font-size 1.2rem
+  border-bottom 2px solid white
+  line-height 1.5
+  font-weight 500
+  padding 1rem 2rem
+  text-align left
+  text-decoration none
+
+  &:hover
+    color color-white
+
+  &:active,
+  &.active
+    @extend .nav-item-page-anchor-selected
+
+/*footer*/.nav-footer
+  padding padding-content
+  transition .15s bottom ease-in-out
+  width 100%
+
+/*li*/.nav-footer-item a
+  color color-white-soft
   display block
   font-size 1rem
   text-decoration none
   white-space nowrap
   &:hover
-    color color-text-darker
-    opacity 1
+    color color-white
 
-.nav-footer-item + .nav-footer-item a
+/*li*/.nav-footer-item + /*li*/.nav-footer-item a
   padding-top .5rem
 
-.content
-  background #fff
-  padding 3rem
+/*div*/.content
+  background color-white
   position relative
-  width (100% - nav-width)
-  @media screen and (max-width: mobile-width)
-    left 0
-    padding 2rem
-    width 100%
+  width 100%
 
-.column
-  margin 0 auto
-  max-width column-max-width
-  position relative
-
-[data-current-path="/"]
-  .nav-header
-    display none
+  .main
+    position relative
 
 [data-current-path^="/directory"],
 [data-current-path^="/assets"]
-  .column
+  .main
     max-width 1000px
 
   &[data-qs-headset*="vive"] .list-item:not([data-support-for-htc-vive="yes"]):not([data-requires-for-htc-vive="yes"]),
@@ -369,35 +408,9 @@ p code
   &[data-qs-requires*="daydream"] .list-item:not([data-requires-for-google-daydream="yes"])
     display none
 
-[data-nav-open="true"]
-  .nav
-    height 100%
-  .nav-list
-    display block
-  .nav-menu
-    background url('/img/close-icon.svg') no-repeat transparent center center
-
-@media screen and (max-width: mobile-width)
-  [data-current-path="/"]
-    .nav-header
-      display flex
-    #main .site-logo
-      display none
-  .nav
-    height nav-height
-    overflow hidden
-    padding-top 0
-    width 100%
-    z-index 100
-    visibility visible
-  .nav-menu
-    display block
-  .nav-list
-    display none
-
 [data-current-path="/"] nav a[href="/"],
 [data-current-path^="/getting-started"]:not([data-current-path^="/getting-started/troubleshooting"]) nav a[href^="/getting-started"]:not([href^="/getting-started/troubleshooting"]),
-[data-current-path^="/browsers"]:not([data-current-path^="/browsers/changelog"]) nav a[href^="/browsers"]:not([href^="/browsers/changelog"]) a,
+[data-current-path^="/browsers"]:not([data-current-path^="/browsers/changelog"]) nav a[href^="/browsers"]:not([href^="/browsers/changelog"]),
 [data-current-path^="/browsers/changelog"] nav a[href^="/browsers/changelog"],
 [data-current-path^="/headsets"] nav a[href^="/headsets"],
 [data-current-path^="/getting-started/troubleshooting"] nav a[href^="/getting-started/troubleshooting"],
@@ -408,19 +421,20 @@ p code
 [data-current-path^="/spec"] nav a[href^="/spec"],
 [data-current-path^="/contributing"] nav a[href^="/contributing"],
 [data-current-path^="/rocks/about"] nav a[href^="/rocks/about"]
-  @extend .nav-primary-item-anchor-selected
+  @extend .nav-item-page-anchor-selected
 
-.nav-social-list
+/*ul*/.nav-social-list
   font-size 0
-  padding 20px 2rem 0 0
-  text-align right
   width 100%
 
-.nav-social-item
+ul.nav-social-list
+  padding 2rem 2rem .5rem
+
+.nav-item-social
   display inline-block
   margin 0
-  + .nav-social-item
-    margin-left 20px
+  + .nav-item-social
+    margin-left 2rem
 
 .social-link
   svg
@@ -429,21 +443,13 @@ p code
     transform scale(1)
     width 20px
   path
-    fill color-text
+    fill color-white-soft
     transition .15s fill ease-in-out
   &:hover
     path
-      fill color-text-darker
+      fill color-white
     svg
       transform scale(1.2)
-
-@media screen and (max-width: mobile-width)
-  .nav-footer
-    text-align center
-
-  .nav-social-list
-    padding 10px
-    text-align center
 
 .edit-page-link
   display block
@@ -458,8 +464,8 @@ p code
 .github-edit-page-link
   background url(/img/github-octocat.svg) no-repeat
   background-size github-repo-size-with-units auto
-  line-height github-repo-size-with-units
   display block
+  line-height github-repo-size-with-units
   min-height github-repo-size-with-units
   padding-left (github-repo-size + github-repo-padding)px
   z-index z-index-github-repo-link
@@ -476,29 +482,6 @@ p code
 
   .github-edit-page-link
     background-position 0 .4rem
-
-.site-tagline
-  font-size 2rem
-  font-weight 300
-  color black
-
-table.routes
-  border-collapse collapse
-  width 100%
-  tr
-    border-top 1px solid #ccc
-    &:first-child
-      border-top none
-  th, td
-    line-height 1.8
-    text-align left
-    &:first-child:after
-      content "→"
-      display block
-      float right
-      margin-right 20px
-      opacity 0.5
-      text-align right
 
 img
   display block
@@ -553,14 +536,11 @@ a.list-item-link
   flex 1
   font-size 1.5rem
   font-weight 400
-  // padding-left .75rem
   padding-right .75rem
   width 30%
 
 .list-item-screenshots
   flex 1
-  // order -1
-  // padding-right .75rem
   padding-left .75rem
   width 40%
 
@@ -649,7 +629,7 @@ legend
   border-right none
   border-top none
   box-shadow 0 2px 2px #ccc
-  color #fff
+  color color-white
   cursor pointer
   display inline-block
   font-family inherit
@@ -672,7 +652,7 @@ legend
     border-bottom 2px solid steelblue
     box-shadow 0 1px 4px #aaa
     background linear-gradient(#53aff, #5fcdff)
-    color #fff
+    color color-white
     line-height 4.35rem
     opacity 1
 
@@ -701,3 +681,72 @@ ul.asset-files-list
 // TODO: Remove when https://github.com/zeke/jus/issues/36 is fixed.
 #__bs_notify__
   display none !important
+
+@media screen and (min-width: width-grande)
+  /*li*/.nav-item-page a
+    font-weight 400
+    padding-top .75rem
+    padding-bottom .75rem
+
+  .nav-item-page-anchor-selected
+    font-weight 500
+
+@media screen and (min-width: width-venti)
+  body
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+
+  .content
+    flex 3
+
+  .copy
+    max-width width-venti
+
+  /*a*/.nav-toggle
+    display none
+
+  .nav,
+  .nav > *
+    opacity 1
+    pointer-events auto
+    visibility visible
+
+  /*nav*/.nav
+    height auto
+    order 1
+    position static
+    flex 1
+    max-width 400px
+    min-width 250px
+    text-align left
+
+  /*li*/.nav-item-page a
+    padding-top 1rem
+    padding-bottom 1rem
+
+  /*header*/.rocks-header
+    flex-direction column
+    height height-header-venti
+    justify-content center
+    padding 1.5rem
+    text-align center
+
+  /*h1*/.rocks-logo
+    font-size 3rem
+    width 100%
+
+  /*a*/.rocks-link
+    flex-direction column
+
+  /*span*/.rocks-wordmark
+    margin-top 1rem
+
+  /*svg*/.rocks-icon
+    display block
+    height 120px
+    margin-right 0
+
+  /*footer*/.nav-footer
+    padding-left 0
+    padding-right 0
