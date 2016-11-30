@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  {{ body|safe }}
+
+  <h1>Latest in WebVR</h1>
+
+  <article class="article article-blender-to-aframe">
+    <h2>Importing your Blender model into WebVR</h2>
+    <a href="/creating">Tutorials</a>
+    by <a href="https://twitter.com/EricaLayton">Erica Layton</a>
+  </article>
+
+  <article class="article article-getting-started">
+    <h2>Which VR headset should you buy?</h2>
+    <a href="/getting-started">Getting Started</a>
+  </article>
+
+  <article class="article article-responsive-controls">
+    <h2>Responsive controls that work with everything</h2>
+    <a href="/creating">Creating WebVR</a>
+    by <a href="https://twitter.com/whoyee">Casey Yee</a>
+  </article>
+
+  <h1>Latest in WebVR</h1>
+
+  <article class="article article-choosing-a-framework">
+    <h2>Choosing a WebVR content-creation framework</h2>
+    <a href="/getting-started">Getting Started</a>
+  </article>
+{% endblock %}
