@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+   <head>
+    <meta charset="utf-8">
+    <script>navigator.serviceWorker.register('../sw.js');</script>
+     <title>Roomscale Scale</title>
+    <script src="../js/vendor/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v2.7.5/dist/aframe-extras.min.js"></script>
+    <link rel="icon" sizes="192x192" href="https://aframe.io/images/aframe-logo-192.png">
+   
+   </head>
+  <body>
+    <a-scene>
+
+<!-- Use the inspector for positioning entities! Toggle open/close editor, press: control + alt + i -->
+    <a-assets>
+    <a-asset-item id="meter-stick-obj" src="../models/obj/meter-stick/meter-stick.obj"></a-asset-item>
+    <a-asset-item id="Blender-unit-cube" src="../models/collada/one-Blender-unit-cube.dae"></a-asset-item>
+    </a-assets>
+    <a-asset-item id="meter-stick-mtl" src="../models/obj/meter-stick/meter-stick.mtl"></a-asset-item>
+    <a-asset-item id="coffee-mug" src="../models/collada/coffee-mug-for-scale3.dae"></a-asset-item>
+    <a-asset-item id="banana" src="../models/collada/banana-for-scale2.dae"></a-asset-item>
+    </a-assets>
+
+<!--.........................................................................................
+Objects for scale! Tip: Create a tape measure by scaling the y-axis of the meter stick (1= 1 real world meter). Then rotate and position as needed.
+..........................................................................................-->
+<a-entity id="tape-measure" obj-model="obj: #meter-stick-obj; mtl: #meter-stick-mtl" scale="1 3 1" rotation="-90 90 0" position="1 1 -1.5"> </a-entity>
+
+<!--Meter stick for Scale! The height of this meter stick is actually 1 real world meter, when viewed in Vive.-->
+    <a-entity obj-model="obj: #meter-stick-obj; mtl: #meter-stick-mtl" id="meter-stick" scale="1 1 1" position="-0.5 0.5 -0.5" rotation="0 0 0"></a-entity>
+
+<!--Banana for scale!-->
+    <a-collada-model src="#banana" position="0.3 1 -1" scale="1 1 1"></a-collada-model>
+
+<!--Coffee mug for scale!-->
+    <a-collada-model src="#coffee-mug" position="0 1 -1" scale="1 1 1"></a-collada-model>
+
+<!--Blender Unit cube. 1 Blender Unit = 1.026 meters of real world space when viewed in Vive. -->
+    <a-collada-model src="#Blender-unit-cube" position="-1 0.5 -1" scale="1 1 1"></a-collada-model>
+
+<!--A-Frame Unit Box that the mug is on top of. 1 A-Frame Unit = 1.026 meters of real world space when viewed in Vive.-->
+    <a-box position="0 0.5 -1" scale="1 1 1" color="#666666"></a-box>
+
+<!--..............................................................................................
+Extreme scale! Think about how these look on the computer screen, vs how they look in the Rift or Vive.-->
+    <a-collada-model src="#coffee-mug" position="-1 0 1.5" scale="10 10 10" rotation="0 0 0"></a-collada-model>
+    <a-collada-model src="#banana" position="1 0 1.5" scale="10 10 10" rotation="-90 45 0"></a-collada-model>
+
+<!--The camera has WASD controls by default. In desktop (non VR) mode, click and drag to look around.-->
+    <a-camera position="0, 1.8, 0"></a-camera>
+
+<!--Add Vive controllers to the scene-->
+    <a-entity vive-controls="hand: left"></a-entity>
+    <a-entity vive-controls="hand: right"></a-entity>
+
+    <a-entity light="color: #ffffff; intensity: 1.1" position="0 -5 -5" type="point"></a-entity>
+    <a-entity light="color: #ffffff; intensity: 2" position="0 10 3" type="ambient"></a-entity>
+
+    <a-plane height="5" width="5" rotation="-90, 0, 0" color="#204020" position="0, 0, 0"></a-plane>
+
+    <a-sky color="#5CAAEB"></a-sky>
+
+    </a-scene>
+  </body>
+</html>
