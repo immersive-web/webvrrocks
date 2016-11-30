@@ -16,6 +16,7 @@ ga('send', 'pageview');
 domready(() => {
   var cssMain = document.head.querySelector('link[href*="/styles/index.css"]');
   var cssLoaded = cssMain ? cssMain.sheet.cssRules.length : false;
+  var content = document.querySelector('#content');
   var hash = window.location.hash;
   var html = document.documentElement;
   var main = document.querySelector('#main');
@@ -50,7 +51,7 @@ domready(() => {
       clickedEl.classList.add('active');
       return;
     }
-    if (navOpen && clickedEl === main) {
+    if (navOpen && clickedEl === main || clickedEl === content) {
       closeNav();
     }
   });
