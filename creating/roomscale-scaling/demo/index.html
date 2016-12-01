@@ -12,21 +12,20 @@
 
 <!-- Use the inspector for positioning entities! Toggle open/close editor, press: control + alt + i -->
     <a-assets>
+    <a-asset-item id="Blender-unit-cube" src="../assets/models/one-Blender-unit-cube.dae"></a-asset-item></a-assets>
     <a-asset-item id="meter-stick-obj" src="../assets/models/meter-stick/meter-stick.obj"></a-asset-item>
-    <a-asset-item id="Blender-unit-cube" src="../assets/models/one-Blender-unit-cube.dae"></a-asset-item>
-    </a-assets>
     <a-asset-item id="meter-stick-mtl" src="../assets/models/meter-stick/meter-stick.mtl"></a-asset-item>
     <a-asset-item id="coffee-mug" src="../assets/models/coffee-mug-for-scale.dae"></a-asset-item>
     <a-asset-item id="banana" src="../assets/models/banana-for-scale.dae"></a-asset-item>
     </a-assets>
 
-<!--.........................................................................................
-Objects for scale! Tip: Create a tape measure by scaling the y-axis of the meter stick (1= 1 real world meter). Then rotate and position as needed.
+<!--..........................................................................................
+Meter stick for Scale! It's on top of the Unit cubes, so you can see the difference in scale. The height (y-coordinate) of this meter stick is actually 1 real world meter, when viewed in Vive. It is 1.026 A-Frame Units long. For most purposes, that 2.6cm different won't hinder your designs, but it's useful to be aware of.
 ..........................................................................................-->
-<a-entity id="tape-measure" obj-model="obj: #meter-stick-obj; mtl: #meter-stick-mtl" scale="1 3 1" rotation="0 0 0" position="1 1 0"> </a-entity>
+    <a-entity obj-model="obj: #meter-stick-obj; mtl: #meter-stick-mtl" id="meter-stick" scale="1 1 1"  rotation="90 0 0" position="-0.5 1 -1.5"></a-entity>
 
-<!--Meter stick for Scale! It's on top of the Unit cubes, so you can see the difference in scale. The height (y-coordinate) of this meter stick is actually 1 real world meter, when viewed in Vive.-->
-    <a-entity obj-model="obj: #meter-stick-obj; mtl: #meter-stick-mtl" id="meter-stick" scale="1 1 1" position="-0.5 1 -1" rotation="90 0 0"></a-entity>
+<!--IMPORTANT: The origin (point of rotation/translation) for the meter stick is its lower left corner. Scale using the y-axis.-->
+    <a-entity id="tape-measure" obj-model="obj: #meter-stick-obj; mtl: #meter-stick-mtl" scale="1 3 1" rotation="0 90 0" position="-1 0 0"></a-entity>
 
 <!--Banana for scale!-->
     <a-collada-model src="#banana" position="0.3 1 -1" scale="1 1 1"></a-collada-model>
@@ -37,13 +36,17 @@ Objects for scale! Tip: Create a tape measure by scaling the y-axis of the meter
 <!--Blender Unit cube. 1 Blender Unit = 1.026 meters of real world space when viewed in Vive. -->
     <a-collada-model src="#Blender-unit-cube" position="-1 0.5 -1" scale="1 1 1"></a-collada-model>
 
-<!--A-Frame Unit Box that the mug is on top of. 1 A-Frame Unit = 1.026 meters of real world space when viewed in Vive.-->
+<!--A-Frame Unit Box that the mug is on top of. 1 A-Frame Unit = 97.4 centimeters of real world space when viewed in Vive.-->
     <a-box position="0 0.5 -1" scale="1 1 1" color="#666666"></a-box>
 
 <!--..............................................................................................
-Extreme scale! Think about how these look on the computer screen, vs how they look in the Rift or Vive.-->
-    <a-collada-model src="#coffee-mug" position="-1 0 1.5" scale="10 10 10" rotation="0 0 0"></a-collada-model>
-    <a-collada-model src="#banana" position="1 0 1.5" scale="10 10 10" rotation="-90 45 0"></a-collada-model>
+Scale comparison! Think about how these look on the computer screen, vs how they look in the Rift or Vive.-->
+    <a-collada-model id="giant-mug" src="#coffee-mug" position="-1 0 1.5" scale="10 10 10" rotation="0 0 0"></a-collada-model>
+    <a-collada-model src="#coffee-mug" position="-0.6 1.1 1.25" scale="1 1 1" rotation="0 0 0"></a-collada-model>
+    <a-collada-model src="#coffee-mug" position="0.76 0.2 0.76" scale="1 1 1" rotation="90 90 0"></a-collada-model>
+    <a-collada-model id="giant-banana" src="#banana" position="1 0 1" scale="10 10 10" rotation="-90 45 0"></a-collada-model>
+    <a-collada-model src="#banana" position="-1 0.1 1.5" scale="1 1 1" rotation="-90 45 0"></a-collada-model>
+    <a-collada-model src="#banana" position="-1 0 -0.2" scale="1 1 1" rotation="90 45 0"></a-collada-model>
 
 <!--The camera has WASD controls by default. In desktop (non VR) mode, click and drag to look around.-->
     <a-camera position="0, 1.8, 0"></a-camera>
