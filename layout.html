@@ -21,13 +21,13 @@ engine: nunjucks
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" async>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css" async>
     <link rel="stylesheet" href="/styles/index.css">
-    <meta name="theme-color" content="#111">
+    <meta name="theme-color" content="#3a46ff">
     <link rel="manifest" href="manifest.json">
     <link rel="shortcut icon" href="/img/webvr-favicon-small.png">
     <script>
       (function () {
-        var html = document.documentElement;
         if (window.location.search && 'URLSearchParams' in window) {
+          var html = document.documentElement;
           var searchParams = new window.URLSearchParams(window.location.search);
           var qs = {};
 
@@ -46,8 +46,6 @@ engine: nunjucks
             });
           };
 
-          window.qs = qs;
-
           refreshForm();
 
           window.addEventListener('load', function () {
@@ -57,7 +55,7 @@ engine: nunjucks
       })();
     </script>
     <script async defer src="/js/index.js"></script>
-    {% block scripts %}{% endblock %}
+    {%- block scripts %}{% endblock %}
   </head>
   <body>
     <a href="#main" class="hidden-text" aria-controls="main">Skip to main content</a>
