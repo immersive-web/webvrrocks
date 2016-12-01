@@ -22,7 +22,7 @@ In this guide, I unpack the question: how do we create objects in WebVR that are
 
 ### Does the scale of the environment feel "off"?
 
-![image name](/creating/roomscale-scaling/img/surreal-scale.png)
+![image name](/creating/roomscale-scaling/img/surreal-scale.jpg)
 
 Stop coding for a minute and look at your WebVR scene in a roomscale (positionally tracked) headset. Does everything look huge? Is it hard to reach for things that seemed very close to the camera when viewed on the desktop monitor? The easiest reference for human scale is your own perception of how the Vive controllers intersect with other objects in the scene. Wave your hands around "through" the objects.
 
