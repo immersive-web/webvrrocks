@@ -5,6 +5,7 @@ engine: nunjucks
 <html lang="en"
       data-current-path="{{ page.href }}"
       data-current-file="{{ page.path.relative }}"
+      data-current-layout="{{ page.layout or 'copy' }}"
 >
   <head>
     <meta charset="utf-8">
