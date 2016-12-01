@@ -34,15 +34,15 @@ Stop coding for a minute and look at your WebVR scene in a roomscale (positional
 
 Be kind with your scaling. Make sure your site visitors can reach objects they need to interact with, and have a clear line of sight to objects they will need to see. Scale helps define accesibility, and also realism. Be very careful when using realistically scaled tables and chairs, for example. If the scale is believable, the user may try to lean on the table that isn't there, or sit in the virtual chair in your scene!
 
+### How large is one unit of measurement in the framework I'm using?
+
+Blender, A-Frame and Unity all use "1 meter" as their standard unit of measurement. But that does not mean that 1 meter in any of these contexts will map accurately and consistently with real world space, when viewed in VR. If you need accurate real-world scaling of your VR content, it's worth testing the scale with your system.
+
 ### Using the demo models
 
 ![Demo models: coffee mug and classic banana](/creating/roomscale-scaling/img/demo-viewing.jpg)
 
-In the demo scene, you'll find a few 3D models that can be used for realistic scale references. The meter stick is actually 1 meter long in real space, when viewed in Vive. In A-Frame, it is 1.026 units long. The same is true for units in Blender. Depending on the experience you are building, 2.6cm per meter might not make much difference to your users. However, if you use architectural models in your scene, tables may seem a bit too tall, and hallways a bit wider than we're accustomed to.  
-
-### How large is one unit of measurement in the framework I'm using?
-
-Blender, A-Frame and Unity all use 1 meter as their standard unit of measurement. But that does not mean that 1 meter in any of these contexts will map accurately and consistently with real world space, when viewed in VR. If you need accurate real-world scaling of your VR content, it's worth testing the scale with your system.
+In the demo scene, you'll find a few 3D models that can be used for realistic scale references. The meter stick is actually 1 meter long in real space, when viewed in Vive. In A-Frame, it is 1.026 units long. The same is true for units in Blender. Depending on the experience you are building, 2.6cm per meter might not make much difference to your users. However, if you use architectural models in your scene, tables may seem a bit too short, and hallways a bit narrower than we're accustomed to.  
 
 ### DIY Measurements
 
