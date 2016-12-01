@@ -4,10 +4,13 @@
 @import 'syntax'
 @import 'grid'
 @import 'hamburgers'
+@import 'features/index'
 
 // global
 
-*, *:before, *:after
+*,
+*:before,
+*:after
   box-sizing border-box
 
 *
@@ -41,14 +44,22 @@ a:active
 a:hover
   color color-link-hover
 
-h2, h3, h4, h5, h6, p, dl, ol, ul
+dl,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+ul
   margin 1.5rem 0
 
-ul,
-ol,
 dl
-  ul,
-  ol
+ol,
+ul,
+  ol,
+  ul
     margin .5rem 0 .5rem 2.5rem
 
 ol
@@ -57,12 +68,12 @@ ol
 li
   display block
 
-li:before
-  color rgba(0,0,0,.25)
-  display inline-block
+  &:before
+    color rgba(0,0,0,.25)
+    display inline-block
 
-ul,
-ol
+ol,
+ul
   margin-left 2.5rem
 
   li:before
@@ -77,15 +88,15 @@ ol
   li + li
     margin-top .25rem
 
-ol li:before
+ol > li:before
   content counters(item, '.') '. '
   counter-increment item
 
 ul li:before
-  content "●"
+  content '●'
 
 ul ul li:before
-  content "○"
+  content '○'
 
 ul.nav-list
   margin 0
@@ -99,66 +110,11 @@ h3,
 h4,
 h5,
 h6
-  @extend .fancy-font
+  font-family font-fancy
 
   a
     display block
     text-decoration none
-
-/*main*/.main
-  padding padding-content
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6
-    font-weight 400
-    margin 2.5rem 0 1.5rem
-
-  h1,
-  h1 a
-    color color-white
-
-  > :first-child
-    margin-top -(padding-content)
-
-  h1
-    background color-black
-    font-weight 600
-    line-height 1.2
-    margin-bottom 2.5rem
-    margin-left -(padding-content-int)rem
-    margin-right -(padding-content-int)rem
-    padding 1rem padding-content
-
-    a
-      border 0
-      margin-left -(padding-content-int)rem
-      margin-right -(padding-content-int)rem
-      padding 0 padding-content
-      &:hover
-        color color-link-bright
-
-  h1:first-child,
-  .page-header + h1
-    margin-top 0
-
-  h2
-    font-weight 500
-
-  h2,
-  h3,
-  h4,
-  h5,
-  h6
-    border-bottom 1px solid #eee
-
-    &:hover
-      border-bottom-color #ddd
-    a
-      padding-bottom .5rem
 
 h1,
 h1 a,
@@ -170,7 +126,7 @@ h2,
 h2 a,
 h2 a:hover,
 h2 a:visited
-  color #333
+  color color-text
 
 h2:target
   a,
@@ -193,8 +149,18 @@ h3 a:hover
 
 code,
 pre
-  @extend .code-font
+  font-family font-code
   font-size 1rem
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  code,
+  pre
+    font-size 1em
 
 pre
   background-color rgba(0,0,0,.05)
@@ -205,14 +171,111 @@ pre
   padding 10px
   word-break normal
   word-wrap normal
+
   pre
     background none
 
-p code
-  background #f4f4f4
-  border-radius 3px
-  font-size 0.9rem
-  padding 3px 5px
+.highlight pre
+  padding padding-content
+
+dl,
+dt,
+li,
+p
+  code
+    background #f4f4f4
+    border-radius 3px
+    font-size .9rem
+    margin 0 2px
+    padding 3px 5px
+
+/*main*/.main
+  .body
+    > *:first-child
+      margin-top 0
+
+    > *:last-child
+      margin-bottom 0
+
+  blockquote,
+  dl,
+  fieldset,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ol,
+  p,
+  ul,
+  .list-item,
+  .highlight
+    margin padding-content
+    max-width width-venti
+
+  dl,
+  ol,
+  ul
+    margin-left (padding-content + 2.5)rem
+
+    li > *
+      margin padding-content-half 0
+
+    dl,
+    ol,
+    ul
+      margin-left padding-content
+
+  h1,
+  h1 a
+    color color-white
+
+  h1
+    background color-black
+    font-weight 600
+    line-height 1.3
+    margin-bottom (padding-content-int * 1.5)rem
+    padding padding-content-half padding-content
+
+    a
+      border 0
+      margin-left -(padding-content-int)rem
+      margin-right -(padding-content-int)rem
+      padding 0 padding-content
+      &:hover
+        color color-link-bright
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    font-weight 400
+    margin-bottom 1.5rem
+
+  h2
+    font-weight 500
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    border-bottom 1px solid #eee
+
+    &:hover
+      border-bottom-color #ddd
+    a
+      padding-bottom .5rem
+
+/*html*/[data-current-layout="copy"]
+  /*main*/.main
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+      margin-top 2.5rem
 
 .nav-item-page-anchor-selected
   color color-white
@@ -269,7 +332,6 @@ p code
 
 /*header*/.rocks-header
   background color-white
-  background yellow  // XXX: temporary until homepage done
   display flex
   height height-header-small
   align-items center
@@ -430,7 +492,7 @@ p code
   width 100%
 
 ul.nav-social-list
-  padding 2rem 2rem .5rem
+  padding padding-content padding-content .5rem
 
 .nav-item-social
   display inline-block
@@ -459,7 +521,6 @@ ul.nav-social-list
   line-height github-repo-size-with-units
   min-height github-repo-size-with-units
   opacity .4
-  padding .5rem 0
   &:hover
     opacity .8
 
@@ -474,16 +535,22 @@ ul.nav-social-list
 
 .page-header .edit-options
   border-bottom 1px dotted #eee
-  margin 0 0 padding-content
-  padding-bottom padding-content
+  padding-bottom padding-content-double
 
 .page-footer .edit-options
   border-top 1px dotted #eee
-  margin-top 3rem
-  padding 1.5rem 0
+  margin-top padding-content
+  padding-bottom padding-content-half
+  padding-top padding-content-double
 
-  .github-edit-page-link
-    background-position 0 .4rem
+.date-published
+  color color-text-lighter
+  font-family font-code
+  font-size .8rem
+  padding-bottom padding-content-half
+
+.page__publish-date
+  font-weight 600
 
 img
   display block
@@ -494,6 +561,9 @@ hr
   border none
   border-top 1px dotted #eee
   height 0
+
+.directory-container
+  margin padding-content-double 0
 
 ul.directory-list
   margin-left 0
@@ -600,12 +670,11 @@ a.list-item-video-link
 
   > *:first-child
     margin-top 0
+
   > *:last-child
     margin-bottom 0
 
 .directory-form
-  padding-bottom 1rem
-
   label
     display block
 
@@ -626,6 +695,10 @@ legend
   font-weight 600
   padding 0 1rem
 
+.btn,
+.btn:visited
+  color color-white
+
 .btn
   background linear-gradient(#5fddff, #53addf)
   border-bottom 5px solid steelblue
@@ -634,7 +707,6 @@ legend
   border-right none
   border-top none
   box-shadow 0 2px 2px #ccc
-  color color-white
   cursor pointer
   display inline-block
   font-family inherit
@@ -647,6 +719,7 @@ legend
   outline none
   padding 0 4rem
   position relative
+  text-decoration none
   transition 150ms ease-inout
 
   &:hover

@@ -3,29 +3,37 @@
 {% block body %}
   {{ body|safe }}
 
-  <h1>Latest in WebVR</h1>
+  <h1 class="latest" id="latest">Latest in WebVR</h1>
 
-  <article class="article article-blender-to-aframe">
-    <h2>Importing your Blender model into WebVR</h2>
-    <a href="/creating">Tutorials</a>
-    by <a href="https://twitter.com/EricaLayton">Erica Layton</a>
-  </article>
+  <section class="articles" id="latest-articles" role="presentation">
+    <section class="article-tile" role="presentation">
+      <a class="article-tile-link" data-article-slug="export-blender-to-aframe" href="/creating/export-blender-to-aframe">
+        <h2 class="article-tile-heading">Importing your Blender model into WebVR</h2>
+      </a>
+      <span class="article-tile-category"><a class="article-tile-category-link" href="/creating">Tutorials</a></span>
+      <span class="article-tile-author">by <a class="article-tile-author-link" href="https://twitter.com/EricaLayton">Erica Layton</a></span>
+    </section>
 
-  <article class="article article-getting-started">
-    <h2>Which VR headset should you buy?</h2>
-    <a href="/getting-started">Getting Started</a>
-  </article>
+    <section class="article-tile" role="presentation">
+      <a class="article-tile-link" data-article-slug="getting-started" href="/getting-started">
+        <h2 class="article-tile-heading">Which VR headset should you buy?</h2>
+      </a>
+      <span class="article-tile-category"><a class="article-tile-category-link" href="/getting-started">Getting Started</a></span>
+    </section>
 
-  <article class="article article-responsive-controls">
-    <h2>Responsive controls that work with everything</h2>
-    <a href="/creating">Creating WebVR</a>
-    by <a href="https://twitter.com/whoyee">Casey Yee</a>
-  </article>
+    <section class="article-tile" role="presentation">
+      <a class="article-tile-link" data-article-slug="responsive-controls" href="/creating/responsive-controls">
+        <h2 class="article-tile-heading">Responsive controls that work with everything</h2>
+      </a>
+      <span class="article-tile-category"><a class="article-tile-category-link" href="/creating">Creating WebVR</a></span>
+      <span class="article-tile-author">by <a class="article-tile-author-link" href="https://twitter.com/whoyee">Casey Yee</a></span>
+    </section>
 
-  <h1>Latest in WebVR</h1>
-
-  <article class="article article-choosing-a-framework">
-    <h2>Choosing a WebVR content-creation framework</h2>
-    <a href="/getting-started">Getting Started</a>
-  </article>
+    <section class="article-tile" role="presentation">
+      <a class="article-tile-link" data-article-slug="choosing-a-framework" href="/creating/choosing-a-framework">
+        <h2 class="article-tile-heading">Choosing a WebVR content-creation framework</h2>
+      </a>
+      <span class="article-tile-category"><a class="article-tile-category-link" href="/creating">Creating WebVR</a></span>
+    </section>
+  </section>
 {% endblock %}
