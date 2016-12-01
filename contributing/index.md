@@ -6,31 +6,41 @@ title: Contributing
 
 We'd love your help!
 
-The [WebVR community](/community/) is a friendly open-source community that welcomes all forms of contributions! There's a ton of ways to participate.
-[WebVR specification](/contributing#webvr-specification),
+The [WebVR community](/community/) is a friendly open-source community that welcomes all forms of contributions! There's a ton of ways to participate:
+[the WebVR specification](/contributing#webvr-specification),
 [testing and filing issues](/contributing/#testing),
 [translation](/contributing/#translation),
-[documentation](/contributing/#documentation),
-[blog posts](/contributing/#blog-posts), and
-[tutorials](/contributing/#tutorials)
+[documentation](/contributing/#blog-posts),
+[blog posts](/contributing/#tutorials), and
+[tutorials](/contributing/#documentation).
 
 # WebVR Rocks
 
 Make this site a better resource for anyone that wants to learn more about WebVR.
 
-* **blog posts, tutorials and documentation**
+## Blog posts
 
-If you have a idea, tip, trick or technique to share.
+[Wish list of potential blog posts to write.](/contributing/wish-list)
 
+## Tutorials
 
-* **Translation and localization**
+[Wish list of potential tutorials to write.](/contributing/wish-list)
 
-We want to make information available to as many people as we can. Help translate content.
+## Documentation
 
-* **[Submit a WebVR site to the directory](/directory/submit/)**
+If you have a idea, tip, trick, or technique to share, feel free to [open a pull request or file an issue](/CONTRIBUTING#Contributions) on the [GitHub repository for WebVRRocks](https://github.com/webvrrocks/webvrrocks).
 
-* **[Test WebVR sites](/contributing/#testing)**
- listed in the [WebVR Directory](/directory) for functionality, compatibility, and comfort.
+## Translation and localization
+
+We want to make information available to as many people as we can. Help translate content by [localizing the content on this site](https://github.com/webvrrocks/webvrrocks/tree/master/locales) and [open a pull request with the changes](/CONTRIBUTING#Contributions).
+
+## Directory
+
+**[Submit a WebVR site to the directory.](/directory/submit/)**
+
+### Testing sites in the Directory
+
+* [Test the WebVR sites](/contributing/#testing) listed in the [WebVR Directory](/directory) for functionality, compatibility, and comfort.
 
 
 # Testing
