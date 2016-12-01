@@ -286,14 +286,10 @@ p
 .nav
   @extend .fancy-font
   background color-branding-primary
-  height 400px
   overflow hidden
-  position absolute
-  right 0
-  text-align center
-  top 0
   transition-delay .2s
   width 100%
+  position fixed
   z-index z-index-nav
 
 .nav,
@@ -375,16 +371,16 @@ p
 /*span*/.nav-toggle-text
   @extend .hidden-text
 
-/*li*/.nav-item-page a
-  color color-white-soft
-  display block
-  font-size 1.2rem
-  border-bottom 2px solid white
-  line-height 1.5
-  font-weight 500
-  padding 1rem padding-content
-  text-align left
-  text-decoration none
+/*li*/.nav-item-page
+  margin 0
+  display flex
+  a
+    color color-white-soft
+    font-size 1.2rem
+    font-weight 500
+    padding 1rem padding-content
+    text-align left
+    text-decoration none
 
   &:hover
     color color-white
@@ -393,22 +389,6 @@ p
   &.active
     @extend .nav-item-page-anchor-selected
 
-/*footer*/.nav-footer
-  padding padding-content
-  transition .15s bottom ease-in-out
-  width 100%
-
-/*li*/.nav-footer-item a
-  color color-white-soft
-  display block
-  font-size 1rem
-  text-decoration none
-  white-space nowrap
-  &:hover
-    color color-white
-
-/*li*/.nav-footer-item + /*li*/.nav-footer-item a
-  padding-top .5rem
 
 /*div*/.content
   background color-white
@@ -489,13 +469,15 @@ p
 
 /*ul*/.nav-social-list
   font-size 0
-  width 100%
+  display flex
 
 ul.nav-social-list
-  padding padding-content padding-content .5rem
+  //padding padding-content padding-content .5rem
+  padding 0 padding-content 0 0
+  display flex
+  align-items center
 
 .nav-item-social
-  display inline-block
   margin 0
   + .nav-item-social
     margin-left 2rem
@@ -533,15 +515,31 @@ ul.nav-social-list
   padding-left (github-repo-size + github-repo-padding)px
   z-index z-index-github-repo-link
 
-.page-header .edit-options
-  border-bottom 1px dotted #eee
-  padding-bottom padding-content-double
-
 .page-footer .edit-options
   border-top 1px dotted #eee
   margin-top padding-content
   padding-bottom padding-content-half
+  padding-left padding-content
   padding-top padding-content-double
+
+.nav-footer-list
+  display flex
+  background #efefef
+  margin 0
+  padding padding-content
+  li
+    margin 0
+
+/*li*/.nav-footer-item a
+  font-size 1.2rem
+  line-height 1.5
+  font-weight 500
+  padding-right padding-content
+  text-align left
+  text-decoration none
+
+  &:hover
+    color color-black
 
 .date-published
   color color-text-lighter
@@ -772,6 +770,7 @@ ul.asset-files-list
 @media screen and (min-width: width-venti)
   body
     display flex
+    flex-direction column
     flex-wrap wrap
     justify-content space-between
 
@@ -792,12 +791,12 @@ ul.asset-files-list
 
   /*nav*/.nav
     height auto
-    order 1
-    position static
-    flex 1
-    max-width 400px
-    min-width 250px
-    text-align left
+    display flex
+
+    .nav-pages
+      flex 1
+      display flex
+      flex-direction rows
 
   /*li*/.nav-item-page a
     padding-top 1rem
@@ -824,7 +823,3 @@ ul.asset-files-list
     display block
     height 120px
     margin-right 0
-
-  /*footer*/.nav-footer
-    padding-left 0
-    padding-right 0

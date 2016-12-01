@@ -71,17 +71,12 @@ engine: nunjucks
 
     <nav id="nav" class="nav" role="navigation" aria-label="Main menu" data-current-path="{{ page.href }}" data-current-file="{{ page.path.relative }}" aria-expanded="false">
       <ul id="nav-pages" class="nav-list nav-pages" role="menubar">
-        <li class="nav-item nav-item-page" role="presentation"><a href="/getting-started" role="menuitem">Getting Started</a></li>
-        <li class="nav-item nav-item-page" role="presentation"><a href="/browsers" role="menuitem">Browsers</a></li>
-        <li class="nav-item nav-item-page" role="presentation"><a href="/headsets" role="menuitem">Headsets</a></li>
-        <li class="nav-item nav-item-page" role="presentation"><a href="/getting-started/troubleshooting" role="menuitem">Troubleshooting</a></li>
+        <li class="nav-item nav-item-page" role="presentation"><a href="/" role="menuitem">News</a></li>
+        <li class="nav-item nav-item-page" role="presentation"><a href="/getting-started" role="menuitem">WebVR</a></li>
         <li class="nav-item nav-item-page" role="presentation"><a href="/directory" role="menuitem">Directory</a></li>
-        <!-- <li class="nav-item nav-item-page" role="presentation"><a href="/assets" role="menuitem">Assets</a></li> -->
         <li class="nav-item nav-item-page" role="presentation"><a href="/creating" role="menuitem">Creating</a></li>
         <li class="nav-item nav-item-page" role="presentation"><a href="/community" role="menuitem">Community</a></li>
-        <li class="nav-item nav-item-page" role="presentation"><a href="/spec" role="menuitem">Specification</a></li>
         <li class="nav-item nav-item-page" role="presentation"><a href="/contributing" role="menuitem">Contributing</a></li>
-        <li class="nav-item nav-item-page" role="presentation"><a href="/rocks/about" role="menuitem">About WebVR Rocks</a></li>
       </ul>
 
       <ul id="nav-social-list" class="nav-list nav-social-list">
@@ -103,15 +98,8 @@ engine: nunjucks
             <span class="hidden-text">GitHub</span>
           </a>
         </li>
-      </div>
-
-      <footer id="nav-footer" class="nav-footer">
-        <ul id="nav-footer-list" class="nav-list nav-footer-list">
-          <li class="nav-item nav-footer-item"><a href="/LICENSE">License</a></li>
-          <li class="nav-item nav-footer-item"><a href="/feedback">Site Feedback</a>
-          <li class="nav-item nav-footer-item"><a href="/privacy-policy">Privacy Policy</a>
         </ul>
-      </footer>
+      </div>
     </nav>
 
     <div id="content" class="content">
@@ -142,19 +130,25 @@ engine: nunjucks
             {{ body|safe }}
           </div>
         {% endblock %}
-
-        <footer id="page-footer" class="page-footer" role="contentinfo">
-          {% block footer_top %}
-            <p class="edit-options">
-              <a href="{% if page.edit_url %}{{ page.edit_url }}{% else %}https://github.com/webvrrocks/webvrrocks/edit/master{{ page.path.relative }}{% endif %}" class="github-edit-page-link edit-page-link" id="edit-page-link"><span>Edit this page</span></a>
-            </p>
-          {% endblock %}
-
-          {% if page.date_published %}
-            <p class="date-published">Date published: <time class="page__publish-date" title="{{ page.date_published }}" data-date="{{ page.date_published }}" data-format="%B %Y">{{ page.date_published }}</time></p>
-          {% endif %}
-        </footer>
       </main>
     </div>
+
+    <footer id="page-footer" class="page-footer" role="contentinfo">
+      {% block footer_top %}
+        <p class="edit-options">
+          <a href="{% if page.edit_url %}{{ page.edit_url }}{% else %}https://github.com/webvrrocks/webvrrocks/edit/master{{ page.path.relative }}{% endif %}" class="github-edit-page-link edit-page-link" id="edit-page-link"><span>Edit this page</span></a>
+        </p>
+      {% endblock %}
+
+      {% if page.date_published %}
+        <p class="date-published">Date published: <time class="page__publish-date" title="{{ page.date_published }}" data-date="{{ page.date_published }}" data-format="%B %Y">{{ page.date_published }}</time></p>
+      {% endif %}
+
+      <ul class="nav-list nav-footer-list">
+        <li class="nav-item nav-footer-item"><a href="/feedback">Site Feedback</a></li>
+        <li class="nav-item nav-footer-item"><a href="/LICENSE">License</a></li>
+        <li class="nav-item nav-footer-item"><a href="/privacy-policy">Privacy Policy</a></li>
+      </ul>
+    </footer>
   </body>
 </html>
