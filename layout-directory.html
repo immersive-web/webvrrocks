@@ -6,6 +6,7 @@ edit_url: https://docs.google.com/spreadsheets/d/1K8HArN12v_XQqv8NiNcFNmRW0bGv4Z
 {% extends 'layout.html' %}
 
 {% block header_top %}
+  <h1>{{ page.title }}</h1>
   <p class="edit-options">
     <a href="{{ page.edit_url }}" data-default-href="{{page.edit_url}}" class="googlesheets-edit-page-link edit-page-link edit-sheets-link" id="edit-sheets-link"><span>Edit this list</span></a>
   </p>

@@ -1,0 +1,83 @@
+// Good colour source: http://clrs.cc/a11y/
+color-black = #111
+color-branding-primary = #3a46ff
+color-main = #efefef
+color-main-darker = #333
+color-text-darker = #111
+color-text = #333
+color-text-light = #666
+color-link = #154cbd
+color-link-bright = #39cccc
+color-link-active = #2b43ff
+color-link-visited = #2b43ff
+color-link-hover = darken(#154cbd, 30%)
+color-white = #fff
+color-white-soft = darken(#fff, 15%)
+
+font-body = system, 'Helvetica Neue', Helvetica, sans-serif
+
+// Poppins source: https://fonts.google.com/specimen/Poppins
+font-fancy = Poppins, system, 'Helvetica Neue', Helvetica, sans-serif
+
+// Hack source: https://github.com/chrissimpkins/Hack
+font-code = Hack, monospace
+
+column-max-width = 600px
+logo-width = 300px
+mobile-width = 600px
+
+padding-content = 1.5rem
+padding-content-int = 1.5
+
+height-header-small = 65px
+height-header-venti = 300px
+height-masthead = 400px
+
+width-small = 400px
+width-grande = 600px
+width-venti = 800px
+
+nav-height = height-header-small
+nav-width = 30%
+
+github-repo-size = 20
+github-repo-size-with-units = github-repo-size px
+
+github-repo-padding = 10
+github-repo-padding-with-units = github-repo-padding px
+
+z-index-nav = 1
+z-index-nav-toggle = 2
+z-index-github-repo-link = 1
+
+// utils / mixins
+
+.fancy-font
+  font-family font-fancy
+
+.normal-font
+  font-family font-body
+
+.code-font
+  font-family font-code
+
+.centerer
+  display block
+  text-align center
+
+.hidden-text
+  height 1px
+  overflow hidden
+  position absolute
+  top -10px
+  width 1px
+
+.disappear
+  opacity 0
+  pointer-events none
+  visibility hidden
+
+.reappear
+  opacity 1
+  pointer-events auto
+  visibility visible
