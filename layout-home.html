@@ -1,7 +1,6 @@
 {% extends 'layout.html' %}
 
-{% block body %}
-  {{ body|safe }}
+{% block header %}
   <div class="rocks-logo">
     <svg class="rocks-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 160" xmlns:xlink="http://www.w3.org/1999/xlink" height="40">
       <title>WebVR.Rocks logo</title>
@@ -11,7 +10,11 @@
       <strong class="rocks-wordmark-webvr">WebVR</strong><span class="rocks-wordmark-rocks">.Rocks</span>
     </span>
   </div>
+{% endblock %}
 
+{% block body %}
+  {{ body|safe }}
+  <div class="body column">
   <h1 class="latest" id="latest">Latest in WebVR</h1>
 
   <section class="articles" id="latest-articles" role="presentation">
@@ -45,4 +48,5 @@
       <span class="article-tile-category"><a class="article-tile-category-link" href="/creating">Creating WebVR</a></span>
     </section>
   </section>
+  </div>
 {% endblock %}
