@@ -1,7 +1,7 @@
 /* global ga, URLSearchParams */
-const domready = require('domready');
+var domready = require('domready');
 
-const MEDIA_QUERY_STRING = 'screen and (min-width: 800px)';
+var MEDIA_QUERY_STRING = 'screen and (min-width: 800px)';
 
 /* jshint ignore:start */
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){  // eslint-disable-line
