@@ -13,6 +13,7 @@
   "devDependencies": {
     "gh-pages": "^0.11.0",
     "jus": "cvan/jus#f3f4f63",
+    "shx": "^0.2.1",
     "surge": "^0.18.0"
   },
   "engines": {
@@ -21,7 +22,7 @@
   },
   "engineStrict": true,
   "scripts": {
-    "postinstall": "npm run syncdb",
+    "postinstall": "npm run clean && npm run syncdb",
     "start": "npm run dev",
     "dev": "jus serve",
     "prebuild": "npm run syncdb",
@@ -29,8 +30,8 @@
     "lint": "semistandard",
     "surge": "surge -d https://webvrrocks.surge.sh",
     "deploy": "npm run deploy:surge",
+    "predeploy": "npm run build",
     "deploy:prod": "npm run deploy:surge",
-    "predeploy:surge": "npm run build",
     "deploy:surge": "surge _prod -d https://webvrrocks.surge.sh",
     "predeploy:ghpages": "npm run build",
     "deploy:ghpages": "gh-pages --dist _prod/",
@@ -38,6 +39,7 @@
     "open:prod": "open https://webvr.rocks/",
     "open:surge": "open https://webvrrocks.surge.sh/",
     "open:ghpages": "open https://webvrrocks.github.io/",
+    "clean": "shx rm -rf _prod",
     "syncdb": "npm run syncdb:webvr_scenes && npm run syncdb:webvr_assets",
     "syncdb:webvr_scenes": "curl https://webvr-6345b.firebaseio.com/webvrrocks/webvr_scenes.json > directory/index.json",
     "syncdb:webvr_assets": "curl https://webvr-6345b.firebaseio.com/webvrrocks/webvr_assets.json > assets/index.json"
