@@ -297,6 +297,9 @@ p
   transition width .4s, height .4s, opacity .4s, transform .4s
   transition-timing-function cubic-bezier(.7,0,.3,1)
 
+  /*div*/.rocks-logo
+    display none
+
 .nav,
 .nav > *
   @extend .disappear
@@ -402,6 +405,7 @@ p
 
   .main
     position relative
+
 
 [data-current-path^="/directory"],
 [data-current-path^="/assets"]
@@ -782,6 +786,10 @@ ul.asset-files-list
   .main
     padding-top nav-height
 
+    /*div*/.rocks-logo
+      display block
+
+
   .content
     flex 3
     > .rocks-header
@@ -819,9 +827,9 @@ ul.asset-files-list
     padding 1.5rem
     text-align center
 
-  /*h1*/.rocks-logo
-    display flex
-    flex-direction column
+  /*div*/.rocks-logo
+    margin padding-content
+    text-align center
     font-size 3rem
     width 100%
 
@@ -833,5 +841,5 @@ ul.asset-files-list
 
   /*svg*/.rocks-icon
     display block
+    margin auto
     height 120px
-    margin-right 0
