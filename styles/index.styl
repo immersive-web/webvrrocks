@@ -779,8 +779,13 @@ ul.asset-files-list
     flex-wrap wrap
     justify-content space-between
 
+  .main
+    padding-top nav-height
+
   .content
     flex 3
+    > .rocks-header
+      display none
 
   .copy
     max-width width-venti
@@ -815,6 +820,8 @@ ul.asset-files-list
     text-align center
 
   /*h1*/.rocks-logo
+    display flex
+    flex-direction column
     font-size 3rem
     width 100%
 
