@@ -17,13 +17,6 @@ To install the [Node](https://nodejs.org) dependencies:
 npm install
 ```
 
-To install [Git Large File Storage](https://git-lfs.github.com/), download it from [this page](https://github.com/git-lfs/git-lfs/releases/latest) or install it using [Homebrew](http://brew.sh/) if you're on macOS:
-
-```sh
-# macOS
-brew install git-lfs
-```
-
 
 ## Local development
 
