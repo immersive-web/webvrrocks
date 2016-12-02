@@ -1,5 +1,6 @@
 <!--
 title: Wish List
+keywords: [contributing, creating, guides]
 -->
 
 # Articles
