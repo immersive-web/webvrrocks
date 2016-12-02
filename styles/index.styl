@@ -44,24 +44,6 @@ a:active
 a:hover
   color color-link-hover
 
-dl,
-h2,
-h3,
-h4,
-h5,
-h6,
-ol,
-p,
-ul
-  margin 1.5rem 0
-
-dl
-ol,
-ul,
-  ol,
-  ul
-    margin .5rem 0 .5rem 2.5rem
-
 ol
   counter-reset item
 
@@ -74,8 +56,6 @@ li
 
 ol,
 ul
-  margin-left 2.5rem
-
   li:before
     display inline-block
     position absolute
@@ -99,8 +79,6 @@ ul ul li:before
   content '○'
 
 ul.nav-list
-  margin 0
-
   li:before
     display none
 
@@ -226,12 +204,7 @@ p
     ul
       margin-left padding-content
 
-  h1,
-  h1 a
-    color color-white
-
   h1
-    background color-black
     font-weight 600
     line-height 1.3
     margin-bottom (padding-content-int * 1.5)rem
@@ -527,14 +500,15 @@ ul.nav-social-list
 .page-footer .edit-options
   border-top 1px dotted #eee
   margin-top padding-content
-  padding-bottom padding-content-half
+  padding-bottom padding-content
   padding-left padding-content
   padding-top padding-content-double
 
+.nav-footer
+  background #efefef
+
 .nav-footer-list
   display flex
-  background #efefef
-  margin 0
   padding padding-content
   li
     margin 0
@@ -784,16 +758,23 @@ ul.asset-files-list
     justify-content space-between
 
   .main
+    max-width content-width
+    margin auto
     padding-top nav-height
 
     /*div*/.rocks-logo
       display block
 
-
   .content
     flex 3
     > .rocks-header
       display none
+
+  /*div*/.content-width-wrapper
+    max-width content-width
+    width 100%
+    margin auto
+    display flex
 
   .copy
     max-width width-venti
