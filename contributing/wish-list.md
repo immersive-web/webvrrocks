@@ -42,7 +42,7 @@ Ideas for articles to write for the [Creating WebVR](/creating) (and some on con
 * WebVR: An open ubiquitous platform
 * Which WebVR experiences can I play in my living room with my family and friends?
 * Where does the AR/MR/hologram universe fit into WebVR?
-* Who's using WebVR today? ([inspiration](https://github.com/w3c/webvr/blob/gh-pages/explainer.md#use-cases))
+* Who's using WebVR today? ([inspiration](https://github.com/w3c/webvr/blob/master/explainer.md#use-cases))
 * What are some scary WebVR games to play?
 
 
