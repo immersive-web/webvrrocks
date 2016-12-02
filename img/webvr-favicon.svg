@@ -1,21 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
-    <title>webvr-favicon</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <rect id="path-1" x="0" y="0" width="200" height="200"></rect>
-        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="200" height="200" fill="white">
-            <use xlink:href="#path-1"></use>
-        </mask>
-    </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="webvr-favicon">
-            <g id="Group">
-                <use id="Rectangle" stroke="#111111" mask="url(#mask-2)" stroke-width="40" fill="#FFFFFF" xlink:href="#path-1"></use>
-                <circle id="Oval" fill="#111111" cx="57.5" cy="100.5" r="17.5"></circle>
-                <circle id="Oval" fill="#111111" cx="142.5" cy="100.5" r="17.5"></circle>
-            </g>
-        </g>
-    </g>
-</svg>
+version https://git-lfs.github.com/spec/v1
+oid sha256:cbc95f71929aad5a60bd53149d2e1b8981ad6b4375177aa57fb4c2b544e0549c
+size 553
