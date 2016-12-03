@@ -1,5 +1,9 @@
 <!--
 title: Getting started
+related: [
+  /headsets/,
+  /browsers/
+  ]
 -->
 
 # Getting started

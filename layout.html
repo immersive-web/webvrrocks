@@ -139,26 +139,28 @@ engine: nunjucks
           {% endfor %}
         {% endif %}
 
-        {% block body %}
-          <div class="body">
-            {{ body|safe }}
-          </div>
-        {% endblock %}
+        <div class="body-wrapper">
+          {% block body %}
+            <div class="body">
+              {{ body|safe }}
+            </div>
+          {% endblock %}
 
-        {% if related|length %}
-          <aside id="related-pages" class="related-pages">
-            <h2>Related</h2>
-            <ul>
-              {% for related_page in related %}
-                <li>
-                  <a href="{{ related_page.href }}">
-                    {{ related_page.title }}
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
-          </aside>
-        {% endif %}
+          {% if related|length %}
+            <aside id="related-pages" class="related-pages">
+              <h2>Related</h2>
+              <ul>
+                {% for related_page in related %}
+                  <li>
+                    <a href="{{ related_page.href }}">
+                      {{ related_page.title }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </aside>
+          {% endif %}
+        </div>
       </main>
     </div>
 

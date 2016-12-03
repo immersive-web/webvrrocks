@@ -168,7 +168,12 @@ p
     padding 3px 5px
 
 /*main*/.main
+  .body-wrapper
+    display flex
+    flex-direction column
+
   .body
+    flex 1
     > *:first-child
       margin-top 0
 
@@ -764,6 +769,8 @@ ul.asset-files-list
 
     /*div*/.rocks-logo
       display block
+    .body-wrapper
+      flex-direction row
 
   .content
     flex 3
@@ -809,7 +816,7 @@ ul.asset-files-list
     text-align center
 
   /*div*/.rocks-logo
-    margin padding-content
+    padding-top padding-content
     text-align center
     font-size 3rem
     width 100%
