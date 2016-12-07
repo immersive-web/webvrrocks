@@ -14,7 +14,6 @@ date_updated: 2017-11-09
 ### We will show you the basics of exporting a Blender model from Sketchfab and using it in A-Frame in both Wavefront (`.obj`) and COLLADA (`.dae`) formats.
 
 <a href="demo/" class="btn btn-demo">View demo</a>
-
 <a href="https://github.com/WebVRRocks/webvrrocks/archive/master.zip" class="btn btn-source">Download source</a>
 
 In this guide, we’ll cook up an [A-Frame](https://aframe.io/) scene containing a model from [Sketchfab](https://sketchfab.com/). I chose a model of an [Oculus Rift CV1](https://sketchfab.com/models/591ff55a0f7b401cbb14fe454175b8b2) by [Ti Kawamoto](https://sketchfab.com/adamselene). It’s a nice model created with the open source [Blender](https://www.blender.org/) 3D creation suite. Plus, the thought of recursive “VR within VR” is amusing..
