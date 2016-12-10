@@ -1,52 +1,66 @@
 {% extends 'layout.html' %}
 
 {% block header %}
-  <div class="rocks-logo">
-    <svg class="rocks-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 160" xmlns:xlink="http://www.w3.org/1999/xlink" height="40">
-      <title>WebVR.Rocks logo</title>
-      <path fill="#3a46ff" fill-rule="evenodd" d="M0 0v160h250V0H0zm55.82 108.095c-15.917 0-28.82-12.78-28.82-28.547C27 63.78 39.903 51 55.82 51s28.82 12.78 28.82 28.548c0 7.57-3.036 14.832-8.44 20.186-5.405 5.354-12.736 8.36-20.38 8.36zm74.207-10.502h-10.054V62.407h10.054v35.186zm64.793 10.502c-15.917 0-28.82-12.78-28.82-28.547C166 63.78 178.903 51 194.82 51s28.82 12.78 28.82 28.548c0 15.766-12.903 28.547-28.82 28.547z"/>
-    </svg>
-    <span class="rocks-wordmark">
-      <strong class="rocks-wordmark-webvr">WebVR</strong><span class="rocks-wordmark-rocks">.Rocks</span>
-    </span>
-  </div>
 {% endblock %}
 
 {% block body %}
   {{ body|safe }}
   <div class="body column">
-  <h1 class="latest" id="latest">Latest in WebVR</h1>
 
-  <section class="articles" id="latest-articles" role="presentation">
-    <section class="article-tile" role="presentation">
-      <a class="article-tile-link" data-article-slug="export-blender-to-aframe" href="/creating/export-blender-to-aframe">
-        <h2 class="article-tile-heading">Importing your Blender model into WebVR</h2>
-      </a>
-      <span class="article-tile-category"><a class="article-tile-category-link" href="/creating">Tutorials</a></span>
-      <span class="article-tile-author">by <a class="article-tile-author-link" href="https://twitter.com/EricaLayton">Erica Layton</a></span>
-    </section>
+  <div id="video" style="width: 800px; height: 400px; background: #333"></div>
 
-    <section class="article-tile" role="presentation">
-      <a class="article-tile-link" data-article-slug="getting-started" href="/getting-started">
-        <h2 class="article-tile-heading">Which VR headset should you buy?</h2>
-      </a>
-      <span class="article-tile-category"><a class="article-tile-category-link" href="/getting-started">Getting Started</a></span>
-    </section>
+  <div class="column-container">
+    <div class="column">
+      <h1 class="latest" id="latest">Latest in WebVR</h1>
 
-    <section class="article-tile" role="presentation">
-      <a class="article-tile-link" data-article-slug="responsive-controls" href="/creating/responsive-controls">
-        <h2 class="article-tile-heading">Responsive controls that work with everything</h2>
-      </a>
-      <span class="article-tile-category"><a class="article-tile-category-link" href="/creating">Creating WebVR</a></span>
-      <span class="article-tile-author">by <a class="article-tile-author-link" href="https://twitter.com/whoyee">Casey Yee</a></span>
-    </section>
+        <h2>w3c workshop on WebVR - A Look ahead</h2>
+        <time>December 9</time>
 
-    <section class="article-tile" role="presentation">
-      <a class="article-tile-link" data-article-slug="choosing-a-framework" href="/creating/choosing-a-framework">
-        <h2 class="article-tile-heading">Choosing a WebVR content-creation framework</h2>
-      </a>
-      <span class="article-tile-category"><a class="article-tile-category-link" href="/creating">Creating WebVR</a></span>
-    </section>
-  </section>
+        <h2>WebVR available as Origin Trial in Chrome</h2>
+        <time>December 9</time>
+
+        <h2>Carmel Developer preview release</h2>
+        <time>December 9</time>
+
+        <h2>A-Blast Shooter built using A-Frame debut's</h2>
+        <time>December 8</time>
+
+        <h2>Vive controller support availble in Firefox Nightly</h2>
+        <time>November, 28</time>
+
+
+
+        <h1>Articles</h1>
+
+        <h2>Importing your blender model into WebVR</h2>
+        <p>By <a href="http://davidwalsh.name" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><span itemprop="name">Erica Layton</span></a></p>
+        <time>December 9</time>
+
+        <h2>Guide: Scaling for Roomscale WebVR</h2>
+        <p>By <a href="http://davidwalsh.name" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><span itemprop="name">Erica Layton</span></a></p>
+        <time>December 9</time>
+
+        <h2>Connecting Virtual Worlds:  Hyperlinks in WebVR</h2>
+        <p>By <a href="http://davidwalsh.name" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><span itemprop="name">Erica Layton</span></a></p>
+        <time>December 9</time>
+      </div>
+      <div class="column">
+        <h1>Getting Started</h1>
+
+        <p>Help me choose a Headset</p>
+
+        <p>Download browser</p>
+
+        <p>Troubleshooting</p>
+
+
+        <h1>Showcase</h1>
+
+        <h3>Perspective</h3>
+
+        <div id="showcase-item" style="background: #333; width: 300px; height: 200px"></div>
+
+        <p>By <a href="http://davidwalsh.name" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><span itemprop="name">Le-Roy Karunaratne</span></a></p>
+      </div>
   </div>
 {% endblock %}
