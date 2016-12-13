@@ -451,7 +451,7 @@ p
 [data-current-path^="/community"] nav a[href^="/community"],
 [data-current-path^="/spec"] nav a[href^="/spec"],
 [data-current-path^="/contributing"] nav a[href^="/contributing"],
-[data-current-path^="/rocks/about"] nav a[href^="/rocks/about"]
+[data-current-path^="/rocks"] nav a[href^="/rocks"]
   @extend .nav-item-page-anchor-selected
 
 /*ul*/.nav-social-list
@@ -501,6 +501,9 @@ ul.nav-social-list
   min-height github-repo-size-with-units
   padding-left (github-repo-size + github-repo-padding)px
   z-index z-index-github-repo-link
+
+.edit-options
+  width 100%
 
 .page-footer .edit-options
   border-top 1px dotted #eee
@@ -694,17 +697,18 @@ legend
   border-right none
   border-top none
   box-shadow 0 2px 2px #ccc
+  color color-white
   cursor pointer
   display inline-block
   font-family inherit
   font-size 1rem
   font-weight 600
-  height 4rem
-  line-height 4rem
+  height 3.6rem
+  line-height 3.6rem
   max-width 500px
   opacity .8
   outline none
-  padding 0 4rem
+  padding 0 2rem
   position relative
   text-decoration none
   transition 150ms ease-inout
@@ -716,10 +720,17 @@ legend
     border none
     border-bottom 2px solid steelblue
     box-shadow 0 1px 4px #aaa
-    background linear-gradient(#53aff, #5fcdff)
-    color color-white
-    line-height 4.35rem
+    background linear-gradient(#53addf, #5fcdff)
+    line-height 3.85rem
     opacity 1
+
+  &.btn-submit
+    background linear-gradient(#5fffdd, #53dfad)
+
+    &,
+    &:active
+      border-bottom-color #5fffdd
+      color color-black
 
 ul.asset-files-list
   background rgba(255,255,255,0.1)
@@ -739,6 +750,36 @@ ul.asset-files-list
 
     &:hover
       border-bottom-color rgba(255,255,255,.8)
+
+input[type="text"],
+select,
+textarea
+  border 1px solid #ccc
+  font-size 1rem
+  font-family inherit
+  padding .5rem
+  width 100%
+
+textarea
+  min-height calc(50px + 1vh + 10vw)
+
+/*form*/.contact-form
+  margin-top -(padding-content-int)rem
+  padding-top padding-content-double
+
+  .form-legend
+    display none
+
+/*label*/.form-label,
+/*span*/.form-label-text,
+/*span*/.form-label-field
+  display block
+
+/*label*/.form-label
+  font-weight bold
+
+/*span*/.form-label-text
+  margin-bottom .25rem
 
 .uploadcare-widget
   display none
@@ -832,3 +873,8 @@ ul.asset-files-list
     display block
     margin auto
     height 120px
+
+  input[type="text"],
+  select,
+  textarea
+    max-width width-small
