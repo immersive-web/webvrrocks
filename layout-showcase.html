@@ -20,8 +20,8 @@ edit_url: https://docs.google.com/spreadsheets/d/1K8HArN12v_XQqv8NiNcFNmRW0bGv4Z
 
 {% block body %}
   {{ body|safe }}
-  <div id="directory-container" class="directory-container">
-    <form id="directory-form" class="directory-form" action="" method="get">
+  <div id="showcase-container" class="showcase-container">
+    <form id="showcase-form" class="showcase-form" action="" method="get">
       <fieldset>
         <legend>Filters</legend>
         <label>
@@ -47,9 +47,9 @@ edit_url: https://docs.google.com/spreadsheets/d/1K8HArN12v_XQqv8NiNcFNmRW0bGv4Z
         </label>
       </fieldset>
     </form>
-    <ul id="directory-list" class="directory-list">
+    <ul id="showcase-list" class="showcase-list">
       {% for item in page.data.index|sort(false, false, 'name') %}
-        {% include 'fragment-directory-item.html' %}
+        {% include 'fragment-showcase-item.html' %}
       {% endfor %}
     </ul>
   </div>
