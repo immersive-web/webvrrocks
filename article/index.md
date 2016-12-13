@@ -1,10 +1,8 @@
 <!--
-title: Creating WebVR
+title: Articles
 -->
 
-# Creating WebVR
-
-Tutorials and tools for making WebVR content.
+# Articles
 
 ## 5-minute guides
   * [Exporting Blender Models from Sketchfab to A-Frame](/creating/export-blender-to-aframe/)
