@@ -4,7 +4,7 @@ title: WebVR Rocks
 
 # WebVR Rocks
 
-Your one-stop resource for everything about WebVR.
+Community of experimentation & showcase of techniques of VR content creation on the Web.
 
 **[WebVR Rocks!](https://WebVR.rocks)**
 
