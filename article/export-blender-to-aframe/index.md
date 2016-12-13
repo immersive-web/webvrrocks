@@ -9,7 +9,7 @@ date_updated: 2017-11-09
 
 # 5-Minute Guide: Exporting Blender Models from Sketchfab to A-Frame
 
-![Demo Scene](/creating/export-blender-to-aframe/img/demo-cv1-model.png)
+![Demo Scene](/article/export-blender-to-aframe/img/demo-cv1-model.png)
 
 ### We will show you the basics of exporting a Blender model from Sketchfab and using it in A-Frame in both Wavefront (`.obj`) and COLLADA (`.dae`) formats.
 
@@ -40,7 +40,7 @@ One simple, locally hosted WebVR site with `.dae` and `.obj` versions of an [Ocu
 
 ## Part 1: Getting the “Ingredients”
 
-![Image of Blender homepage](/creating/export-blender-to-aframe/img/blender-site.png "Image of Blender homepage")
+![Image of Blender homepage](/article/export-blender-to-aframe/img/blender-site.png "Image of Blender homepage")
 
 ### Get Blender
 
@@ -132,12 +132,12 @@ Make a directory to keep your `.blend` file and exports. We’ll come back to th
 0. Unzip/extract the blend file
 Right click on the `.zip` file and select `Extract All`. Save the extracted contents to a directory you can find easily.
 0. Extract the contents of the `.zip` file. Note that this is on Windows. On macOS, simply double-clicking on the `.zip` file will extract the contents into the same directory where the `.zip` file resides.
-    ![Extract Zip Contents](/creating/export-blender-to-aframe/img/extract-all.png)
+    ![Extract Zip Contents](/article/export-blender-to-aframe/img/extract-all.png)
 0. Open the `.blend` file with Blender. Take a quick look at the Blender user interface. Blender has a high learning curve, but it can be a powerful tool for creating 3D graphics. For now, we’ll just use it as an exporter for the CV1 model.
 0. Export the model: `File` → `Export` → `Wavefront` (`.obj`).
 0. Name and save the `.obj` file. By default, it will be saved in same directory with the `.blend` file.
 
-![Export .obj from Blender](/creating/export-blender-to-aframe/img/export-obj.png "Export .obj from Blender")
+![Export .obj from Blender](/article/export-blender-to-aframe/img/export-obj.png "Export .obj from Blender")
 
 ### Copy the 3D model files into the directory with your `index.html` file
 
@@ -145,7 +145,7 @@ Right click on the `.zip` file and select `Extract All`. Save the extracted cont
 0. In the directory with your blend file, you should now have a `.dae` file, plus an `.obj` file and an `.mtl` file that goes with it. Notice that there are a number of `.jpg` image files that came with the model. These are textures for the `.obj`; they are important!
 0. Copy-and-paste the `.dae`, `.obj`, `.mtl`, and all of the `.jpg` files into the directory with your `index.html` file.
 
-![Copy models and textures into Web page directory](/creating/export-blender-to-aframe/img/copy-paste-textures.png "Copy models and textures into Web page directory")
+![Copy models and textures into Web page directory](/article/export-blender-to-aframe/img/copy-paste-textures.png "Copy models and textures into Web page directory")
 
 ## Part 3: Web Page and Local Server
 

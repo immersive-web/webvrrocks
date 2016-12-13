@@ -5,7 +5,7 @@ title: Articles
 # Articles
 
 ## 5-minute guides
-  * [Exporting Blender Models from Sketchfab to A-Frame](/creating/export-blender-to-aframe/)
+  * [Exporting Blender Models from Sketchfab to A-Frame](article/export-blender-to-aframe)
   * Debugging WebVR using Chrome
   * Remotely debugging WebVR on Gear VR
 
