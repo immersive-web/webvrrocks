@@ -548,6 +548,32 @@ hr
   border-top 1px dotted #eee
   height 0
 
+
+/* home page */
+[data-current-path="/"]
+  .main
+    ul
+      margin padding-content
+      padding 0
+    li
+      &:before
+        content none
+    .news-item
+      list-style none
+      display flex
+      .news-image
+        width 100px
+        height 100px
+        overflow hidden
+        background #efefef
+      .news-headline
+        font-size 1.5rem
+      time
+        display block
+
+
+
+/* showcase */
 .showcase-container
   margin padding-content-double 0
 
@@ -807,8 +833,9 @@ textarea
 
     /*div*/.rocks-logo
       display block
+
     .body-wrapper
-      flex-direction row
+      display flex
 
   .content
     flex 3

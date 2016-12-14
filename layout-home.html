@@ -5,64 +5,87 @@
 
 {% block body %}
   {{ body|safe }}
-  <div class="body column">
+  <div class="body-wrapper">
+    <div>
+      <section>
+        <h1 class="latest" id="latest">Latest in WebVR</h1>
 
-  <div id="video" style="width: 800px; height: 400px; background: #333"></div>
-
-  <div class="column-container">
-    <div class="column">
-      <h1 class="latest" id="latest">Latest in WebVR</h1>
-        <h2><a href="news/2016/12/oculus-releases-developer-preview-of-react-vr">Oculus releases developer preview of React VR.</a></h2>
-        <time>December 13</time>
-
-        <h2><a href="news/2016/12/w3c-workshop-on-web-and-virtual-reality-a-look-ahead">W3C workshop on WebVR - A Look ahead</a></h2>
-        <time>December 9</time>
-
-        <h2><a href="news/2016/12/webvr-available-as-origin-trial-on-chrome-56">WebVR available as Origin Trial in Chrome</a></h2>
-        <time>December 9</time>
-
-        <h2><a href="news/2016/12/oculus-carmel-developer-preview-launch">Carmel Developer preview release</a></h2>
-        <time>December 9</time>
-
-        <h2>A-Blast Shooter built using A-Frame debut's</h2>
-        <time>December 8</time>
-
-        <h2>Vive controller support availble in Firefox Nightly</h2>
-        <time>November, 28</time>
-
-
-
+        <ul>
+          <li class="news-item">
+            <div class="news-image"><img src="news/2016/12/img/react.png"></div>
+            <div>
+              <span class="news-headline"><a href="news/2016/12/oculus-releases-developer-preview-of-react-vr">Oculus releases developer preview of React VR.</a></span>
+              <time>December 13</time>
+            <div>
+          </li>
+          <li class="news-item">
+            <div class="news-image"><img src="news/2016/12/img/w3c.jpg"></div>
+            <div>
+              <span class="news-headline"><a href="news/2016/12/w3c-workshop-on-web-and-virtual-reality-a-look-ahead">W3C workshop on WebVR - A Look ahead</a></span>
+              <time>December 9</time>
+            <div>
+          </li>
+          <li class="news-item">
+            <div class="news-image"><img src="news/2016/12/img/chrome.png"></div>
+            <div>
+              <span class="news-headline"><a href="news/2016/12/webvr-available-as-origin-trial-on-chrome-56">WebVR available as Origin Trial in Chrome</a></span>
+              <time>December 9</time>
+            </p>
+          </div>
+          <li class="news-item">
+            <div class="news-image"><img src="news/2016/12/img/carmel.jpg"></div>
+            <div>
+              <span class="news-headline"><a href="news/2016/12/oculus-carmel-developer-preview-launch">Carmel Developer preview release</a></span>
+              <time>December 9</time>
+            </p>
+          </div>
+          <li class="news-item">
+            <div class="news-image"><img src="news/2016/12/img/firefox-nightly.png"></div>
+            <div>
+              <span class="news-headline"><a href="">Vive controller support availble in Firefox Nightly</a></span>
+              <time>November, 28</time>
+            </p>
+          </div>
+        </ul>
+      </section>
+      <section>
         <h1>Articles</h1>
 
-        <h2><a href="article/export-blender-to-aframe">Importing your blender model into WebVR</a></h2>
-        <p>By <a href="/" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><span itemprop="name">Erica Layton</span></a></p>
-        <time>December 9</time>
-
-        <h2>Guide: Scaling for Roomscale WebVR</h2>
-        <p>By <a href="/" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><span itemprop="name">Erica Layton</span></a></p>
-        <time>December 9</time>
-
-        <h2>Connecting Virtual Worlds:  Hyperlinks in WebVR</h2>
-        <p>By <a href="/" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><span itemprop="name">Casey Yee</span></a></p>
-        <time>December 9</time>
-      </div>
-      <div class="column">
+        <ul>
+          <li>
+            <a href="article/export-blender-to-aframe">Importing your blender model into WebVR</a>
+            <p>By <a href="/" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><span itemprop="name">Erica Layton</span></a></p>
+            <time>December 9</time>
+          </li>
+        </ul>
+        <ul>
+          <li><a href="">Guide: Scaling for Roomscale WebVR</a>
+          <p>By <a href="/" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><span itemprop="name">Erica Layton</span></a></p>
+          <time>December 9</time>
+        </ul>
+        <ul>
+          <li><a href="">Connecting Virtual Worlds:  Hyperlinks in WebVR</a>
+          <p>By <a href="/" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><span itemprop="name">Casey Yee</span></a></p>
+          <time>December 9</time>
+        </ul>
+      </section>
+    </div>
+    <div>
+      <section>
         <h1>Getting Started</h1>
 
         <p>Help me choose a Headset</p>
-
         <p>Download browser</p>
-
         <p>Troubleshooting</p>
+      </section>
 
-
+      <section>
         <h1>Showcase</h1>
 
-        <h3>Perspective</h3>
-
-        <div id="showcase-item" style="background: #333; width: 300px; height: 200px"></div>
-
+        <p>Perspective</p>
         <p>By <a href="http://davidwalsh.name" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><span itemprop="name">Le-Roy Karunaratne</span></a></p>
-      </div>
+      </section>
+    </div>
   </div>
+
 {% endblock %}
