@@ -837,8 +837,12 @@ textarea
     /*div*/.rocks-logo
       display block
 
-    .body-wrapper
+    .column-wrapper
       display flex
+      >:nth-child(1)
+        flex 1
+      >:nth-child(2)
+        width 300px
 
   .content
     flex 3

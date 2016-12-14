@@ -5,7 +5,20 @@
 
 {% block body %}
   {{ body|safe }}
-  <div class="body-wrapper">
+  <section>
+    <h1>How WebVR works</h1>
+    <div class="column-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/0I-Ft_0i2k4" frameborder="0" allowfullscreen></iframe>
+      <div>
+        <ul>
+          <li><a href="/headsets">Help me choose a Headset</a></li>
+          <li><a href="/browsers">Download browser</a></li>
+          <li><a href="/getting-started/troubleshooting">Troubleshooting</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <div class="column-wrapper">
     <div>
       <section>
         <h1 class="latest" id="latest">Latest in WebVR</h1>
@@ -64,14 +77,6 @@
       </section>
     </div>
     <div>
-      <section>
-        <h1>Getting Started</h1>
-
-        <p>Help me choose a Headset</p>
-        <p>Download browser</p>
-        <p>Troubleshooting</p>
-      </section>
-
       <section>
         <h1>Showcase</h1>
 
