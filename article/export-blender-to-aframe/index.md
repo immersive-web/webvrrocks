@@ -126,8 +126,7 @@ Make a directory to keep your `.blend` file and exports. We’ll come back to th
 
 ## Part 2: Get and Convert the 3D Model
 
-0.  Choose a `.blend` file on Sketchfab. For this guide, I’m using this [Oculus Rift CV1 model]
-(https://sketchfab.com/models/591ff55a0f7b401cbb14fe454175b8b2). Notice that the model has image textures on the inside of the eyepieces, as well as a small label on the back of the head strap.
+0. Choose a `.blend` file on Sketchfab. For this guide, I’m using this [Oculus Rift CV1 model](https://sketchfab.com/models/591ff55a0f7b401cbb14fe454175b8b2). Notice that the model has image textures on the inside of the eyepieces, as well as a small label on the back of the head strap.
 0. Download the `.blend` file. It will be a `.zip` file.
 0. Unzip/extract the blend file
 Right click on the `.zip` file and select `Extract All`. Save the extracted contents to a directory you can find easily.
