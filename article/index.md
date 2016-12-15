@@ -5,6 +5,7 @@ title: Articles
 # Articles
 
 ## 5-minute guides
+  * [5-Minute Guide: Scaling for Roomscale WebVR](/article/roomscale-scaling)
   * [Exporting Blender Models from Sketchfab to A-Frame](article/export-blender-to-aframe)
   * Debugging WebVR using Chrome
   * Remotely debugging WebVR on Gear VR
