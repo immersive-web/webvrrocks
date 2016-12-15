@@ -274,6 +274,7 @@ p
 
 .nav-pages-secondary,
 .nav-pages-secondary > *
+  text-align center
   display none
 
 [data-nav-open="true"]
@@ -290,6 +291,9 @@ p
     display block
 
   .nav-pages-secondary
+    text-align right
+    &:before
+      display none
     a
       opacity 1
       transition opacity .4s .4s
@@ -459,15 +463,13 @@ p
 
 /*ul*/.nav-social-list
   font-size 0
-  display flex
-
-ul.nav-social-list
   flex 1
   display flex
   align-items center
   justify-content flex-end
 
 .nav-item-social
+  visibility hidden
   margin 0
   + .nav-item-social
     margin-left 1rem
@@ -852,6 +854,9 @@ textarea
 
   .rocks-wordmark
     margin-right 1rem
+
+  .nav-item-social
+    visibility visible
 
   .video-wrapper
     height 400px
