@@ -561,22 +561,31 @@ hr
     li
       &:before
         content none
-    .news-item
-      list-style none
-      display flex
-      .news-image
-        width 100px
-        height 100px
-        overflow hidden
-        background #efefef
-      time
-        display block
-    .article-item
-      .article-image
-        height 150px
-        overflow hidden
-    .headline
-      font-size 1.5rem
+
+.video-wrapper
+  height 250px
+  iframe
+    width 100%
+    height 100%
+
+.news-item
+  list-style none
+  display flex
+  .news-image
+    width 100px
+    height 100px
+    overflow hidden
+    background #efefef
+  time
+    display block
+
+.article-item
+  .article-image
+    height 150px
+    overflow hidden
+
+.headline
+  font-size 1.5rem
 
 
 /* showcase */
@@ -840,12 +849,15 @@ textarea
     /*div*/.rocks-logo
       display block
 
-    .column-wrapper
-      display flex
-      >:nth-child(1)
-        flex 1
-      >:nth-child(2)
-        width 300px
+  .video-wrapper
+    height 400px
+
+  .column-wrapper
+    display flex
+    >:nth-child(1)
+      flex 1
+    >:nth-child(2)
+      width 300px
 
   .content
     flex 3
