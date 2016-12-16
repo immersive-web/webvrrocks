@@ -21,7 +21,7 @@
 
 html,
 body
-  background-color color-white
+  background-color color-main
 
 html
   font-size 14px
@@ -45,44 +45,6 @@ a:active
 
 a:hover
   color color-link-hover
-
-ol
-  counter-reset item
-
-li
-  display block
-
-  &:before
-    color rgba(0,0,0,.25)
-    display inline-block
-
-ol,
-ul
-  li:before
-    display inline-block
-    position absolute
-    margin-left -4ch
-    margin-right 1ch
-    padding-right 0
-    text-align right
-    width 3ch
-
-  li + li
-    margin-top .25rem
-
-ol > li:before
-  content counters(item, '.') '. '
-  counter-increment item
-
-ul li:before
-  content '●'
-
-ul ul li:before
-  content '○'
-
-ul.nav-list
-  li:before
-    display none
 
 h1,
 h2,
@@ -108,24 +70,27 @@ h2 a:hover,
 h2 a:visited
   color color-text
 
-h2:target
-  a,
-  a:hover,
-  a:visited
-    color color-black
-
-h2:target,
-h2:target:hover
-  border-bottom-color color-black
-
 h3,
 h3 a,
-h3 a:hover
+h3 a:hover,
+h3 a:visited
   color #666
   font-size 1.5rem
 
-.highlight
-  margin-bottom 16px
+.body
+  h1,
+  h2,
+  h3
+    &:target
+      a,
+      a:hover,
+      a:visited,
+      a:active
+        color color-link-bright
+
+    &:target,
+    &:target:hover
+      border-bottom-color color-link-bright
 
 code,
 pre
@@ -169,55 +134,94 @@ p
     margin 0 2px
     padding 3px 5px
 
+ol,
+ul
+  list-style none
+
 /*main*/.main
   .body
     flex 1
+    padding padding-content
+    max-width width-venti
+
     > *:first-child
       margin-top 0
 
     > *:last-child
       margin-bottom 0
 
-  blockquote,
-  dl,
-  fieldset,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  ol,
-  p,
-  ul,
-  .list-item,
-  .highlight
-    margin padding-content
-    max-width width-venti
+    blockquote,
+    dl,
+    fieldset,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ol,
+    p,
+    ul,
+    .list-item,
+    .highlight
+      margin padding-content 0
 
-  dl,
-  ol,
-  ul
-    margin-left (padding-content + 2.5)rem
+    ol
+      counter-reset item
 
-    li > *
-      margin padding-content-half 0
+    li
+      display block
+
+      &:before
+        color color-text-lighter
+        display inline-block
+
+    ol,
+    ul
+      li:before
+        display inline-block
+        position absolute
+        margin-left -4ch
+        margin-right 1ch
+        padding-right 0
+        text-align right
+        width 3ch
+
+      li + li
+        margin-top .25rem
+
+      li > *
+        margin padding-content-half 0
+
+    ol > li:before
+      content counters(item, '.') '. '
+      counter-increment item
+
+    ul > li:before
+      color color-text-lighterer
+
+    ul li:before
+      content '●'
+
+    ul ul > li:before
+      content '○'
 
     dl,
     ol,
     ul
-      margin-left padding-content
+      margin-left padding-content-double
+
+      dl,
+      ol,
+      ul
+        margin-left padding-content
 
   h1
     font-weight 700
     line-height 1.3
-    margin-bottom (padding-content-int * 1.5)rem
-    padding padding-content-half padding-content
+    margin-bottom padding-content-double
 
     a
-      border 0
-      margin-left -(padding-content-int)rem
-      margin-right -(padding-content-int)rem
-      padding 0 padding-content
       &:hover
         color color-link-bright
 
@@ -244,13 +248,88 @@ p
     a
       padding-bottom .5rem
 
+/* home page */
 /*html*/[data-current-layout="home"]
-  /*main*/.main
+  [data-section] ~ [data-section]
+    margin-top padding-content
+
+  /*section*/[data-section="getting-started"]
+    padding padding-content
+
     h1
       font-size 2rem
 
+    ~ [data-section]
+      h1
+        background color-branding-primary
+        color color-white
+        padding padding-content
+
+    .start-grid
+      display flex
+      flex-wrap wrap
+      height 100%
+
+      /*li*/.column
+        flex-basis 100%
+
+      /*svg*/.icon
+        margin-right padding-content
+        max-height 70px
+        max-width 70px
+        opacity .8
+        transform scale(1.0)
+        transition .15s opacity ease-in-out, .15s transform ease-in-out
+
+      /*a*/.getting-started-icon
+        align-items center
+        border 2px solid rgba(255,255,255,.5)
+        color color-text-lighterer
+        display flex
+        flex-direction row
+        padding padding-content-half padding-content
+        height 100%
+
+        &:hover
+          border-color rgba(255,255,255,.75)
+          color color-white
+
+          /*svg*/.icon
+            opacity 1
+            transform scale(1.1)
+
+
+/* TODO: Persist in `localStorage` whether to dismiss "Getting Started" section. */
+/* TODO: Add `×` icon to close. */
+[data-qs-dismiss="getting-started"]
+  .getting-started
+    display none
+
+.video-wrapper
+  height 250px
+  iframe
+    width 100%
+    height 100%
+
+.news-item
+  list-style none
+  .news-image
+    height 100px
+    overflow hidden
+    width 100px
+  time
+    display block
+
+.article-item
+  .article-image
+    height 150px
+    overflow hidden
+
+.headline
+  font-size 1.5rem
+
 /*html*/[data-current-layout="copy"]
-  /*main*/.main
+  /*main*/.body
     h2,
     h3,
     h4,
@@ -259,15 +338,16 @@ p
       margin-top 2.5rem
 
 .nav-item-page-anchor-selected
-  text-decoration underline
   opacity 1
-  transition all 0s
+  text-decoration underline
+  // transition all 0s
 
 .nav
-  @extend .fancy-font
+  background #dff
+  font-family font-fancy
   overflow hidden
-  width 100%
   padding 0.5rem
+  width 100%
   z-index z-index-nav
 
 .nav-item.nav-logo
@@ -282,36 +362,62 @@ p
 .nav-pages-secondary > *
   display none
 
+/*a*/.nav-toggle
+  color color-branding-primary
+  display flex
+  font-size 1.1rem
+  font-weight 600
+  margin-left -.5rem
+  outline unset
+  position relative
+  text-decoration none
+  span
+    margin-left .75rem
+    padding .5rem
+    position relative
+    // text-indent -9999px
+    &:after
+      border-left 5px solid transparent
+      border-right 5px solid transparent
+      border-top 10px solid color-branding-primary
+      content ""
+      display block
+      position absolute
+      transition .15s all ease-in-out
+      top 14px
+      right -1ch
+
+a.nav-toggle:hover,
+[data-nav-open="true"] a.nav-toggle,
+[data-nav-open="true"] a.nav-toggle:visited
+  color color-link-bright
+  span:after
+    border-top-color color-link-bright
+
 [data-nav-open="true"]
-  body
-    overflow-y hidden
-
-  .main
-    opacity .1
-    pointer-events none
-    transition-delay 0s
-
   .nav-pages-secondary,
-  .nav-pages-secondary > *
+  .nav-pages-secondary li
     display block
 
   .nav-pages-secondary
     text-align center
     a
+      display block
       opacity 1
-      transition opacity .4s .4s
+      transition opacity .4s
 
-.rocks-logo
+/*h1*/.rocks-logo
   flex 1
-  color color-branding-primary
   font-size 1.2rem
+  transition .15s fill ease-in-out
 
-/*a*/.rocks-link
-  align-items center
-  display flex
-  height 100%
-  width 100%
-  text-decoration none
+/*svg*/.rocks-icon
+  height auto
+  margin-right 0.5rem
+
+  path
+    fill color-branding-primary
+    transition .25s fill ease-in-out
 
 .rocks-wordmark
   display none
@@ -320,63 +426,49 @@ p
   color color-branding-primary
 
 /*span*/.rocks-wordmark-rocks
-  color color-black
+  color color-main-darker
 
-/*svg*/.rocks-icon
-  height auto
-  margin-right 0.5rem
-
-  path
-    fill color-branding-primary
-
-/*a*/.nav-toggle
-  align-self center
-  color color-branding-primary
+/*a*/.rocks-link
+  align-items center
   display flex
-  font-size 1.1rem
-  font-weight 600
-  justify-content center
-  outline unset
-  position relative
+  height 100%
   text-decoration none
-  span
-    padding .5rem
-    visibility hidden
-  &:after
-    border-left 5px solid transparent
-    border-right 5px solid transparent
-    border-top 10px solid color-branding-primary
-    content " "
-    display block
-    position absolute
-    top 14px
+  width 100%
+  &:hover
+    /*svg*/.rocks-icon
+      path
+        fill color-link-bright
+    /*strong*/.rocks-wordmark-webvr
+      color color-link-bright
+    /*span*/.rocks-wordmark-rocks
+      color color-black
 
-.nav-pages-primary
+/*ul*/.nav-pages-primary
   display flex
   flex-direction row
 
-/*span*/.nav-toggle-text
-  @extend .hidden-text
-
 /*li*/.nav-item-page
   margin 0
-  display flex-direction
   justify-content center
   align-self center
   a
-    color color-branding-primary
-    padding 0.5rem
+    padding .25rem .75rem
     font-size 1.1rem
     font-weight 600
     text-decoration none
 
-  &:hover
-    color color-white
+    &,
+    &:visited
+      color color-branding-primary
 
-  &:active,
-  &.active
-    @extend .nav-item-page-anchor-selected
+    &:hover
+      color color-link-bright
 
+    &:active,
+    &.active
+      color color-link-active
+      @extend .nav-item-page-anchor-selected
+      text-decoration underline
 
 /*div*/.content
   background color-white
@@ -385,7 +477,6 @@ p
 
   .main
     position relative
-
 
 [data-current-path^="/showcase"],
 [data-current-path^="/assets"]
@@ -441,6 +532,7 @@ p
   &[data-qs-requires*="daydream"] .list-item:not([data-requires-for-google-daydream="yes"])
     display none
 
+[data-current-path^="/news"] nav a[href^="/news"],
 [data-current-path^="/getting-started"]:not([data-current-path^="/getting-started/troubleshooting"]) nav a[href^="/getting-started"]:not([href^="/getting-started/troubleshooting"]),
 [data-current-path^="/browsers"]:not([data-current-path^="/browsers/changelog"]) nav a[href^="/browsers"]:not([href^="/browsers/changelog"]),
 [data-current-path^="/browsers/changelog"] nav a[href^="/browsers/changelog"],
@@ -456,22 +548,19 @@ p
   @extend .nav-item-page-anchor-selected
 
 /*ul*/.nav-social-list
-  visibility hidden
-  font-size 0
-  display flex
-
-ul.nav-social-list
-  flex 1
-  display flex
   align-items center
+  display flex
+  flex 1
+  font-size 0
   justify-content flex-end
+  visibility hidden
 
-.nav-item-social
+/*li*/.nav-item-social
   margin 0
   + .nav-item-social
-    margin-left 1rem
+    margin-left 1.5rem
 
-.social-link
+/*a*/.social-link
   svg
     height 20px
     transition .15s transform ease-in-out
@@ -482,7 +571,7 @@ ul.nav-social-list
     transition .15s fill ease-in-out
   &:hover
     path
-      fill color-white
+      fill color-link-bright
     svg
       transform scale(1.2)
 
@@ -513,9 +602,6 @@ ul.nav-social-list
   padding-bottom padding-content
   padding-left padding-content
   padding-top padding-content-double
-
-.nav-footer
-  background #efefef
 
 .nav-footer-list
   padding padding-content
@@ -554,55 +640,14 @@ hr
   border-top 1px dotted #eee
   height 0
 
-
-/* home page */
-[data-current-path="/"]
-  .main
-    ul
-      margin padding-content
-      padding 0
-    li
-      &:before
-        content none
-
-.video-wrapper
-  height 250px
-  margin 1rem
-  iframe
-    width 100%
-    height 100%
-
-.news-item
-  // display flex
-  list-style none
-  .news-image
-    // background #efefef
-    height 100px
-    overflow hidden
-    width 100px
-  time
-    display block
-
-.article-item
-  .article-image
-    height 150px
-    overflow hidden
-
-.headline
-  font-size 1.5rem
-
 .btn,
 .btn:visited
   color color-white
 
 .btn
-  background linear-gradient(#5fddff, #53addf)
-  border-bottom 5px solid steelblue
-  border-left none
-  border-radius 10px
-  border-right none
-  border-top none
-  box-shadow 0 2px 2px #ccc
+  background color-hi-green
+  border 0
+  box-shadow 4px 4px 0 rgba(0,0,0,.15)
   color color-white
   cursor pointer
   display inline-block
@@ -616,27 +661,30 @@ hr
   outline none
   padding 0 2rem
   position relative
-  text-decoration none
-  transition 150ms ease-inout
+  transition .15s all ease-in-out
 
-  &:hover
+  &,
+  &:active
+    text-decoration none
+
+  &:hover,
+  &:active
+    color color-white
     opacity .9
 
   &:active
-    border none
-    border-bottom 2px solid steelblue
-    box-shadow 0 1px 4px #aaa
-    background linear-gradient(#53addf, #5fcdff)
-    line-height 3.85rem
+    box-shadow 4px 4px 0 rgba(0,0,0,.2)
     opacity 1
+    transform translate(2px, 2px)
+
+  &.btn-demo
+    background color-hi-fuchsia
 
   &.btn-submit
-    background linear-gradient(#5fffdd, #53dfad)
+    background #B10DC9
 
-    &,
-    &:active
-      border-bottom-color #5fffdd
-      color color-black
+.btn + .btn
+  margin-left 1rem
 
 ul.asset-files-list
   background rgba(255,255,255,0.1)
@@ -661,17 +709,27 @@ input[type="text"],
 select,
 textarea
   border 1px solid #ccc
+  box-shadow 2px 2px #eee
+  color inherit
+  color color-text-light
   font-size 1rem
   font-family inherit
+  outline auto 0 transparent
   padding .5rem
+  transition .15s box-shadow ease-in-out, .15s color ease-in-out, .15s outline ease-in-out
   width 100%
+
+  &:focus
+    border-color color-hi-stroke-blue
+    box-shadow 3px 3px #bbb
+    color color-text
 
 textarea
   min-height calc(50px + 1vh + 10vw)
 
 /*form*/.contact-form
-  margin-top -(padding-content-int)rem
-  padding-top padding-content-double
+  margin 0
+  padding padding-content-half 0
 
   .form-legend
     display none
@@ -687,6 +745,24 @@ textarea
 /*span*/.form-label-text
   margin-bottom .25rem
 
+.getting-started
+  background color-branding-primary
+
+  h1,
+  h1 a
+    color color-white
+
+/*ul*/.start-grid
+  a
+    &:visited,
+    &:active
+      color color-white-soft
+    &:hover
+      color color-white
+
+.footer
+  margin padding-content 0
+
 .uploadcare-widget
   display none
 
@@ -694,10 +770,16 @@ textarea
 #__bs_notify__
   display none !important
 
-
 @media screen and (min-width: width-grande)
   .nav-social-list
     visibility visible
+
+@media screen and (max-width: width-grande)
+  .column-container
+    flex-direction column
+
+    [class*="column"] ~ [class*="column"]
+      padding-top padding-content
 
 @media screen and (min-width: width-venti)
   body
@@ -714,14 +796,19 @@ textarea
   .video-wrapper
     height 400px
 
-  /*div*/.content-width-wrapper
+  .content-width-wrapper
+    display flex
+    margin auto
     max-width content-width
     width 100%
-    margin auto
-    display flex
 
   .copy
     max-width width-venti
+
+  /*ul*/.nav-item-page,
+  /*a*/.nav-toggle
+    min-width 7vw
+    text-align center
 
   .nav,
   .nav > *
@@ -729,12 +816,17 @@ textarea
     pointer-events auto
     visibility visible
 
-  .nav-toggle
-    &:after
-      right -10px
-      top 14px
+  /*a*/.nav-toggle
+    align-self center
+    justify-content center
     span
-      visibility visible
+      // text-indent 0
+      &:after
+        right -10px
+    &:hover
+      color color-link-bright
+      span:after
+        border-top-color color-link-bright
 
   /*span*/.rocks-wordmark
     display block
@@ -744,3 +836,34 @@ textarea
   select,
   textarea
     max-width width-small
+
+  /*html*/[data-current-layout="home"]
+
+    /*section*/[data-section="getting-started"]
+
+      .video-wrapper
+        margin-right padding-content
+
+      .start-grid
+        border 1px solid rgba(255,255,255,.5)
+
+        /*li*/.column
+          flex-basis 50%
+
+        /*svg*/.icon
+          margin-right 0
+          margin-bottom padding-content-half
+
+        /*a*/.getting-started-icon
+          border-width 1px
+          font-weight 600
+          flex-direction column
+          justify-content center
+          padding padding-content-half
+          text-align center
+          &:hover
+            background-color rgba(0,0,0,.25)
+
+  .content-width-wrapper
+    padding-left 0
+    padding-right 0
