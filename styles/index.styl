@@ -305,7 +305,6 @@ p
   flex 1
   color color-branding-primary
   font-size 1.2rem
-  font-weight 600
 
 /*a*/.rocks-link
   align-items center
@@ -331,27 +330,26 @@ p
     fill color-branding-primary
 
 /*a*/.nav-toggle
+  align-self center
+  color color-branding-primary
+  display flex
+  font-size 1.1rem
+  font-weight 600
+  justify-content center
   outline unset
   position relative
   text-decoration none
-  font-size 1.1rem
-  font-weight 600
-  color color-branding-primary
-  display flex
-  display flex-direction
-  justify-content center
-  align-self center
   span
-    padding 0.5rem
+    padding .5rem
     visibility hidden
   &:after
-    content " "
-    top 14px
-    display block
-    position absolute
     border-left 5px solid transparent
     border-right 5px solid transparent
     border-top 10px solid color-branding-primary
+    content " "
+    display block
+    position absolute
+    top 14px
 
 .nav-pages-primary
   display flex
@@ -881,6 +879,7 @@ textarea
 
   /*span*/.rocks-wordmark
     display block
+    font-weight 700
 
   input[type="text"],
   select,
