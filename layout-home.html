@@ -5,64 +5,109 @@
 
 {% block body %}
   {{ body|safe }}
-  <section class="getting-started">
+  <section id="getting-started" class="getting-started">
     <div class="column-wrapper">
-      <div class="video-wrapper">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/0I-Ft_0i2k4" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div>
-        <ul class="start-grid">
-          <li><a href="/headsets">Help me choose a Headset</a></li>
-          <li><a href="/browsers">Download browser</a></li>
-          <li><a href="/getting-started/troubleshooting">Troubleshooting</a></li>
-        </ul>
-      </div>
+      <section class="column-container">
+        <div class="auto-column gutter">
+          <h1>Getting started</h1>
+        </div>
+        <div class="column gutter">
+          <a href="#main" class="hidden-text" aria-controls="main" tabindex="0">Hide</a>
+        </div>
+      </section>
+
+      <section class="column-container">
+        <div class="column gutter">
+          <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0I-Ft_0i2k4" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="column gutter">
+          <ul class="start-grid">
+            <li><a href="/headsets">Help me choose a Headset</a></li>
+            <li><a href="/browsers">Download browser</a></li>
+            <li><a href="/getting-started/troubleshooting">Troubleshooting</a></li>
+          </ul>
+        </div>
+      </section>
     </div>
   </section>
-  <div class="column-wrapper">
-    <div>
-      <section>
+
+  <section class="latest-section">
+    <div class="column-container">
+      <section class="column gutter">
         <h1 class="latest" id="latest">Latest in WebVR</h1>
         <ul>
           <li class="news-item">
-            <div class="news-image"><img src="news/2016/12/img/react.png"></div>
-            <div>
-              <span class="headline"><a href="news/2016/12/oculus-releases-developer-preview-of-react-vr">Oculus releases developer preview of React VR.</a></span>
-              <time>December 13</time>
-            <div>
+            <div class="column-container">
+              <div class="auto-column gutter">
+                <div class="news-image"><img src="news/2016/12/img/react.png"></div>
+              </div>
+              <div class="column gutter">
+                <div>
+                  <span class="headline"><a href="/news/2016/12/oculus-releases-developer-preview-of-react-vr">Oculus releases developer preview of React VR</a></span>
+                  <time>December 13</time>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="news-item">
-            <div class="news-image"><img src="news/2016/12/img/w3c.jpg"></div>
-            <div>
-              <span class="headline"><a href="news/2016/12/w3c-workshop-on-web-and-virtual-reality-a-look-ahead">W3C workshop on WebVR - A Look ahead</a></span>
-              <time>December 9</time>
-            <div>
+            <div class="column-container">
+              <div class="auto-column gutter">
+                <div class="news-image"><img src="news/2016/12/img/w3c.jpg"></div>
+              </div>
+              <div class="column gutter">
+                <div>
+                  <span class="headline"><a href="/news/2016/12/w3c-workshop-on-web-and-virtual-reality-a-look-ahead">W3C workshop on WebVR - A Look Ahead</a></span>
+                  <time>December 9</time>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="news-item">
-            <div class="news-image"><img src="news/2016/12/img/chrome.png"></div>
-            <div>
-              <span class="headline"><a href="news/2016/12/webvr-available-as-origin-trial-on-chrome-56">WebVR available as Origin Trial in Chrome</a></span>
-              <time>December 9</time>
-            </p>
-          </div>
+            <div class="column-container">
+              <div class="auto-column gutter">
+                <div class="news-image"><img src="news/2016/12/img/chrome.png"></div>
+              </div>
+              <div class="column gutter">
+                <div>
+                  <span class="headline"><a href="/news/2016/12/webvr-available-as-origin-trial-on-chrome-56">WebVR available as Origin Trial in Chrome</a></span>
+                  <time>December 9</time>
+                </div>
+              </div>
+            </div>
+          </li>
           <li class="news-item">
-            <div class="news-image"><img src="news/2016/12/img/carmel.jpg"></div>
-            <div>
-              <span class="headline"><a href="news/2016/12/oculus-carmel-developer-preview-launch">Carmel Developer preview release</a></span>
-              <time>December 9</time>
-            </p>
-          </div>
+            <div class="column-container">
+              <div class="auto-column gutter">
+                <div class="news-image"><img src="news/2016/12/img/carmel.png"></div>
+              </div>
+              <div class="column gutter">
+                <div>
+                  <span class="headline"><a href="/news/2016/12/oculus-carmel-developer-preview-launch">Carmel Developer preview release</a></span>
+                  <time>December 9</time>
+                </div>
+              </div>
+            </div>
+          </li>
           <li class="news-item">
-            <div class="news-image"><img src="news/2016/12/img/firefox-nightly.png"></div>
-            <div>
-              <span class="headline"><a href="">Vive controller support availble in Firefox Nightly</a></span>
-              <time>November, 28</time>
-            </p>
-          </div>
+            <div class="column-container">
+              <div class="auto-column gutter">
+                <div class="news-image"><img src="news/2016/12/img/firefox-nightly.png"></div>
+              </div>
+              <div class="column gutter">
+                <div>
+                  <span class="headline"><a href="">Vive controller support availble in Firefox Nightly</a></span>
+                  <time>November 28</time>
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
-
-        <p><a href="/news">See more news</a></p>
+        <p><a href="/news">Read more news</a></p>
       </section>
+
+      <!--
       <section>
         <h1>Articles</h1>
 
@@ -86,12 +131,11 @@
             </div>
           </li>
         </ul>
+        <p><a href="/article">See more articles</a></p>
       </section>
+      -->
 
-      <p><a href="/article">See more articles</a></p>
-    </div>
-    <div>
-      <section>
+      <section class="column gutter">
         <h1>Showcase</h1>
 
         <ul>
@@ -104,20 +148,19 @@
           </li>
         </ul>
 
-        <p><a href="/showcase">See more in Showcase</a></p>
+        <p><a href="/showcase">See more in the Showcase</a></p>
       </section>
 
       <section>
         <h1>Useful links</h1>
 
         <ul>
-          <li><a href="webvr.info">webvr.info</a></li>
-          <li><a href="iswebvrready.com">iswebvrready.com</a></li>
-          <li><a href="webvr-slack.herokuapp.com">WebVR on Slack</a></li>
-          <li><a href="reddit.com/r/webvr">Reddit /r/webvr</a></li>
+          <li><a href="https://webvr.info">webvr.info</a></li>
+          <li><a href="https://iswebvrready.org">iswebvrready.com</a></li>
+          <li><a href="https://webvr-slack.herokuapp.com">WebVR on Slack</a></li>
+          <li><a href="https://reddit.com/r/webvr">Reddit /r/webvr</a></li>
         </ul>
       </section>
-    </div>
+    </section>
   </div>
-
 {% endblock %}
