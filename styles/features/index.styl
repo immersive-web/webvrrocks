@@ -1,98 +1,11 @@
 @import '../settings'
 
-color-tile-gray = #7e8f9f
-color-tile-gray-light = #eee
-color-tile-salmon = #ff5d5d
-color-tile-yellow = #f0ff60
+.getting-started
+  background color-branding-primary
 
-/*section*/.articles
-  display flex
-  flex-direction column
-  width 100%
-
-.article-tile-category,
-.article-tile-author
-  display none  // TODO: Style these (per mocks)
-
-/*section*/.article-tile
-  flex 1
-
-/*a*/.article-tile-link
-  display flex
-  max-height 400px
-  min-height 50px
-  padding padding-content
-  width 100%
-
-  a&
-    text-decoration none
-
-/*a*/.article-tile-category
-  padding padding-content
-
-.main h2.article-tile-heading
-  border 0
-  margin 0
-
-.main h1.latest
-  margin-bottom 0
-  margin-top 0
-
-/*a*/.article-tile-link[data-article-slug="export-blender-to-aframe"]
-  // background color-tile-salmon url(/img/cubes.svg) 70% -70px no-repeat
-  background color-tile-salmon url(/img/cubes.svg) 110% -70px no-repeat
-  // background-size 380px auto
-  background-size 400px auto
-  min-height 240px
-
-  &, h2
-    color color-white
-
-  &:hover
-    background-color darken(color-tile-salmon, 5%)
-    // background-size 420px
-    background-size 440px
-
-/*a*/.article-tile-link[data-article-slug="getting-started"]
-  // background color-white url(/img/headset.svg) 80% 80% no-repeat
-  background color-white url(/img/headset.svg) 90% 70% no-repeat
-  // background-size 110px auto
-  background-size 170px auto
-  min-height 240px
-
-  &, h2
-    color color-salmon
-
-  &:hover
-    background-color color-tile-gray-light
-    // background-size 130px
-    background-size 210px
-
-    &, h2
-      color darken(color-salmon, 5%)
-
-/*a*/.article-tile-link[data-article-slug="responsive-controls"]
-  background color-tile-gray
-  min-height 240px
-
-  &, h2
-    color color-tile-yellow
-
-  &:hover
-    background-color darken(color-tile-gray, 10%)
-
-    &, h2
-      color darken(color-tile-yellow, 5%)
-
-/*a*/.article-tile-link[data-article-slug="choosing-a-framework"]
-  background color-tile-yellow
-  min-height 240px
-
-  &, h2
-    color color-tile-gray
-
-  &:hover
-    background-color darken(color-tile-yellow, 20%)
-
-    &, h2
-      color darken(color-tile-gray, 5%)
+/* getting started */
+.start-grid
+  a
+    &:visited,
+    &:active
+      color white
