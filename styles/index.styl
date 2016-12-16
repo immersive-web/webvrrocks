@@ -258,7 +258,6 @@ p
 
 .nav
   @extend .fancy-font
-  border-bottom 1px solid color-branding-primary
   overflow hidden
   width 100%
   padding 0.5rem
@@ -290,21 +289,15 @@ p
     display block
 
   .nav-pages-secondary
+    text-align center
     a
       opacity 1
       transition opacity .4s .4s
 
-/*header*/.rocks-header
-  background color-white
-  display flex
-  height height-header-small
-  align-items center
-  padding 1.5rem
-  width 100%
-
-/*h1*/.rocks-logo
+.rocks-logo
+  flex 1
   color color-branding-primary
-  font-size 1.5rem
+  font-size 1.2rem
   font-weight 600
 
 /*a*/.rocks-link
@@ -325,7 +318,7 @@ p
 
 /*svg*/.rocks-icon
   height auto
-  margin-right 1rem
+  margin-right 0.5rem
 
   path
     fill color-branding-primary
@@ -334,8 +327,8 @@ p
   outline unset
   position relative
   text-decoration none
-  text-transform uppercase
-  font-size 1rem
+  font-size 1.1rem
+  font-weight 600
   color color-branding-primary
   display flex
   display flex-direction
@@ -346,7 +339,7 @@ p
     visibility hidden
   &:after
     content " "
-    top 12px
+    top 14px
     display block
     position absolute
     border-left 5px solid transparent
@@ -368,8 +361,8 @@ p
   a
     color color-branding-primary
     padding 0.5rem
-    font-size 1rem
-    text-transform uppercase
+    font-size 1.1rem
+    font-weight 600
     text-decoration none
 
   &:hover
@@ -458,6 +451,7 @@ p
   @extend .nav-item-page-anchor-selected
 
 /*ul*/.nav-social-list
+  visibility hidden
   font-size 0
   display flex
 
@@ -829,14 +823,10 @@ textarea
 #__bs_notify__
   display none !important
 
-@media screen and (min-width: width-grande)
-  /*li*/.nav-item-page a
-    font-weight 400
-    padding-top .75rem
-    padding-bottom .75rem
 
-  .nav-item-page-anchor-selected
-    font-weight 500
+@media screen and (min-width: width-grande)
+  .nav-social-list
+    visibility visible
 
 @media screen and (min-width: width-venti)
   body
@@ -849,9 +839,6 @@ textarea
     max-width content-width
     margin auto
     padding-top padding-content
-
-  .rocks-wordmark
-    margin-right 1rem
 
   .video-wrapper
     height 400px
@@ -881,7 +868,7 @@ textarea
   .nav-toggle
     &:after
       right -10px
-      top 12px
+      top 14px
     span
       visibility visible
 
