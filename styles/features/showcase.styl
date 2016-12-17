@@ -1,0 +1,135 @@
+@import '../settings'
+
+.showcase-container
+  margin padding-content-double 0
+
+ul.showcase-list
+  margin-left 0
+
+.showcase-list li:before
+  content ""
+
+.showcase-item
+  + .showcase-item
+    margin-top 2rem
+
+.showcase-anchor
+  border 0
+  text-decoration none
+
+  img
+    display block
+    margin-bottom .5rem
+    max-width 400px
+    transition .15s opacity ease-in-out
+    opacity .8
+
+  &:hover
+    img
+      opacity 1
+
+.list-item
+  border .25rem solid color-black
+  box-shadow .25rem .25rem color-text-light
+  position relative
+
+.list-item + .list-item
+  margin-top 2.5rem
+
+a.list-item-link
+  color color-text-darker
+  display flex
+  padding 1rem
+  text-decoration none
+
+  &:hover
+    color color-link
+
+.list-item-name
+  flex 1
+  font-size 1.5rem
+  font-weight 400
+  padding-right .75rem
+  width 30%
+
+.list-item-screenshots
+  flex 1
+  padding-left .75rem
+  width 40%
+
+.list-item-screenshot
+  display block
+
+.list-item-screenshot ~ .list-item-screenshot
+  display none
+
+a.list-item-source-code-url,
+a.list-item-video-link,
+a.list-item-text-link
+  color color-text-light
+  display block
+  font-size .9rem
+  padding 0 1.5rem 1.5rem
+
+  &:hover
+    color color-link
+
+a.list-item-source-code-url.github-edit-page-link
+  background-position 1.5rem 0
+  padding-left 3.5rem
+  padding-bottom 0
+  margin-bottom 1.5rem
+
+a.list-item-video-link
+  font-size .8rem
+  padding-top .75rem
+
+.list-item-video-wrap
+  margin-top .75rem
+  position relative
+  padding-bottom 56.25%  /* 16:9 */
+  height 0
+
+  iframe
+    height 300px
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    width 100%
+
+.list-item-description
+  color color-text-light
+  display block
+  flex 2
+  min-width 30%
+  padding-left 1.5rem
+
+  > *:first-child
+    margin-top 0
+
+  > *:last-child
+    margin-bottom 0
+
+
+.showcase-form
+  label
+    display block
+
+    + label
+      margin-top .5rem
+
+    .label-text
+      display inline-block
+      min-width 5rem
+
+fieldset
+  border 6px solid lighten(color-main, 25%)
+  padding .75rem
+
+legend
+  background color-main
+  color color-text-darker
+  font-weight 600
+  padding 0 1rem
