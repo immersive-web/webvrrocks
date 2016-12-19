@@ -41,7 +41,7 @@
     "open:ghpages": "open https://webvrrocks.github.io/",
     "clean": "shx rm -rf _prod",
     "syncdb": "npm run syncdb:webvr_scenes && npm run syncdb:webvr_assets",
-    "syncdb:webvr_scenes": "curl https://webvr-6345b.firebaseio.com/webvrrocks/webvr_scenes.json > directory/index.json",
+    "syncdb:webvr_scenes": "curl https://webvr-6345b.firebaseio.com/webvrrocks/webvr_scenes.json > showcase/index.json",
     "syncdb:webvr_assets": "curl https://webvr-6345b.firebaseio.com/webvrrocks/webvr_assets.json > assets/index.json"
   }
 }

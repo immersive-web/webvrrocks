@@ -96,7 +96,7 @@ domready(() => {
     });
   }
 
-  if (window.location.pathname.indexOf('/directory') === 0) {
+  if (window.location.pathname.indexOf('/showcase') === 0) {
     directory.init();
   }
 });

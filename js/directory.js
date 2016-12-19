@@ -16,8 +16,8 @@ internal.config = {
     messagingSenderId: '689640619063'
   },
   firebasePathDirectory: 'webvrrocks/webvr_scenes',
-  formSelectorDirectory: '#directory-form',
-  containerSelectorDirectory: '#directory-list',
+  formSelectorDirectory: '#showcase-form',
+  containerSelectorDirectory: '#showcase-list',
 };
 
 var refreshParams = () => {
