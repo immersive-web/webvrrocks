@@ -123,6 +123,12 @@ pre
 .highlight pre
   padding padding-content
 
+dt
+  font-weight bold
+
+dd + dt
+  margin-top padding-content-half
+
 dl,
 dt,
 li,
@@ -298,7 +304,6 @@ ul
             opacity 1
             transform scale(1.1)
 
-
 /* TODO: Persist in `localStorage` whether to dismiss "Getting Started" section. */
 /* TODO: Add `×` icon to close. */
 [data-qs-dismiss="getting-started"]
@@ -343,10 +348,10 @@ ul
   // transition all 0s
 
 .nav
-  background #dff
+  background color-branding-secondary
   font-family font-fancy
   overflow hidden
-  padding 0.5rem
+  padding .5rem
   width 100%
   z-index z-index-nav
 
@@ -355,6 +360,7 @@ ul
 
 .nav,
 .main
+  position relative
   transition width .4s, height .4s, opacity .4s, transform .4s
   transition-timing-function cubic-bezier(.7,0,.3,1)
 
@@ -474,9 +480,6 @@ a.nav-toggle:hover,
   background color-white
   position relative
   width 100%
-
-  .main
-    position relative
 
 [data-current-path^="/showcase"],
 [data-current-path^="/assets"]
@@ -677,11 +680,15 @@ hr
     opacity 1
     transform translate(2px, 2px)
 
+  &.btn-download,
   &.btn-demo
+    background color-hi-green
+
+  &.btn-source
     background color-hi-fuchsia
 
   &.btn-submit
-    background #B10DC9
+    background #b10db9
 
 .btn + .btn
   margin-left 1rem
@@ -749,7 +756,9 @@ textarea
   background color-branding-primary
 
   h1,
-  h1 a
+  h1 a,
+  h1 a:hover,
+  h1 a:target
     color color-white
 
 /*ul*/.start-grid
@@ -765,6 +774,87 @@ textarea
 
 .uploadcare-widget
   display none
+
+/*html*/[data-current-layout="browser"]
+  .content-header
+    background color-branding-primary
+    margin-bottom padding-content
+    padding padding-content
+
+    h1
+      font-size 4rem
+      padding padding-content
+      a
+        display block
+        padding-top padding-content-triple
+        position relative
+        vertical-align top
+        &:after
+          background-repeat no-repeat
+          content ""
+          height 250px
+          opacity .5
+          position absolute
+          right 0
+          top 0
+          width 300px
+
+    h1,
+    h1 a,
+    h1 a:hover,
+    h1 a:target
+      color color-branding-secondary
+
+  .main
+    /*img*/.showcase-thumb
+      flex 1  // TODO: Fix so that we're not stretching the images.
+      max-height 100px
+      max-width 200px
+
+    .browser-disclaimer
+      background color-hi-yellow-light
+      padding padding-content
+
+      a
+        color color-salmon
+        &:hover
+          color color-salmon-darker
+
+    /*h5*/#download
+      display none
+
+    /*h2*/#showcase-scenes + ul
+      > li
+        margin-top padding-content
+        &:before
+          display none
+        > a
+          display flex
+          flex-direction row-reverse
+          justify-content flex-end
+          em
+            font-style normal
+            font-weight bold
+            margin-left padding-content
+
+    #how-to-videos + ul
+      > li:before
+        display none
+      video
+        // TODO: Update styles for poster/thumbs.
+        max-height 50px
+        max-width 100px
+
+  &[data-page-browser="chromium"]
+    h1
+      a:after
+        background-image url(/img/browsers/pictograms/chrome.svg)
+        background-position 100% 100%
+        transition .15s opacity ease-in-out
+        opacity .25
+      a:hover
+        &:after
+          opacity .5
 
 // TODO: Remove when https://github.com/zeke/jus/issues/36 is fixed.
 #__bs_notify__
@@ -789,9 +879,21 @@ textarea
     justify-content space-between
 
   .main
-    max-width content-width
     margin auto
+    max-width content-width
     padding-top padding-content
+
+  .content-header:empty
+    display none
+
+  [data-current-layout="browser"]
+    .content-header
+      h1
+        margin 0 auto
+        max-width content-width
+
+    .main
+      padding-top 0
 
   .video-wrapper
     height 400px

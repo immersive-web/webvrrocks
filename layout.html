@@ -6,6 +6,9 @@ engine: nunjucks
       data-current-path="{{ page.href }}"
       data-current-file="{{ page.path.relative }}"
       data-current-layout="{{ page.layout or 'copy' }}"
+      data-page-section="{{ page.section or 'default' }}"
+      data-page-browser="{{ page.browser }}"
+      data-page-headset="{{ page.headset }}"
 >
   <head>
     <meta charset="utf-8">
@@ -116,6 +119,12 @@ engine: nunjucks
     </nav>
 
     <div id="content" class="content">
+      <header id="content-header" class="content-header">
+        {%- block content_header %}
+          {%- block content_header_top %}{% endblock -%}
+          {%- block content_header_bottom %}{% endblock -%}
+        {% endblock -%}
+      </header>
       <main id="main" class="main" role="main">
         <header id="page-header" class="page-header">
           {%- block header %}
@@ -124,19 +133,18 @@ engine: nunjucks
           {% endblock -%}
         </header>
 
-        {% set related = [] %}
-        {% if page.keywords %}
-          {% for other_page in pages %}
-            {% if (other_page not in related) and page.href != other_page.href and other_page.keywords %}
-              {% for keyword in other_page.keywords %}
-                {% if keyword in page.keywords and (other_page not in related) %}
-                  {% set related = (related.push(other_page), related) %}
-                {% endif %}
-              {% endfor %}
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-
+        {%- set related = [] -%}
+        {%- if page.keywords -%}
+          {% for other_page in pages -%}
+            {%- if (other_page not in related) and page.href != other_page.href and other_page.keywords -%}
+              {%- for keyword in other_page.keywords -%}
+                {%- if keyword in page.keywords and (other_page not in related) %}
+                  {%- set related = (related.push(other_page), related) -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
 
         {% block body %}
           <div class="body">
