@@ -64,11 +64,9 @@ Promise.all(promsTemplatesRendered).then(function (renderedTemplates) {
       let outputPath = templateInfo.outputPath;
       let wstream = fs.createWriteStream(outputPath);
       wstream.on('finish', function () {
-        console.log('finish');
         resolve(outputPath);
       });
       wstream.on('error', function () {
-        console.log('error');
         reject(outputPath);
       });
       if (wstream === process.stdout || wstream === process.stderr) {
