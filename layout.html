@@ -129,7 +129,7 @@ engine: nunjucks
           {% for other_page in pages %}
             {% if (other_page not in related) and page.href != other_page.href and other_page.keywords %}
               {% for keyword in other_page.keywords %}
-                {% if (other_page not in related) %}
+                {% if keyword in page.keywords and (other_page not in related) %}
                   {% set related = (related.push(other_page), related) %}
                 {% endif %}
               {% endfor %}
@@ -144,7 +144,7 @@ engine: nunjucks
 
             {% if related|length %}
               <aside id="related-pages" class="related-pages">
-                <h2>Related</h2>
+                <h2>Related links</h2>
                 <ul>
                   {% for related_page in related %}
                     <li>
