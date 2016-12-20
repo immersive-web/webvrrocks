@@ -2,25 +2,95 @@
 title: WebVR-enabled browsers
 -->
 
-# WebVR-enabled browsers
-
-There are two flavors of WebVR-enabled browsers:
-
-* 2D Desktop browsers with WebVR support
-    * Supported: **[Mozilla Firefox](/browsers/firefox)** and **[Chromium](/browsers/chromium)**
-    * Coming soon: [Google Chrome](/browsers/chrome) and [Microsoft Edge](/browsers/edge)
-* Full-VR browsers with WebVR support (browsing is done entirely in VR and may include compatibility with existing 2D web content)
-    * Supported: **[Samsung Internet Browser for Gear VR](/browsers/samsung-internet-browser-for-gear-vr)**
-    * Soon: [Google Daydream](/browsers/chrome-daydream)
-    * Soon: [Oculus Carmel](/browsers/carmel) (WebVR only)
-* [See supported VR headsets](/headsets/)
-* [Detailed support status](https://iswebvrready.com)
+# WebVR enabled browsers
 
 
-## Mobile
+<div class="browser-container">
+  <div class="browser">
+    <div class="browser-icon"><img src="img/chromium.png"></div>
+    <div class="browser-name">Chromium</div>
+    <div class="browser-details">
+      <div class="column-container">
+        <div class="two-column">Type</div>
+        <div class="two-column">2D Desktop</div>
+      </div>
+      <div class="column-container">
+        <div class="two-column">Supports</div>
+        <div class="two-column">Rift, HTC VIVE</div>
+      </div>
+    </div>
+    <a class="btn" href="/browsers/chromium">See full details</a>
+  </div>
 
-* [See mobile-compatible WebVR sites](/directory/?platform=mobile)
+  <div class="browser">
+    <div class="browser-icon"><img src="img/firefox-nightly.png"></div>
+    <div class="browser-name">Firefox Nightly</div>
+    <div class="browser-details">
+      <div class="column-container">
+        <div class="two-column">Type</div>
+        <div class="two-column">2D Desktop</div>
+      </div>
+      <div class="column-container">
+        <div class="two-column">Supports</div>
+        <div class="two-column">Oculus Rift, HTC VIVE, OSVR</div>
+      </div>
+    </div>
+    <a class="btn" href="/browsers/firefox">See full details</a>
+  </div>
+
+  <div class="browser">
+    <div class="browser-icon"><img src="img/samsung-internet.png"></div>
+    <div class="browser-name">Samsung Internet Browser</div>
+    <div class="browser-details">
+      <div class="column-container">
+        <div class="two-column">Type</div>
+        <div class="two-column">Full-VR</div>
+      </div>
+      <div class="column-container">
+        <div class="two-column">Supports</div>
+        <div class="two-column">Gear VR</div>
+      </div>
+    </div>
+    <a class="btn" href="/browsers/samsung-internet-browser-for-gear-vr">See full details</a>
+  </div>
+
+  <div class="browser">
+    <div class="browser-icon"><img src="img/oculus.png"></div>
+    <div class="browser-name">Oculus Carmel</div>
+    <div class="browser-details">
+      <div class="column-container">
+        <div class="two-column">Type</div>
+        <div class="two-column">Full-VR</div>
+      </div>
+      <div class="column-container">
+        <div class="two-column">Supports</div>
+        <div class="two-column">Gear VR</div>
+      </div>
+    </div>
+    <a class="btn" href="/browsers/carmel">See full details</a>
+  </div>
+</div>
+
+# Browsers coming soon
+
+<div class="browser-container">
+  <div class="browser">
+    <div class="browser-icon"><img src="img/google-daydream.png"></div>
+    <div class="browser-name">Chrome Daydream</div>
+    <p>Coming Soon!</p>
+    <a class="btn" href="/browsers/carmel">See full details</a>
+  </div>
+
+  <div class="browser">
+    <div class="browser-icon"><img src="img/microsoft-edge.png"></div>
+    <div class="browser-name">Microsoft Edge</div>
+    <p>Coming Soon!</p>
+    <a class="btn" href="/browsers/firefox">See full details</a>
+  </div>
+</div>
+
+# Using a browser with no VR support
 
 You can also view WebVR content in a browser on iOS or Android phones using a [Google Cardboard viewer](https://vr.google.com/cardboard/manufacturers/), if the web site uses [WebVR polyfill](https://github.com/googlevr/webvr-polyfill) library.
 
-*Disclaimer:* The [WebVR Polyfill](https://github.com/borismus/webvr-polyfil) supports most (but not all) of the functionality (and not the performance) of the WebVR API properly supported in the WebVR-capable browsers on the available platforms.
+[See more information about the WebVR polyfill]()
