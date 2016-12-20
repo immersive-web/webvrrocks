@@ -1,0 +1,33 @@
+302   /desktop                     /showcase/?filter=desktop
+302   /mobile                      /showcase/?filter=mobile
+
+302   /daydream                    /headsets/google-daydream
+302   /fove                        /headsets/fove
+302   /gear                        /headsets/samsung-gear-vr
+302   /gear-vr                     /headsets/samsung-gear-vr
+302   /gearvr                      /headsets/samsung-gear-vr
+302   /oculus                      /headsets/oculus-rift
+302   /psvr                        /headsets/psvr
+302   /rift                        /headsets/oculus-rift
+302   /vive                        /headsets/vive
+
+302   /carmel                      /browsers/carmel
+302   /chrome                      /browsers/chrome
+302   /chrome-android              /browsers/chrome-daydream
+302   /chrome-daydream             /browsers/chrome-daydream
+302   /chrome-desktop              /browsers/chrome-daydream
+302   /chrome-mobile               /browsers/chrome-daydream
+302   /chromium                    /browsers/chromium
+302   /firefox                     /browsers/firefox
+302   /firefox-android             /browsers/firefox
+302   /firefox-desktop             /browsers/firefox
+302   /firefox-mobile              /browsers/firefox
+302   /firefox-nightly             /browsers/firefox
+302   /edge                        /browsers/edge
+302   /servo                       /browsers/servo
+302   /samsung-internet            /browsers/samsung-internet-browser-for-gear-vr
+
+302   /chrome/download             {{ browsers.chromium.downloadUrl|safe }}
+302   /browsers/chrome/download    {{ browsers.chromium.downloadUrl|safe }}
+302   /chromium/download           {{ browsers.chromium.downloadUrl|safe }}
+302   /browsers/chromium/download  {{ browsers.chromium.downloadUrl|safe }}

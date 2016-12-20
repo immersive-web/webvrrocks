@@ -8,9 +8,11 @@
     "domready": "^1.0.8",
     "domvm": "^1.2.10",
     "firebase": "^3.6.0",
-    "form-serialize": "^0.7.1"
+    "form-serialize": "^0.7.1",
+    "nunjucks": "^3.0.0"
   },
   "devDependencies": {
+    "es6-promise": "^4.0.5",
     "gh-pages": "^0.11.0",
     "jus": "cvan/jus#f3f4f63",
     "shx": "^0.2.1",
@@ -22,11 +24,12 @@
   },
   "engineStrict": true,
   "scripts": {
-    "postinstall": "npm run clean && npm run syncdb",
+    "postinstall": "npm run prebuild",
     "start": "npm run dev",
     "dev": "jus serve",
-    "prebuild": "npm run syncdb",
+    "prebuild": "npm run clean && npm run syncdb",
     "build": "jus build . _prod",
+    "postbuild": "npm run transform",
     "lint": "semistandard",
     "surge": "surge -d https://webvrrocks.surge.sh",
     "deploy": "npm run deploy:surge",
@@ -40,6 +43,7 @@
     "open:surge": "open https://webvrrocks.surge.sh/",
     "open:ghpages": "open https://webvrrocks.github.io/",
     "clean": "shx rm -rf _prod",
+    "transform": "node ./scripts/transform",
     "syncdb": "npm run syncdb:webvr_scenes && npm run syncdb:webvr_assets",
     "syncdb:webvr_scenes": "curl https://webvr-6345b.firebaseio.com/webvrrocks/webvr_scenes.json > showcase/index.json",
     "syncdb:webvr_assets": "curl https://webvr-6345b.firebaseio.com/webvrrocks/webvr_assets.json > assets/index.json"

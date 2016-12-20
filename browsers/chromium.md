@@ -1,13 +1,18 @@
 <!--
 title: Chromium Setup Instructions
+authors: [cvan]
 -->
 
 # Chromium Setup Instructions
 
-## Download
-[Get experimental Chromium build with WebVR support](https://webvr.info/get-chrome)
+<div class="disclaimer">
+  <strong>Disclaimer</strong> This is highly experimental!
+</div>
 
-## Using HTC VIVE
+## Download
+[Download and run the **Chromium WebVR build**.](https://webvr.info/get-chrome)
+
+## Using HTC Vive
 
 0. Download and launch experimental build of Chromium with WebVR support.
 0. In the URL bar, load `chrome://flags#enable-webvr` and toggle the `Enable WebVR flag`.
@@ -26,4 +31,4 @@ title: Chromium Setup Instructions
 ## Notes
 
 * There is no installer for experimental builds of Chromium.  Once unarchived, launched `chrome.exe` directly from the `chrome-bin` folder.
-* How to report issues
+* How to report issues.
