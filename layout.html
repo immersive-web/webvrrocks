@@ -107,7 +107,7 @@ engine: nunjucks
       </div>
 
       <ul id="nav-pages-secondary" class="nav-list nav-pages-secondary">
-        <li class="nav-item-page"><a href="/contribute">Contribute</a></li>
+        <li class="nav-item-page"><a href="/contributing">Contribute</a></li>
         <li class="nav-item-page"><a href="/community">Community</a></li>
         <li class="nav-item-page"><a href="/rocks">About Rocks</a></li>
         <li class="nav-item-page"><a href="/spec">Specification</a></li>
@@ -140,39 +140,39 @@ engine: nunjucks
         {% block body %}
           <div class="body">
             {{ body|safe }}
+
+            {% if related|length %}
+              <aside id="related-pages" class="related-pages">
+                <h2>Related</h2>
+                <ul>
+                  {% for related_page in related %}
+                    <li>
+                      <a href="{{ related_page.href }}">
+                        {{ related_page.title }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </aside>
+            {% endif %}
+
+            <div class="column-container">
+              {% block footer_top %}
+                <p class="edit-options auto-column">
+                  <a href="{% if page.edit_url %}{{ page.edit_url }}{% else %}https://github.com/webvrrocks/webvrrocks/edit/master{{ page.path.relative }}{% endif %}" class="github-edit-page-link edit-page-link" id="edit-page-link"><span>Edit this page</span></a>
+                </p>
+              {% endblock %}
+
+              {% if page.date_published %}
+                <p class="date-published auto-column">Date published: <time class="page__publish-date" title="{{ page.date_published }}" data-date="{{ page.date_published }}" data-format="%B %Y">{{ page.date_published }}</time></p>
+              {% endif %}
+            </div>
           </div>
         {% endblock %}
-
-        {% if related|length %}
-          <aside id="related-pages" class="related-pages">
-            <h2>Related</h2>
-            <ul>
-              {% for related_page in related %}
-                <li>
-                  <a href="{{ related_page.href }}">
-                    {{ related_page.title }}
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
-          </aside>
-        {% endif %}
       </main>
     </div>
 
     <footer id="page-footer" class="page-footer" role="contentinfo">
-      <div class="content-width-wrapper">
-        {% block footer_top %}
-          <p class="edit-options">
-            <a href="{% if page.edit_url %}{{ page.edit_url }}{% else %}https://github.com/webvrrocks/webvrrocks/edit/master{{ page.path.relative }}{% endif %}" class="github-edit-page-link edit-page-link" id="edit-page-link"><span>Edit this page</span></a>
-          </p>
-        {% endblock %}
-
-        {% if page.date_published %}
-          <p class="date-published">Date published: <time class="page__publish-date" title="{{ page.date_published }}" data-date="{{ page.date_published }}" data-format="%B %Y">{{ page.date_published }}</time></p>
-        {% endif %}
-      </div>
-
       <div class="nav-footer">
         <ul class="nav-list nav-footer-list content-width-wrapper">
           <li class="nav-item nav-footer-item"><a href="/feedback">Site Feedback</a></li>
@@ -182,21 +182,50 @@ engine: nunjucks
       </div>
     </footer>
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="height: 0; overflow: hidden; position: absolute; width: 0" aria-hidden="true">
-  <defs>
-    <symbol id="icon-headset" viewBox="2 2 84 72">
-      <g fill="none" fill-rule="evenodd">
-        <path fill="#fff" fill-opacity=".17" d="M24.857 23.63s11.25-14.156 21.8-18.016c10.552-3.86 19.9-3.233 28.43 1.13 8.528 4.365 9.817 9.584 9.817 11.706 0 2.12-.383 14.418-5.1 19.682-4.718 5.264-20.11 12.136-20.11 12.136l-8.92-9.04s17.857-5.482 19.994-7.092c2.138-1.61 7.38-5.402 7.38-5.402l3.975-3.837S76.666 15.01 67.478 13.57c-9.187-1.44-12.253-1.634-24.652 2.418-12.4 4.052-15.443 10.206-15.443 10.206"/>
-        <path fill="#fff" fill-opacity=".17" stroke="#fff" stroke-width="1.5" d="M3.023 41.788c0-3.853 2.418-5.248 2.418-5.248s7.42-4.01 10.67-6.697c3.25-2.688 6.19-6.343 8.05-6.343 1.86 0 2.498 5.17 12 10.51 9.505 5.35 15.728 6.89 20.46 11.39 4.735 4.5 3.6 11.083 0 13.884-2.27 1.764-9.575 6.56-15.655 10.374-3.57 2.237-5.204 3.77-8.9 3.176-4.518-.728-9.884-6.11-15.35-9.69-5.47-3.58-11.03-8.874-12.216-12.255-1.194-3.39-1.47-5.25-1.47-9.1z"/>
-        <path stroke="#fff" stroke-width=".5" d="M3.023 41.788c0-3.853 2.787-5.365 7.478-2.15 4.7 3.213 4 2.523 8.61 6.017 4.61 3.494 16.05 9.1 16.05 17.072 0 7.97.6 10.693-3.1 10.098-4.52-.726-9.88-6.107-15.35-9.688-5.463-3.58-11.022-8.874-12.21-12.255-1.19-3.382-1.463-5.24-1.463-9.094z"/>
-        <path stroke="#fff" stroke-width="1.5" d="M24.857 23.63s11.25-14.156 21.8-18.016c10.552-3.86 19.9-3.233 28.43 1.13 8.528 4.365 9.817 9.584 9.817 11.706 0 2.12-.383 14.418-5.1 19.682-4.718 5.264-20.11 12.136-20.11 12.136"/>
-        <path stroke="#fff" stroke-width="1.5" d="M24.857 23.63s11.25-14.156 21.8-18.016c10.552-3.86 19.9-3.233 28.43 1.13 8.528 4.365 9.817 9.584 9.817 11.706 0 2.12-.383 14.418-5.1 19.682-4.718 5.264-20.11 12.136-20.11 12.136"/>
-        <path stroke="#fff" stroke-width=".75" d="M27.013 26.277s7.308-8.05 16.477-10.95c9.17-2.897 17.93-3.318 25.663-1.106 7.733 2.22 10.523 6.1 12.987 10.59"/>
-        <path stroke="#fff" stroke-width=".75" d="M50.697 41.205s14.038-3.698 21.39-8.32c7.35-4.62 12.826-8.947 12.826-15.527"/>
-      </g>
-    </symbol>
-  </defs>
-</svg>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="height: 0; overflow: hidden; position: absolute; width: 0" aria-hidden="true">
+      <defs>
+        <symbol id="icon-headset" viewBox="0 0 86 74">
+          <g fill="none" fill-rule="evenodd">
+            <path fill="#fff" fill-opacity=".17" d="M23.857 22.63s11.25-14.156 21.8-18.016c10.552-3.86 19.9-3.233 28.43 1.13 8.528 4.365 9.817 9.584 9.817 11.706 0 2.12-.383 14.418-5.1 19.682-4.718 5.264-20.11 12.136-20.11 12.136l-8.92-9.04s17.857-5.482 19.994-7.092c2.138-1.61 7.38-5.402 7.38-5.402l3.975-3.837S75.666 14.01 66.478 12.57c-9.187-1.44-12.253-1.634-24.652 2.418-12.4 4.052-15.443 10.206-15.443 10.206"/>
+            <path fill="#fff" fill-opacity=".17" stroke="#fff" stroke-width="1.5" d="M2.023 40.788c0-3.853 2.418-5.248 2.418-5.248s7.42-4.01 10.67-6.697c3.25-2.688 6.19-6.343 8.05-6.343 1.86 0 2.498 5.17 12 10.51 9.505 5.35 15.728 6.89 20.46 11.39 4.735 4.5 3.6 11.083 0 13.884-2.27 1.764-9.575 6.56-15.655 10.374-3.57 2.237-5.204 3.77-8.9 3.176-4.518-.728-9.884-6.11-15.35-9.69-5.47-3.58-11.03-8.874-12.216-12.255-1.194-3.39-1.47-5.25-1.47-9.1z"/>
+            <path stroke="#fff" stroke-width=".5" d="M2.023 40.788c0-3.853 2.787-5.365 7.478-2.15 4.7 3.213 4 2.523 8.61 6.017 4.61 3.494 16.05 9.1 16.05 17.072 0 7.97.6 10.693-3.1 10.098-4.52-.726-9.88-6.107-15.35-9.688-5.463-3.58-11.022-8.874-12.21-12.255-1.19-3.382-1.463-5.24-1.463-9.094z"/>
+            <path stroke="#fff" stroke-width="1.5" d="M23.857 22.63s11.25-14.156 21.8-18.016c10.552-3.86 19.9-3.233 28.43 1.13 8.528 4.365 9.817 9.584 9.817 11.706 0 2.12-.383 14.418-5.1 19.682-4.718 5.264-20.11 12.136-20.11 12.136"/>
+            <path stroke="#fff" stroke-width="1.5" d="M23.857 22.63s11.25-14.156 21.8-18.016c10.552-3.86 19.9-3.233 28.43 1.13 8.528 4.365 9.817 9.584 9.817 11.706 0 2.12-.383 14.418-5.1 19.682-4.718 5.264-20.11 12.136-20.11 12.136"/>
+            <path stroke="#fff" stroke-width=".75" d="M26.013 25.277s7.308-8.05 16.477-10.95c9.17-2.897 17.93-3.318 25.663-1.106 7.733 2.22 10.523 6.1 12.987 10.59"/>
+            <path stroke="#fff" stroke-width=".75" d="M49.697 40.205s14.038-3.698 21.39-8.32c7.35-4.62 12.826-8.947 12.826-15.527"/>
+          </g>
+        </symbol>
+        <symbol id="icon-download-browser" viewBox="0 0 86 66">
+          <title>download browser</title>
+          <defs>
+            <rect id="a" width="86" height="66" y="1" rx="5"/>
+            <mask id="b" width="86" height="66" x="0" y="0" fill="#fff">
+              <use xlink:href="#a"/>
+            </mask>
+          </defs>
+          <g fill="#fff" fill-rule="evenodd" transform="translate(0 -1)">
+            <use fill-opacity=".17" stroke="#979797" stroke-width="2" mask="url(#b)" xlink:href="#a"/>
+            <path d="M5 1C2.247 1 0 3.247 0 6v56c0 2.753 2.247 5 5 5h76c2.753 0 5-2.247 5-5V6c0-2.753-2.247-5-5-5H5zm0 2h22.53l9.44 12H2V6c0-1.68 1.32-3 3-3zm25.063 0H81c1.68 0 3 1.32 3 3v9H39.5L30.062 3zM8 7c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm7 0c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm7 0c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zM2 17h82v45c0 1.68-1.32 3-3 3H5c-1.68 0-3-1.32-3-3V17zm40.525 7c-.477 0-.864.387-.864.864v25.532l-7.15-7.152c-.185-.2-.455-.3-.73-.27-.333.032-.62.258-.73.577-.11.32-.024.678.22.91l8.637 8.638c.163.168.387.263.62.263.235 0 .46-.095.622-.263l8.635-8.637c.217-.224.3-.544.216-.84-.084-.3-.32-.534-.62-.61-.302-.078-.62.012-.837.234l-7.152 7.152V24.864c0-.477-.385-.864-.862-.864zM29.9 57c-.497 0-.9.403-.9.9s.403.9.9.9h25.2c.497 0 .9-.403.9-.9s-.403-.9-.9-.9H29.9z"/>
+          </g>
+        </symbol>
+        <symbol id="icon-help-browser" viewBox="2 1 73 60">
+          <title>help browser</title>
+            <g fill="#fff" fill-rule="evenodd" transform="translate(2 1)">
+            <rect width="71" height="57" y="1" fill-opacity=".17" rx="3"/>
+            <path d="M2.274.275C1.02.275 0 1.38 0 2.74v54.206c0 1.363 1.016 2.466 2.274 2.466h68.22c1.257 0 2.273-1.103 2.273-2.466V2.74c0-1.362-1.016-2.465-2.274-2.465H2.273zM52.3 2.55c1.26 0 2.275 1.016 2.275 2.274 0 1.257-1.016 2.274-2.274 2.274-1.25 0-2.27-1.017-2.27-2.274 0-1.258 1.02-2.275 2.28-2.275zm6.823 0c1.258 0 2.274 1.016 2.274 2.274 0 1.257-1.016 2.274-2.274 2.274-1.257 0-2.274-1.017-2.274-2.274 0-1.258 1.01-2.275 2.27-2.275zm6.822 0c1.258 0 2.274 1.016 2.274 2.274 0 1.257-1.02 2.274-2.28 2.274-1.26 0-2.278-1.017-2.278-2.274 0-1.258 1.017-2.275 2.274-2.275zM4.405 9.372H68.36c1.18 0 2.14.89 2.14 1.99v43.784c0 1.1-.96 1.99-2.138 1.99H4.407c-1.178 0-2.132-.89-2.132-1.99V11.363c0-1.1.954-1.99 2.132-1.99zM24.88 25.3c-1.234 0-2.238.998-2.238 2.233s1.004 2.235 2.238 2.235c1.235 0 2.234-1 2.234-2.235 0-1.235-1-2.234-2.234-2.234zm22.79 0c-1.236 0-2.235.998-2.235 2.233s1 2.235 2.234 2.235 2.23-1 2.23-2.235c0-1.235-1-2.234-2.24-2.234zM24.71 37.62c-.903.123-1.69.756-1.94 1.666-.333 1.214.407 2.46 1.655 2.785l22.607 5.89c1.248.33 2.53-.39 2.865-1.61.33-1.21-.41-2.452-1.658-2.78l-22.6-5.882c-.32-.08-.63-.1-.93-.057z"/>
+          </g>
+        </symbol>
+        <symbol id="icon-remix" viewBox="0 0 94 65">
+          <title>remix</title>
+          <g fill="#fff" fill-rule="evenodd">
+            <path fill-opacity=".17" d="M1 2h91v60H1z"/>
+            <path d="M0 .2v64.5h94V.2H0zm91.2 61.7H2.8v-59h88.4v59z"/>
+            <path d="M31.5 39c3.6 0 6.6-3 6.6-6.6 0-3.6-3-6.6-6.6-6.6-3.6 0-6.6 3-6.6 6.6 0 3.7 3 6.6 6.6 6.6zm0-10.4c2.1 0 3.8 1.7 3.8 3.8 0 2.1-1.7 3.8-3.8 3.8-2.1 0-3.8-1.7-3.8-3.8 0-2.1 1.7-3.8 3.8-3.8z"/>
+            <path d="M31.5 57.5c13.8 0 25.1-11.2 25.1-25.1 0-13.9-11.2-25-25.1-25-13.9 0-25 11.2-25 25s11.2 25.1 25 25.1zm0-47.4c12.3 0 22.3 10 22.3 22.3s-10 22.3-22.3 22.3-22.3-10-22.3-22.3 10-22.3 22.3-22.3zM13.2 52.8H4.4v7.7h8.8v-7.7zm-2.8 4.9H7.2v-2.1h3.2v2.1zm70-12.5H89V48h-8.6zm0 4.2H89v2.8h-8.6zm0 4.1H89v2.8h-8.6zm0 4.2H89v2.8h-8.6zm-5.6-28.8v3L54.2 53.2l2 1.9L77.6 33v-4.1c5.2-.7 9.2-5.1 9.2-10.5s-4-9.8-9.2-10.5V5h-2.8v2.9c-5.2.7-9.2 5.1-9.2 10.5s4 9.8 9.2 10.5zM84 18.4c0 3.8-2.8 7-6.4 7.7V10.7c3.7.6 6.4 3.8 6.4 7.7zm-9.2-7.7v15.4c-3.7-.7-6.4-3.9-6.4-7.7 0-3.8 2.8-7.1 6.4-7.7z"/>
+          </g>
+        </symbol>
 
+      </defs>
+    </svg>
   </body>
 </html>
