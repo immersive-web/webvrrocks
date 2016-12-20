@@ -1,5 +1,7 @@
 <!--
-title: Firefox Nightly Setup Instructions
+title: Firefox
+section: browsers
+keywords: [browsers, firefox]
 -->
 
 # Firefox Nightly Setup Instructions
