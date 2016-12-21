@@ -1,0 +1,337 @@
+@import url(https://unpkg.com/hack@0.7.7/dist/hack.css);
+@import url(https://unpkg.com/hack@0.7.7/dist/standard.css);
+@import url(https://fontlibrary.org/face/nimbus-sans-l);
+@import url(https://fonts.googleapis.com/css?family=Libre+Franklin:200,300,400,500,600,700,800,900);
+/*@import url(http://mplus-fonts.sourceforge.jp/webfonts/basic_latin/mplus_webfonts.css);*/
+/*@import url(http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css);*/
+/*@import url(https://fontlibrary.org/face/office-code-pro);*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-size: 1rem;
+}
+
+.hidden-text {
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: -10px;
+  width: 1px;
+}
+
+.standard {
+  font-family: Libre Franklin;
+}
+
+.standard h2 {
+  font: bold 4rem NimbusSanLBold;
+  margin: 0;
+}
+
+.standard h3 a {
+  border: 0;
+  margin: -3px -6px;
+  padding: 3px 6px;
+}
+
+.standard h3 a:hover {
+  color: #fff;
+}
+
+.section:target {
+  background: rgba(250,0,25,.05);
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-bottom: 45px;
+  padding-top: 45px;
+}
+
+.section + .section {
+  border-top: 1px solid #eee;
+}
+
+.section > *:first-child {
+  margin-top: 0;
+}
+
+.section > *:last-child {
+  margin-bottom: 0;
+}
+
+.standard .category-name {
+  display: none;
+}
+
+.standard h3 {
+  font-size: 1rem;
+  /*text-transform: uppercase;*/
+}
+
+.standard h2.browser-name {
+  font-size: 4rem;
+}
+
+.standard h3 {
+  font-size: 2rem;
+}
+
+.standard h2,
+.standard h3 {
+  font-family: Libre Franklin;
+}
+
+.row-container {
+  display: flex;
+  flex-direction: column;
+}
+.column-container {
+  display: flex;
+  flex-direction: row;
+}
+.row-container > .row,
+.column-container > .column {
+  flex: 1 1 0;
+}
+.row-container > .one-row,
+.column-container > .one-column {
+  flex: 1 1 0;
+}
+.row-container > .two-row,
+.column-container > .two-column {
+  flex: 2 2 0;
+}
+.row-container > .three-row,
+.column-container > .three-column {
+  flex: 3 3 0;
+}
+.row-container > .four-row,
+.column-container > .four-column {
+  flex: 4 4 0;
+}
+.row-container > .five-row,
+.column-container > .five-column {
+  flex: 5 5 0;
+}
+.row-container > .six-row,
+.column-container > .six-column {
+  flex: 6 6 0;
+}
+.row-container > .seven-row,
+.column-container > .seven-column {
+  flex: 7 7 0;
+}
+.row-container > .eight-row,
+.column-container > .eight-column {
+  flex: 8 8 0;
+}
+.row-container > .nine-row,
+.column-container > .nine-column {
+  flex: 9 9 0;
+}
+.row-container > .ten-row,
+.column-container > .ten-column {
+  flex: 10 10 0;
+}
+.row-container > .eleven-row,
+.column-container > .eleven-column {
+  flex: 11 11 0;
+}
+.row-container > .twelve-row,
+.column-container > .twelve-column {
+  flex: 12 12 0;
+}
+.row-container > .auto-row,
+.column-container > .auto-column {
+  flex: 0 0 auto;
+}
+.gutter > .row-item,
+.gutter > .column-item {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+
+/**,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+*/
+
+.main {
+  padding: 30px 15px;
+}
+
+.hack h1 {
+  padding-top: 0;
+}
+
+.footer {
+  border-top: 1px solid #ccc;
+  margin-top: 5rem;
+  padding: 3rem 0;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background-color: transparent;
+  font-weight: normal;
+}
+
+th {
+  font-weight: 400;
+  text-align: left;
+}
+
+.download {
+  padding-top: 15px;
+}
+
+.browser-buttons .btn {
+  margin-top: 15px;
+  display: block;
+  width: 100%;
+}
+
+.browser-intro {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.standard .demos .cell + .cell {
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .browser-buttons .btn {
+    display: inline-block;
+    margin-top: 0;
+    width: auto;
+  }
+
+  .browser-buttons .btn + .btn {
+    margin-left: 15px;
+  }
+
+  .standard .demos .cell + .cell {
+    margin-left: 15px;
+  }
+}
+
+.showcase-thumb {
+  display: block;
+  width: 100%;
+}
+
+.release-notes ul,
+.known-issues ul {
+  color: #666;
+}
+
+.release-date,
+.known-issues h4 {
+  color: #333;
+}
+
+.release-date {
+  font-weight: bold;
+}
+
+.release-date:after {
+  content: "";
+  display: block;
+}
+
+.standard li + li {
+  margin-top: 1rem;
+}
+
+.standard li > h4 {
+  margin-bottom: .25rem;
+  margin-top: 0;
+}
+
+.standard li p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.standard li p + p {
+  margin-top: 15px;
+}
+
+.standard li p:only-child {
+  margin: 0;
+}
+
+.standard li > *:first-child {
+  margin-top: 0;
+}
+
+.standard li > *:last-child {
+  margin-bottom: 0;
+}
+
+.setup ol {
+  counter-reset: item;
+  list-style: none;
+  padding-left: 0;
+}
+
+.setup li:before {
+  border-radius: 50%;
+  border: 2px solid #eee;
+  color: #3a46ff;
+  content: "";
+  content: counters(item, '.') '. ';
+  counter-increment: item;
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 2ch;
+  text-align: center;
+  width: 50px;
+}
+
+p code,
+li code {
+  background: #eee;
+  box-shadow: 1px 1px 0 #ccc;
+  margin: 0 3px;
+  padding: 3px 6px;
+}
+
+#__bs_notify__ {
+  display: none !important;
+}
+
+.standard .alert a {
+  color: inherit;
+  transition: .1s background-color ease-in-out, .1s color ease-in-out;
+}
+
+.standard .alert a:hover {
+  background-color: inherit;
+  color: #111;
+  border-bottom-color: #111;
+}

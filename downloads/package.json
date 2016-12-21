@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "author": "Christopher Van Wiemeersch",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.5"
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "jus serve",
+    "bs": "../node_modules/.bin/browser-sync start --server . --files='**/*' --port $PORT --cors --no-open --no-notify"
+  }
+}

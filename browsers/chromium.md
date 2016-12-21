@@ -8,6 +8,9 @@ keywords: [browsers, chromium]
 authors: [cvan]
 -->
 
+<!-- TODO: Replace pages. -->
+<script>window.location.href='/downloads/chromium';</script>
+
 <p class="browser-intro">
   <a href="https://www.chromium.org/">Chromium</a> is the open-source project behind the <a href="https://www.google.com/chrome/">Google Chrome</a> browser. <a href="/people/toji">Brandon Jones</a>, WebGL/WebVR developer on the Chrome team, has created these experimental custom WebVR builds for testing.
 </p>
