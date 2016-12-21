@@ -17,8 +17,7 @@ const context = {
     'daydream': {},
     'edge': {},
     'firefox': {},
-    'samsung': {},
-    'samsung-internet-browser-for-gear-vr': {},
+    'samsung-internet': {},
     'servo': {}
   }
 };
