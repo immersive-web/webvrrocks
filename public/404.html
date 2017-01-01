@@ -1,0 +1,71 @@
+<!--
+layout: inline
+-->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="none">
+    <title>404 Not Found – WebVR Rocks</title>
+    <style>
+      html {
+        background: #2b43ff;
+        font-size: 16px;
+      }
+
+      body {
+        color: rgba(255,255,255,.75);
+        font: 1.25rem/1.5 Consolas, Andale Mono, Monaco, Courier New, monospace;
+        font-size: calc(1rem + .5vw);
+        max-width: 760px;
+        padding: 3%;
+      }
+
+      a {
+        border-bottom: 1px solid rgba(255,255,255,.5);
+        color: #fff;
+        font-weight: 600;
+        padding-bottom: 2px;
+        transition: .1s border-bottom ease-in-out, .1s color ease-in-out;
+        text-decoration: none;
+      }
+
+      a:hover {
+        border-bottom-color: #fff;
+      }
+
+      h1, p {
+        margin: 1rem 0;
+      }
+
+      h1 {
+        color: #fff;
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>404 Not Found</h1>
+    <p>Sorry, we could not find the page or file you requested.</p>
+    <p>It's possible that the link you clicked is out of date or the address was typed incorrectly.</p>
+    <p>Visit the <a href="/" id="home-link">WebVR Rocks homepage</a>.</p>
+    <script>
+      (function () {
+        var homeLink = document.querySelector('#home-link');
+        if (!homeLink) {
+          return;
+        }
+        if (window.location.protocol === 'file:') {
+          homeLink.setAttribute('href', 'index.html');
+          return;
+        }
+        if (window.location.pathname.indexOf('/webvrrocks/') === 0) {
+          // Check if we are being served from GitHub Pages.
+          // Change URL for the "home" page.
+          homeLink.setAttribute('href', '/webvrrocks/');
+        }
+      })();
+    </script>
+  </body>
+</html>

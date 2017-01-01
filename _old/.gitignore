@@ -1,0 +1,7 @@
+.DS_Store
+.config/
+.travis.config.tgz
+data/*
+node_modules/
+npm-debug*.log*
+_prod/
