@@ -1,0 +1,21 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "Casey Yee",
+  "jobTitle": "WebVR Developer",
+  "affiliation": "Mozilla",
+  "additionalName": "caseyyee",
+  "url": "http://cyee.io/",
+  "website": [
+    {
+      "@type": "WebSite",
+      "url": "http://cyee.io/"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Vancouver",
+    "addressRegion": "Canada"
+  },
+  "email": "caseyyee.ca@gmail.com"
+}

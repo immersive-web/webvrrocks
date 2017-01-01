@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>webvr-favicon</title>
+  <defs>
+    <path id="a" d="M0 0h200v200H0z"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="b" fill="#fff">
+      <use xlink:href="#a"/>
+    </mask>
+    <path fill="#ff" stroke="#3a46ff" stroke-width="40" d="M0 0h200v200H0z" mask="url(#b)"/>
+    <circle cx="57.5" cy="100.5" r="17.5" fill="#3a46ff"/>
+    <circle cx="142.5" cy="100.5" r="17.5" fill="#3a46ff"/>
+  </g>
+</svg>

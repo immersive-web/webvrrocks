@@ -1,0 +1,21 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "Christopher Van Wiemeersch",
+  "jobTitle": "WebVR Developer",
+  "affiliation": "Mozilla",
+  "additionalName": "cvan",
+  "url": "https://cvan.io/",
+  "website": [
+    {
+      "@type": "WebSite",
+      "url": "https://cvan.io/"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "San Francisco",
+    "addressRegion": "California"
+  },
+  "email": "hearcomestreble@gmail.com"
+}

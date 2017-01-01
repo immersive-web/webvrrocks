@@ -1,0 +1,38 @@
+@import 'andlight.css';
+@import 'common.css';
+
+@import url(https://fontlibrary.org/face/nimbus-sans-l);
+@import url(https://fonts.googleapis.com/css?family=Libre+Franklin:200,300,400,500,600,700,800,900);
+
+.hidden-text {
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: -10px;
+  width: 1px;
+}
+
+.license {
+  display: none;
+}
+
+h1 {
+  font: bold 4rem NimbusSanLBold;
+}
+
+.header {
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    border-width: 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  body {
+    border-width: 0;
+  }
+}
+
