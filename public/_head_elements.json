@@ -1,0 +1,44 @@
+{
+  "meta": [
+    {
+      "charset": "utf-8"
+    },
+    {
+      "http-equiv": "X-UA-Compatible",
+      "content": "IE=edge"
+    },
+    {
+      "name": "viewport",
+      "content": "width=device-width, initial-scale=1"
+    },
+    {
+      "name": "theme-color",
+      "content": "#3a46ff"
+    }
+  ],
+  "link": [
+    {
+      "rel": "stylesheet",
+      "href": "/media/css/main.css"
+    },
+    {
+      "rel": "manifest",
+      "href": "/manifest.json"
+    },
+    {
+      "rel": "favicon",
+      "href": "/media/img/webvr-favicon-small.png"
+    },
+    {
+      "rel": "icon",
+      "sizes": "64x64",
+      "href": "/media/img/webvr-favicon-small.svg"
+    }
+  ],
+  "script": [
+    {
+      "src": "https://cdn.rawgit.com/GoogleChrome/pwacompat/v1.0.0/pwacompat.min.js",
+      "async": ""
+    }
+  ]
+}
