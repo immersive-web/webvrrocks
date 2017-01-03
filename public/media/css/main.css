@@ -30,7 +30,7 @@ header {
 }
 
 .page-header {
-  background: #111;
+  background: #fff;
 }
 
 .page-header .grid-flex-container {
@@ -43,7 +43,8 @@ header {
 
 [data-page="index"] .page-header,
 [data-page="index"] .page-header h1 {
-  color: #f012be;
+  background: #3a46ff;
+  color: #fff;
 }
 
 [data-headset="htc_vive"] .headset-header,
