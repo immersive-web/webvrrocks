@@ -21,7 +21,7 @@ const ROUTER_PATH = path.join(PUBLIC_DIR, 'ROUTER');
 // Live-reloading (for local development).
 // See https://github.com/mklabs/tiny-lr for usage.
 if (IS_DEV) {
-  app.use(tinylr.middleware({app: app, dashboard: false}));
+  app.use(tinylr.middleware({app: app, dashboard: true}));
 }
 
 app.initServer = function () {
