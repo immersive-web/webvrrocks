@@ -33,19 +33,17 @@ header {
   background: #eee;
 }
 
-.headset-icon {
-  display: block;
-  height: 200px;
+.headset-header .grid-flex-container {
+  align-items: center;
 }
 
-/*
-img {
-  display: block;
+[data-headset="htc_vive"] .headset-header {
+  background: #00b5e2;
 }
-*/
 
-.browser-icon {
-  width: 100px;
+[data-headset="htc_vive"] .headset-header,
+[data-headset="htc_vive"] .headset-header h1 {
+  color: #fff;
 }
 
 .company-logo {
@@ -65,18 +63,20 @@ img {
 }
 
 .browser-icon {
-  flex: 1;
+  max-width: 100px;
 }
 
 .page-title {
-  padding: 30px 30px 0;
-}
-
-.page-title {
+  padding: 15px 30px 0;
 }
 
 .headset-icon-wrap {
   padding: 15px 30px;
+}
+
+.headset-icon {
+  display: inline-block;
+  max-height: 100px;
 }
 
 .headset-logo-wrap {
@@ -91,8 +91,8 @@ img {
 }
 
 [data-headset="htc_vive"] .headset-icon-wrap {
+  padding-bottom: 0;
   padding-top: 15px;
-  padding-bottom: 30px;
 }
 
 .main {
@@ -148,6 +148,14 @@ section {
 @media screen and (min-width: 769px) {
   body {
     border-width: 0;
+  }
+
+  .headset-icon-wrap {
+    text-align: right;
+  }
+
+  .headset-icon {
+    max-height: 200px;
   }
 }
 
