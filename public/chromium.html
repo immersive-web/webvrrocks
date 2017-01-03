@@ -1,19 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <posthtml-head-elements></posthtml-head-elements>
     <meta charset="utf-8">
     <title>Chromium • WebVR Rocks</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#3a46ff">
-    <link rel="stylesheet" href="/media/css/main.css">
-    <link rel="icon" href="/media/img/webvr-favicon-small.ico" type="image/x-icon" id="favicon">
-    <link rel="shortcut icon" href="/media/img/webvr-favicon-small.svg">
-    <meta name="theme-color" content="#3a46ff">
-    <link rel="manifest" href="manifest.json">
-    <link rel="favicon" href="/media/img/webvr-favicon-small.png">
-    <link rel="shortcut icon" href="/media/img/webvr-favicon-small.svg">
-    <script async src="https://cdn.rawgit.com/GoogleChrome/pwacompat/v1.0.0/pwacompat.min.js"></script>
   </head>
   <body>
     <header id="header" class="header section" role="banner">
@@ -186,7 +176,7 @@
         <section id="demos" class="section demos">
           <h3><a href="#demos">Demos</a></h3>
           <figure class="media-outlined">
-            <img src="http://placehold.it/700x300?text=350x300">
+            <!-- <img src="http://placehold.it/700x300?text=350x300"> -->
             <figcaption>Puzzle Rain</figcaption>
           </figure>
         </section>
@@ -205,10 +195,6 @@
       </div>
     </main>
 
-    <footer id="footer" class="footer section">
-      <p id="license" class="license">
-        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a><br><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">WebVR Rocks</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/webvrrocks" property="cc:attributionName" rel="cc:attributionURL">WebVR Rocks authors</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br>Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/webvrrocks/webvrrocks" rel="dct:source">https://github.com/webvrrocks/webvrrocks</a>.
-      </p>
-    </footer>
+    <include src="_footer.html"></include>
   </body>
 </html>
