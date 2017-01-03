@@ -1,54 +1,51 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-browser="firefox">
   <head>
+    <posthtml-head-elements></posthtml-head-elements>
     <meta charset="utf-8">
-    <title>Chromium • WebVR Rocks</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#3a46ff">
-    <link rel="stylesheet" href="/media/css/main.css">
-    <link rel="icon" href="/media/img/webvr-favicon-small.ico" type="image/x-icon" id="favicon">
-    <link rel="shortcut icon" href="/media/img/webvr-favicon-small.svg">
-    <meta name="theme-color" content="#3a46ff">
-    <link rel="manifest" href="manifest.json">
-    <link rel="favicon" href="/media/img/webvr-favicon-small.png">
-    <link rel="shortcut icon" href="/media/img/webvr-favicon-small.svg">
-    <script async src="https://cdn.rawgit.com/GoogleChrome/pwacompat/v1.0.0/pwacompat.min.js"></script>
+    <title>Firefox • WebVR Rocks</title>
   </head>
   <body>
     <header id="header" class="header section" role="banner">
       <div class="container">
         <p class="hidden-text"><a href="/" aria-controls="main" tabindex="0">&#xAB; Back to WebVR Rocks home</a></p>
 
-        <!--<div class="cf"><a href="https://github.com/webvrrocks/webvrrocks" title="Edit on Github" class="button button-primary pull-right">Edit on Github</a></div>-->
+        <!--<div class="cf"><a href="https://github.com/webvrrocks/webvrrocks/edit/master/public/firefox.html" title="Edit on Github" class="button button-primary pull-right">Edit on GitHub</a></div>-->
 
-        <h1 class="browser-name">Chromium</h1>
+        <header class="browser-header">
+          <h1 class="browser-name">Firefox</h1>
 
-        <p class="browser-intro"><a href="https://www.chromium.org/">Chromium</a> is the open-source project behind the <a href="https://www.google.com/chrome/">Google Chrome</a> browser.</p>
-        <p class="browser-details">Experimental custom WebVR builds for testing. Developed and maintained by WebGL/WebVR Chrome developer <a href="/people/toji">Brandon Jones</a>.</p>
+          <!-- <img src="/firefox/logo.png" alt="Firefox" title="Firefox"> -->
+          <img class="browser-icon browser-icon-firefox" src="/firefox/icon-nightly.png" alt="Firefox" title="Firefox">
+          <!-- <img class="company-logo company-logo-mozilla" src="/mozilla/logo.svg" alt="Mozilla" title="Mozilla"> -->
+        </header>
+
+        <p class="browser-intro">WebVR in <a href="https://nightly.mozilla.org/">Firefox Nightly</a>, Mozilla's bleeding-edge version of <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>.</p>
 
         <div id="download" class="download">
           <div class="message message-alert">
-            <strong>Warning:</strong> All <a href="https://webvr.info/get-chrome/">Chromium WebVR builds posted here</a> are highly experimental and subject to change!
+            <strong>Warning:</strong> All <a href="#releases">Firefox Nightly releases</a> are highly experimental and subject to change!
           </div>
           <p class="browser-buttons">
             <a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRRElMNmVqQjJWS2c" class="button button-approve button-large button-download">Download</a>
-            <a href="https://chromium.googlesource.com/experimental/chromium/src/+/refs/wip/bajones/webvr_1" class="button button-outlined-neutral button-small button-large button-source">View source</a>
+            <a href="https://chromium.googlesource.com/experimental/chromium/src/+/refs/wip/bajones/webvr_1" class="button button-outlined-neutral button-large button-source">View source</a>
           </p>
         </div>
       </div>
     </header>
 
-    <main id="main" role="main">
+    <main id="main" class="main" role="main">
       <div class="container">
 
         <section id="setup" class="section setup">
           <h3><a href="#setup">Instructions</a></h3>
           <ol>
-            <li>Download and launch experimental build of Chromium with WebVR support.</li>
-            <li>In the URL bar, load <code>chrome://flags#enable-webvr</code> and toggle the <code>Enable WebVR flag</code>.</li>
-            <li>In the URL bar, load <code>chrome://flags#enable-gamepad-extensions</code> and toggle the <code>Enable Gamepad Extensions</code> flag.</li>
-            <li><span data-headset="htc-vive">Launch the SteamVR application.</span></li>
+            <li>Download and launch <a href="https://nightly.mozilla.org/">Firefox Nightly</a>.</li>
+            <li data-headset="htc_vive"><a href="https://github.com/ValveSoftware/openvr/raw/master/bin/win64/openvr_api.dll">Download version 1.02 (64-bit) of the <code>openvr_api.dll</code> file</a> from the <a href="https://github.com/ValveSoftware/openvr/">OpenVR GitHub repository</a>.</li>
+            <li data-headset="htc_vive">Save the <code>openvr_api.dll</code> file somewhere on your computer where the user running Firefox can read it (e.g., <code>c:\openvr\</code>).</li>
+            <li data-headset="htc_vive">In Firefox Nightly, navigate to <code>about:config</code>; change the value of <code>dom.vr.openvr.enabled</code> to <code>true</code> and <code>gfx.vr.openvr-runtime</code> to the full path of the <code>openvr_api.dll</code> file (e.g., <code>c:\openvr\openvr_api.dll</code>).</li>
+            <li data-headset="oculus_rift">Ensure that your Oculus Home settings allow for <a href="https://blog.mozvr.com/oculus-home-rift-cv1-webvr/#enablingunknownsources">Unknown Sources</a>.</li>
+            <li>Restart Firefox Nightly.</li>
             <li>Enjoy WebVR content!</li>
           </ol>
         </section>
@@ -60,7 +57,7 @@
             <dl>
               <dt>Type</dt>
               <dd>
-                <span class="applicationSubCategory">Experimental Browser Build</span>
+                <span class="applicationSubCategory">Browser Build</span>
               </dd>
               <dt>Version</dt>
               <dd>
@@ -74,11 +71,11 @@
               </dd>
               <dt>Download</dt>
               <dd>
-                <a class="button button-outlined-approve button-download" href="https://drive.google.com/file/d/0BzudLt22BqGRRElMNmVqQjJWS2c/view?usp=drive_web" itemprop="downloadUrl">Download</a>
+                <a class="button button-outlined-approve button-download" href="https://nightly.mozilla.org/" itemprop="downloadUrl">Download</a>
               </dd>
               <dt>File size</dt>
               <dd>
-                <meta itemprop="fileSize" content="93MB">
+                <span itemprop="fileSize">93MB</span>
               </dd>
               <dt>System requirements</dt>
               <dd>
@@ -91,9 +88,18 @@
                   <li class="authors__item">
                     <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                       <span class="authors__item__author" itemprop="author" itemscope itemptype="http://schema.org/Person">
-                        <a class="authors__item__url" href="https://twitter.com/tojiro" itemprop="url">
-                        <span class="authors__item__url" itemprop="name">Brandon Jones</span>
-                        (<a href="https://www.google.com/" itemprop="organization">Google</a>)
+                        <a class="authors__item__url" href="https://twitter.com/kearwoodgilbert" itemprop="url">
+                        <span class="authors__item__url" itemprop="name">Kearwood "Kip" Gilbert</span>
+                        (<a href="https://www.mozilla.org/" itemprop="organization">Mozilla</a>)
+                      </a>
+                    </span>
+                  </li>
+                  <li class="authors__item">
+                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                      <span class="authors__item__author" itemprop="author" itemscope itemptype="http://schema.org/Person">
+                        <a class="authors__item__url" href="https://twitter.com/daoshengmu" itemprop="url">
+                        <span class="authors__item__url" itemprop="name">Daosheng Mu</span>
+                        (<a href="https://www.mozilla.org/" itemprop="organization">Mozilla</a>)
                       </a>
                     </span>
                   </li>
@@ -101,7 +107,6 @@
               </dd>
               <dt>Release notes</dt>
               <ul>
-                <li>Applies multiple optimizations on top of the version of WebVR publicly available in <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">Chrome 56 beta</a>, primarily in the form of reducing texture copies. This gives significantly better performance and latency in most cases. Consider this a preview of performance targets for later versions of Chrome, with further possible improvements still to come.</li>
               </ul>
             </dl>
           </article>
@@ -112,13 +117,7 @@
           <p>These known issues apply to the <a href="#download">latest published build</a>. Where applicable, the detailed release notes below will list when historic known issues were fixed.</p>
           <ul>
             <li>
-              <p>There is no installer for the experimental builds of Chromium. Once the contents of the `.zip` file is extracted, launched <code>chrome.exe</code> directly from the <code>chrome-bin</code> folder.</p>
-            </li>
-            <li>
-              <p>The timestamp passed to the <code>requestAnimationFrame</code> callback is off by a factor of 1000; the function erroneously receives microseconds instead of milliseconds.</p>
-            </li>
-            <li>
-              <p>OpenVR (HTC Vive): Static scene content wobbles in response to head movement. <a class="button button-outlined-neutral button-small button-bug" href="https://github.com/toji/chrome-webvr-issues/issues/73">See bug</a> <!-- <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1320616">See Firefox bug</a>--></p>
+              <p><a class="button button-outlined-neutral button-small button-bug" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1320616">Bug</a> OpenVR (HTC Vive): Static scene content wobbles in response to head movement.</p>
             </li>
           </ul>
         </section>
@@ -171,6 +170,7 @@
                 </tr>
                 <tr class="table-cell-error">
                   <td>2016-12-16</td>
+                  <td>2016-12-16</td>
                   <td><a href="https://webvr.info/samples/">https://webvr.info/samples/</a></td>
                   <td>&#x2705;</td>
                   <td></td>
@@ -186,7 +186,7 @@
         <section id="demos" class="section demos">
           <h3><a href="#demos">Demos</a></h3>
           <figure class="media-outlined">
-            <img src="http://placehold.it/700x300?text=350x300">
+            <!-- <img src="http://placehold.it/700x300?text=350x300"> -->
             <figcaption>Puzzle Rain</figcaption>
           </figure>
         </section>
@@ -205,10 +205,6 @@
       </div>
     </main>
 
-    <footer id="footer" class="footer section">
-      <p id="license" class="license">
-        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a><br><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">WebVR Rocks</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/webvrrocks" property="cc:attributionName" rel="cc:attributionURL">WebVR Rocks authors</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br>Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/webvrrocks/webvrrocks" rel="dct:source">https://github.com/webvrrocks/webvrrocks</a>.
-      </p>
-    </footer>
+    <include src="_footer.html"></include>
   </body>
 </html>

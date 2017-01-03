@@ -29,11 +29,11 @@ header {
   padding-bottom: 0;
 }
 
-.headset-header {
-  background: #eee;
+.page-header {
+  background: #111;
 }
 
-.headset-header .grid-flex-container {
+.page-header .grid-flex-container {
   align-items: center;
 }
 
@@ -41,9 +41,27 @@ header {
   background: #00b5e2;
 }
 
+[data-page="index"] .page-header,
+[data-page="index"] .page-header h1 {
+  color: #f012be;
+}
+
 [data-headset="htc_vive"] .headset-header,
 [data-headset="htc_vive"] .headset-header h1 {
   color: #fff;
+}
+
+html[data-browser] body > .header {
+  border-bottom-width: 1px;
+  padding: 30px;
+}
+
+.header *:last-child {
+  margin-bottom: 0;
+}
+
+.header .button {
+  margin-bottom: 15px;
 }
 
 .company-logo {
@@ -67,7 +85,7 @@ header {
 }
 
 .page-title {
-  padding: 15px 30px 0;
+  padding: 15px 30px;
 }
 
 .headset-icon-wrap {
@@ -138,6 +156,35 @@ section {
   margin-top: 15px;
 }
 
+.main dt + dd {
+  padding-bottom: 15px;
+}
+
+dd .button-download {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.authors__list {
+  margin-top: 10px;
+}
+
+.authors__list li + li {
+  margin-top: 5px;
+}
+
+*[class*='button-outlined'].button-small {
+  padding: 3px 5px;
+}
+
+li .button {
+  margin: 0 5px;
+}
+
+li .button:first-child {
+  margin-left: 0;
+}
+
 /* tablet */
 @media screen and (max-width: 768px) {
   body {
@@ -163,6 +210,12 @@ section {
 @media screen and (max-width: 600px) {
   .container {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 599px) {
+  .header .button + .button {
+    margin-left: 15px;
   }
 }
 
