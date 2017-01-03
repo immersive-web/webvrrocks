@@ -107,6 +107,17 @@ section {
   padding: 30px;
 }
 
+.main section h2,
+.main section h3,
+.main section h4,
+.main section h5,
+.main section p,
+.main section dl,
+.main section ol,
+.main section ul {
+  max-width: 600px;
+}
+
 .main .section > *:first-child {
   margin-top: 0;
 }
