@@ -26,13 +26,29 @@
       "href": "/manifest.json"
     },
     {
-      "rel": "favicon",
-      "href": "/media/img/webvr-favicon-small.png"
+      "rel": "icon",
+      "sizes": "256x256",
+      "href": "/rocks/favicon.svg"
+    },
+    {
+      "rel": "icon",
+      "sizes": "256x256",
+      "href": "/rocks/favicon.png"
     },
     {
       "rel": "icon",
       "sizes": "64x64",
-      "href": "/media/img/webvr-favicon-small.svg"
+      "href": "/rocks/favicon-small.svg"
+    },
+    {
+      "rel": "icon",
+      "sizes": "64x64",
+      "href": "/rocks/favicon-small.png"
+    },
+    {
+      "rel": "mask-icon",
+      "href": "/rocks/favicon-small-mask.svg",
+      "color": "#3a46ff"
     }
   ],
   "script": [
