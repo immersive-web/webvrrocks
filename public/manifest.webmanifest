@@ -1,27 +1,30 @@
 {
+  "lang": "en",
+  "dir": "ltr",
   "name": "WebVR Rocks",
   "short_name": "WebVR",
-  "description": "Community-driven site for sharing how to create and experience WebVR.",
+  "description": "Community of experimentation & showcase of techniques of VR content creation on the Web.",
   "start_url": "./?src=manifest",
   "theme_color": "#3a46ff",
+  "background_color": "#fff",
   "icons": [
     {
-      "src": "/media/img/webvr-favicon.svg",
+      "src": "rocks/favicon.svg",
       "sizes": "200x200",
       "type": "image/svg"
     },
     {
-      "src": "/media/img/webvr-favicon.png",
+      "src": "rocks/favicon.png",
       "sizes": "200x200",
       "type": "image/png"
     },
     {
-      "src": "/media/img/webvr-favicon-small.svg",
+      "src": "rocks/favicon-small.svg",
       "sizes": "64x64",
       "type": "image/svg"
     },
     {
-      "src": "/media/img/webvr-favicon-small.png",
+      "src": "rocks/favicon-small.png",
       "sizes": "64x64",
       "type": "image/png"
     }

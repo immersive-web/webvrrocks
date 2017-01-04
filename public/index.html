@@ -1,38 +1,58 @@
 <!doctype html>
-<html lang="en" data-page="index">
+<html lang="en" data-layout="home">
   <head>
     <posthtml-head-elements></posthtml-head-elements>
     <meta charset="utf-8">
-    <title>Chromium • WebVR Rocks</title>
+    <title>WebVR Rocks</title>
   </head>
-  <body>
-    <header id="header" class="header section" role="banner">
-      <div class="container">
-        <p class="hidden-text"><a href="/" aria-controls="main" tabindex="0">&#xAB; Back to WebVR Rocks home</a></p>
-
-        <!--<div class="cf"><a href="https://github.com/webvrrocks/webvrrocks" title="Edit on GitHub" class="button button-primary pull-right">Edit on Github</a></div>-->
-
-        <header class="page-header headset-header">
-          <div class="grid-flex-container">
-            <div class="grid-flex-cell">
-              <h1 class="page-title">WebVR Rocks</h1>
-            </div>
-            <div class="grid-flex-cell-1of3">
-            </div>
-          </div>
-        </header>
-      </div>
+  <body class="">
+    <header id="header" class="site-header">
+      <h1 class="site-title">
+        <a class="site-logo" href="/">
+          <include src="rocks/logo.svg"></include>
+          <span class="rocks-wordmark">
+            <span class="rocks-wordmark-webvr">WebVR</span> <span class="rocks-wordmark-rocks">Rocks</span>
+          </span>
+        </a>
+      </h1>
+      <nav class="site-nav" role="navigation">
+        <ul class="site-nav-list">
+          <li><a href="">Headsets</a></li>
+          <li><a href="">Browsers</a></li>
+          <li><a href="">Experiences</a></li>
+          <li><a href="">Info</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main id="main" class="main" role="main">
       <div class="container">
+        <section id="headsets" class="section headsets" data-section="headsets">
+          <h1><a href="#headsets">Headsets</a></h1>
+
+          <ul>
+            <li><a href=""><include src="htc_vive/pictogram.svg"></include> HTC Vive</a></li>
+            <li><a href=""><include src="oculus_rift/pictogram.svg"></include> Oculus Rift</a></li>
+            <li><a href=""><include src="samsung_gear_vr/pictogram.svg"></include> Samsung Gear VR</a></li>
+            <li><a href=""><include src="osvr/pictogram.svg"></include> OSVR HDK2</a></li>
+            <!--<li><a href=""><include src="google_daydream/pictogram.svg"></include> Google Daydream</a></li>-->
+            <li><a href=""><include src="google_cardboard/pictogram.svg"></include> Google Cardboard</a></li>
+          </ul>
+        </section>
 
         <section id="browsers" class="section browsers" data-section="browsers">
-          <h3><a href="#browsers">Browsers</a></h3>
-          <h4>Chromium</h4>
+          <h2><a href="#browsers">Browsers</a></h2>
+
+          <img class="browser-icon browser-icon-chromium" src="/chromium/icon.png" alt="Chromium" title="Chromium">
+          <img class="browser-icon browser-icon-firefox" src="/firefox/icon-nightly.png" alt="Firefox" title="Firefox">
+
+          <!--
+          <h3>Chromium</h3>
           <p><a class="button button-outlined-approve button-download" href="/chromium" itemprop="downloadUrl">Install Chromium</a></p>
-          <h4>Firefox</h4>
+
+          <h3>Firefox</h3>
           <p><a class="button button-outlined-approve button-download" href="/firefox" itemprop="downloadUrl">Install Firefox</a></p>
+          -->
         </section>
       </div>
     </main>

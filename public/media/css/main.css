@@ -6,6 +6,7 @@
 
 body {
   font-family: Libre Franklin, Helvetica Neue, Helvetica, sans-serif;
+  min-width: 10rem;
 }
 
 .hidden-text {
@@ -20,45 +21,110 @@ body {
   display: none;
 }
 
-h1 {
-  font: bold 3rem NimbusSanLBold;
-}
-
 header {
   border-bottom-width: 0;
   padding-bottom: 0;
 }
 
-.page-header {
-  background: #fff;
+h1.page-title {
+  margin: 0;
 }
 
-.page-header .grid-flex-container {
+.main h1 {
+  font: bold 3rem NimbusSanLBold;
+  /*font-weight: 600;*/
+}
+
+.rocks-wordmark {
+  display: none;
+}
+
+.section[data-section="headsets"] {
+  /*background-color: #3a46ff;*/
+  background-color: rgb(15,30,250);
+}
+
+.section[data-section="headsets"],
+.section[data-section="headsets"] h1 a {
+  color: #fff;
+}
+
+.section[data-section="headsets"] h1 {
+  margin: 0;
+  vertical-align: top;
+}
+
+.section[data-section="headsets"] ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+.section[data-section="headsets"] li {
+  list-style: none;
+}
+
+.section[data-section="headsets"] li a {
+  color: rgba(255,255,255,.5);
+  transition: .15s color ease-in-out, .15s opacity ease-in-out;
+}
+
+.section[data-section="headsets"] li a:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+.section[data-section="headsets"] ul {
+  /*display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
   align-items: center;
+  margin: 0 auto;*/
+  font-size: 0;
 }
 
-[data-headset="htc_vive"] .headset-header {
-  background: #00b5e2;
+.section[data-section="headsets"] ul {
+  margin-top: -60px;
+  text-align: right;
 }
 
-[data-page="index"] .page-header,
-[data-page="index"] .page-header h1 {
-  background: #3a46ff;
-  color: #fff;
+.section[data-section="headsets"] h1,
+.section[data-section="headsets"] ul,
+.section[data-section="headsets"] li {
+  display: inline-block;
 }
 
-[data-headset="htc_vive"] .headset-header,
-[data-headset="htc_vive"] .headset-header h1 {
-  color: #fff;
+.section[data-section="headsets"] li a {
+  display: block;
+  font-size: .7rem;
+  /*height: 100%;*/
+  /*height: 8rem;*/
+  /*width: 8rem;*/
+  /*width: 100%;*/
+  max-width: 12rem;
+  max-height: 3rem;
+
+  padding: 60px;
+  text-align: center;
 }
 
-html[data-browser] body > .header {
-  border-bottom-width: 1px;
-  padding: 30px;
+.section[data-section="headsets"] svg {
+  display: block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-bottom: 1rem;
+  height: 100%;
+  width: 3rem;
 }
 
-.header *:last-child {
-  margin-bottom: 0;
+.section[data-section="headsets"] svg path {
+  fill: rgba(255,255,255,.5);
+  transition: .15s fill ease-in-out;
+}
+
+.section[data-section="headsets"] a:hover svg path {
+  fill: #fff;
 }
 
 .header .button {
@@ -83,39 +149,6 @@ html[data-browser] body > .header {
 
 .browser-icon {
   max-width: 100px;
-}
-
-.page-title {
-  padding: 15px 30px;
-}
-
-.headset-icon-wrap {
-  padding: 15px 30px;
-}
-
-.headset-icon {
-  display: inline-block;
-  max-height: 100px;
-}
-
-.headset-logo-wrap {
-  background: #111;
-  display: block;
-  padding: 30px;
-}
-
-.headset-logo {
-  display: block;
-  max-width: 200px;
-}
-
-[data-headset="htc_vive"] .headset-icon-wrap {
-  padding-bottom: 0;
-  padding-top: 15px;
-}
-
-.main {
-  /*padding: 30px;*/
 }
 
 section {
@@ -186,50 +219,164 @@ li .button:first-child {
   margin-left: 0;
 }
 
+dd code,
+p code,
+li code {
+  background: #eee;
+  border-radius: 1px;
+  box-shadow: 1px 1px 0 #ccc;
+  color: #666;
+  margin: 0 3px;
+  padding: 3px 6px;
+}
+
+ul.site-nav-list {
+  margin: 0;
+  padding-left: 0;
+}
+
+ul.site-nav-list li {
+  list-style-type: none;
+}
+
+.site-nav a {
+  padding: 5px 30px;
+}
+
+.site-nav li:first-child a {
+  padding-top: 30px;
+}
+
+.site-nav li:last-child a {
+  padding-bottom: 30px;
+}
+
+.site-nav a {
+  display: block;
+}
+
+.site-logo {
+  display: block;
+  padding: 30px 30px 0;
+  width: 100%;
+}
+
+.site-logo svg {
+  height: 100%;
+  width: 100%;
+}
+
+.edit-page {
+  display: none;
+}
+
+/**
+ * Breakpoints
+ *
+ *   breakpoint-smartphone: 480px
+ *   breakpoint-mid-mobile: 600px
+ *       breakpoint-tablet: 768px
+ *      breakpoint-desktop: 900px
+ * breakpoint-desktop-wide: 1200px
+ */
+
+/**
+ * Resets
+ */
+
 /* tablet */
-@media screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
   body {
     border-width: 0;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media all and (min-width: 769px) {
   body {
     border-width: 0;
-  }
-
-  .headset-icon-wrap {
-    text-align: right;
-  }
-
-  .headset-icon {
-    max-height: 200px;
   }
 }
 
 /* mid-sized mobile */
-@media screen and (max-width: 600px) {
+@media all and (max-width: 600px) {
   .container {
     width: 100%;
   }
 }
 
-@media screen and (min-width: 599px) {
-  .header .button + .button {
-    margin-left: 15px;
-  }
-}
-
 /* larger than tablet but smaller than desktop */
-@media screen and (min-width: 481px) and (max-width: 900px) {
+@media all and (min-width: 481px) and (max-width: 900px) {
   .container {
     width: 100%;
   }
 }
 
 /* desktop */
-@media screen and (min-width: 901px) {
+@media all and (min-width: 901px) {
   .container {
     width: 100%;
+  }
+}
+
+/**
+ * Mobile-first media queries
+ */
+
+.site-logo svg {
+  max-width: 10rem;
+}
+
+@media all and (min-width: 20rem) {
+  .site-title {
+    width: calc(7rem + 8vw);
+  }
+}
+
+@media all and (min-width: 25rem) {
+  .site-header {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: stretch;
+  }
+
+  .site-nav {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+}
+
+@media all and (min-width: 45rem) {
+  .site-header {
+    flex-direction: row;
+  }
+
+  .site-logo {
+    padding-bottom: 30px;
+  }
+
+  ul.site-nav-list {
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0;
+  }
+
+  .site-nav-list a {
+    display: block;
+    padding: 30px;
+    height: 100%;
+  }
+
+  .site-nav li:first-child a {
+    padding-top: 30px;
+  }
+
+  .site-nav li:last-child a {
+    padding-bottom: 30px;
   }
 }
