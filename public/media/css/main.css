@@ -21,36 +21,99 @@ body {
   display: none;
 }
 
-h1 {
-  font: bold 3rem NimbusSanLBold;
-}
-
 header {
   border-bottom-width: 0;
   padding-bottom: 0;
-}
-
-.header {
-  background: #fff;
-  position: relative;
-  z-index: 1;
-}
-
-[data-layout~="home"] .header,
-[data-layout~="home"] .header h1 {
-  color: #3a46ff;
 }
 
 h1.page-title {
   margin: 0;
 }
 
+.main h1 {
+  font: bold 3rem NimbusSanLBold;
+  /*font-weight: 600;*/
+}
+
 .rocks-wordmark {
   display: none;
 }
 
-.header *:last-child {
-  margin-bottom: 0;
+.section[data-section="headsets"] {
+  /*background-color: #3a46ff;*/
+  background-color: rgb(15,30,250);
+}
+
+.section[data-section="headsets"],
+.section[data-section="headsets"] h1 a {
+  color: #fff;
+}
+
+.section[data-section="headsets"] h1 {
+  margin: 0;
+}
+
+.section[data-section="headsets"] ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+.section[data-section="headsets"] li {
+  list-style: none;
+}
+
+.section[data-section="headsets"] li a {
+  color: rgba(255,255,255,.5);
+  transition: .15s color ease-in-out, .15s opacity ease-in-out;
+}
+
+.section[data-section="headsets"] li a:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+.section[data-section="headsets"] ul {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.section[data-section="headsets"] li {
+}
+
+.section[data-section="headsets"] li a {
+  display: block;
+  font-size: .7rem;
+  /*height: 100%;*/
+  /*height: 8rem;*/
+  /*width: 8rem;*/
+  /*width: 100%;*/
+
+  min-height: 3rem;
+  min-width: 3rem;
+  padding: 3rem;
+
+
+}
+
+.section[data-section="headsets"] svg {
+  display: block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 3rem;
+}
+
+.section[data-section="headsets"] svg path {
+  fill: rgba(255,255,255,.5);
+  transition: .15s fill ease-in-out;
+}
+
+.section[data-section="headsets"] a:hover svg path {
+  fill: #fff;
 }
 
 .header .button {
