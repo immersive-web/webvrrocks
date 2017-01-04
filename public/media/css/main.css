@@ -51,6 +51,7 @@ h1.page-title {
 
 .section[data-section="headsets"] h1 {
   margin: 0;
+  vertical-align: top;
 }
 
 .section[data-section="headsets"] ul {
@@ -73,16 +74,25 @@ h1.page-title {
 }
 
 .section[data-section="headsets"] ul {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-    align-items: center;
-    margin: 0 auto;
+  /*display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  margin: 0 auto;*/
+  font-size: 0;
 }
 
+.section[data-section="headsets"] ul {
+  margin-top: -60px;
+  text-align: right;
+}
+
+.section[data-section="headsets"] h1,
+.section[data-section="headsets"] ul,
 .section[data-section="headsets"] li {
+  display: inline-block;
 }
 
 .section[data-section="headsets"] li a {
@@ -92,18 +102,19 @@ h1.page-title {
   /*height: 8rem;*/
   /*width: 8rem;*/
   /*width: 100%;*/
+  max-width: 12rem;
+  max-height: 3rem;
 
-  min-height: 3rem;
-  min-width: 3rem;
-  padding: 3rem;
-
-
+  padding: 60px;
+  text-align: center;
 }
 
 .section[data-section="headsets"] svg {
   display: block;
   margin-left: 1rem;
   margin-right: 1rem;
+  padding-bottom: 1rem;
+  height: 100%;
   width: 3rem;
 }
 
