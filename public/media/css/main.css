@@ -118,12 +118,21 @@ h1.page-title {
   width: 3rem;
 }
 
-.section[data-section="headsets"] svg path {
+.section[data-section="headsets"] svg#daydream g {
+  stroke: rgba(255,255,255,.5);
+  transition: .15s stroke ease-in-out;
+}
+
+.section[data-section="headsets"] a:hover svg#daydream g {
+  stroke: #fff;
+}
+
+.section[data-section="headsets"] svg:not(#daydream) path {
   fill: rgba(255,255,255,.5);
   transition: .15s fill ease-in-out;
 }
 
-.section[data-section="headsets"] a:hover svg path {
+.section[data-section="headsets"] a:hover svg:not(#daydream) path {
   fill: #fff;
 }
 
