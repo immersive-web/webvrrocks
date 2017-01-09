@@ -4,6 +4,7 @@ const urllib = require('url');
 
 const electricity = require('electricity');
 const express = require('express');
+// const Gun = require('gun');
 const posthtmlrc = require('posthtml-load-config');
 const internalIp = require('internal-ip');
 const tinylr = require('tiny-lr');
@@ -23,6 +24,10 @@ const ROUTER_PATH = path.join(PUBLIC_DIR, 'ROUTER');
 if (IS_DEV) {
   app.use(tinylr.middleware({app: app, dashboard: true}));
 }
+
+// var gun = Gun({});
+
+// gun.wsp(app);
 
 app.initServer = function () {
   // Serve static files (very similar to how Surge and GitHub Pages do).

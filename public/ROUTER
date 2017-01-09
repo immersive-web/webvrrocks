@@ -68,3 +68,7 @@
 302   /browsers/chrome/download    https://drive.google.com/uc?export=download&id=0BzudLt22BqGRRElMNmVqQjJWS2c
 302   /chromium/download           https://drive.google.com/uc?export=download&id=0BzudLt22BqGRRElMNmVqQjJWS2c
 302   /browsers/chromium/download  https://drive.google.com/uc?export=download&id=0BzudLt22BqGRRElMNmVqQjJWS2c
+
+302   /carmel/ford  ovrweb:http://static.oculus.com/webvr/production/97f2fc11c8a96114547e8edc8453878b5f9c5653/Samples/FordDemo/index.html
+302   /carmel/fog  ovrweb:http://aframe.io/aframe/examples/showcase/spheres-and-fog/
+302   /carmel/kadjar  ovrweb:http://kadjar.littleworkshop.fr/
