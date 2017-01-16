@@ -174,7 +174,7 @@ section {
 }
 
 .main .section {
-  padding: 30px;
+  padding: 3rem 0;
 }
 
 .main section h2,
@@ -452,6 +452,91 @@ ul[data-section="browsers"] [data-url] {
   margin: 0 auto;
 }
 
+p.browser-buttons {
+  margin-bottom: 0;
+}
+
+.button-source {
+  display: block;
+  font-size: .9rem;
+}
+
+a.button-source {
+  color: #666;
+}
+
+a.button-source:hover {
+  color: #111;
+}
+
+a.button-source:after {
+  border-left: 6px solid #666;
+}
+
+@media all and (max-width: 767px) {
+  a.button-source:after {
+    border-left: 6px solid #666;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #fff;
+  }
+}
+
+/*
+a.button-source:after {
+  left: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+}
+*/
+
+a.button-source {
+  position: relative;
+}
+
+a.button-source:after {
+  color: #999;
+  content: '→';
+  display: inline-block;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: -.25rem;
+  transform: scale(0);
+  transition: .3s all ease-in-out;
+  vertical-align: bottom;
+  visibility: hidden;
+}
+
+a.button-source:hover:after {
+  font-weight: 800;
+  opacity: 1;
+  pointer-events: visible;
+  visibility: visible;
+  transform: scale(1);
+}
+
+a.button-source:after {
+
+}
+
+/*
+a.button-source:before {
+  background: #666;
+  content: '';
+  display: inline-block;
+  position: relative;
+}
+
+a.button-soure:hover .icon-arrow {
+  animation: arrow-bounce .4s ease;
+}
+*/
 
 @media all and (min-width: 45rem) {
   ul[data-section="browsers"] {
@@ -464,5 +549,19 @@ ul[data-section="browsers"] [data-url] {
 
   .main ul[data-section="browsers"] li + li {
     margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  @keyframes arrow-bounce {
+    50% {
+      width: 64px;
+    }
+  }
+
+  @keyframes arrow-bounce {
+    50% {
+      width: 64px;
+    }
   }
 }
