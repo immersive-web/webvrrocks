@@ -1,207 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-headset="samsung_gear_vr">
   <head>
-    <meta charset="utf-8">
-    <title>Chromium • WebVR Rocks</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#3a46ff">
-    <link rel="stylesheet" href="/media/css/main.css">
-    <link rel="icon" href="/media/img/webvr-favicon-small.ico" type="image/x-icon" id="favicon">
-    <link rel="shortcut icon" href="/media/img/webvr-favicon-small.svg">
-    <meta name="theme-color" content="#3a46ff">
-    <link rel="manifest" href="manifest.json">
-    <link rel="favicon" href="/media/img/webvr-favicon-small.png">
-    <link rel="shortcut icon" href="/media/img/webvr-favicon-small.svg">
-    <script async src="https://cdn.rawgit.com/GoogleChrome/pwacompat/v1.0.0/pwacompat.min.js"></script>
+    <posthtml-head-elements></posthtml-head-elements>
+    <title>Samsung Internet Browser • WebVR Rocks</title>
   </head>
   <body>
     <header id="header" class="header section" role="banner">
       <div class="container">
         <p class="hidden-text"><a href="/" aria-controls="main" tabindex="0">&#xAB; Back to WebVR Rocks home</a></p>
 
-        <!--<div class="cf"><a href="https://github.com/webvrrocks/webvrrocks" title="Edit on Github" class="button button-primary pull-right">Edit on Github</a></div>-->
+        <!--<div class="cf"><a href="https://github.com/webvrrocks/webvrrocks" title="Edit on GitHub" class="button button-primary pull-right">Edit on GitHub</a></div>-->
 
-        <h1 class="browser-name">Chromium</h1>
+        <h1 class="browser-name">Samsung Internet Browser</h1>
 
-        <p class="browser-intro"><a href="https://www.chromium.org/">Chromium</a> is the open-source project behind the <a href="https://www.google.com/chrome/">Google Chrome</a> browser.</p>
-        <p class="browser-details">Experimental custom WebVR builds for testing. Developed and maintained by WebGL/WebVR Chrome developer <a href="/people/toji">Brandon Jones</a>.</p>
+        <img class="browser-icon browser-icon-samsung-internet" src="/samsung_internet/logo.png" alt="Samsung Internet Browser" title="Samsung Internet Browser">
 
-        <div id="download" class="download">
-          <div class="message message-alert">
-            <strong>Warning:</strong> All <a href="https://webvr.info/get-chrome/">Chromium WebVR builds posted here</a> are highly experimental and subject to change!
-          </div>
-          <p class="browser-buttons">
-            <a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRRElMNmVqQjJWS2c" class="button button-approve button-large button-download">Download</a>
-            <a href="https://chromium.googlesource.com/experimental/chromium/src/+/refs/wip/bajones/webvr_1" class="button button-outlined-neutral button-small button-large button-source">View source</a>
-          </p>
-        </div>
+        <p class="browser-intro"><a href="https://www.oculus.com/experiences/gear-vr/849609821813454/">Samsung Internet Browser</a> is a browser for the <a href="https://www.samsung.com/global/galaxy/gear-vr/">Samsung Gear VR</a> headset.</p>
       </div>
     </header>
 
     <main id="main" role="main">
       <div class="container">
-
-        <section id="setup" class="section setup">
-          <h3><a href="#setup">Instructions</a></h3>
-          <ol>
-            <li>Download and launch experimental build of Chromium with WebVR support.</li>
-            <li>In the URL bar, load <code>chrome://flags#enable-webvr</code> and toggle the <code>Enable WebVR flag</code>.</li>
-            <li>In the URL bar, load <code>chrome://flags#enable-gamepad-extensions</code> and toggle the <code>Enable Gamepad Extensions</code> flag.</li>
-            <li><span data-headset="htc-vive">Launch the SteamVR application.</span></li>
-            <li>Enjoy WebVR content!</li>
-          </ol>
-        </section>
-
-        <section id="release-notes" class="section release-notes">
-          <h3><a href="#release-notes">Releases</a></h3>
-          <h4><a href="" itemprop="softwareApplication"></a></h4>
-          <article itemscope itemtype="http://schema.org/SoftwareApplication">
-            <dl>
-              <dt>Type</dt>
-              <dd>
-                <span class="applicationSubCategory">Experimental Browser Build</span>
-              </dd>
-              <dt>Version</dt>
-              <dd>
-                <span class="version">2016-12-13</span>
-              </dd>
-              <dt>Date released</dt>
-              <dd>
-                <time itemprop="datePublished" datetime="2016-12-13T00:00:00Z">
-                  December 13, 2016
-                </time>
-              </dd>
-              <dt>Download</dt>
-              <dd>
-                <a class="button button-outlined-approve button-download" href="https://drive.google.com/file/d/0BzudLt22BqGRRElMNmVqQjJWS2c/view?usp=drive_web" itemprop="downloadUrl">Download</a>
-              </dd>
-              <dt>File size</dt>
-              <dd>
-                <meta itemprop="fileSize" content="93MB">
-              </dd>
-              <dt>System requirements</dt>
-              <dd>
-                <span class="operatingSystems">Windows 7.1+</span>
-                <span class="processorRequirements">64-bit</span>
-              </dd>
-              <dt>Authors</dt>
-              <dd>
-                <ul class="authors__list">
-                  <li class="authors__item">
-                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                      <span class="authors__item__author" itemprop="author" itemscope itemptype="http://schema.org/Person">
-                        <a class="authors__item__url" href="https://twitter.com/tojiro" itemprop="url">
-                        <span class="authors__item__url" itemprop="name">Brandon Jones</span>
-                        (<a href="https://www.google.com/" itemprop="organization">Google</a>)
-                      </a>
-                    </span>
-                  </li>
-                </ul>
-              </dd>
-              <dt>Release notes</dt>
-              <ul>
-                <li>Applies multiple optimizations on top of the version of WebVR publicly available in <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">Chrome 56 beta</a>, primarily in the form of reducing texture copies. This gives significantly better performance and latency in most cases. Consider this a preview of performance targets for later versions of Chrome, with further possible improvements still to come.</li>
-              </ul>
-            </dl>
-          </article>
-        </section>
-
-        <section id="known-issues" class="section known-issues">
-          <h3><a href="#known-issues">Known issues</a></h3>
-          <p>These known issues apply to the <a href="#download">latest published build</a>. Where applicable, the detailed release notes below will list when historic known issues were fixed.</p>
-          <ul>
-            <li>
-              <p>There is no installer for the experimental builds of Chromium. Once the contents of the `.zip` file is extracted, launched <code>chrome.exe</code> directly from the <code>chrome-bin</code> folder.</p>
-            </li>
-            <li>
-              <p>The timestamp passed to the <code>requestAnimationFrame</code> callback is off by a factor of 1000; the function erroneously receives microseconds instead of milliseconds.</p>
-            </li>
-            <li>
-              <p>OpenVR (HTC Vive): Static scene content wobbles in response to head movement. <a class="button button-outlined-neutral button-small button-bug" href="https://github.com/toji/chrome-webvr-issues/issues/73">See bug</a> <!-- <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1320616">See Firefox bug</a>--></p>
-            </li>
-          </ul>
-        </section>
-
-        <section id="compat" class="section compat">
-          <h3><a href="#compat">Compatibility reports</a></h3>
-          <div class="table-responsive">
-            <table>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Date reported</th>
-                  <th>Site URL</th>
-                  <th>Result</th>
-                  <th>Reporter</th>
-                  <th>Notes</th>
-                  <th>Media</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="table-cell-success">
-                  <td>2016-12-19</td>
-                  <td>2016-12-21</td>
-                  <td><a href="https://webvr.info/samples/">https://webvr.info/samples/</a></td>
-                  <td>&#x2705;</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr class="table-cell-alert">
-                  <td>2016-12-19</td>
-                  <td>2016-12-19</td>
-                  <td><a href="https://webvr.info/samples/">https://webvr.info/samples/</a></td>
-                  <td>&#x2705;</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>2016-11-16</td>
-                  <td>2016-12-17</td>
-                  <td><a href="https://webvr.info/samples/">https://webvr.info/samples/</a></td>
-                  <td>&#x2705;</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr class="table-cell-error">
-                  <td>2016-12-16</td>
-                  <td><a href="https://webvr.info/samples/">https://webvr.info/samples/</a></td>
-                  <td>&#x2705;</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section id="demos" class="section demos">
-          <h3><a href="#demos">Demos</a></h3>
-          <figure class="media-outlined">
-            <img src="http://placehold.it/700x300?text=350x300">
-            <figcaption>Puzzle Rain</figcaption>
-          </figure>
-        </section>
-
-        <section id="info" class="section info">
-          <h3><a href="#info">Info</a></h3>
-          <dl>
-            <dt>How can I help out?</dt>
-            <dd></dd>
-            <dt>How can I test sites?</dt>
-            <dd></dd>
-            <dt>Which audio and video codecs are supported?</dt>
-            <dd></dd>
-          </dl>
-        </section>
       </div>
     </main>
 

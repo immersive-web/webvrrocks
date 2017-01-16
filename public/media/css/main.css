@@ -74,13 +74,6 @@ h1.page-title {
 }
 
 .section[data-section="headsets"] ul {
-  /*display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: space-around;
-  align-items: center;
-  margin: 0 auto;*/
   font-size: 0;
 }
 
@@ -149,15 +142,31 @@ h1.page-title {
   flex-direction: column-reverse;
 }
 
-.browser-name {
+[data-name] {
+  display: block;
   flex: 1;
+  font-size: .7rem;
+  margin-top: .75rem;
+}
+
+h2 {
   font-size: 2rem;
   font-weight: 800;
-  margin-top: 15px;
+}
+
+.container > .browser-name {
+  margin-top: 0;
+}
+
+.header .browser-icon {
+  margin: 1rem 0;
 }
 
 .browser-icon {
+  display: block;
   max-width: 100px;
+  min-height: 70px;
+  min-width: 70px;
 }
 
 section {
@@ -172,10 +181,10 @@ section {
 .main section h3,
 .main section h4,
 .main section h5,
-.main section p,
-.main section dl,
-.main section ol,
-.main section ul {
+html:not([data-layout~="home"]) .main section p,
+html:not([data-layout~="home"]) .main section dl,
+html:not([data-layout~="home"]) .main section ol,
+html:not([data-layout~="home"]) .main section ul {
   max-width: 600px;
 }
 
@@ -391,5 +400,69 @@ ul.site-nav-list li {
 
   .site-nav li:last-child a {
     padding-bottom: 30px;
+  }
+}
+
+ul[data-section] {
+  margin: 0;
+  padding: 0;
+}
+
+ul[data-section] li {
+  list-style-type: none;
+}
+
+ul[data-section="browsers"] {
+  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1.4;
+}
+
+ul[data-section="browsers"] [data-url] {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.main ul[data-section="browsers"] li {
+  width: 100%;
+}
+
+.main ul[data-section="browsers"] li + li {
+  margin-top: 2rem;
+}
+
+[data-headset] body,
+[data-browser] body {
+  padding: 1.5rem;
+}
+
+[data-section="browsers"] a[data-url] {
+  color: #999;
+  text-align: center;
+}
+
+[data-section="browsers"] a[data-url]:hover {
+  color: #111;
+}
+
+[data-icon] {
+  margin: 0 auto;
+}
+
+
+@media all and (min-width: 45rem) {
+  ul[data-section="browsers"] {
+    flex-direction: row;
+  }
+
+  [data-name] {
+    margin-top: 1rem;
+  }
+
+  .main ul[data-section="browsers"] li + li {
+    margin-top: 0;
   }
 }

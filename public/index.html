@@ -17,10 +17,10 @@
       </h1>
       <nav class="site-nav" role="navigation">
         <ul class="site-nav-list">
-          <li><a href="">Headsets</a></li>
-          <li><a href="">Browsers</a></li>
-          <li><a href="">Experiences</a></li>
-          <li><a href="">Info</a></li>
+          <li><a href="#headsets">Headsets</a></li>
+          <li><a href="#browsers">Browsers</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#info">Info</a></li>
         </ul>
       </nav>
     </header>
@@ -42,18 +42,13 @@
 
         <section id="browsers" class="section browsers" data-section="browsers">
           <h2><a href="#browsers">Browsers</a></h2>
-
-          <img class="browser-icon browser-icon-chromium" src="/chromium/icon.png" alt="Chromium" title="Chromium">
-          <img class="browser-icon browser-icon-firefox" src="/firefox/icon-nightly.png" alt="Firefox" title="Firefox">
-          <img class="browser-icon browser-icon-firefox" src="/samsung_internet/icon-nightly.png" alt="Firefox" title="Firefox">
-
-          <!--
-          <h3>Chromium</h3>
-          <p><a class="button button-outlined-approve button-download" href="/chromium" itemprop="downloadUrl">Install Chromium</a></p>
-
-          <h3>Firefox</h3>
-          <p><a class="button button-outlined-approve button-download" href="/firefox" itemprop="downloadUrl">Install Firefox</a></p>
-          -->
+          <ul data-section="browsers">
+            <li data-item><a href="/chromium" data-url><img data-icon class="browser-icon browser-icon-chromium" src="/chromium/icon.png" alt="Chromium" title="Chromium"> <span class="browser-name" data-name>Chromium</span></a></li>
+            <li data-item><a href="/firefox" data-url><img data-icon class="browser-icon browser-icon-firefox" src="/firefox/icon-nightly.png" alt="Firefox" title="Firefox"> <span class="browser-name" data-name>Firefox</span></a></li>
+            <li data-item><a href="/samsung_internet" data-url><img data-icon class="browser-icon browser-icon-samsung-internet" src="/samsung_internet/logo.png" alt="Samsung Internet Browser" title="Samsung Internet Browser"> <span class="browser-name" data-name>Samsung Internet Browser</span></a></li>
+            <li data-item><a href="/oculus_carmel" data-url><img data-icon class="browser-icon browser-icon-oculus-carmel" src="/oculus_carmel/icon.jpg" alt="Oculus Carmel" title="Oculus Carmel"> <span class="browser-name" data-name>Oculus Carmel</span></a></li>
+            <li data-item><a href="/servo" data-url><img data-icon class="browser-icon browser-icon-servo" src="/servo/icon.svg" alt="Servo" title="Servo"> <span class="browser-name" data-name>Servo</span></a></li>
+          </ul>
         </section>
       </div>
     </main>
