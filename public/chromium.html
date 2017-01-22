@@ -13,18 +13,32 @@
         <!--<div class="cf"><a href="https://github.com/webvrrocks/webvrrocks/edit/master/public/chromium.html" title="Edit on GitHub" class="button button-primary pull-right">Edit on GitHub</a></div>-->
 
         <header class="browser-header">
-          <h1 class="browser-name">Chromium</h1>
-          <img class="browser-icon browser-icon-chromium" src="/chromium/icon.png" alt="Chromium" title="Chromium">
+          <a class="browser-link" href="/chromium">
+            <h1 class="browser-name">Chromium</h1>
+            <img class="browser-icon browser-icon-chromium" src="/chromium/icon.png" alt="Chromium" title="Chromium">
+          </a>
         </header>
 
         <p class="browser-intro">WebVR in <a href="https://www.chromium.org/">Chromium</a>, Google's open-source version of <a href="https://www.google.com/chrome/">Chrome</a>.</p>
 
+        <div class="message message-alert">
+          <strong>Warning:</strong> All <a href="#releases">Chromium WebVR builds posted here</a> are highly experimental and subject to change!
+        </div>
+
         <div id="download" class="download">
-          <div class="message message-alert">
-            <strong>Warning:</strong> All <a href="https://webvr.info/get-chrome/">Chromium WebVR builds posted here</a> are highly experimental and subject to change!
+          <div class="dropdown-standalone dropdown-download dropdown-with-children">
+            <a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRRElMNmVqQjJWS2c" class="button-unstyled button-large button-download">Download</a>
+            <span class="icon-arrow-down"></span>
+            <ul class="list-unstyled dropdown">
+              <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRRElMNmVqQjJWS2c">December 13, 2016</a></li>
+              <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRc2lEWDg2NkptNzg">September 23, 2016</a></li>
+              <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRVzFKVWNSbFA5aXM">September 17, 2016</a></li>
+              <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRcVNBWHR5OW0za1E">August 29, 2016</a></li>
+              <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRZUFhd0Q5M1FEd1U">August 28, 2016</a></li>
+              <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRQ0dvVGZHV2Njdkk">August 7, 2016</a></li>
+            </ul>
           </div>
-          <p class="browser-buttons">
-            <a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRRElMNmVqQjJWS2c" class="button button-approve button-large button-download">Download</a>
+          <p>
             <a href="https://chromium.googlesource.com/experimental/chromium/src/+/refs/wip/bajones/webvr_1" class="button-source">View source</a>
           </p>
         </div>
@@ -35,18 +49,20 @@
       <div class="container">
 
         <section id="setup" class="section setup">
-          <h3><a href="#setup">Instructions</a></h3>
+          <h2><a href="#setup">Instructions</a></h2>
           <ol>
-            <li>Download and launch experimental build of Chromium with WebVR support.</li>
+            <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRRElMNmVqQjJWS2c">Download the experimental build of Chromium with WebVR support</a>.</li>
+            <li>Find the <code>chromium_webvr_v1.1_win.zip</code> file in your <code>Downloads</code> directory, and extract all the contents.</li>
+            <li>In the output directory, find and launch the <code>chrome.exe</code> file.</li>
             <li>In the URL bar, load <code>chrome://flags#enable-webvr</code> and toggle the <code>Enable WebVR flag</code>.</li>
             <li>In the URL bar, load <code>chrome://flags#enable-gamepad-extensions</code> and toggle the <code>Enable Gamepad Extensions</code> flag.</li>
-            <li><span data-headset="htc-vive">Launch the SteamVR application.</span></li>
+            <li><span data-headset="htc-vive">Launch the <a href="https://www.vive.com/setup/">SteamVR</a> application.</span></li>
             <li>Enjoy WebVR content!</li>
           </ol>
         </section>
 
-        <section id="release-notes" class="section release-notes">
-          <h3><a href="#release-notes">Releases</a></h3>
+        <section id="releases" class="section releases">
+          <h2><a href="#releases">Releases</a></h2>
           <h4><a href="" itemprop="softwareApplication"></a></h4>
           <article itemscope itemtype="http://schema.org/SoftwareApplication">
             <dl>
@@ -60,7 +76,7 @@
               </dd>
               <dt>Date released</dt>
               <dd>
-                <time itemprop="datePublished" datetime="2016-12-13T00:00:00Z">
+                <time itemprop="datePublished" datetime="2016-12-13T10:31:00Z">
                   December 13, 2016
                 </time>
               </dd>
@@ -70,7 +86,7 @@
               </dd>
               <dt>File size</dt>
               <dd>
-                <meta itemprop="fileSize" content="93MB">
+                <span itemprop="fileSize" content="93MB">93 MB</span>
               </dd>
               <dt>System requirements</dt>
               <dd>
@@ -83,8 +99,7 @@
                   <li class="authors__item">
                     <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                       <span class="authors__item__author" itemprop="author" itemscope itemptype="http://schema.org/Person">
-                        <a class="authors__item__url" href="https://twitter.com/tojiro" itemprop="url">
-                        <span class="authors__item__url" itemprop="name">Brandon Jones</span>
+                        <a class="authors__item__url" href="https://twitter.com/tojiro" itemprop="url"><span class="authors__item__url" itemprop="name">Brandon Jones</span></a>
                         (<a href="https://www.google.com/" itemprop="organization">Google</a>)
                       </a>
                     </span>
@@ -100,11 +115,11 @@
         </section>
 
         <section id="known-issues" class="section known-issues">
-          <h3><a href="#known-issues">Known issues</a></h3>
+          <h2><a href="#known-issues">Known issues</a></h2>
           <p>These known issues apply to the <a href="#download">latest published build</a>. Where applicable, the detailed release notes below will list when historic known issues were fixed.</p>
           <ul>
             <li>
-              <p>There is no installer for the experimental builds of Chromium. Once the contents of the `.zip` file is extracted, launched <code>chrome.exe</code> directly from the <code>chrome-bin</code> folder.</p>
+              <p>There is no installer for the experimental builds of Chromium. Once the contents of the <code>.zip</code> file is extracted, launched <code>chrome.exe</code> directly from the <code>chrome-bin</code> folder.</p>
             </li>
             <li>
               <p>The timestamp passed to the <code>requestAnimationFrame</code> callback is off by a factor of 1000; the function erroneously receives microseconds instead of milliseconds.</p>
@@ -116,12 +131,12 @@
         </section>
 
         <section id="compat" class="section compat">
-          <h3><a href="#compat">Compatibility reports</a></h3>
+          <h2><a href="#compat">Compatibility reports</h2>
           <div class="table-responsive">
             <table>
               <thead>
                 <tr>
-                  <th>#</th>
+                  <th>Browser build</th>
                   <th>Date reported</th>
                   <th>Site URL</th>
                   <th>Result</th>
@@ -177,7 +192,7 @@
         </section>
 
         <section id="demos" class="section demos">
-          <h3><a href="#demos">Demos</a></h3>
+          <h2><a href="#demos">Demos</a></h2>
           <figure class="media-outlined">
             <!-- <img src="http://placehold.it/700x300?text=350x300"> -->
             <figcaption>Puzzle Rain</figcaption>
@@ -185,7 +200,7 @@
         </section>
 
         <section id="info" class="section info">
-          <h3><a href="#info">Info</a></h3>
+          <h2><a href="#info">Info</a></h2>
           <dl>
             <dt>How can I help out?</dt>
             <dd></dd>

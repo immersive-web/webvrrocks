@@ -12,19 +12,30 @@
         <!--<div class="cf"><a href="https://github.com/webvrrocks/webvrrocks/edit/master/public/firefox.html" title="Edit on GitHub" class="button button-primary pull-right">Edit on GitHub</a></div>-->
 
         <header class="browser-header">
-          <h1 class="browser-name">Firefox</h1>
-          <img class="browser-icon browser-icon-firefox" src="/firefox/icon-nightly.png" alt="Firefox" title="Firefox">
+          <a class="browser-link" href="/firefox">
+            <h1 class="browser-name">Firefox</h1>
+            <img class="browser-icon browser-icon-firefox" src="/firefox/icon-nightly.png" alt="Firefox" title="Firefox">
+          </a>
         </header>
 
-        <p class="browser-intro">WebVR in <a href="https://nightly.mozilla.org/">Firefox Nightly</a>, Mozilla's bleeding-edge version of <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>.</p>
+        <p class="browser-intro">WebVR in <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Firefox Nightly</a>, Mozilla's bleeding-edge version of <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>.</p>
+
+        <div class="message message-alert">
+          <strong>Warning:</strong> All <a href="#releases">Firefox Nightly releases</a> are highly experimental and subject to change!
+        </div>
 
         <div id="download" class="download">
-          <div class="message message-alert">
-            <strong>Warning:</strong> All <a href="#releases">Firefox Nightly releases</a> are highly experimental and subject to change!
+          <div class="dropdown-standalone dropdown-download">
+            <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly" class="button-unstyled button-large button-download">Download</a>
+            <!--
+            <span class="icon-arrow-down"></span>
+            <ul class="list-unstyled dropdown">
+              <li><a href=""></a></li>
+            </ul>
+            -->
           </div>
-          <p class="browser-buttons">
-            <a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRRElMNmVqQjJWS2c" class="button button-approve button-large button-download">Download</a>
-            <a href="https://chromium.googlesource.com/experimental/chromium/src/+/refs/wip/bajones/webvr_1" class="button-source">View source</a>
+          <p>
+            <a href="https://dxr.mozilla.org/mozilla-central/source/dom/vr" class="button-source">View source</a>
           </p>
         </div>
       </div>
@@ -34,9 +45,9 @@
       <div class="container">
 
         <section id="setup" class="section setup">
-          <h3><a href="#setup">Instructions</a></h3>
+          <h2><a href="#setup">Instructions</a></h2>
           <ol>
-            <li>Download and launch <a href="https://nightly.mozilla.org/">Firefox Nightly</a>.</li>
+            <li>Download and launch <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Firefox Nightly</a>.</li>
             <li data-headset="htc_vive"><a href="https://github.com/ValveSoftware/openvr/raw/master/bin/win64/openvr_api.dll">Download version 1.02 (64-bit) of the <code>openvr_api.dll</code> file</a> from the <a href="https://github.com/ValveSoftware/openvr/">OpenVR GitHub repository</a>.</li>
             <li data-headset="htc_vive">Save the <code>openvr_api.dll</code> file somewhere on your computer where the user running Firefox can read it (e.g., <code>c:\openvr\</code>).</li>
             <li data-headset="htc_vive">In Firefox Nightly, navigate to <code>about:config</code>; change the value of <code>dom.vr.openvr.enabled</code> to <code>true</code> and <code>gfx.vr.openvr-runtime</code> to the full path of the <code>openvr_api.dll</code> file (e.g., <code>c:\openvr\openvr_api.dll</code>).</li>
@@ -46,8 +57,8 @@
           </ol>
         </section>
 
-        <section id="release-notes" class="section release-notes">
-          <h3><a href="#release-notes">Releases</a></h3>
+        <section id="releases" class="section releases">
+          <h2><a href="#releases">Releases</a></h2>
           <h4><a href="" itemprop="softwareApplication"></a></h4>
           <article itemscope itemtype="http://schema.org/SoftwareApplication">
             <dl>
@@ -57,21 +68,21 @@
               </dd>
               <dt>Version</dt>
               <dd>
-                <span class="version">2016-12-13</span>
+                <span class="version">2017-01-21</span>
               </dd>
               <dt>Date released</dt>
               <dd>
-                <time itemprop="datePublished" datetime="2016-12-13T00:00:00Z">
-                  December 13, 2016
+                <time itemprop="datePublished" datetime="2017-01-21T12:39:00Z">
+                  January 21, 2017
                 </time>
               </dd>
               <dt>Download</dt>
               <dd>
-                <a class="button button-outlined-approve button-download" href="https://nightly.mozilla.org/" itemprop="downloadUrl">Download</a>
+                <a class="button button-outlined-approve button-download" href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly" itemprop="downloadUrl">Download</a>
               </dd>
               <dt>File size</dt>
               <dd>
-                <span itemprop="fileSize">93MB</span>
+                <span itemprop="fileSize" content="38MB">38 MB</span>
               </dd>
               <dt>System requirements</dt>
               <dd>
@@ -84,8 +95,7 @@
                   <li class="authors__item">
                     <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                       <span class="authors__item__author" itemprop="author" itemscope itemptype="http://schema.org/Person">
-                        <a class="authors__item__url" href="https://twitter.com/kearwoodgilbert" itemprop="url">
-                        <span class="authors__item__url" itemprop="name">Kearwood "Kip" Gilbert</span>
+                        <a class="authors__item__url" href="https://twitter.com/kearwoodgilbert" itemprop="url"><span class="authors__item__url" itemprop="name">Kearwood "Kip" Gilbert</span></a>
                         (<a href="https://www.mozilla.org/" itemprop="organization">Mozilla</a>)
                       </a>
                     </span>
@@ -93,8 +103,7 @@
                   <li class="authors__item">
                     <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                       <span class="authors__item__author" itemprop="author" itemscope itemptype="http://schema.org/Person">
-                        <a class="authors__item__url" href="https://twitter.com/daoshengmu" itemprop="url">
-                        <span class="authors__item__url" itemprop="name">Daosheng Mu</span>
+                        <a class="authors__item__url" href="https://twitter.com/daoshengmu" itemprop="url"><span class="authors__item__url" itemprop="name">Daosheng Mu</span></a>
                         (<a href="https://www.mozilla.org/" itemprop="organization">Mozilla</a>)
                       </a>
                     </span>
@@ -109,7 +118,7 @@
         </section>
 
         <section id="known-issues" class="section known-issues">
-          <h3><a href="#known-issues">Known issues</a></h3>
+          <h2><a href="#known-issues">Known issues</a></h2>
           <p>These known issues apply to the <a href="#download">latest published build</a>. Where applicable, the detailed release notes below will list when historic known issues were fixed.</p>
           <ul>
             <li>
@@ -119,12 +128,12 @@
         </section>
 
         <section id="compat" class="section compat">
-          <h3><a href="#compat">Compatibility reports</a></h3>
+          <h2><a href="#compat">Compatibility reports</a></h2>
           <div class="table-responsive">
             <table>
               <thead>
                 <tr>
-                  <th>#</th>
+                  <th>Browser build</th>
                   <th>Date reported</th>
                   <th>Site URL</th>
                   <th>Result</th>
@@ -180,7 +189,7 @@
         </section>
 
         <section id="demos" class="section demos">
-          <h3><a href="#demos">Demos</a></h3>
+          <h2><a href="#demos">Demos</a></h2>
           <figure class="media-outlined">
             <!-- <img src="http://placehold.it/700x300?text=350x300"> -->
             <figcaption>Puzzle Rain</figcaption>
@@ -188,7 +197,7 @@
         </section>
 
         <section id="info" class="section info">
-          <h3><a href="#info">Info</a></h3>
+          <h2><a href="#info">Info</a></h2>
           <dl>
             <dt>How can I help out?</dt>
             <dd></dd>

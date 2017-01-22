@@ -30,7 +30,8 @@ h1.page-title {
   margin: 0;
 }
 
-.main h1 {
+.main h1,
+.main h2 {
   font: bold 3rem NimbusSanLBold;
 }
 
@@ -49,16 +50,6 @@ h1.page-title {
 
 .section[data-section="headsets"] h1 {
   margin: 0;
-  vertical-align: top;
-}
-
-.section[data-section="headsets"] ul {
-  margin: 0;
-  padding-left: 0;
-}
-
-.section[data-section="headsets"] li {
-  list-style: none;
 }
 
 .section[data-section="headsets"] li a {
@@ -71,37 +62,18 @@ h1.page-title {
   opacity: 1;
 }
 
-.section[data-section="headsets"] ul {
-  font-size: 0;
-}
-
-.section[data-section="headsets"] ul {
-  margin-top: -60px;
-  text-align: right;
-}
-
-.section[data-section="headsets"] h1,
-.section[data-section="headsets"] ul,
-.section[data-section="headsets"] li {
-  display: inline-block;
-}
-
 .section[data-section="headsets"] li a {
   display: block;
   font-size: .7rem;
-  max-height: 3rem;
-  max-width: 12rem;
-  padding: 60px;
   text-align: center;
 }
 
 .section[data-section="headsets"] svg {
   display: block;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 0 auto;
+  max-height: 3rem;
+  max-width: 3rem;
   padding-bottom: 1rem;
-  height: 100%;
-  width: 3rem;
 }
 
 .section[data-section="headsets"] svg#daydream g {
@@ -130,7 +102,7 @@ h1.page-title {
   width: 100px;
 }
 
-.browser-header {
+.browser-link {
   display: flex;
   flex-direction: column-reverse;
 }
@@ -142,9 +114,15 @@ h1.page-title {
   margin-top: .75rem;
 }
 
-h2 {
+[data-layout="home"] .main h1,
+.main h2 {
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 400;
+}
+
+[data-layout="home"] .main h1 a,
+.main h2 a {
+  display: block;
 }
 
 .container > .browser-name {
@@ -162,6 +140,15 @@ h2 {
   min-width: 70px;
 }
 
+.browser-icon {
+  opacity: .9;
+  transition: .15s opacity ease-in-out;
+}
+
+.browser-link:hover .browser-icon {
+  opacity: 1;
+}
+
 .browser-icon-oculus-rift {
   min-height: auto;
 }
@@ -171,7 +158,6 @@ section {
 }
 
 .main .section {
-  margin: 0 -1.5rem;
   padding: 1.5rem;
 }
 
@@ -182,8 +168,18 @@ section {
 html:not([data-layout~="home"]) .main section p,
 html:not([data-layout~="home"]) .main section dl,
 html:not([data-layout~="home"]) .main section ol,
-html:not([data-layout~="home"]) .main section ul {
+html:not([data-layout~="home"]) .main section ul,
+.browser-intro {
   max-width: 600px;
+}
+
+.browser-header {
+  margin-bottom: .5rem;
+}
+
+.browser-intro {
+  opacity: .7;
+  line-height: 1.4;
 }
 
 [data-layout~="home"] .main section h2 {
@@ -294,9 +290,10 @@ ul.site-nav-list li {
 ul[data-section] {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
-ul[data-section] li {
+.main ul[data-section] li {
   list-style-type: none;
 }
 
@@ -304,32 +301,36 @@ ul[data-section] li + li {
   margin-top: 3rem;
 }
 
-ul[data-section="browsers"] {
+html[data-layout="home"] ul[data-section] {
+  max-width: 1200px;
+}
+
+ul[data-section] {
   align-items: baseline;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   line-height: 1.4;
-  margin: 0;
+  margin-top: 2.5rem;
   padding: 0 0 1rem;
 }
 
-.main ul[data-section="browsers"] li {
+ul[data-section] li {
   width: 100%;
 }
 
-ul[data-section="browsers"] [data-url] {
+ul[data-section] [data-url] {
   display: block;
   height: 100%;
   text-align: center;
   width: 100%;
 }
 
-[data-section="browsers"] a[data-url] {
+[data-section] a[data-url] {
   color: #999;
 }
 
-[data-section="browsers"] a[data-url]:hover {
+[data-section] a[data-url]:hover {
   color: #111;
 }
 
@@ -342,13 +343,14 @@ ul[data-section="browsers"] [data-url] {
   margin: 0 auto;
 }
 
-p.browser-buttons {
-  margin-bottom: 0;
+.download {
+  margin-top: 2rem;
 }
 
 .button-source {
   display: block;
   font-size: .8rem;
+  padding-top: .75rem;
 }
 
 a.button-source {
@@ -382,6 +384,80 @@ a.button-source:hover:after {
   pointer-events: visible;
   transform: scale(1);
   visibility: visible;
+}
+
+.dropdown-download,
+.dropdown-download .dropdown {
+  background-color: #43bb6e;
+}
+
+.dropdown-download {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.dropdown-download.dropdown-with-children {
+  min-width: 10rem;
+}
+
+.dropdown-download .button {
+  background-color: transparent;
+}
+
+.dropdown-download .button-unstyled,
+.dropdown-download .dropdown a {
+  color: #fff;
+}
+
+.dropdown-download .icon-arrow-down {
+  border-top-color: #fff;
+  right: auto;
+  top: -4px;
+}
+
+.dropdown-download .dropdown li {
+  font-size: .8rem;
+}
+
+.dropdown-download .dropdown li:not(:last-child) {
+  border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+.dropdown-download:not(.dropdown-with-children):hover {
+  border-radius: 3px;
+}
+
+.dropdown-download .dropdown li:last-child,
+.dropdown-download .dropdown li:last-child a {
+  border-radius: 0 0 3px 3px;
+}
+
+.dropdown-download .dropdown a,
+.dropdown-download:hover .dropdown a {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.dropdown-download .dropdown a:hover {
+  background-color: #3fae67;
+  color: #e8f7ef;
+}
+
+.dropdown-download:hover {
+  background-color: #369658;
+  z-index: 1;
+}
+
+.note {
+  color: #999;
+  font-size: .7rem;
+  line-height: 2;
+}
+
+.note strong {
+  color: #666;
+  margin-right: .5ch;
+  text-transform: uppercase;
 }
 
 /**
@@ -444,6 +520,27 @@ a.button-source:hover:after {
   .site-title {
     width: calc(7rem + 8vw);
   }
+
+  ul[data-section] {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+
+  ul[data-section] li {
+    flex-basis: 33.3333%;
+    width: auto;
+  }
+
+  .main ul[data-section] li + li {
+    margin-top: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .main ul[data-section] li:nth-child(3n) {
+    padding-right: 0;
+  }
 }
 
 @media all and (min-width: 25rem) {
@@ -459,6 +556,10 @@ a.button-source:hover:after {
   .site-nav {
     flex-grow: 1;
     flex-shrink: 0;
+  }
+
+  ul[data-section] {
+    justify-content: space-between;
   }
 }
 
@@ -503,16 +604,26 @@ a.button-source:hover:after {
     padding: 1.5rem;
   }
 
-  ul[data-section="browsers"] {
-    flex-direction: row;
-  }
-
-  .main ul[data-section="browsers"] li + li {
-    margin-top: 1.5rem;
-    padding-left: .5rem;
-  }
-
   [data-name] {
     margin-top: 1rem;
+  }
+}
+
+@media all and (min-width: 60rem) {
+  ul[data-section] {
+    justify-content: space-between;
+  }
+
+  ul[data-section] li {
+    flex-basis: auto;
+    width: auto;
+  }
+
+  .main ul[data-section] li:nth-child(3n) {
+    padding-right: 1rem;
+  }
+
+  .main ul[data-section] li:last-child {
+    padding-right: 0;
   }
 }
