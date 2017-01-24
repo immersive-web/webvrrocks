@@ -1,5 +1,6 @@
+{% import '_helpers.html' as helpers %}
 <!doctype html>
-<html lang="en" data-browser="firefox" data-debug="true">
+<html lang="en" data-browser="firefox">
   <head>
     {% include "_head.html" %}
     <title>Firefox • WebVR Rocks</title>
@@ -8,6 +9,8 @@
     <header id="header" class="header" role="banner">
       <div class="container section">
         <p class="hidden-text"><a href="/" aria-controls="main" tabindex="0">&#xAB; Back to WebVR Rocks home</a></p>
+
+        {% include "_logo.html" %}
 
         <!--<div class="cf"><a href="https://github.com/webvrrocks/webvrrocks/edit/master/public/firefox.html" title="Edit on GitHub" class="button button-primary pull-right">Edit on GitHub</a></div>-->
 
@@ -53,7 +56,7 @@
         </section>
 
         <section id="releases" class="section releases">
-          <h2><a href="#releases">Releases</a></h2>
+          <h2><a href="#releases">Latest version</a></h2>
           <h3><a href="" itemprop="softwareApplication"></a></h3>
           <article itemscope itemtype="http://schema.org/SoftwareApplication">
             <dl>
@@ -123,9 +126,33 @@
 
         <section id="demos" class="section demos">
           <h2><a href="#demos">Demos</a></h2>
-          <figure class="media-outlined">
-            <!-- <img src="http://placehold.it/700x300?text=350x300"> -->
-            <figcaption>Puzzle Rain</figcaption>
+          {# demo_tile('a_blast') #}
+          {# demo_tile('puzzle_rain') #}
+          {# demo_tile('stage_vr') #}
+          {# demo_tile('a_way_to_go') #}
+          <figure class="media-outlined media-demo">
+            <a class="demo-link" href="/a_blast">
+              <img class="demo-poster" src="/a_blast/poster.png" height="150">
+              <figcaption>A-Blast</figcaption>
+            </a>
+          </figure>
+          <figure class="media-outlined media-demo">
+            <a class="demo-link" href="/puzzle_rain">
+              <img class="demo-poster" src="/puzzle_rain/poster.png" height="150">
+              <figcaption>Puzzle Rain</figcaption>
+            </a>
+          </figure>
+          <figure class="media-outlined media-demo">
+            <a class="demo-link" href="/stage_vr">
+              <img class="demo-poster" src="/stage_vr/poster.png" height="150">
+              <figcaption>Stage VR</figcaption>
+            </a>
+          </figure>
+          <figure class="media-outlined media-demo">
+            <a class="demo-link" href="/a_way_to_go">
+              <img class="demo-poster" src="/a_way_to_go/poster.png" height="150">
+              <figcaption>A Way to Go</figcaption>
+            </a>
           </figure>
         </section>
 

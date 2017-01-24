@@ -7,12 +7,7 @@
   <body>
     <header id="header" class="site-header">
       <h1 class="site-title">
-        <a class="site-logo" href="/">
-          {% include "rocks/logo.svg" %}
-          <span class="rocks-wordmark">
-            <span class="rocks-wordmark-webvr">WebVR</span> <span class="rocks-wordmark-rocks">Rocks</span>
-          </span>
-        </a>
+        {% include "_logo.html" %}
       </h1>
       <nav class="site-nav" role="navigation">
         <ul class="site-nav-list">
@@ -26,6 +21,11 @@
 
     <main id="main" class="main" role="main">
       <div class="container">
+        <section id="intro" class="section intro" data-section="intro">
+          <p class="webvr-intro"><strong>WebVR</strong> is a JavaScript API that makes use of any VR headset to create fully immersive 3D experiences in your browser.</p>
+          <p class="intro-compat">Works with the <a href="/htc_vive">HTC Vive</a>, <a href="/oculus_rift">Oculus Rift</a>, <a href="/samsung_gear_vr">Samsung Gear VR</a>, <a href="/google_daydream">Google Daydream</a>, etc.</p>
+        </section>
+
         <section id="headsets" class="section headsets" data-section="headsets">
           <h1><a href="#headsets">Headsets</a></h1>
           <ul data-section="headsets">

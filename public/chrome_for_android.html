@@ -1,3 +1,4 @@
+{% import '_helpers.html' as helpers %}
 <!doctype html>
 <html lang="en" data-browser="chromium">
   <head>
@@ -8,6 +9,8 @@
     <header id="header" class="header" role="banner">
       <div class="container section">
         <p class="hidden-text"><a href="/" aria-controls="main" tabindex="0">&#xAB; Back to WebVR Rocks home</a></p>
+
+        {% include "_logo.html" %}
 
         <!--<div class="cf"><a href="https://github.com/webvrrocks/webvrrocks/edit/master/public/chrome_for_android.html" title="Edit on GitHub" class="button button-primary pull-right">Edit on GitHub</a></div>-->
 
@@ -44,7 +47,7 @@
         </section>
 
         <section id="releases" class="section releases">
-          <h2><a href="#releases">Releases</a></h2>
+          <h2><a href="#releases">Latest version</a></h2>
           <h3><a href="" itemprop="softwareApplication"></a></h3>
           <article itemscope itemtype="http://schema.org/SoftwareApplication">
             <dl>
@@ -78,28 +81,16 @@
               <dt class="browser-authors">Authors</dt>
               <dd>
                 <ul class="authors__list">
-                  <li class="authors__item">
-                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                      <span class="authors__item__author" itemprop="author" itemscope itemptype="http://schema.org/Person">
-                        <a class="authors__item__url" href="https://twitter.com/tojiro" itemprop="url"><span class="authors__item__url" itemprop="name">Brandon Jones</span></a>
-                        (<a href="https://www.google.com/" itemprop="organization">Google</a>)
-                      </a>
-                    </span>
-                  </li>
-                  <li class="authors__item">
-                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                      <span class="authors__item__author" itemprop="author" itemscope itemptype="http://schema.org/Person">
-                        <a class="authors__item__url" href="https://twitter.com/klausweidner" itemprop="url"><span class="authors__item__url" itemprop="name">Klaus Weidner</span></a>
-                        (<a href="https://www.google.com/" itemprop="organization">Google</a>)
-                      </a>
-                    </span>
-                  </li>
+                  {{ helpers.author_item('tojiro') }}
+                  {{ helpers.author_item('klausweidner') }}
                 </ul>
               </dd>
-              <dt>Release notes</dt>
-              <ul>
-                <li>Applies multiple optimizations on top of the version of WebVR publicly available in <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">Chrome 56 beta</a>, primarily in the form of reducing texture copies. This gives significantly better performance and latency in most cases. Consider this a preview of performance targets for later versions of Chrome, with further possible improvements still to come.</li>
-              </ul>
+              <dt class="browser-release-notes">Release notes</dt>
+              <dd>
+                <ul>
+                  <li>Applies multiple optimizations on top of the version of WebVR publicly available in <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">Chrome 56 beta</a>, primarily in the form of reducing texture copies. This gives significantly better performance and latency in most cases. Consider this a preview of performance targets for later versions of Chrome, with further possible improvements still to come.</li>
+                </ul>
+              </dd>
             </dl>
           </article>
         </section>
@@ -109,56 +100,9 @@
           <p>These known issues apply to the <a href="#download">latest published build</a>. Where applicable, the detailed release notes below will list when historic known issues were fixed.</p>
           <ul>
             <li>
-              <p>There is no installer for the experimental builds of Chromium. Once the contents of the <code>.zip</code> file is extracted, launched <code>chrome.exe</code> directly from the <code>chrome-bin</code> folder.</p>
-            </li>
-            <li>
-              <p>The timestamp passed to the <code>requestAnimationFrame</code> callback is off by a factor of 1000; the function erroneously receives microseconds instead of milliseconds.</p>
-            </li>
-            <li>
-              <p><a class="button button-outlined-neutral button-small button-bug" href="https://github.com/toji/chrome-webvr-issues/issues/73">Bug</a> OpenVR (HTC Vive): Static scene content wobbles in response to head movement.</p>
+              <p>There is no installer for the experimental <code>.apk</code> builds of Chromium for Android.</p>
             </li>
           </ul>
-        </section>
-
-        <section id="compat" class="section compat">
-          <h2><a href="#compat">Compatibility reports</a></h2>
-          <div class="table-responsive">
-            <table>
-              <thead>
-                <tr>
-                  <th>Browser build</th>
-                  <th>Date reported</th>
-                  <th>Site URL</th>
-                  <th>Result</th>
-                  <th>Reporter</th>
-                  <th>Notes</th>
-                  <th>Media</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="table-cell-success">
-                  <td>2016-12-19</td>
-                  <td>2016-12-21</td>
-                  <td><a href="https://webvr.info/samples/">https://webvr.info/samples/</a></td>
-                  <td>&#x2705;</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr class="table-cell-error">
-                  <td>2016-12-16</td>
-                  <td>2016-12-16</td>
-                  <td><a href="https://webvr.info/samples/">https://webvr.info/samples/</a></td>
-                  <td>&#x2705;</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </section>
 
         <section id="demos" class="section demos">
