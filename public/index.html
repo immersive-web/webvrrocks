@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en" data-layout="home">
   <head>
-    <posthtml-head-elements></posthtml-head-elements>
+    {% include "_head.html" %}
     <title>WebVR Rocks</title>
   </head>
   <body>
     <header id="header" class="site-header">
       <h1 class="site-title">
         <a class="site-logo" href="/">
-          <include src="rocks/logo.svg"></include>
+          {% include "rocks/logo.svg" %}
           <span class="rocks-wordmark">
             <span class="rocks-wordmark-webvr">WebVR</span> <span class="rocks-wordmark-rocks">Rocks</span>
           </span>
@@ -29,12 +29,12 @@
         <section id="headsets" class="section headsets" data-section="headsets">
           <h1><a href="#headsets">Headsets</a></h1>
           <ul data-section="headsets">
-            <li><a href="/htc_vive"><include src="htc_vive/pictogram.svg"></include> HTC Vive</a></li>
-            <li><a href="/oculus_rift"><include src="oculus_rift/pictogram.svg"></include> Oculus Rift</a></li>
-            <li><a href=""><include src="samsung_gear_vr/pictogram.svg"></include> Samsung Gear VR</a></li>
-            <li><a href=""><include src="osvr/pictogram.svg"></include> OSVR HDK2</a></li>
-            <li><a href=""><include src="google_daydream/pictogram.svg"></include> Google Daydream</a></li>
-            <li><a href=""><include src="google_cardboard/pictogram.svg"></include> Google Cardboard</a></li>
+            <li><a href="/htc_vive">{% include "htc_vive/pictogram.svg" %} HTC Vive</a></li>
+            <li><a href="/oculus_rift">{% include "oculus_rift/pictogram.svg" %} Oculus Rift</a></li>
+            <li><a href="">{% include "samsung_gear_vr/pictogram.svg" %} Samsung Gear VR</a></li>
+            <li><a href="">{% include "osvr/pictogram.svg" %} OSVR HDK2</a></li>
+            <li><a href="">{% include "google_daydream/pictogram.svg" %} Google Daydream</a></li>
+            <li><a href="">{% include "google_cardboard/pictogram.svg" %} Google Cardboard</a></li>
           </ul>
         </section>
 
@@ -53,6 +53,6 @@
       </div>
     </main>
 
-    <include src="_footer.html"></include>
+    {% include "_footer.html" %}
   </body>
 </html>

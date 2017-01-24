@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "private": "true",
   "description": "WebVR Rocks",
-  "main": "server.js",
+  "main": "dev.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "node ./server",
-    "prod": "NODE_ENV='production' node ./server",
+    "dev": "node ./dev.js public/media/js/main.js:_prod/media/js/main.js --port 3000 --dir _prod --live=**.{html,css,svg} --cors --verbose",
     "test": "npm run prod",
-    "build": "cp -R public _prod && NODE_ENV='production' posthtml -r -i _prod/**/*.html",
+    "build": "shx cp -R public _prod && node ./node_modules/.bin/nunjucks '**/*.html' --path public --unsafe --extensions $PWD/nunjucks-helpers.js --out _prod",
     "deploy": "surge _prod -d https://webvrrocks.surge.sh",
     "open": "opn 'http://webvrrocks.surge.sh'",
     "prebuild": "shx rm -rf _prod",
@@ -18,23 +17,16 @@
     "predeploy": "npm run build"
   },
   "dependencies": {
-    "electricity": "github:cvan/electricity#a10db6a",
-    "express": "^4.14.0",
-    "express-posthtml": "^1.0.4",
-    "internal-ip": "^1.2.0",
-    "parseurl": "^1.3.1",
-    "posthtml": "^0.9.1",
-    "posthtml-cli": "github:cvan/posthtml-cli#7fc87ac",
-    "posthtml-head-elements": "^0.5.0",
-    "posthtml-include": "^1.1.0",
-    "posthtml-livereload": "^1.0.0",
-    "posthtml-load-config": "^1.0.0",
-    "posthtml-stream": "github:posthtml/posthtml-stream",
+    "budo": "github:mattdesl/budo#feature/livereload-rework",
+    "nunjucks-cli": "github:cvan/nunjucks-cli#214cea4",
+    "nunjucks-includeData": "0.0.9",
+    "shelljs": "^0.7.6",
     "shx": "^0.2.1",
     "tiny-lr": "^1.0.3",
     "yonder": "^0.2.0"
   },
   "devDependencies": {
+    "budo": "github:mattdesl/budo#feature/livereload-rework",
     "opn": "^4.0.2"
   },
   "engines": {

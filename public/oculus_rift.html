@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-layout="headset oculus_rift" data-headset="oculus_rift">
   <head>
-    <posthtml-head-elements></posthtml-head-elements>
+    {% include "_head.html" %}
     <title>Oculus Rift • WebVR Rocks</title>
   </head>
   <body>
@@ -28,6 +28,6 @@
       </div>
     </main>
 
-    <include src="_footer.html"></include>
+    {% include "_footer.html" %}
   </body>
 </html>

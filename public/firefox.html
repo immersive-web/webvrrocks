@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-browser="firefox" data-debug="true">
   <head>
-    <posthtml-head-elements></posthtml-head-elements>
+    {% include "_head.html" %}
     <title>Firefox • WebVR Rocks</title>
   </head>
   <body>
@@ -16,7 +16,7 @@
           <img class="browser-icon browser-icon-firefox" src="/firefox/icon-nightly.png" alt="Firefox" title="Firefox">
         </a>
 
-        <p class="browser-intro">WebVR in <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Firefox Nightly</a>, Mozilla's bleeding-edge version of <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>.</p>
+        <p class="browser-intro">WebVR in <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Firefox Nightly</a>, Mozilla&rsquo;s bleeding-edge version of <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>.</p>
 
         <div class="message message-alert">
           <strong>Warning:</strong> All <a href="#releases">Firefox Nightly releases</a> are highly experimental and subject to change!
@@ -133,6 +133,6 @@
       </div>
     </main>
 
-    <include src="_footer.html"></include>
+    {% include "_footer.html" %}
   </body>
 </html>

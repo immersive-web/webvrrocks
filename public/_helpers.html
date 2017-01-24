@@ -1,0 +1,11 @@
+{% macro author_item (slug) %}
+  {% includeData slug + '.json' as person %}
+  <li class="authors__item">
+    <span class="authors__item__author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <figure>
+        <a class="authors__item__url" href="{{ person.twitter_url }}" itemprop="url"><img class="authors__item__gravatar" src="{{ person.image }}" alt="{{ person.name }}" width="40"></a>
+        <figcaption><a class="authors__item__url" href="{{ person.twitter_url }}" itemprop="url"><span class="authors__item__url" itemprop="name">{{ person.name }}</span></a> (<a href="{{ person.worksFor.url }}" itemprop="organization">{{ person.worksFor.name }}</a>)</figcaption>
+      </figure>
+    </span>
+  </li>
+{% endmacro %}

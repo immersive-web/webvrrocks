@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-layout="headset htc_vive" data-headset="htc_vive">
   <head>
-    <posthtml-head-elements></posthtml-head-elements>
+    {% include "_head.html" %}
     <meta charset="utf-8">
     <title>HTC Vive • WebVR Rocks</title>
   </head>
@@ -75,6 +75,6 @@
       </div>
     </main>
 
-    <include src="_footer.html"></include>
+    {% include "_footer.html" %}
   </body>
 </html>
