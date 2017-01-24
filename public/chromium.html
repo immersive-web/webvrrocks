@@ -6,18 +6,16 @@
     <title>Chromium • WebVR Rocks</title>
   </head>
   <body>
-    <header id="header" class="header section" role="banner">
-      <div class="container">
+    <header id="header" class="header" role="banner">
+      <div class="container section">
         <p class="hidden-text"><a href="/" aria-controls="main" tabindex="0">&#xAB; Back to WebVR Rocks home</a></p>
 
         <!--<div class="cf"><a href="https://github.com/webvrrocks/webvrrocks/edit/master/public/chromium.html" title="Edit on GitHub" class="button button-primary pull-right">Edit on GitHub</a></div>-->
 
-        <header class="browser-header">
-          <a class="browser-link" href="/chromium">
-            <h1 class="browser-name">Chromium</h1>
-            <img class="browser-icon browser-icon-chromium" src="/chromium/icon.png" alt="Chromium" title="Chromium">
-          </a>
-        </header>
+        <a class="browser-link" href="/chromium">
+          <h1 class="browser-name">Chromium</h1>
+          <img class="browser-icon browser-icon-chromium" src="/chromium/icon.png" alt="Chromium" title="Chromium">
+        </a>
 
         <p class="browser-intro">WebVR in <a href="https://www.chromium.org/">Chromium</a>, Google's open-source version of <a href="https://www.google.com/chrome/">Chrome</a>.</p>
 
@@ -25,23 +23,21 @@
           <strong>Warning:</strong> All <a href="#releases">Chromium WebVR builds posted here</a> are highly experimental and subject to change!
         </div>
 
-        <div id="download" class="download">
-          <div class="dropdown-standalone dropdown-download dropdown-with-children">
-            <a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRRElMNmVqQjJWS2c" class="button-unstyled button-large button-download">Download</a>
-            <span class="icon-arrow-down"></span>
-            <ul class="list-unstyled dropdown">
-              <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRRElMNmVqQjJWS2c">December 13, 2016</a></li>
-              <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRc2lEWDg2NkptNzg">September 23, 2016</a></li>
-              <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRVzFKVWNSbFA5aXM">September 17, 2016</a></li>
-              <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRcVNBWHR5OW0za1E">August 29, 2016</a></li>
-              <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRZUFhd0Q5M1FEd1U">August 28, 2016</a></li>
-              <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRQ0dvVGZHV2Njdkk">August 7, 2016</a></li>
-            </ul>
-          </div>
-          <p>
-            <a href="https://chromium.googlesource.com/experimental/chromium/src/+/refs/wip/bajones/webvr_1" class="button-source">View source</a>
-          </p>
+        <div id="download" class="download dropdown-standalone dropdown-download dropdown-with-children">
+          <a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRRElMNmVqQjJWS2c" class="button-unstyled button-large button-download">Download</a>
+          <span class="icon-arrow-down"></span>
+          <ul class="list-unstyled dropdown">
+            <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRRElMNmVqQjJWS2c">December 13, 2016</a></li>
+            <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRc2lEWDg2NkptNzg">September 23, 2016</a></li>
+            <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRVzFKVWNSbFA5aXM">September 17, 2016</a></li>
+            <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRcVNBWHR5OW0za1E">August 29, 2016</a></li>
+            <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRZUFhd0Q5M1FEd1U">August 28, 2016</a></li>
+            <li><a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRQ0dvVGZHV2Njdkk">August 7, 2016</a></li>
+          </ul>
         </div>
+        <p class="view-source">
+          <a href="https://chromium.googlesource.com/experimental/chromium/src/+/refs/wip/bajones/webvr_1" class="button-source">View source</a>
+        </p>
       </div>
     </header>
 
@@ -66,11 +62,15 @@
           <h4><a href="" itemprop="softwareApplication"></a></h4>
           <article itemscope itemtype="http://schema.org/SoftwareApplication">
             <dl>
-              <dt>Type</dt>
+              <dt class="browser-type">Type</dt>
               <dd>
                 <span class="applicationSubCategory">Experimental Browser Build</span>
               </dd>
-              <dt>Version</dt>
+              <dt class="browser-download">Download</dt>
+              <dd>
+                <a class="button button-outlined-approve button-download" href="https://drive.google.com/file/d/0BzudLt22BqGRRElMNmVqQjJWS2c/view?usp=drive_web" itemprop="downloadUrl">Download</a>
+              </dd>
+              <dt class="browser-version">Version</dt>
               <dd>
                 <span class="version">2016-12-13</span>
               </dd>
@@ -79,10 +79,6 @@
                 <time itemprop="datePublished" datetime="2016-12-13T10:31:00Z">
                   December 13, 2016
                 </time>
-              </dd>
-              <dt>Download</dt>
-              <dd>
-                <a class="button button-outlined-approve button-download" href="https://drive.google.com/file/d/0BzudLt22BqGRRElMNmVqQjJWS2c/view?usp=drive_web" itemprop="downloadUrl">Download</a>
               </dd>
               <dt>File size</dt>
               <dd>
