@@ -1,0 +1,31 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "Klaus Weidner",
+  "jobTitle": "WebVR Platform Engineer on Chrome for Android",
+  "affiliation": "Google",
+  "additionalName": "klausweidner",
+  "url": "http://blog.tojicode.com",
+  "sameAs": [
+    {
+      "@type": "Twitter",
+      "url": "https://twitter.com/klausweidner"
+    },
+    {
+      "@type": "GitHub",
+      "url": "https://github.com/klausw"
+    }
+  ],
+  "email": "klausw@google.com",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Google",
+    "url": "https://www.google.com/",
+    "sameAs": [
+      "https://vr.google.com/"
+    ]
+  },
+  "colleague": [
+    "https://webvr.rocks/tojiro.json"
+  ]
+}

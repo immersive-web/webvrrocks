@@ -8,6 +8,14 @@
   "url": "http://cyee.io/",
   "website": [
     {
+      "@type": "Twitter",
+      "url": "https://twitter.com/whoyee"
+    },
+    {
+      "@type": "GitHub",
+      "url": "https://github.com/caseyyee"
+    },
+    {
       "@type": "WebSite",
       "url": "http://cyee.io/"
     }
@@ -15,7 +23,19 @@
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Vancouver",
-    "addressRegion": "Canada"
+    "addressRegion": "Canada",
+    "addressCountry": "CA"
   },
-  "email": "caseyyee.ca@gmail.com"
+  "email": "caseyyee.ca@gmail.com",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Mozilla",
+    "url": "https://www.mozilla.org/",
+    "sameAs": [
+      "https://mozvr.com/"
+    ]
+  },
+  "colleague": [
+    "https://webvr.rocks/cvan.json"
+  ]
 }

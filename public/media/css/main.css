@@ -485,13 +485,12 @@ a.button-source:hover:after {
 }
 
 [data-debug][data-headset] body,
-  [data-debug][data-browser] body {
-    background: red;
-  }
+[data-debug][data-browser] body {
+  background: red;
+}
 
-  [data-debug] .section {
-    background-color: orange;
-  }
+[data-debug] .section {
+  background-color: orange;
 }
 
 /**

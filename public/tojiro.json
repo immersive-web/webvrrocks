@@ -8,6 +8,18 @@
   "url": "http://blog.tojicode.com",
   "website": [
     {
+      "@type": "Twitter",
+      "url": "https://twitter.com/tojiro"
+    },
+    {
+      "@type": "GitHub",
+      "url": "https://github.com/tojiro"
+    },
+    {
+      "@type": "WebSite",
+      "url": "http://tojicode.com"
+    },
+    {
       "@type": "Blog",
       "url": "http://blog.tojicode.com"
     }
@@ -15,7 +27,19 @@
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "San Jose",
-    "addressRegion": "California"
+    "addressRegion": "California",
+    "addressCountry": "USA"
   },
-  "email": "bajones@google.com"
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Google",
+    "url": "https://www.google.com/",
+    "sameAs": [
+      "https://vr.google.com/"
+    ]
+  },
+  "email": "bajones@google.com",
+  "colleague": [
+    "https://webvr.rocks/klausweidner.json"
+  ]
 }

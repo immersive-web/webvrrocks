@@ -8,6 +8,14 @@
   "url": "https://cvan.io/",
   "website": [
     {
+      "@type": "Twitter",
+      "url": "https://twitter.com/cvanw"
+    },
+    {
+      "@type": "GitHub",
+      "url": "https://github.com/cvan"
+    },
+    {
       "@type": "WebSite",
       "url": "https://cvan.io/"
     }
@@ -15,7 +23,19 @@
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "San Francisco",
-    "addressRegion": "California"
+    "addressRegion": "California",
+    "addressCountry": "USA"
   },
-  "email": "hearcomestreble@gmail.com"
+  "email": "hearcomestreble@gmail.com",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Mozilla",
+    "url": "https://www.mozilla.org/",
+    "sameAs": [
+      "https://mozvr.com/"
+    ]
+  },
+  "colleague": [
+    "https://webvr.rocks/caseyyee.json"
+  ]
 }
