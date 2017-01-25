@@ -25,10 +25,13 @@
     <main id="main" role="main">
       <div class="container">
 
+        <img src="samsung_internet/samsung-internet-browser-gear-vr.jpg" height="300">
+
         <section id="setup" class="section setup">
           <h2><a href="#setup">Instructions</a></h2>
           <ol>
-            <li>Search for and install <code>Samsung Internet</code>.</li>
+            <li>Search for and install Samsung Internet browser.
+            <br/><img src="samsung_internet/app.png" height="300"></li>
             <li>Launch Samsung Internet browser from your Oculus Gear VR library.</li>
             <li>Navigate to a WebVR compatible site.</li>
             <li>Accept the option to enable WebVR.</li>
@@ -75,6 +78,31 @@
               <p>Latency is quite high and resolution is low.   Content is very pixelated.</p>
             </li>
           </ul>
+        </section>
+
+        <section id="demos" class="section demos">
+          <h2><a href="#demos">Demos</a></h2>
+          {# demo_tile('three_examples') #}
+          {# demo_tile('aframe_examples') #}
+          <figure class="media-outlined media-demo">
+            <a class="demo-link" href="/three">
+              <img class="demo-poster" src="/three/poster.png" height="150">
+              <figcaption>Three.js WebVR examples</figcaption>
+            </a>
+          </figure>
+          <figure class="media-outlined media-demo">
+            <a class="demo-link" href="/aframe">
+              <img class="demo-poster" src="/aframe/poster.png" height="150">
+              <figcaption>A-Frame examples</figcaption>
+            </a>
+          </figure>
+        </section>
+
+        <section id="info" class="section info">
+          <h2><a href="#info">Info</a></h2>
+          <dl>
+            <dt><a href="https://developer.samsung.com/internet#gearvr-overview">Developer pages for Samsung Internet on Gear VR</a></dt>
+          </dl>
         </section>
       </div>
     </main>
