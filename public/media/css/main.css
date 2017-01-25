@@ -284,7 +284,7 @@ h1.page-title {
   padding: 1rem 0;
 }
 
-.browser-name {
+[itemprop="browser"] [itemprop="name"] {
   font-weight: 500;
   margin: 0 0 .5rem;
   padding-top: .5rem;
@@ -666,6 +666,10 @@ a.button-source:hover:after {
   text-transform: uppercase;
 }
 
+[data-debug] .site-logo {
+  background: yellow;
+}
+
 [data-debug][data-headset] body,
 [data-debug][data-browser] body {
   background: red;
@@ -693,7 +697,7 @@ a.button-source:hover:after {
   max-width: 7rem;
 }
 
-@media all and (min-width: 20rem) {
+@media all and (min-width: 18rem) {
   .site-title {
     width: calc(7rem + 8vw);
   }
@@ -718,7 +722,7 @@ a.button-source:hover:after {
     opacity: .9;
     padding: 0;
     position: absolute;
-    right: 1.5rem;
+    right: 0;
     text-align: right;
     transition: .15s opacity ease-in-out;
   }
@@ -772,7 +776,7 @@ a.button-source:hover:after {
   }
 }
 
-@media all and (min-width: 25rem) {
+@media all and (min-width: 20rem) {
   .site-header {
     display: flex;
     flex-direction: row-reverse;
