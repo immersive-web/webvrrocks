@@ -2,22 +2,22 @@
 <!doctype html>
 <html lang="en" data-layout="home">
   <head>
-    {% include "_head.html" %}
+    {% include '_head.html' %}
     <title>WebVR Rocks</title>
   </head>
   <body>
     <header id="header" class="site-header">
-      <h1 class="site-title">
-        {% include "_logo.html" %}
-      </h1>
-      <nav class="site-nav" role="navigation">
-        <ul class="site-nav-list">
-          <li><a href="#headsets">Headsets</a></li>
-          <li><a href="#browsers">Browsers</a></li>
-          <li><a href="#experiences">Experiences</a></li>
-          <li><a href="#info">Info</a></li>
-        </ul>
-      </nav>
+      <div class="container section">
+        {% include '_logo.html' %}
+        <nav class="site-nav" role="navigation">
+          <ul class="site-nav-list">
+            <li><a href="#headsets">Headsets</a></li>
+            <li><a href="#browsers">Browsers</a></li>
+            <li><a href="#experiences">Experiences</a></li>
+            <li><a href="#info">Info</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main id="main" class="main" role="main">
@@ -54,6 +54,6 @@
       </div>
     </main>
 
-    {% include "_footer.html" %}
+    {% include '_footer.html' %}
   </body>
 </html>
