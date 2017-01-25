@@ -22,7 +22,6 @@
     "nunjucks-includeData": "0.0.9",
     "shelljs": "^0.7.6",
     "shx": "^0.2.1",
-    "tiny-lr": "^1.0.3",
     "yonder": "^0.2.0"
   },
   "devDependencies": {
