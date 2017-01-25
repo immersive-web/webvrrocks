@@ -210,6 +210,11 @@
       numVisits = parseInt(storage.get('visits'), 10) || 0;
     }
     storage.set('visits', ++numVisits);
+    if (storage.has('debug')) {
+      document.documentElement.dataset.debug = '';
+    } else {
+      delete document.documentElement.dataset.debug;
+    }
   };
   var handleClick = function (e) {
     // if (e.target.matches && e.target.matches('a[href="#' + hash + '"]')) {

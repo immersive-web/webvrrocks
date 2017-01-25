@@ -79,10 +79,7 @@ body {
   width: 1px;
 }
 
-.license {
-  display: none;
-}
-
+.license,
 .browser-type,
 .browser-type + dd,
 .browser-version,
@@ -174,10 +171,6 @@ h1.page-title {
   font-size: 3rem;
 }
 
-.rocks-wordmark {
-  display: none;
-}
-
 .section[data-section="headsets"] {
   background-color: rgb(15,30,250);
   display: none;
@@ -234,20 +227,12 @@ h1.page-title {
   fill: #fff;
 }
 
-.header .button {
-  margin-bottom: .75rem;
-}
-
-.company-logo {
-  width: 100px;
-}
-
 .browser-link {
   display: flex;
   flex-direction: column-reverse;
 }
 
-[itemprop="name"] {
+/*li*/[itemprop="browser"] [itemprop="name"] {
   display: block;
   flex: 1;
   font-size: .8rem;
@@ -284,10 +269,14 @@ h1.page-title {
   padding: 1rem 0;
 }
 
-[itemprop="browser"] [itemprop="name"] {
+/*li*/[itemprop="browser"] [itemprop="name"] {
   font-weight: 500;
-  margin: 0 0 .5rem;
-  padding-top: .5rem;
+  margin: 0 0 .75rem;
+  padding-top: .75rem;
+}
+
+/*h1*/.browser-name {
+  padding-bottom: .5rem;
 }
 
 .browser-icon {
@@ -475,18 +464,14 @@ ul.site-nav-list li {
 
 .site-logo {
   display: block;
-  padding: 1.5rem 1.5rem 0;
   z-index: 1;
   width: 100%;
 }
 
-[data-headset] .site-logo,
-[data-browser] .site-logo {
-  display: none;
-}
-
 .site-logo svg {
   height: 100%;
+  margin: 1.5rem 1.5rem 0;
+  max-width: calc(3rem + 6vw);
   width: 100%;
 }
 
@@ -494,7 +479,39 @@ ul.site-nav-list li {
   transition: .15s fill ease-in-out;
 }
 
-.edit-page {
+[data-layout="secondary"] .site-logo {
+  display: none;
+  opacity: .9;
+}
+
+[data-layout="secondary"] .site-logo svg {
+  opacity: .8;
+  max-width: calc(2rem + 4vw);
+  width: auto;
+}
+
+[data-layout="secondary"] .site-logo svg path {
+  fill: #989898;
+}
+
+[data-layout="secondary"] .site-logo:hover {
+  opacity: 1;
+}
+
+[data-layout="secondary"] .site-logo:hover svg path {
+  fill: #24aef4;
+}
+
+[data-layout="secondary"] .site-logo:active svg path {
+  fill: magenta;
+}
+
+[data-layout="secondary"] .site-logo svg {
+  margin-top: 0;
+}
+
+.edit-page,
+.rocks-wordmark {
   display: none;
 }
 
@@ -670,8 +687,15 @@ a.button-source:hover:after {
   background: yellow;
 }
 
-[data-debug][data-headset] body,
-[data-debug][data-browser] body {
+[data-debug][data-layout="secondary"] .site-logo {
+  background: goldenrod;
+}
+
+[data-debug][data-layout="secondary"] .site-logo svg {
+  background: red;
+}
+
+[data-debug][data-layout="secondary"] body {
   background: red;
 }
 
@@ -693,13 +717,9 @@ a.button-source:hover:after {
  * Mobile-first media queries
  */
 
-.site-logo svg {
-  max-width: 7rem;
-}
-
 @media all and (min-width: 18rem) {
-  .site-title {
-    width: calc(7rem + 8vw);
+  [data-layout="secondary"] .site-logo {
+    display: block;
   }
 
   /*
@@ -713,44 +733,6 @@ a.button-source:hover:after {
   }
 
   .site-logo:active svg path {
-    fill: magenta;
-  }
-
-  [data-headset] .site-logo,
-  [data-browser] .site-logo {
-    display: block;
-    opacity: .9;
-    padding: 0;
-    position: absolute;
-    right: 0;
-    text-align: right;
-    transition: .15s opacity ease-in-out;
-  }
-
-  [data-headset] .site-logo svg,
-  [data-browser] .site-logo svg {
-    opacity: .8;
-    max-height: 3rem;
-    width: auto;
-  }
-
-  [data-headset] .site-logo svg path,
-  [data-browser] .site-logo svg path {
-    fill: #989898;
-  }
-
-  [data-headset] .site-logo:hover,
-  [data-browser] .site-logo:hover {
-    opacity: 1;
-  }
-
-  [data-headset] .site-logo:hover svg path,
-  [data-browser] .site-logo:hover svg path {
-    fill: #24aef4;
-  }
-
-  [data-headset] .site-logo:active svg path,
-  [data-browser] .site-logo:active svg path {
     fill: magenta;
   }
 
@@ -791,6 +773,24 @@ a.button-source:hover:after {
     flex-shrink: 0;
   }
 
+  .site-title {
+    width: calc(7rem + 8vw);
+  }
+
+  .site-logo {
+    max-width: 50vw;  /* Big click target. */
+    padding-top: 3rem;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: -3rem;
+    transition: .15s opacity ease-in-out;
+  }
+
+  [data-layout="secondary"] .site-logo {
+    top: -1.5rem;
+  }
+
   ul[data-section] {
     justify-content: space-between;
   }
@@ -801,13 +801,11 @@ a.button-source:hover:after {
     flex-direction: row;
   }
 
-  .site-logo {
-    padding-bottom: 1.5rem;
-  }
-
-  [data-headset] .site-logo,
-  [data-browser] .site-logo {
-    right: 0rem;
+  [data-layout="home"] .site-logo {
+    position: static;
+    max-width: 100%;
+    padding: 0 0 1.5rem;
+    text-align: left;
   }
 
   ul.site-nav-list {
@@ -833,34 +831,39 @@ a.button-source:hover:after {
     padding-bottom: 1.5rem;
   }
 
-  [data-headset] body,
-  [data-browser] body {
+  body {
     padding: 1.5rem;
   }
 
-  html:not([data-layout="home"]) .section {
-    margin: 0;
-    padding: 0;
+  [data-layout="secondary"] .section {
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  html:not([data-layout="home"]) .header .section {
+  [data-layout="secondary"] .header .section {
     padding-bottom: 3rem;
   }
 
-  html:not([data-layout="home"]) .main .section {
-    padding: 3rem 0;
+  [data-layout="secondary"] .main .section {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
   }
 
-  html:not([data-layout="home"]) .main .section:last-child {
+  [data-layout="secondary"] .main .section:last-child {
     padding-bottom: 1.5rem;
+  }
+
+  [data-layout="secondary"] .site-logo {
+    right: -1.5rem;
+    padding-top: 3rem;
   }
 
   .webvr-intro {
     font-size: 2rem;
-    line-height: 1.4;
+    line-height: 1.3;
   }
 
-  [itemprop="name"] {
+  /*li*/[itemprop="browser"] [itemprop="name"] {
     margin-top: 1rem;
   }
 }
