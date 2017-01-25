@@ -1,20 +1,17 @@
 {
   "@context": "http://schema.org",
   "@type": "MobileApplication",
-  "name": "Firefox",
-  "slug": "firefox",
+  "name": "Samsung Internet Browser",
+  "slug": "samsung_internet",
   "operatingSystem": "Android",
   "processorRequirements": "IA64",
-  "url": "/samsung_internet",
   "logo": "/samsung_internet/icon.png",
-  "url": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly",
-  "downloadUrl": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly",
+  "url": "https://www.oculus.com/experiences/gear-vr/849609821813454/",
+  "about": "/samsung_internet",
+  "downloadUrl": "https://www.oculus.com/experiences/gear-vr/849609821813454/",
   "releases": {
     "latest": {
-      "url": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly"
+      "url": "https://www.oculus.com/experiences/gear-vr/849609821813454/"
     }
-  },
-  "supportingData": {
-    "@type": ""
   }
 }

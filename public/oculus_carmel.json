@@ -1,0 +1,20 @@
+{
+  "@context": "http://schema.org",
+  "@type": "MobileApplication",
+  "name": "Oculus Carmel",
+  "slug": "oculus_carmel",
+  "operatingSystem": "Android",
+  "processorRequirements": "IA64",
+  "logo": "/oculus_carmel/icon.png",
+  "url": "https://www.oculus.com/experiences/gear-vr/1290985657630933/",
+  "about": "/oculus_carmel",
+  "downloadUrl": "https://www.oculus.com/experiences/gear-vr/1290985657630933/",
+  "sameAs": [
+    "https://developer.oculus.com/webvr/"
+  ],
+  "releases": {
+    "latest": {
+      "url": "https://www.oculus.com/experiences/gear-vr/1290985657630933/"
+    }
+  }
+}
