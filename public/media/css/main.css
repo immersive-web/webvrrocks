@@ -325,6 +325,10 @@ html:not([data-layout~="home"]) .main ul,
   max-width: 700px;
 }
 
+.webvr-intro em {
+  font-style: normal;
+}
+
 .main .section dl:last-child {
   margin: 0;
 }
@@ -754,11 +758,18 @@ a.button-source:after {
 @media all and (min-width: 18rem) and (max-width: 44.999rem) {
   .webvr-intro {
     background: #ffdc00;
-    /*background:yellow;*/
-    padding: 1.5rem;
-    margin: 0 -1.5rem 1.5rem;
     font-size: 1.5rem;
-    line-height: 1.3;
+    line-height: 1.7;
+    margin: 0 -1.5rem 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .webvr-intro em {
+    background-color: rgba(0,0,0,.6);
+    border-radius: .15rem;
+    color: #fff;
+    padding: .15rem .3rem;
+    white-space: pre;
   }
 }
 
@@ -926,7 +937,14 @@ a.button-source:after {
 
   .webvr-intro {
     font-size: 2rem;
-    line-height: 1.3;
+    line-height: 1.6;
+  }
+
+  .webvr-intro em {
+    background: rgba(255,220,0,.3);
+    border-radius: .3rem;
+    padding: .2rem .6rem;
+    white-space: pre;
   }
 
   /*li*/[itemprop="browser"] [itemprop="name"] {
