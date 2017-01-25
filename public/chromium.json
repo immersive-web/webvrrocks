@@ -1,16 +1,16 @@
 {
   "@context": "http://schema.org",
   "@type": "SoftwareApplication",
-  "name": "Chromium WebVR Browser build.",
-  "operatingSystem": "Windows",
+  "name": "Chromium",
+  "operatingSystem": "Windows 7.1+",
   "processorRequirements": "IA64",
-  "logo": "https://webvr.rocks/img/browsers/chromium.png",
+  "logo": "/chromium/icon.png",
   "image": "",
   "screenshot": "",
-  "url": "",
-  "about": "https://webvr.rocks/browsers/chromium",
+  "url": "/chromium",
+  "about": "/chromium",
   "sameAs": [
-    "https://webvr.rocks/browsers/chromium",
+    "https://webvr.rocks/chrome",
     "https://webvr.info/get-chrome/"
   ],
   "creator": [
@@ -31,15 +31,15 @@
   "applicationCategory": [
     "Browser"
   ],
-  "releaseNotes": "https://webvrr.rocks/browsers/chromium/release-notes.json",
+  "releaseNotes": "/chromium/release-notes.json",
   "dateCreated": "",
   "datePublished":"",
-  "video": "https://webvr.rocks/browsers/chromium/video.json",
+  "video": "https://webvr.rocks/chromium/video.json",
   "downloadUrl": "https://docs.google.com/uc?id=0BzudLt22BqGRRElMNmVqQjJWS2c&export=download",
   "fileFormat": "application/zip",
-  "learningResourceType": "https://webvr.rocks/browsers/chromium",
-  "discussionUrl": "https://webvr.rocks/browsers/chromium/#comments",
-  "softwareHelp": "https://webvr.rocks/browsers/chromium#help",
+  "learningResourceType": "https://webvr.rocks/chromium",
+  "discussionUrl": "https://webvr.rocks/chromium#comments",
+  "softwareHelp": "https://webvr.rocks/chromium#help",
   "version": "",
   "softwareRequirements": [
     "https://www3.oculus.com/setup/",
@@ -49,7 +49,7 @@
     "https://www3.oculus.com/setup/",
     "https://www.vive.com/us/setup/"
   ],
-  "fileSize": "",
+  "fileSize": "93 MB",
   "license": "",
   "contributor": [],
   "thumbnailUrl": "",

@@ -1,0 +1,15 @@
+{
+  "browsers": [
+    {
+      "name": "Firefox",
+      "url": "/firefox",
+      "icon": "/firefox/icon-nightly.png",
+      "url": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly",
+      "releases": {
+        "latest": {
+          "url": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly"
+        }
+      }
+    }
+  ]
+}

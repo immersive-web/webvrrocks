@@ -247,7 +247,7 @@ h1.page-title {
   flex-direction: column-reverse;
 }
 
-[data-name] {
+[itemprop="name"] {
   display: block;
   flex: 1;
   font-size: .8rem;
@@ -530,22 +530,22 @@ ul[data-section] li {
   width: 100%;
 }
 
-ul[data-section] [data-url] {
+ul[data-section] [itemprop="url"] {
   display: block;
   height: 100%;
   text-align: center;
   width: 100%;
 }
 
-[data-section] a[data-url] {
+[data-section] a[itemprop="url"] {
   color: #999;
 }
 
-[data-section] a[data-url]:hover {
+[data-section] a[itemprop="url"]:hover {
   color: #111;
 }
 
-[data-icon] {
+[itemprop="image"] {
   margin: 0 auto;
 }
 
@@ -856,7 +856,7 @@ a.button-source:hover:after {
     line-height: 1.4;
   }
 
-  [data-name] {
+  [itemprop="name"] {
     margin-top: 1rem;
   }
 }

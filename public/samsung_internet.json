@@ -1,0 +1,20 @@
+{
+  "@context": "http://schema.org",
+  "@type": "MobileApplication",
+  "name": "Firefox",
+  "slug": "firefox",
+  "operatingSystem": "Android",
+  "processorRequirements": "IA64",
+  "url": "/samsung_internet",
+  "logo": "/samsung_internet/icon.png",
+  "url": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly",
+  "downloadUrl": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly",
+  "releases": {
+    "latest": {
+      "url": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly"
+    }
+  },
+  "supportingData": {
+    "@type": ""
+  }
+}

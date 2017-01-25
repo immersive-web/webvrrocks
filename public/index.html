@@ -1,3 +1,4 @@
+{% import '_helpers.html' as helpers %}
 <!doctype html>
 <html lang="en" data-layout="home">
   <head>
@@ -41,13 +42,13 @@
         <section id="browsers" class="section browsers" data-section="browsers">
           <h1><a href="#browsers">Browser Overview</a></h1>
           <ul data-section="browsers">
-            <li data-item><a href="/firefox" data-url><img data-icon class="browser-icon browser-icon-firefox" src="/firefox/icon-nightly.png" alt="Firefox" title="Firefox"> <span class="browser-name" data-name>Firefox</span></a></li>
-            <li data-item><a href="/chromium" data-url><img data-icon class="browser-icon browser-icon-chromium" src="/chromium/icon.png" alt="Chromium" title="Chromium"> <span class="browser-name" data-name>Chromium</span></a></li>
-            <li data-item><a href="/samsung_internet" data-url><img data-icon class="browser-icon browser-icon-samsung-internet" src="/samsung_internet/logo.png" alt="Samsung Internet Browser" title="Samsung Internet Browser"> <span class="browser-name" data-name>Samsung Internet Browser</span></a></li>
-            <li data-item><a href="/oculus_carmel" data-url><img data-icon class="browser-icon browser-icon-oculus-carmel" src="/oculus_carmel/icon.png" alt="Oculus Carmel" title="Oculus Carmel"> <span class="browser-name" data-name>Oculus Carmel</span></a></li>
-            <li data-item><a href="/servo" data-url><img data-icon class="browser-icon browser-icon-servo" src="/servo/icon.svg" alt="Servo" title="Servo"> <span class="browser-name" data-name>Servo</span></a></li>
-            <li data-item><a href="/chrome_for_android" data-url><img data-icon class="browser-icon browser-icon-chrome-for-android" src="/chrome_for_android/icon.png" alt="Chrome for Android" title="Chrome for Android"> <span class="browser-name" data-name>Chrome for Android</span></a></li>
-            <li data-item><a href="/edge" data-url><img data-icon class="browser-icon browser-icon-chrome-for-android" src="/edge/icon.png" alt="Microsoft Edge" title="Microsoft Edge"> <span class="browser-name" data-name>Microsoft Edge</span></a></li>
+            {{ helpers.browser_item('firefox') }}
+            {{ helpers.browser_item('chromium') }}
+            <li itemprop="browser" itemscope itemtype="http://schema.org/SoftwareApplication"><a itemprop="url" href="/samsung_internet"><img itemprop="image" class="browser-icon browser-icon-samsung-internet" src="/samsung_internet/logo.png" alt="Samsung Internet Browser" title="Samsung Internet Browser"> <span itemprop="name">Samsung Internet Browser</span></a></li>
+            <li itemprop="browser" itemscope itemtype="http://schema.org/SoftwareApplication"><a itemprop="url" href="/oculus_carmel"><img itemprop="image" class="browser-icon browser-icon-oculus-carmel" src="/oculus_carmel/icon.png" alt="Oculus Carmel" title="Oculus Carmel"> <span itemprop="name">Oculus Carmel</span></a></li>
+            <li itemprop="browser" itemscope itemtype="http://schema.org/SoftwareApplication"><a itemprop="url" href="/servo"><img itemprop="image" class="browser-icon browser-icon-servo" src="/servo/icon.svg" alt="Servo" title="Servo"> <span itemprop="name">Servo</span></a></li>
+            <li itemprop="browser" itemscope itemtype="http://schema.org/SoftwareApplication"><a itemprop="url" href="/chrome_for_android"><img itemprop="image" class="browser-icon browser-icon-chrome-for-android" src="/chrome_for_android/icon.png" alt="Chrome for Android" title="Chrome for Android"> <span itemprop="name">Chrome for Android</span></a></li>
+            <li itemprop="browser" itemscope itemtype="http://schema.org/SoftwareApplication"><a itemprop="url" href="/microsoft_edge"><img itemprop="image" class="browser-icon browser-icon-chrome-for-android" src="/microsoft_edge/icon.png" alt="Microsoft Edge" title="Microsoft Edge"> <span itemprop="name">Microsoft Edge</span></a></li>
           </ul>
         </section>
       </div>
