@@ -211,19 +211,33 @@
     }
     storage.set('visits', ++numVisits);
     if (storage.has('debug')) {
-      document.documentElement.dataset.debug = '';
+      html.dataset.debug = '';
     } else {
-      delete document.documentElement.dataset.debug;
+      delete html.dataset.debug;
     }
-  };
-  var handleClick = function (e) {
-    // if (e.target.matches && e.target.matches('a[href="#' + hash + '"]')) {
-    //   e.preventDefault();
-    //   window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
-    // }
+    var supportsTouch = 'ontouchstart' in window;
+    html.dataset.supportsTouch = supportsTouch;
+    var openDialogues = {};
+    html.addEventListener('click', function (e) {
+      var el = e.target;
+      var dropdown = el.closest && el.closest('.dropdown-with-children');
+      if (dropdown && supportsTouch) {
+        if (openDialogues[dropdown] === true) {
+          openDialogues[dropdown] = false;
+        } else {
+          e.preventDefault();
+          openDialogues[dropdown] = true;
+        }
+        dropdown.setAttribute('aria-expanded', openDialogues[dropdown]);
+        return;
+      }
+      openDialogues.forEach(function (dialogueEl) {
+        dialogueEl.setAttribute('aria-expanded', 'false');
+      });
+      openDialogues = {};
+    });
   };
 
   window.addEventListener('hashchange', handleHashchange);
   window.addEventListener('load', handleLoad);
-  document.body.addEventListener('click', handleClick);
 })();
