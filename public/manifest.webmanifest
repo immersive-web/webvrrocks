@@ -5,17 +5,17 @@
   "short_name": "WebVR",
   "description": "Community of experimentation & showcase of techniques of VR content creation on the Web.",
   "start_url": "./?src=manifest",
-  "theme_color": "#3a46ff",
+  "theme_color": "#24aef4",
   "background_color": "#fff",
   "icons": [
     {
       "src": "rocks/favicon.svg",
-      "sizes": "200x200",
+      "sizes": "256x256",
       "type": "image/svg"
     },
     {
       "src": "rocks/favicon.png",
-      "sizes": "200x200",
+      "sizes": "256x256",
       "type": "image/png"
     },
     {
@@ -27,6 +27,11 @@
       "src": "rocks/favicon-small.png",
       "sizes": "64x64",
       "type": "image/png"
+    },
+    {
+      "src": "rocks/favicon.ico",
+      "sizes": "16x16 32x32 48x48 64x64 256x256",
+      "type": "image/x-icon"
     }
   ]
 }

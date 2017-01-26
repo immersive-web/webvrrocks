@@ -7,8 +7,8 @@
     <mask id="b" fill="#fff">
       <use xlink:href="#a"/>
     </mask>
-    <path fill="#fff" stroke="#3a46ff" stroke-width="20" d="M0 0h64v64H0z" mask="url(#b)"/>
-    <g fill="#3a46ff" transform="translate(14 25)">
+    <path fill="#fff" stroke="#24aef4" stroke-width="20" d="M0 0h64v64H0z" mask="url(#b)"/>
+    <g fill="#24aef4" transform="translate(14 25)">
       <circle cx="7" cy="7" r="7"/>
       <circle cx="29" cy="7" r="7"/>
     </g>
