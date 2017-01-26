@@ -210,7 +210,7 @@
       numVisits = parseInt(storage.get('visits'), 10) || 0;
     }
     storage.set('visits', ++numVisits);
-    if (storage.has('debug')) {
+    if (storage.has('debug_ui')) {
       html.dataset.debug = '';
     } else {
       delete html.dataset.debug;
