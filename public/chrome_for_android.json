@@ -1,0 +1,79 @@
+{
+  "@context": "http://schema.org",
+  "@type": "MobileApplication",
+  "name": "Chrome for Android",
+  "operatingSystem": "Android",
+  "processorRequirements": "",
+  "logo": "/chrome_for_android/icon.png",
+  "image": "",
+  "screenshot": "",
+  "url": "https://play.google.com/store/apps/details?id=com.android.chrome",
+  "about": "/chrome_for_android",
+  "sameAs": [
+    "https://webvr.rocks/chrome_for_android",
+    "https://www.google.com/chrome/browser/mobile/"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Brandon Jones",
+      "sameAs": "https://webvr.rocks/people/tojiro.json"
+    },
+    {
+      "@type": "Person",
+      "name": "Klaus Weidner",
+      "sameAs": "https://webvr.rocks/people/klausweidner.json"
+    }
+  ],
+  "accountablePerson": [
+    {
+      "@type": "Person",
+      "name": "Klaus Weidner",
+      "sameAs": "https://webvr.rocks/people/klausweidner.json"
+    }
+  ],
+  "keywords": "browser",
+  "applicationCategory": [
+    "Browser"
+  ],
+  "releaseNotes": "/chrome_for_android/release-notes.json",
+  "dateCreated": "",
+  "datePublished": "",
+  "dateModified": "2017-01-25",
+  "softwareVersion": "2017-01-25",
+  "video": "https://webvr.rocks/chrome_for_android/video.json",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.chrome.canary",
+  "fileFormat": "application/vnd.android.package-archive",
+  "learningResourceType": "https://webvr.rocks/chrome_for_android",
+  "discussionUrl": "https://webvr.rocks/chrome_for_android#comments",
+  "softwareHelp": "https://webvr.rocks/chrome_for_android#help",
+  "version": "",
+  "softwareRequirements": [
+  ],
+  "requirements": [
+    "https://vr.google.com/cardboard/",
+    "https://vr.google.com/daydream/"
+  ],
+  "fileSize": "Varies with device",
+  "license": "",
+  "contributor": [],
+  "thumbnailUrl": "",
+  "sourceOrganization": {
+    "@type": "Organization",
+    "name": "Google",
+    "url": "https://www.google.com/"
+  },
+  "softwareAddOn": {
+    "@type": "MobileApplication",
+    "name": "Google VR Services",
+    "url": "https://play.google.com/store/apps/details?id=com.google.vr.vrcore",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.google.vr.vrcore",
+    "learningResourceType": "https://play.google.com/store/apps/details?id=com.google.vr.vrcore",
+    "fileFormat": "application/vnd.android.package-archive",
+    "softwareVersion": "2016-12-15",
+    "dateModified": "2016-12-15"
+  },
+  "device": "Android",
+  "alternateName": "Chrome for Android WebVR",
+  "audio": ""
+}

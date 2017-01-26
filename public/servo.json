@@ -1,0 +1,27 @@
+{
+  "@context": "http://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Servo",
+  "slug": "servo",
+  "operatingSystem": "Windows 10",
+  "processorRequirements": "IA64",
+  "logo": "/servo/icon.svg",
+  "url": "https://servo.org/",
+  "about": "/servo",
+  "downloadUrl": "https://github.com/MortimerGoro/servo/releases/download/0.2/servo_gamepad.rar",
+  "//downloadUrl": "//https://download.servo.org/nightly/windows/servo-latest.msi",
+  "softwareVersion": "",
+  "sameAs": [
+    "https://developer.oculus.com/webvr/"
+  ],
+  "releases": {
+    "latest": {
+      "url": "https://github.com/MortimerGoro/servo/releases/download/0.2/servo_gamepad.rar"
+    }
+  },
+  "targetProduct": {
+    "@type": "SoftwareSourceCode",
+    "url": "https://github.com/MortimerGoro/servo/tree/0.2",
+    "downloadUrl": "https://github.com/MortimerGoro/servo/archive/0.2.zip"
+  }
+}

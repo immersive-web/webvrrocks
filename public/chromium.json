@@ -23,8 +23,8 @@
   "accountablePerson": [
     {
       "@type": "Person",
-      "name": "Brandon Jones",
-      "sameAs": "https://webvr.rocks/people/tojiro.json"
+      "name": "Klaus Weidner",
+      "sameAs": "https://webvr.rocks/people/klausweidner.json"
     }
   ],
   "keywords": "browser",

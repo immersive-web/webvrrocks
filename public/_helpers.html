@@ -10,8 +10,29 @@
   </li>
 {% endmacro %}
 
+{% includeData 'chromium.json' as chromium %}
+{% includeData 'firefox.json' as firefox %}
+{% includeData 'samsung_internet.json' as samsung_internet %}
+{% includeData 'oculus_carmel.json' as oculus_carmel %}
+{% includeData 'chrome_for_android.json' as chrome_for_android %}
+{% includeData 'microsoft_edge.json' as microsoft_edge %}
+{% includeData 'servo.json' as servo %}
+
+{% set browser_data = {
+  chromium: chromium,
+  firefox: firefox,
+  samsung_internet: samsung_internet,
+  oculus_carmel: oculus_carmel,
+  chrome_for_android: chrome_for_android,
+  microsoft_edge: microsoft_edge,
+  servo: servo
+} %}
+
 {% macro browser_item(slug) %}
-  {% includeData slug + '.json' as browser %}
+  {% set browser = browser_data[slug] %}
+  {% if not browser %}
+    {% includeData slug + '.json' as browser %}
+  {% endif %}
   <li itemprop="browser" itemscope itemtype="http://schema.org/SoftwareApplication" data-slug="{{ browser.slug }}">
     <a itemprop="url" href="{{ browser.about }}">
       <img itemprop="image" class="browser-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">

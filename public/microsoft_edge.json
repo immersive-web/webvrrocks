@@ -1,0 +1,30 @@
+{
+  "@context": "http://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Microsoft Edge",
+  "slug": "microsoft_edge",
+  "operatingSystem": "Windows 10",
+  "processorRequirements": "IA64",
+  "logo": "/microsoft_edge/icon.png",
+  "url": "https://www.microsoft.com/en-us/windows/microsoft-edge",
+  "about": "/microsoft_edge",
+  "downloadUrl": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly",
+  "sameAs": [
+    "https://webvr.rocks/chrome",
+    "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly"
+  ],
+  "releases": {
+    "latest": {
+      "url": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly"
+    }
+  },
+  "targetProduct": {
+    "@type": "Product",
+    "name": "HoloLens",
+    "brand": "Microsoft",
+    "manufacturer": "Microsoft",
+    "model": "HoloLens",
+    "category": "headset",
+    "description": "Mixed-reality smart-glasses"
+  }
+}
