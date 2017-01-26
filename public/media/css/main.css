@@ -971,8 +971,8 @@ a.button-source:after {
   }
 
   .intro-para {
-    font-size: 2rem;
-    line-height: 1.6;
+    font-size: 1.6rem;
+    line-height: 1.7;
   }
 
   .intro-para em {
@@ -1038,7 +1038,19 @@ a.button-source:after {
   }
 }
 
+@media all and (min-width: 44.999rem) and (max-width: 52.499rem) {
+  .intro-para {
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+}
+
 @media all and (min-width: 60rem) {
+  .intro-para {
+    font-size: 2rem;
+    line-height: 1.6;
+  }
+
   ul[data-section] {
     justify-content: space-between;
   }
