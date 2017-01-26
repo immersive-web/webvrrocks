@@ -9,27 +9,17 @@
   "background_color": "#fff",
   "icons": [
     {
-      "src": "rocks/favicon.svg",
+      "src": "/rocks/logo-256.svg",
       "sizes": "256x256",
       "type": "image/svg"
     },
     {
-      "src": "rocks/favicon.png",
+      "src": "/rocks/logo-256.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "rocks/favicon-small.svg",
-      "sizes": "64x64",
-      "type": "image/svg"
-    },
-    {
-      "src": "rocks/favicon-small.png",
-      "sizes": "64x64",
-      "type": "image/png"
-    },
-    {
-      "src": "rocks/favicon.ico",
+      "src": "/favicon.ico",
       "sizes": "16x16 32x32 48x48 64x64 256x256",
       "type": "image/x-icon"
     }
