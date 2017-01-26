@@ -6,7 +6,7 @@
   "main": "dev.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "node ./dev.js public/media/js/main.js:_prod/media/js/main.js --port 3000 --dir _prod --live=**.{html,css,svg} --cors --verbose",
+    "dev": "node ./dev.js public/media/js/main.js:_prod/media/js/main.js --port 3000 --dir _prod --live --watch-glob='**/*.{html,css,svg,json}' --cors --verbose",
     "test": "npm run prod",
     "build": "shx cp -R public _prod && node ./node_modules/.bin/nunjucks '**/*.html' --path public --unsafe --extensions $PWD/nunjucks-helpers.js --out _prod",
     "deploy": "surge _prod -d https://webvrrocks.surge.sh",

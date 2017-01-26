@@ -116,17 +116,21 @@ var app = budo
       fileRelative = path.relative(OPTS.nunjucks.inputDir, file);
       if (fileRelative[0] === '_') {
         regenerateAllNunjucksTemplates();
-      } else {
-        shell.exec(`node ./node_modules/.bin/nunjucks ${fileRelative} --path ${OPTS.nunjucks.inputDir} --unsafe --extensions ${OPTS.nunjucks.extensionsFile} --out ${OPTS.nunjucks.outputDir}`);
+        return;
       }
-    } else {
-      fileRelative = path.relative(OPTS.assets.inputDir, file);
-      var fileOutput = path.join(OPTS.assets.outputDir, fileRelative);
-      var fileOutputDir = path.dirname(fileOutput);
-      console.log('Copying: %s', fileRelative);
-      shell.mkdir('-p', fileOutputDir);
-      shell.cp(file, fileOutput);
+      shell.exec(`node ./node_modules/.bin/nunjucks ${fileRelative} --path ${OPTS.nunjucks.inputDir} --unsafe --extensions ${OPTS.nunjucks.extensionsFile} --out ${OPTS.nunjucks.outputDir}`);
+      return;
     }
+    if (ext === '.json') {
+      regenerateAllNunjucksTemplates();
+      return;
+    }
+    fileRelative = path.relative(OPTS.assets.inputDir, file);
+    var fileOutput = path.join(OPTS.assets.outputDir, fileRelative);
+    var fileOutputDir = path.dirname(fileOutput);
+    console.log('Copying: %s', fileRelative);
+    shell.mkdir('-p', fileOutputDir);
+    shell.cp(file, fileOutput);
   });
 
 module.exports = app;
