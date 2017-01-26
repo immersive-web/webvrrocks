@@ -321,12 +321,26 @@ html:not([data-layout~="home"]) .main ul,
   max-width: 600px;
 }
 
-.webvr-intro {
+.intro-para {
   max-width: 700px;
 }
 
-.webvr-intro em {
+.intro-para em {
   font-style: normal;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 0;
+}
+
+.intro-video-play {
+  display: none;
+}
+
+.section > *:last-child.intro-video {
+  margin-bottom: 1.5rem;
 }
 
 .main .section dl:last-child {
@@ -721,6 +735,23 @@ a.button-source:after {
   text-transform: uppercase;
 }
 
+
+
+.iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;  /* 16:9 */
+  padding-top: 1.5rem;
+  height: 0;
+}
+
+.iframe-container iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 [data-debug] .site-logo {
   background: yellow;
 }
@@ -756,7 +787,7 @@ a.button-source:after {
  */
 
 @media all and (min-width: 18rem) and (max-width: 44.999rem) {
-  .webvr-intro {
+  .intro-para {
     background: #ffdc00;
     font-size: 1.5rem;
     line-height: 1.7;
@@ -764,7 +795,7 @@ a.button-source:after {
     padding: 1.5rem;
   }
 
-  .webvr-intro em {
+  .intro-para em {
     background-color: rgba(0,0,0,.6);
     border-radius: .15rem;
     color: #fff;
@@ -935,17 +966,68 @@ a.button-source:after {
     padding-top: 1.5rem;
   }
 
-  .webvr-intro {
+  .intro-para {
     font-size: 2rem;
     line-height: 1.6;
   }
 
-  .webvr-intro em {
+  .intro-para em {
     background: rgba(255,220,0,.3);
     border-radius: .3rem;
     padding: .2rem .6rem;
     white-space: pre;
   }
+
+  .intro {
+    flex-direction: row;
+  }
+
+  .intro > * {
+    flex: 1;
+  }
+
+  .intro-video {
+    margin-left: 3rem;
+    position: relative;
+  }
+
+  /* modal - disabled */
+  /*
+  .intro-video-play {
+    border: 0;
+    bottom: 0;
+    display: block;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .intro-video-play:focus {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .intro-video-play:target {
+    pointer-events: none;
+  }
+
+  .intro-video-play:focus ~ div {
+    background: rgba(0,0,0,.9);
+    border: 30px solid transparent;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    z-index: 2;
+    width: 100%;
+  }
+  */
 
   /*li*/[itemprop="browser"] [itemprop="name"] {
     margin-top: 1rem;

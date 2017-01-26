@@ -23,8 +23,18 @@
     <main id="main" class="main" role="main">
       <div class="container">
         <section id="intro" class="section intro" data-section="intro">
-          <p class="webvr-intro"><strong>WebVR</strong> is a <em>JavaScript API</em> for creating immersive 3D, <em>Virtual Reality</em> experiences in your <em>browser</em>.</p>
-          <p class="intro-compat">Works with the <a href="/htc_vive">HTC Vive</a>, <a href="/oculus_rift">Oculus Rift</a>, <a href="/samsung_gear_vr">Samsung Gear VR</a>, <a href="/google_daydream">Google Daydream</a>, etc.</p>
+          <div class="intro-text">
+            <p class="intro-para"><strong>WebVR</strong> is a <em>JavaScript API</em> for creating immersive 3D, <em>Virtual Reality</em> experiences in your <em>browser</em>.</p>
+            <p class="intro-compat">Works with the <a href="/htc_vive">HTC Vive</a>, <a href="/oculus_rift">Oculus Rift</a>, <a href="/samsung_gear_vr">Samsung Gear VR</a>, <a href="/google_daydream">Google Daydream</a>, etc.</p>
+          </div>
+          <div class="intro-video">
+            <button class="intro-video-play" aria-controls="modal">
+              Play
+            </button>
+            <div>
+              {{ helpers.youtube('https://www.youtube.com/embed/XyNNCuUXrso') }}
+            </div>
+          </div>
         </section>
 
         <section id="headsets" class="section headsets" data-section="headsets">

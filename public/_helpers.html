@@ -28,7 +28,7 @@
   servo: servo
 } %}
 
-{% macro browser_item(slug) %}
+{% macro browser_item (slug) %}
   {% set browser = browser_data[slug] %}
   {% if not browser %}
     {% includeData slug + '.json' as browser %}
@@ -39,4 +39,10 @@
       <span itemprop="name" class="browser-name">{{ browser.name }}</span>
     </a>
   </li>
+{% endmacro %}
+
+{% macro youtube (src, width, height) %}
+  <div class="iframe-container">
+    <iframe class="iframe" width="{{ width or '560' }}" height="{{ height or '315' }}" src="{{ src }}" frameborder="0" allowfullscreen="true"></iframe>
+  </div>
 {% endmacro %}
