@@ -18,7 +18,7 @@
 {% includeData 'microsoft_edge.json' as microsoft_edge %}
 {% includeData 'servo.json' as servo %}
 
-{% set browser_data = {
+{% set browsers = {
   chromium: chromium,
   firefox: firefox,
   samsung_internet: samsung_internet,
@@ -29,7 +29,7 @@
 } %}
 
 {% macro browser_item (slug) %}
-  {% set browser = browser_data[slug] %}
+  {% set browser = browsers[slug] %}
   {% if not browser %}
     {% includeData slug + '.json' as browser %}
   {% endif %}

@@ -426,6 +426,10 @@ figcaption {
   padding-top: .25rem;
 }
 
+[data-browser] li figcaption {
+  text-align: center;
+}
+
 .authors__list li,
 .release-notes li {
   list-style-type: none;
