@@ -1,23 +1,23 @@
-{% import '_helpers.html' as helpers %}
+{% from '_helpers.html' import author_item, browsers %}
+{% set browser = browsers.chromium %}
+{% set page = 'chromium.html' %}
 <!doctype html>
-<html lang="en" data-layout="secondary" data-browser="chromium">
+<html lang="en" data-layout="secondary" data-browser="{{ browser.slug }}">
   <head>
     {% include '_head.html' %}
     <meta charset="utf-8">
-    <title>Chromium • WebVR Rocks</title>
+    <title>{{ browser.name }} • WebVR Rocks</title>
   </head>
   <body>
     <header id="header" class="header" role="banner">
       <div class="container section">
-        {% include '_logo.html' %}
+        {% with page=page %}
+          {% include '_logo.html' %}
+        {% endwith %}
 
-        <p class="hidden-text"><a href="/" aria-controls="main" tabindex="0">&#xAB; Back to WebVR Rocks home</a></p>
-
-        <!--<div class="cf"><a href="https://github.com/webvrrocks/webvrrocks/edit/master/public/chromium.html" title="Edit on GitHub" class="button button-primary pull-right">Edit on GitHub</a></div>-->
-
-        <a class="browser-link" href="/chromium">
-          <h1 class="browser-name">Chromium</h1>
-          <img class="browser-icon browser-icon-chromium" src="/chromium/icon.png" alt="Chromium" title="Chromium">
+        <a class="browser-link" href="{{ browser.about }}">
+          <h1 class="browser-name">{{ browser.name }}</h1>
+          <img class="browser-icon browser-icon-chromium" src="/chromium/icon.png" alt="{{ browser.name }}" title="{{ browser.name }}">
         </a>
 
         <p class="browser-intro"><a href="https://www.google.com/">Google</a>&rsquo;s open-source version of <a href="https://www.google.com/chrome/">Chrome</a></p>
@@ -95,7 +95,7 @@
               <dt class="browser-authors">Authors</dt>
               <dd>
                 <ul class="authors__list">
-                  {{ helpers.author_item('tojiro') }}
+                  {{ author_item('tojiro') }}
                 </ul>
               </dd>
               <dt class="browser-release-notes">Release notes</dt>

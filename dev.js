@@ -86,7 +86,7 @@ var app = budo
 
     // Receiving messages from clients.
     wss.on('connection', function (socket) {
-      console.log('[LiveReload] Client Connected')
+      console.log('[LiveReload] Client Connected');
       // socket.on('message', function (message) {
       //   console.log('[LiveReload] Message from client:', JSON.parse(message));
       // });

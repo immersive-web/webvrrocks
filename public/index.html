@@ -1,4 +1,4 @@
-{% import '_helpers.html' as helpers %}
+{% from '_helpers.html' import browser_item %}
 <!doctype html>
 <html lang="en" data-layout="home">
   <head>
@@ -52,14 +52,13 @@
         <section id="browsers" class="section browsers" data-section="browsers">
           <h1><a href="#browsers">Browser Overview</a></h1>
           <ul data-section="browsers">
-
-            {{ helpers.browser_item('firefox') }}
-            {{ helpers.browser_item('chromium') }}
-            {{ helpers.browser_item('samsung_internet') }}
-            {{ helpers.browser_item('oculus_carmel') }}
-            {{ helpers.browser_item('chrome_for_android') }}
-            {{ helpers.browser_item('servo') }}
-            {{ helpers.browser_item('microsoft_edge') }}
+            {{ browser_item('firefox') }}
+            {{ browser_item('chromium') }}
+            {{ browser_item('samsung_internet') }}
+            {{ browser_item('oculus_carmel') }}
+            {{ browser_item('chrome_for_android') }}
+            {{ browser_item('servo') }}
+            {{ browser_item('microsoft_edge') }}
           </ul>
         </section>
       </div>

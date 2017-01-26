@@ -793,17 +793,20 @@ a.button-source:after {
 @media all and (min-width: 18rem) and (max-width: 44.999rem) {
   .intro-para {
     background: #ffdc00;
-    font-size: 1.5rem;
+    border: rgba(0, 0, 0, .1) 1px solid;
+    border-width: 1px 0;
+    font-size: 1.2rem;
     line-height: 1.7;
     margin: 0 -1.5rem 1.5rem;
     padding: 1.5rem;
   }
 
   .intro-para em {
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.1);
     border-radius: .15rem;
-    color: #fff;
-    padding: .15rem .3rem;
+    /*color: #fff;*/
+    color: #111;
+    padding: .15rem .4rem;
     white-space: pre;
   }
 }

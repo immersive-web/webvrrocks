@@ -18,6 +18,18 @@
 {% includeData 'microsoft_edge.json' as microsoft_edge %}
 {% includeData 'servo.json' as servo %}
 
+{# includeData '_db/webvr_scenes.json' as sites #}
+{# includeData '_db/bugs.json' as bugs #}
+{# includeData '_db/compat_reports.json' as compat_reports #}
+{# includeData '_db/people.json' as people #}
+
+{# set db = {
+  sites: sites,
+  bugs: bugs,
+  compat_reports: compat_reports,
+  people: people
+} #}
+
 {% set browsers = {
   chromium: chromium,
   firefox: firefox,
