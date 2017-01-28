@@ -10,9 +10,7 @@
   <body>
     <header id="header" class="header" role="banner">
       <div class="container section">
-        {% with page=page %}
-          {% include '_logo.html' %}
-        {% endwith %}
+        {% include '_logo.html' %}
 
         <a class="browser-link" href="{{ browser.about }}">
           <h1 class="browser-name">{{ browser.name }}</h1>

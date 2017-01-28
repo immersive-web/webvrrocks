@@ -688,13 +688,13 @@ ul.matrix li + li {
   cursor: not-allowed;
 }
 
-[data-platform],
-[data-headset] {
+th[data-platform],
+th[data-headset] {
   position: relative;
 }
 
-[data-platform]:before {
-  background-position: 50%;
+th[data-platform]:before {
+background-position: 50%;
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -703,28 +703,28 @@ ul.matrix li + li {
   width: 10px;
 }
 
-[data-platform="windows"]:before {
+th[data-platform="windows"]:before {
   background-image: url(../../windows/logo.svg);
 }
 
-[data-platform="mac"]:before {
+th[data-platform="mac"]:before {
   background-image: url(../../mac/logo.svg);
 }
 
-[data-platform="linux"]:before {
+th[data-platform="linux"]:before {
   background-image: url(../../linux/logo.svg);
 }
 
-[data-platform="android"]:before {
+th[data-platform="android"]:before {
   background-image: url(../../android/logo.svg);
 }
 
-[data-platform="ios"]:before {
+th[data-platform="ios"]:before {
   background-image: url(../../ios/logo.svg);
 }
 
-[data-platform] a,
-[data-headset] a {
+th[data-platform] a,
+th[data-headset] a {
   display: block;
   position: absolute;
   top: 0;
@@ -733,7 +733,7 @@ ul.matrix li + li {
   width: 100%;
 }
 
-[data-headset]:before {
+th[data-headset]:before {
   background-position: 0 50%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -743,14 +743,14 @@ ul.matrix li + li {
   width: 40px;
 }
 
-[data-platform]:before,
-[data-headset]:before {
+th[data-platform]:before,
+th[data-headset]:before {
   opacity: .8;
   transition: .15s opacity ease-in-out;
 }
 
-[data-platform]:hover:before,
-[data-headset]:hover:before {
+th[data-platform]:hover:before,
+th[data-headset]:hover:before {
   opacity: 1;
 }
 

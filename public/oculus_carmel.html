@@ -10,9 +10,7 @@
   <body>
     <header id="header" class="header" role="banner">
       <div class="container section">
-        {% with page=page %}
-          {% include '_logo.html' %}
-        {% endwith %}
+        {% include '_logo.html' %}
 
         <a class="browser-link" href="{{ browser.about }}">
           <h1 class="browser-name">{{ browser.name }}</h1>
@@ -89,10 +87,14 @@
         <section id="info" class="section info">
           <h2><a href="#info">Info</a></h2>
           <dl>
-            <dt>Developer resources.</dt>
-            <dd><a href="https://developer.oculus.com/webvr/">Oculus WebVR pages.</a></dd>
-            <dd><a href="https://developer.oculus.com/blog/introducing-the-react-vr-pre-release/">React VR Pre-release</a></dd>
-            <dd><a href="https://github.com/OculusVR/ovrui">OVRUI toolkit</a></dd>
+            <dt>Developer resources</dt>
+            <dd>
+              <ul>
+                <li><a href="https://developer.oculus.com/webvr/">Oculus WebVR Developer Hub</a></li>
+                <li><a href="https://developer.oculus.com/blog/introducing-the-react-vr-pre-release/">React VR Pre-Release</a></li>
+                <li><a href="https://github.com/OculusVR/ovrui">OVRUI toolkit</a></li>
+              </ul>
+            </dd>
           </dl>
         </section>
 

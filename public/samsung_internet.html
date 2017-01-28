@@ -1,6 +1,6 @@
 {% from '_helpers.html' import author_item, browsers %}
-{% set browser = browsers.oculus_carmel %}
-{% set page = 'oculus_carmel.html' %}
+{% set browser = browsers.samsung_internet %}
+{% set page = 'samsung_internet.html' %}
 <!doctype html>
 <html lang="en" data-layout="secondary" data-browser="{{ browser.slug }}">
   <head>
@@ -10,9 +10,7 @@
   <body>
     <header id="header" class="header" role="banner">
       <div class="container section">
-        {% with page=page %}
-          {% include '_logo.html' %}
-        {% endwith %}
+        {% include '_logo.html' %}
 
         <a class="browser-link" href="{{ browser.about }}">
           <h1 class="browser-name">{{ browser.name }}</h1>

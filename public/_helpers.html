@@ -40,6 +40,26 @@
   servo: servo
 } %}
 
+{% macro browser_platform_support (browser, headset, os) %}
+  {% set support = browser.platforms[headset][os] %}
+  {% if support === 'supported' %}
+    {% set classes = 'no-underline supported' %}
+    {% set title = 'Supported' %}
+    {% set text = '✅' %}
+  {% elif support === 'headset_unsupported' %}
+    {% set classes = 'no-underline unsupported' %}
+    {% set title = 'Unsupported OS by headset maker' %}
+    {% set text = '❌' %}
+  {% elif support === 'browser_unsupported' %}
+    {% set classes = 'no-underline unsupported' %}
+    {% set title = 'Unsupported browser support' %}
+    {% set text = '❌' %}
+  {% endif %}
+  {% if title %}
+    <a class="{{ classes }}" title="{{ title }}" href="{{ browsers.about }}#{{ os }}">{{ text }}</a>
+  {% endif %}
+{% endmacro %}
+
 {% macro browser_item (slug, classes, id) %}
   {% set browser = browsers[slug] %}
   {% if not browser %}
@@ -68,51 +88,51 @@
         <tbody>
           <tr>
             <th data-headset="htc_vive"><a class="no-underline" href="/htc_vive"><span class="hidden-text">HTC Vive</span></a></th>
-            <td>{{ '<a class="no-underline" title="Supported" href="/htc_vive#windows">✅</a>'|safe if browser.platforms.htc_vive.windows === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/htc_vive#mac">✅</a>'|safe if browser.platforms.htc_vive.mac === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/htc_vive#linux">✅</a>'|safe if browser.platforms.htc_vive.linux === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/htc_vive#android">✅</a>'|safe if browser.platforms.htc_vive.android === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/htc_vive#ios">✅</a>'|safe if browser.platforms.htc_vive.ios === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
+            <td>{{ browser_platform_support(browser, 'htc_vive', 'windows') }}></td>
+            <td>{{ browser_platform_support(browser, 'htc_vive', 'mac') }}</td>
+            <td>{{ browser_platform_support(browser, 'htc_vive', 'linux') }}</td>
+            <td>{{ browser_platform_support(browser, 'htc_vive', 'android') }}></td>
+            <td>{{ browser_platform_support(browser, 'htc_vive', 'ios') }}</td>
           </tr>
           <tr>
             <th data-headset="oculus_rift"><a class="no-underline" href="/oculus_rift"><span class="hidden-text">Oculus Rift</span></a></th>
-            <td>{{ '<a class="no-underline" title="Supported" href="/oculus_rift#windows">✅</a>'|safe if browser.platforms.oculus_rift.windows === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/oculus_rift#mac">✅</a>'|safe if browser.platforms.oculus_rift.mac === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/oculus_rift#linux">✅</a>'|safe if browser.platforms.oculus_rift.linux === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/oculus_rift#android">✅</a>'|safe if browser.platforms.oculus_rift.android === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/oculus_rift#ios">✅</a>'|safe if browser.platforms.oculus_rift.ios === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
+            <td>{{ browser_platform_support(browser, 'oculus_rift', 'windows') }}</td>
+            <td>{{ browser_platform_support(browser, 'oculus_rift', 'mac') }}</td>
+            <td>{{ browser_platform_support(browser, 'oculus_rift', 'linux') }}</td>
+            <td>{{ browser_platform_support(browser, 'oculus_rift', 'android') }}</td>
+            <td>{{ browser_platform_support(browser, 'oculus_rift', 'ios') }}</td>
           </tr>
           <tr>
             <th data-headset="samsung_gear_vr"><a class="no-underline" href="/samsung_gear_vr"><span class="hidden-text">Samsung Gear VR</span></a></th>
-            <td>{{ '<a class="no-underline" title="Supported" href="/samsung_gear_vr#windows">✅</a>'|safe if browser.platforms.samsung_gear_vr.windows === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/samsung_gear_vr#mac">✅</a>'|safe if browser.platforms.samsung_gear_vr.mac === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/samsung_gear_vr#linux">✅</a>'|safe if browser.platforms.samsung_gear_vr.linux === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/samsung_gear_vr#android">✅</a>'|safe if browser.platforms.samsung_gear_vr.android === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/samsung_gear_vr#ios">✅</a>'|safe if browser.platforms.samsung_gear_vr.ios === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
+            <td>{{ browser_platform_support(browser, 'samsung_gear_vr', 'windows') }}</td>
+            <td>{{ browser_platform_support(browser, 'samsung_gear_vr', 'mac') }}</td>
+            <td>{{ browser_platform_support(browser, 'samsung_gear_vr', 'linux') }}</td>
+            <td>{{ browser_platform_support(browser, 'samsung_gear_vr', 'android') }}</td>
+            <td>{{ browser_platform_support(browser, 'samsung_gear_vr', 'ios') }}</td>
           </tr>
           <tr>
             <th data-headset="google_daydream"><a class="no-underline" href="/google_daydream"><span class="hidden-text">Google Daydream</span></a></th>
-            <td>{{ '<a class="no-underline" title="Supported" href="/google_daydream#windows">✅</a>'|safe if browser.platforms.google_daydream.windows === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/google_daydream#mac">✅</a>'|safe if browser.platforms.google_daydream.mac === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/google_daydream#linux">✅</a>'|safe if browser.platforms.google_daydream.linux === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/google_daydream#android">✅</a>'|safe if browser.platforms.google_daydream.android === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/google_daydream#ios">✅</a>'|safe if browser.platforms.google_daydream.ios === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
+            <td>{{ browser_platform_support(browser, 'google_daydream', 'windows') }}</td>
+            <td>{{ browser_platform_support(browser, 'google_daydream', 'mac') }}</td>
+            <td>{{ browser_platform_support(browser, 'google_daydream', 'linux') }}</td>
+            <td>{{ browser_platform_support(browser, 'google_daydream', 'android') }}</td>
+            <td>{{ browser_platform_support(browser, 'google_daydream', 'ios') }}</td>
           </tr>
           <tr>
             <th data-headset="google_cardboard"><a class="no-underline" href="/google_cardboard"><span class="hidden-text">Google Cardboard</span></a></th>
-            <td>{{ '<a class="no-underline" title="Supported" href="/google_cardboard#windows">✅</a>'|safe if browser.platforms.google_cardboard.windows === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/google_cardboard#mac">✅</a>'|safe if browser.platforms.google_cardboard.mac === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/google_cardboard#linux">✅</a>'|safe if browser.platforms.google_cardboard.linux === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/google_cardboard#android">✅</a>'|safe if browser.platforms.google_cardboard.android === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/google_cardboard#ios">✅</a>'|safe if browser.platforms.google_cardboard.ios === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
+            <td>{{ browser_platform_support(browser, 'google_cardboard', 'windows') }}</td>
+            <td>{{ browser_platform_support(browser, 'google_cardboard', 'mac') }}</td>
+            <td>{{ browser_platform_support(browser, 'google_cardboard', 'linux') }}</td>
+            <td>{{ browser_platform_support(browser, 'google_cardboard', 'android') }}</td>
+            <td>{{ browser_platform_support(browser, 'google_cardboard', 'ios') }}</td>
           </tr>
           <tr>
             <th data-headset="microsoft_hololens"><a class="no-underline" href="/microsoft_hololens"><span class="hidden-text">Microsoft Hololens</span></a></th>
-            <td>{{ '<a class="no-underline" title="Supported" href="/microsoft_hololens#windows">✅</a>'|safe if browser.platforms.microsoft_hololens.windows === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/microsoft_hololens#mac">✅</a>'|safe if browser.platforms.microsoft_hololens.mac === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/microsoft_hololens#linux">✅</a>'|safe if browser.platforms.microsoft_hololens.linux === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/microsoft_hololens#android">✅</a>'|safe if browser.platforms.microsoft_hololens.android === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
-            <td>{{ '<a class="no-underline" title="Supported" href="/microsoft_hololens#ios">✅</a>'|safe if browser.platforms.microsoft_hololens.ios === 'supported' else '<span class="unsupported" title="Unsupported">❌</span>'|safe }}</td>
+            <td>{{ browser_platform_support(browser, 'microsoft_hololens', 'windows') }}</td>
+            <td>{{ browser_platform_support(browser, 'microsoft_hololens', 'mac') }}</td>
+            <td>{{ browser_platform_support(browser, 'microsoft_hololens', 'linux') }}</td>
+            <td>{{ browser_platform_support(browser, 'microsoft_hololens', 'android') }}</td>
+            <td>{{ browser_platform_support(browser, 'microsoft_hololens', 'ios') }}</td>
           </tr>
         </tbody>
       </table>
