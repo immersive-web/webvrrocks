@@ -143,3 +143,5 @@
 302   /oculus_carmel/ford  ovrweb:http://static.oculus.com/webvr/production/97f2fc11c8a96114547e8edc8453878b5f9c5653/Samples/FordDemo/index.html
 302   /oculus_carmel/fog  ovrweb:http://aframe.io/aframe/examples/showcase/spheres-and-fog/
 302   /oculus_carmel/kadjar  ovrweb:http://kadjar.littleworkshop.fr/
+
+302   /chat  /slack

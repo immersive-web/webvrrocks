@@ -2,7 +2,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#24aef4">
-    <link rel="stylesheet" href="/media/css/main.css">
+    {% block css %}
+      <link rel="stylesheet" href="/media/css/main.css">
+    {% endblock %}
     <link rel="manifest" href="/manifest.webmanifest">
     <link rel="icon" sizes="256x256" href="/rocks/logo-256.png">
     <link rel="icon" sizes="256x256" href="/rocks/logo-256.svg">

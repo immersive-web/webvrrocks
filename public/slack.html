@@ -1,0 +1,26 @@
+{% from '_helpers.html' import browser_item, youtube %}
+<!doctype html>
+<html lang="en" data-layout="home">
+  <head>
+    {% block css %}
+      <style>
+        .iframe[data-source="slack"] {
+          border: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          height: 100%;
+          position: absolute;
+          width: 100%;
+        }
+      </style>
+    {% endblock %}
+    {% include '_head.html' %}
+    <title>Slack Chat • WebVR Rocks</title>
+  </head>
+  <body>
+    <iframe class="iframe" data-source="slack" src="https://slacknow.herokuapp.com/webvr/" frameborder="0"></iframe>
+    {% include '_footer.html' %}
+  </body>
+</html>

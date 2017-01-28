@@ -502,6 +502,7 @@ ul.site-nav-list {
 
 ul.site-nav-list li {
   list-style-type: none;
+  position: relative;
 }
 
 .site-nav a {
@@ -1039,6 +1040,20 @@ a.button-source:after {
 
 [data-debug] .matrix [itemprop="description"] {
   background-color: red;
+}
+
+[data-slug="slack"] a {
+  position: relative;
+}
+
+[data-slug="slack"] a:before {
+  background: url(/media/img/slack-color.svg) no-repeat;
+  background-size: cover;
+  content: "";
+  display: inline-block;
+  position: relative;
+  height: 1.5rem;
+  width: 2rem;
 }
 
 /**

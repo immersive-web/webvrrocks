@@ -1,0 +1,82 @@
+body {
+  background: #111;
+  color: #ddd;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
+
+.splash .logos + p b {
+  color: #24aef4;
+}
+
+.splash .active,
+.splash p.signin a {
+  color: #fff;
+}
+
+.splash .logos {
+  margin-bottom: 6rem;
+}
+
+.splash .logo.slack {
+  background: url(http://localhost:3000/rocks/logo.svg) 50% no-repeat;
+  background-size: contain;
+  height: 8.8rem;
+  width: 8.8rem;
+}
+
+.splash .logo.slack:after {
+  background: url(http://localhost:3000/media/img/slack.svg) no-repeat;
+  content: "";
+  display: block;
+  height: 8.8rem;
+  position: relative;
+  top: 9rem;
+  width: 8.8rem;
+}
+
+.splash button {
+  background-color: #43bb6e;
+}
+
+.splash button:hover {
+  background-color: #369658;
+}
+
+.splash button:disabled,
+.splash button.disabled {
+  background-color: #c6ebd3;
+}
+
+.splash button:not(.disabled):active {
+  background-color: magenta;
+}
+
+.splash #invite {
+  margin-bottom: 2rem;
+}
+
+.splash input {
+  background: none;
+  border: 0;
+  border-bottom: 2px solid rgba(255,255,255,.5);
+  color: rgba(255,255,255,.5);
+  margin-bottom: 2rem;
+}
+
+.splash input:focus {
+  border-bottom-color: #fff;
+  color: #fff;
+}
+
+.splash footer {
+  display: none;
+}
+
+.splash p.signin a {
+  padding: .1rem .2rem;
+}
+
+.splash p.signin a:hover {
+  margin: -.1rem -.1rem;
+  padding: .2rem .3rem .2rem .3rem;
+}
