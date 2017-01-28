@@ -2,6 +2,8 @@
   "@context": "http://schema.org",
   "@type": "MobileApplication",
   "name": "Samsung Internet Browser",
+  "description": "Samsung's browser for Gear VR",
+  "description_html": "<a href=\"https://www.oculus.com/experiences/gear-vr/849609821813454/\">Samsung&rsquo;s browser</a> for <a href=\"https://www.samsung.com/global/galaxy/gear-vr/\">Gear VR</a>",
   "slug": "samsung_internet",
   "operatingSystem": "Android",
   "processorRequirements": "IA64",
@@ -12,6 +14,50 @@
   "releases": {
     "latest": {
       "url": "https://www.oculus.com/experiences/gear-vr/849609821813454/"
+    }
+  },
+  "platforms": {
+    "htc_vive": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "browser_unsupported"
+    },
+    "oculus_rift": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "browser_unsupported"
+    },
+    "samsung_gear_vr": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "supported",
+      "ios": "headset_unsupported"
+    },
+    "google_daydream": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "browser_unsupported"
+    },
+    "google_cardboard": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "browser_unsupported"
+    },
+    "microsoft_hololens": {
+      "windows": "browser_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
     }
   }
 }

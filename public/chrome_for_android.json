@@ -2,6 +2,9 @@
   "@context": "http://schema.org",
   "@type": "MobileApplication",
   "name": "Chrome for Android",
+  "slug": "chrome_for_android",
+  "description": "WebVR in Chrome for Android mobile",
+  "description_html": "WebVR in <a href=\"https://www.google.com/chrome/browser/mobile/\">Chrome for Android</a> mobile",
   "operatingSystem": "Android",
   "processorRequirements": "",
   "logo": "/chrome_for_android/icon.png",
@@ -75,5 +78,49 @@
   },
   "device": "Android",
   "alternateName": "Chrome for Android WebVR",
-  "audio": ""
+  "audio": "",
+  "platforms": {
+    "htc_vive": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "browser_unsupported"
+    },
+    "oculus_rift": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "browser_unsupported"
+    },
+    "samsung_gear_vr": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "google_daydream": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "supported",
+      "ios": "browser_unsupported"
+    },
+    "google_cardboard": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "browser_unsupported"
+    },
+    "microsoft_hololens": {
+      "windows": "browser_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    }
+  }
 }

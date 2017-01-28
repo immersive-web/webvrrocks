@@ -2,6 +2,8 @@
   "@context": "http://schema.org",
   "@type": "SoftwareApplication",
   "name": "Microsoft Edge",
+  "description": "Microsoft's default browser for Windows 10, now shipping with support for Microsoft HoloLens",
+  "description_html": "<a href=\"https://www.microsoft.com/\">Microsoft</a>&rsquo;s <a href=\"https://www.microsoft.com/windows/microsoft-edge\">default browser</a> for <a href=\"https://www.microsoft.com/en-us/windows/get-windows-10\">Windows 10</a>, now shipping with support for <a href=\"https://www.microsoft.com/microsoft-hololens/\">Microsoft HoloLens</a>",
   "slug": "microsoft_edge",
   "operatingSystem": "Windows 10",
   "processorRequirements": "IA64",
@@ -26,5 +28,49 @@
     "model": "HoloLens",
     "category": "headset",
     "description": "Mixed-reality smart-glasses"
+  },
+  "platforms": {
+    "htc_vive": {
+      "windows": "browser_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "oculus_rift": {
+      "windows": "browser_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "samsung_gear_vr": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "google_daydream": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "google_cardboard": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "browser_unsupported"
+    },
+    "microsoft_hololens": {
+      "windows": "supported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    }
   }
 }

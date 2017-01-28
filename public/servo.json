@@ -3,9 +3,11 @@
   "@type": "SoftwareApplication",
   "name": "Servo",
   "slug": "servo",
+  "description": "Mozilla's next-generation browser engine designed for highly parallel, embedded uses",
+  "description_html": "<a href=\"https://www.mozilla.org/\">Mozilla</a>&rsquo;s <a href=\"https://servo.org/\">next-generation browser engine</a> designed for highly parallel, embedded uses",
   "operatingSystem": "Windows 10",
   "processorRequirements": "IA64",
-  "logo": "/servo/icon.svg",
+  "logo": "/servo/icon.png",
   "url": "https://servo.org/",
   "about": "/servo",
   "downloadUrl": "https://github.com/MortimerGoro/servo/releases/download/0.2/servo_gamepad.rar",
@@ -23,5 +25,49 @@
     "@type": "SoftwareSourceCode",
     "url": "https://github.com/MortimerGoro/servo/tree/0.2",
     "downloadUrl": "https://github.com/MortimerGoro/servo/archive/0.2.zip"
+  },
+  "platforms": {
+    "htc_vive": {
+      "windows": "supported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "oculus_rift": {
+      "windows": "browser_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "samsung_gear_vr": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "google_daydream": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "google_cardboard": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "browser_unsupported"
+    },
+    "microsoft_hololens": {
+      "windows": "browser_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    }
   }
 }

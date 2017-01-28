@@ -231,7 +231,7 @@
         dropdown.setAttribute('aria-expanded', openDialogues[dropdown]);
         return;
       }
-      openDialogues.forEach(function (dialogueEl) {
+      Object.keys(openDialogues).forEach(function (dialogueEl) {
         dialogueEl.setAttribute('aria-expanded', 'false');
       });
       openDialogues = {};

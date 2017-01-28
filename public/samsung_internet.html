@@ -1,28 +1,29 @@
+{% from '_helpers.html' import author_item, browsers %}
+{% set browser = browsers.oculus_carmel %}
+{% set page = 'oculus_carmel.html' %}
 <!doctype html>
-<html lang="en" data-layout="secondary" data-headset="samsung_gear_vr">
+<html lang="en" data-layout="secondary" data-browser="{{ browser.slug }}">
   <head>
     {% include '_head.html' %}
-    <title>Samsung Internet Browser • WebVR Rocks</title>
+    <title>{{ browser.name }} • WebVR Rocks</title>
   </head>
   <body>
     <header id="header" class="header" role="banner">
       <div class="container section">
-        <p class="hidden-text"><a href="/" aria-controls="main" tabindex="0">&#xAB; Back to WebVR Rocks home</a></p>
+        {% with page=page %}
+          {% include '_logo.html' %}
+        {% endwith %}
 
-        {% include '_logo.html' %}
-
-        <!--<div class="cf"><a href="https://github.com/webvrrocks/webvrrocks/edit/public/samsung_internet.html" title="Edit on GitHub" class="button button-primary pull-right">Edit on GitHub</a></div>-->
-
-        <a class="browser-link" href="/samsung_internet">
-          <h1 class="browser-name">Samsung Internet Browser</h1>
-          <img class="browser-icon browser-icon-samsung-internet" src="/samsung_internet/icon.png" alt="Samsung Internet Browser" title="Samsung Internet Browser">
+        <a class="browser-link" href="{{ browser.about }}">
+          <h1 class="browser-name">{{ browser.name }}</h1>
+          <img class="browser-icon browser-icon-chromium" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
         </a>
 
-        <p class="browser-intro"><a href="https://www.oculus.com/experiences/gear-vr/849609821813454/">Samsung&rsquo;s browser</a> for the <a href="https://www.samsung.com/global/galaxy/gear-vr/">Gear VR</a></p>
+        <p class="browser-intro">{{ (browser.description_html or browser.description)|safe }}</p>
 
         <figure class="media">
-          <a href="{{ helpers.browsers.oculus_carmel.url }}"><img src="samsung_internet/samsung-internet-browser-gear-vr.jpg" alt="Samsung Internet Browser for Gear VR" width="450"></a>
-          <figcaption class="hidden-text">Oculus Carmel</figcaption>
+          <a href="{{ browser.url }}"><img src="samsung_internet/samsung-internet-browser-gear-vr.jpg" alt="Samsung Internet Browser for Gear VR" width="450"></a>
+          <figcaption class="hidden-text">Samsung Internet Browser for Gear VR</figcaption>
         </figure>
       </div>
     </header>

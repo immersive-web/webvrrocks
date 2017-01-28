@@ -3,6 +3,8 @@
   "@type": "MobileApplication",
   "name": "Oculus Carmel",
   "slug": "oculus_carmel",
+  "description": "Oculus's WebVR-only browser for Gear VR",
+  "description_html": "<a href=\"https://www.oculus.com/\">Oculus</a>&rsquo;s <a href=\"https://www.oculus.com/experiences/gear-vr/1290985657630933/\">WebVR-only browser</a> <a href=\"https://www.samsung.com/global/galaxy/gear-vr/\">Gear VR</a>",
   "operatingSystem": "Android",
   "processorRequirements": "IA64",
   "logo": "/oculus_carmel/icon.png",
@@ -16,6 +18,50 @@
   "releases": {
     "latest": {
       "url": "https://www.oculus.com/experiences/gear-vr/1290985657630933/"
+    }
+  },
+  "platforms": {
+    "htc_vive": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "browser_unsupported"
+    },
+    "oculus_rift": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "browser_unsupported"
+    },
+    "samsung_gear_vr": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "supported",
+      "ios": "headset_unsupported"
+    },
+    "google_daydream": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "browser_unsupported"
+    },
+    "google_cardboard": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "browser_unsupported"
+    },
+    "microsoft_hololens": {
+      "windows": "browser_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
     }
   }
 }
