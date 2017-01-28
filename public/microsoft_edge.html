@@ -1,24 +1,25 @@
+{% from '_helpers.html' import author_item, browsers %}
+{% set browser = browsers.oculus_carmel %}
+{% set page = 'oculus_carmel.html' %}
 <!doctype html>
-<html lang="en" data-layout="secondary" data-browser="servo">
+<html lang="en" data-layout="secondary" data-browser="{{ browser.slug }}">
   <head>
     {% include '_head.html' %}
-    <title>Microsoft Edge • WebVR Rocks</title>
+    <title>{{ browser.name }} • WebVR Rocks</title>
   </head>
   <body>
     <header id="header" class="header" role="banner">
       <div class="container section">
-        <p class="hidden-text"><a href="/" aria-controls="main" tabindex="0">&#xAB; Back to WebVR Rocks home</a></p>
+        {% with page=page %}
+          {% include '_logo.html' %}
+        {% endwith %}
 
-        {% include '_logo.html' %}
-
-        <!--<div class="cf"><a href="https://github.com/webvrrocks/webvrrocks/edit/public/edge.html" title="Edit on GitHub" class="button button-primary pull-right">Edit on GitHub</a></div>-->
-
-        <a class="browser-link" href="/edge">
-          <h1 class="browser-name">Microsoft Edge</h1>
-          <img class="browser-icon browser-icon-edge" src="/microsoft_edge/icon.png" alt="Microsoft Edge" title="Microsoft Edge">
+        <a class="browser-link" href="{{ browser.about }}">
+          <h1 class="browser-name">{{ browser.name }}</h1>
+          <img class="browser-icon browser-icon-chromium" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
         </a>
 
-        <p class="browser-intro"><a href="https://www.microsoft.com/">Microsoft</a>&rsquo;s <a href="https://www.microsoft.com/windows/microsoft-edge">default browser</a> for <a href="https://www.microsoft.com/en-us/windows/get-windows-10">Windows 10</a>, now shipping with support for the <a href="https://www.microsoft.com/microsoft-hololens/">Microsoft HoloLens</a></p>
+        <p class="browser-intro">{{ (browser.description_html or browser.description)|safe }}</p>
       </div>
     </header>
 

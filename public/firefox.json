@@ -3,6 +3,8 @@
   "@type": "SoftwareApplication",
   "name": "Firefox",
   "slug": "firefox",
+  "description_html": "Mozilla's bleeding-edge version of Firefox",
+  "description_html": "<a href=\"https://www.mozilla.org/\">Mozilla</a>&rsquo;s <a href=\"https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly\">bleeding-edge version</a> of <a href=\"https://www.mozilla.org/en-US/firefox/\">Firefox</a>",
   "operatingSystem": "Windows",
   "processorRequirements": "IA64",
   "logo": "/firefox/icon-nightly.png",
@@ -16,6 +18,50 @@
   "releases": {
     "latest": {
       "url": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly"
+    }
+  },
+  "platforms": {
+    "htc_vive": {
+      "windows": "supported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "oculus_rift": {
+      "windows": "supported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "samsung_gear_vr": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "google_daydream": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "google_cardboard": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "browser_unsupported"
+    },
+    "microsoft_hololens": {
+      "windows": "browser_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
     }
   }
 }

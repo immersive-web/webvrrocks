@@ -1,24 +1,29 @@
+{% from '_helpers.html' import author_item, browsers %}
+{% set browser = browsers.servo %}
+{% set page = 'servo.html' %}
 <!doctype html>
-<html lang="en" data-layout="secondary" data-browser="servo">
+<html lang="en" data-layout="secondary" data-browser="{{ browser.slug }}">
   <head>
     {% include '_head.html' %}
-    <title>Servo • WebVR Rocks</title>
+    <title>{{ browser.name }} • WebVR Rocks</title>
   </head>
   <body>
     <header id="header" class="header" role="banner">
       <div class="container section">
-        <p class="hidden-text"><a href="/" aria-controls="main" tabindex="0">&#xAB; Back to WebVR Rocks home</a></p>
+        {% with page=page %}
+          {% include '_logo.html' %}
+        {% endwith %}
 
-        {% include '_logo.html' %}
-
-        <!--<div class="cf"><a href="https://github.com/webvrrocks/webvrrocks/edit/public/servo.html" title="Edit on GitHub" class="button button-primary pull-right">Edit on GitHub</a></div>-->
-
-        <a class="browser-link" href="/servo">
-          <h1 class="browser-name">Servo</h1>
-          <img class="browser-icon browser-icon-samsung-internet" src="/servo/icon.svg" alt="Servo" title="Servo">
+        <a class="browser-link" href="{{ browser.about }}">
+          <h1 class="browser-name">{{ browser.name }}</h1>
+          <img class="browser-icon browser-icon-chromium" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
         </a>
 
-        <p class="browser-intro"><a href="https://www.mozilla.org/">Mozilla</a>&rsquo;s <a href="https://servo.org/">next-generation browser engine</a> designed for highly parallel, embedded uses</p>
+        <p class="browser-intro">{{ (browser.description_html or browser.description)|safe }}</p>
+
+        <div class="message message-alert">
+          <strong>Warning:</strong> All <a href="#releases">Servo WebVR builds posted here</a> are highly experimental and subject to change!
+        </div>
       </div>
     </header>
 

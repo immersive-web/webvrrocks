@@ -3,6 +3,8 @@
   "@type": "SoftwareApplication",
   "name": "Chromium",
   "slug": "chromium",
+  "description": "Google's open-source version of Chrome",
+  "description_html": "<a href=\"https://www.google.com/\">Google</a>&rsquo;s open-source version of <a href=\"https://www.google.com/chrome/\">Chrome</a>",
   "operatingSystem": "Windows 7.1+",
   "processorRequirements": "IA64",
   "logo": "/chromium/icon.png",
@@ -59,5 +61,49 @@
   "softwareAddOn": "",
   "device": "",
   "alternateName": "Chromium WebVR",
-  "audio": ""
+  "audio": "",
+  "platforms": {
+    "htc_vive": {
+      "windows": "supported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "oculus_rift": {
+      "windows": "supported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "samsung_gear_vr": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "google_daydream": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "google_cardboard": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "browser_unsupported"
+    },
+    "microsoft_hololens": {
+      "windows": "browser_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    }
+  }
 }
