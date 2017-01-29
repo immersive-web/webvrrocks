@@ -620,43 +620,66 @@ ul.matrix li + li {
 }
 
 .matrix [itemprop="image"] {
-  border-radius: 3px;
   background-position: center;
-  background-size: auto 75%;
   background-repeat: no-repeat;
+  background-size: auto 75%;
+  border-radius: 3px;
   border: 1px solid #e6eaed;
   float: left;
-  margin-right: .75rem;
   height: 4rem;
+  margin-right: .75rem;
+  position: relative;
   width: 6rem;
+  z-index: 1;
 }
 
 .matrix [itemprop="browser"][data-slug="firefox"] [itemprop="image"] {
   border-color: rgba(78,178,230,.3);
 }
+.matrix [itemprop="browser"][data-slug="firefox"]:hover [itemprop="image"] {
+  border-color: rgba(78,178,230,.6);
+}
 
 .matrix [itemprop="browser"][data-slug="chromium"] [itemprop="image"] {
   border-color: rgba(63,102,196,.3);
+}
+.matrix [itemprop="browser"][data-slug="chromium"]:hover [itemprop="image"] {
+  border-color: rgba(63,102,196,.6);
 }
 
 .matrix [itemprop="browser"][data-slug="samsung_internet"] [itemprop="image"] {
   border-color: rgba(151,126,254,.3);
 }
+.matrix [itemprop="browser"][data-slug="samsung_internet"]:hover [itemprop="image"] {
+  border-color: rgba(151,126,254,.6);
+}
 
 .matrix [itemprop="browser"][data-slug="oculus_carmel"] [itemprop="image"] {
   border-color: rgba(60,61,62,.3);
+}
+.matrix [itemprop="browser"][data-slug="oculus_carmel"]:hover [itemprop="image"] {
+  border-color: rgba(60,61,62,.6);
 }
 
 .matrix [itemprop="browser"][data-slug="chrome_for_android"] [itemprop="image"] {
   border-color: rgba(36,160,98,.3);
 }
+.matrix [itemprop="browser"][data-slug="chrome_for_android"]:hover [itemprop="image"] {
+  border-color: rgba(36,160,98,.6);
+}
 
 .matrix [itemprop="browser"][data-slug="servo"] [itemprop="image"] {
   border-color: rgba(180,127,49,.3);
 }
+.matrix [itemprop="browser"][data-slug="servo"]:hover [itemprop="image"] {
+  border-color: rgba(180,127,49,.6);
+}
 
 .matrix [itemprop="browser"][data-slug="microsoft_edge"] [itemprop="image"] {
   border-color: rgba(25,118,210,.3);
+}
+.matrix [itemprop="browser"][data-slug="microsoft_edge"]:hover [itemprop="image"] {
+  border-color: rgba(25,118,210,.6);
 }
 
 .matrix [itemprop="description"] {
@@ -694,13 +717,13 @@ th[data-headset] {
 }
 
 th[data-platform]:before {
-background-position: 50%;
+  background-position: 50%;
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
   display: block;
-  height: 10px;
-  width: 10px;
+  height: 15px;
+  width: 15px;
 }
 
 th[data-platform="windows"]:before {
