@@ -112,7 +112,7 @@
       "windows": "headset_unsupported",
       "mac": "headset_unsupported",
       "linux": "headset_unsupported",
-      "android": "browser_unsupported",
+      "android": "supported",
       "ios": "browser_unsupported"
     },
     "microsoft_hololens": {

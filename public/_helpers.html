@@ -47,16 +47,16 @@
     {% set title = 'Supported' %}
     {% set text = '✅' %}
   {% elif support === 'headset_unsupported' %}
-    {% set classes = 'no-underline unsupported' %}
+    {% set classes = 'no-underline unsupported headset-unsupported' %}
     {% set title = 'Unsupported OS by headset maker' %}
     {% set text = '❌' %}
   {% elif support === 'browser_unsupported' %}
-    {% set classes = 'no-underline unsupported' %}
+    {% set classes = 'no-underline unsupported browser-unsupported' %}
     {% set title = 'Unsupported browser support' %}
     {% set text = '❌' %}
   {% endif %}
   {% if title %}
-    <a class="{{ classes }}" title="{{ title }}" href="{{ browsers.about }}#{{ os }}">{{ text }}</a>
+    <a data-support-browser="{{ browser.slug }}" data-support-headset="{{ headset }}" data-support-os="{{ os }}" class="{{ classes }}" title="{{ title }}" href="{{ browsers.about }}#{{ os }}">{{ text }}</a>
   {% endif %}
 {% endmacro %}
 
