@@ -1,7 +1,7 @@
 {
   "@context": "http://schema.org",
   "@type": "MobileApplication",
-  "name": "Samsung Internet Browser",
+  "name": "Samsung Internet",
   "description": "Samsung's browser for Gear VR",
   "description_html": "<a href=\"https://www.oculus.com/experiences/gear-vr/849609821813454/\">Samsung&rsquo;s browser</a> for <a href=\"https://www.samsung.com/global/galaxy/gear-vr/\">Gear VR</a>",
   "slug": "samsung_internet",

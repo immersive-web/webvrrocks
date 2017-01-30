@@ -56,7 +56,7 @@
     {% set text = '❌' %}
   {% endif %}
   {% if title %}
-    <a data-support-browser="{{ browser.slug }}" data-support-headset="{{ headset }}" data-support-os="{{ os }}" class="{{ classes }}" title="{{ title }}" href="{{ browsers.about }}#{{ os }}">{{ text }}</a>
+    <a data-support-browser="{{ browser.slug }}" data-support-headset="{{ headset }}" data-support-os="{{ os }}" class="{{ classes }}" title="{{ title }}" href="{{ browser.about }}#{{ os }}">{{ text }}</a>
   {% endif %}
 {% endmacro %}
 
@@ -66,14 +66,16 @@
     {% includeData slug + '.json' as browser %}
   {% endif %}
   <li itemprop="browser" itemscope itemtype="http://schema.org/SoftwareApplication" data-slug="{{ browser.slug }}" class="grid-flex-cell-1of2{% if class %} {{ classes }}{% endif %}" {% if id %} id="{{ id }}"{% endif %}>
-    <div class="browser-details">
-      <a itemprop="url" href="{{ browser.about }}" class="no-underline">
-        <div itemprop="image" style="background-image: url({{ browser.logo }})">
-        </div>
-        <!-- <img itemprop="image" class="browser-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}"> -->
-        <span itemprop="name" class="browser-name">{{ browser.name }}</span>
-      </a>
-      <span itemprop="description">{{ (browser.description_html or browser.description)|safe }}</span>
+    <div>
+      <div class="browser-details">
+        <a itemprop="url" href="{{ browser.about }}" class="no-underline">
+          <div itemprop="image" style="background-image: url({{ browser.logo }})">
+          </div>
+          <!-- <img itemprop="image" class="browser-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}"> -->
+          <span itemprop="name" class="browser-name">{{ browser.name }}</span>
+        </a>
+        <span itemprop="description">{{ (browser.description_html or browser.description)|safe }}</span>
+      </div>
       <table class="table-support table-outlined table-with-hover">
         <thead>
           <tr>
