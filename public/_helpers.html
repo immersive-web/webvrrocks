@@ -61,6 +61,39 @@
   }
 } %}
 
+{% set demos = {
+  "a_painter": {
+    "url": "https://aframe.io/a-painter/",
+    "image": "https://dl.airtable.com/RPPe979wRAil2X0OfUND_full_apainter.png",
+    "name": "A-Painter",
+    "description": "Paint and sketch in VR by Mozilla A-Frame team"
+  },
+  "a_blast": {
+    "url": "https://aframe.io/a-blast/",
+    "image": "/a_blast/poster.png",
+    "name": "A-Blast",
+    "description": "Save the world from the cutest creatures in the universe"
+  },
+  "dark_haze": {
+    "url": "https://christmasexperiments.com/2016/24/dark-haze/",
+    "image": "https://dl.airtable.com/63CkdQtS6OQszVONa4vr_full_dh1%2Clarge.2x.1482557323.jpg",
+    "name": "Dark Haze",
+    "description": "Where dust, smoke and other dry particles obscure the clarity of the sky"
+  },
+  "puzzle_rain": {
+    "url": "https://mozvr.com/puzzle-rain/",
+    "image": "/puzzle_rain/poster.png",
+    "name": "Puzzle Rain",
+    "description": "A musical WebVR journey for the HTC Vive"
+  },
+  "stagevr": {
+    "url": "https://jonathanzwhite.github.io/stagevr/",
+    "image": "/stage_vr/poster.png",
+    "name": "Stage VR",
+    "description": "Practice your next talk on the big stage"
+  }
+} %}
+
 {% macro browser_platform_support (browser, headset, os) %}
   {% set support = browser.platforms[headset][os] %}
   {% if support === 'supported' %}
@@ -83,6 +116,22 @@
   {% endif %}
 {% endmacro %}
 
+{% macro demo_item (slug, classes, id) %}
+  {% set demo = demos[slug] %}
+  <li itemprop="demo" itemscope itemtype="http://schema.org/{{ demo.@type }}" data-app-type="{{ demo.@type }}" data-slug="{{ demo.slug }}" class="grid-flex-cell-1of2{% if class %} {{ classes }}{% endif %}" {% if id %} id="{{ id }}"{% endif %}>
+    <div>
+      <div itemprop="details" class="demo-details">
+        <a itemprop="url" href="{{ demo.url }}" class="no-underline">
+          <div itemprop="image" style="background-image: url({{ demo.image }})">
+          </div>
+          <span itemprop="name" class="demo-name">{{ demo.name }}</span>
+        </a>
+        <span itemprop="description">{{ (demo.description_html or demo.description)|safe }}</span>
+      </div>
+    </div>
+  </li>
+{% endmacro %}
+
 {% macro browser_item (slug, classes, id) %}
   {% set browser = browsers[slug] %}
   {% if not browser %}
@@ -90,11 +139,10 @@
   {% endif %}
   <li itemprop="browser" itemscope itemtype="http://schema.org/{{ browser.@type }}" data-app-type="{{ browser.@type }}" data-slug="{{ browser.slug }}" class="grid-flex-cell-1of2{% if class %} {{ classes }}{% endif %}" {% if id %} id="{{ id }}"{% endif %}>
     <div>
-      <div class="browser-details">
+      <div itemprop="details" class="browser-details">
         <a itemprop="url" href="{{ browser.about }}" class="no-underline">
           <div itemprop="image" style="background-image: url({{ browser.logo }})">
           </div>
-          <!-- <img itemprop="image" class="browser-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}"> -->
           <span itemprop="name" class="browser-name">{{ browser.name }}</span>
         </a>
         <span itemprop="description">{{ (browser.description_html or browser.description)|safe }}</span>
@@ -182,26 +230,28 @@
 {% endmacro %}
 
 {% macro compat_report_row (report) %}
-  <tr data-report-type="{{ report.type }}"
-      itemprop="{{ report.type }}"
-      class="table-cell-error">
-    <td data-report-key="browserVersion"><span itemprop="userAgent" title="{{ report.browserUserAgent }}">{{ report.browserVersion }} <br> <small title="{{ report.browserDate }}">({{ report.browserDate }})</small></span></td>
-    <td data-report-key="browserBuildId"><span itemprop="buildId">{{ report.browserDate }}</span></td>
-    <td data-report-key="headsets">
-      {% if report.headsets %}
-        <span itemprop="headsets">
-          {% for headset_slug in report.headsets %}
-            {% set headset = headsets[headset_slug] %}
-            {{ headset.name }}{% if not loop.last %}, {% endif %}
-          {% endfor %}
-        </span>
-      {% endif %}
-    </td>
-    <td data-report-key="description"><a href="{{ report.bug }}" itemprop="description">{{ report.description }}</a></td>
-    <td data-report-key="dateReported"><time itemprop="dateReported" datetime="{{ report.dateReported.datetime }}">{{ report.dateReported.pretty }}</time></td>
-    <td data-report-key="dateUpdated"><time itemprop="dateUpdated" datetime="{{ report.dateUpdated.datetime }}">{{ report.dateUpdated.pretty }}</time></td>
-    <td data-report-key="status"><span itemprop="status">{{ report.status }}</span></td>
-  </tr>
+  {% if report.type == 'bug' %}
+    <tr data-report-type="{{ report.type }}"
+        itemprop="{{ report.type }}"
+        class="table-cell-error">
+      <td data-report-key="browserVersion"><span itemprop="userAgent" title="{{ report.browserUserAgent }}">{{ report.browserVersion }} <br> <small title="{{ report.browserDate }}">({{ report.browserDate }})</small></span></td>
+      <td data-report-key="browserBuildId"><span itemprop="buildId">{{ report.browserDate }}</span></td>
+      <td data-report-key="headsets">
+        {% if report.headsets %}
+          <span itemprop="headsets">
+            {% for headset_slug in report.headsets %}
+              {% set headset = headsets[headset_slug] %}
+              {{ headset.name }}{% if not loop.last %}, {% endif %}
+            {% endfor %}
+          </span>
+        {% endif %}
+      </td>
+      <td data-report-key="description"><a href="{{ report.bug or report.bugUrl or report.url }}" itemprop="description">{{ report.description }}</a></td>
+      <td data-report-key="dateReported"><time itemprop="dateReported" datetime="{{ report.dateReported.datetime }}">{{ report.dateReported.pretty }}</time></td>
+      <td data-report-key="dateUpdated"><time itemprop="dateUpdated" datetime="{{ report.dateUpdated.datetime }}">{{ report.dateUpdated.pretty }}</time></td>
+      <td data-report-key="status"><span itemprop="status">{{ report.status }}</span></td>
+    </tr>
+  {% endif %}
 {% endmacro %}
 
 {% macro youtube (video_id, opts) %}

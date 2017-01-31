@@ -1,4 +1,4 @@
-{% from '_helpers.html' import author_item, browsers, compat_report_row %}
+{% from '_helpers.html' import author_item, browsers, compat_report_row, demo_item %}
 {% set browser = browsers.firefox %}
 {% set page = 'firefox.html' %}
 <!doctype html>
@@ -53,6 +53,16 @@
           </ol>
         </section>
 
+        <section id="demos" class="section demos" data-section="demos">
+          <h2><a href="#demos">Demos</a></h2>
+          <ul data-section="demos" class="matrix grid-flex-container">
+            {{ demo_item('a_painter') }}
+            {{ demo_item('a_blast') }}
+            {{ demo_item('puzzle_rain') }}
+            {{ demo_item('stagevr') }}
+          </ul>
+        </section>
+
         <section id="releases" class="section releases" data-section="releases">
           <h2><a href="#releases">Latest version</a></h2>
           <h3><a href="" itemprop="softwareApplication"></a></h3>
@@ -88,31 +98,15 @@
               <dt class="browser-authors">Authors</dt>
               <dd>
                 <ul class="authors__list">
-                  <li class="authors__item">
-                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                      <span class="authors__item__author" itemprop="author" itemscope itemptype="http://schema.org/Person">
-                        <a class="authors__item__url" href="https://twitter.com/kearwoodgilbert" itemprop="url"><span class="authors__item__url" itemprop="name">Kearwood "Kip" Gilbert</span></a>
-                        (<a href="https://www.mozilla.org/" itemprop="organization">Mozilla</a>)
-                      </a>
-                    </span>
-                  </li>
-                  <li class="authors__item">
-                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                      <span class="authors__item__author" itemprop="author" itemscope itemptype="http://schema.org/Person">
-                        <a class="authors__item__url" href="https://twitter.com/daoshengmu" itemprop="url"><span class="authors__item__url" itemprop="name">Daosheng Mu</span></a>
-                        (<a href="https://www.mozilla.org/" itemprop="organization">Mozilla</a>)
-                      </a>
-                    </span>
-                  </li>
+                  {{ author_item('kearwoodgilbert') }}
+                  {{ author_item('daoshengmu') }}
                 </ul>
               </dd>
-              <dt>Release notes</dt>
-              <dd></dd>
             </dl>
           </article>
         </section>
 
-        <section id="compat" class="section compat">
+        <section id="compat" class="section compat" data-section="compat">
           <h2><a href="#compat">Known issues</a></h2>
           <div class="table-responsive">
             <table>
@@ -129,45 +123,11 @@
               </thead>
               <tbody>
                 {% for report in browser.reports %}
-                  {% if report.type == 'bug' %}
-                    {{ compat_report_row(report) }}
-                  {% endif %}
+                  {{ compat_report_row(report) }}
                 {% endfor %}
               </tbody>
             </table>
           </div>
-        </section>
-
-        <section id="demos" class="section demos">
-          <h2><a href="#demos">Demos</a></h2>
-          {# demo_tile('a_blast') #}
-          {# demo_tile('puzzle_rain') #}
-          {# demo_tile('stage_vr') #}
-          {# demo_tile('a_way_to_go') #}
-          <figure class="media-outlined media-demo">
-            <a class="demo-link" href="/a_blast">
-              <img class="demo-poster" src="/a_blast/poster.png" height="150">
-              <figcaption>A-Blast</figcaption>
-            </a>
-          </figure>
-          <figure class="media-outlined media-demo">
-            <a class="demo-link" href="/puzzle_rain">
-              <img class="demo-poster" src="/puzzle_rain/poster.png" height="150">
-              <figcaption>Puzzle Rain</figcaption>
-            </a>
-          </figure>
-          <figure class="media-outlined media-demo">
-            <a class="demo-link" href="/stage_vr">
-              <img class="demo-poster" src="/stage_vr/poster.png" height="150">
-              <figcaption>Stage VR</figcaption>
-            </a>
-          </figure>
-          <figure class="media-outlined media-demo">
-            <a class="demo-link" href="/a_way_to_go">
-              <img class="demo-poster" src="/a_way_to_go/poster.png" height="150">
-              <figcaption>A Way to Go</figcaption>
-            </a>
-          </figure>
         </section>
 
         <!-- <section id="info" class="section info"></section> -->

@@ -1,25 +1,25 @@
 {
   "@context": "http://schema.org",
   "@type": "Person",
-  "name": "Casey Yee",
-  "jobTitle": "WebVR Developer",
+  "name": "Kearwood \"Kip\" Gilbert",
+  "jobTitle": "WebVR Platform Engineer",
   "affiliation": "Mozilla",
-  "additionalName": "caseyyee",
-  "url": "http://cyee.io/",
-  "twitter_url": "https://twitter.com/whoyee",
-  "image": "https://avatars1.githubusercontent.com/u/1560884?s=256",
+  "additionalName": "kearwoodgilbert",
+  "url": "https://kearwood.com/",
+  "twitter_url": "https://twitter.com/kearwoodgilbert",
+  "image": "https://mozvr.com/assets/img/team/kip.jpg",
   "website": [
     {
       "@type": "Twitter",
-      "url": "https://twitter.com/whoyee"
+      "url": "https://twitter.com/kearwoodgilbert"
     },
     {
       "@type": "GitHub",
-      "url": "https://github.com/caseyyee"
+      "url": "https://github.com/kearwood"
     },
     {
       "@type": "WebSite",
-      "url": "http://cyee.io/"
+      "url": "https://kearwood.com/"
     }
   ],
   "address": {
@@ -28,7 +28,6 @@
     "addressRegion": "Canada",
     "addressCountry": "CA"
   },
-  "email": "caseyyee.ca@gmail.com",
   "worksFor": {
     "@type": "Organization",
     "name": "Mozilla",
@@ -39,7 +38,7 @@
   },
   "colleague": [
     "https://webvr.rocks/cvan.json",
-    "https://webvr.rocks/kearwoodgilbert.json",
+    "https://webvr.rocks/caseyyee.json",
     "https://webvr.rocks/daoshengmu.json"
   ]
 }

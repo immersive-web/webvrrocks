@@ -274,15 +274,6 @@ h1.page-title {
   flex-direction: column-reverse;
 }
 
-/*
-/*li*\[itemprop="browser"] [itemprop="name"] {
-  display: block;
-  flex: 1;
-  font-size: .8rem;
-  margin-top: .75rem;
-}
-*/
-
 .section[data-section="intro"] {
   border-width: 0;
 }
@@ -427,8 +418,9 @@ p.message {
 }
 
 dd .button-download {
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 1rem;
+  padding: .5rem 1rem;
+  /*margin-top: 1.5rem;*/
 }
 
 .authors__list,
@@ -448,7 +440,7 @@ figcaption {
 }
 
 [data-browser] li figcaption {
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .authors__list li,
@@ -462,6 +454,16 @@ figcaption {
 
 *[class*='button-outlined'].button-small {
   padding: 3px 5px;
+}
+
+.footer a[rel="license"] ~ span {
+  color: #444;
+  font-weight: bold;
+}
+
+.footer a[rel="license"] ~ span.by,
+.footer [property="cc:attributionName"] {
+  display: none;
 }
 
 /*
@@ -599,11 +601,7 @@ ul.matrix li {
 }
 
 ul.matrix li + li {
-  margin-top: 0;
-}
-
-[itemprop="browser"] + [itemprop="browser"] {
-  margin-bottom: .75rem;
+  margin: 0 0 .75rem;
 }
 
 .matrix li > div {
@@ -634,7 +632,7 @@ ul.matrix li + li {
   top: 0;
 }
 
-.browser-details {
+.matrix [itemprop="details"] {
   min-height: 4rem;
   position: relative;
 }
@@ -648,6 +646,16 @@ ul.matrix li + li {
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+html[data-layout] [data-section="demos"] ul.matrix {
+  max-width: 100%;
+}
+
+[data-section="demos"] .matrix [itemprop="image"] {
+  background-position: 50% 10%;
+  background-size: auto 124%;
+  border-color: #333;
 }
 
 .matrix [itemprop="description"] {
@@ -1015,6 +1023,10 @@ a.button-source:after {
   text-transform: uppercase;
 }
 
+[data-section="compat"] td {
+  vertical-align: top;
+}
+
 [data-report-key="browserVersion"],
 [data-report-key="headsets"],
 [data-report-key="dateReported"],
@@ -1127,6 +1139,17 @@ td[data-report-key="dateUpdated"] {
 
 .main .container .section {
   /*flex: 1;*/
+}
+
+.footer {
+  background: #e3e3e3;
+  color: #666;
+  opacity: .7;
+}
+
+.footer img {
+  display: block;
+  margin-bottom: .5rem;
 }
 
 /**
@@ -1549,6 +1572,13 @@ td[data-report-key="dateUpdated"] {
   [data-report-key="dateReported"],
   [data-report-key="dateUpdated"] {
     display: table-cell;
+  }
+
+  .footer {
+    background: none;
+    border-top: 1px solid #ddd;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
   }
 }
 

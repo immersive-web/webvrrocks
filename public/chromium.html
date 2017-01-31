@@ -1,4 +1,4 @@
-{% from '_helpers.html' import author_item, browsers %}
+{% from '_helpers.html' import author_item, browsers, compat_report_row, demo_item %}
 {% set browser = browsers.chromium %}
 {% set page = 'chromium.html' %}
 <!doctype html>
@@ -59,6 +59,16 @@
           </ol>
         </section>
 
+        <section id="demos" class="section demos" data-section="demos">
+          <h2><a href="#demos">Demos</a></h2>
+          <ul data-section="demos" class="matrix grid-flex-container">
+            {{ demo_item('a_blast') }}
+            {{ demo_item('a_painter') }}
+            {{ demo_item('dark_haze') }}
+            {{ demo_item('puzzle_rain') }}
+          </ul>
+        </section>
+
         <section id="releases" class="section releases">
           <h2><a href="#releases">Latest version</a></h2>
           <h4><a href="" itemprop="softwareApplication"></a></h4>
@@ -95,6 +105,7 @@
               <dd>
                 <ul class="authors__list">
                   {{ author_item('tojiro') }}
+                  {{ author_item('klausweidner') }}
                 </ul>
               </dd>
               <dt class="browser-release-notes">Release notes</dt>
@@ -107,52 +118,32 @@
           </article>
         </section>
 
-        <section id="known-issues" class="section known-issues">
-          <h2><a href="#known-issues">Known issues</a></h2>
+        <section id="compat" class="section compat" data-section="compat">
+          <h2><a href="#compat">Known issues</a></h2>
           <p>These known issues apply to the <a href="#download">latest published build</a>. Where applicable, the detailed release notes below will list when historic known issues were fixed.</p>
-          <ul>
-            <li>
-              <p>There is no installer for the experimental builds of Chromium. Once the contents of the <code>.zip</code> file is extracted, launched <code>chrome.exe</code> directly from the <code>chrome-bin</code> folder.</p>
-            </li>
-            <li>
-              <p><a class="button button-outlined-neutral button-small button-bug" href="https://github.com/toji/chrome-webvr-issues/issues/126">Bug</a> The timestamp passed to the <code>requestAnimationFrame</code> callback is off by a factor of 1000; the function erroneously receives microseconds instead of milliseconds.</p>
-            </li>
-            <li>
-              <p><a class="button button-outlined-neutral button-small button-bug" href="https://github.com/toji/chrome-webvr-issues/issues/73">Bug</a> OpenVR (HTC Vive): Static scene content wobbles in response to head movement.</p>
-            </li>
-          </ul>
-        </section>
-
-        <section id="demos" class="section demos">
-          <h2><a href="#demos">Demos</a></h2>
-          {# demo_tile('a_blast') #}
-          {# demo_tile('puzzle_rain') #}
-          {# demo_tile('stage_vr') #}
-          {# demo_tile('a_way_to_go') #}
-          <figure class="media-outlined media-demo">
-            <a class="demo-link" href="/a_blast">
-              <img class="demo-poster" src="/a_blast/poster.png" height="150">
-              <figcaption>A-Blast</figcaption>
-            </a>
-          </figure>
-          <figure class="media-outlined media-demo">
-            <a class="demo-link" href="/puzzle_rain">
-              <img class="demo-poster" src="/puzzle_rain/poster.png" height="150">
-              <figcaption>Puzzle Rain</figcaption>
-            </a>
-          </figure>
-          <figure class="media-outlined media-demo">
-            <a class="demo-link" href="/stage_vr">
-              <img class="demo-poster" src="/stage_vr/poster.png" height="150">
-              <figcaption>Stage VR</figcaption>
-            </a>
-          </figure>
-          <figure class="media-outlined media-demo">
-            <a class="demo-link" href="/a_way_to_go">
-              <img class="demo-poster" src="/a_way_to_go/poster.png" height="150">
-              <figcaption>A Way to Go</figcaption>
-            </a>
-          </figure>
+          <p class="note"><strong>Note:</strong> There is no installer for the experimental builds of Chromium. Once the contents of the <code>.zip</code> file is extracted, launched <code>chrome.exe</code> directly from the <code>chrome-bin</code> folder.</p>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th data-report-key="browserVersion">Version</th>
+                  <th data-report-key="browserBuildId">Browser build</th>
+                  <th data-report-key="headset">Headset</th>
+                  <th data-report-key="description">Description</th>
+                  <th data-report-key="dateReported">Reported</th>
+                  <th data-report-key="dateUpdated">Updated</th>
+                  <th data-report-key="status">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for report in browser.reports %}
+                  {% if report.type == 'bug' %}
+                    {{ compat_report_row(report) }}
+                  {% endif %}
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section id="info" class="section info">
@@ -168,7 +159,7 @@
             -->
             <dt>Which audio and video codecs are supported?</dt>
             <dd>
-              <p>Because of licensing issues, only open codecs are supported right now. For example, MP3 and x264 are <strong>not</strong> supported. Opus audio (<code>audio/opus</code>, <code>audio/ogg</code>), WebM (<code>video/webm</code>), Theora (<code>video/ogg</code>), Vorbis (<code>audio/vorbis</code>), VP8, VP9, and WAV.</p>
+              <p>Because of licensing issues, only <a href="https://www.chromium.org/audio-video">these open codecs</a> are supported right now. Namely, MP3 and x264 are <strong>not</strong> supported. Opus audio (<code>audio/opus</code>, <code>audio/ogg</code>), WebM (<code>video/webm</code>), Theora (<code>video/ogg</code>), Vorbis (<code>audio/vorbis</code>), VP8, VP9, and WAV.</p>
             </dd>
           </dl>
         </section>
