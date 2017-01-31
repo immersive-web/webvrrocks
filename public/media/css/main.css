@@ -1148,6 +1148,7 @@ td[data-report-key="dateUpdated"] {
 .footer {
   background: #e3e3e3;
   color: #666;
+  font-size: .85rem;
   opacity: .7;
 }
 
