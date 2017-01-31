@@ -3,7 +3,7 @@
   "dir": "ltr",
   "name": "WebVR Rocks",
   "short_name": "WebVR",
-  "description": "Community of experimentation & showcase of techniques of VR content creation on the Web.",
+  "description": "Your guide to VR on the Web.",
   "start_url": "./?src=manifest",
   "theme_color": "#24aef4",
   "background_color": "#fff",
