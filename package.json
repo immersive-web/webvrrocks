@@ -2,7 +2,7 @@
   "name": "webvrrocks",
   "version": "1.0.0",
   "private": "true",
-  "description": "WebVR Rocks",
+  "description": "WebVR Rocks: Your guide to Virtual Reality in the browser.",
   "main": "dev.js",
   "scripts": {
     "start": "npm run dev",
@@ -10,7 +10,9 @@
     "test": "npm run prod",
     "build": "shx cp -R public _prod && node ./node_modules/.bin/nunjucks '**/*.html' --path public --unsafe --extensions $PWD/nunjucks-helpers.js --out _prod",
     "deploy": "surge _prod -d https://webvr.rocks",
+    "deploy:staging": "surge _prod -d https://webvrrocks.surge.sh",
     "open": "opn 'https://webvr.rocks'",
+    "open:staging": "open 'https://webvrrocks.surge.sh'",
     "prebuild": "shx rm -rf _prod",
     "preprod": "npm run build",
     "pretest": "npm run build",
@@ -25,7 +27,6 @@
     "yonder": "^0.2.0"
   },
   "devDependencies": {
-    "budo": "github:mattdesl/budo#feature/livereload-rework",
     "opn": "^4.0.2"
   },
   "engines": {
@@ -34,6 +35,13 @@
   "repository": "webvrrocks/webvrrocks",
   "keywords": [
     "webvr",
-    "webvrrocks"
+    "webvrrocks",
+    "webvr-rocks",
+    "vr",
+    "virtualreality",
+    "virtual-reality",
+    "oculus",
+    "rift",
+    "vive"
   ]
 }

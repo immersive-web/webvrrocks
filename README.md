@@ -4,7 +4,7 @@ title: WebVR Rocks
 
 # WebVR Rocks
 
-Community of experimentation & showcase of techniques of VR content creation on the Web.
+Your guide to Virtual Reality in the browser.
 
 **[WebVR Rocks!](https://WebVR.rocks)**
 
@@ -29,16 +29,16 @@ npm start
 
 ## Deployment
 
-To deploy the static pages to staging:
+To deploy the static pages to [production](https://webvr.rocks/):
 
 ```sh
 npm run deploy
 ```
 
-To deploy the static pages to production:
+To deploy to [staging](https://webvrrocks.surge.sh):
 
 ```sh
-npm run deploy:prod
+npm run deploy:staging
 ```
 
 
