@@ -993,8 +993,7 @@ a.button-source:after {
 .iframe-container {
   height: 0;
   position: relative;
-  padding-bottom: 56.25%;  /* 16:9 */
-  padding-top: 1.5rem;
+  padding-bottom: 56%;  /* 16:9 */
 }
 
 /* We place the YouTube poster image behind `<iframe>` as it loads. */
