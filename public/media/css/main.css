@@ -1048,12 +1048,24 @@ a.button-source:after {
 
 [data-slug="slack"] a:before {
   background: url(/media/img/slack-color.svg) no-repeat;
-  background-size: cover;
+  background-position: center center;
+  background-size: 30px;
   content: "";
   display: inline-block;
   position: relative;
-  height: 1.5rem;
-  width: 2rem;
+  height: 1rem;
+  width: 1.5rem;
+}
+
+[data-slug="twitter"] a:before {
+  background: url(/media/img/twitter.svg) no-repeat;
+  background-size: 60%;
+  background-position: center center;
+  content: "";
+  display: inline-block;
+  position: relative;
+  height: 1rem;
+  width: 1.5rem;
 }
 
 /**
@@ -1301,6 +1313,7 @@ a.button-source:after {
     display: block;
     padding: 1rem;
     height: 100%;
+    line-height: 1.5rem;
   }
 
   .site-nav li:first-child a {
