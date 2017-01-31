@@ -160,8 +160,12 @@
   </li>
 {% endmacro %}
 
-{% macro youtube (src, width, height, classes, id) %}
+{% macro youtube (video_id, opts) %}
+  {% set width = opts.width or 315 %}
+  {% set height = opts.height or 560 %}
+  {% set classes = opts.classes or '' %}
+  {% set id = opts.id or '' %}
   <div class="iframe-container{% if classes %} {{ classes }}{% endif %}" {% if id %} id="{{ id }}"{% endif %}>
-    <iframe class="iframe" width="{{ width or '560' }}" height="{{ height or '315' }}" src="{{ src }}" frameborder="0" allowfullscreen="true"></iframe>
+    <iframe class="iframe" width="{{ width or '560' }}" height="{{ height or '315' }}" src="https://www.youtube.com/embed/{{ video_id }}" frameborder="0" allowfullscreen="true" style="background-image: url(https://img.youtube.com/vi/{{ video_id }}/0.jpg)"></iframe>
   </div>
 {% endmacro %}

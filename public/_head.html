@@ -9,4 +9,9 @@
     <link rel="icon" sizes="256x256" href="/rocks/logo-256.png">
     <link rel="icon" sizes="256x256" href="/rocks/logo-256.svg">
     <link rel="mask-icon" href="/rocks/mask-84.svg" color="#24aef4">
+    <script>
+      (function () {
+        try { document.documentElement.dataset.newbie = parseInt(window.localStorage.visits, 10) < 4; } catch (e) {}
+      })();
+    </script>
     <script src="https://cdn.rawgit.com/GoogleChrome/pwacompat/v1.0.0/pwacompat.min.js" async defer></script>

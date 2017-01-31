@@ -11,8 +11,8 @@
         {% include '_logo.html' %}
         <nav class="site-nav" role="navigation">
           <ul class="site-nav-list">
-            <li data-slug="slack"><a class="no-underline" href="/chat">Slack Chat</a></li>
-            <li data-slug="twitter"><a class="no-underline" href="https://twitter.com/WebVRrocks">@WebVRrocks</a></li>
+            <li data-slug="slack"><a class="no-underline social-link" href="/chat">Join our <b>WebVR #Rocks</b> chat</a></li>
+            <li data-slug="twitter"><a class="no-underline social-link" href="https://twitter.com/WebVRrocks">Stay tuned on Twitter <b>@WebVRrocks</b></a></li>
           </ul>
         </nav>
       </div>
@@ -26,12 +26,12 @@
             <p class="intro-compat">Works with the <a href="/htc_vive">HTC Vive</a>, <a href="/oculus_rift">Oculus Rift</a>, <a href="/samsung_gear_vr">Samsung Gear VR</a>, <a href="/google_daydream">Google Daydream</a>, and <a href="/google_cardboard">Google Cardboard</a>.</p>
           </div>
           <div class="intro-video">
-            <button class="button button-approve button-large button-watch-video" aria-controls="modal">
+            <a href="https://www.youtube.com/watch?v=Le8pTXQqM3s" class="button button-approve button-large button-watch-video" aria-controls="modal" data-expands-for>
               {% include "media/img/video.svg" %}
               Watch video
-            </button>
-            <div>
-              {{ youtube('https://www.youtube.com/embed/Le8pTXQqM3s') }}
+            </a>
+            <div class="intro-video-inner">
+              {{ youtube('Le8pTXQqM3s') }}
             </div>
           </div>
         </section>

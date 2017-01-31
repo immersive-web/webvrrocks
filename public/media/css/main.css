@@ -997,7 +997,12 @@ a.button-source:after {
   height: 0;
 }
 
-.iframe-container iframe {
+.intro-video-inner .iframe {
+  background-repeat: no-repeat;
+  background-position: 100% 437px;
+}
+
+.iframe-container > * {
   height: 100%;
   left: 0;
   position: absolute;
@@ -1037,30 +1042,33 @@ a.button-source:after {
   background-color: red;
 }
 
-[data-slug="slack"] a {
+.social-link {
+  font-size: 0;
   position: relative;
+}
+
+.social-link:before {
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  position: relative;
+  height: 1rem;
+  top: 1px;
+  width: 1.5rem;
+}
+
+.social-link b {
+  font-size: 1rem;
 }
 
 [data-slug="slack"] a:before {
-  background: url(/media/img/slack-color.svg) no-repeat;
-  background-position: center center;
-  background-size: 30px;
-  content: "";
-  display: inline-block;
-  position: relative;
-  height: 1rem;
-  width: 1.5rem;
+  background-image: url(/media/img/slack-color.svg);
 }
 
 [data-slug="twitter"] a:before {
-  background: url(/media/img/twitter.svg) no-repeat;
-  background-size: 60%;
-  background-position: center center;
-  content: "";
-  display: inline-block;
-  position: relative;
-  height: 1rem;
-  width: 1.5rem;
+  background-image: url(/media/img/twitter.svg);
 }
 
 .main .container {
@@ -1404,6 +1412,14 @@ a.button-source:after {
     flex-direction: row;
   }
 
+  [data-newbie="false"] .intro-video-inner {
+    display: none;
+  }
+
+  [data-newbie="false"] .button.button-watch-video {
+    display: inline-block;
+  }
+
   [data-newbie="true"] .intro > * {
     flex: 1;
   }
@@ -1422,10 +1438,6 @@ a.button-source:after {
     text-align: right;
   }
 
-  [data-newbie="false"] .button.button-watch-video {
-    display: inline-block;
-  }
-
   .button.button-watch-video {
     min-width: 15rem;
     padding: .5rem .25rem;
@@ -1442,12 +1454,8 @@ a.button-source:after {
     fill: rgba(255,255,255,.85);
   }
 
-  [data-newbie="false"] .button.button-watch-video + div {
-    display: none;
-  }
-
   /* modal - disabled */
-  /*
+
   .intro-video-play {
     border: 0;
     bottom: 0;
@@ -1482,7 +1490,6 @@ a.button-source:after {
     z-index: 2;
     width: 100%;
   }
-  */
 
   .browser-details {
     margin-bottom: 0;
