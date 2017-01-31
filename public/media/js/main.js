@@ -1,4 +1,4 @@
-/* global ga, performance */
+/* global ga, performance, YT */
 (function () {
   // Toggle this variable to output to the console debug GA messages.
   var gaDebug = false;
@@ -167,6 +167,7 @@
       var numVisits = storage.get('visits');
       ga('send', 'event', 'app.installed.href', window.location.href);
       ga('send', 'event', 'app.installed.visits', typeof numVisits === 'undefined' ? '<unknown>' : numVisits);
+      ga('send', 'event', 'app.installed.installs', storage.increment('installs'));
     });
   }
 
@@ -176,13 +177,17 @@
   var html = document.documentElement;
   var hash = window.location.hash.substr(1);
   var storage = {
+    _cache: {},
     has: function (key) {
       try {
         return key in localStorage;
       } catch (e) {}
     },
-    get: function (key) {
+    get: function (key, defaultValue) {
       try {
+        if (!(key in localStorage)) {
+          return defaultValue;
+        }
         return JSON.parse(localStorage[key]);
       } catch (e) {}
     },
@@ -195,6 +200,18 @@
       try {
         localStorage[key] = JSON.stringify(value);
       } catch (e) {}
+    },
+    increment: function (key, opts) {
+      if (opts && opts.once && key in storage._cache) {
+        return storage._cache[key];
+      }
+      var count = 0;
+      if (storage.has(key)) {
+        count = parseInt(storage.get(key), 10) || 0;
+      }
+      storage.set(key, ++count);
+      storage._cache[key] = count;
+      return count;
     }
   };
   var handleHashchange = function () {
@@ -205,12 +222,8 @@
   };
   var handleLoad = function () {
     handleHashchange();
-    var numVisits = 0;
-    if (storage.has('visits')) {
-      numVisits = parseInt(storage.get('visits'), 10) || 0;
-    }
-    html.dataset.newbie = numVisits < 4;
-    storage.set('visits', ++numVisits);
+    var numVisits = storage.increment('visits');
+    html.dataset.newbie = storage.get('videos:what_is_webvr:plays', 0) <= 2;
     if (storage.has('debug_ui')) {
       html.dataset.debug = '';
     } else {
@@ -237,6 +250,50 @@
       });
       openDialogues = {};
     });
+    initYT('Le8pTXQqM3s');
+  };
+  var initYT = function (id) {
+    // YouTube Player helper.
+    // Reference: https://developers.google.com/youtube/iframe_api_reference
+
+    var tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+
+    window.onYouTubeIframeAPIReady = function () {
+      player = new YT.Player('yt-' + id, {
+        height: '390',
+        width: '640',
+        videoId: id,
+        events: {
+          onReady: onPlayerReady,
+          onStateChange: onPlayerStateChange
+        }
+      });
+    };
+    var onPlayerReady = function (event) {
+      console.log('YouTube Video "%s" ready', id);
+    };
+    var playPauseCounter = 0;
+    var onPlayerStateChange = function (event) {
+      console.log('YouTube Video "%s" changed state', event.data);
+      if (event.data === YT.PlayerState.ENDED) {
+        console.log('YouTube Video "%s" was played and ended');
+        storage.increment('videos:what_is_webvr:plays', {once: true});
+        return;
+      }
+      if (event.data === YT.PlayerState.PLAYING ||
+          event.data === YT.PlayerState.PAUSED) {
+        playPauseCounter++;
+      }
+      if (playPauseCounter >= 4) {
+        console.log('YouTube Video "%s" was paused/played a few times');
+        storage.increment('videos:what_is_webvr:plays', {once: true});
+      }
+    };
   };
 
   window.addEventListener('hashchange', handleHashchange);

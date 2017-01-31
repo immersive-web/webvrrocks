@@ -991,15 +991,17 @@ a.button-source:after {
 }
 
 .iframe-container {
+  height: 0;
   position: relative;
   padding-bottom: 56.25%;  /* 16:9 */
   padding-top: 1.5rem;
-  height: 0;
 }
 
-.intro-video-inner .iframe {
-  background-repeat: no-repeat;
-  background-position: 100% 437px;
+/* We place the YouTube poster image behind `<iframe>` as it loads. */
+.intro-video-inner iframe {
+  background: rgb(53,176,230) 50% 50% no-repeat;
+  /*background-size: 100% 468px;*/
+  background-size: fill;
 }
 
 .iframe-container > * {
