@@ -286,13 +286,13 @@ h1.page-title {
   opacity: .8;
 }
 
-[data-layout="home"] .main h1,
+[data-layout~="home"] .main h1,
 .main h2 {
   font-size: 1.2rem;
   font-weight: 500;
 }
 
-[data-layout="home"] .main h1 a,
+[data-layout~="home"] .main h1 a,
 .main h2 a {
   color: #001f3f;
   display: block;
@@ -537,31 +537,31 @@ ul.site-nav-list li {
   transition: .15s fill ease-in-out;
 }
 
-[data-layout="secondary"] .site-logo {
+[data-layout~="secondary"] .site-logo {
   opacity: .9;
 }
 
-[data-layout="secondary"] .site-logo svg {
+[data-layout~="secondary"] .site-logo svg {
   opacity: .8;
   max-width: calc(2rem + 4vw);
   width: auto;
 }
 
-[data-layout="secondary"] .site-logo svg path {
+[data-layout~="secondary"] .site-logo svg path {
   fill: #989898;
 }
 
-[data-supports-touch="true"][data-layout="secondary"] .site-logo:active,
-[data-supports-touch="false"][data-layout="secondary"] .site-logo:hover {
+[data-supports-touch="true"][data-layout~="secondary"] .site-logo:active,
+[data-supports-touch="false"][data-layout~="secondary"] .site-logo:hover {
   opacity: 1;
 }
 
-[data-supports-touch="true"][data-layout="secondary"] .site-logo:active svg path,
-[data-supports-touch="false"][data-layout="secondary"] .site-logo:hover svg path {
+[data-supports-touch="true"][data-layout~="secondary"] .site-logo:active svg path,
+[data-supports-touch="false"][data-layout~="secondary"] .site-logo:hover svg path {
   fill: #24aef4;
 }
 
-[data-layout="secondary"] .site-logo:active svg path {
+[data-layout~="secondary"] .site-logo:active svg path {
   fill: magenta;
 }
 
@@ -796,14 +796,23 @@ tr[data-headset]:hover td {
   opacity: 1;
 }
 
-/*th[data-platform] a:before,*/
+th[data-platform] a:before {
+  opacity: .75;
+}
+
 tr[data-headset] th a:before {
   filter: grayscale(100%);
+}
+
+th[data-platform] a:before,
+tr[data-headset] a:before {
+  transition: .15s filter, opacity ease-in-out;
 }
 
 table:hover th[data-platform] a:before,
 table:hover tr[data-headset] a:before {
   filter: grayscale(0%);
+  opacity: 1;
 }
 
 tr[data-headset] th a:before {
@@ -814,36 +823,27 @@ tr[data-headset] th a:before {
   display: block;
   height: 18px;
   margin: .5rem .75rem;
-  transition: .15s filter ease-in-out;
   width: 4.6rem;
 }
 
 tr[data-headset="htc_vive"] th a:before {
   background-image: url(../../htc_vive/logo.svg);
-  /*height: 26px;*/
-  /*width: 30px;*/
 }
 
 tr[data-headset="oculus_rift"] th a:before {
   background-image: url(../../oculus_rift/logo.png);
-  /*width: 60px;*/
 }
 
 tr[data-headset="samsung_gear_vr"] th a:before {
   background-image: url(../../samsung_gear_vr/logo.png);
-  /*height: 16px;*/
 }
 
 tr[data-headset="google_daydream"] th a:before {
   background-image: url(../../google_daydream/logo.svg);
-  /*height: 30px;*/
-  /*width: 30px;*/
 }
 
 tr[data-headset="google_cardboard"] th a:before {
   background-image: url(../../google_cardboard/logo.svg);
-  /*height: 20px;*/
-  /*max-width: 80px;*/
 }
 
 tr[data-headset="microsoft_hololens"] th a:before {
@@ -1013,15 +1013,15 @@ a.button-source:after {
   background: yellow;
 }
 
-[data-debug][data-layout="secondary"] .site-logo {
+[data-debug][data-layout~="secondary"] .site-logo {
   background: goldenrod;
 }
 
-[data-debug][data-layout="secondary"] .site-logo svg {
+[data-debug][data-layout~="secondary"] .site-logo svg {
   background: red;
 }
 
-[data-debug][data-layout="secondary"] body {
+[data-debug][data-layout~="secondary"] body {
   background: red;
 }
 
@@ -1254,13 +1254,13 @@ a.button-source:after {
 }
 
 @media all and (min-width: 45rem) {
-  [data-layout="home"] .main h1,
+  [data-layout~="home"] .main h1,
   .main h2 {
     font-size: 1.5rem;
     font-weight: 400;
   }
 
-  [data-layout="home"] .main h1 {
+  [data-layout~="home"] .main h1 {
     border-top: 1px solid #eee;
     padding-top: 3rem;
   }
@@ -1311,16 +1311,16 @@ a.button-source:after {
     padding-top: 0;
   }
 
-  [data-layout="secondary"] .header .section {
+  [data-layout~="secondary"] .header .section {
     padding-bottom: 3rem;
   }
 
-  [data-layout="secondary"] .main .section {
+  [data-layout~="secondary"] .main .section {
     padding-bottom: 3rem;
     padding-top: 3rem;
   }
 
-  [data-layout="secondary"] .main .section:last-child {
+  [data-layout~="secondary"] .main .section:last-child {
     padding-bottom: 1.5rem;
   }
 
@@ -1329,14 +1329,14 @@ a.button-source:after {
     margin-top: -1.5rem;
   }
 
-  [data-layout="home"] .site-logo {
+  [data-layout~="home"] .site-logo {
     position: static;
     max-width: 100%;
     padding: 0 0 1.5rem;
     text-align: left;
   }
 
-  [data-layout="secondary"] .site-logo {
+  [data-layout~="secondary"] .site-logo {
     right: -1.5rem;
     padding-top: 1.5rem;
   }
