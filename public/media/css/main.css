@@ -586,7 +586,6 @@ ul.site-nav-list li {
   fill: magenta;
 }
 
-.edit-page,
 .rocks-wordmark {
   display: none;
 }
@@ -1148,9 +1147,33 @@ td[data-report-key="dateUpdated"] {
   opacity: .7;
 }
 
+.footer p {
+  margin: 0;
+}
+
 .footer img {
   display: block;
   margin-bottom: .5rem;
+}
+
+.edit-page {
+  padding-top: .5rem;
+}
+
+.edit-page a {
+  border-color: #666;
+  color: #666;
+  font-size: .6rem;
+}
+
+[data-section="info"] li + li {
+  margin-top: .5rem;
+}
+
+[data-section="info"] li em {
+  opacity: .75;
+  display: block;
+  font-size: .8rem;
 }
 
 /**
@@ -1594,6 +1617,12 @@ td[data-report-key="dateUpdated"] {
   .intro-para {
     font-size: 1.6rem;
     line-height: 1.6;
+  }
+
+  .edit-page {
+    text-align: right;
+    position: relative;
+    top: -3.5rem;
   }
 
   /*
