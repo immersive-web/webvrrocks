@@ -1043,6 +1043,7 @@ a.button-source:after {
 td[data-report-key="dateReported"],
 td[data-report-key="dateUpdated"] {
   font-size: .8rem;
+  line-height: 2;
 }
 
 [data-report-key] a {
