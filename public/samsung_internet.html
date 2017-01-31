@@ -1,4 +1,4 @@
-{% from '_helpers.html' import author_item, browsers %}
+{% from '_helpers.html' import author_item, browsers, compat_report_row, demo_item %}
 {% set browser = browsers.samsung_internet %}
 {% set page = 'samsung_internet.html' %}
 <!doctype html>
@@ -89,22 +89,12 @@
           </ul>
         </section>
 
-        <section id="demos" class="section demos">
+        <section id="demos" class="section demos" data-section="demos">
           <h2><a href="#demos">Demos</a></h2>
-          {# demo_tile('three_examples') #}
-          {# demo_tile('aframe_examples') #}
-          <figure class="media-outlined media-demo">
-            <a class="demo-link" href="/three">
-              <img class="demo-poster" src="/three/poster.png" height="150">
-              <figcaption>Three.js WebVR examples</figcaption>
-            </a>
-          </figure>
-          <figure class="media-outlined media-demo">
-            <a class="demo-link" href="/aframe">
-              <img class="demo-poster" src="/aframe/poster.png" height="150">
-              <figcaption>A-Frame examples</figcaption>
-            </a>
-          </figure>
+          <ul data-section="demos" class="matrix grid-flex-container">
+            {{ demo_item('three_examples') }}
+            {{ demo_item('aframe_examples') }}
+          </ul>
         </section>
 
         <section id="info" class="section info">
