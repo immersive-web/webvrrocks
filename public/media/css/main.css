@@ -1097,10 +1097,10 @@ a.button-source:after {
  */
 
 @media all and (max-width: 44.999rem) {
-  .table-support,
+  /*.table-support,
   [itemprop="browser"] > div:after {
     display: none;
-  }
+  }*/
 }
 
 @media all and (min-width: 18rem) and (max-width: 44.999rem) {
