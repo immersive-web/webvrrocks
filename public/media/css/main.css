@@ -288,18 +288,14 @@ h1.page-title {
 
 [data-layout="home"] .main h1,
 .main h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 [data-layout="home"] .main h1 a,
 .main h2 a {
+  color: #001f3f;
   display: block;
-}
-
-[data-layout="home"] .main h1 {
-  border-top: 1px solid #eee;
-  padding-top: 3rem;
 }
 
 .browser-icon {
@@ -587,6 +583,10 @@ ul.matrix li + li {
   margin-top: 0;
 }
 
+[itemprop="browser"] + [itemprop="browser"] {
+  margin-bottom: .75rem;
+}
+
 .matrix li > div {
   border-radius: 3px;
   height: 100%;
@@ -616,122 +616,19 @@ ul.matrix li + li {
 }
 
 .browser-details {
-  margin-bottom: .75rem;
   min-height: 4rem;
   position: relative;
 }
 
 .matrix [itemprop="image"] {
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: auto 75%;
-  border-radius: 3px;
-  border: 1px solid #e6eaed;
+  background-size: contain;
   height: 4rem;
   margin-right: .75rem;
   margin-bottom: .75rem;
   top: 0;
   left: 0;
-  width: 6rem;
   z-index: 1;
-}
-
-.matrix [itemprop="browser"] {
-  opacity: .9;
-}
-.matrix [itemprop="browser"]:hover {
-  opacity: 1;
-}
-
-.matrix [itemprop="browser"][data-slug="firefox"] [itemprop="image"] {
-  border-color: rgba(78,178,230,.3);
-}
-.matrix [itemprop="browser"][data-slug="firefox"]:hover [itemprop="image"] {
-  border-color: rgba(78,178,230,.6);
-}
-.matrix [itemprop="browser"][data-slug="firefox"] [itemprop="url"] {
-  color: rgba(78,178,230,.8);
-}
-.matrix [itemprop="browser"][data-slug="firefox"] [itemprop="url"]:hover {
-  color: rgba(78,178,230,1);
-}
-
-.matrix [itemprop="browser"][data-slug="chromium"] [itemprop="image"] {
-  border-color: rgba(63,102,196,.3);
-}
-.matrix [itemprop="browser"][data-slug="chromium"]:hover [itemprop="image"] {
-  border-color: rgba(63,102,196,.6);
-}
-.matrix [itemprop="browser"][data-slug="chromium"] [itemprop="url"] {
-  color: rgba(63,102,196,.8);
-}
-.matrix [itemprop="browser"][data-slug="chromium"] [itemprop="url"]:hover {
-  color: rgba(63,102,196,1);
-}
-
-.matrix [itemprop="browser"][data-slug="samsung_internet"] [itemprop="image"] {
-  border-color: rgba(151,126,254,.3);
-}
-.matrix [itemprop="browser"][data-slug="samsung_internet"]:hover [itemprop="image"] {
-  border-color: rgba(151,126,254,.6);
-}
-.matrix [itemprop="browser"][data-slug="samsung_internet"] [itemprop="url"] {
-  color: rgba(151,126,254,.8);
-}
-.matrix [itemprop="browser"][data-slug="samsung_internet"] [itemprop="url"]:hover {
-  color: rgba(151,126,254,1);
-}
-
-.matrix [itemprop="browser"][data-slug="oculus_carmel"] [itemprop="image"] {
-  border-color: rgba(60,61,62,.3);
-}
-.matrix [itemprop="browser"][data-slug="oculus_carmel"]:hover [itemprop="image"] {
-  border-color: rgba(60,61,62,.6);
-}
-.matrix [itemprop="browser"][data-slug="oculus_carmel"] [itemprop="url"] {
-  color: rgba(60,61,62,.8);
-}
-.matrix [itemprop="browser"][data-slug="oculus_carmel"] [itemprop="url"]:hover {
-  color: rgba(60,61,62,1);
-}
-
-.matrix [itemprop="browser"][data-slug="chrome_for_android"] [itemprop="image"] {
-  border-color: rgba(36,160,98,.3);
-}
-.matrix [itemprop="browser"][data-slug="chrome_for_android"]:hover [itemprop="image"] {
-  border-color: rgba(36,160,98,.6);
-}
-.matrix [itemprop="browser"][data-slug="chrome_for_android"] [itemprop="url"] {
-  color: rgba(36,160,98,.8);
-}
-.matrix [itemprop="browser"][data-slug="chrome_for_android"] [itemprop="url"]:hover {
-  color: rgba(36,160,98,1);
-}
-
-.matrix [itemprop="browser"][data-slug="servo"] [itemprop="image"] {
-  border-color: rgba(180,127,49,.3);
-}
-.matrix [itemprop="browser"][data-slug="servo"]:hover [itemprop="image"] {
-  border-color: rgba(180,127,49,.6);
-}
-.matrix [itemprop="browser"][data-slug="servo"] [itemprop="url"] {
-  color: rgba(180,127,49,.8);
-}
-.matrix [itemprop="browser"][data-slug="servo"] [itemprop="url"]:hover {
-  color: rgba(180,127,49,1);
-}
-
-.matrix [itemprop="browser"][data-slug="microsoft_edge"] [itemprop="image"] {
-  border-color: rgba(25,118,210,.3);
-}
-.matrix [itemprop="browser"][data-slug="microsoft_edge"]:hover [itemprop="image"] {
-  border-color: rgba(25,118,210,.6);
-}
-.matrix [itemprop="browser"][data-slug="microsoft_edge"] [itemprop="url"] {
-  color: rgba(25,118,210,.8);
-}
-.matrix [itemprop="browser"][data-slug="microsoft_edge"] [itemprop="url"]:hover {
-  color: rgba(25,118,210,1);
 }
 
 .matrix [itemprop="description"] {
@@ -1156,6 +1053,9 @@ a.button-source:after {
 
 @media all and (min-width: 18rem) and (max-width: 44.999rem) {
   .intro-para {
+    background: #ffea35;
+    border: 1px solid rgba(0,0,0,.2);
+    border-width: 1px 0;
     font-size: 1.2rem;
     line-height: 1.7;
     margin: 0 -1.5rem 1.5rem;
@@ -1163,7 +1063,7 @@ a.button-source:after {
   }
 
   .intro-para em {
-    background: #ffea35;
+    background: #fff;
     border-radius: .15rem;
     /*color: #fff;*/
     color: #111;
@@ -1186,29 +1086,6 @@ a.button-source:after {
   .site-logo:active svg path {
     fill: magenta;
   }
-
-  /*
-  ul[data-section] {
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 0;
-  }
-
-  ul[data-section] li {
-    flex-basis: 33.3333%;
-    width: auto;
-  }
-
-  .main ul[data-section] li + li {
-    margin-top: 1.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .main ul[data-section] li:nth-child(3n) {
-    padding-right: 0;
-  }
-  */
 }
 
 @media all and (min-width: 20rem) {
@@ -1243,15 +1120,139 @@ a.button-source:after {
   .site-logo svg {
     margin: 1.5rem;
   }
+}
 
-  /*
-  ul[data-section] {
-    justify-content: space-between;
+@media all and (min-width: 22rem) {
+  .matrix [itemprop="image"] {
+    background-position: center;
+    background-size: auto 75%;
+    border: 1px solid #e6eaed;
+    border-radius: 3px;
+    width: 6rem;
   }
-  */
+
+  .matrix [itemprop="browser"] {
+    opacity: .9;
+  }
+  .matrix [itemprop="browser"]:hover {
+    opacity: 1;
+  }
+
+  .matrix [itemprop="browser"][data-slug="firefox"] [itemprop="image"] {
+    border-color: rgba(78,178,230,.3);
+  }
+  .matrix [itemprop="browser"][data-slug="firefox"]:hover [itemprop="image"] {
+    border-color: rgba(78,178,230,.6);
+  }
+  .matrix [itemprop="browser"][data-slug="firefox"] [itemprop="url"] {
+    color: rgba(78,178,230,.8);
+  }
+  .matrix [itemprop="browser"][data-slug="firefox"] [itemprop="url"]:hover {
+    color: rgba(78,178,230,1);
+  }
+
+  .matrix [itemprop="browser"][data-slug="chromium"] [itemprop="image"] {
+    border-color: rgba(63,102,196,.3);
+  }
+  .matrix [itemprop="browser"][data-slug="chromium"]:hover [itemprop="image"] {
+    border-color: rgba(63,102,196,.6);
+  }
+  .matrix [itemprop="browser"][data-slug="chromium"] [itemprop="url"] {
+    color: rgba(63,102,196,.8);
+  }
+  .matrix [itemprop="browser"][data-slug="chromium"] [itemprop="url"]:hover {
+    color: rgba(63,102,196,1);
+  }
+
+  .matrix [itemprop="browser"][data-slug="samsung_internet"] [itemprop="image"] {
+    border-color: rgba(151,126,254,.3);
+  }
+  .matrix [itemprop="browser"][data-slug="samsung_internet"]:hover [itemprop="image"] {
+    border-color: rgba(151,126,254,.6);
+  }
+  .matrix [itemprop="browser"][data-slug="samsung_internet"] [itemprop="url"] {
+    color: rgba(151,126,254,.8);
+  }
+  .matrix [itemprop="browser"][data-slug="samsung_internet"] [itemprop="url"]:hover {
+    color: rgba(151,126,254,1);
+  }
+
+  .matrix [itemprop="browser"][data-slug="oculus_carmel"] [itemprop="image"] {
+    border-color: rgba(60,61,62,.3);
+  }
+  .matrix [itemprop="browser"][data-slug="oculus_carmel"]:hover [itemprop="image"] {
+    border-color: rgba(60,61,62,.6);
+  }
+  .matrix [itemprop="browser"][data-slug="oculus_carmel"] [itemprop="url"] {
+    color: rgba(60,61,62,.8);
+  }
+  .matrix [itemprop="browser"][data-slug="oculus_carmel"] [itemprop="url"]:hover {
+    color: rgba(60,61,62,1);
+  }
+
+  .matrix [itemprop="browser"][data-slug="chrome_for_android"] [itemprop="image"] {
+    border-color: rgba(36,160,98,.3);
+  }
+  .matrix [itemprop="browser"][data-slug="chrome_for_android"]:hover [itemprop="image"] {
+    border-color: rgba(36,160,98,.6);
+  }
+  .matrix [itemprop="browser"][data-slug="chrome_for_android"] [itemprop="url"] {
+    color: rgba(36,160,98,.8);
+  }
+  .matrix [itemprop="browser"][data-slug="chrome_for_android"] [itemprop="url"]:hover {
+    color: rgba(36,160,98,1);
+  }
+
+  .matrix [itemprop="browser"][data-slug="servo"] [itemprop="image"] {
+    border-color: rgba(180,127,49,.3);
+  }
+  .matrix [itemprop="browser"][data-slug="servo"]:hover [itemprop="image"] {
+    border-color: rgba(180,127,49,.6);
+  }
+  .matrix [itemprop="browser"][data-slug="servo"] [itemprop="url"] {
+    color: rgba(180,127,49,.8);
+  }
+  .matrix [itemprop="browser"][data-slug="servo"] [itemprop="url"]:hover {
+    color: rgba(180,127,49,1);
+  }
+
+  .matrix [itemprop="browser"][data-slug="microsoft_edge"] [itemprop="image"] {
+    border-color: rgba(25,118,210,.3);
+  }
+  .matrix [itemprop="browser"][data-slug="microsoft_edge"]:hover [itemprop="image"] {
+    border-color: rgba(25,118,210,.6);
+  }
+  .matrix [itemprop="browser"][data-slug="microsoft_edge"] [itemprop="url"] {
+    color: rgba(25,118,210,.8);
+  }
+  .matrix [itemprop="browser"][data-slug="microsoft_edge"] [itemprop="url"]:hover {
+    color: rgba(25,118,210,1);
+  }
+}
+
+@media all and (min-width: 25rem) {
+  .matrix [itemprop="name"],
+  .matrix [itemprop="description"] {
+    padding-left: 6.75rem;
+  }
+
+  .matrix [itemprop="image"] {
+    margin-bottom: 0;
+    position: absolute;
+  }
 }
 
 @media all and (min-width: 45rem) {
+  [data-layout="home"] .main h1,
+  .main h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  [data-layout="home"] .main h1 {
+    border-top: 1px solid #eee;
+    padding-top: 3rem;
+  }
   .site-header .section {
     flex-direction: row;
     padding-top: 0;
@@ -1394,16 +1395,6 @@ a.button-source:after {
 
   .browser-details {
     margin-bottom: 0;
-  }
-
-  .matrix [itemprop="name"],
-  .matrix [itemprop="description"] {
-    padding-left: 6.75rem;
-  }
-
-  .matrix [itemprop="image"] {
-    margin-bottom: 0;
-    position: absolute;
   }
 }
 
