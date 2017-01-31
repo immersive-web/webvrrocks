@@ -796,14 +796,25 @@ tr[data-headset]:hover td {
   opacity: 1;
 }
 
+/*th[data-platform] a:before,*/
+tr[data-headset] th a:before {
+  filter: grayscale(100%);
+}
+
+table:hover th[data-platform] a:before,
+table:hover tr[data-headset] a:before {
+  filter: grayscale(0%);
+}
+
 tr[data-headset] th a:before {
   background-position: 0 50%;
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
   display: block;
-  margin: .5rem .75rem;
   height: 18px;
+  margin: .5rem .75rem;
+  transition: .15s filter ease-in-out;
   width: 4.6rem;
 }
 
