@@ -299,7 +299,7 @@ h1.page-title {
 
 [data-layout="home"] .main h1 {
   border-top: 1px solid #eee;
-  padding-top: 2.5rem;
+  padding-top: 3rem;
 }
 
 .browser-icon {
@@ -634,20 +634,6 @@ ul.matrix li + li {
   left: 0;
   width: 6rem;
   z-index: 1;
-}
-
-.browser-details {
-  /*margin-bottom: 0;*/
-}
-
-.matrix [itemprop="name"],
-.matrix [itemprop="description"] {
-  /*padding-left: 6.75rem;*/
-}
-
-.matrix [itemprop="image"] {
-  /*margin-bottom: 0;*/
-  /*position: absolute;*/
 }
 
 .matrix [itemprop="browser"] {
@@ -1405,6 +1391,20 @@ a.button-source:after {
     width: 100%;
   }
   */
+
+  .browser-details {
+    margin-bottom: 0;
+  }
+
+  .matrix [itemprop="name"],
+  .matrix [itemprop="description"] {
+    padding-left: 6.75rem;
+  }
+
+  .matrix [itemprop="image"] {
+    margin-bottom: 0;
+    position: absolute;
+  }
 }
 
 @media all and (min-width: 44.999rem) and (max-width: 52.499rem) {
@@ -1419,7 +1419,6 @@ a.button-source:after {
     font-size: 1.6rem;
     line-height: 1.6;
   }
-
 
   /*
   ul[data-section] {
