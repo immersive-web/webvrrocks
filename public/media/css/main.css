@@ -748,145 +748,198 @@ ul.matrix li + li {
   position: relative;
 }
 
-.matrix .table-support {
+.table-support {
   font-size: .7rem;
-  margin: .5rem 0 0;
-  /*position: relative;*/
-  z-index: 1;
+  table-layout: fixed;
+  margin: .5rem 0 1rem;
 }
 
-.matrix .table-support th {
-  background: #f0f0f0;
+.table-support th {
+  /*background: #f0f0f0;*/
 }
 
-.matrix .table-support thead th {
-  background: #eaeaea;
+.table-support thead th {
+  background: #fff;
+  border-bottom-color: #bbb;
 }
 
-.matrix .table-support .unsupported {
-  cursor: not-allowed;
-}
-
-th[data-platform],
-th[data-headset] {
-  position: relative;
-}
-
-th[data-platform]:before {
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: contain;
+[itemprop="browser"] > div:after {
+  border-bottom: 1px solid #ccc;
   content: "";
   display: block;
-  height: 15px;
-  width: 15px;
-}
-
-th[data-platform="windows"]:before {
-  background-image: url(../../windows/logo.svg);
-}
-
-th[data-platform="mac"]:before {
-  background-image: url(../../mac/logo.svg);
-}
-
-th[data-platform="linux"]:before {
-  background-image: url(../../linux/logo.svg);
-}
-
-th[data-platform="android"]:before {
-  background-image: url(../../android/logo.svg);
-}
-
-th[data-platform="ios"]:before {
-  background-image: url(../../ios/logo.svg);
-}
-
-th[data-platform] a,
-th[data-headset] a {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+  height: 0;
+  margin-top: -1px;
+  position: relative;
+  top: -1rem;
   width: 100%;
 }
 
-th[data-headset]:before {
+.table-support.table-verbose tr[data-headset],
+.table-support.table-verbose td[data-platform],
+.table-support.table-verbose th[data-platform] {
+  display: none;
+}
+
+.table-support.table-verbose[data-supported-headsets~="htc_vive"] tr[data-headset="htc_vive"],
+.table-support.table-verbose[data-supported-headsets~="oculus_rift"] tr[data-headset="oculus_rift"],
+.table-support.table-verbose[data-supported-headsets~="samsung_gear_vr"] tr[data-headset="samsung_gear_vr"],
+.table-support.table-verbose[data-supported-headsets~="google_daydream"] tr[data-headset="google_daydream"],
+.table-support.table-verbose[data-supported-headsets~="google_cardboard"] tr[data-headset="google_cardboard"],
+.table-support.table-verbose[data-supported-headsets~="microsoft_hololens"] tr[data-headset="microsoft_hololens"] {
+  display: table-row;
+}
+
+.table-support.table-verbose[data-supported-platforms~="windows"] [data-platform="windows"],
+.table-support.table-verbose[data-supported-platforms~="mac"] [data-platform="mac"],
+.table-support.table-verbose[data-supported-platforms~="linux"] [data-platform="linux"],
+.table-support.table-verbose[data-supported-platforms~="android"] [data-platform="android"],
+.table-support.table-verbose[data-supported-platforms~="ios"] [data-platform="ios"] {
+  display: table-cell;
+}
+
+[itemprop="browser"][data-slug="firefox"] tr[data-headset="samsung_gear_vr"],
+[itemprop="browser"][data-slug="firefox"] tr[data-headset="google_daydream"],
+[itemprop="browser"][data-slug="firefox"] tr[data-headset="google_cardboard"],
+[itemprop="browser"][data-slug="chromium"] tr[data-headset="samsung_gear_vr"],
+[itemprop="browser"][data-app-type="MobileApplication"] tr[data-headset="htc_vive"],
+[itemprop="browser"][data-app-type="MobileApplication"] tr[data-headset="oculus_rift"],
+[itemprop="browser"][data-app-type="MobileApplication"] tr[data-headset="microsoft_hololens"],
+[itemprop="browser"][data-app-type="MobileApplication"] [data-platform="windows"],
+[itemprop="browser"][data-app-type="MobileApplication"] [data-platform="mac"],
+[itemprop="browser"][data-app-type="MobileApplication"] [data-platform="linux"],
+[itemprop="browser"][data-slug="microsoft_edge"] tr[data-headset="samsung_gear_vr"],
+[itemprop="browser"][data-slug="microsoft_edge"] tr[data-headset="google_daydream"],
+[itemprop="browser"][data-slug="microsoft_edge"] tr[data-headset="google_cardboard"],
+[itemprop="browser"][data-slug="microsoft_edge"] [data-platform]:not([data-platform="windows"]) {
+  display: none;
+}
+
+.table-support .unsupported {
+  cursor: not-allowed;
+}
+
+.table-support /*a*/.supported strong {
+  display: none;
+}
+
+th[data-platform],
+tr[data-headset] th {
+  position: relative;
+}
+
+th[data-platform] a:before {
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  background-size: auto 60%;
+  content: "";
+  display: block;
+  height: 30px;
+  margin: .25rem 0;
+  width: 100%;
+}
+
+th[data-platform="windows"] a:before {
+  background-image: url(../../windows/logo.svg);
+}
+
+th[data-platform="mac"] a:before {
+  background-image: url(../../mac/logo.svg);
+}
+
+th[data-platform="linux"] a:before {
+  background-image: url(../../linux/logo.svg);
+}
+
+th[data-platform="android"] a:before {
+  background-image: url(../../android/logo.svg);
+}
+
+th[data-platform="ios"] a:before {
+  background-image: url(../../ios/logo.svg);
+}
+
+.table-support td,
+.table-support th {
+  padding: 0;
+}
+
+.table-support th > a,
+.table-support td > a {
+  display: table;
+  /*text-align: center;*/
+  width: 100%;
+}
+
+.table-support tbody td > a span {
+  display: table-cell;
+  /*text-align: center;*/
+  vertical-align: middle;
+  width: 100%;
+}
+
+thead th:first-child {
+  width: 6.85rem;
+}
+
+tr[data-headset] th a {
+  display: block;
+}
+
+th[data-platform]:before,
+tr[data-headset] th a:before,
+tr[data-headset] td {
+  opacity: .8;
+  transition: .15s opacity ease-in-out;
+}
+
+th[data-platform],
+tr[data-headset]:hover > th a:before,
+tr[data-headset]:hover td {
+  opacity: 1;
+}
+
+tr[data-headset] th a:before {
   background-position: 0 50%;
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
   display: block;
-  height: 30px;
-  width: 40px;
+  margin: .5rem .75rem;
+  height: 18px;
+  width: 4.6rem;
 }
 
-th[data-platform]:before,
-th[data-headset]:before {
-  opacity: .8;
-  transition: .15s opacity ease-in-out;
+tr[data-headset="htc_vive"] th a:before {
+  background-image: url(../../htc_vive/logo.svg);
+  /*height: 26px;*/
+  /*width: 30px;*/
 }
 
-th[data-platform]:hover:before,
-th[data-headset]:hover:before {
-  opacity: 1;
-}
-
-/*
-[data-headset="htc_vive"]:before {
-  height: 26px;
-  width: 30px;
-}
-
-[data-headset="oculus_rift"]:before {
-  height: 25px;
-  width: 30px;
-}
-
-[data-headset="samsung_gear_vr"]:before {
-  height: 13px;
-  width: 30px;
-}
-
-[data-headset="google_daydream"]:before {
-  height: 30px;
-  width: 30px;
-}
-
-[data-headset="google_cardboard"]:before {
-  height: 5px;
-  width: 30px;
-}
-
-[data-headset="microsoft_hololens"]:before {
-  height: 9px;
-  width: 29px;
-}
-*/
-
-[data-headset="htc_vive"]:before {
-  background-image: url(../../htc_vive/logo.png);
-}
-
-[data-headset="oculus_rift"]:before {
+tr[data-headset="oculus_rift"] th a:before {
   background-image: url(../../oculus_rift/logo.png);
+  /*width: 60px;*/
 }
 
-[data-headset="samsung_gear_vr"]:before {
+tr[data-headset="samsung_gear_vr"] th a:before {
   background-image: url(../../samsung_gear_vr/logo.png);
+  /*height: 16px;*/
 }
 
-[data-headset="google_daydream"]:before {
-  background-image: url(../../google_daydream/logo.png);
+tr[data-headset="google_daydream"] th a:before {
+  background-image: url(../../google_daydream/logo.svg);
+  /*height: 30px;*/
+  /*width: 30px;*/
 }
 
-[data-headset="google_cardboard"]:before {
-  background-image: url(../../google_cardboard/logo.png);
+tr[data-headset="google_cardboard"] th a:before {
+  background-image: url(../../google_cardboard/logo.svg);
+  /*height: 20px;*/
+  /*max-width: 80px;*/
 }
 
-[data-headset="microsoft_hololens"]:before {
-  background-image: url(../../microsoft_hololens/logo.png);
+tr[data-headset="microsoft_hololens"] th a:before {
+  background-image: url(../../microsoft_hololens/logo.svg);
+  height: 27px;
 }
 
 /*
@@ -1094,7 +1147,7 @@ a.button-source:after {
  */
 
 @media all and (max-width: 44.999rem) {
-  .matrix .table-support {
+  .table-support {
     display: none;
   }
 }
@@ -1370,4 +1423,18 @@ a.button-source:after {
     padding-right: 0;
   }
   */
+}
+
+@media all and (min-width: 70rem) {
+  .table-support /*a*/.supported strong {
+    display: inline;
+    color: #3d9970;
+    font-size: .6rem;
+    font-weight: 500;
+    padding-left: .25ch;
+  }
+
+  .table-support /*a*/.supported:hover strong {
+    color: darkgreen;
+  }
 }

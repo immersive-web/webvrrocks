@@ -45,7 +45,7 @@
   {% if support === 'supported' %}
     {% set classes = 'no-underline supported' %}
     {% set title = 'Supported' %}
-    {% set text = '✅' %}
+    {% set text = '✅ <strong>Supported</strong>'|safe %}
   {% elif support === 'headset_unsupported' %}
     {% set classes = 'no-underline unsupported headset-unsupported' %}
     {% set title = 'Unsupported OS by headset maker' %}
@@ -56,7 +56,9 @@
     {% set text = '❌' %}
   {% endif %}
   {% if title %}
-    <a data-support-browser="{{ browser.slug }}" data-support-headset="{{ headset }}" data-support-os="{{ os }}" class="{{ classes }}" title="{{ title }}" href="{{ browser.about }}#{{ os }}">{{ text }}</a>
+    <a data-support-browser="{{ browser.slug }}" data-support-headset="{{ headset }}" data-support-os="{{ os }}" class="{{ classes }}" title="{{ title }}" href="{{ browser.about }}#{{ os }}">
+      <span>{{ text }}</span>
+    </a>
   {% endif %}
 {% endmacro %}
 
@@ -65,7 +67,7 @@
   {% if not browser %}
     {% includeData slug + '.json' as browser %}
   {% endif %}
-  <li itemprop="browser" itemscope itemtype="http://schema.org/SoftwareApplication" data-slug="{{ browser.slug }}" class="grid-flex-cell-1of2{% if class %} {{ classes }}{% endif %}" {% if id %} id="{{ id }}"{% endif %}>
+  <li itemprop="browser" itemscope itemtype="http://schema.org/{{ browser.@type }}" data-app-type="{{ browser.@type }}" data-slug="{{ browser.slug }}" class="grid-flex-cell-1of2{% if class %} {{ classes }}{% endif %}" {% if id %} id="{{ id }}"{% endif %}>
     <div>
       <div class="browser-details">
         <a itemprop="url" href="{{ browser.about }}" class="no-underline">
@@ -76,7 +78,23 @@
         </a>
         <span itemprop="description">{{ (browser.description_html or browser.description)|safe }}</span>
       </div>
-      <table class="table-support table-outlined table-with-hover">
+
+      {% set supported_headsets = [] %}
+      {% set supported_platforms = [] %}
+      {% for headset, operating_systems in browser.platforms %}
+        {% for os, support_status in operating_systems %}
+          {% if support_status == 'supported' %}
+            {% if os not in supported_platforms %}
+              {% set supported_platforms = supported_platforms.concat([os]) %}
+            {% endif %}
+            {% if headset not in supported_headsets %}
+              {% set supported_headsets = supported_headsets.concat([headset]) %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+
+      <table class="table-support table-with-hover" data-supported-platforms="{{ supported_platforms|join(' ') }}" data-supported-headsets="{{ supported_headsets|join(' ') }}">
         <thead>
           <tr>
             <th></th>
@@ -88,53 +106,53 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th data-headset="htc_vive"><a class="no-underline" href="/htc_vive"><span class="hidden-text">HTC Vive</span></a></th>
-            <td>{{ browser_platform_support(browser, 'htc_vive', 'windows') }}</td>
-            <td>{{ browser_platform_support(browser, 'htc_vive', 'mac') }}</td>
-            <td>{{ browser_platform_support(browser, 'htc_vive', 'linux') }}</td>
-            <td>{{ browser_platform_support(browser, 'htc_vive', 'android') }}</td>
-            <td>{{ browser_platform_support(browser, 'htc_vive', 'ios') }}</td>
+          <tr data-headset="htc_vive">
+            <th><a class="no-underline" href="/htc_vive"><span class="hidden-text">HTC Vive</span></a></th>
+            <td data-platform="windows">{{ browser_platform_support(browser, 'htc_vive', 'windows') }}</td>
+            <td data-platform="mac">{{ browser_platform_support(browser, 'htc_vive', 'mac') }}</td>
+            <td data-platform="linux">{{ browser_platform_support(browser, 'htc_vive', 'linux') }}</td>
+            <td data-platform="android">{{ browser_platform_support(browser, 'htc_vive', 'android') }}</td>
+            <td data-platform="ios">{{ browser_platform_support(browser, 'htc_vive', 'ios') }}</td>
           </tr>
-          <tr>
-            <th data-headset="oculus_rift"><a class="no-underline" href="/oculus_rift"><span class="hidden-text">Oculus Rift</span></a></th>
-            <td>{{ browser_platform_support(browser, 'oculus_rift', 'windows') }}</td>
-            <td>{{ browser_platform_support(browser, 'oculus_rift', 'mac') }}</td>
-            <td>{{ browser_platform_support(browser, 'oculus_rift', 'linux') }}</td>
-            <td>{{ browser_platform_support(browser, 'oculus_rift', 'android') }}</td>
-            <td>{{ browser_platform_support(browser, 'oculus_rift', 'ios') }}</td>
+          <tr data-headset="oculus_rift">
+            <th><a class="no-underline" href="/oculus_rift"><span class="hidden-text">Oculus Rift</span></a></th>
+            <td data-platform="windows">{{ browser_platform_support(browser, 'oculus_rift', 'windows') }}</td>
+            <td data-platform="mac">{{ browser_platform_support(browser, 'oculus_rift', 'mac') }}</td>
+            <td data-platform="linux">{{ browser_platform_support(browser, 'oculus_rift', 'linux') }}</td>
+            <td data-platform="android">{{ browser_platform_support(browser, 'oculus_rift', 'android') }}</td>
+            <td data-platform="ios">{{ browser_platform_support(browser, 'oculus_rift', 'ios') }}</td>
           </tr>
-          <tr>
-            <th data-headset="samsung_gear_vr"><a class="no-underline" href="/samsung_gear_vr"><span class="hidden-text">Samsung Gear VR</span></a></th>
-            <td>{{ browser_platform_support(browser, 'samsung_gear_vr', 'windows') }}</td>
-            <td>{{ browser_platform_support(browser, 'samsung_gear_vr', 'mac') }}</td>
-            <td>{{ browser_platform_support(browser, 'samsung_gear_vr', 'linux') }}</td>
-            <td>{{ browser_platform_support(browser, 'samsung_gear_vr', 'android') }}</td>
-            <td>{{ browser_platform_support(browser, 'samsung_gear_vr', 'ios') }}</td>
+          <tr data-headset="samsung_gear_vr">
+            <th><a class="no-underline" href="/samsung_gear_vr"><span class="hidden-text">Samsung Gear VR</span></a></th>
+            <td data-platform="windows">{{ browser_platform_support(browser, 'samsung_gear_vr', 'windows') }}</td>
+            <td data-platform="mac">{{ browser_platform_support(browser, 'samsung_gear_vr', 'mac') }}</td>
+            <td data-platform="linux">{{ browser_platform_support(browser, 'samsung_gear_vr', 'linux') }}</td>
+            <td data-platform="android">{{ browser_platform_support(browser, 'samsung_gear_vr', 'android') }}</td>
+            <td data-platform="ios">{{ browser_platform_support(browser, 'samsung_gear_vr', 'ios') }}</td>
           </tr>
-          <tr>
-            <th data-headset="google_daydream"><a class="no-underline" href="/google_daydream"><span class="hidden-text">Google Daydream</span></a></th>
-            <td>{{ browser_platform_support(browser, 'google_daydream', 'windows') }}</td>
-            <td>{{ browser_platform_support(browser, 'google_daydream', 'mac') }}</td>
-            <td>{{ browser_platform_support(browser, 'google_daydream', 'linux') }}</td>
-            <td>{{ browser_platform_support(browser, 'google_daydream', 'android') }}</td>
-            <td>{{ browser_platform_support(browser, 'google_daydream', 'ios') }}</td>
+          <tr data-headset="google_daydream">
+            <th><a class="no-underline" href="/google_daydream"><span class="hidden-text">Google Daydream</span></a></th>
+            <td data-platform="windows">{{ browser_platform_support(browser, 'google_daydream', 'windows') }}</td>
+            <td data-platform="mac">{{ browser_platform_support(browser, 'google_daydream', 'mac') }}</td>
+            <td data-platform="linux">{{ browser_platform_support(browser, 'google_daydream', 'linux') }}</td>
+            <td data-platform="android">{{ browser_platform_support(browser, 'google_daydream', 'android') }}</td>
+            <td data-platform="ios">{{ browser_platform_support(browser, 'google_daydream', 'ios') }}</td>
           </tr>
-          <tr>
-            <th data-headset="google_cardboard"><a class="no-underline" href="/google_cardboard"><span class="hidden-text">Google Cardboard</span></a></th>
-            <td>{{ browser_platform_support(browser, 'google_cardboard', 'windows') }}</td>
-            <td>{{ browser_platform_support(browser, 'google_cardboard', 'mac') }}</td>
-            <td>{{ browser_platform_support(browser, 'google_cardboard', 'linux') }}</td>
-            <td>{{ browser_platform_support(browser, 'google_cardboard', 'android') }}</td>
-            <td>{{ browser_platform_support(browser, 'google_cardboard', 'ios') }}</td>
+          <tr data-headset="google_cardboard">
+            <th><a class="no-underline" href="/google_cardboard"><span class="hidden-text">Google Cardboard</span></a></th>
+            <td data-platform="windows">{{ browser_platform_support(browser, 'google_cardboard', 'windows') }}</td>
+            <td data-platform="mac">{{ browser_platform_support(browser, 'google_cardboard', 'mac') }}</td>
+            <td data-platform="linux">{{ browser_platform_support(browser, 'google_cardboard', 'linux') }}</td>
+            <td data-platform="android">{{ browser_platform_support(browser, 'google_cardboard', 'android') }}</td>
+            <td data-platform="ios">{{ browser_platform_support(browser, 'google_cardboard', 'ios') }}</td>
           </tr>
-          <tr>
-            <th data-headset="microsoft_hololens"><a class="no-underline" href="/microsoft_hololens"><span class="hidden-text">Microsoft Hololens</span></a></th>
-            <td>{{ browser_platform_support(browser, 'microsoft_hololens', 'windows') }}</td>
-            <td>{{ browser_platform_support(browser, 'microsoft_hololens', 'mac') }}</td>
-            <td>{{ browser_platform_support(browser, 'microsoft_hololens', 'linux') }}</td>
-            <td>{{ browser_platform_support(browser, 'microsoft_hololens', 'android') }}</td>
-            <td>{{ browser_platform_support(browser, 'microsoft_hololens', 'ios') }}</td>
+          <tr data-headset="microsoft_hololens">
+            <th><a class="no-underline" href="/microsoft_hololens"><span class="hidden-text">Microsoft Hololens</span></a></th>
+            <td data-platform="windows">{{ browser_platform_support(browser, 'microsoft_hololens', 'windows') }}</td>
+            <td data-platform="mac">{{ browser_platform_support(browser, 'microsoft_hololens', 'mac') }}</td>
+            <td data-platform="linux">{{ browser_platform_support(browser, 'microsoft_hololens', 'linux') }}</td>
+            <td data-platform="android">{{ browser_platform_support(browser, 'microsoft_hololens', 'android') }}</td>
+            <td data-platform="ios">{{ browser_platform_support(browser, 'microsoft_hololens', 'ios') }}</td>
           </tr>
         </tbody>
       </table>
