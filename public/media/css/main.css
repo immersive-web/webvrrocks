@@ -92,7 +92,6 @@ li a:not(.no-underline):not(.button):active {
   color: magenta;
 }
 
-.license,
 .browser-type,
 .browser-type + dd,
 .browser-version,
