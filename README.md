@@ -26,8 +26,6 @@ To start the local dev server:
 npm start
 ```
 
-Built using [jus](http://jus.js.org/).
-
 
 ## Deployment
 
