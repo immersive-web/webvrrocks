@@ -1127,6 +1127,10 @@ td[data-report-key="dateUpdated"] {
   background-image: url(/media/img/slack-color.svg);
 }
 
+.site-nav li[data-slug="twitter"] a {
+  padding-right: 0;
+}
+
 [data-slug="twitter"] a:before {
   background-image: url(/media/img/twitter.svg);
 }
