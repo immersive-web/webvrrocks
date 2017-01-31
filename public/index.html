@@ -1,6 +1,6 @@
 {% from '_helpers.html' import browser_item, youtube %}
 <!doctype html>
-<html lang="en" data-layout="home">
+<html lang="en" data-layout="home" data-newbie="true">
   <head>
     {% include '_head.html' %}
     <title>WebVR Rocks</title>
@@ -26,8 +26,9 @@
             <p class="intro-compat">Works with the <a href="/htc_vive">HTC Vive</a>, <a href="/oculus_rift">Oculus Rift</a>, <a href="/samsung_gear_vr">Samsung Gear VR</a>, <a href="/google_daydream">Google Daydream</a>, and <a href="/google_cardboard">Google Cardboard</a>.</p>
           </div>
           <div class="intro-video">
-            <button class="intro-video-play" aria-controls="modal">
-              Play
+            <button class="button button-approve button-large button-watch-video" aria-controls="modal">
+              {% include "media/img/video.svg" %}
+              Watch video
             </button>
             <div>
               {{ youtube('https://www.youtube.com/embed/Le8pTXQqM3s') }}
@@ -48,7 +49,7 @@
         </section>
 
         <section id="browsers" class="section browsers" data-section="browsers">
-          <h1><a href="#browsers">Browser Overview</a></h1>
+          <h1><a href="#browsers">WebVR Browsers</a></h1>
           <ul data-section="browsers" class="matrix grid-flex-container">
             {{ browser_item('firefox') }}
             {{ browser_item('chromium') }}

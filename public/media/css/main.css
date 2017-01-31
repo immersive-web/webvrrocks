@@ -333,10 +333,6 @@ html:not([data-layout~="home"]) .main ul,
   max-width: 600px;
 }
 
-.intro-para {
-  max-width: 700px;
-}
-
 .intro-para em {
   font-style: normal;
 }
@@ -347,12 +343,12 @@ html:not([data-layout~="home"]) .main ul,
   padding-top: 0;
 }
 
-.intro-video-play {
-  display: none;
-}
-
 .section > *:last-child.intro-video {
   margin-bottom: 1.5rem;
+}
+
+.button.button-watch-video {
+  display: none;
 }
 
 .main .section dl:last-child {
@@ -1067,6 +1063,16 @@ a.button-source:after {
   width: 1.5rem;
 }
 
+.main .container {
+  display: flex;
+  flex-direction: column;
+  /*width: 100%;*/
+}
+
+.main .container .section {
+  /*flex: 1;*/
+}
+
 /**
  * Breakpoints
  *
@@ -1286,10 +1292,24 @@ a.button-source:after {
     font-weight: 400;
   }
 
-  [data-layout~="home"] .main h1 {
+  .main h1 {
     border-top: 1px solid #eee;
     padding-top: 3rem;
   }
+
+  /*
+  [data-newbie="true"] .main h1 {
+    border-top: 1px solid #eee;
+    padding-top: 3rem;
+  }
+
+  [data-newbie="false"] [data-section="intro"].section {
+    border-top: 1px solid #eee;
+    padding-top: 3rem;
+    order: 1;
+  }
+  */
+
   .site-header .section {
     flex-direction: row;
     padding-top: 0;
@@ -1384,13 +1404,46 @@ a.button-source:after {
     flex-direction: row;
   }
 
-  .intro > * {
+  [data-newbie="true"] .intro > * {
     flex: 1;
+  }
+
+  [data-newbie="false"] .intro-text {
+    flex: 1;
+  }
+
+  [data-newbie="false"] .intro-para {
+    max-width: 700px;
   }
 
   .intro-video {
     margin-left: 3rem;
     position: relative;
+    text-align: right;
+  }
+
+  [data-newbie="false"] .button.button-watch-video {
+    display: inline-block;
+  }
+
+  .button.button-watch-video {
+    min-width: 15rem;
+    padding: .5rem .25rem;
+  }
+
+  .button.button-watch-video svg {
+    height: 1.2rem;
+    margin-right: .75ch;
+    position: relative;
+    top: .15rem;
+  }
+
+  .button.button-watch-video path {
+    fill: rgba(255,255,255,.85);
+  }
+
+  [data-newbie="false"] .button.button-watch-video + div {
+    display: none;
   }
 
   /* modal - disabled */

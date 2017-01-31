@@ -209,6 +209,7 @@
     if (storage.has('visits')) {
       numVisits = parseInt(storage.get('visits'), 10) || 0;
     }
+    html.dataset.newbie = numVisits < 4;
     storage.set('visits', ++numVisits);
     if (storage.has('debug_ui')) {
       html.dataset.debug = '';
