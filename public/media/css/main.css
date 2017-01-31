@@ -298,7 +298,8 @@ h1.page-title {
 }
 
 [data-layout="home"] .main h1 {
-  padding: 1rem 0;
+  border-top: 1px solid #eee;
+  padding-top: 2.5rem;
 }
 
 .browser-icon {
@@ -367,6 +368,7 @@ html:not([data-layout~="home"]) .main ul,
   margin-top: 0;
 }
 
+.intro p:last-child,
 .main li:last-child p:last-child {
   margin-bottom: 0;
 }
@@ -614,13 +616,9 @@ ul.matrix li + li {
 }
 
 .browser-details {
+  margin-bottom: .75rem;
   min-height: 4rem;
   position: relative;
-}
-
-.matrix [itemprop="name"],
-.matrix [itemprop="description"] {
-  padding-left: 6.75rem;
 }
 
 .matrix [itemprop="image"] {
@@ -631,11 +629,25 @@ ul.matrix li + li {
   border: 1px solid #e6eaed;
   height: 4rem;
   margin-right: .75rem;
-  position: absolute;
+  margin-bottom: .75rem;
   top: 0;
   left: 0;
   width: 6rem;
   z-index: 1;
+}
+
+.browser-details {
+  /*margin-bottom: 0;*/
+}
+
+.matrix [itemprop="name"],
+.matrix [itemprop="description"] {
+  /*padding-left: 6.75rem;*/
+}
+
+.matrix [itemprop="image"] {
+  /*margin-bottom: 0;*/
+  /*position: absolute;*/
 }
 
 .matrix [itemprop="browser"] {
@@ -750,19 +762,13 @@ ul.matrix li + li {
 
 .table-support {
   font-size: .7rem;
-  table-layout: fixed;
   margin: .5rem 0 1rem;
+  table-layout: fixed;
 }
 
-.table-support th {
-  /*background: #f0f0f0;*/
-}
-
-.table-support thead th {
-  background: #fff;
-  border-bottom-color: #bbb;
-}
-
+/* Emulates a `border-bottom` on the table
+   (since because some rows may be hidden with CSS,
+   we can't target `:last-child`) */
 [itemprop="browser"] > div:after {
   border-bottom: 1px solid #ccc;
   content: "";
@@ -772,6 +778,15 @@ ul.matrix li + li {
   position: relative;
   top: -1rem;
   width: 100%;
+}
+
+.table-support th {
+  /*background: #f0f0f0;*/
+}
+
+.table-support thead th {
+  background: #fff;
+  border-bottom-color: #bbb;
 }
 
 .table-support.table-verbose tr[data-headset],
@@ -1147,7 +1162,8 @@ a.button-source:after {
  */
 
 @media all and (max-width: 44.999rem) {
-  .table-support {
+  .table-support,
+  [itemprop="browser"] > div:after {
     display: none;
   }
 }
