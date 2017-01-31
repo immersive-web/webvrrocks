@@ -1,4 +1,4 @@
-{% from '_helpers.html' import author_item, browsers %}
+{% from '_helpers.html' import author_item, browsers, compat_report_row %}
 {% set browser = browsers.firefox %}
 {% set page = 'firefox.html' %}
 <!doctype html>
@@ -24,7 +24,7 @@
         </p>
 
         <div id="download" class="download dropdown-standalone dropdown-download">
-          <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly" class="button-unstyled button-large button-download">Download</a>
+          <a href="#setup" class="button-unstyled button-large button-download"><span>Install {% include "media/img/download-icon.svg" %}</span></a>
           <!--
           <span class="icon-arrow-down"></span>
           <ul class="list-unstyled dropdown">
@@ -40,8 +40,8 @@
 
     <main id="main" class="main" role="main">
       <div class="container">
-        <section id="setup" class="section setup">
-          <h2><a href="#setup">Instructions</a></h2>
+        <section id="setup" class="section setup" data-section="setup">
+          <h2><a href="#setup">Setup Instructions</a></h2>
           <ol>
             <li>Download and launch <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Firefox Nightly</a>.</li>
             <li data-headset="htc_vive"><a href="https://github.com/ValveSoftware/openvr/raw/master/bin/win64/openvr_api.dll">Download version 1.02 (64-bit) of the <code>openvr_api.dll</code> file</a> from the <a href="https://github.com/ValveSoftware/openvr/">OpenVR GitHub repository</a>.</li>
@@ -53,7 +53,7 @@
           </ol>
         </section>
 
-        <section id="releases" class="section releases">
+        <section id="releases" class="section releases" data-section="releases">
           <h2><a href="#releases">Latest version</a></h2>
           <h3><a href="" itemprop="softwareApplication"></a></h3>
           <article itemscope itemtype="http://schema.org/SoftwareApplication">
@@ -112,14 +112,30 @@
           </article>
         </section>
 
-        <section id="known-issues" class="section known-issues">
-          <h2><a href="#known-issues">Known issues</a></h2>
-          <p>These known issues apply to the <a href="#download">latest published build</a>. Where applicable, the detailed release notes below will list when historic known issues were fixed.</p>
-          <ul>
-            <li>
-              <p><a class="button button-outlined-neutral button-small button-bug" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1320616">Bug</a> OpenVR (HTC Vive): Static scene content wobbles in response to head movement.</p>
-            </li>
-          </ul>
+        <section id="compat" class="section compat">
+          <h2><a href="#compat">Known issues</a></h2>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th data-report-key="browserVersion">Version</th>
+                  <th data-report-key="browserBuildId">Browser build</th>
+                  <th data-report-key="headset">Headset</th>
+                  <th data-report-key="description">Description</th>
+                  <th data-report-key="dateReported">Reported</th>
+                  <th data-report-key="dateUpdated">Updated</th>
+                  <th data-report-key="status">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for report in browser.reports %}
+                  {% if report.type == 'bug' %}
+                    {{ compat_report_row(report) }}
+                  {% endif %}
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section id="demos" class="section demos">

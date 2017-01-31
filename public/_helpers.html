@@ -40,6 +40,27 @@
   servo: servo
 } %}
 
+{% set headsets = {
+  "htc_vive": {
+    "name": "HTC Vive"
+  },
+  "oculus_rift": {
+    "name": "Oculus Rift"
+  },
+  "samsung_gear_vr": {
+    "name": "Samsung Gear VR"
+  },
+  "google_daydream": {
+    "name": "Google Daydream"
+  },
+  "google_cardboard": {
+    "name": "Google Cardboard"
+  },
+  "microsoft_hololens": {
+    "name": "Microsoft Hololens"
+  }
+} %}
+
 {% macro browser_platform_support (browser, headset, os) %}
   {% set support = browser.platforms[headset][os] %}
   {% if support === 'supported' %}
@@ -158,6 +179,29 @@
       </table>
     </div>
   </li>
+{% endmacro %}
+
+{% macro compat_report_row (report) %}
+  <tr data-report-type="{{ report.type }}"
+      itemprop="{{ report.type }}"
+      class="table-cell-error">
+    <td data-report-key="browserVersion"><span itemprop="userAgent" title="{{ report.browserUserAgent }}">{{ report.browserVersion }} <br> <small title="{{ report.browserDate }}">({{ report.browserDate }})</small></span></td>
+    <td data-report-key="browserBuildId"><span itemprop="buildId">{{ report.browserDate }}</span></td>
+    <td data-report-key="headsets">
+      {% if report.headsets %}
+        <span itemprop="headsets">
+          {% for headset_slug in report.headsets %}
+            {% set headset = headsets[headset_slug] %}
+            {{ headset.name }}{% if not loop.last %}, {% endif %}
+          {% endfor %}
+        </span>
+      {% endif %}
+    </td>
+    <td data-report-key="description"><a href="{{ report.bug }}" itemprop="description">{{ report.description }}</a></td>
+    <td data-report-key="dateReported"><time itemprop="dateReported" datetime="{{ report.dateReported.datetime }}">{{ report.dateReported.pretty }}</time></td>
+    <td data-report-key="dateUpdated"><time itemprop="dateUpdated" datetime="{{ report.dateUpdated.datetime }}">{{ report.dateUpdated.pretty }}</time></td>
+    <td data-report-key="status"><span itemprop="status">{{ report.status }}</span></td>
+  </tr>
 {% endmacro %}
 
 {% macro youtube (video_id, opts) %}

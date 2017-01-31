@@ -79,6 +79,7 @@ body {
   width: 1px;
 }
 
+td a:not(.no-underline):not(.button):hover,
 p a:not(.no-underline):not(.button):hover,
 dd a:not(.no-underline):not(.button):hover,
 li a:not(.no-underline):not(.button):hover {
@@ -90,6 +91,11 @@ dd a:not(.no-underline):not(.button):active,
 li a:not(.no-underline):not(.button):active {
   border-bottom-color: magenta;
   color: magenta;
+}
+
+td a:not(.no-underline):not(.button):active {
+  border-bottom-color: #000;
+  color: #000;
 }
 
 .browser-type,
@@ -464,12 +470,29 @@ figcaption {
 }
 */
 
-li .button {
+li > .button {
   margin: 0 5px;
 }
 
-li .button:first-child {
+li > .button:first-child {
   margin-left: 0;
+}
+
+.button-download {
+  display: inline-block;
+  min-width: 5rem;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.button-download svg {
+  fill: darkgreen;
+  vertical-align: middle;
+  width: 24px;
+}
+
+.button-download:hover {
 }
 
 dd code,
@@ -691,6 +714,8 @@ ul.matrix li + li {
   display: table-cell;
 }
 
+[itemprop="browser"] [data-platform="mac"],
+[itemprop="browser"] [data-platform="linux"],
 [itemprop="browser"][data-slug="firefox"] tr[data-headset="samsung_gear_vr"],
 [itemprop="browser"][data-slug="firefox"] tr[data-headset="google_daydream"],
 [itemprop="browser"][data-slug="firefox"] tr[data-headset="google_cardboard"],
@@ -988,6 +1013,28 @@ a.button-source:after {
   color: #666;
   margin-right: .5ch;
   text-transform: uppercase;
+}
+
+[data-report-key="browserVersion"],
+[data-report-key="headsets"],
+[data-report-key="dateReported"],
+[data-report-key="dateUpdated"] {
+  white-space: nowrap;
+}
+
+[data-report-key="browserBuildId"],
+[data-report-key="dateReported"],
+[data-report-key="dateUpdated"] {
+  display: none;
+}
+
+td[data-report-key="dateReported"],
+td[data-report-key="dateUpdated"] {
+  font-size: .8rem;
+}
+
+[data-report-key] a {
+  font-weight: 600;
 }
 
 .iframe-container {
@@ -1497,6 +1544,11 @@ a.button-source:after {
 
   .browser-details {
     margin-bottom: 0;
+  }
+
+  [data-report-key="dateReported"],
+  [data-report-key="dateUpdated"] {
+    display: table-cell;
   }
 }
 

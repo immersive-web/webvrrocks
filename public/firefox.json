@@ -63,5 +63,33 @@
       "android": "headset_unsupported",
       "ios": "headset_unsupported"
     }
-  }
+  },
+  "reports": [
+    {
+      "type": "bug",
+      "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0",
+      "browserVersion": "Nightly 50.0",
+      "browserBuildId": "20161104212021",
+      "browserDate": "2016-11-04",
+      "headsets": [
+        "htc_vive"
+      ],
+      "description": "Scene wobbles as headset rotates",
+      "status": "Needs STR",
+      "dateReported": {
+        "datetime": "2016-11-27T19:41:34",
+        "pretty": "Nov 27, 2016"
+      },
+      "dateUpdated": {
+        "datetime": "2017-01-31T09:21:05",
+        "pretty": "Jan 31, 2017"
+      },
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1334977"
+    },
+    {
+      "type": "site",
+      "description": "05 Roomscale not loading",
+      "webcompatUrl": "https://webcompat.com/issues/4528"
+    }
+  ]
 }
