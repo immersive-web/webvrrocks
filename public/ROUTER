@@ -145,3 +145,14 @@
 302   /oculus_carmel/kadjar  ovrweb:http://kadjar.littleworkshop.fr/
 
 302   /chat  /slack
+
+302   /browsers  /#browsers
+302   /browsers/  /#browsers
+
+302   /google_cardboard  https://vr.google.com/cardboard/
+302   /google_daydream  https://vr.google.com/daydream/
+302   /htc_vive  https://www.vive.com/
+302   /microsoft_hololens  https://www.oculus.com/experiences/gear-vr/1290985657630933/
+302   /oculus_rift  https://www.oculus.com/rift/
+302   /osvr  http://www.osvr.org/hdk2.html
+302   /samsung_gear_vr  https://www.samsung.com/global/galaxy/gear-vr/
