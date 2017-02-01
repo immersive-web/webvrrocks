@@ -1167,11 +1167,10 @@ td[data-report-key="dateUpdated"] {
   margin: 0;
 }
 
-.footer img {
-  border-radius: 0;
+.footer a[rel="license"] svg {
   display: block;
   margin-bottom: .5rem;
-  max-width: 40px;
+  max-width: 6rem;
 }
 
 .footer .license,
