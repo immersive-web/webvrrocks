@@ -330,6 +330,10 @@ html:not([data-layout~="home"]) .main ul,
   max-width: 600px;
 }
 
+.intro-para a {
+  color: inherit;
+}
+
 .intro-para em {
   font-style: normal;
 }
