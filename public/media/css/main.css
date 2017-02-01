@@ -1295,6 +1295,14 @@ td[data-report-key="dateUpdated"] {
 }
 
 @media all and (min-width: 22rem) {
+  .matrix [itemprop="image"] {
+    background-position: center;
+    background-size: auto 75%;
+    border: 1px solid #e6eaed;
+    border-radius: 3px;
+    width: 6rem;
+  }
+
   .matrix [itemprop="browser"] {
     opacity: .9;
   }
