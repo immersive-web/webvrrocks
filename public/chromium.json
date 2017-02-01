@@ -135,7 +135,8 @@
         "oculus_rift",
         "htc_vive"
       ],
-      "description": "The timestamp passed to the <code>requestAnimationFrame</code> callback is off by a factor of 1000",
+      "description": "The timestamp passed to the `requestAnimationFrame` callback is off by a factor of 1000",
+      "description_html": "The timestamp passed to the <code>requestAnimationFrame</code> callback is off by a factor of 1000",
       "status": "Unresolved",
       "dateReported": {
         "datetime": "2017-01-05T22:33:54Z",
