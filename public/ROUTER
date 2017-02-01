@@ -160,3 +160,6 @@
 302   /posters  https://github.com/WebVRRocks/posters
 302   /poster  https://raw.githubusercontent.com/WebVRRocks/posters/master/rocks-webvr-browsers.png
 302   /poster.png  https://raw.githubusercontent.com/WebVRRocks/posters/master/rocks-webvr-browsers.png
+
+302   /Browsers  /browsers
+302   /Browsers/  /browsers/
