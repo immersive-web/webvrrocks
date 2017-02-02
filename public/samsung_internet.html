@@ -14,15 +14,19 @@
 
         <a class="browser-link" href="{{ browser.about }}">
           <h1 class="browser-name">{{ browser.name }}</h1>
-          <img class="browser-icon browser-icon-chromium" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
+          <img class="browser-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
         </a>
 
         <p class="browser-intro">{{ (browser.description_html or browser.description)|safe }}</p>
 
         <figure class="media">
-          <a href="{{ browser.url }}"><img src="samsung_internet/samsung-internet-browser-gear-vr.jpg" alt="Samsung Internet Browser for Gear VR" width="450"></a>
+          <a href="{{ browser.url }}" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}"><img src="samsung_internet/samsung-internet-browser-gear-vr.jpg" alt="Samsung Internet Browser for Gear VR" width="450"></a>
           <figcaption class="hidden-text">Samsung Internet Browser for Gear VR</figcaption>
         </figure>
+
+        <div id="download" class="download dropdown-standalone dropdown-download">
+          <a href="{{ browser.url }}" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">Version 4.2.00-14</span> <span class="download-size">298.85 MB</span></span></a>
+        </div>
       </div>
     </header>
 
@@ -48,14 +52,14 @@
           </ol>
         </section>
 
-        <section id="releases" class="section releases">
+        <section id="releases" class="section" data-section="releases">
           <h2><a href="#releases">Latest version</a></h2>
           <h4><a href="" itemprop="softwareApplication"></a></h4>
           <article itemscope itemtype="http://schema.org/SoftwareApplication">
             <dl>
               <dt class="browser-download">Download</dt>
               <dd>
-                <a class="button button-outlined-approve button-download" href="https://www.oculus.com/experiences/gear-vr/849609821813454/" itemprop="downloadUrl">Download</a>
+                <a class="button button-outlined-approve button-download" href="{{ browser.url }}" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}" itemprop="downloadUrl">Download</a>
               </dd>
               <dt class="browser-system-requirements">System requirements</dt>
               <dd>
@@ -79,7 +83,7 @@
           </article>
         </section>
 
-        <section id="known-issues" class="section known-issues">
+        <section id="known-issues" class="section" data-section="known-issues">
           <h2><a href="#known-issues">Known issues</a></h2>
           <p>These known issues apply to the latest published version available from the Oculus Gear VR app store.</p>
           <ul>
@@ -97,7 +101,7 @@
           </ul>
         </section>
 
-        <section id="info" class="section info" data-section="info">
+        <section id="info" class="section" data-section="info">
           <h2><a href="#info">Links</a></h2>
           <ul>
             <li>

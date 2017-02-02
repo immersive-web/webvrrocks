@@ -12,7 +12,7 @@
   "about": "/servo",
   "downloadUrl": "https://github.com/MortimerGoro/servo/releases/download/0.2/servo_gamepad.rar",
   "//downloadUrl": "//https://download.servo.org/nightly/windows/servo-latest.msi",
-  "softwareVersion": "",
+  "softwareVersion": "0.2",
   "sameAs": [
     "https://developer.oculus.com/webvr/"
   ],

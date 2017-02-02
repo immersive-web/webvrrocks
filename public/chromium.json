@@ -124,7 +124,7 @@
       },
       "description": "WebVR crashes immediately on calling `vrDisplay.requestPresent()`",
       "description_html": "WebVR crashes immediately on calling <code>vrDisplay.requestPresent()</code>",
-      "status": "Unresolved",
+      "status": "In progress",
       "bugUrl": "https://crbug.com/687009"
     },
     {

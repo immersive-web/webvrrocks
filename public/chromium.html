@@ -15,7 +15,7 @@
 
         <a class="browser-link" href="{{ browser.about }}">
           <h1 class="browser-name">{{ browser.name }}</h1>
-          <img class="browser-icon browser-icon-chromium" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
+          <img class="browser-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
         </a>
 
         <p class="browser-intro">{{ (browser.description_html or browser.description)|safe }}</p>
@@ -25,17 +25,17 @@
         </p>
 
         <div id="download" class="download dropdown-standalone dropdown-download dropdown-with-children">
-          <a href="https://drive.google.com/file/d/0BzudLt22BqGRQ01lc2FiSHhxOGM/view" class="button button-unstyled button-large button-download">Download {% include "media/img/download-icon.svg" %}</a>
+          <a href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRQ01lc2FiSHhxOGM" class="button button-unstyled button-large button-download" data-download-name="chromium" data-download-id="0BzudLt22BqGRQ01lc2FiSHhxOGM">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">Feb 1, 2017 12:34 PM</span> <span class="download-size">94 MB</span></span></a>
 
           <span class="icon-arrow-down"></span>
           <ul class="list-unstyled dropdown">
-            <li><a class="no-underline" href="https://drive.google.com/file/d/0BzudLt22BqGRQ01lc2FiSHhxOGM/view">February 2, 2017</a></li>
-            <li><a class="no-underline" href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRRElMNmVqQjJWS2c">December 23, 2016</a></li>
-            <li><a class="no-underline" href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRc2lEWDg2NkptNzg">September 23, 2016</a></li>
-            <li><a class="no-underline" href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRVzFKVWNSbFA5aXM">September 17, 2016</a></li>
-            <li><a class="no-underline" href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRcVNBWHR5OW0za1E">August 29, 2016</a></li>
-            <li><a class="no-underline" href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRZUFhd0Q5M1FEd1U">August 28, 2016</a></li>
-            <li><a class="no-underline" href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRQ0dvVGZHV2Njdkk">August 7, 2016</a></li>
+            <li><a class="no-underline" href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRQ01lc2FiSHhxOGM" data-download-name="chromium" data-download-id="0BzudLt22BqGRQ01lc2FiSHhxOGM">February 1, 2017</a></li>
+            <li><a class="no-underline" href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRRElMNmVqQjJWS2c" data-download-name="chromium" data-download-id="0BzudLt22BqGRRElMNmVqQjJWS2c">December 23, 2016</a></li>
+            <li><a class="no-underline" href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRc2lEWDg2NkptNzg" data-download-name="chromium" data-download-id="0BzudLt22BqGRc2lEWDg2NkptNzg">September 23, 2016</a></li>
+            <li><a class="no-underline" href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRVzFKVWNSbFA5aXM" data-download-name="chromium" data-download-id="0BzudLt22BqGRVzFKVWNSbFA5aXM">September 17, 2016</a></li>
+            <li><a class="no-underline" href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRcVNBWHR5OW0za1E" data-download-name="chromium" data-download-id="0BzudLt22BqGRcVNBWHR5OW0za1E">August 29, 2016</a></li>
+            <li><a class="no-underline" href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRZUFhd0Q5M1FEd1U" data-download-name="chromium" data-download-id="0BzudLt22BqGRZUFhd0Q5M1FEd1U">August 28, 2016</a></li>
+            <li><a class="no-underline" href="https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRQ0dvVGZHV2Njdkk" data-download-name="chromium" data-download-id="0BzudLt22BqGRQ0dvVGZHV2Njdkk">August 7, 2016</a></li>
           </ul>
         </div>
         <p class="view-source">
@@ -47,7 +47,7 @@
     <main id="main" class="main" role="main">
       <div class="container">
 
-        <section id="setup" class="section setup">
+        <section id="setup" class="section setup" data-section="setup">
           <h2><a href="#setup">Instructions</a></h2>
           <ol>
             <li><a href="https://webvr.info/get-chrome/">Download the experimental build of Chromium with WebVR support</a>.</li>
@@ -70,7 +70,7 @@
           </ul>
         </section>
 
-        <section id="releases" class="section releases">
+        <section id="releases" class="section" data-section="releases">
           <h2><a href="#releases">Latest version</a></h2>
           <h4><a href="" itemprop="softwareApplication"></a></h4>
           <article itemscope itemtype="http://schema.org/SoftwareApplication">
@@ -81,11 +81,11 @@
               </dd>
               <dt class="browser-download">Download</dt>
               <dd>
-                <a class="button button-outlined-approve button-download" href="https://drive.google.com/file/d/0BzudLt22BqGRQ01lc2FiSHhxOGM/view" itemprop="downloadUrl">Download</a>
+                <a class="button button-outlined-approve button-download" href="https://drive.google.com/file/d/0BzudLt22BqGRQ01lc2FiSHhxOGM/view" itemprop="downloadUrl" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">Download</a>
               </dd>
               <dt class="browser-version">Version</dt>
               <dd>
-                <span class="version">2017-2-1</span>
+                <span class="version">2017-02-01</span>
               </dd>
               <dt class="browser-date-released">Date released</dt>
               <dd>
@@ -147,7 +147,7 @@
           </div>
         </section>
 
-        <section id="info" class="section info">
+        <section id="info" class="section info" data-section="info>
           <h2><a href="#info">Info</a></h2>
           <dl>
             <!--

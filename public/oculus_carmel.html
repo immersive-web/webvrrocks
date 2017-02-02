@@ -14,36 +14,40 @@
 
         <a class="browser-link" href="{{ browser.about }}">
           <h1 class="browser-name">{{ browser.name }}</h1>
-          <img class="browser-icon browser-icon-chromium" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
+          <img class="browser-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
         </a>
 
         <p class="browser-intro">{{ (browser.description_html or browser.description)|safe }}</p>
 
         <figure class="media">
-          <a href="{{ helpers.browsers.oculus_carmel.url }}"><img src="https://dl.airtable.com/ybEJm6RVTFqC0XvhrX6H_full_12410271_1498109746883523_7443893749555396608_n.jpg" alt="Oculus Carmel" width="450"></a>
+          <a href="{{ browser.url }}"><img src="https://dl.airtable.com/ybEJm6RVTFqC0XvhrX6H_full_12410271_1498109746883523_7443893749555396608_n.jpg" alt="Oculus Carmel" width="450"></a>
           <figcaption class="hidden-text">Oculus Carmel</figcaption>
         </figure>
+
+        <div id="download" class="download dropdown-standalone dropdown-download">
+          <a href="https://www.oculus.com/experiences/gear-vr/1290985657630933/" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">Version 0.2-004014</span> <span class="download-size">64.18 MB</span></span></a>
+        </div>
       </div>
     </header>
 
     <main id="main" class="main" role="main">
       <div class="container">
 
-        <section id="setup" class="section setup">
+        <section id="setup" class="section setup" data-section="setup">
           <h2><a href="#setup">Instructions</a></h2>
           <ol>
             <li>
-              <p>Search for and <strong>install <a href="{{ helpers.browsers.oculus_carmel.url }}">Carmel Developer Preview</a></strong> from the <strong>Oculus Gear VR store</strong>.</p>
+              <p>Search for and <strong>install <a href="{{ browser.url }}">Carmel Developer Preview</a></strong> from the <strong>Oculus Gear VR store</strong>.</p>
               <figure class="media-outlined">
                 <img src="oculus_carmel/app.png" width="200">
                 <figcaption>Oculus Carmel install screen</figcaption>
               </figure>
             </li>
             <li>
-              <strong>Launch</strong> Carmel Developer Preview from your <strong>Gear VR Library</strong>.
+              Launch <strong>Carmel Developer Preview</strong> from your <strong>Gear VR Library</strong>.
             </li>
             <li>
-              <p><stong>Enjoy WebVR!</stong></p>
+              <p><stong>Enjoy the included WebVR demos!</stong></p>
               <figure class="media-outlined">
                 <img src="https://dl.airtable.com/ZtmdSF5gRBqzuICpspK6_full_12386444_1799525440318007_1635011178193223680_n.jpg" width="300">
                 <figcaption>Launch Carmel to browse these WebVR demos</figcaption>
@@ -52,14 +56,14 @@
           </ol>
         </section>
 
-        <section id="releases" class="section releases">
+        <section id="releases" class="section" data-section="releases">
           <h2><a href="#releases">Latest version</a></h2>
           <h4><a href="" itemprop="softwareApplication"></a></h4>
           <article itemscope itemtype="http://schema.org/SoftwareApplication">
             <dl>
               <dt class="browser-download">Download</dt>
               <dd>
-                <a class="button button-outlined-approve button-download" href="https://www.oculus.com/experiences/gear-vr/1290985657630933/" itemprop="downloadUrl">Download</a>
+                <a class="button button-outlined-approve button-download" href="https://www.oculus.com/experiences/gear-vr/1290985657630933/" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}" itemprop="downloadUrl">Download</a>
               </dd>
               <dt class="browser-system-requirements">System requirements</dt>
               <dd>
@@ -84,18 +88,13 @@
           </article>
         </section>
 
-        <section id="info" class="section info">
-          <h2><a href="#info">Info</a></h2>
-          <dl>
-            <dt>Developer resources</dt>
-            <dd>
-              <ul>
-                <li><a href="https://developer.oculus.com/webvr/">Oculus WebVR Developer Hub</a></li>
-                <li><a href="https://developer.oculus.com/blog/introducing-the-react-vr-pre-release/">React VR Pre-Release</a></li>
-                <li><a href="https://github.com/OculusVR/ovrui">OVRUI toolkit</a></li>
-              </ul>
-            </dd>
-          </dl>
+        <section id="info" class="section info" data-section="info>
+          <h2><a href="#info">Links</a></h2>
+          <ul>
+            <li><a href="https://developer.oculus.com/webvr/">Oculus WebVR Developer Hub</a></li>
+            <li><a href="https://developer.oculus.com/blog/introducing-the-react-vr-pre-release/">React VR Pre-release</a></li>
+            <li><a href="https://github.com/OculusVR/ovrui">OVRUI toolkit</a></li>
+          </ul>
         </section>
 
       </div>

@@ -234,12 +234,21 @@
     var openDialogues = {};
     html.addEventListener('click', function (e) {
       var el = e.target;
+
+      var downloadBtnEl = el.closest('[data-download-id]') || el.querySelector('[data-download-id]');
+      if (downloadBtnEl) {
+        downloadBtnEl.closest(':not(#download)').downloadIsNew = 'false';
+        downloadBtnEl.closest('#download').dataset.downloadIsNew = 'false';
+        storage.increment('downloads:' +
+          downloadBtnEl.dataset.downloadName + ':' +
+          downloadBtnEl.dataset.downloadId);
+      }
+
       var dropdown = el.closest && el.closest('.dropdown-with-children');
       if (dropdown && supportsTouch) {
         if (openDialogues[dropdown] === true) {
           openDialogues[dropdown] = false;
         } else {
-          e.preventDefault();
           openDialogues[dropdown] = true;
         }
         dropdown.setAttribute('aria-expanded', openDialogues[dropdown]);
@@ -250,8 +259,24 @@
       });
       openDialogues = {};
     });
+
+    var latestDownloadBtn = document.querySelector('#download > .button[data-download-name]');
+    if (latestDownloadBtn) {
+      var storageDownloadKey = 'downloads:' +
+        latestDownloadBtn.dataset.downloadName + ':' +
+        latestDownloadBtn.dataset.downloadId;
+      if (!storage.has(storageDownloadKey)) {
+        latestDownloadBtn.dataset.downloadIsNew = 'true';
+        var btnParentEl = latestDownloadBtn.closest('#download');
+        if (btnParentEl) {
+          btnParentEl.dataset.downloadIsNew = 'true';
+        }
+      }
+    }
+
     initYT('Le8pTXQqM3s');
   };
+
   var initYT = function (id) {
     // YouTube Player helper.
     // Reference: https://developers.google.com/youtube/iframe_api_reference

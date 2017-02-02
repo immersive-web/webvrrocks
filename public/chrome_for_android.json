@@ -46,6 +46,7 @@
   "softwareVersion": "2017-01-25",
   "video": "https://webvr.rocks/chrome_for_android/video.json",
   "downloadUrl": "https://play.google.com/store/apps/details?id=com.chrome.canary",
+  "downloadUrlExperimental": "https://drive.google.com/uc?export=download&amp;id=0B8dt3TGgfXfiU0RKVGFNLVh0ME0",
   "fileFormat": "application/vnd.android.package-archive",
   "learningResourceType": "https://webvr.rocks/chrome_for_android",
   "discussionUrl": "https://webvr.rocks/chrome_for_android#comments",

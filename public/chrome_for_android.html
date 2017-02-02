@@ -14,7 +14,7 @@
 
         <a class="browser-link" href="{{ browser.about }}">
           <h1 class="browser-name">{{ browser.name }}</h1>
-          <img class="browser-icon browser-icon-chromium" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
+          <img class="browser-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
         </a>
 
         <p class="browser-intro">{{ (browser.description_html or browser.description)|safe }}</p>
@@ -24,7 +24,7 @@
         </p>
 
         <div id="download" class="download dropdown-standalone dropdown-download">
-          <a href="https://play.google.com/store/apps/details?id=com.android.chrome" class="button-unstyled button-large button-download">Download</a>
+          <a href="{{ browser.downloadUrl }}" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">Feb 1, 2016</span></a>
         </div>
         <p class="view-source">
           <a href="https://chromium.googlesource.com/chromium/src.git/+/master/" class="button-source no-underline">View source</a>
@@ -35,7 +35,7 @@
     <main id="main" class="main" role="main">
       <div class="container">
 
-        <section id="setup" class="section setup">
+        <section id="setup" class="section setup" data-section="setup">
           <h2><a href="#setup">Instructions</a></h2>
           <ol>
             <li><a href="https://play.google.com/store/apps/details?id=com.android.chrome">Download Chrome for Android</a> on your mobile device.</li>
@@ -44,7 +44,7 @@
           <p class="note"><strong>Note:</strong> Any WebVR site you visit must be already enrolled in the <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">WebVR Origin Trial</a> and contain a <code>&lt;meta&gt;</code> tag or HTTP response header with a valid Origin Trial token.</p>
         </section>
 
-        <section id="releases" class="section releases">
+        <section id="releases" class="section" data-section="releases">
           <h2><a href="#releases">Latest version</a></h2>
           <h3><a href="" itemprop="softwareApplication"></a></h3>
           <article itemscope itemtype="http://schema.org/SoftwareApplication">
@@ -93,7 +93,7 @@
           </article>
         </section>
 
-        <section id="known-issues" class="section known-issues">
+        <section id="known-issues" class="section" data-section="known-issues">
           <h2><a href="#known-issues">Known issues</a></h2>
           <p>These known issues apply to the <a href="#download">latest published build</a>. Where applicable, the detailed release notes below will list when historic known issues were fixed.</p>
           <ul>
@@ -108,7 +108,7 @@
         </section>
 
         <!--
-        <section id="info" class="section info">
+        <section id="info" class="section info" data-section="info>
           <h2><a href="#info">Info</a></h2>
           <dl>
             <dt>How can I help out?</dt>

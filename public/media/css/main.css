@@ -397,20 +397,12 @@ p.message {
   margin-bottom: 0;
 }
 
-.info dt {
+[data-section="info"] dt {
   cursor: pointer;
 }
 
-.info dd {
-  /*display: none;*/
-}
-
-.info dd + dt {
+[data-section="info"] dd + dt {
   margin-top: .5rem;
-}
-
-.info dt:target + dd {
-  /*display: block;*/
 }
 
 .main li + li {
@@ -428,7 +420,89 @@ p.message {
 dd .button-download {
   margin-bottom: 1rem;
   padding: .5rem 1rem;
-  /*margin-top: 1.5rem;*/
+}
+
+.download[data-download-is-new="true"] {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+/* Neon glow adapted from https://codepen.io/FelixRilling/pen/qzfoc */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #bf0, 0 0 35px #bf0, 0 0 40px #bf0;
+  }
+  to {
+    box-shadow: 0 0 2.5px #fff, 0 0 5px #fff, 0 0 7.5px #fff, 0 0 10px #bf0, 0 0 17.5px #bf0, 0 0 20px #bf0;
+  }
+}
+
+.download .button-download {
+  min-width: 10rem;
+}
+
+.button-download {
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  text-align: left;
+  z-index: 1;
+}
+
+.button-download .download-info,
+.button-download svg {
+  pointer-events: none;
+}
+
+.button-download svg {
+  fill: darkgreen;
+  float: right;
+  position: relative;
+  top: .25rem;
+  vertical-align: middle;
+  width: 24px;
+}
+
+.download:hover svg {
+  fill: #86ff86;
+}
+
+.download-size {
+  color: darkgreen;
+  transition: .15s color ease-in-out;
+}
+
+.download:hover .download-size {
+  color: #86ff86;
+}
+
+.button-download .download-info {
+  clear: both;
+  color: rgba(255,255,255,.6);
+  font-size: .5rem;
+}
+
+.button-download .download-info,
+.button-download .download-info * {
+  display: block;
+}
+
+/* clearfix */
+.c:after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+}
+
+.download-date {
+  float: left;
+  text-align: left;
+}
+
+.download-size {
+  float: right;
+  text-align: right;
 }
 
 .authors__list,
@@ -488,23 +562,6 @@ li > .button:first-child {
   margin-left: 0;
 }
 
-.button-download {
-  display: inline-block;
-  min-width: 5rem;
-  padding: 0;
-  position: relative;
-  z-index: 1;
-}
-
-.button-download svg {
-  fill: darkgreen;
-  vertical-align: middle;
-  width: 24px;
-}
-
-.button-download:hover {
-}
-
 dd code,
 p code,
 li code {
@@ -562,7 +619,8 @@ ul.site-nav-list li {
   width: 100%;
 }
 
-.site-logo svg path {
+.site-logo svg path,
+.download svg {
   transition: .15s fill ease-in-out;
 }
 
@@ -972,7 +1030,7 @@ a.button-source:after {
   top: -4px;
 }
 
-[aria-expanded="false"] .dropdown-with-children .dropdown {
+.dropdown-with-children[aria-expanded="false"] .dropdown {
   display: none;
 }
 
@@ -1161,6 +1219,7 @@ td[data-report-key="dateUpdated"] {
   color: #666;
   font-size: .85rem;
   opacity: .7;
+  padding-top: .5rem;
 }
 
 .footer p {
@@ -1180,7 +1239,7 @@ td[data-report-key="dateUpdated"] {
 }
 
 .edit-page {
-  padding-top: .5rem;
+  padding-top: .75rem;
 }
 
 .edit-page a {
@@ -1194,8 +1253,8 @@ td[data-report-key="dateUpdated"] {
 }
 
 [data-section="info"] li em {
-  opacity: .75;
   display: block;
+  opacity: .75;
   font-size: .8rem;
 }
 
@@ -1606,35 +1665,16 @@ td[data-report-key="dateUpdated"] {
   }
 
   .edit-page {
-    text-align: right;
     position: relative;
-    top: -3.5rem;
+    text-align: right;
+    top: -3rem;
   }
-
-  /*
-  ul[data-section] {
-    justify-content: space-between;
-  }
-
-  ul[data-section] li {
-    flex-basis: auto;
-    width: auto;
-  }
-
-  .main ul[data-section] li:nth-child(3n) {
-    padding-right: 1rem;
-  }
-
-  .main ul[data-section] li:last-child {
-    padding-right: 0;
-  }
-  */
 }
 
 @media all and (min-width: 70rem) {
   .table-support /*a*/.supported strong {
-    display: inline;
     color: #3d9970;
+    display: inline;
     font-size: .6rem;
     font-weight: 500;
     padding-left: .25ch;
