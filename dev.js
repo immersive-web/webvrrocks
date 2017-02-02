@@ -127,7 +127,7 @@ function startServer () {
               // This might be useful if you copy over a binary file,
               // SVG, image, or whatever. You could make this only
               // reload on certain file types instead...
-              app.reload();
+              if (!/\.css$/i.test(ext)) app.reload();
             });
           });
         }

@@ -5,10 +5,9 @@
   "description": "WebVR Rocks: Your guide to Virtual Reality in the browser.",
   "main": "dev.js",
   "scripts": {
-    "start": "npm run dev",
-    "dev": "node ./dev.js",
+    "start": "node dev.js",
     "test": "npm run prod",
-    "build": "cross-env NODE_ENV=production node ./dev.js",
+    "build": "cross-env NODE_ENV=production node dev.js",
     "deploy": "surge _prod -d https://webvr.rocks",
     "deploy:staging": "surge _prod -d https://webvrrocks.surge.sh",
     "open": "opn 'https://webvr.rocks'",
