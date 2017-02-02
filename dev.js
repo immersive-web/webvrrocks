@@ -1,4 +1,4 @@
-var fs = require('fs');
+var fsExtra = require('fs-extra');
 var path = require('path');
 var urllib = require('url');
 
@@ -6,7 +6,16 @@ var budo = require('budo');
 var shell = require('shelljs');
 var yonder = require('yonder');
 
+var browserify = require('browserify');
+var UglifyJS = require('uglify-js');
+
+// In dev -> run budo
+// In production -> run templates and browserify+uglify
+var isProduction = process.env.NODE_ENV === 'production';
+
 var OPTS = {
+  entry: 'public/media/js/main.js',
+  entryRelative: 'media/js/main.js', // for the <script> tag in budo
   assets: {
     glob: {
       strict: true,
@@ -20,7 +29,7 @@ var OPTS = {
   },
   nunjucks: {
     glob: {
-      include: '**/*.html',
+      include: '**/*.html'
     },
     extensionsFile: path.resolve(__dirname, 'nunjucks-helpers.js'),
     inputDir: path.resolve(__dirname, 'public'),
@@ -28,6 +37,121 @@ var OPTS = {
   }
 };
 OPTS.routerPath = path.join(OPTS.assets.inputDir, 'ROUTER');
+
+var budoMiddleware = [
+  staticMiddlewareForFilesWithoutTrailingSlashes
+];
+
+// Create server-side redirects (defined in the `ROUTER` file).
+// See https://github.com/sintaxi/yonder#readme for usage.
+if (fsExtra.existsSync(OPTS.routerPath)) {
+  budoMiddleware.push(yonder.middleware(OPTS.routerPath));
+}
+
+// run dev script
+if (isProduction) {
+  // Generate nunjucks and bundle our entry file
+  initialBuild(() => {
+    console.log('Bundling %s...', OPTS.entry);
+    browserify(OPTS.entry, {
+      debug: false // no source mapping for now...
+    }).bundle((err, src) => {
+      if (err) throw err;
+      console.log('Compressing bundle...');
+      const result = UglifyJS.minify(src.toString(), { fromString: true }).code;
+      // Writes to nunjucks output, not assets output !
+      var outFile = path.resolve(OPTS.nunjucks.outputDir, OPTS.entryRelative);
+      fsExtra.writeFile(outFile, result, err => {
+        if (err) throw err;
+      });
+    });
+  });
+} else {
+  initialBuild(() => startServer());
+}
+
+function startServer () {
+  var app = budo(OPTS.entry, {
+    serve: OPTS.entryRelative,
+    port: 3000,
+    dir: '_prod',
+    cors: true,
+    stream: process.stdout,
+    verbose: true,
+    middleware: budoMiddleware
+  })
+    .live() // we specify LiveReload *manually*, not in budo options!
+    .watch([ // enable the chokidar file watcher
+      'public/**/*', // only watch public for source changes
+      '_prod/**/*.{html,css}' // only trigger LiveReload on HTML/CSS changes
+    ])
+    .on('watch', function (ev, file) {
+      file = path.resolve(file);
+
+      var isEntry = file === path.resolve(OPTS.entry);
+      var isInput = [
+        OPTS.assets.inputDir, OPTS.nunjucks.inputDir
+      ].some(dir => {
+        return file.toLowerCase().indexOf(dir.toLowerCase()) === 0;
+      });
+
+      if (isEntry) {
+        // Special case for the bundle, the bundle.js is "virtual"
+        // and not rendered to disk
+        app.reload();
+      } else if (isInput) {
+        // Input file changed, decide what to re-build
+        var ext = path.extname(file);
+        if (!ext) return; // ignore files without extension ?
+        var isHTML = /\.html?$/i.test(ext);
+
+        var isSharedTemplate = isHTML && path.basename(file).charAt(0) === '_';
+        if (isSharedTemplate || /\.json$/i.test(ext)) {
+          regenerateAllNunjucksTemplates();
+        } else if (isHTML) {
+          var fileRelativeNunjucks = path.relative(OPTS.nunjucks.inputDir, file);
+          regenerateTemplate(fileRelativeNunjucks);
+        } else {
+          // Just assume it's any other file type.
+          var parentFolder = file.toLowerCase().indexOf(OPTS.nunjucks.inputDir.toLowerCase()) === 0
+            ? OPTS.nunjucks.inputDir
+            : OPTS.assets.inputDir;
+          var fileRelative = path.relative(parentFolder, file);
+          var fileOutput = path.join(OPTS.assets.outputDir, fileRelative);
+          var fileOutputDir = path.dirname(fileOutput);
+          console.log('Copying: %s', fileRelative);
+          fsExtra.mkdirp(fileOutputDir, err => {
+            if (err) return console.error(err);
+            fsExtra.copy(file, fileOutput, err => {
+              if (err) console.error(err);
+              // This might be useful if you copy over a binary file,
+              // SVG, image, or whatever. You could make this only
+              // reload on certain file types instead...
+              app.reload();
+            });
+          });
+        }
+      } else {
+        // Output file changed, trigger LiveReload
+        app.reload(file);
+      }
+    });
+}
+
+function initialBuild (cb) {
+  fsExtra.remove(OPTS.assets.outputDir, err => {
+    if (err) console.error(err);
+    fsExtra.remove(OPTS.nunjucks.outputDir, err => {
+      if (err) console.error(err);
+      fsExtra.copy(OPTS.assets.inputDir, OPTS.assets.outputDir, err => {
+        if (err) console.error(err);
+        // finally regenerate all templates
+        regenerateAllNunjucksTemplates();
+        cb(null);
+      });
+    });
+  });
+}
 
 /**
  * Serves nice URLs (à la GitHub Pages & Surge).
@@ -45,7 +169,7 @@ function staticMiddlewareForFilesWithoutTrailingSlashes (req, res, next) {
     return;
   }
   var fileRelative = path.join(OPTS.assets.inputDir, pathname + '.html');
-  fs.exists(fileRelative, function (exists) {
+  fsExtra.exists(fileRelative, function (exists) {
     if (exists) {
       req.url = pathname + '.html' + (parsedUrl.search || '') + (parsedUrl.hash || '');
     }
@@ -53,84 +177,10 @@ function staticMiddlewareForFilesWithoutTrailingSlashes (req, res, next) {
   });
 }
 
-var budoLiveOpts = {
-  // For faster development, re-bundle the LiveReload client
-  // on each request.
-  cache: false,
-  // Include source mapping in the LiveReload client.
-  debug: true,
-  // Enable file watching and LiveReload.
-  live: true,
-  // Additional script(s) to include after the LiveReload client.
-  // include: require.resolve('./live-client.js')
-};
-var budoMiddleware = [staticMiddlewareForFilesWithoutTrailingSlashes];
-
-// Create server-side redirects (defined in the `ROUTER` file).
-// See https://github.com/sintaxi/yonder#readme for usage.
-if (fs.existsSync(OPTS.routerPath)) {
-  budoMiddleware.push(yonder.middleware(OPTS.routerPath));
-}
-
 function regenerateAllNunjucksTemplates () {
   return shell.exec(`node ./node_modules/.bin/nunjucks "${OPTS.nunjucks.glob.include}" --path ${OPTS.nunjucks.inputDir} --unsafe --extensions ${OPTS.nunjucks.extensionsFile} --out ${OPTS.nunjucks.outputDir}`);
 }
 
-var app = budo
-  .cli(process.argv.slice(2), {
-    live: budoLiveOpts,
-    middleware: budoMiddleware
-  })
-  .on('connect', function (evt) {
-    var wss = evt.webSocketServer;
-
-    // Receiving messages from clients.
-    wss.on('connection', function (socket) {
-      console.log('[LiveReload] Client Connected');
-      // socket.on('message', function (message) {
-      //   console.log('[LiveReload] Message from client:', JSON.parse(message));
-      // });
-    });
-
-    shell.rm('-rf', OPTS.assets.outputDir, OPTS.nunjucks.outputDir);
-    shell.cp('-R', OPTS.assets.inputDir, OPTS.assets.outputDir);
-    regenerateAllNunjucksTemplates();
-  })
-  .on('reload', function (file) {
-    var parentDir = file.split(path.sep)[0];
-    if (parentDir) {
-      parentDir = path.join(__dirname, parentDir.toLowerCase());
-    }
-    if (!parentDir ||
-        parentDir === OPTS.assets.outputDir ||
-        parentDir === OPTS.nunjucks.outputDir) {
-      // Do not reload files in `_prod/` directory.
-      return;
-    }
-
-    console.log('File reloaded:', file);
-
-    var ext = path.extname(file).toLowerCase();
-    var fileRelative;
-    if (ext === '.html') {
-      fileRelative = path.relative(OPTS.nunjucks.inputDir, file);
-      if (fileRelative[0] === '_') {
-        regenerateAllNunjucksTemplates();
-        return;
-      }
-      shell.exec(`node ./node_modules/.bin/nunjucks ${fileRelative} --path ${OPTS.nunjucks.inputDir} --unsafe --extensions ${OPTS.nunjucks.extensionsFile} --out ${OPTS.nunjucks.outputDir}`);
-      return;
-    }
-    if (ext === '.json') {
-      regenerateAllNunjucksTemplates();
-      return;
-    }
-    fileRelative = path.relative(OPTS.assets.inputDir, file);
-    var fileOutput = path.join(OPTS.assets.outputDir, fileRelative);
-    var fileOutputDir = path.dirname(fileOutput);
-    console.log('Copying: %s', fileRelative);
-    shell.mkdir('-p', fileOutputDir);
-    shell.cp(file, fileOutput);
-  });
-
-module.exports = app;
+function regenerateTemplate (fileRelative) {
+  return shell.exec(`node ./node_modules/.bin/nunjucks ${fileRelative} --path ${OPTS.nunjucks.inputDir} --unsafe --extensions ${OPTS.nunjucks.extensionsFile} --out ${OPTS.nunjucks.outputDir}`);
+}

@@ -6,9 +6,9 @@
   "main": "dev.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "node ./dev.js public/media/js/main.js:_prod/media/js/main.js --port 3000 --dir _prod --live --watch-glob='**/*.{html,css,svg,json}' --cors --verbose",
+    "dev": "node ./dev.js",
     "test": "npm run prod",
-    "build": "shx cp -R public _prod && node ./node_modules/.bin/nunjucks '**/*.html' --path public --unsafe --extensions $PWD/nunjucks-helpers.js --out _prod",
+    "build": "cross-env NODE_ENV=production node ./dev.js",
     "deploy": "surge _prod -d https://webvr.rocks",
     "deploy:staging": "surge _prod -d https://webvrrocks.surge.sh",
     "open": "opn 'https://webvr.rocks'",
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "budo": "github:mattdesl/budo#feature/livereload-rework",
+    "fs-extra": "^2.0.0",
     "nunjucks-cli": "github:cvan/nunjucks-cli#214cea4",
     "nunjucks-includeData": "0.0.9",
     "shelljs": "^0.7.6",
@@ -27,7 +28,10 @@
     "yonder": "^0.2.0"
   },
   "devDependencies": {
-    "opn": "^4.0.2"
+    "browserify": "^14.0.0",
+    "cross-env": "^3.1.4",
+    "opn": "^4.0.2",
+    "uglify-js": "^2.7.5"
   },
   "engines": {
     "node": "6.9.1"
