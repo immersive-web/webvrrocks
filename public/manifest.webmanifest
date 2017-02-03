@@ -5,6 +5,7 @@
   "short_name": "WebVR",
   "description": "Your guide to VR on the Web.",
   "start_url": "./?src=manifest",
+  "display": "fullscreen",
   "theme_color": "#24aef4",
   "background_color": "#fff",
   "icons": [
