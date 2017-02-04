@@ -422,8 +422,14 @@ dd .button-download {
   padding: .5rem 1rem;
 }
 
-.download[data-download-is-new="true"] {
+a.download[data-download-is-new="true"],
+a.download:not(:visited) {
   animation: glow 1s ease-in-out infinite alternate;
+}
+
+a.download[data-download-is-new="false"],
+a.download:visited {
+  animation: none;
 }
 
 /* Neon glow adapted from https://codepen.io/FelixRilling/pen/qzfoc */
