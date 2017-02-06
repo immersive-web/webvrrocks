@@ -1,17 +1,13 @@
-<!--
-title: WebVR Rocks
--->
-
 # WebVR Rocks
 
 Your guide to Virtual Reality in the browser.
 
-**[WebVR Rocks!](https://WebVR.rocks)**
+**[WebVR Rocks!](https://WebVR.rocks/)**
 
 
 ## Installation
 
-To install the [Node](https://nodejs.org) dependencies:
+To install the [Node](https://nodejs.org/) dependencies:
 
 ```sh
 npm install
@@ -20,7 +16,7 @@ npm install
 
 ## Local development
 
-To start the local dev server:
+To start the local development server:
 
 ```sh
 npm start
@@ -35,7 +31,7 @@ To deploy the static pages to [production](https://webvr.rocks/):
 npm run deploy
 ```
 
-To deploy to [staging](https://webvrrocks.surge.sh):
+To deploy to [staging](https://webvrrocks.surge.sh/):
 
 ```sh
 npm run deploy:staging
