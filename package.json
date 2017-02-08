@@ -8,7 +8,7 @@
     "start": "node dev.js",
     "test": "npm run prod",
     "build": "cross-env NODE_ENV=production node dev.js",
-    "deploy": "ghpages -d _prod",
+    "deploy": "ghpages -p _prod",
     "open": "opn 'https://webvr.rocks/'",
     "prebuild": "shx rm -rf _prod",
     "preprod": "npm run build",
