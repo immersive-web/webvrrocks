@@ -31,12 +31,6 @@ To deploy the static pages to [production](https://webvr.rocks/):
 npm run deploy
 ```
 
-To deploy to [staging](https://webvrrocks.surge.sh/):
-
-```sh
-npm run deploy:staging
-```
-
 
 ## License
 
