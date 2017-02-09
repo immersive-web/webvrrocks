@@ -27,7 +27,7 @@
     "budo": "github:mattdesl/budo#feature/livereload-rework",
     "cross-env": "^3.1.4",
     "fs-extra": "^2.0.0",
-    "ghpages": "0.0.8",
+    "ghpages": "^0.0.9",
     "opn": "^4.0.2",
     "uglify-js": "^2.7.5"
   },
