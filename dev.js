@@ -52,12 +52,12 @@ if (fsExtra.existsSync(OPTS.routerPath)) {
 if (isProduction) {
   // Generate nunjucks and bundle our entry file
   initialBuild(() => {
-    console.log('Bundling %s...', OPTS.entry);
+    console.log('Bundling %s…', OPTS.entry);
     browserify(OPTS.entry, {
-      debug: false // no source mapping for now...
+      debug: false // no source mapping for now…
     }).bundle((err, src) => {
       if (err) throw err;
-      console.log('Compressing bundle...');
+      console.log('Compressing bundle…');
       const result = UglifyJS.minify(src.toString(), { fromString: true }).code;
       // Writes to nunjucks output, not assets output !
       var outFile = path.resolve(OPTS.nunjucks.outputDir, OPTS.entryRelative);
@@ -126,7 +126,7 @@ function startServer () {
               if (err) console.error(err);
               // This might be useful if you copy over a binary file,
               // SVG, image, or whatever. You could make this only
-              // reload on certain file types instead...
+              // reload on certain file types instead…
               if (!/\.css$/i.test(ext)) app.reload();
             });
           });

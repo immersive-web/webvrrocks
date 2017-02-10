@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const fs = require('fs');
 const path = require('path');
 
 require('shelljs/global');
@@ -29,5 +30,6 @@ lines.forEach(line => {
 if (('302' in routes) || ('301' in routes)) {
   var routesStr = JSON.stringify(routes);
   var body404 = cat(PAGE_404_BEFORE).replace('data-routes=""', `data-routes='${routesStr}'`);
-  echo(body404).to(PAGE_404_AFTER);
+  console.log('Writing 404.html…');
+  fs.writeFileSync(PAGE_404_AFTER, body404);
 }
