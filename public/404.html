@@ -1,11 +1,29 @@
 <!doctype html>
-<html>
+<html data-routes="">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#24aef4">
     <meta name="robots" content="none">
+    <script>
+      (function () {
+        var routes = JSON.parse(document.documentElement.getAttribute('data-routes') || '');
+
+        var path = window.location.pathname.toLowerCase();
+
+        var redirects = (routes['301'] || []).concat(routes['302'] || []);
+        var route;
+        for (var i = 0; i < redirects.length; i++) {
+          route = redirects[i];
+          if (path.indexOf(route[0].toLowerCase()) > -1) {
+            console.log('redirect', route[1]);
+            window.location.href = route[1];
+            break;
+          }
+        }
+      })();
+    </script>
     <title>404 Not Found • WebVR Rocks</title>
     <style>
       html {

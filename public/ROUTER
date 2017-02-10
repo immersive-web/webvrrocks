@@ -6,6 +6,13 @@
 302   /osvr  http://www.osvr.org/hdk2.html
 302   /samsung_gear_vr  https://www.samsung.com/global/galaxy/gear-vr/
 
+302   /ios  https://www.apple.com/ios/
+302   /android  https://www.android.com/
+302   /windows  https://www.microsoft.com/windows/
+302   /linux  https://en.wikipedia.org/wiki/Linux
+302   /mac  https://www.apple.com/macos/
+302   /macos  https://www.apple.com/macos/
+
 302   /desktop           /showcase/?filter=desktop
 302   /mobile            /showcase/?filter=mobile
 302   /showcase/desktop  /showcase/?filter=desktop
