@@ -1,10 +1,11 @@
 302   /google_cardboard  https://vr.google.com/cardboard/
 302   /google_daydream  https://vr.google.com/daydream/
 302   /htc_vive  https://www.vive.com/
-302   /microsoft_hololens  https://www.oculus.com/experiences/gear-vr/1290985657630933/
+302   /oculus_carmel  https://www.oculus.com/experiences/gear-vr/1290985657630933/
 302   /oculus_rift  https://www.oculus.com/rift/
 302   /osvr  http://www.osvr.org/hdk2.html
 302   /samsung_gear_vr  https://www.samsung.com/global/galaxy/gear-vr/
+302   /windows_holographic  https://developer.microsoft.com/windows/holographic
 
 302   /ios  https://www.apple.com/ios/
 302   /android  https://www.android.com/
@@ -107,6 +108,33 @@
 
 302   /edge                    /microsoft_edge
 302   /microsoft-edge          /microsoft_edge
+
+302   /hololens  /windows_holographic
+302   /hololense  /windows_holographic
+302   /holo_lens  /windows_holographic
+302   /holo-lens  /windows_holographic
+302   /holo_lense  /windows_holographic
+302   /holo-lense  /windows_holographic
+302   /microsoft_hololens  /windows_holographic
+302   /microsoft-hololens  /windows_holographic
+302   /win_holographic  /windows_holographic
+302   /win-holographic  /windows_holographic
+302   /microsoft_holographic  /windows_holographic
+302   /microsoft_holographic  /windows_holographic
+302   /ms_holographic  /windows_holographic
+302   /ms-holographic  /windows_holographic
+302   /holographic  /windows_holographic
+302   /holograph  /windows_holographic
+302   /windows_holo  /windows_holographic
+302   /windows-holo  /windows_holographic
+302   /win_holo  /windows_holographic
+302   /win-holo  /windows_holographic
+302   /microsoft_holo  /windows_holographic
+302   /microsoft-holo  /windows_holographic
+302   /ms_holo  /windows_holographic
+302   /ms-holo  /windows_holographic
+302   /holo  /windows_holographic
+302   /holo  /windows_holographic
 
 302   /samsung                               /samsung_internet
 302   /samsung_gear_browser                  /samsung_internet
