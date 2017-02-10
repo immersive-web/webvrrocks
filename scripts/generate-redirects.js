@@ -31,5 +31,9 @@ if (('302' in routes) || ('301' in routes)) {
   var routesStr = JSON.stringify(routes);
   var body404 = cat(PAGE_404_BEFORE).replace('data-routes=""', `data-routes='${routesStr}'`);
   console.log('Writing 404.html…');
-  fs.writeFileSync(PAGE_404_AFTER, body404);
+  fs.writeFile(PAGE_404_AFTER, body404, function (err) {
+    if (err) {
+      throw err;
+    }
+  });
 }
