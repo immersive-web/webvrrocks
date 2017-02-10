@@ -1491,19 +1491,6 @@ td[data-report-key="dateUpdated"] {
     padding-top: 3rem;
   }
 
-  /*
-  [data-newbie="true"] .main h1 {
-    border-top: 1px solid #eee;
-    padding-top: 3rem;
-  }
-
-  [data-newbie="false"] [data-section="intro"].section {
-    border-top: 1px solid #eee;
-    padding-top: 3rem;
-    order: 1;
-  }
-  */
-
   .site-header .section {
     flex-direction: row;
     padding-top: 0;
@@ -1598,24 +1585,8 @@ td[data-report-key="dateUpdated"] {
     flex-direction: row;
   }
 
-  [data-newbie="false"] .intro-video-inner {
-    display: none;
-  }
-
-  [data-newbie="false"] .button.button-watch-video {
-    display: inline-block;
-  }
-
-  [data-newbie="true"] .intro > * {
+  .intro > * {
     flex: 1;
-  }
-
-  [data-newbie="false"] .intro-text {
-    flex: 1;
-  }
-
-  [data-newbie="false"] .intro-para {
-    max-width: 700px;
   }
 
   .intro-video {
