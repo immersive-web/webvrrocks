@@ -12,12 +12,12 @@
       <div class="container section">
         {% include '_logo.html' %}
 
-        <a class="browser-link" href="{{ browser.about }}">
-          <h1 class="browser-name">{{ browser.name }}</h1>
-          <img class="browser-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
+        <a class="page-heading-link" href="{{ browser.about }}">
+          <h1 class="browser-name page-heading">{{ browser.name }}</h1>
+          <img class="browser-icon page-heading-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
         </a>
 
-        <p class="browser-intro">{{ (browser.description_html or browser.description)|safe }}</p>
+        <p class="browser-intro page-intro">{{ (browser.description_html or browser.description)|safe }}</p>
 
         <p class="message message-alert">
           <strong>Warning:</strong> WebVR support in <a href="#releases">Chrome for Android</a> is highly experimental and subject to change!
@@ -37,9 +37,9 @@
 
         <section id="setup" class="section setup" data-section="setup">
           <h2><a href="#setup">Instructions</a></h2>
-          <ol>
-            <li><a href="https://play.google.com/store/apps/details?id=com.android.chrome">Download Chrome for Android</a> on your mobile device.</li>
-            <li>Enjoy WebVR content!</li>
+          <ol class="bullets-light">
+            <li><span><a href="https://play.google.com/store/apps/details?id=com.android.chrome">Download Chrome for Android</a> on your mobile device.</span></li>
+            <li><span>Enjoy WebVR content!</span></li>
           </ol>
           <p class="note"><strong>Note:</strong> Any WebVR site you visit must be already enrolled in the <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">WebVR Origin Trial</a> and contain a <code>&lt;meta&gt;</code> tag or HTTP response header with a valid Origin Trial token.</p>
         </section>
@@ -85,8 +85,8 @@
               </dd>
               <dt class="browser-release-notes">Release notes</dt>
               <dd>
-                <ul>
-                  <li>Applies multiple optimizations on top of the version of WebVR publicly available in <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">Chrome 56 beta</a>, primarily in the form of reducing texture copies. This gives significantly better performance and latency in most cases. Consider this a preview of performance targets for later versions of Chrome, with further possible improvements still to come.</li>
+                <ul class="bullets-light">
+                  <li><span>Applies multiple optimizations on top of the version of WebVR publicly available in <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">Chrome 56 beta</a>, primarily in the form of reducing texture copies. This gives significantly better performance and latency in most cases. Consider this a preview of performance targets for later versions of Chrome, with further possible improvements still to come.</span></li>
                 </ul>
               </dd>
             </dl>

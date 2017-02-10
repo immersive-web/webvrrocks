@@ -12,12 +12,12 @@
       <div class="container section">
         {% include '_logo.html' %}
 
-        <a class="browser-link" href="{{ browser.about }}">
-          <h1 class="browser-name">{{ browser.name }}</h1>
-          <img class="browser-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
+        <a class="page-heading-link" href="{{ browser.about }}">
+          <h1 class="browser-name page-heading">{{ browser.name }}</h1>
+          <img class="browser-icon page-heading-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
         </a>
 
-        <p class="browser-intro">{{ (browser.description_html or browser.description)|safe }}</p>
+        <p class="browser-intro page-intro">{{ (browser.description_html or browser.description)|safe }}</p>
 
         {% if browser.releases.latest and browser.releases.latest.status != 'stable' %}
           <p class="message message-alert">
@@ -38,14 +38,14 @@
       <div class="container">
         <section id="setup" class="section setup" data-section="setup">
           <h2><a href="#setup">Setup Instructions</a></h2>
-          <ol>
-            <li>Download and launch <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Firefox Nightly</a>.</li>
-            <li data-headset="htc_vive"><a href="https://github.com/ValveSoftware/openvr/raw/b20b25705d8dd82be221fe68a61db36ae7e2608e/bin/win64/openvr_api.dll">Download version 1.0.2 (64-bit) of the <code>openvr_api.dll</code> file</a> from the <a href="https://github.com/ValveSoftware/openvr/tree/b20b25705d8dd82be221fe68a61db36ae7e2608e">OpenVR GitHub repository</a>.</li>
-            <li data-headset="htc_vive">Save the <code>openvr_api.dll</code> file somewhere on your computer where the user running Firefox can read it (e.g., <code>c:\openvr\</code>).</li>
-            <li data-headset="htc_vive">In Firefox Nightly, navigate to <code>about:config</code>; change the value of <code>dom.vr.openvr.enabled</code> to <code>true</code> and <code>gfx.vr.openvr-runtime</code> to the full path of the <code>openvr_api.dll</code> file (e.g., <code>c:\openvr\openvr_api.dll</code>).</li>
-            <li data-headset="oculus_rift">Ensure that your Oculus Home settings allow for <a href="https://blog.mozvr.com/oculus-home-rift-cv1-webvr/#enablingunknownsources">Unknown Sources</a>.</li>
-            <li>Restart Firefox Nightly.</li>
-            <li>Enjoy WebVR content!</li>
+          <ol class="bullets-light">
+            <li><span>Download and launch <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Firefox Nightly</a>.</span></li>
+            <li data-headset="htc_vive"><span><a href="https://github.com/ValveSoftware/openvr/raw/b20b25705d8dd82be221fe68a61db36ae7e2608e/bin/win64/openvr_api.dll">Download version 1.0.2 (64-bit) of the <code>openvr_api.dll</code> file</a> from the <a href="https://github.com/ValveSoftware/openvr/tree/b20b25705d8dd82be221fe68a61db36ae7e2608e">OpenVR GitHub repository</a>.</span></li>
+            <li data-headset="htc_vive"><span>Save the <code>openvr_api.dll</code> file somewhere on your computer where the user running Firefox can read it (e.g., <code>c:\openvr\</code>).</span></li>
+            <li data-headset="htc_vive"><span>In Firefox Nightly, navigate to <code>about:config</code>; change the value of <code>dom.vr.openvr.enabled</code> to <code>true</code> and <code>gfx.vr.openvr-runtime</code> to the full path of the <code>openvr_api.dll</code> file (e.g., <code>c:\openvr\openvr_api.dll</code>).</span></li>
+            <li data-headset="oculus_rift"><span>Ensure that your Oculus Home settings allow for <a href="https://blog.mozvr.com/oculus-home-rift-cv1-webvr/#enablingunknownsources">Unknown Sources</a>.</span></li>
+            <li><span>Restart Firefox Nightly.</span></li>
+            <li><span>Enjoy WebVR content!</span></li>
           </ol>
         </section>
 

@@ -12,12 +12,12 @@
       <div class="container section">
         {% include '_logo.html' %}
 
-        <a class="browser-link" href="{{ browser.about }}">
-          <h1 class="browser-name">{{ browser.name }}</h1>
-          <img class="browser-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
+        <a class="page-heading-link" href="{{ browser.about }}">
+          <h1 class="browser-name page-heading">{{ browser.name }}</h1>
+          <img class="browser-icon page-heading-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
         </a>
 
-        <p class="browser-intro">{{ (browser.description_html or browser.description)|safe }}</p>
+        <p class="browser-intro page-intro">{{ (browser.description_html or browser.description)|safe }}</p>
 
         <p class="message message-alert">
           <strong>Warning:</strong> All <a href="#releases">Servo WebVR builds posted here</a> are highly experimental and subject to change!
@@ -32,19 +32,19 @@
       </div>
     </header>
 
-    <main id="main" role="main">
+    <main id="main" class="main" role="main">
       <div class="container">
 
         <section id="setup" class="section setup" data-section="setup">
           <h2><a href="#setup">Instructions</a></h2>
-          <ol>
-            <li>See this post about <a href="https://blog.mozvr.com/webvr-servo-architecture-and-latency-optimizations/">WebVR coming to Servo</a>.</li>
-            <li>Download the <a href="{{ browser.downloadUrl }}" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">experimental WebVR Servo build</a>.</li>
-            <li>Extract the <a href="http://www.7-zip.org">RAR archive</a> into an appropriate location.</li>
-            <li>Open the Windows command line by clicking on the Windows <code>Start</code> menu and entering <code>cmd.exe</code>.</li>
-            <li>Open the directory to which you extracted the archive (e.g., <code>cd C:\%USERPROFILE%\Downloads\servo-webvr\</code>).</li>
-            <li>Run <code>servo.exe --resources-path resources webvr\room-scale.html</code>.</li>
-            <li>When the sample page loads, click on the <code>Enter VR</code> button, and enjoy!</li>
+          <ol class="bullets-light">
+            <li><span>See this post about <a href="https://blog.mozvr.com/webvr-servo-architecture-and-latency-optimizations/">WebVR coming to Servo</a>.</span></li>
+            <li><span>Download the <a href="{{ browser.downloadUrl }}" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">experimental WebVR Servo build</a>.</span></li>
+            <li><span>Extract the <a href="http://www.7-zip.org">RAR archive</a> into an appropriate location.</span></li>
+            <li><span>Open the Windows command line by clicking on the Windows <code>Start</code> menu and entering <code>cmd.exe</code>.</span></li>
+            <li><span>Open the directory to which you extracted the archive (e.g., <code>cd C:\%USERPROFILE%\Downloads\servo-webvr\</code>).</span></li>
+            <li><span>Run <code>servo.exe --resources-path resources webvr\room-scale.html</code>.</span></li>
+            <li><span>When the sample page loads, click on the <code>Enter VR</code> button, and enjoy!</span></li>
           </ol>
         </section>
 
@@ -73,8 +73,8 @@
               </dd>
               <dt class="browser-release-notes">Release notes</dt>
               <dd>
-                <ul class="release-notes">
-                  <li>Currently works with the <a href="/htc_vive">HTC Vive</a> only.</li>
+                <ul class="release-notes bullets-light">
+                  <li><span>Currently works with the <a href="/htc_vive">HTC Vive</a> only.</span></li>
                 </ul>
               </dd>
             </dl>
@@ -83,18 +83,20 @@
 
         <section id="known-issues" class="section" data-section="known-issues">
           <h2><a href="#known-issues">Known issues</a></h2>
-          <ul>
+          <ul class="bullets-light">
             <li>
-              <p>The Servo window might flicker while running WebGL because of <a href="https://github.com/servo/servo/issues/14235">issue #14235</a>. But, don&rsquo;t be scared; the headset won't flicker because it uses a different render path!</p>
+              <span>
+                <p>The Servo window might flicker while running WebGL because of <a href="https://github.com/servo/servo/issues/14235">issue #14235</a>. But, don&rsquo;t be scared; the headset won't flicker because it uses a different render path!</p>
+              </span>
             </li>
           </ul>
         </section>
 
         <section id="info" class="section" data-section="info">
           <h2><a href="#info">Links</a></h2>
-          <ul>
-            <li><a href="https://blog.mozvr.com/webvr-servo-architecture-and-latency-optimizations/">WebVR Coming to Servo: Architecture and Latency Optimizations</a></li>
-            <li><a href="https://blog.mozvr.com/webvr-coming-to-servo-part-1/">WebVR Coming to Servo: Introduction</a></li>
+          <ul class="bullets-light">
+            <li><span><a href="https://blog.mozvr.com/webvr-servo-architecture-and-latency-optimizations/">WebVR Coming to Servo: Architecture and Latency Optimizations</a></span></li>
+            <li><span><a href="https://blog.mozvr.com/webvr-coming-to-servo-part-1/">WebVR Coming to Servo: Introduction</a></span></li>
           </ul>
         </section>
       </div>

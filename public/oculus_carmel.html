@@ -12,15 +12,15 @@
       <div class="container section">
         {% include '_logo.html' %}
 
-        <a class="browser-link" href="{{ browser.about }}">
-          <h1 class="browser-name">{{ browser.name }}</h1>
-          <img class="browser-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
+        <a class="page-heading-link" href="{{ browser.about }}">
+          <h1 class="browser-name page-heading">{{ browser.name }}</h1>
+          <img class="browser-icon page-heading-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
         </a>
 
-        <p class="browser-intro">{{ (browser.description_html or browser.description)|safe }}</p>
+        <p class="browser-intro page-intro">{{ (browser.description_html or browser.description)|safe }}</p>
 
         <figure class="media">
-          <a href="{{ browser.url }}"><img src="https://dl.airtable.com/ybEJm6RVTFqC0XvhrX6H_full_12410271_1498109746883523_7443893749555396608_n.jpg" alt="Oculus Carmel" width="450"></a>
+          <a href="{{ browser.url }}"><img src="{{ browser.image }}" alt="{{ browser.name }}" width="450"></a>
           <figcaption class="hidden-text">Oculus Carmel</figcaption>
         </figure>
 
@@ -35,23 +35,29 @@
 
         <section id="setup" class="section setup" data-section="setup">
           <h2><a href="#setup">Instructions</a></h2>
-          <ol>
+          <ol class="bullets-light">
             <li>
-              <p>Search for and <strong>install <a href="{{ browser.url }}">Carmel Developer Preview</a></strong> from the <strong>Oculus Gear VR store</strong>.</p>
-              <figure class="media-outlined">
-                <img src="oculus_carmel/app.png" width="200">
-                <figcaption>Oculus Carmel install screen</figcaption>
-              </figure>
+              <span>
+                <p>Search for and <strong>install <a href="{{ browser.url }}">Carmel Developer Preview</a></strong> from the <strong>Oculus Gear VR store</strong>.</p>
+                <figure class="media-outlined">
+                  <img src="oculus_carmel/app.png" width="200" alt="Oculus Carmel install screen">
+                  <figcaption>Oculus Carmel install screen</figcaption>
+                </figure>
+              </span>
             </li>
             <li>
-              Launch <strong>Carmel Developer Preview</strong> from your <strong>Gear VR Library</strong>.
+              <span>
+                Launch <strong>Carmel Developer Preview</strong> from your <strong>Gear VR Library</strong>.
+              </span>
             </li>
             <li>
-              <p><stong>Enjoy the included WebVR demos!</stong></p>
-              <figure class="media-outlined">
-                <img src="https://dl.airtable.com/ZtmdSF5gRBqzuICpspK6_full_12386444_1799525440318007_1635011178193223680_n.jpg" width="300">
-                <figcaption>Launch Carmel to browse these WebVR demos</figcaption>
-              </figure>
+              <span>
+                <p><stong>Enjoy the included WebVR demos!</stong></p>
+                <figure class="media-outlined">
+                  <img src="https://dl.airtable.com/ZtmdSF5gRBqzuICpspK6_full_12386444_1799525440318007_1635011178193223680_n.jpg" width="300" alt="Oculus Carmel demos">
+                  <figcaption>Launch Carmel to browse these WebVR demos</figcaption>
+                </figure>
+              </span>
             </li>
           </ol>
         </section>
@@ -79,9 +85,9 @@
               </dd>
               <dt class="browser-release-notes">Release notes</dt>
               <dd>
-                <ul class="release-notes">
-                  <li>A preview of the new VR browser from Oculus, code named "Carmel." This release focuses on running 3D WebVR API content in VR with comprehensive 2D support planned for a later release. Check out WebVR projects from other developers and test your own experiences.</li>
-                  <li>Carmel browser does not yet have any browser UI.  Navigating to a arbitrary URL can be done using the <code>ovrweb</code> protocol to do so. For instructions, see <a href="https://developer3.oculus.com/documentation/vrweb/latest/concepts/carmel-launching-content/">Launching Your Content</a> on the Oculus VR web resource.</li>
+                <ul class="release-notes bullets-light">
+                  <li><span>A preview of the new VR browser from Oculus, code named &ldquo;Carmel.&rdquo; This release focuses on running 3D, WebVR API content in VR with comprehensive 2D support planned for a later release. Check out WebVR projects from other developers and test your own experiences.</span></li>
+                  <li><span>Carmel browser does not yet have any browser UI. Navigating to an arbitrary URL can be done using the <code>ovrweb</code> protocol to do so. For instructions, see <a href="https://developer3.oculus.com/documentation/vrweb/latest/concepts/carmel-launching-content/">Launching Your Content</a> on the Oculus VR web resource.</span></li>
                 </ul>
               </dd>
             </dl>
@@ -90,7 +96,7 @@
 
         <section id="info" class="section info" data-section="info">
           <h2><a href="#info">Links</a></h2>
-          <ul>
+          <ul class="bullets-light">
             <li><a href="https://developer.oculus.com/webvr/">Oculus WebVR Developer Hub</a></li>
             <li><a href="https://developer.oculus.com/blog/introducing-the-react-vr-pre-release/">React VR Pre-release</a></li>
             <li><a href="https://github.com/OculusVR/ovrui">OVRUI toolkit</a></li>

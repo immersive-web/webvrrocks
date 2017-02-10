@@ -12,15 +12,15 @@
       <div class="container section">
         {% include '_logo.html' %}
 
-        <a class="browser-link" href="{{ browser.about }}">
-          <h1 class="browser-name">{{ browser.name }}</h1>
-          <img class="browser-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
+        <a class="page-heading-link" href="{{ browser.about }}">
+          <h1 class="browser-name page-heading">{{ browser.name }}</h1>
+          <img class="browser-icon page-heading-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
         </a>
 
-        <p class="browser-intro">{{ (browser.description_html or browser.description)|safe }}</p>
+        <p class="browser-intro page-intro">{{ (browser.description_html or browser.description)|safe }}</p>
 
         <figure class="media">
-          <a href="{{ browser.url }}" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}"><img src="samsung_internet/samsung-internet-browser-gear-vr.jpg" alt="Samsung Internet Browser for Gear VR" width="450"></a>
+          <a href="{{ browser.url }}" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}"><img src="{{ browser.image }}" alt="Samsung Internet Browser for Gear VR" width="450"></a>
           <figcaption class="hidden-text">Samsung Internet Browser for Gear VR</figcaption>
         </figure>
 
@@ -30,25 +30,29 @@
       </div>
     </header>
 
-    <main id="main" role="main">
+    <main id="main" class="main" role="main">
       <div class="container">
 
         <section id="setup" class="section setup" data-section="setup">
           <h2><a href="#setup">Instructions</a></h2>
-          <ol>
+          <ol class="bullets-light">
             <li>
-              <p>Search for and <strong>install <a href="{{ helpers.browsers.samsung_internet.url }}">Samsung Internet Browser</a></strong> from the <strong>Oculus Gear VR store</strong>.</p>
-              <figure class="media-outlined">
-                <img src="samsung_internet/app.png" width="200">
-                <figcaption>Oculus Carmel install screen</figcaption>
-              </figure>
+              <span>
+                <p>Search for and <strong>install <a href="{{ helpers.browsers.samsung_internet.url }}">Samsung Internet Browser</a></strong> from the <strong>Oculus Gear VR store</strong>.</p>
+                <figure class="media-outlined">
+                  <img src="samsung_internet/app.png" width="200" alt="Samsung Internet Browser for Gear VR">
+                  <figcaption>Samsung Internet Browser for Gear VR</figcaption>
+                </figure>
+              </span>
             </li>
             <li>
-              <strong>Launch</strong> Samsung Internet Browser from your <strong>Gear VR Library</strong>.
+              <span>
+                <strong>Launch</strong> Samsung Internet Browser from your <strong>Gear VR Library</strong>.
+              </span>
             </li>
-            <li>Navigate to a WebVR-compatible site.</li>
-            <li>Accept the option to enable WebVR.</li>
-            <li>Enjoy!</li>
+            <li><span>Navigate to a WebVR-compatible site.</span></li>
+            <li><span>Accept the option to enable WebVR.</span></li>
+            <li><span>Enjoy!</span></li>
           </ol>
         </section>
 
@@ -75,8 +79,8 @@
               </dd>
               <dt class="browser-release-notes">Release notes</dt>
               <dd>
-                <ul class="release-notes">
-                  <li>WebVR is a experimental feature and is enabled by visiting a WebVR compatible site where user will be prompted to enable the feature.</li>
+                <ul class="release-notes bullets-light">
+                  <li><span>WebVR is a experimental feature and is enabled by visiting a WebVR compatible site where user will be prompted to enable the feature.</span></li>
                 </ul>
               </dd>
             </dl>
@@ -86,9 +90,11 @@
         <section id="known-issues" class="section" data-section="known-issues">
           <h2><a href="#known-issues">Known issues</a></h2>
           <p>These known issues apply to the latest published version available from the Oculus Gear VR app store.</p>
-          <ul>
+          <ul class="bullets-light">
             <li>
-              <p>Latency is quite high and resolution is low.   Content is very pixelated.</p>
+              <span>
+                <p>Latency is quite high and resolution is low. Content is very pixelated.</p>
+              </span>
             </li>
           </ul>
         </section>
@@ -103,9 +109,11 @@
 
         <section id="info" class="section" data-section="info">
           <h2><a href="#info">Links</a></h2>
-          <ul>
+          <ul class="bullets-light">
             <li>
-              <a href="https://developer.samsung.com/internet#gearvr-overview">Developer pages for Samsung Internet on Gear VR</a>
+              <span>
+                <a href="https://developer.samsung.com/internet#gearvr-overview">Developer pages for Samsung Internet on Gear VR</a>
+              </span>
             </li>
           </ul>
         </section>

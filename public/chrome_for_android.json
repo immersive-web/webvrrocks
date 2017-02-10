@@ -39,7 +39,7 @@
   "applicationCategory": [
     "Browser"
   ],
-  "releaseNotes": "/chrome_for_android/release-notes.json",
+  "releaseNotes": "/chrome_for_android/release_notes.json",
   "dateCreated": "",
   "datePublished": "",
   "dateModified": "2017-01-25",

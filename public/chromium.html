@@ -13,12 +13,12 @@
       <div class="container section">
         {% include '_logo.html' %}
 
-        <a class="browser-link" href="{{ browser.about }}">
-          <h1 class="browser-name">{{ browser.name }}</h1>
-          <img class="browser-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
+        <a class="page-heading-link" href="{{ browser.about }}">
+          <h1 class="browser-name page-heading">{{ browser.name }}</h1>
+          <img class="browser-icon page-heading-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
         </a>
 
-        <p class="browser-intro">{{ (browser.description_html or browser.description)|safe }}</p>
+        <p class="browser-intro page-intro">{{ (browser.description_html or browser.description)|safe }}</p>
 
         <p class="message message-alert">
           <strong>Warning:</strong> All <a href="#releases">Chromium WebVR builds posted here</a> are highly experimental and subject to change!
@@ -49,14 +49,14 @@
 
         <section id="setup" class="section setup" data-section="setup">
           <h2><a href="#setup">Instructions</a></h2>
-          <ol>
-            <li><a href="https://webvr.info/get-chrome/">Download the experimental build of Chromium with WebVR support</a>.</li>
-            <li>Find the <code>chromium_webvr_v1.1_win.zip</code> file in your <code>Downloads</code> directory, and extract all the contents.</li>
-            <li>In the output directory, find and launch the <code>chrome.exe</code> file.</li>
-            <li>In the URL bar, load <code>chrome://flags#enable-webvr</code> and toggle the <code>Enable WebVR flag</code>.</li>
-            <li>In the URL bar, load <code>chrome://flags#enable-gamepad-extensions</code> and toggle the <code>Enable Gamepad Extensions</code> flag.</li>
-            <li><span data-headset="htc-vive">Launch the <a href="https://www.vive.com/setup/">SteamVR</a> application.</span></li>
-            <li>Enjoy WebVR content!</li>
+          <ol class="bullets-light">
+            <li><span><a href="https://webvr.info/get-chrome/">Download the experimental build of Chromium with WebVR support</a>.</span></li>
+            <li><span>Find the <code>chromium_webvr_v1.1_win.zip</code> file in your <code>Downloads</code> directory, and extract all the contents.</span></li>
+            <li><span>In the output directory, find and launch the <code>chrome.exe</code> file.</span></li>
+            <li><span>In the URL bar, load <code>chrome://flags#enable-webvr</code> and toggle the <code>Enable WebVR flag</code>.</span></li>
+            <li><span>In the URL bar, load <code>chrome://flags#enable-gamepad-extensions</code> and toggle the <code>Enable Gamepad Extensions</code> flag.</span></li>
+            <li><span><span data-headset="htc-vive">Launch the <a href="https://www.vive.com/setup/">SteamVR</a> application.</span></span></li>
+            <li><span>Enjoy WebVR content!</span></li>
           </ol>
         </section>
 
@@ -111,8 +111,8 @@
               </dd>
               <dt class="browser-release-notes">Release notes</dt>
               <dd>
-                <ul class="release-notes">
-                  <li>Applies multiple optimizations on top of the version of WebVR publicly available in <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">Chrome 56 beta</a>, primarily in the form of reducing texture copies. This gives significantly better performance and latency in most cases. Consider this a preview of performance targets for later versions of Chrome, with further possible improvements still to come.</li>
+                <ul class="release-notes bullets-light">
+                  <li><span>Applies multiple optimizations on top of the version of WebVR publicly available in <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">Chrome 56 beta</a>, primarily in the form of reducing texture copies. This gives significantly better performance and latency in most cases. Consider this a preview of performance targets for later versions of Chrome, with further possible improvements still to come.</span></li>
                 </ul>
               </dd>
             </dl>

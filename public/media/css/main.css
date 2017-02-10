@@ -116,7 +116,8 @@ header p {
   font-size: 1rem;
 }
 
-header .button {
+header .button,
+table {
   margin: 0;
 }
 
@@ -188,8 +189,13 @@ figure {
 [class*=" grid-flex-cell"] {
   padding: 1.5rem 0 0 1.5rem;
 }
+
+section:not(:last-child) {
+  border-bottom-width: 0;
+}
 /* end reset */
 
+[data-section]:not(:last-child),
 .header {
   border-bottom: 1px solid #f2f4f6;
 }
@@ -207,7 +213,36 @@ figure {
   display: none;
 }
 
-h1.page-title {
+.main ol,
+.main ul {
+  padding-left: 2.25rem;
+}
+
+.main ul.authors__list,
+.main ul.release-notes {
+  padding-left: 0;
+}
+
+.main ol li,
+.main ul li {
+  padding-left: .5rem;
+}
+
+.main ul.authors__list li,
+.main ul.release-notes li {
+  padding-left: 0;
+}
+
+.bullets-light {
+  color: rgba(17,17,17,.5);
+}
+
+.bullets-light li > span:only-child {
+  color: #111;
+  display: block;
+}
+
+h1.page-heading {
   margin: 0;
 }
 
@@ -273,7 +308,7 @@ h1.page-title {
   fill: #fff;
 }
 
-.browser-link {
+.page-heading-link {
   display: flex;
   flex-direction: column-reverse;
 }
@@ -298,28 +333,57 @@ h1.page-title {
   display: block;
 }
 
-.browser-icon {
+.page-heading-icon {
+  border-radius: 0;
   display: block;
   margin-bottom: .5rem;
   max-width: 100px;
-  min-height: 70px;
-  min-width: 70px;
   opacity: .9;
   transition: .15s opacity ease-in-out;
 }
 
-.browser-icon-oculus-rift {
-  max-height: 70px;
-  min-height: auto;
+.browser-icon {
+  min-height: 70px;
+  min-width: 70px;
 }
 
-[data-supports-touch="true"] .browser-link:active .browser-icon,
-[data-supports-touch="false"] .browser-link:hover .browser-icon {
+.headset-icon {
+  display: inline-block;
+  margin-bottom: 1rem;
+  max-width: 40px;
+}
+
+[data-supports-touch="true"] .page-heading-link:active .page-heading-icon,
+[data-supports-touch="false"] .page-heading-link:hover .page-heading-icon {
   opacity: 1;
 }
 
-html:not([data-layout~="home"]) .main .section:last-child {
-  padding-bottom: 0;
+html[data-layout~="headset"][data-layout~="htc_vive"],
+html[data-layout~="headset"][data-layout~="htc_vive"] body {
+  background-color: #eafbff;
+}
+
+html[data-layout~="headset"][data-layout~="htc_vive"] .page-heading {
+  /*color: #00718d;*/
+  color: #111;
+}
+
+html[data-layout~="headset"][data-layout~="htc_vive"] h3,
+html[data-layout~="headset"][data-layout~="htc_vive"] h3 a {
+  color: #777;
+}
+
+html[data-layout~="headset"][data-layout~="htc_vive"] [data-section]:not(:last-child),
+.header {
+  border-bottom-color: rgba(0,0,0,.1);
+}
+
+a[itemprop="pictogram"] svg {
+  width: 80px;
+}
+
+a[itemprop="pictogram"] svg path {
+  fill: #00b5e2;
 }
 
 .main h2,
@@ -330,8 +394,19 @@ html:not([data-layout~="home"]) .main p,
 html:not([data-layout~="home"]) .main dl,
 html:not([data-layout~="home"]) .main ol,
 html:not([data-layout~="home"]) .main ul,
-.browser-intro {
+.page-intro {
   max-width: 600px;
+}
+
+.main h2 a:only-child,
+.main h3 a:only-child,
+.main h4 a:only-child,
+.main h5 a:only-child {
+  display: block;
+}
+
+html[data-layout~="headset"] .main [data-section="browsers"] h4 {
+  margin-bottom: 1rem;
 }
 
 .intro-para a {
@@ -365,7 +440,10 @@ html:not([data-layout~="home"]) .main ul,
 }
 
 .intro p:last-child,
-.main li:last-child p:last-child {
+.main li:last-child p:last-child,
+.main li:last-child > span:only-child p:last-child,
+.main dd:last-child p:last-child,
+.main dd:last-child > span:only-child p:last-child {
   margin-bottom: 0;
 }
 
@@ -374,7 +452,7 @@ html:not([data-layout~="home"]) .main ul,
   margin-bottom: 0;
 }
 
-.browser-intro {
+.page-intro {
   opacity: .7;
   font-size: 1.2rem;
   line-height: 1.4;
@@ -397,20 +475,29 @@ p.message {
   margin-bottom: 0;
 }
 
-[data-section="info"] dt {
+.main dd + dt {
+  padding-top: 1rem;
+}
+
+.main dd p:first-child {
+  margin-top: 0;
+}
+
+.main dd p:last-child {
+  margin-bottom: 0;
+}
+
+.main [data-section="info"] dt {
   cursor: pointer;
 }
 
-[data-section="info"] dd + dt {
-  margin-top: .5rem;
+.main [data-section="info"] dd + dt {
+  padding-top: 1.5rem;
 }
+
 
 .main li + li {
   margin-top: .75rem;
-}
-
-.main dt + dd {
-  padding-bottom: .75rem;
 }
 
 .main dd:empty {
@@ -419,7 +506,18 @@ p.message {
 
 dd .button-download {
   margin-bottom: 1rem;
+}
+
+dd .button-download,
+p > .button-download:only-child {
+  transition-duration: .15s;
   padding: .5rem 1rem;
+}
+
+dd .button-download:hover,
+p > .button-download:only-child:hover {
+  background: #43bb6e;
+  color: #fff;
 }
 
 a.download[data-download-is-new="true"],
@@ -527,10 +625,6 @@ figcaption {
   padding-top: .25rem;
 }
 
-[data-browser] li figcaption {
-  /*text-align: center;*/
-}
-
 .authors__list li,
 .release-notes li {
   list-style-type: none;
@@ -547,6 +641,10 @@ figcaption {
 .footer a[rel="license"] ~ span {
   color: #444;
   font-weight: bold;
+}
+
+html[data-layout~="headset"][data-layout~="htc_vive"] .footer a[rel="license"] ~ span {
+  color: rgba(255,255,255,.9);
 }
 
 .footer a[rel="license"] ~ span.by,
@@ -753,7 +851,7 @@ html[data-layout] [data-section="demos"] ul.matrix {
 /* Emulates a `border-bottom` on the table
    (since because some rows may be hidden with CSS,
    we can't target `:last-child`) */
-[itemprop="browser"] > div:after {
+.table-support [itemprop="browser"] > div:after {
   border-bottom: 1px solid #ccc;
   content: "";
   display: block;
@@ -776,7 +874,8 @@ html[data-layout] [data-section="demos"] ul.matrix {
 .table-support.table-verbose tr[data-headset],
 .table-support.table-verbose td[data-platform],
 .table-support.table-verbose th[data-platform] {
-  display: none;
+  /*display: none;*/
+  opacity: 0;
 }
 
 .table-support.table-verbose[data-supported-headsets~="htc_vive"] tr[data-headset="htc_vive"],
@@ -821,11 +920,6 @@ html[data-layout] [data-section="demos"] ul.matrix {
 
 .table-support /*a*/.supported strong {
   display: none;
-}
-
-th[data-platform],
-tr[data-headset] th {
-  position: relative;
 }
 
 th[data-platform] a:before {
@@ -1228,6 +1322,16 @@ td[data-report-key="dateUpdated"] {
   padding-top: .5rem;
 }
 
+html[data-layout~="headset"][data-layout~="htc_vive"] .footer {
+  background: #111820;
+  opacity: 1;
+  color: rgba(255,255,255,.6);
+}
+
+html[data-layout~="headset"][data-layout~="htc_vive"] .footer a {
+  color: #666;
+}
+
 .footer p {
   margin: 0;
 }
@@ -1252,6 +1356,16 @@ td[data-report-key="dateUpdated"] {
   border-color: #666;
   color: #666;
   font-size: .6rem;
+}
+
+html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a {
+  border-color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.5);
+}
+
+html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
+  border-color: rgba(255,255,255,.8);
+  color: rgba(255,255,255,.8);
 }
 
 [data-section="info"] li + li {
@@ -1620,12 +1734,37 @@ td[data-report-key="dateUpdated"] {
     display: table-cell;
   }
 
+  .footer,
+  html[data-layout~="headset"][data-layout~="htc_vive"] .footer {
+    background: none;
+  }
+
   .footer {
     background: none;
     border-top: 1px solid #ddd;
     margin-top: 1.5rem;
     padding-top: 1.5rem;
   }
+
+  html[data-layout~="headset"][data-layout~="htc_vive"] .footer {
+    border-top-color: rgba(0,0,0,.2);
+    color: rgba(0,0,0,.45);
+  }
+
+  html[data-layout~="headset"][data-layout~="htc_vive"] .footer a[rel="license"] ~ span {
+    color: rgba(0,0,0,.9);
+  }
+
+  html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a {
+    border-color: rgba(0,0,0,.5);
+    color: rgba(0,0,0,.5);
+  }
+
+  html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
+    border-color: rgba(0,0,0,.8);
+    color: rgba(0,0,0,.8);
+  }
+
 }
 
 @media all and (min-width: 44.999rem) and (max-width: 52.499rem) {

@@ -1,0 +1,85 @@
+{% from '_helpers.html' import author_item, browser_item, browsers, compat_report_row, demo_item, headsets, youtube %}
+{% set headset = headsets[slug] %}
+{% set page = slug + '.html' %}
+<!doctype html>
+<html lang="en" data-layout="secondary headset {{ headset.slug }}" data-headset="{{ headset.slug }}" data-page="{{ page }}">
+  <head>
+    {% include '_head.html' %}
+    <title>{% block title %}{{ title or headset.name }} • WebVR Rocks{% endblock %}</title>
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <header id="header" class="header" role="banner">
+      <div class="container section">
+        {% include '_logo.html' %}
+
+        <a class="page-heading-link" href="{{ headset.about }}">
+          <h1 class="headset-name page-heading">{{ headset.name }}</h1>
+          <img class="headset-icon page-heading-icon" src="{{ headset.logo }}" alt="{{ headset.name }}" title="{{ headset.name }}">
+        </a>
+
+        {% if headset.description_html or headset.description %}
+          <p class="headset-intro page-intro">{{ description_html|safe if headset.description_html else description }}</p>
+        {% endif %}
+
+        {% if headset.image %}
+          <!--
+          <figure class="media">
+            <a href="{{ headset.image }}"><img src="{{ headset.image }}" alt="{{ headset.name }}" width="450"></a>
+            <figcaption class="hidden-text">{{ headset.name }}</figcaption>
+          </figure>
+          -->
+        {% endif %}
+
+        {% if headset.pictogram %}
+          <figure class="media">
+            <a itemprop="pictogram" href="{{ headset.pictogram }}">{% include headset.pictogram.replace('/' + headset.slug, headset.slug) %}</a>
+            <figcaption class="hidden-text">{{ headset.name }}</figcaption>
+          </figure>
+        {% endif %}
+      </div>
+    </header>
+
+    <main id="main" class="main" role="main">
+      <div class="container">
+        {% block instructions_block %}
+          <section id="setup" class="section setup" data-section="setup">
+            <h2><a href="#setup">Instructions</a></h2>
+            {% block instructions %}
+            {% endblock %}
+          </section>
+        {% endblock %}
+
+        {% block browsers_block %}
+          <section id="browsers" class="section browsers" data-section="browsers">
+            <h2><a href="#browsers">Browsers</a></h2>
+            {% block browsers %}
+            {% endblock %}
+          </section>
+        {% endblock %}
+
+        {% block demos_block %}
+          <section id="demos" class="section demos" data-section="demos">
+            <h2><a href="#demos">Demos</a></h2>
+            <ul data-section="demos" class="matrix grid-flex-container">
+              {% block demos %}
+              {% endblock %}
+            </ul>
+          </section>
+        {% endblock %}
+
+        {% block info_block %}
+          <section id="info" class="section info" data-section="info">
+            <h2><a href="#info">{{ info_heading or info_title or 'Info' }}</a></h2>
+            {% block info %}
+            {% endblock %}
+          </section>
+        {% endblock %}
+      </div>
+    </main>
+
+    {% block footer_block %}
+      {% include '_footer.html' %}
+    {% endblock %}
+  </body>
+</html>

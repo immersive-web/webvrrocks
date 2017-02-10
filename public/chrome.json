@@ -1,0 +1,91 @@
+{
+  "@context": "http://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Chrome",
+  "slug": "chrome",
+  "description": "Google's desktop browser",
+  "description_html": "<a href=\"https://www.google.com/\">Google</a>&rsquo;s <a href=\"https://www.google.com/chrome/\">desktop browser</a>",
+  "operatingSystem": "Windows 7.1+",
+  "processorRequirements": "IA64",
+  "logo": "/chrome/icon.svg",
+  "image": "",
+  "screenshot": "",
+  "url": "/chromium",
+  "about": "/chromium",
+  "sameAs": [
+    "https://webvr.rocks/chromium"
+  ],
+  "keywords": "browser",
+  "applicationCategory": [
+    "Browser"
+  ],
+  "dateCreated": "",
+  "datePublished": "",
+  "learningResourceType": "https://webvr.rocks/chrome",
+  "discussionUrl": "https://webvr.rocks/chrome#comments",
+  "softwareHelp": "https://webvr.rocks/chrome#help",
+  "version": "",
+  "softwareRequirements": [
+    "https://www3.oculus.com/setup/",
+    "https://www.vive.com/us/setup/"
+  ],
+  "requirements": [
+    "https://www3.oculus.com/setup/",
+    "https://www.vive.com/us/setup/"
+  ],
+  "fileSize": "",
+  "license": "",
+  "thumbnailUrl": "",
+  "softwareVersion": "",
+  "sourceOrganization": "",
+  "softwareAddOn": "",
+  "device": "",
+  "alternateName": "Chrome WebVR",
+  "audio": "",
+  "platforms": {
+    "htc_vive": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "oculus_rift": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "samsung_gear_vr": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "google_daydream": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "supported",
+      "ios": "headset_unsupported"
+    },
+    "google_cardboard": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "supported",
+      "ios": "browser_unsupported"
+    },
+    "microsoft_hololens": {
+      "windows": "browser_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    }
+  },
+  "reports": [
+  ]
+}

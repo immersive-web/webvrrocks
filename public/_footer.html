@@ -6,6 +6,8 @@
         <p id="edit-page" class="edit-page">
           <a href="https://github.com/webvrrocks/webvrrocks{% if page %}/edit/master/public/{{ page }}{% endif %}" title="Edit on GitHub" class="button button-primary button-outlined button-small">Edit on GitHub</a>
         </p>
+        {% block footer %}
+        {% endblock %}
       </div>
     </footer>
     <script src="/media/js/main.js"></script>

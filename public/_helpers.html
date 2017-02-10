@@ -10,6 +10,7 @@
   </li>
 {% endmacro %}
 
+{% includeData 'chrome.json' as chrome %}
 {% includeData 'chromium.json' as chromium %}
 {% includeData 'firefox.json' as firefox %}
 {% includeData 'samsung_internet.json' as samsung_internet %}
@@ -17,6 +18,9 @@
 {% includeData 'chrome_for_android.json' as chrome_for_android %}
 {% includeData 'microsoft_edge.json' as microsoft_edge %}
 {% includeData 'servo.json' as servo %}
+
+{% includeData 'htc_vive.json' as htc_vive %}
+{% includeData 'google_daydream.json' as google_daydream %}
 
 {# includeData '_db/webvr_scenes.json' as sites #}
 {# includeData '_db/bugs.json' as bugs #}
@@ -31,6 +35,7 @@
 } #}
 
 {% set browsers = {
+  chrome: chrome,
   chromium: chromium,
   firefox: firefox,
   samsung_internet: samsung_internet,
@@ -41,18 +46,14 @@
 } %}
 
 {% set headsets = {
-  "htc_vive": {
-    "name": "HTC Vive"
-  },
+  htc_vive: htc_vive,
   "oculus_rift": {
     "name": "Oculus Rift"
   },
   "samsung_gear_vr": {
     "name": "Samsung Gear VR"
   },
-  "google_daydream": {
-    "name": "Google Daydream"
-  },
+  google_daydream: google_daydream,
   "google_cardboard": {
     "name": "Google Cardboard"
   },

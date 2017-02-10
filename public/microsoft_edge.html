@@ -12,35 +12,37 @@
       <div class="container section">
         {% include '_logo.html' %}
 
-        <a class="browser-link" href="{{ browser.about }}">
-          <h1 class="browser-name">{{ browser.name }}</h1>
-          <img class="browser-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
+        <a class="page-heading-link" href="{{ browser.about }}">
+          <h1 class="browser-name page-heading">{{ browser.name }}</h1>
+          <img class="browser-icon page-heading-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
         </a>
 
-        <p class="browser-intro">{{ (browser.description_html or browser.description)|safe }}</p>
+        <p class="browser-intro page-intro">{{ (browser.description_html or browser.description)|safe }}</p>
       </div>
     </header>
 
-    <main id="main" role="main">
+    <main id="main" class="main" role="main">
       <div class="container">
 
         <section id="setup" class="section setup" data-section="setup">
           <h2><a href="#setup">Instructions</a></h2>
-          <ol>
+          <ol class="bullets-light">
             <li>
-              Download the latest <a href="https://www.microsoft.com/en-us/windows/upcoming-features">Windows 10 update</a> to get the latest <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/15002/?compareWith=14986">Microsoft Edge</a>.
+              <span>
+                Download the latest <a href="https://www.microsoft.com/en-us/windows/upcoming-features">Windows 10 update</a> to get the latest <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/15002/?compareWith=14986">Microsoft Edge</a>.
+              </span>
             </li>
-            <li>Enjoy content!</li>
+            <li><span>Enjoy content!</span></li>
           </ol>
           <p><strong>Stay tuned for more details! &nbsp; 🎉</strong></p>
         </section>
 
         <section id="info" class="section" data-section="info">
           <h2><a href="#info">Links</a></h2>
-          <ul>
-            <li><a href="https://arstechnica.com/information-technology/2017/01/webvr-books-and-more-extensions-coming-to-edge-in-creators-update/">VR-heavy Windows 10 Creators Update adds WebVR to Edge <em>(Ars Technica)</em></a></li>
-            <li><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/15002/">Edge adds support for WebVR <em>(Microsoft Developer)</em></a></li>
-            <li><a href="https://blogs.windows.com/msedgedev/2016/09/09/webvr-in-development-edge/#ljMCoZDHkEYig3gF.97">Bringing WebVR to Microsoft Edge <em>(Microsoft Edge Developer)</em></a></li>
+          <ul class="bullets-light">
+            <li><span><a href="https://arstechnica.com/information-technology/2017/01/webvr-books-and-more-extensions-coming-to-edge-in-creators-update/">VR-heavy Windows 10 Creators Update adds WebVR to Edge <em>(Ars Technica)</em></a></span></li>
+            <li><span><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/15002/">Edge adds support for WebVR <em>(Microsoft Developer)</em></a></span></li>
+            <li><span><a href="https://blogs.windows.com/msedgedev/2016/09/09/webvr-in-development-edge/#ljMCoZDHkEYig3gF.97">Bringing WebVR to Microsoft Edge <em>(Microsoft Edge Developer)</em></a></span></li>
           </ul>
         </section>
 
