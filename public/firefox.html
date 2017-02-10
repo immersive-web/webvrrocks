@@ -19,12 +19,14 @@
 
         <p class="browser-intro">{{ (browser.description_html or browser.description)|safe }}</p>
 
-        <p class="message message-alert">
-          <strong>Warning:</strong> All <a href="#releases">Firefox Nightly releases</a> are highly experimental and subject to change!
-        </p>
+        {% if browser.releases.latest and browser.releases.latest.status != 'stable' %}
+          <p class="message message-alert">
+            <strong>Warning:</strong> All <a href="#releases">Firefox Nightly releases</a> are highly experimental and subject to change!
+          </p>
+        {% endif %}
 
         <div id="download" class="download dropdown-standalone dropdown-download">
-          <a href="{{ browser.url }}" class="button button-unstyled button-large button-download" data-download-name="servo" data-download-id="0.2">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">Feb 2, 2016</span> <span class="download-size">38 MB</span></span></a>
+          <a href="{{ browser.landingUrl }}" itemprop="downloadUrl" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid }}">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">{{ browser.releases.latest.dateReleased.datetimeString }}</span> <span class="download-size">{{ browser.releases.latest.fileSize }}</span></span></a>
         </div>
         <p class="view-source">
           <a href="https://dxr.mozilla.org/mozilla-central/source/dom/vr" class="button-source no-underline">View source</a>
@@ -68,26 +70,31 @@
               </dd>
               <dt class="browser-download">Download</dt>
               <dd>
-                <a class="button button-outlined-approve button-download" href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly" itemprop="downloadUrl">Download</a>
+                <a class="button button-outlined-approve button-download" href="{{ browser.landingUrl }}" itemprop="downloadUrl" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid }}">Download</a>
               </dd>
               <dt class="browser-version">Version</dt>
               <dd>
-                <span class="version">2017-01-21</span>
+                <span itemprop="version" class="version" content="{{ browser.releases.latest.buildInfo.buildid }}">{{ browser.releases.latest.buildInfo.buildid }}</span>
               </dd>
               <dt class="browser-date-published">Date released</dt>
               <dd>
-                <time itemprop="datePublished" datetime="2017-01-21T12:39:00Z">
-                  January 21, 2017
+                <time itemprop="datePublished" datetime="{{ browser.releases.latest.dateReleased.isoString }}" title="{{ browser.releases.latest.dateReleased.isoString }}">
+                  {{ browser.releases.latest.dateReleased.datetimeString }}
                 </time>
               </dd>
               <dt class="browser-file-size">File size</dt>
               <dd>
-                <span itemprop="fileSize" content="38MB">38 MB</span>
+                <span itemprop="fileSize" content="{{ browser.releases.latest.fileSize }}">{{ browser.releases.latest.fileSize }}</span>
               </dd>
               <dt class="browser-system-requirements">System requirements</dt>
               <dd>
-                <span class="operatingSystems">Windows 7.1+</span>
-                <span class="processorRequirements">64-bit</span>
+                <span class="operatingSystems" content="{{ browser.releases.operatingSystem }}">{{ browser.releases.operatingSystem }}</span>
+                {% if browser.processorRequirements == 'IA64' or browser.processorRequirements == 'IA32' %}
+                  <span class="processorRequirements">
+                    {{ '64-bit' if browser.processorRequirements == 'IA64' }}
+                    {{ '32-bit' if browser.processorRequirements == 'IA32' }}
+                  </span>
+                {% endif %}
               </dd>
               <dt class="browser-authors">Authors</dt>
               <dd>
