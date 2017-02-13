@@ -214,22 +214,21 @@ section:not(:last-child) {
 }
 
 .main ol,
-.main ul {
+.main ul:not(.matrix) {
   padding-left: 2.25rem;
 }
 
-.main ul.authors__list,
-.main ul.release-notes {
-  padding-left: 0;
-}
-
 .main ol li,
-.main ul li {
+.main ul:not(.matrix) li {
   padding-left: .5rem;
 }
 
-.main ul.authors__list li,
-.main ul.release-notes li {
+.main ul.not-copy,
+.main ul.not-copy,
+.main .not-copy ol,
+.main .not-copy ul,
+.main .not-copy ol li,
+.main .not-copy ul li {
   padding-left: 0;
 }
 
@@ -250,6 +249,11 @@ h1.page-heading {
 .main h2 {
   font-weight bold;
   font-size: 3rem;
+}
+
+.main h1 {
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
 }
 
 .section[data-section="headsets"] {
@@ -395,8 +399,15 @@ html:not([data-layout~="home"]) .main dl,
 html:not([data-layout~="home"]) .main ol,
 html:not([data-layout~="home"]) .main ul,
 .page-intro {
+  margin-bottom: 1.5rem;
   max-width: 600px;
 }
+
+/*html .main ul.matrix,
+html .main ol.matrix {
+  margin-bottom: 0;
+}
+*/
 
 .main h2 a:only-child,
 .main h3 a:only-child,
@@ -409,12 +420,25 @@ html[data-layout~="headset"] .main [data-section="browsers"] h4 {
   margin-bottom: 1rem;
 }
 
+.intro-para {
+  border-width: 1px 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 -1.5rem 1.5rem;
+  padding: 1.5rem;
+}
+
 .intro-para a {
   color: inherit;
 }
 
 .intro-para em {
+  background: #ffea35;
+  border-radius: .15rem;
+  color: #111;
   font-style: normal;
+  padding: .125rem .3rem;
+  white-space: pre;
 }
 
 .intro {
@@ -431,24 +455,23 @@ html[data-layout~="headset"] .main [data-section="browsers"] h4 {
   display: none;
 }
 
-.main .section dl:last-child {
-  margin: 0;
-}
-
+html .main dt:first-child *:first-child,
 .main li:first-child p:first-child {
   margin-top: 0;
 }
 
-.intro p:last-child,
-.main li:last-child p:last-child,
-.main li:last-child > span:only-child p:last-child,
-.main dd:last-child p:last-child,
-.main dd:last-child > span:only-child p:last-child {
-  margin-bottom: 0;
-}
-
-.main dd ol,
-.main dd ul {
+html .intro p:last-child,
+html .main ol,
+html .main li:last-child p:last-child,
+html .main li:last-child > span:only-child p:last-child,
+html .main dd ol,
+html .main dd ul,
+html .main dd:last-child p:last-child,
+html .main dd:last-child > span:only-child p:last-child,
+html .main dd:last-child *:last-child,
+html .main dd > *:only-child,
+html .main dl:last-child,
+html .container > *:last-child {
   margin-bottom: 0;
 }
 
@@ -471,9 +494,6 @@ p.message {
   margin-top: 0;
 }
 
-.section > *:last-child {
-  margin-bottom: 0;
-}
 
 .main dd + dt {
   padding-top: 1rem;
@@ -609,29 +629,22 @@ a.download:visited {
   text-align: right;
 }
 
-.authors__list,
+.authors-list,
 .release-notes {
-  margin: 0;
-  padding-left: 0;
-}
-
-.authors__list {
-  color: #666;
-  margin-top: .5rem;
-  padding-left: 0;
+  margin-top: .75rem;
 }
 
 figcaption {
   padding-top: .25rem;
 }
 
-.authors__list li,
-.release-notes li {
+.authors-list li {
   list-style-type: none;
 }
 
-.authors__list li + li {
-  margin-top: 5px;
+.authors-list li + li,
+.release-notes li + li {
+  margin-top: 1rem;
 }
 
 *[class*='button-outlined'].button-small {
@@ -765,12 +778,14 @@ ul.matrix {
   padding-left: 0;
 }
 
+.not-copy ul li,
+.not-copy ol li,
 ul.matrix li {
   list-style-type: none;
 }
 
 ul.matrix li + li {
-  margin: 0 0 .75rem;
+  padding-top: .75rem;
 }
 
 .matrix li > div {
@@ -1399,30 +1414,6 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
   }*/
 }
 
-@media all and (min-width: 18rem) and (max-width: 44.999rem) {
-  .intro-para {
-    border-width: 1px 0;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin: 0 -1.5rem 1.5rem;
-    padding: 1.5rem;
-  }
-
-  .intro-para em {
-    background: #ffea35;
-    border-radius: .15rem;
-    /*color: #fff;*/
-    color: #111;
-    padding: .15rem .4rem;
-    white-space: pre;
-  }
-
-  .main h1 {
-     border-top: 1px solid #eee;
-     padding-top: 1.5rem;
-  }
-}
-
 @media all and (min-width: 18rem) {
   /*
   .site-logo:hover svg path {
@@ -1658,7 +1649,6 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
   }
 
   [data-layout~="secondary"] .main .section {
-    padding-bottom: 3rem;
     padding-top: 3rem;
   }
 
@@ -1689,10 +1679,8 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
   }
 
   .intro-para em {
-    background: #ffea35;
     border-radius: .3rem;
-    padding: .2rem .6rem;
-    white-space: pre;
+    padding: .2rem .45rem;
   }
 
   .intro {
