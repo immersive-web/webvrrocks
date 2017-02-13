@@ -1,6 +1,13 @@
-302   /google_cardboard  https://vr.google.com/cardboard/
-302   /google_daydream  https://vr.google.com/daydream/
-302   /htc_vive/buy  https://www.vive.com/
+302   /google_cardboard   https://vr.google.com/cardboard/
+302   /google_daydream    https://vr.google.com/daydream/
+302   /htc_vive/buy       https://www.vive.com/order/
+302   /htc_vive/external  https://www.vive.com/
+302   /htc_vive/product   https://www.vive.com/us/product/
+302   /htc_vive/setup     https://www.vive.com/us/setup/
+302   /htc_vive/test      https://dl4.htc.com/vive/ViveCheck/ViveCheck.exe
+
+302   /htc_vive/order     /htc_vive/buy
+
 302   /oculus_carmel  https://www.oculus.com/experiences/gear-vr/1290985657630933/
 302   /oculus_rift  https://www.oculus.com/rift/
 302   /osvr  http://www.osvr.org/hdk2.html
