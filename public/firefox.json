@@ -243,8 +243,8 @@
   "fileSizeZip": "56 MB",
   "notifications": [
     {
-      "content": "Support for Oculus Touch controllers added!",
-      "content_html": "Support for <strong>Oculus Touch controllers</strong> added!",
+      "content": "Latest Firefox Nightly update now supports Oculus Touch controllers!",
+      "content_html": "<a href=\"/firefox#download\">Latest Firefox Nightly update</a> now supports <a href=\"https://www.oculus.com/rift/#u_0_g\">Oculus Touch</a> controllers!",
       "dismissable": false,
       "type": "success"
     }

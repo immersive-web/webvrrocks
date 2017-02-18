@@ -1,4 +1,4 @@
-{% from '_helpers.html' import browser_item, youtube %}
+{% from '_helpers.html' import browsers, browser_item, browser_notifications, youtube %}
 {% set page = 'index.html' %}
 <!doctype html>
 <html lang="en" data-layout="home" data-newbie="true">
@@ -21,6 +21,14 @@
 
     <main id="main" class="main" role="main">
       <div class="container">
+        <section class="notifications" id="notifications">
+          {% for _, browser in browsers %}
+            {% if browser.notifications %}
+              {{ browser_notifications(browser) }}
+            {% endif %}
+          {% endfor %}
+        </section>
+
         <section id="intro" class="section intro" data-section="intro">
           <div class="intro-text">
             <p class="intro-para"><strong>WebVR</strong> is a <a href="https://w3c.github.com/webvr/"><em>JavaScript API</em></a> for creating immersive 3D, <em>Virtual Reality</em> experiences in your <em>browser</em>.</p>

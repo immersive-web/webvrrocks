@@ -1,3 +1,26 @@
+{% macro browser_notifications (browser) %}
+  {% if browser.notifications %}
+    {% for message in browser.notifications %}
+      {% set type = message.type if (message.type == 'error' or message.type == 'alert' or message.type == 'success') %}
+      {% set message_id = 'message-' + browser.slug + '-' + loop.index %}
+      <div class="message{{ ' message-' + type if type }}{{ ' message-dismissable' if message.dismissable }}" aria-expanded="true" id="{{ message_id }}">
+        <p>
+          {% if message.content_html %}
+            {{ message.content_html|safe }}
+          {% elif message.content %}
+            {{ message.content }}
+          {% else %}
+            {{ message }}
+          {% endif %}
+        </p>
+        {% if message.dismissable %}
+          <a class="close" title="close">&times;</a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endmacro %}
+
 {% macro author_item (slug, classes, id) %}
   {% includeData slug + '.json' as person %}
   <li class="authors__item{% if class %} {{ classes }}{% endif %}"{% if id %} id="{{ id }}"{% endif %}>

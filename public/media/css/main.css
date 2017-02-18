@@ -321,6 +321,10 @@ h1.page-heading {
   flex-direction: column-reverse;
 }
 
+.notifications + .section[data-section="intro"] {
+  padding-top: 1.5rem;
+}
+
 .section[data-section="intro"] {
   border-width: 0;
 }

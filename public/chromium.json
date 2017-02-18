@@ -173,8 +173,8 @@
   "notifications": [
     {
       "type": "success",
-      "content_html": "<a href=\"https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRRlVjSUZpV3ZsVzA\">Latest build of Chromium</a> for Windows now works again for the <a href=\"/headsets/htc_vive\">sHTC Vive</a>",
-      "content": "Latest build of Chromium for Windows now works again for the HTC Vive"
+      "content_html": "<a href=\"/chromium#download\">Latest Chromium Windows build</a> now works again for the <a href=\"/htc_vive\">HTC Vive</a>!",
+      "content": "Latest Chromium Windows build now works again for the HTC Vive!"
     }
   ]
 }
