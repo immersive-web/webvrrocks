@@ -38,7 +38,7 @@
   "dateCreated": "",
   "datePublished": "",
   "video": "https://webvr.rocks/chromium/video.json",
-  "downloadUrl": "https://docs.google.com/uc?id=0BzudLt22BqGRRElMNmVqQjJWS2c&export=download",
+  "downloadUrl": "https://docs.google.com/uc?id=0BzudLt22BqGRRlVjSUZpV3ZsVzA&export=download",
   "fileFormat": "application/zip",
   "learningResourceType": "https://webvr.rocks/chromium",
   "discussionUrl": "https://webvr.rocks/chromium#comments",
@@ -169,5 +169,12 @@
     "latest": {
       "status": "experimental"
     }
-  }
+  },
+  "notifications": [
+    {
+      "type": "success",
+      "content_html": "<a href=\"https://drive.google.com/uc?export=download&amp;id=0BzudLt22BqGRRlVjSUZpV3ZsVzA\">Latest build of Chromium</a> for Windows now works again for the <a href=\"/headsets/htc_vive\">sHTC Vive</a>",
+      "content": "Latest build of Chromium for Windows now works again for the HTC Vive"
+    }
+  ]
 }
