@@ -205,3 +205,21 @@
 
 302   /Browsers  /browsers
 302   /Browsers/  /browsers/
+
+302   /compat/submit  https://airtable.com/shrGtVbhfoadJ47c8
+302   /compat  /compat/submit
+302   /compatability/submit  /compat/submit
+302   /compat_report  /compat/submit
+302   /compat-report  /compat/submit
+302   /compat_reports/submit  /compat/submit
+302   /compat-reports/submit  /compat/submit
+302   /compatibility_report  /compat/submit
+302   /compatibility-report  /compat/submit
+302   /compatibility_report/submit  /compat/submit
+302   /compatibility-report/submit  /compat/submit
+302   /submit_compat  /compat/submit
+302   /submit-compat  /compat/submit
+302   /submit_compat-report  /compat/submit
+302   /submit-compat-report  /compat/submit
+302   /submit_compatibility_report  /compat/submit
+302   /submit-compatibility-report  /compat/submit
