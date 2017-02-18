@@ -21,7 +21,7 @@
       "landingUrl": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly",
       "buildInfo": {
         "as": "ml64.exe",
-        "buildid": "20170209030214",
+        "buildid": "20170217030229",
         "cc": "c:/builds/moz2_slave/m-cen-w64-ntly-000000000000000/build/src/vs2015u3/VC/bin/amd64/cl.exe",
         "cxx": "c:/builds/moz2_slave/m-cen-w64-ntly-000000000000000/build/src/vs2015u3/VC/bin/amd64/cl.exe",
         "host_alias": "x86_64-pc-mingw32",
@@ -35,7 +35,7 @@
         "moz_app_version": "54.0a1",
         "moz_pkg_platform": "win64",
         "moz_source_repo": "MOZ_SOURCE_REPO=https://hg.mozilla.org/mozilla-central",
-        "moz_source_stamp": "b772e0f4138540113e91a46c99bb0d14ecc8acca",
+        "moz_source_stamp": "6cefe01ca7744d6ac3960c69eac833e2e65f7f8f",
         "moz_update_channel": "nightly",
         "target_alias": "x86_64-pc-mingw32",
         "target_cpu": "x86_64",
@@ -48,34 +48,34 @@
       "downloadInstallerUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-54.0a1.en-US.win64.installer.exe",
       "downloadZipUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-54.0a1.en-US.win64.zip",
       "dateReleased": {
-        "originalDateTimeString": "09-Feb-2017 12:43",
-        "datetime": 1486672980000,
-        "datetimeString": "Feb 9, 2017, 12:43 PM",
-        "dateString": "Feb 9, 2017",
-        "timeString": "12:43 PM",
-        "isoString": "2017-02-09T20:43:00.000Z"
+        "originalDateTimeString": "17-Feb-2017 13:34",
+        "datetime": 1487367240000,
+        "datetimeString": "Feb 17, 2017, 1:34 PM",
+        "dateString": "Feb 17, 2017",
+        "timeString": "1:34 PM",
+        "isoString": "2017-02-17T21:34:00.000Z"
       },
       "dateReleasedInstaller": {
-        "originalDateTimeString": "09-Feb-2017 12:43",
-        "datetime": 1486672980000,
-        "datetimeString": "Feb 9, 2017, 12:43 PM",
-        "dateString": "Feb 9, 2017",
-        "timeString": "12:43 PM",
-        "isoString": "2017-02-09T20:43:00.000Z"
+        "originalDateTimeString": "17-Feb-2017 13:34",
+        "datetime": 1487367240000,
+        "datetimeString": "Feb 17, 2017, 1:34 PM",
+        "dateString": "Feb 17, 2017",
+        "timeString": "1:34 PM",
+        "isoString": "2017-02-17T21:34:00.000Z"
       },
       "dateReleasedZip": {
-        "originalDateTimeString": "09-Feb-2017 12:42",
-        "datetime": 1486672920000,
-        "datetimeString": "Feb 9, 2017, 12:42 PM",
-        "dateString": "Feb 9, 2017",
-        "timeString": "12:42 PM",
-        "isoString": "2017-02-09T20:42:00.000Z"
+        "originalDateTimeString": "17-Feb-2017 13:33",
+        "datetime": 1487367180000,
+        "datetimeString": "Feb 17, 2017, 1:33 PM",
+        "dateString": "Feb 17, 2017",
+        "timeString": "1:33 PM",
+        "isoString": "2017-02-17T21:33:00.000Z"
       },
       "installerFilename": "firefox-54.0a1.en-US.win64.installer.exe",
       "zipFilename": "firefox-54.0a1.en-US.win64.zip",
-      "fileSize": "38 MB",
-      "fileSizeInstaller": "38 MB",
-      "fileSizeZip": "55 MB"
+      "fileSize": "45 MB",
+      "fileSizeInstaller": "45 MB",
+      "fileSizeZip": "56 MB"
     }
   },
   "platforms": {
@@ -187,7 +187,7 @@
   ],
   "buildInfo": {
     "as": "ml64.exe",
-    "buildid": "20170209030214",
+    "buildid": "20170217030229",
     "cc": "c:/builds/moz2_slave/m-cen-w64-ntly-000000000000000/build/src/vs2015u3/VC/bin/amd64/cl.exe",
     "cxx": "c:/builds/moz2_slave/m-cen-w64-ntly-000000000000000/build/src/vs2015u3/VC/bin/amd64/cl.exe",
     "host_alias": "x86_64-pc-mingw32",
@@ -201,7 +201,7 @@
     "moz_app_version": "54.0a1",
     "moz_pkg_platform": "win64",
     "moz_source_repo": "MOZ_SOURCE_REPO=https://hg.mozilla.org/mozilla-central",
-    "moz_source_stamp": "b772e0f4138540113e91a46c99bb0d14ecc8acca",
+    "moz_source_stamp": "6cefe01ca7744d6ac3960c69eac833e2e65f7f8f",
     "moz_update_channel": "nightly",
     "target_alias": "x86_64-pc-mingw32",
     "target_cpu": "x86_64",
@@ -213,32 +213,32 @@
   "downloadInstallerUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-54.0a1.en-US.win64.installer.exe",
   "downloadZipUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-54.0a1.en-US.win64.zip",
   "dateReleased": {
-    "originalDateTimeString": "09-Feb-2017 12:43",
-    "datetime": 1486672980000,
-    "datetimeString": "Feb 9, 2017, 12:43 PM",
-    "dateString": "Feb 9, 2017",
-    "timeString": "12:43 PM",
-    "isoString": "2017-02-09T20:43:00.000Z"
+    "originalDateTimeString": "17-Feb-2017 13:34",
+    "datetime": 1487367240000,
+    "datetimeString": "Feb 17, 2017, 1:34 PM",
+    "dateString": "Feb 17, 2017",
+    "timeString": "1:34 PM",
+    "isoString": "2017-02-17T21:34:00.000Z"
   },
   "dateReleasedInstaller": {
-    "originalDateTimeString": "09-Feb-2017 12:43",
-    "datetime": 1486672980000,
-    "datetimeString": "Feb 9, 2017, 12:43 PM",
-    "dateString": "Feb 9, 2017",
-    "timeString": "12:43 PM",
-    "isoString": "2017-02-09T20:43:00.000Z"
+    "originalDateTimeString": "17-Feb-2017 13:34",
+    "datetime": 1487367240000,
+    "datetimeString": "Feb 17, 2017, 1:34 PM",
+    "dateString": "Feb 17, 2017",
+    "timeString": "1:34 PM",
+    "isoString": "2017-02-17T21:34:00.000Z"
   },
   "dateReleasedZip": {
-    "originalDateTimeString": "09-Feb-2017 12:42",
-    "datetime": 1486672920000,
-    "datetimeString": "Feb 9, 2017, 12:42 PM",
-    "dateString": "Feb 9, 2017",
-    "timeString": "12:42 PM",
-    "isoString": "2017-02-09T20:42:00.000Z"
+    "originalDateTimeString": "17-Feb-2017 13:33",
+    "datetime": 1487367180000,
+    "datetimeString": "Feb 17, 2017, 1:33 PM",
+    "dateString": "Feb 17, 2017",
+    "timeString": "1:33 PM",
+    "isoString": "2017-02-17T21:33:00.000Z"
   },
   "installerFilename": "firefox-54.0a1.en-US.win64.installer.exe",
   "zipFilename": "firefox-54.0a1.en-US.win64.zip",
-  "fileSize": "38 MB",
-  "fileSizeInstaller": "38 MB",
-  "fileSizeZip": "55 MB"
+  "fileSize": "45 MB",
+  "fileSizeInstaller": "45 MB",
+  "fileSizeZip": "56 MB"
 }
