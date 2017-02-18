@@ -87,5 +87,10 @@
     }
   },
   "reports": [
-  ]
+  ],
+  "releases": {
+    "latest": {
+      "status": "experimental"
+    }
+  }
 }

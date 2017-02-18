@@ -232,6 +232,9 @@
     var supportsTouch = 'ontouchstart' in window;
     html.dataset.supportsTouch = supportsTouch;
     var openDialogues = {};
+
+    // TODO: Hide dismissable notifications.
+
     html.addEventListener('click', function (e) {
       var el = e.target;
 
@@ -258,6 +261,17 @@
         dialogueEl.setAttribute('aria-expanded', 'false');
       });
       openDialogues = {};
+
+      var notification = el.closest && el.closest('.message-dismissable');
+      if (notification) {
+        if (notification.getAttribute('aria-expanded') === 'true') {
+          notification.setAttribute('aria-expanded', 'false');
+          storage.set('notifications:' + notification.id, 'hidden');
+        } else {
+          notification.setAttribute('aria-expanded', 'true');
+          storage.set('notifications:' + notification.id, 'visible');
+        }
+      }
     });
 
     var latestDownloadBtn = document.querySelector('#download > .button[data-download-name]');

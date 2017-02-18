@@ -164,5 +164,10 @@
       "status": "Unresolved",
       "bugUrl": "https://github.com/toji/chrome-webvr-issues/issues/73"
     }
-  ]
+  ],
+  "releases": {
+    "latest": {
+      "status": "experimental"
+    }
+  }
 }

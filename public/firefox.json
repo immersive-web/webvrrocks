@@ -240,5 +240,13 @@
   "zipFilename": "firefox-54.0a1.en-US.win64.zip",
   "fileSize": "45 MB",
   "fileSizeInstaller": "45 MB",
-  "fileSizeZip": "56 MB"
+  "fileSizeZip": "56 MB",
+  "notifications": [
+    {
+      "content": "Support for Oculus Touch controllers added!",
+      "content_html": "Support for <strong>Oculus Touch controllers</strong> added!",
+      "dismissable": false,
+      "type": "success"
+    }
+  ]
 }

@@ -121,6 +121,10 @@ table {
   margin: 0;
 }
 
+strong {
+  color: inherit;
+}
+
 .button {
   transition-property: background, border-color, color;
 }
@@ -1145,7 +1149,8 @@ a.button-source:after {
   top: -4px;
 }
 
-.dropdown-with-children[aria-expanded="false"] .dropdown {
+.dropdown-with-children[aria-expanded="false"] .dropdown,
+.message[aria-expanded="false"] {
   display: none;
 }
 

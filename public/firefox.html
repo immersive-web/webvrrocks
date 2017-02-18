@@ -24,6 +24,7 @@
             <strong>Warning:</strong> All <a href="#releases">Firefox Nightly releases</a> are highly experimental and subject to change!
           </p>
         {% endif %}
+        {% include '_notifications.html' %}
 
         <div id="download" class="download dropdown-standalone dropdown-download">
           <a href="{{ browser.landingUrl }}" itemprop="downloadUrl" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid }}">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">{{ browser.releases.latest.dateReleased.datetimeString }}</span> <span class="download-size">{{ browser.releases.latest.fileSize }}</span></span></a>
