@@ -7,6 +7,9 @@
   "scripts": {
     "start": "node dev.js",
     "test": "npm run prod",
+    "sync": "npm run syncfirefox",
+    "syncfirefox": "cross-env NODE_ENV=production node ./scripts/update-browser-data-firefox.js",
+    "prebuild": "npm run syncfirefox",
     "build": "cross-env NODE_ENV=production node dev.js",
     "postbuild": "node ./scripts/generate-redirects.js",
     "deploy": "ghpages -p _prod",
