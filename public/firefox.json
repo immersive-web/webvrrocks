@@ -149,24 +149,6 @@
       "headsets": [
         "oculus_rift"
       ],
-      "description": "Oculus Touch support",
-      "status": "Under review",
-      "dateReported": {
-        "datetime": "2016-03-29T14:42:00",
-        "pretty": "Mar 3, 2016",
-        "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1260558"
-      },
-      "dateUpdated": {
-        "datetime": "2017-01-30T00:00:00",
-        "pretty": "Jan 30, 2016"
-      },
-      "bugUrl": "https://bugzilla.mozilla.org/buglist.cgi?bug_id=1305889%2C1305891%2C1305890%2C1305892&list_id=13420728"
-    },
-    {
-      "type": "feature",
-      "headsets": [
-        "oculus_rift"
-      ],
       "description": "Oculus Remote support",
       "status": "TBD",
       "dateReported": {
