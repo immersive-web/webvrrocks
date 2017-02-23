@@ -18,14 +18,14 @@ body {
 }
 
 .splash .logo.slack {
-  background: url(http://localhost:3000/rocks/logo.svg) 50% no-repeat;
+  background: url(/rocks/logo.svg) 50% no-repeat;
   background-size: contain;
   height: 8.8rem;
   width: 8.8rem;
 }
 
 .splash .logo.slack:after {
-  background: url(http://localhost:3000/media/img/slack.svg) no-repeat;
+  background: url(/media/img/slack.svg) no-repeat;
   content: "";
   display: block;
   height: 8.8rem;
