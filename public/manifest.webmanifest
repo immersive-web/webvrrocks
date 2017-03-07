@@ -24,5 +24,13 @@
       "sizes": "16x16 32x32 48x48 64x64 256x256",
       "type": "image/x-icon"
     }
+  ],
+  "vr_default_display": "HTC Vive",
+  "vr_available_displays": [
+    "HTC Vive",
+    "Oculus Rift",
+    "Google Daydream",
+    "Samsung Gear VR",
+    "Google Cardboard"
   ]
 }
