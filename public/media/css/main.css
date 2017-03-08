@@ -411,11 +411,9 @@ html:not([data-layout~="home"]) .main ul,
   max-width: 600px;
 }
 
-/*html .main ul.matrix,
-html .main ol.matrix {
-  margin-bottom: 0;
+.table-responsive {
+  margin-bottom: 1.5rem;
 }
-*/
 
 .main h2 a:only-child,
 .main h3 a:only-child,
@@ -478,7 +476,6 @@ html .main dd:last-child p:last-child,
 html .main dd:last-child > span:only-child p:last-child,
 html .main dd:last-child *:last-child,
 html .main dd > *:only-child,
-html .main dl:last-child,
 html .container > *:last-child {
   margin-bottom: 0;
 }
