@@ -267,7 +267,7 @@
   {% if report.type == 'bug' or report.type == 'feature' %}
     <tr data-report-type="{{ report.type }}"
         itemprop="{{ report.type }}"
-        class="{{ 'table-cell-error' if report.type == 'bug' else 'table-cell-alert' }}">
+        class="{{ 'table-cell-success' if report.status|lower == 'fixed' else ('table-cell-error' if report.type == 'bug' else 'table-cell-alert') }}">
       <td data-report-key="browserVersion">{% if report.type == 'bug' %}<span itemprop="userAgent" title="{{ report.browserUserAgent }}">{{ report.browserVersion }} <br> <small title="{{ report.browserDate }}">({{ report.browserDate }})</small></span>{% endif %}</td>
       <td data-report-key="browserBuildId"><span itemprop="buildId">{{ report.browserDate }}</span></td>
       <td data-report-key="headsets">
