@@ -24,7 +24,7 @@
         </p>
 
         <div id="download" class="download dropdown-standalone dropdown-download">
-          <a href="{{ browser.downloadUrl }}" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">Feb 1, 2016</span></a>
+          <a href="{{ browser.downloadUrl }}" itemprop="downloadUrl" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid }}">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">{{ browser.releases.latest.dateReleased.datetimeString }}</span> <span class="download-size">{{ browser.releases.latest.fileSize }}</span></span></a>
         </div>
         <p class="view-source">
           <a href="https://chromium.googlesource.com/chromium/src.git/+/master/" class="button-source no-underline">View source</a>
@@ -38,9 +38,10 @@
         <section id="setup" class="section setup" data-section="setup">
           <h2><a href="#setup">Instructions</a></h2>
           <ol class="bullets-light">
-            <li><span><a href="https://play.google.com/store/apps/details?id=com.android.chrome">Download Chrome for Android</a> on your mobile device.</span></li>
+            <li><span><a href="{{ browser.downloadUrl }}">Download this experimental build of Chromium for Android</a> on your mobile device.</span></li>
             <li><span>Enjoy WebVR content!</span></li>
           </ol>
+          <p class="note"><strong>Warning:</strong> Until the stability of WebVR improves (soon in upcoming releases), we recommend avoiding use of WebVR in <a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome for Android</a> and <a href="https://play.google.com/store/apps/details?id=com.chrome.canary">Chrome Canary</a>.</p>
           <p class="note"><strong>Note:</strong> Any WebVR site you visit must be already enrolled in the <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">WebVR Origin Trial</a> and contain a <code>&lt;meta&gt;</code> tag or HTTP response header with a valid Origin Trial token.</p>
         </section>
 
@@ -49,32 +50,37 @@
           <h3><a href="" itemprop="softwareApplication"></a></h3>
           <article itemscope itemtype="http://schema.org/SoftwareApplication">
             <dl>
-              <dt class="browser-download">Download</dt>
-              <dd>
-                <a class="button button-outlined-approve button-download" href="https://drive.google.com/file/d/0BzudLt22BqGRRElMNmVqQjJWS2c/view?usp=drive_web" itemprop="downloadUrl">Download</a>
-              </dd>
               <dt class="browser-type">Type</dt>
               <dd>
-                <span class="applicationSubCategory">Mobile browser with <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">Experimental Support</a></span>
+                <span class="applicationSubCategory">Browser Build</span>
+              </dd>
+              <dt class="browser-download">Download</dt>
+              <dd>
+                <a class="button button-outlined-approve button-download" href="{{ browser.downloadUrl }}" itemprop="downloadUrl" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid }}">Download</a>
               </dd>
               <dt class="browser-version">Version</dt>
               <dd>
-                <span class="version">2016-12-14</span>
+                <span itemprop="version" class="version" content="{{ browser.releases.latest.buildInfo.buildid }}">{{ browser.releases.latest.buildInfo.buildid }}</span>
               </dd>
-              <dt class="browser-date-released">Date released</dt>
+              <dt class="browser-date-published">Date released</dt>
               <dd>
-                <time itemprop="datePublished" datetime="2016-12-14T00:00:00Z">
-                  December 14, 2016
+                <time itemprop="datePublished" datetime="{{ browser.releases.latest.dateReleased.isoString }}" title="{{ browser.releases.latest.dateReleased.isoString }}">
+                  {{ browser.releases.latest.dateReleased.datetimeString }}
                 </time>
               </dd>
               <dt class="browser-file-size">File size</dt>
               <dd>
-                <span itemprop="fileSize" content="46MB">46 MB</span>
+                <span itemprop="fileSize" content="{{ browser.releases.latest.fileSize }}">{{ browser.releases.latest.fileSize }}</span>
               </dd>
               <dt class="browser-system-requirements">System requirements</dt>
               <dd>
-                <span class="operatingSystems">Windows 7.1+</span>
-                <span class="processorRequirements">64-bit</span>
+                <span class="operatingSystems" content="{{ browser.releases.operatingSystem }}">{{ browser.releases.operatingSystem }}</span>
+                {% if browser.processorRequirements == 'IA64' or browser.processorRequirements == 'IA32' %}
+                  <span class="processorRequirements">
+                    {{ '64-bit' if browser.processorRequirements == 'IA64' }}
+                    {{ '32-bit' if browser.processorRequirements == 'IA32' }}
+                  </span>
+                {% endif %}
               </dd>
               <dt class="browser-authors">Authors</dt>
               <dd class="not-copy">
@@ -83,12 +89,11 @@
                   {{ author_item('klausweidner') }}
                 </ul>
               </dd>
+              <!--
               <dt class="browser-release-notes">Release notes</dt>
               <dd>
-                <ul class="bullets-light">
-                  <li><span>Applies multiple optimizations on top of the version of WebVR publicly available in <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">Chrome 56 beta</a>, primarily in the form of reducing texture copies. This gives significantly better performance and latency in most cases. Consider this a preview of performance targets for later versions of Chrome, with further possible improvements still to come.</span></li>
-                </ul>
               </dd>
+              -->
             </dl>
           </article>
         </section>
@@ -96,18 +101,23 @@
         <section id="known-issues" class="section" data-section="known-issues">
           <h2><a href="#known-issues">Known issues</a></h2>
           <p>These known issues apply to the <a href="#download">latest published build</a>. Where applicable, the detailed release notes below will list when historic known issues were fixed.</p>
-          <ul>
-            <li>
-              <p>There is no installer for the experimental <code>.apk</code> builds of Chromium for Android.</p>
-            </li>
+          <ul class="bullets-light">
+            <li><span><strong>Warning:</strong> Until the stability of WebVR improves (soon in upcoming releases), we recommend avoiding use of WebVR in <a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome for Android</a> and <a href="https://play.google.com/store/apps/details?id=com.chrome.canary">Chrome Canary</a>.</span></li>
+            <li><span><strong>Note:</strong> Any WebVR site you visit must be already enrolled in the <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">WebVR Origin Trial</a> and contain a <code>&lt;meta&gt;</code> tag or HTTP response header with a valid Origin Trial token.</span></li>
+            <li><span>There is no installer for the experimental <code>.apk</code> builds of Chromium for Android.</span></li>
+            <li><span><strong>Warning:</strong> Do <em>not</em> use the “Skip VR entry screens” setting in Daydream’s Developer options. It can cause a black screen or inconsistent behavior when trying to enter VR, for example when the controller firmware is out of date. As an alternative, you can double-tap the “Place your phone into the Daydream headset” screen to bypass it.</span></li>
+            <li><span>Currently only works with <a href="https://vr.google.com/daydream/phones/">Daydream-ready devices</a>, though it can be used in either Daydream or Cardboard mode on those devices (depending on your configured viewer).</span></li>
+            <li><span>Content is being rendered at &asymp;1000&times;1200 per eye on a <a href="https://madeby.google.com/phone/">Pixel XL</a>, significantly lower than that of the 1:1 render resolution of 1803&times;2268. (The default render resolution is going to change in the future; consider implementing <a href="https://webvr.info/samples/08-dynamic-resolution.html">dynamic-resolution scaling</a> to tune performance. You can also choose to set the <code>&lt;canvas&gt;</code> size to larger or smaller than that of the recommended render resolution during initialization.)</span></li>
+            <li><span>The <a href="https://www.google.com/nexus/6p/">Nexus 6P</a> may work adequately as a developer-preview experience, but the phone is slower than that of the <a href="https://madeby.google.com/phone/">Pixel phones</a>, and the Nexus 6P may degrade in performance during extended VR use due to thermal throttling. It is not representative of the performance of <a href="https://vr.google.com/daydream/phones/">Daydream-ready devices</a>.</span></li>
+            <li><span>Modifying the <code>&lt;canvas&gt;</code> GL context or content after <a href="https://w3c.github.io/webvr/#dom-vrdisplay-submitframe"><code>VRDisplay#submitFrame</code></a> may cause corrupted frames, among other issues. Please wait for the next <a href="https://w3c.github.io/webvr/#dom-vrdisplay-requestanimationframe"><code>VRDisplay#requestAnimationFrame</code></a> callback before doing so. Also, check the <a href="https://w3c.github.io/webvr/#dom-vrdisplaycapabilities-hasexternaldisplay">VRDisplayCapabilities#hasExternalDisplay</code> property</a> to know when to disable display mirroring (and, if <code>false</code>, any features that reuse the <code>&lt;canvas&gt;</code> post-submission).</span></li>
           </ul>
         </section>
 
+        <!--
         <section id="demos" class="section demos">
           <h2><a href="#demos">Demos</a></h2>
         </section>
 
-        <!--
         <section id="info" class="section info" data-section="info">
           <h2><a href="#info">Info</a></h2>
           <dl>

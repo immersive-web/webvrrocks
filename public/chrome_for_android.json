@@ -45,8 +45,7 @@
   "dateModified": "2017-01-25",
   "softwareVersion": "2017-01-25",
   "video": "https://webvr.rocks/chrome_for_android/video.json",
-  "downloadUrl": "https://play.google.com/store/apps/details?id=com.chrome.canary",
-  "downloadUrlExperimental": "https://drive.google.com/uc?export=download&amp;id=0B8dt3TGgfXfiU0RKVGFNLVh0ME0",
+  "downloadUrl": "https://docs.google.com/uc?id=0B8dt3TGgfXfiU0RKVGFNLVh0ME0&export=download",
   "fileFormat": "application/vnd.android.package-archive",
   "learningResourceType": "https://webvr.rocks/chrome_for_android",
   "discussionUrl": "https://webvr.rocks/chrome_for_android#comments",
@@ -80,6 +79,23 @@
   "device": "Android",
   "alternateName": "Chrome for Android WebVR",
   "audio": "",
+  "releases": {
+    "latest": {
+      "status": "experimental",
+      "landingUrl": "https://drive.google.com/file/d/0B8dt3TGgfXfiU0RKVGFNLVh0ME0/view",
+      "downloadUrl": "https://docs.google.com/uc?export=download&confirm=ibcW&id=0B8dt3TGgfXfiU0RKVGFNLVh0ME0",
+      "dateReleased": {
+        "originalDateTimeString": "05-Mar-2017 17:42",
+        "datetime": 1488764520000,
+        "datetimeString": "Mar 5, 2017, 5:42 PM",
+        "dateString": "Mar 5, 2017",
+        "timeString": "5:42 PM",
+        "isoString": "2017-03-06T01:42:00.000Z"
+      },
+      "filename": "ChromePublic-webvr-native-WIP-20161215a.apk",
+      "fileSize": "46 MB"
+    }
+  },
   "platforms": {
     "htc_vive": {
       "windows": "headset_unsupported",
