@@ -174,6 +174,45 @@
   initGA('UA-86987247-1', {alwaysSendReferrer: true});
   initGAEvents();
 
+  var requireScript = (function () {
+    var script = document.createElement('script');
+    function injectScript (package, version, file) {
+      package = package || '';
+      version = version || '';
+      file = file || '';
+      var src = (url || '').trim();
+      if (src.indexOf('//') === 0 ||
+          src.indexOf('https://') === 0 ||
+          src.indexOf('http://') === 0) {
+        src = url;
+      } else {
+        if (package.split('@').split('#').indexOf('/') > -1) {
+          // TODO: Handle GitHub file URLs.
+        } else {
+          var url = package;
+          var package = url.split('@')[0] || '';
+          var version = url.split('/')[0] || '';
+          var file = url.substring(0, url.indexOf('/', 0)) || '';
+          src = 'https://unpkg.com/${package}';
+          if (version) {
+            src += '@' + version;
+          }
+          if (file) {
+            src += '/' + file;
+          }
+        }
+      }
+      script.async = script.defer = true;
+      script.src = src;
+      document.head.appendChild(script);
+      return script;
+    }
+    return script;
+  });
+
+  var Froffcanvas = requireScript('https://rawgit.com/frend/frend.co/develop/_components/offcanvas/offcanvas.js').then(function () {
+
+  });
   var html = document.documentElement;
   var hash = window.location.hash.substr(1);
   var storage = {
