@@ -1,11 +1,11 @@
-{% from '_helpers.html' import author_item, browsers %}
+{% from '_helpers.html' import author_item, browsers, site_title %}
 {% set browser = browsers.chrome_for_android %}
 {% set page = 'chrome_for_android.html' %}
 <!doctype html>
 <html lang="en" data-layout="secondary" data-browser="{{ browser.slug }}">
   <head>
     {% include '_head.html' %}
-    <title>{{ browser.name }} • WebVR Rocks</title>
+    <title>{{ browser.name }} • {{ site_title }}</title>
   </head>
   <body>
     <header id="header" class="header" role="banner">
@@ -23,13 +23,17 @@
           <strong>Warning:</strong> WebVR support in <a href="#releases">Chrome for Android</a> is highly experimental and subject to change!
         </p>
 
-        <div id="download" class="download dropdown-standalone dropdown-download">
-          <a href="{{ browser.downloadUrl }}" itemprop="downloadUrl" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid }}">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">{{ browser.releases.latest.dateReleased.datetimeString }}</span> <span class="download-size">{{ browser.releases.latest.fileSize }}</span></span></a>
+        {% if browser.releases %}
+          <div id="download" class="download dropdown-standalone dropdown-download">
+            <a href="{{ browser.downloadUrl }}" itemprop="downloadUrl" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid }}">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">{{ browser.releases.latest.dateReleased.datetimeString }}</span> <span class="download-size">{{ browser.releases.latest.fileSize }}</span></span></a>
+          </div>
+          {% if browser.sourceCodeUrl %}
+            <p class="view-source">
+              <a href="{{ browser.sourceCodeUrl }}" class="button-source no-underline">View source</a>
+            </p>
+          {% endif %}
         </div>
-        <p class="view-source">
-          <a href="https://chromium.googlesource.com/chromium/src.git/+/master/" class="button-source no-underline">View source</a>
-        </p>
-      </div>
+      {% endblock %}
     </header>
 
     <main id="main" class="main" role="main">

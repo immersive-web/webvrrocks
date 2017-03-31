@@ -159,5 +159,13 @@
       "status": "Unresolved",
       "bugUrl": "https://github.com/toji/chrome-webvr-issues/issues/73"
     }
+  ],
+  "notifications": [
+    {
+      "content": "Latest Firefox Nightly update now supports Oculus Touch controllers!",
+      "content_html": "<a href=\"/firefox#download\">Latest Firefox Nightly update</a> now supports <a href=\"https://www.oculus.com/rift/#u_0_g\">Oculus Touch</a> controllers!",
+      "dismissable": false,
+      "type": "success"
+    }
   ]
 }

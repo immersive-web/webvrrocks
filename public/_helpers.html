@@ -1,9 +1,11 @@
+{% set site_title = 'WebVR Rocks' %}
+
 {% macro browser_notifications (browser) %}
   {% if browser.notifications %}
     {% for message in browser.notifications %}
       {% set type = message.type if (message.type == 'error' or message.type == 'alert' or message.type == 'success') %}
       {% set message_id = 'message-' + browser.slug + '-' + loop.index %}
-      <div class="message{{ ' message-' + type if type }}{{ ' message-dismissable' if message.dismissable }}" aria-expanded="true" id="{{ message_id }}">
+      <div class="message{{ ' message-' + type if type }}{{ ' message-dismissable' if message.dismissable }}{{ ' message-pinned' if message.pinned }}" aria-expanded="true" id="{{ message_id }}">
         <p>
           {% if message.content_html %}
             {{ message.content_html|safe }}
@@ -267,7 +269,8 @@
   {% if report.type == 'bug' or report.type == 'feature' %}
     <tr data-report-type="{{ report.type }}"
         itemprop="{{ report.type }}"
-        class="{{ 'table-cell-success' if report.status|lower == 'fixed' else ('table-cell-error' if report.type == 'bug' else 'table-cell-alert') }}">
+        class="{{ 'table-cell-success' if report.status|lower == 'fixed' else ('table-cell-error' if report.type == 'bug' else 'table-cell-alert') }}"
+        data-archived="{{ 'true' if report.archived else 'false' }}">
       <td data-report-key="browserVersion">{% if report.type == 'bug' %}<span itemprop="userAgent" title="{{ report.browserUserAgent }}">{{ report.browserVersion }} <br> <small title="{{ report.browserDate }}">({{ report.browserDate }})</small></span>{% endif %}</td>
       <td data-report-key="browserBuildId"><span itemprop="buildId">{{ report.browserDate }}</span></td>
       <td data-report-key="headsets">

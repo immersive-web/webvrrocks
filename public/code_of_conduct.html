@@ -1,8 +1,9 @@
+{% from '_helpers.html' import site_title %}
 <!doctype html>
 <html lang="en" data-layout="secondary" data-browser="{{ browser.slug }}">
   <head>
     {% include '_head.html' %}
-    <title>Code of Conduct • WebVR Rocks</title>
+    <title>Code of Conduct • {{ site_title }}</title>
   </head>
   <body>
     <header id="header" class="header" role="banner">

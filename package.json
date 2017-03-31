@@ -19,7 +19,6 @@
     "predeploy": "npm run build"
   },
   "dependencies": {
-    "fr-offcanvas": "^1.0.4",
     "nunjucks-cli": "github:cvan/nunjucks-cli#214cea4",
     "nunjucks-includeData": "0.0.9",
     "shelljs": "^0.7.6",

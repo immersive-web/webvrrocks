@@ -1,143 +1,42 @@
-{% from '_helpers.html' import author_item, browsers, compat_report_row, demo_item %}
-{% set browser = browsers.firefox %}
-{% set page = 'firefox.html' %}
-<!doctype html>
-<html lang="en" data-layout="secondary" data-browser="{{ browser.slug }}">
-  <head>
-    {% include '_head.html' %}
-    <title>{{ browser.name }} • WebVR Rocks</title>
-  </head>
-  <body>
-    <header id="header" class="header" role="banner">
-      <div class="container section">
-        {% include '_logo.html' %}
+{% set slug = 'firefox' %}
+{% extends '_layout_browser.html' %}
 
-        <a class="page-heading-link" href="{{ browser.about }}">
-          <h1 class="browser-name page-heading">{{ browser.name }}</h1>
-          <img class="browser-icon page-heading-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
-        </a>
+{% block instructions %}
+  <ol class="bullets-light">
+    <li><span>Download and launch <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Firefox Nightly</a>.</span></li>
+    <li data-headset="htc_vive"><span><a href="https://github.com/ValveSoftware/openvr/raw/v1.0.6/bin/win64/openvr_api.dll">Download version 1.0.6 (64-bit) of the <strong><code>openvr_api.dll</code></strong> file</a> from the <a href="https://github.com/ValveSoftware/openvr/tree/v1.0.6">OpenVR GitHub repository</a>.</span></li>
+    <li data-headset="htc_vive"><span>Save the <code>openvr_api.dll</code> file somewhere on your computer where the user running Firefox can read it (e.g., <code>c:\openvr\</code>).</span></li>
+    <li data-headset="htc_vive"><span>In Firefox Nightly, navigate to <code>about:config</code>; change the value of <code>dom.vr.openvr.enabled</code> to <code>true</code> and <code>gfx.vr.openvr-runtime</code> to the full path of the <code>openvr_api.dll</code> file (e.g., <code>c:\openvr\openvr_api.dll</code>).</span></li>
+    <li data-headset="oculus_rift"><span>Ensure that your Oculus Home settings allow for <a href="https://blog.mozvr.com/oculus-home-rift-cv1-webvr/#enablingunknownsources">Unknown Sources</a>.</span></li>
+    <li><span>For PCs (especially laptops) using Nvidia chipsets, there are several methods of <a href="https://alteredqualia.com/texts/optimus/">enabling the discrete GPU</a>. One way is from the <a href="https://www.nvidia.com/Download/Find.aspx">NVIDIA Control Panel</a>: Load <code>3D Settings</code> <code>&gt;</code> <code>Manage 3D Settings</code> <code>&gt;</code> <code>Program Settings</code> tab, and select <strong>Mozilla Firefox (firefox.exe)</strong> (with the blue Nightly icon) as the program to customize, and select <strong>&ldquo;High-performance NVIDIA processor"</strong> as the preferred graphics processor.</span></li>
+    <li><span>Restart Firefox Nightly.</span></li>
+    <li><span>Enjoy WebVR content!</span></li>
+  </ol>
+{% endblock %}
 
-        <p class="browser-intro page-intro">{{ (browser.description_html or browser.description)|safe }}</p>
+{% block headsets %}
+  <ul class="bullets-light">
+    <li><span><a href="{{ headsets.htc_vive.about }}" itemprop="aboutUrl">HTC Vive</a></span></li>
+    <li><span><a href="{{ headsets.oculus_rift.about }}" itemprop="aboutUrl">Oculus Rift</a></span></li>
+  </ul>
+{% endblock %}
 
-        {% if browser.releases.latest and browser.releases.latest.status != 'stable' %}
-          <p class="message message-alert">
-            <strong>Warning:</strong> All <a href="#releases">Firefox Nightly releases</a> are highly experimental and subject to change!
-          </p>
-        {% endif %}
-        {% include '_notifications.html' %}
+{% block demos %}
+  {{ demo_item('a_painter') }}
+  {{ demo_item('a_blast') }}
+  {{ demo_item('puzzle_rain') }}
+  {{ demo_item('stagevr') }}
+{% endblock %}
 
-        <div id="download" class="download dropdown-standalone dropdown-download">
-          <a href="{{ browser.landingUrl }}" itemprop="downloadUrl" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid }}">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">{{ browser.releases.latest.dateReleased.datetimeString }}</span> <span class="download-size">{{ browser.releases.latest.fileSize }}</span></span></a>
-        </div>
-        <p class="view-source">
-          <a href="https://dxr.mozilla.org/mozilla-central/source/dom/vr" class="button-source no-underline">View source</a>
-        </p>
-      </div>
-    </header>
+{% block releases %}
+  <dt class="browser-authors">Authors</dt>
+  <dd class="not-copy">
+    <ul class="authors-list">
+      {{ author_item('kearwoodgilbert') }}
+      {{ author_item('daoshengmu') }}
+    </ul>
+  </dd>
+{% endblock %}
 
-    <main id="main" class="main" role="main">
-      <div class="container">
-        <section id="setup" class="section setup" data-section="setup">
-          <h2><a href="#setup">Setup Instructions</a></h2>
-          <ol class="bullets-light">
-            <li><span>Download and launch <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Firefox Nightly</a>.</span></li>
-            <li data-headset="htc_vive"><span><a href="https://github.com/ValveSoftware/openvr/raw/v1.0.6/bin/win64/openvr_api.dll">Download version 1.0.6 (64-bit) of the <strong><code>openvr_api.dll</code></strong> file</a> from the <a href="https://github.com/ValveSoftware/openvr/tree/v1.0.6">OpenVR GitHub repository</a>.</span></li>
-            <li data-headset="htc_vive"><span>Save the <code>openvr_api.dll</code> file somewhere on your computer where the user running Firefox can read it (e.g., <code>c:\openvr\</code>).</span></li>
-            <li data-headset="htc_vive"><span>In Firefox Nightly, navigate to <code>about:config</code>; change the value of <code>dom.vr.openvr.enabled</code> to <code>true</code> and <code>gfx.vr.openvr-runtime</code> to the full path of the <code>openvr_api.dll</code> file (e.g., <code>c:\openvr\openvr_api.dll</code>).</span></li>
-            <li data-headset="oculus_rift"><span>Ensure that your Oculus Home settings allow for <a href="https://blog.mozvr.com/oculus-home-rift-cv1-webvr/#enablingunknownsources">Unknown Sources</a>.</span></li>
-            <li><span>For PCs (especially laptops) using Nvidia chipsets, there are several methods of <a href="https://alteredqualia.com/texts/optimus/">enabling the discrete GPU</a>. One way is from the <a href="https://www.nvidia.com/Download/Find.aspx">NVIDIA Control Panel</a>: Load <code>3D Settings</code> <code>&gt;</code> <code>Manage 3D Settings</code> <code>&gt;</code> <code>Program Settings</code> tab, and select <strong>Mozilla Firefox (firefox.exe)</strong> (with the blue Nightly icon) as the program to customize, and select <strong>&ldquo;High-performance NVIDIA processor"</strong> as the preferred graphics processor.</span></li>
-            <li><span>Restart Firefox Nightly.</span></li>
-            <li><span>Enjoy WebVR content!</span></li>
-          </ol>
-        </section>
-
-        <section id="demos" class="section demos" data-section="demos">
-          <h2><a href="#demos">Demos</a></h2>
-          <p><a href="/demos/submit">Suggest a demo</a></p>
-          <ul data-section="demos" class="matrix grid-flex-container">
-            {{ demo_item('a_painter') }}
-            {{ demo_item('a_blast') }}
-            {{ demo_item('puzzle_rain') }}
-            {{ demo_item('stagevr') }}
-          </ul>
-        </section>
-
-        <section id="releases" class="section releases" data-section="releases">
-          <h2><a href="#releases">Latest version</a></h2>
-          <h3><a href="" itemprop="softwareApplication"></a></h3>
-          <article itemscope itemtype="http://schema.org/SoftwareApplication">
-            <dl>
-              <dt class="browser-type">Type</dt>
-              <dd>
-                <span class="applicationSubCategory">Browser Build</span>
-              </dd>
-              <dt class="browser-download">Download</dt>
-              <dd>
-                <a class="button button-outlined-approve button-download" href="{{ browser.landingUrl }}" itemprop="downloadUrl" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid }}">Download</a>
-              </dd>
-              <dt class="browser-version">Version</dt>
-              <dd>
-                <span itemprop="version" class="version" content="{{ browser.releases.latest.buildInfo.buildid }}">{{ browser.releases.latest.buildInfo.buildid }}</span>
-              </dd>
-              <dt class="browser-date-published">Date released</dt>
-              <dd>
-                <time itemprop="datePublished" datetime="{{ browser.releases.latest.dateReleased.isoString }}" title="{{ browser.releases.latest.dateReleased.isoString }}">
-                  {{ browser.releases.latest.dateReleased.datetimeString }}
-                </time>
-              </dd>
-              <dt class="browser-file-size">File size</dt>
-              <dd>
-                <span itemprop="fileSize" content="{{ browser.releases.latest.fileSize }}">{{ browser.releases.latest.fileSize }}</span>
-              </dd>
-              <dt class="browser-system-requirements">System requirements</dt>
-              <dd>
-                <span class="operatingSystems" content="{{ browser.releases.operatingSystem }}">{{ browser.releases.operatingSystem }}</span>
-                {% if browser.processorRequirements == 'IA64' or browser.processorRequirements == 'IA32' %}
-                  <span class="processorRequirements">
-                    {{ '64-bit' if browser.processorRequirements == 'IA64' }}
-                    {{ '32-bit' if browser.processorRequirements == 'IA32' }}
-                  </span>
-                {% endif %}
-              </dd>
-              <dt class="browser-authors">Authors</dt>
-              <dd class="not-copy">
-                <ul class="authors-list">
-                  {{ author_item('kearwoodgilbert') }}
-                  {{ author_item('daoshengmu') }}
-                </ul>
-              </dd>
-            </dl>
-          </article>
-        </section>
-
-        <section id="compat" class="section compat" data-section="compat">
-          <h2><a href="#compat">Known issues</a></h2>
-          <div class="table-responsive">
-            <table>
-              <thead>
-                <tr>
-                  <th data-report-key="browserVersion">Version</th>
-                  <th data-report-key="browserBuildId">Browser build</th>
-                  <th data-report-key="headset">Headset</th>
-                  <th data-report-key="description">Description</th>
-                  <th data-report-key="dateReported">Reported</th>
-                  <th data-report-key="dateUpdated">Updated</th>
-                  <th data-report-key="status">Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {% for report in browser.reports %}
-                  {{ compat_report_row(report) }}
-                {% endfor %}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <!-- <section id="info" class="section info" data-section="info"></section> -->
-      </div>
-    </main>
-
-    {% include '_footer.html' %}
-  </body>
-</html>
+{% block info_block %}
+{% endblock %}

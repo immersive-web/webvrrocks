@@ -210,9 +210,6 @@
     return script;
   });
 
-  var Froffcanvas = requireScript('https://rawgit.com/frend/frend.co/develop/_components/offcanvas/offcanvas.js').then(function () {
-
-  });
   var html = document.documentElement;
   var hash = window.location.hash.substr(1);
   var storage = {

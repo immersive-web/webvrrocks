@@ -1,11 +1,11 @@
-{% from '_helpers.html' import author_item, browser_item, browsers, compat_report_row, demo_item, headsets, youtube %}
+{% from '_helpers.html' import author_item, browser_item, browsers, compat_report_row, demo_item, headsets, site_title, youtube %}
 {% set headset = headsets[slug] %}
 {% set page = slug + '.html' %}
 <!doctype html>
 <html lang="en" data-layout="secondary headset {{ headset.slug }}" data-headset="{{ headset.slug }}" data-page="{{ page }}">
   <head>
     {% include '_head.html' %}
-    <title>{% block title %}{{ title or headset.name }} • WebVR Rocks{% endblock %}</title>
+    <title>{% block title %}{{ title or headset.name }} • {{ site_title }}{% endblock %}</title>
     {% block head %}{% endblock %}
   </head>
   <body>
@@ -19,7 +19,21 @@
         </a>
 
         {% if headset.description_html or headset.description %}
-          <p class="headset-intro page-intro">{{ description_html|safe if headset.description_html else description }}</p>
+          <p class="headset-intro page-intro">{{ headset.description_html|safe if headset.description_html else description }}</p>
+        {% endif %}
+
+        {% if headset.updates %}
+          <div class="headset-updates">
+            {% block headset_updates %}
+              {% for message in headset.updates %}
+                {% if message.description %}
+                  <p class="message{{ ' message-' + message.type if message.type }}">
+                    {{ message.description }}
+                  </p>
+                {% endif %}
+              {% endfor %}
+            {% endblock %}
+          </div>
         {% endif %}
 
         {% if headset.image %}
@@ -52,7 +66,7 @@
 
         {% block browsers_block %}
           <section id="browsers" class="section browsers" data-section="browsers">
-            <h2><a href="#browsers">Browsers</a></h2>
+            <h2><a href="#browsers">Supported browsers</a></h2>
             {% block browsers %}
             {% endblock %}
           </section>

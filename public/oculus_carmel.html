@@ -1,11 +1,11 @@
-{% from '_helpers.html' import author_item, browsers %}
+{% from '_helpers.html' import author_item, browsers, site_title %}
 {% set browser = browsers.oculus_carmel %}
 {% set page = 'oculus_carmel.html' %}
 <!doctype html>
 <html lang="en" data-layout="secondary" data-browser="{{ browser.slug }}">
   <head>
     {% include '_head.html' %}
-    <title>{{ browser.name }} • WebVR Rocks</title>
+    <title>{{ browser.name }} • {{ site_title }}</title>
   </head>
   <body>
     <header id="header" class="header" role="banner">

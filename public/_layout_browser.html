@@ -1,0 +1,186 @@
+{% from '_helpers.html' import author_item, browser_item, browsers, compat_report_row, demo_item, headsets, site_title, youtube %}
+{% set browser = browsers[slug] %}
+{% set page = slug + '.html' %}
+<!doctype html>
+<html lang="en" data-layout="secondary browser {{ browser.slug }}" data-browser="{{ browser.slug }}" data-page="{{ page }}">
+  <head>
+    {% include '_head.html' %}
+    <title>{% block title %}{{ title or browser.name }} • {{ site_title }}{% endblock %}</title>
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <header id="header" class="header" role="banner">
+      <div class="container section">
+        {% include '_logo.html' %}
+
+        <a class="page-heading-link" href="{{ browser.about }}">
+          <h1 class="browser-name page-heading">{{ browser.name }}</h1>
+          <img class="browser-icon page-heading-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
+        </a>
+
+        {% if browser.description_html or browser.description %}
+          <p class="browser-intro page-intro">{{ browser.description_html|safe if browser.description_html else description }}</p>
+        {% endif %}
+
+        {% include '_notifications.html' %}
+
+        {% if browser.image %}
+          <figure class="media">
+            <a href="{{ browser.image }}"><img src="{{ browser.image }}" alt="{{ browser.name }}" width="450"></a>
+            <figcaption class="hidden-text">{{ browser.name }}</figcaption>
+          </figure>
+        {% endif %}
+
+        <div id="download" class="download dropdown-standalone dropdown-download">
+          <a href="{{ browser.landingUrl or browser.url }}" itemprop="downloadUrl" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid or browser.releases.latest.url }}">Download {% include "media/img/download-icon.svg" %}
+            {%- if browser.releases.latest.version or browser.releases.latest.dateReleased %}
+              <span class="download-info c">
+                <span class="download-date">{{ browser.releases.latest.version or browser.releases.latest.dateReleased.datetimeString }}</span>
+                {%- if browser.releases.latest.fileSize %}
+                  <span class="download-size">{{ browser.releases.latest.fileSize }}</span>
+                {%- endif -%}
+              </span>
+            {% endif -%}
+          </a>
+        </div>
+
+        {% if browser.sourceCodeUrl %}
+          <p class="view-source">
+            <a href="{{ browser.sourceCodeUrl }}" class="button-source no-underline">View source</a>
+          </p>
+        {% endif %}
+      </div>
+    </header>
+
+    <main id="main" class="main" role="main">
+      <div class="container">
+        {% block instructions_block %}
+          <section id="setup" class="section setup" data-section="setup">
+            <h2><a href="#setup">Setup instructions</a></h2>
+
+            {% block instructions %}
+            {% endblock %}
+          </section>
+        {% endblock %}
+
+        {% block headsets_block %}
+          <section id="headsets" class="section headsets" data-section="headsets">
+            <h2><a href="#headsets">Supported headsets</a></h2>
+
+            {% block headsets %}
+            {% endblock %}
+          </section>
+        {% endblock %}
+
+        {% block demos_block %}
+          <section id="demos" class="section demos" data-section="demos">
+            <h2><a href="#demos">Demos</a></h2>
+            <p class="demos-suggest"><a href="/demos/submit">Suggest a demo</a></p>
+
+            <ul data-section="demos" class="matrix grid-flex-container">
+              {% block demos %}
+              {% endblock %}
+            </ul>
+          </section>
+        {% endblock %}
+
+        {% block releases_block %}
+          <section id="releases" class="section releases" data-section="releases">
+            <h2><a href="#releases">Latest version</a></h2>
+            <h3><a href="" itemprop="softwareApplication"></a></h3>
+            <article itemscope itemtype="http://schema.org/SoftwareApplication">
+              <dl>
+                <dt class="browser-type">Type</dt>
+                <dd>
+                  <span class="applicationSubCategory">Browser Build</span>
+                </dd>
+                <dt class="browser-download">Download</dt>
+                <dd>
+                  <a class="button button-outlined-approve button-download" href="{{ browser.landingUrl }}" itemprop="downloadUrl" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid }}">Download</a>
+                </dd>
+                <dt class="browser-version">Version</dt>
+                <dd>
+                  <span itemprop="version" class="version" content="{{ browser.releases.latest.buildInfo.buildid or browser.releases.latest.version }}">{{ browser.releases.latest.buildInfo.buildid or browser.releases.latest.version }}</span>
+                </dd>
+                {% if browser.releases.latest.dateReleased %}
+                  <dt class="browser-date-published">Date released</dt>
+                  <dd>
+                    <time itemprop="datePublished" datetime="{{ browser.releases.latest.dateReleased.isoString }}" title="{{ browser.releases.latest.dateReleased.isoString }}">
+                      {{ browser.releases.latest.dateReleased.datetimeString }}
+                    </time>
+                  </dd>
+                {% endif %}
+                <dt class="browser-file-size">File size</dt>
+                <dd>
+                  {% if browser.releases.latest.fileSize %}
+                    <span itemprop="fileSize" content="{{ browser.releases.latest.fileSize }}">{{ browser.releases.latest.fileSize }}</span>
+                  {% else %}
+                    <span itemprop="fileSize" content="">Unknown</span>
+                  {% endif %}
+                </dd>
+                <dt class="browser-system-requirements">System requirements</dt>
+                <dd>
+                  <span class="operatingSystems" content="{{ browser.releases.operatingSystem }}">{{ browser.releases.operatingSystem }}</span>
+                  {% if browser.processorRequirements|upper == 'IA64' %}
+                    <span class="processorRequirements">
+                      64-bit
+                    </span>
+                  {% elif browser.processorRequirements|upper == 'IA32' %}
+                    <span class="processorRequirements">
+                      32-bit
+                    </span>
+                  {% endif %}
+                </dd>
+
+                {% block releases %}
+                {% endblock %}
+              </dl>
+            </article>
+          </section>
+        {% endblock %}
+
+        {% block reports_block %}
+          <section id="compat" class="section compat" data-section="compat">
+            <h2><a href="#compat">Known issues</a></h2>
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th data-report-key="browserVersion">Version</th>
+                    <th data-report-key="browserBuildId">Browser build</th>
+                    <th data-report-key="headset">Headset</th>
+                    <th data-report-key="description">Description</th>
+                    <th data-report-key="dateReported">Reported</th>
+                    <th data-report-key="dateUpdated">Updated</th>
+                    <th data-report-key="status">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for report in browser.reports %}
+                    {{ compat_report_row(report) }}
+                  {% endfor %}
+
+                  {% block reports %}
+                  {% endblock %}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        {% endblock %}
+
+
+        {% block info_block %}
+          <section id="info" class="section info" data-section="info">
+            <h2><a href="#info">{{ info_heading or info_title or 'Info' }}</a></h2>
+            {% block info %}
+            {% endblock %}
+          </section>
+        {% endblock %}
+      </div>
+    </main>
+
+    {% block footer_block %}
+      {% include '_footer.html' %}
+    {% endblock %}
+  </body>
+</html>
