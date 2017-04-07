@@ -260,65 +260,13 @@ h1.page-heading {
   padding-top: 1.5rem;
 }
 
-.section[data-section="headsets"] {
-  background-color: rgb(15,30,250);
-  display: none;
-}
-
-.section[data-section="headsets"],
-.section[data-section="headsets"] h1 a {
-  color: #fff;
-}
-
-.section[data-section="headsets"] h1 {
-  margin: 0;
-}
-
-.section[data-section="headsets"] li a {
-  color: rgba(255,255,255,.5);
-  transition: .15s color ease-in-out, .15s opacity ease-in-out;
-}
-
-.section[data-section="headsets"] li a:hover {
-  color: #fff;
-  opacity: 1;
-}
-
-.section[data-section="headsets"] li a {
-  display: block;
-  font-size: .7rem;
-  text-align: center;
-}
-
-.section[data-section="headsets"] svg {
-  display: block;
-  margin: 0 auto;
-  max-height: 3rem;
-  max-width: 3rem;
-  padding-bottom: 1rem;
-}
-
-.section[data-section="headsets"] svg#daydream g {
-  stroke: rgba(255,255,255,.5);
-  transition: .15s stroke ease-in-out;
-}
-
-.section[data-section="headsets"] a:hover svg#daydream g {
-  stroke: #fff;
-}
-
-.section[data-section="headsets"] svg:not(#daydream) path {
-  fill: rgba(255,255,255,.5);
-  transition: .15s fill ease-in-out;
-}
-
-.section[data-section="headsets"] a:hover svg:not(#daydream) path {
-  fill: #fff;
-}
-
 .page-heading-link {
   display: flex;
   flex-direction: column-reverse;
+}
+
+[data-layout~="home"] .message-pinned {
+  display: none;
 }
 
 .notifications + .section[data-section="intro"] {
@@ -860,6 +808,10 @@ html[data-layout] [data-section="demos"] ul.matrix {
 .matrix [itemprop="description"] a {
   color: inherit;
   position: relative;
+}
+
+[data-archived="true"] {
+  display: none;
 }
 
 .table-support {

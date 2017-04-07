@@ -40,6 +40,7 @@
   "video": "https://webvr.rocks/chromium/video.json",
   "downloadUrl": "https://docs.google.com/uc?id=0BzudLt22BqGRRlVjSUZpV3ZsVzA&export=download",
   "fileFormat": "application/zip",
+  "sourceCodeUrl": "https://chromium.googlesource.com/chromium/src.git/+/master/",
   "learningResourceType": "https://webvr.rocks/chromium",
   "discussionUrl": "https://webvr.rocks/chromium#comments",
   "softwareHelp": "https://webvr.rocks/chromium#help",
@@ -123,6 +124,7 @@
       "bugUrl": "https://github.com/toji/chrome-webvr-issues/issues/73"
     },
     {
+      "archived": true,
       "type": "bug",
       "browserVersion": "Chromium",
       "browserDate": "2016-12-23",
@@ -143,6 +145,7 @@
       "bugUrl": "https://crbug.com/687009"
     },
     {
+      "archived": true,
       "type": "bug",
       "browserVersion": "Chromium",
       "browserDate": "2016-12-23",
@@ -172,9 +175,10 @@
   },
   "notifications": [
     {
-      "type": "success",
-      "content_html": "<a href=\"/chromium#download\">Latest Chromium Windows build</a> now works again for the <a href=\"/htc_vive\">HTC Vive</a>!",
-      "content": "Latest Chromium Windows build now works again for the HTC Vive!"
+      "pinned": true,
+      "type": "alert",
+      "content": "Warning: All Chromium WebVR builds posted here are highly experimental and subject to change!",
+      "content_html": "<strong>Warning:</strong> All <a href=\"#releases\">Chromium WebVR builds posted here</a> are highly experimental and subject to change!"
     }
   ]
 }

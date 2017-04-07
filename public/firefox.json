@@ -11,6 +11,7 @@
   "about": "/firefox",
   "landingUrl": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly",
   "downloadUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-55.0a1.en-US.win64.installer.exe",
+  "sourceCodeUrl": "https://dxr.mozilla.org/mozilla-central/source/dom/vr",
   "sameAs": [
     "https://webvr.rocks/chrome",
     "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly"
@@ -224,6 +225,12 @@
   "fileSizeInstaller": "46 MB",
   "fileSizeZip": "57 MB",
   "notifications": [
+    {
+      "pinned": true,
+      "type": "alert",
+      "content_html": "Warning: WebVR support in Firefox Nightly is experimental and subject to change",
+      "content_html": "<strong>Warning:</strong> WebVR support in <a href=\"#releases\">Firefox Nightly</a> is experimental and subject to change"
+    },
     {
       "content": "Latest Firefox Nightly update now supports Oculus Touch controllers!",
       "content_html": "<a href=\"/firefox#download\">Latest Firefox Nightly update</a> now supports <a href=\"https://www.oculus.com/rift/#u_0_g\">Oculus Touch</a> controllers!",

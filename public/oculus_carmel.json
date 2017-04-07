@@ -12,13 +12,16 @@
   "url": "https://www.oculus.com/experiences/gear-vr/1290985657630933/",
   "about": "/oculus_carmel",
   "downloadUrl": "https://www.oculus.com/experiences/gear-vr/1290985657630933/",
+  "landingUrl": "https://www.oculus.com/experiences/gear-vr/1290985657630933/",
   "softwareVersion": "0.2-004014",
   "sameAs": [
     "https://developer.oculus.com/webvr/"
   ],
   "releases": {
     "latest": {
-      "url": "https://www.oculus.com/experiences/gear-vr/1290985657630933/"
+      "url": "https://www.oculus.com/experiences/gear-vr/1290985657630933/",
+      "fileSize": "64.18 MB",
+      "version": "0.2-004015"
     }
   },
   "fileSize": "",
