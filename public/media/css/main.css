@@ -855,7 +855,7 @@ html[data-layout] [data-section="demos"] ul.matrix {
 .table-support.table-verbose[data-supported-headsets~="samsung_gear_vr"] tr[data-headset="samsung_gear_vr"],
 .table-support.table-verbose[data-supported-headsets~="google_daydream"] tr[data-headset="google_daydream"],
 .table-support.table-verbose[data-supported-headsets~="google_cardboard"] tr[data-headset="google_cardboard"],
-.table-support.table-verbose[data-supported-headsets~="microsoft_hololens"] tr[data-headset="microsoft_hololens"] {
+.table-support.table-verbose[data-supported-headsets~="windows_mixed_reality"] tr[data-headset="windows_mixed_reality"] {
   display: table-row;
 }
 
@@ -875,7 +875,7 @@ html[data-layout] [data-section="demos"] ul.matrix {
 [itemprop="browser"][data-slug="chromium"] tr[data-headset="samsung_gear_vr"],
 [itemprop="browser"][data-app-type="MobileApplication"] tr[data-headset="htc_vive"],
 [itemprop="browser"][data-app-type="MobileApplication"] tr[data-headset="oculus_rift"],
-[itemprop="browser"][data-app-type="MobileApplication"] tr[data-headset="microsoft_hololens"],
+[itemprop="browser"][data-app-type="MobileApplication"] tr[data-headset="windows_mixed_reality"],
 [itemprop="browser"][data-app-type="MobileApplication"] [data-platform="windows"],
 [itemprop="browser"][data-app-type="MobileApplication"] [data-platform="mac"],
 [itemprop="browser"][data-app-type="MobileApplication"] [data-platform="linux"],
@@ -1015,8 +1015,8 @@ tr[data-headset="google_cardboard"] th a:before {
   background-image: url(../../google_cardboard/logo.svg);
 }
 
-tr[data-headset="microsoft_hololens"] th a:before {
-  background-image: url(../../microsoft_hololens/logo.svg);
+tr[data-headset="windows_mixed_reality"] th a:before {
+  background-image: url(../../windows_mixed_reality/logo.svg);
   height: 27px;
 }
 

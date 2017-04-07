@@ -2,8 +2,8 @@
   "@context": "http://schema.org",
   "@type": "SoftwareApplication",
   "name": "Microsoft Edge",
-  "description": "Microsoft's Windows 10 browser with upcoming support for Windows Holographic",
-  "description_html": "<a href=\"https://www.microsoft.com/\">Microsoft</a>&rsquo;s <a href=\"https://www.microsoft.com/en-us/windows/get-windows-10\">Windows 10</a> <a href=\"https://www.microsoft.com/windows/microsoft-edge\">browser</a>, with upcoming support for <a href=\"https://developer.microsoft.com/en-us/windows/holographic\">Windows Holographic</a>",
+  "description": "Microsoft's Windows 10 browser with upcoming support for Windows Mixed Reality",
+  "description_html": "<a href=\"https://www.microsoft.com/\">Microsoft</a>&rsquo;s <a href=\"https://www.microsoft.com/en-us/windows/get-windows-10\">Windows 10</a> <a href=\"https://www.microsoft.com/windows/microsoft-edge\">browser</a>, with upcoming support for <a href=\"https://developer.microsoft.com/en-us/windows/mixed-reality\">Windows Mixed Reality</a>",
   "slug": "microsoft_edge",
   "operatingSystem": "Windows 10",
   "processorRequirements": "IA64",
@@ -65,7 +65,7 @@
       "android": "browser_unsupported",
       "ios": "browser_unsupported"
     },
-    "microsoft_hololens": {
+    "windows_mixed_reality": {
       "windows": "supported",
       "mac": "headset_unsupported",
       "linux": "headset_unsupported",

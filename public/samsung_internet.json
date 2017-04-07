@@ -54,7 +54,7 @@
       "android": "browser_unsupported",
       "ios": "browser_unsupported"
     },
-    "microsoft_hololens": {
+    "windows_mixed_reality": {
       "windows": "browser_unsupported",
       "mac": "headset_unsupported",
       "linux": "headset_unsupported",
