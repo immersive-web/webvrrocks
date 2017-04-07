@@ -6,10 +6,10 @@
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Artboard">
-            <polygon id="Shape" fill="#F02401" points="0 12.402 35.687 7.542 35.703 41.965 0.033 42.168"></polygon>
-            <polygon id="Path" fill="#219DFD" points="35.67 45.932 35.698 80.384 0.028 75.48 0.026 45.7"></polygon>
-            <polygon id="Path" fill="#FFB700" points="87.326 46.256 87.314 87.596 39.996 80.916 39.93 46.178"></polygon>
-            <polygon id="Path" fill="#77BC00" points="39.996 6.906 87.314 0 87.314 41.527 39.996 41.903"></polygon>
+            <polygon id="Shape" fill="#0078d6" points="0 12.402 35.687 7.542 35.703 41.965 0.033 42.168"></polygon>
+            <polygon id="Path" fill="#0078d6" points="35.67 45.932 35.698 80.384 0.028 75.48 0.026 45.7"></polygon>
+            <polygon id="Path" fill="#0078d6" points="87.326 46.256 87.314 87.596 39.996 80.916 39.93 46.178"></polygon>
+            <polygon id="Path" fill="#0078d6" points="39.996 6.906 87.314 0 87.314 41.527 39.996 41.903"></polygon>
         </g>
     </g>
 </svg>
