@@ -22,10 +22,10 @@
   },
   "targetProduct": {
     "@type": "Product",
-    "name": "HoloLens",
+    "name": "windows-mixed-reality",
     "brand": "Microsoft",
     "manufacturer": "Microsoft",
-    "model": "HoloLens",
+    "model": "windows-mixed-reality",
     "category": "headset",
     "description": "Mixed-reality smart-glasses"
   },
