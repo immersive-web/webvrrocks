@@ -31,6 +31,7 @@
           </figure>
         {% endif %}
 
+        {% if browser.downloadUrl %}
         <div id="download" class="download dropdown-standalone dropdown-download">
           <a href="{{ browser.landingUrl or browser.url }}" itemprop="downloadUrl" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid or browser.releases.latest.url }}">Download {% include "media/img/download-icon.svg" %}
             {%- if browser.releases.latest.version or browser.releases.latest.dateReleased %}
@@ -43,6 +44,7 @@
             {% endif -%}
           </a>
         </div>
+        {% endif -%}
 
         {% if browser.sourceCodeUrl %}
           <p class="view-source">
@@ -94,10 +96,12 @@
                 <dd>
                   <span class="applicationSubCategory">Browser Build</span>
                 </dd>
-                <dt class="browser-download">Download</dt>
-                <dd>
-                  <a class="button button-outlined-approve button-download" href="{{ browser.landingUrl }}" itemprop="downloadUrl" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid }}">Download</a>
-                </dd>
+                {% if browser.downloadUrl %}
+                  <dt class="browser-download">Download</dt>
+                  <dd>
+                    <a class="button button-outlined-approve button-download" href="{{ browser.landingUrl }}" itemprop="downloadUrl" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid }}">Download</a>
+                  </dd>
+                {% endif %}
                 <dt class="browser-version">Version</dt>
                 <dd>
                   <span itemprop="version" class="version" content="{{ browser.releases.latest.buildInfo.buildid or browser.releases.latest.version }}">{{ browser.releases.latest.buildInfo.buildid or browser.releases.latest.version }}</span>
@@ -139,34 +143,36 @@
           </section>
         {% endblock %}
 
-        {% block reports_block %}
-          <section id="compat" class="section compat" data-section="compat">
-            <h2><a href="#compat">Known issues</a></h2>
-            <div class="table-responsive">
-              <table>
-                <thead>
-                  <tr>
-                    <th data-report-key="browserVersion">Version</th>
-                    <th data-report-key="browserBuildId">Browser build</th>
-                    <th data-report-key="headset">Headset</th>
-                    <th data-report-key="description">Description</th>
-                    <th data-report-key="dateReported">Reported</th>
-                    <th data-report-key="dateUpdated">Updated</th>
-                    <th data-report-key="status">Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for report in browser.reports %}
-                    {{ compat_report_row(report) }}
-                  {% endfor %}
+        {% if reports_block %}
+          {% block reports_block %}
+            <section id="compat" class="section compat" data-section="compat">
+              <h2><a href="#compat">Known issues</a></h2>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr>
+                      <th data-report-key="browserVersion">Version</th>
+                      <th data-report-key="browserBuildId">Browser build</th>
+                      <th data-report-key="headset">Headset</th>
+                      <th data-report-key="description">Description</th>
+                      <th data-report-key="dateReported">Reported</th>
+                      <th data-report-key="dateUpdated">Updated</th>
+                      <th data-report-key="status">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for report in browser.reports %}
+                      {{ compat_report_row(report) }}
+                    {% endfor %}
 
-                  {% block reports %}
-                  {% endblock %}
-                </tbody>
-              </table>
-            </div>
-          </section>
-        {% endblock %}
+                    {% block reports %}
+                    {% endblock %}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          {% endblock %}
+        {% endif -%}
 
 
         {% block info_block %}

@@ -1,54 +1,27 @@
-{% from '_helpers.html' import author_item, browsers, site_title %}
-{% set browser = browsers.microsoft_edge %}
-{% set page = 'microsoft_edge.html' %}
-<!doctype html>
-<html lang="en" data-layout="secondary" data-browser="{{ browser.slug }}">
-  <head>
-    {% include '_head.html' %}
-    <title>{{ browser.name }} • {{ site_title }}</title>
-  </head>
-  <body>
-    <header id="header" class="header" role="banner">
-      <div class="container section">
-        {% include '_logo.html' %}
+{% set slug = 'microsoft_edge' %}
+{% extends '_layout_browser.html' %}
 
-        <a class="page-heading-link" href="{{ browser.about }}">
-          <h1 class="browser-name page-heading">{{ browser.name }}</h1>
-          <img class="browser-icon page-heading-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
-        </a>
+{% block instructions %}
+  <ol class="bullets-light">
+    <li>Ensure that you enable the <a href="https://developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_setup">Creators Update</a>.</li>
+    <li>Setup either <a href="https://developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_setup">headset hardware</a>, or <a href="https://developer.microsoft.com/en-us/windows/mixed-reality/Using_the_Windows_Mixed_Reality_simulator.html#enabling_the_windows_mixed_reality_simulator">install simulator</a>.</li>
+    <li>Start Edge browser.</li>
+    <li><span>Enjoy content!</span></li>
+  </ol>
+{% endblock %}
 
-        <p class="browser-intro page-intro">{{ (browser.description_html or browser.description)|safe }}</p>
-      </div>
-    </header>
+{% block headsets %}
+  <ul class="bullets-light">
+    <li><span><a href="{{ headsets.microsoft_mixed_reality.about }}" itemprop="aboutUrl">Windows Mixed Reality Developer Kit</a></span></li>
+  </ul>
+{% endblock %}
 
-    <main id="main" class="main" role="main">
-      <div class="container">
-
-        <section id="setup" class="section setup" data-section="setup">
-          <h2><a href="#setup">Instructions</a></h2>
-          <ol class="bullets-light">
-            <li>
-              <span>
-                Download the latest <a href="https://www.microsoft.com/en-us/windows/upcoming-features">Windows 10 update</a> to get the latest <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/15002/?compareWith=14986">Microsoft Edge</a>.
-              </span>
-            </li>
-            <li><span>Enjoy content!</span></li>
-          </ol>
-          <p><strong>Stay tuned for more details! &nbsp; 🎉</strong></p>
-        </section>
-
-        <section id="info" class="section" data-section="info">
-          <h2><a href="#info">Links</a></h2>
-          <ul class="bullets-light">
-            <li><span><a href="https://arstechnica.com/information-technology/2017/01/webvr-books-and-more-extensions-coming-to-edge-in-creators-update/">VR-heavy Windows 10 Creators Update adds WebVR to Edge <em>(Ars Technica)</em></a></span></li>
-            <li><span><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/15002/">Edge adds support for WebVR <em>(Microsoft Developer)</em></a></span></li>
-            <li><span><a href="https://blogs.windows.com/msedgedev/2016/09/09/webvr-in-development-edge/#ljMCoZDHkEYig3gF.97">Bringing WebVR to Microsoft Edge <em>(Microsoft Edge Developer)</em></a></span></li>
-          </ul>
-        </section>
-
-      </div>
-    </main>
-
-    {% include '_footer.html' %}
-  </body>
-</html>
+{% block info_block %}
+  <li><a href="https://blogs.windows.com/msedgedev/2017/04/11/introducing-edgehtml-15/#8e8xdJQ1oybkrxB8.97">What’s new in Microsoft Edge in the Windows 10 Creators Update</a></li>
+  <li><span><a href="https://developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_setup">Immersive headset setuip</a></span></li>
+  <li><span><a href="https://developer.microsoft.com/en-us/windows/mixed-reality/Using_the_Windows_Mixed_Reality_simulator.html#enabling_the_windows_mixed_reality_simulator">Using the Windows Mixed Reality simulator</a></span></li>
+  <li><span><a href="https://msdn.microsoft.com/en-us/library/mt806281(v=vs.85).aspx">Microsofts WebVR reference</a></span></li>
+  <li><span><a href="https://arstechnica.com/information-technology/2017/01/webvr-books-and-more-extensions-coming-to-edge-in-creators-update/">VR-heavy Windows 10 Creators Update adds WebVR to Edge <em>(Ars Technica)</em></a></span></li>
+  <li><span><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/15002/">Edge adds support for WebVR <em>(Microsoft Developer)</em></a></span></li>
+  <li><span><a href="https://blogs.windows.com/msedgedev/2016/09/09/webvr-in-development-edge/#ljMCoZDHkEYig3gF.97">Bringing WebVR to Microsoft Edge <em>(Microsoft Edge Developer)</em></a></span></li>
+{% endblock %}

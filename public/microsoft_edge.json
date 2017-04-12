@@ -2,24 +2,32 @@
   "@context": "http://schema.org",
   "@type": "SoftwareApplication",
   "name": "Microsoft Edge",
-  "description": "Microsoft's Windows 10 browser with upcoming support for Windows Holographic",
-  "description_html": "<a href=\"https://www.microsoft.com/\">Microsoft</a>&rsquo;s <a href=\"https://www.microsoft.com/en-us/windows/get-windows-10\">Windows 10</a> <a href=\"https://www.microsoft.com/windows/microsoft-edge\">browser</a>, with upcoming support for <a href=\"https://developer.microsoft.com/en-us/windows/holographic\">Windows Holographic</a>",
+  "description": "Microsoft's Windows 10 browser",
+  "description_html": "<a href=\"https://www.microsoft.com/\">Microsoft</a>&rsquo;s <a href=\"https://www.microsoft.com/en-us/windows/get-windows-10\">Windows 10</a> <a href=\"https://www.microsoft.com/windows/microsoft-edge\">browser</a>.",
   "slug": "microsoft_edge",
   "operatingSystem": "Windows 10",
   "processorRequirements": "IA64",
   "logo": "/microsoft_edge/icon.png",
+  "image": "/microsoft_edge/mixed-reality-headset.jpg",
   "url": "https://www.microsoft.com/en-us/windows/microsoft-edge",
   "about": "/microsoft_edge",
-  "downloadUrl": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly",
+  "downloadUrl": "",
   "sameAs": [
-    "https://webvr.rocks/chrome",
-    "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly"
+    ""
   ],
   "releases": {
     "latest": {
-      "url": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly"
+      "url": ""
     }
   },
+  "notifications": [
+    {
+      "content": "As of the Windows 10 Creators update, Edge browser now supports WebVR 1.1 specification!",
+      "content_html": "As of the Windows 10 Creators update, Edge browser now <a href=\"https://blogs.windows.com/msedgedev/2017/04/11/introducing-edgehtml-15/#8e8xdJQ1oybkrxB8.97\">supports WebVR 1.1</a> specification!",
+      "dismissable": false,
+      "type": "success"
+    }
+  ],
   "targetProduct": {
     "@type": "Product",
     "name": "HoloLens",
