@@ -23,7 +23,7 @@
   "notifications": [
     {
       "content": "As of the Windows 10 Creators update, Edge browser now supports WebVR 1.1 specification!",
-      "content_html": "As of the Windows 10 Creators update, Edge browser now sipports <a href=\"https://w3c.github.io/webvr/spec/1.1/\">WebVR 1.1</a> specification!",
+      "content_html": "As of the Windows 10 Creators update, Edge browser now <a href=\"https://blogs.windows.com/msedgedev/2017/04/11/introducing-edgehtml-15/#8e8xdJQ1oybkrxB8.97\">supports WebVR 1.1</a> specification!",
       "dismissable": false,
       "type": "success"
     }
