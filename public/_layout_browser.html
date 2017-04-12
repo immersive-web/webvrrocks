@@ -31,6 +31,7 @@
           </figure>
         {% endif %}
 
+        {% if browser.downloadUrl %}
         <div id="download" class="download dropdown-standalone dropdown-download">
           <a href="{{ browser.landingUrl or browser.url }}" itemprop="downloadUrl" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid or browser.releases.latest.url }}">Download {% include "media/img/download-icon.svg" %}
             {%- if browser.releases.latest.version or browser.releases.latest.dateReleased %}
@@ -43,6 +44,7 @@
             {% endif -%}
           </a>
         </div>
+        {% endif -%}
 
         {% if browser.sourceCodeUrl %}
           <p class="view-source">
