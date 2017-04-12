@@ -96,10 +96,12 @@
                 <dd>
                   <span class="applicationSubCategory">Browser Build</span>
                 </dd>
-                <dt class="browser-download">Download</dt>
-                <dd>
-                  <a class="button button-outlined-approve button-download" href="{{ browser.landingUrl }}" itemprop="downloadUrl" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid }}">Download</a>
-                </dd>
+                {% if browser.downloadUrl %}
+                  <dt class="browser-download">Download</dt>
+                  <dd>
+                    <a class="button button-outlined-approve button-download" href="{{ browser.landingUrl }}" itemprop="downloadUrl" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid }}">Download</a>
+                  </dd>
+                {% endif %}
                 <dt class="browser-version">Version</dt>
                 <dd>
                   <span itemprop="version" class="version" content="{{ browser.releases.latest.buildInfo.buildid or browser.releases.latest.version }}">{{ browser.releases.latest.buildInfo.buildid or browser.releases.latest.version }}</span>
