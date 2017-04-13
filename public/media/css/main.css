@@ -680,6 +680,7 @@ li code {
 }
 
 ul.site-nav-list {
+  margin-bottom: 0;
   padding-left: 0;
 }
 
