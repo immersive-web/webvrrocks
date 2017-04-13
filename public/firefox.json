@@ -234,8 +234,8 @@
     {
       "type": "success",
       "dismissable": false,
-      "content": "Latest Firefox Nightly update now supports Oculus Touch controllers!",
-      "content_html": "<a href=\"/firefox#download\">Latest Firefox Nightly update</a> now supports <a href=\"https://www.oculus.com/rift/#u_0_g\">Oculus Touch</a> controllers!",
+      "content": "Firefox Nightly now supports Oculus Touch controllers!",
+      "content_html": "<a href=\"/firefox#download\">Firefox Nightly</a> now supports <a href=\"https://www.oculus.com/rift/#u_0_g\">Oculus Touch</a> controllers!",
       "datePublished": {
         "originalDateTimeString": "18-Feb-2017 12:27:05",
         "datetime": 1487449625000,
