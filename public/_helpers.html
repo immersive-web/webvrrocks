@@ -5,8 +5,13 @@
     {% for message in browser.notifications %}
       {% set type = message.type if (message.type == 'error' or message.type == 'alert' or message.type == 'success') %}
       {% set message_id = 'message-' + browser.slug + '-' + loop.index %}
-      <div class="message{{ ' message-' + type if type }}{{ ' message-dismissable' if message.dismissable }}{{ ' message-pinned' if message.pinned }}" aria-expanded="true" id="{{ message_id }}">
+      {% set order = message.order or message.position or message.rank %}
+      <div class="message{{ ' message-' + type if type }}{{ ' message-dismissable' if message.dismissable }}{{ ' message-pinned' if message.pinned }}" aria-expanded="true" id="{{ message_id }}" data-date-reported="{{ message.datePublished.datetime }}"{% if order %} style="order: {{ order }}"{% endif %}{% if message.dismissable %} data-dismissable="true"{% endif %}{% if message.pinned %} data-pinned="true"{% endif %}>
         <p>
+          {% if message.datePublished %}
+            <time itemprop="dateReported" datetime="{{ message.datePublished.datetime }}">{{ message.datePublished.pretty or message.datePublished.dateString }}</time>
+          {% endif %}
+
           {% if message.content_html %}
             {{ message.content_html|safe }}
           {% elif message.content %}
@@ -284,8 +289,8 @@
         {% endif %}
       </td>
       <td data-report-key="description"><a href="{{ report.bug or report.bugUrl or report.url }}" itemprop="description">{{ report.description }}</a></td>
-      <td data-report-key="dateReported"><time itemprop="dateReported" datetime="{{ report.dateReported.datetime }}">{{ report.dateReported.pretty }}</time></td>
-      <td data-report-key="dateUpdated"><time itemprop="dateUpdated" datetime="{{ report.dateUpdated.datetime }}">{{ report.dateUpdated.pretty }}</time></td>
+      <td data-report-key="dateReported"><time itemprop="dateReported" datetime="{{ report.dateReported.datetime }}">{{ report.dateReported.pretty or report.dateReported.dateString }}</time></td>
+      <td data-report-key="dateUpdated"><time itemprop="dateUpdated" datetime="{{ report.dateUpdated.datetime }}">{{ report.dateUpdated.pretty or report.dateUpdated.dateString }}</time></td>
       <td data-report-key="status"><span itemprop="status">{{ report.status }}</span></td>
     </tr>
   {% endif %}

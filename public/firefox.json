@@ -232,10 +232,19 @@
       "content_html": "<strong>Warning:</strong> WebVR support in <a href=\"#releases\">Firefox Nightly</a> is experimental and subject to change"
     },
     {
+      "type": "success",
+      "dismissable": false,
       "content": "Latest Firefox Nightly update now supports Oculus Touch controllers!",
       "content_html": "<a href=\"/firefox#download\">Latest Firefox Nightly update</a> now supports <a href=\"https://www.oculus.com/rift/#u_0_g\">Oculus Touch</a> controllers!",
-      "dismissable": false,
-      "type": "success"
+      "datePublished": {
+        "originalDateTimeString": "18-Feb-2017 12:27:05",
+        "datetime": 1487449625000,
+        "datetimeString": "Feb 18, 2017, 12:27 PM",
+        "dateString": "Feb 18, 2017",
+        "timeString": "12:27 PM",
+        "isoString": "2017-02-18T20:27:05.000Z"
+      },
+      "position": -1
     }
   ]
 }

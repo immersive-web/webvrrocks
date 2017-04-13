@@ -269,7 +269,14 @@
     html.dataset.supportsTouch = supportsTouch;
     var openDialogues = {};
 
-    // TODO: Hide dismissable notifications.
+    // TODO: Hide dismissable notifications (on all pages).
+
+    // Remove unnecessary notifications on homepage.
+    if (html.matches && html.matches('[data-layout~="home"]')) {
+      Array.prototype.forEach.call(document.querySelectorAll('#notifications .message[data-pinned="true"]'), function (el) {
+        el.parentNode.removeChild(el);
+      });
+    }
 
     html.addEventListener('click', function (e) {
       var el = e.target;

@@ -22,10 +22,19 @@
   },
   "notifications": [
     {
+      "type": "success",
+      "dismissable": false,
       "content": "As of the Windows 10 Creators update, Edge browser now supports the WebVR 1.1 specification!",
       "content_html": "As of the Windows 10 Creators update, Edge browser now <a href=\"https://blogs.windows.com/msedgedev/2017/04/11/introducing-edgehtml-15/#8e8xdJQ1oybkrxB8.97\">supports the WebVR 1.1</a> specification!",
-      "dismissable": false,
-      "type": "success"
+      "datePublished": {
+        "originalDateTimeString": "12-Apr-2017 13:21:28",
+        "datetime": 1492028488000,
+        "datetimeString": "Apr 12, 2017, 1:21 PM",
+        "dateString": "Apr 12, 2017",
+        "timeString": "1:21 PM",
+        "isoString": "2017-04-12T20:21:28.000Z"
+      },
+      "position": 1
     }
   ],
   "targetProduct": {
