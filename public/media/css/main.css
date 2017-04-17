@@ -178,6 +178,26 @@ figure {
   }
 }
 
+@media screen and (min-width: 481px) {
+  figure img:not(:last-child):not(:only-child) {
+    margin-right: 0;
+  }
+
+  figure img + figcaption:not(:only-child) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  figure img:not(:only-child) {
+    margin-top: 0;
+  }
+
+  figure img + figcaption {
+    margin-bottom: 0;
+  }
+}
+
 /* desktop */
 @media all and (min-width: 901px) {
   .container {
@@ -621,7 +641,7 @@ a.download:visited {
 }
 
 figcaption {
-  padding-top: .25rem;
+  padding-top: .5rem;
 }
 
 .authors-list li {
