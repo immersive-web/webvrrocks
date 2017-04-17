@@ -384,7 +384,7 @@ html:not([data-layout~="home"]) .main ol,
 html:not([data-layout~="home"]) .main ul,
 .page-intro {
   margin-bottom: 1.5rem;
-  max-width: 600px;
+  max-width: 45rem;
 }
 
 .table-responsive {
@@ -667,8 +667,8 @@ li code {
   border-radius: 1px;
   box-shadow: 1px 1px 0 #ccc;
   color: #666;
-  margin: 0 3px;
-  padding: 3px 6px;
+  margin: 0 1px;
+  padding: 2px 6px;
 }
 
 .site-nav {
