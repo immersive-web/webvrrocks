@@ -10,8 +10,8 @@
   "logo": "/chrome_for_android/icon.png",
   "image": "",
   "screenshot": "",
-  "url": "https://play.google.com/store/apps/details?id=com.android.chrome",
-  "downloadUrl": "https://play.google.com/store/apps/details?id=com.android.chrome",
+  "url": "https://play.google.com/store/apps/details?id=com.chrome.canary",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.chrome.canary",
   "about": "/chrome_for_android",
   "dateCreated": "",
   "datePublished": "",
@@ -82,19 +82,11 @@
   "showDateReleased": false,
   "releases": {
     "latest": {
-      "status": "experimental",
+      "status": "origin-trial",
       "landingUrl": "https://play.google.com/store/apps/details?id=com.chrome.canary",
       "downloadUrl": "https://play.google.com/store/apps/details?id=com.chrome.canary",
       "dateReleased": {
-        "originalDateTimeString": "05-Mar-2017 17:42",
-        "datetime": 1488764520000,
-        "datetimeString": "Mar 5, 2017, 5:42 PM",
-        "dateString": "Mar 5, 2017",
-        "timeString": "5:42 PM",
-        "isoString": "2017-03-06T01:42:00.000Z"
-      },
-      "filename": "ChromePublic-webvr-native-WIP-20161215a.apk",
-      "fileSize": "46 MB"
+      }
     }
   },
   "platforms": {
