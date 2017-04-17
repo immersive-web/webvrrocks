@@ -51,6 +51,7 @@
 
 {% includeData 'htc_vive.json' as htc_vive %}
 {% includeData 'google_daydream.json' as google_daydream %}
+{% includeData 'windows_mixed_reality.json' as windows_mixed_reality %}
 
 {# includeData '_db/webvr_scenes.json' as sites #}
 {# includeData '_db/bugs.json' as bugs #}
@@ -87,9 +88,7 @@
   "google_cardboard": {
     "name": "Google Cardboard"
   },
-  "windows_mixed_reality": {
-    "name": "Windows Mixed Reality headsets"
-  }
+  windows_mixed_reality: windows_mixed_reality
 } %}
 
 {% set demos = {

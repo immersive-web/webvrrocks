@@ -11,7 +11,8 @@
   "image": "/microsoft_edge/mixed-reality-headset.jpg",
   "url": "https://www.microsoft.com/en-us/windows/microsoft-edge",
   "about": "/microsoft_edge",
-  "downloadUrl": "",
+  "downloadUrl": null,
+  "landingUrl": "https://developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_setup#setting_up_your_pc",
   "sameAs": [
     ""
   ],

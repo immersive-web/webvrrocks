@@ -3,7 +3,7 @@
 
 {% block instructions %}
   <ol class="bullets-light">
-    <li><span>Ensure that you’ve enabled the <a href="https://developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_setup"><strong>Windows Creators Update</strong></a>.</span></li>
+    <li><span>Ensure that you’ve enabled the <a href="https://developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_setup#setting_up_your_pc"><strong>Windows 10 Creators Update</strong></a>.</span></li>
     <li><span>Set up either your <a href="https://developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_setup">headset hardware</a>, or <a href="https://developer.microsoft.com/en-us/windows/mixed-reality/Using_the_Windows_Mixed_Reality_simulator.html#enabling_the_windows_mixed_reality_simulator">install the <strong>Mixed Reality Portal</strong> simulator</a>.</span></li>
     <li><span>Start the <strong>Edge browser</strong>.</span></li>
     <li><span>Enjoy content!</span></li>
@@ -12,16 +12,21 @@
 
 {% block headsets %}
   <ul class="bullets-light">
-    <li><span><a href="{{ headsets.microsoft_mixed_reality.about }}" itemprop="aboutUrl">Windows Mixed Reality Developer Kit</a></span></li>
+    <li><span><a href="{{ headsets.windows_mixed_reality.about }}" itemprop="aboutUrl">Windows Mixed Reality Developer Kit</a></span></li>
   </ul>
 {% endblock %}
 
-{% block info_block %}
-  <li><a href="https://blogs.windows.com/msedgedev/2017/04/11/introducing-edgehtml-15/#8e8xdJQ1oybkrxB8.97">What’s new in Microsoft Edge in the Windows 10 Creators Update</a></li>
-  <li><span><a href="https://developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_setup">Immersive headset setuip</a></span></li>
-  <li><span><a href="https://developer.microsoft.com/en-us/windows/mixed-reality/Using_the_Windows_Mixed_Reality_simulator.html#enabling_the_windows_mixed_reality_simulator">Using the Windows Mixed Reality simulator</a></span></li>
-  <li><span><a href="https://msdn.microsoft.com/en-us/library/mt806281(v=vs.85).aspx">Microsoft’s WebVR reference</a></span></li>
-  <li><span><a href="https://arstechnica.com/information-technology/2017/01/webvr-books-and-more-extensions-coming-to-edge-in-creators-update/">Ars Technica: VR-heavy Windows 10 Creators Update adds WebVR to Edge</a></span></li>
-  <li><span><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/15002/">Microsoft Edge Platform Changelog: Edge adds support for WebVR</a></span></li>
-  <li><span><a href="https://blogs.windows.com/msedgedev/2016/09/09/webvr-in-development-edge/#M96xoCiUEmAbjywW.97">Microsoft Edge Developer Blog: Bringing WebVR to Microsoft Edge <em>(Microsoft Edge Developer)</em></a></span></li>
+{% block demos_block %}
+{% endblock %}
+
+{% block info %}
+  <ul class="bullets-light">
+    <li><span><a href="https://blogs.windows.com/msedgedev/2017/04/11/introducing-edgehtml-15/#8e8xdJQ1oybkrxB8.97">What’s new in Microsoft Edge in the Windows 10 Creators Update</a></span></li>
+    <li><span><a href="https://developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_setup">Setup guide for the Windows Mixed Reality immersive headset</a></span></li>
+    <li><span><a href="https://developer.microsoft.com/en-us/windows/mixed-reality/Using_the_Windows_Mixed_Reality_simulator.html#enabling_the_windows_mixed_reality_simulator">Using the Windows Mixed Reality Portal simulator</a></span></li>
+    <li><span><a href="https://msdn.microsoft.com/en-us/library/mt806281(v=vs.85).aspx">Microsoft’s WebVR API reference documentation</a></span></li>
+    <li><span><a href="https://arstechnica.com/information-technology/2017/01/webvr-books-and-more-extensions-coming-to-edge-in-creators-update/">Ars Technica: <em>VR-heavy Windows 10 Creators Update adds WebVR to Edge</em></a></span></li>
+    <li><span><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/15002/">Microsoft Edge Platform Changelog: <em>Edge adds support for WebVR</em></a></span></li>
+    <li><span><a href="https://blogs.windows.com/msedgedev/2016/09/09/webvr-in-development-edge/#M96xoCiUEmAbjywW.97">Microsoft Edge Developer Blog: <em>Bringing WebVR to Microsoft Edge</em></a></span></li>
+  </ul>
 {% endblock %}

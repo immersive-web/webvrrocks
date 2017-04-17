@@ -567,6 +567,11 @@ a.download:visited {
   width: 24px;
 }
 
+.button-download[data-download-available="false"] svg {
+  top: .5rem;
+  width: 18px;
+}
+
 .download:hover svg {
   fill: #86ff86;
 }
@@ -1372,12 +1377,6 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
 
 [data-section="info"] li + li {
   margin-top: .5rem;
-}
-
-[data-section="info"] li em {
-  display: block;
-  opacity: .75;
-  font-size: .8rem;
 }
 
 /**

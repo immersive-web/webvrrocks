@@ -1,0 +1,99 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Windows Mixed Reality",
+  "slug": "windows_mixed_reality",
+  "description": "Roomscale VR, specially designed for SteamVR (OpenVR)",
+  "description_html": "Roomscale VR, specially designed for <a href=\"http://store.steampowered.com/steamvr\">SteamVR</a> (<a href=\"https://github.com/ValveSoftware/openvr\">OpenVR</a>)",
+  "operatingSystem": "Windows 7.1+",
+  "processorRequirements": "IA64",
+  "logo": "/windows_mixed_reality/logo.png",
+  "image": "/windows_mixed_reality/photo.png",
+  "pictogram": "/windows_mixed_reality/pictogram.svg",
+  "screenshot": "",
+  "url": "/windows_mixed_reality",
+  "about": "/windows_mixed_reality",
+  "creator": [
+    {
+      "@type": "Company",
+      "name": "Microsoft",
+      "sameAs": "https://www.microsoft.com/"
+    }
+  ],
+  "keywords": "headset",
+  "applicationCategory": [
+    "Headset"
+  ],
+  "releaseNotes": "/windows_mixed_reality.json",
+  "dateCreated": "",
+  "datePublished": "",
+  "downloadUrl": "https://www.vive.com/us/setup/",
+  "setupUrl": "https://www.vive.com/us/setup/",
+  "fileFormat": "application/zip",
+  "learningResourceType": "https://webvr.rocks/chromium",
+  "discussionUrl": "https://webvr.rocks/chromium#comments",
+  "softwareHelp": "https://webvr.rocks/chromium#help",
+  "version": "",
+  "softwareRequirements": [
+    "https://www3.oculus.com/setup/",
+    "https://www.vive.com/us/setup/"
+  ],
+  "requirements": [
+    "https://www3.oculus.com/setup/",
+    "https://www.vive.com/us/setup/"
+  ],
+  "fileSize": "93 MB",
+  "license": "",
+  "contributor": [],
+  "thumbnailUrl": "",
+  "softwareVersion": "",
+  "sourceOrganization": "",
+  "softwareAddOn": "",
+  "device": "",
+  "alternateName": "Chromium WebVR",
+  "audio": "",
+  "platforms": {
+    "htc_vive": {
+      "windows": "supported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "oculus_rift": {
+      "windows": "supported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "samsung_gear_vr": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "browser_unsupported",
+      "ios": "headset_unsupported"
+    },
+    "google_daydream": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "supported",
+      "ios": "headset_unsupported"
+    },
+    "google_cardboard": {
+      "windows": "headset_unsupported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "supported",
+      "ios": "browser_unsupported"
+    },
+    "windows_mixed_reality": {
+      "windows": "supported",
+      "mac": "headset_unsupported",
+      "linux": "headset_unsupported",
+      "android": "headset_unsupported",
+      "ios": "headset_unsupported"
+    }
+  }
+}
