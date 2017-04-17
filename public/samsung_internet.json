@@ -12,9 +12,12 @@
   "url": "https://www.oculus.com/experiences/gear-vr/849609821813454/",
   "about": "/samsung_internet",
   "downloadUrl": "https://www.oculus.com/experiences/gear-vr/849609821813454/",
+  "showDateReleased": true,
   "releases": {
     "latest": {
-      "url": "https://www.oculus.com/experiences/gear-vr/849609821813454/"
+      "url": "https://www.oculus.com/experiences/gear-vr/849609821813454/",
+      "fileSize": "224.56 MB",
+      "version": "5.2.00-13"
     }
   },
   "fileSize": "",

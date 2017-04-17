@@ -16,6 +16,7 @@
   "sameAs": [
     "https://developer.oculus.com/webvr/"
   ],
+  "showDateReleased": false,
   "releases": {
     "latest": {
       "url": "https://github.com/MortimerGoro/servo/releases/download/0.2/servo_gamepad.rar"

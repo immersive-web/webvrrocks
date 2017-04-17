@@ -24,7 +24,7 @@
         </p>
 
         <div id="download" class="download dropdown-standalone dropdown-download">
-          <a href="{{ browser.downloadUrl }}" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">Dec 16, 2016 9:39 AM</span> <span class="download-size">36 MB</span></span></a>
+          <a href="{{ browser.downloadUrl }}" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">Download {% include "media/img/download-icon.svg" %} {% if browser.showDateReleased %}<span class="download-info c"><span class="download-date">Dec 16, 2016 9:39 AM</span> <span class="download-size">36 MB</span></span>{% endif %}</a>
         </div>
         <p class="view-source">
           <a href="https://github.com/MortimerGoro/servo/tree/webvr_api" class="button-source no-underline">View source</a>

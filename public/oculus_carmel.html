@@ -25,7 +25,7 @@
         </figure>
 
         <div id="download" class="download dropdown-standalone dropdown-download">
-          <a href="https://www.oculus.com/experiences/gear-vr/1290985657630933/" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">Version 0.2-004014</span> <span class="download-size">64.18 MB</span></span></a>
+          <a href="https://www.oculus.com/experiences/gear-vr/1290985657630933/" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">Download {% include "media/img/download-icon.svg" %}{% if browser.showDateReleased %} <span class="download-info c"><span class="download-date">Version 0.2-004014</span> <span class="download-size">64.18 MB</span></span>{% endif %}</a>
         </div>
       </div>
     </header>
@@ -47,7 +47,7 @@
             </li>
             <li>
               <span>
-                Launch <strong>Carmel Developer Preview</strong> from your <strong>Gear VR Library</strong>.
+                Launch <strong>Carmel Developer Preview</strong> from your Gear VR Library.
               </span>
             </li>
             <li>
@@ -55,7 +55,7 @@
                 <p><stong>Enjoy the included WebVR demos!</stong></p>
                 <figure class="media-outlined">
                   <img src="https://dl.airtable.com/ZtmdSF5gRBqzuICpspK6_full_12386444_1799525440318007_1635011178193223680_n.jpg" width="300" alt="Oculus Carmel demos">
-                  <figcaption>Launch Carmel to browse these WebVR demos</figcaption>
+                  <figcaption>WebVR demos from Carmel main lobby space</figcaption>
                 </figure>
               </span>
             </li>

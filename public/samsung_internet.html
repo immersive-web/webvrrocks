@@ -25,7 +25,7 @@
         </figure>
 
         <div id="download" class="download dropdown-standalone dropdown-download">
-          <a href="{{ browser.url }}" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">Version 4.2.00-14</span> <span class="download-size">298.85 MB</span></span></a>
+          <a href="{{ browser.url }}" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">Version 5.2.00-13</span> <span class="download-size">298.85 MB</span></span></a>
         </div>
       </div>
     </header>
@@ -41,13 +41,13 @@
                 <p>Search for and <strong>install <a href="{{ helpers.browsers.samsung_internet.url }}">Samsung Internet Browser</a></strong> from the <strong>Oculus Gear VR store</strong>.</p>
                 <figure class="media-outlined">
                   <img src="samsung_internet/app.png" width="200" alt="Samsung Internet Browser for Gear VR">
-                  <figcaption>Samsung Internet Browser for Gear VR</figcaption>
+                  <figcaption>Samsung Internet for Gear VR</figcaption>
                 </figure>
               </span>
             </li>
             <li>
               <span>
-                <strong>Launch</strong> Samsung Internet Browser from your <strong>Gear VR Library</strong>.
+                Launch <strong>Samsung Internet Browser</strong> from your Gear VR Library.
               </span>
             </li>
             <li><span>Navigate to a WebVR-compatible site.</span></li>
@@ -69,14 +69,18 @@
               <dd>
                 <span class="operatingSystems">Samsung Gear VR</span>
               </dd>
-              <dt class="browser-version">Version</dt>
-              <dd>
-                <span class="version">4.2.00-14</span>
-              </dd>
-              <dt class="browser-file-size">File size</dt>
-              <dd>
-                <span itemprop="fileSize" content="298.85MB">298.85 MB</span>
-              </dd>
+              {% if browser.showDateReleased != false and browser.releases.latest.version %}
+                <dt class="browser-version">Version</dt>
+                <dd>
+                  <span class="version">{{ browser.releases.latest.version }}</span>
+                </dd>
+              {% endif %}
+              {% if browser.showFileSize != false and browser.releases.fileSize %}
+                <dt class="browser-file-size">File size</dt>
+                <dd>
+                  <span itemprop="fileSize" content="{{ browser.releases.fileSize|replace(' ', '') }}">{{ browser.releases.fileSize }}</span>
+                </dd>
+              {% endif %}
               <dt class="browser-release-notes">Release notes</dt>
               <dd>
                 <ul class="release-notes bullets-light">

@@ -14,8 +14,10 @@
   "downloadUrl": null,
   "landingUrl": "https://developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_setup#setting_up_your_pc",
   "sameAs": [
-    ""
+    "https://webvr.rocks/microsoft_edge",
+    "https://www.microsoft.com/en-us/windows/microsoft-edge"
   ],
+  "showDateReleased": false,
   "releases": {
     "latest": {
       "url": ""

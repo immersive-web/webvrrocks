@@ -25,7 +25,7 @@
 
         {% if browser.releases %}
           <div id="download" class="download dropdown-standalone dropdown-download">
-            <a href="{{ browser.downloadUrl }}" itemprop="downloadUrl" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid }}">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">{{ browser.releases.latest.dateReleased.datetimeString }}</span> <span class="download-size">{{ browser.releases.latest.fileSize }}</span></span></a>
+            <a href="{{ browser.downloadUrl }}" itemprop="downloadUrl" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid }}">Download {% include "media/img/download-icon.svg" %} {% if browser.showDateReleased %}<span class="download-info c"><span class="download-date">{{ browser.releases.latest.dateReleased.datetimeString }}</span> <span class="download-size">{{ browser.releases.latest.fileSize }}</span></span>{% endif %}</a>
           </div>
           {% if browser.sourceCodeUrl %}
             <p class="view-source">
@@ -42,7 +42,7 @@
         <section id="setup" class="section setup" data-section="setup">
           <h2><a href="#setup">Instructions</a></h2>
           <ol class="bullets-light">
-            <li><span><a href="{{ browser.downloadUrl }}">Download this experimental build of Chromium for Android</a> on your mobile device.</span></li>
+            <li><span><a href="{{ browser.downloadUrl }}">Download <strong>Chrome Canary</strong></a> on your mobile device.</span></li>
             <li><span>Enjoy WebVR content!</span></li>
           </ol>
           <p class="note"><strong>Warning:</strong> Until the stability of WebVR improves (soon in upcoming releases), we recommend avoiding use of WebVR in <a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome for Android</a> and <a href="https://play.google.com/store/apps/details?id=com.chrome.canary">Chrome Canary</a>.</p>

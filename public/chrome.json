@@ -88,9 +88,18 @@
   },
   "reports": [
   ],
+  "showDateReleased": true,
   "releases": {
     "latest": {
-      "status": "experimental"
+      "status": "experimental",
+      "dateReleased": {
+        "originalDateTimeString": "17-Feb-2017 10:44",
+        "datetime": 1487357040000,
+        "datetimeString": "Feb 17, 2017, 10:44 AM",
+        "dateString": "Feb 17, 2017",
+        "timeString": "10:44 AM",
+        "isoString": "2017-02-17T18:44:00.000Z"
+      }
     }
   }
 }
