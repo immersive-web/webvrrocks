@@ -79,12 +79,13 @@
         {% block demos_block %}
           <section id="demos" class="section demos" data-section="demos">
             <h2><a href="#demos">Demos</a></h2>
-            <p class="demos-suggest"><a href="/demos/submit">Suggest a demo</a></p>
 
             <ul data-section="demos" class="matrix grid-flex-container">
               {% block demos %}
               {% endblock %}
             </ul>
+
+            <p class="demos-suggest"><a href="https://github.com/WebVRRocks/webvrrocks/issues/new?title=[{{ browser.name }}]%20Suggested%20demo">Suggest a demo</a></p>
           </section>
         {% endblock %}
 

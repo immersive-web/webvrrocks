@@ -819,7 +819,14 @@ ul.matrix li + li {
   z-index: 1;
 }
 
+.demos-suggest {
+  filter: grayscale(1);
+  font-size: .9rem;
+  margin-top: 1.5rem;
+}
+
 html[data-layout] [data-section="demos"] ul.matrix {
+  border-bottom-width: 0;
   max-width: 100%;
 }
 
