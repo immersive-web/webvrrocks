@@ -1,4 +1,4 @@
-{% from '_helpers.html' import author_item, browsers, site_title %}
+{% from '_helpers.html' import author_item, browsers, demo_item, site_title %}
 {% set browser = browsers.chrome_for_android %}
 {% set page = 'chrome_for_android.html' %}
 <!doctype html>
@@ -48,6 +48,23 @@
           <p class="note"><strong>Warning:</strong> Until the stability of WebVR improves (soon in upcoming releases), we recommend avoiding use of WebVR in <a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome for Android</a> and <a href="https://play.google.com/store/apps/details?id=com.chrome.canary">Chrome Canary</a>.</p>
           <p class="note"><strong>Note:</strong> Any WebVR site you visit must be already enrolled in the <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">WebVR Origin Trial</a> and contain a <code>&lt;meta&gt;</code> tag or HTTP response header with a valid Origin Trial token.</p>
         </section>
+
+        {% block demos_block %}
+          <section id="demos" class="section demos" data-section="demos">
+            <h2><a href="#demos">Demos</a></h2>
+
+            <ul data-section="demos" class="matrix grid-flex-container">
+              {% block demos %}
+                {{ demo_item('the_musical_forest') }}
+                {{ demo_item('under_neon_lights') }}
+                {{ demo_item('konterball') }}
+                {{ demo_item('bear_71') }}
+              {% endblock %}
+            </ul>
+
+            <p class="demos-suggest"><a href="https://github.com/WebVRRocks/webvrrocks/issues/new?title=[{{ browser.name }}]%20Suggested%20demo">Suggest a demo</a></p>
+          </section>
+        {% endblock %}
 
         <section id="releases" class="section" data-section="releases">
           <h2><a href="#releases">Latest version</a></h2>
@@ -118,10 +135,6 @@
         </section>
 
         <!--
-        <section id="demos" class="section demos">
-          <h2><a href="#demos">Demos</a></h2>
-        </section>
-
         <section id="info" class="section info" data-section="info">
           <h2><a href="#info">Info</a></h2>
           <dl>
