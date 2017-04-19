@@ -212,6 +212,7 @@
 
   var html = document.documentElement;
   var hash = window.location.hash.substr(1);
+  var debug = false;
   var storage = {
     _cache: {},
     has: function (key) {
@@ -261,8 +262,10 @@
     var numVisits = storage.increment('visits');
     html.dataset.newbie = storage.get('videos:what_is_webvr:plays', 0) <= 2;
     if (storage.has('debug_ui')) {
+      debug = true;
       html.dataset.debug = '';
     } else {
+      debug = false;
       delete html.dataset.debug;
     }
     var supportsTouch = 'ontouchstart' in window;
@@ -346,7 +349,7 @@
     var player;
 
     window.onYouTubeIframeAPIReady = function () {
-      player = new YT.Player('yt-' + id, {
+      player = new YT.Player('yt_' + id, {
         height: '390',
         width: '640',
         videoId: id,
@@ -357,13 +360,19 @@
       });
     };
     var onPlayerReady = function (event) {
-      console.log('YouTube Video "%s" ready', id);
+      if (debug) {
+        console.log('YouTube Video "%s" ready', id);
+      }
     };
     var playPauseCounter = 0;
     var onPlayerStateChange = function (event) {
-      console.log('YouTube Video "%s" changed state', event.data);
+      if (debug) {
+        console.log('YouTube Video "%s" changed state', event.data);
+      }
       if (event.data === YT.PlayerState.ENDED) {
-        console.log('YouTube Video "%s" was played and ended');
+        if (debug) {
+          console.log('YouTube Video "%s" was played and ended');
+        }
         storage.increment('videos:what_is_webvr:plays', {once: true});
         return;
       }
@@ -372,7 +381,9 @@
         playPauseCounter++;
       }
       if (playPauseCounter >= 4) {
+        if (debug) {
         console.log('YouTube Video "%s" was paused/played a few times');
+      }
         storage.increment('videos:what_is_webvr:plays', {once: true});
       }
     };

@@ -97,7 +97,6 @@
         {% block releases_block %}
           <section id="releases" class="section releases" data-section="releases">
             <h2><a href="#releases">Latest version</a></h2>
-            <h3><a href="" itemprop="softwareApplication"></a></h3>
             <article itemscope itemtype="http://schema.org/SoftwareApplication">
               <dl>
                 <dt class="browser-type">Type</dt>
@@ -153,7 +152,10 @@
 
         {% if reports_block %}
           {% block reports_block %}
-            <section id="compat" class="section compat" data-section="compat">
+            <section id="compat" class="section" data-section="compat">
+              <div id="compatibility"></div>
+              <div id="known_issues"></div>
+              <div id="known-issues"></div>
               <h2><a href="#compat">Known issues</a></h2>
               <div class="table-responsive">
                 <table>

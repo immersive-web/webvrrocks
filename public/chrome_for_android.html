@@ -68,7 +68,6 @@
 
         <section id="releases" class="section" data-section="releases">
           <h2><a href="#releases">Latest version</a></h2>
-          <h3><a href="" itemprop="softwareApplication"></a></h3>
           <article itemscope itemtype="http://schema.org/SoftwareApplication">
             <dl>
               <dt class="browser-type">Type</dt>
@@ -119,9 +118,12 @@
           </article>
         </section>
 
-        <section id="known-issues" class="section" data-section="known-issues">
-          <h2><a href="#known-issues">Known issues</a></h2>
-          <p>These known issues apply to the <a href="#download">latest published build</a>. Where applicable, the detailed release notes below will list when historic known issues were fixed.</p>
+        <section id="compat" class="section" data-section="compat">
+          <div id="compatibility"></div>
+          <div id="known_issues"></div>
+          <div id="known-issues"></div>
+          <h2><a href="#compat">Known issues</a></h2>
+          <p>These known issues apply to the <a href="#releases">latest published build</a>. Where applicable, the detailed release notes below will list when historic known issues were fixed.</p>
           <ul class="bullets-light">
             <li><span><strong>Warning:</strong> Until the stability of WebVR improves (soon in upcoming releases), we recommend avoiding use of WebVR in <a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome for Android</a> and <a href="https://play.google.com/store/apps/details?id=com.chrome.canary">Chrome Canary</a>.</span></li>
             <li><span><strong>Note:</strong> Any WebVR site you visit must be already enrolled in the <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">WebVR Origin Trial</a> and contain a <code>&lt;meta&gt;</code> tag or HTTP response header with a valid Origin Trial token.</span></li>
