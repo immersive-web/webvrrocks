@@ -66,7 +66,6 @@
         {% block instructions_block %}
           <section id="setup" class="section setup" data-section="setup">
             <h2><a href="#setup">Setup instructions</a></h2>
-
             {% block instructions %}
             {% endblock %}
           </section>
@@ -75,8 +74,12 @@
         {% block headsets_block %}
           <section id="headsets" class="section headsets" data-section="headsets">
             <h2><a href="#headsets">Supported headsets</a></h2>
-
             {% block headsets %}
+              <ul class="bullets-light">
+                {% for slug in browser.headsets -%}
+                  <li><span><a href="{{ headsets[slug].about }}" itemprop="aboutUrl">{{ headsets[slug].name }}</a></span></li>
+                {%- endfor %}
+              </ul>
             {% endblock %}
           </section>
         {% endblock %}
@@ -129,19 +132,33 @@
                     <span itemprop="fileSize" content="">Unknown</span>
                   {% endif %}
                 </dd>
-                <dt class="browser-system-requirements">System requirements</dt>
-                <dd>
-                  <span class="operatingSystems" content="{{ browser.releases.operatingSystem }}">{{ browser.releases.operatingSystem }}</span>
-                  {% if browser.processorRequirements|upper == 'IA64' %}
-                    <span class="processorRequirements">
-                      64-bit
-                    </span>
-                  {% elif browser.processorRequirements|upper == 'IA32' %}
-                    <span class="processorRequirements">
-                      32-bit
-                    </span>
-                  {% endif %}
-                </dd>
+                {% if browser.showHeadsets !== false %}
+                  <dt class="browser-supported-headsets">Supported headsets</dt>
+                  <dd>
+                    {% for slug in browser.headsets %}
+                      <a href="{{ headsets[slug].about }}">{{ headsets[slug].name }}</a>
+                      {%- if loop.revindex > 1 %},{% endif %}
+                    {% endfor %}
+                  </dd>
+                {% endif %}
+                {% if browser.showOperatingSystem !== false %}
+                  <dt class="browser-system-requirements">System requirements</dt>
+                  <dd>
+                    <span class="operatingSystems" content="{{ browser.operatingSystem }}">{{ browser.operatingSystem }}</span>
+
+                    {% if browser.showProcessorRequirements !== false %}
+                      {% if browser.processorRequirements|upper == 'IA64' %}
+                        <span class="processorRequirements">
+                          64-bit
+                        </span>
+                      {% elif browser.processorRequirements|upper == 'IA32' %}
+                        <span class="processorRequirements">
+                          32-bit
+                        </span>
+                      {% endif %}
+                    {% endif %}
+                  </dd>
+                {% endif %}
 
                 {% block releases %}
                 {% endblock %}

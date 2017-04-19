@@ -58,7 +58,7 @@
       <div class="container">
         {% block instructions_block %}
           <section id="setup" class="section setup" data-section="setup">
-            <h2><a href="#setup">Instructions</a></h2>
+            <h2><a href="#setup">{{ instructions_heading or instructions_title or 'Setup instructions' }}</a></h2>
             {% block instructions %}
             {% endblock %}
           </section>
@@ -66,7 +66,7 @@
 
         {% block browsers_block %}
           <section id="browsers" class="section browsers" data-section="browsers">
-            <h2><a href="#browsers">Supported browsers</a></h2>
+            <h2><a href="#browsers">{{ demos_heading or demos_title or 'Supported browsers' }}</a></h2>
             {% block browsers %}
             {% endblock %}
           </section>
@@ -74,7 +74,7 @@
 
         {% block demos_block %}
           <section id="demos" class="section demos" data-section="demos">
-            <h2><a href="#demos">Demos</a></h2>
+            <h2><a href="#demos">{{ demos_heading or demos_title or 'Demos' }}</a></h2>
             <ul data-section="demos" class="matrix grid-flex-container">
               {% block demos %}
               {% endblock %}

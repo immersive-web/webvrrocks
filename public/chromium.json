@@ -7,6 +7,10 @@
   "description_html": "<a href=\"https://www.google.com/\">Google</a>&rsquo;s open-source version of <a href=\"https://www.google.com/chrome/\">Chrome</a>",
   "operatingSystem": "Windows 7.1+",
   "processorRequirements": "IA64",
+  "headsets": [
+    "htc_vive",
+    "oculus_rift"
+  ],
   "logo": "/chromium/icon.png",
   "image": "",
   "screenshot": "",

@@ -5,6 +5,9 @@
   "description": "Microsoft's Windows 10 browser",
   "description_html": "<a href=\"https://www.microsoft.com/\">Microsoft</a>&rsquo;s <a href=\"https://www.microsoft.com/en-us/windows/get-windows-10\">Windows 10</a> <a href=\"https://www.microsoft.com/windows/microsoft-edge\">browser</a>",
   "slug": "microsoft_edge",
+  "headsets": [
+    "windows_mixed_reality"
+  ],
   "operatingSystem": "Windows 10",
   "processorRequirements": "IA64",
   "logo": "/microsoft_edge/icon.png",

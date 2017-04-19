@@ -1,4 +1,4 @@
-{% from '_helpers.html' import author_item, browsers, demo_item, site_title %}
+{% from '_helpers.html' import author_item, browsers, demo_item, headsets, site_title %}
 {% set browser = browsers.chrome_for_android %}
 {% set page = 'chrome_for_android.html' %}
 <!doctype html>
@@ -49,10 +49,22 @@
           <p class="note"><strong>Note:</strong> Any WebVR site you visit must be already enrolled in the <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">WebVR Origin Trial</a> and contain a <code>&lt;meta&gt;</code> tag or HTTP response header with a valid Origin Trial token.</p>
         </section>
 
+        {% block headsets_block %}
+          <section id="headsets" class="section headsets" data-section="headsets">
+            <h2><a href="#headsets">Supported headsets</a></h2>
+            {% block headsets %}
+              <ul class="bullets-light">
+                {% for slug in browser.headsets -%}
+                  <li><span><a href="{{ headsets[slug].about }}" itemprop="aboutUrl">{{ headsets[slug].name }}</a></span></li>
+                {%- endfor %}
+              </ul>
+            {% endblock %}
+          </section>
+        {% endblock %}
+
         {% block demos_block %}
           <section id="demos" class="section demos" data-section="demos">
             <h2><a href="#demos">Demos</a></h2>
-
             <ul data-section="demos" class="matrix grid-flex-container">
               {% block demos %}
                 {{ demo_item('the_musical_forest') }}
@@ -70,38 +82,57 @@
           <h2><a href="#releases">Latest version</a></h2>
           <article itemscope itemtype="http://schema.org/SoftwareApplication">
             <dl>
-              <dt class="browser-type">Type</dt>
-              <dd>
-                <span class="applicationSubCategory">Browser Build</span>
-              </dd>
               <dt class="browser-download">Download</dt>
               <dd>
                 <a class="button button-outlined-approve button-download" href="{{ browser.downloadUrl }}" itemprop="downloadUrl" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid }}">Download</a>
               </dd>
-              <dt class="browser-version">Version</dt>
-              <dd>
-                <span itemprop="version" class="version" content="{{ browser.releases.latest.buildInfo.buildid }}">{{ browser.releases.latest.buildInfo.buildid }}</span>
-              </dd>
-              <dt class="browser-date-published">Date released</dt>
-              <dd>
-                <time itemprop="datePublished" datetime="{{ browser.releases.latest.dateReleased.isoString }}" title="{{ browser.releases.latest.dateReleased.isoString }}">
-                  {{ browser.releases.latest.dateReleased.datetimeString }}
-                </time>
-              </dd>
-              <dt class="browser-file-size">File size</dt>
-              <dd>
-                <span itemprop="fileSize" content="{{ browser.releases.latest.fileSize }}">{{ browser.releases.latest.fileSize }}</span>
-              </dd>
-              <dt class="browser-system-requirements">System requirements</dt>
-              <dd>
-                <span class="operatingSystems" content="{{ browser.releases.operatingSystem }}">{{ browser.releases.operatingSystem }}</span>
-                {% if browser.processorRequirements == 'IA64' or browser.processorRequirements == 'IA32' %}
-                  <span class="processorRequirements">
-                    {{ '64-bit' if browser.processorRequirements == 'IA64' }}
-                    {{ '32-bit' if browser.processorRequirements == 'IA32' }}
-                  </span>
-                {% endif %}
-              </dd>
+              {% if browser.showDateReleased != false and browser.releases.latest.version %}
+                <dt class="browser-version">Version</dt>
+                <dd>
+                  <span class="version">{{ browser.releases.latest.version }}</span>
+                </dd>
+              {% endif %}
+              {% if browser.showDateReleased and browser.releases.latest.dateReleased %}
+                <dt class="browser-date-published">Date released</dt>
+                <dd>
+                  <time itemprop="datePublished" datetime="{{ browser.releases.latest.dateReleased.isoString }}" title="{{ browser.releases.latest.dateReleased.isoString }}">
+                    {{ browser.releases.latest.dateReleased.datetimeString }}
+                  </time>
+                </dd>
+              {% endif %}
+              {% if browser.showFileSize != false and browser.releases.fileSize %}
+                <dt class="browser-file-size">File size</dt>
+                <dd>
+                  <span itemprop="fileSize" content="{{ browser.releases.fileSize|replace(' ', '') }}">{{ browser.releases.fileSize }}</span>
+                </dd>
+              {% endif %}
+              {% if browser.showHeadsets !== false %}
+                <dt class="browser-supported-headsets">Supported headsets</dt>
+                <dd>
+                  {% for slug in browser.headsets %}
+                    <a href="{{ headsets[slug].about }}">{{ headsets[slug].name }}</a>
+                    {%- if loop.revindex > 1 %},{% endif %}
+                  {% endfor %}
+                </dd>
+              {% endif %}
+              {% if browser.showOperatingSystem !== false %}
+                <dt class="browser-system-requirements">System requirements</dt>
+                <dd>
+                  <span class="operatingSystems" content="{{ browser.operatingSystem }}">{{ browser.operatingSystem }}</span>
+
+                  {% if browser.showProcessorRequirements !== false %}
+                    {% if browser.processorRequirements|upper == 'IA64' %}
+                      <span class="processorRequirements">
+                        64-bit
+                      </span>
+                    {% elif browser.processorRequirements|upper == 'IA32' %}
+                      <span class="processorRequirements">
+                        32-bit
+                      </span>
+                    {% endif %}
+                  {% endif %}
+                </dd>
+              {% endif %}
               <dt class="browser-authors">Authors</dt>
               <dd class="not-copy">
                 <ul class="authors-list">

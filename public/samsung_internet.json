@@ -5,8 +5,12 @@
   "description": "Samsung's browser for Gear VR",
   "description_html": "<a href=\"https://www.oculus.com/experiences/gear-vr/849609821813454/\">Samsung&rsquo;s browser</a> for <a href=\"https://www.samsung.com/global/galaxy/gear-vr/\">Gear VR</a>",
   "slug": "samsung_internet",
-  "operatingSystem": "Android",
-  "processorRequirements": "IA64",
+  "operatingSystem": "Android 5.1+",
+  "headsets": [
+    "samsung_gear_vr"
+  ],
+  "showProcessorRequirements": false,
+  "processorRequirements": "",
   "logo": "/samsung_internet/icon.png",
   "image": "/samsung_internet/screenshot.jpg",
   "url": "https://www.oculus.com/experiences/gear-vr/849609821813454/",

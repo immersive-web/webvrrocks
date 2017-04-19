@@ -64,9 +64,13 @@
               <dd>
                 <a class="button button-outlined-approve button-download" href="{{ browser.url }}" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}" itemprop="downloadUrl">Download</a>
               </dd>
+              <dt class="browser-supported-headsets">Supported headsets</dt>
+              <dd>
+                <a href="/samsung_gear_vr">Samsung Gear VR</a>
+              </dd>
               <dt class="browser-system-requirements">System requirements</dt>
               <dd>
-                <span class="operatingSystems">Samsung Gear VR</span>
+                <span class="operatingSystems">Android</span>
               </dd>
               {% if browser.showDateReleased != false and browser.releases.latest.version %}
                 <dt class="browser-version">Version</dt>

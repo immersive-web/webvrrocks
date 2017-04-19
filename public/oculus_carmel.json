@@ -6,7 +6,11 @@
   "description": "Oculus' VR browser for Gear VR",
   "description_html": "<a href=\"https://www.oculus.com/\">Oculus</a>&rsquo; <a href=\"https://www.oculus.com/experiences/gear-vr/1290985657630933/\">VR browser</a> for <a href=\"https://www.samsung.com/global/galaxy/gear-vr/\">Gear VR</a>",
   "operatingSystem": "Android 5.1+",
-  "processorRequirements": "IA64",
+  "headsets": [
+    "samsung_gear_vr"
+  ],
+  "showProcessorRequirements": false,
+  "processorRequirements": "",
   "logo": "/oculus_carmel/icon.png",
   "image": "/oculus_carmel/cover.png",
   "url": "https://www.oculus.com/experiences/gear-vr/1290985657630933/",

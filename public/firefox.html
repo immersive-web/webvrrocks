@@ -11,13 +11,6 @@
   </ol>
 {% endblock %}
 
-{% block headsets %}
-  <ul class="bullets-light">
-    <li><span><a href="{{ headsets.htc_vive.about }}" itemprop="aboutUrl">{{ headsets.htc_vive.name }}</a></span></li>
-    <li><span><a href="{{ headsets.oculus_rift.about }}" itemprop="aboutUrl">{{ headsets.oculus_rift.name }}</a></span></li>
-  </ul>
-{% endblock %}
-
 {% block demos %}
   {{ demo_item('a_saturday_night') }}
   {{ demo_item('a_painter') }}
@@ -37,4 +30,7 @@
 {% endblock %}
 
 {% block info_block %}
+{% endblock %}
+
+{% block faq_block %}
 {% endblock %}
