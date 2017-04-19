@@ -53,6 +53,8 @@
 {% includeData 'google_daydream.json' as google_daydream %}
 {% includeData 'windows_mixed_reality.json' as windows_mixed_reality %}
 
+{% includeData 'demos.json' as demos %}
+
 {# includeData '_db/webvr_scenes.json' as sites #}
 {# includeData '_db/bugs.json' as bugs #}
 {# includeData '_db/compat_reports.json' as compat_reports #}
@@ -79,86 +81,19 @@
 {% set headsets = {
   htc_vive: htc_vive,
   "oculus_rift": {
-    "name": "Oculus Rift"
+    "name": "Oculus Rift",
+    "about": "/oculus_rift"
   },
   "samsung_gear_vr": {
-    "name": "Samsung Gear VR"
+    "name": "Samsung Gear VR",
+    "about": "/samsung_gear_vr"
   },
   google_daydream: google_daydream,
   "google_cardboard": {
-    "name": "Google Cardboard"
+    "name": "Google Cardboard",
+    "about": "/google_cardboard"
   },
   windows_mixed_reality: windows_mixed_reality
-} %}
-
-{% set demos = {
-  "a_painter": {
-    "url": "https://aframe.io/a-painter/",
-    "image": "https://dl.airtable.com/RPPe979wRAil2X0OfUND_full_apainter.png",
-    "name": "A-Painter",
-    "description": "Paint and sketch in VR by Mozilla A-Frame team"
-  },
-  "a_blast": {
-    "url": "https://aframe.io/a-blast/",
-    "image": "/a_blast/poster.png",
-    "name": "A-Blast",
-    "description": "Save the world from the cutest creatures in the universe"
-  },
-  "dark_haze": {
-    "url": "https://christmasexperiments.com/2016/24/dark-haze/",
-    "image": "https://dl.airtable.com/63CkdQtS6OQszVONa4vr_full_dh1%2Clarge.2x.1482557323.jpg",
-    "name": "Dark Haze",
-    "description": "Where dust, smoke and other dry particles obscure the clarity of the sky"
-  },
-  "puzzle_rain": {
-    "url": "https://mozvr.com/puzzle-rain/",
-    "image": "/puzzle_rain/poster.png",
-    "name": "Puzzle Rain",
-    "description": "A musical WebVR journey for the HTC Vive"
-  },
-  "stagevr": {
-    "url": "https://jonathanzwhite.github.io/stagevr/",
-    "image": "/stage_vr/poster.png",
-    "name": "Stage VR",
-    "description": "Practice your next talk on the big stage"
-  },
-  "three_examples": {
-    "url": "https://threejs.org/examples/?q=webvr",
-    "image": "/three/poster.png",
-    "name": "Three.js WebVR examples"
-  },
-  "aframe_examples": {
-    "url": "https://aframe.io/",
-    "image": "/aframe/poster.png",
-    "name": "A-Frame WebVR examples"
-  },
-  "the_musical_forest": {
-    "url": "https://forest.webvrexperiments.com/",
-    "image": "/the_musical_forest/poster.jpg",
-    "name": "The Musical Forest"
-  },
-  "konterball": {
-    "url": "https://konterball.com/",
-    "image": "/konterball/poster.jpg",
-    "name": "Konterball"
-  },
-  "under_neon_lights": {
-    "url": "https://with.in/watch/under-neon-lights/",
-    "image": "/under_neon_lights/poster.png",
-    "name": "Under Neon Lights"
-  },
-  "bear_71": {
-    "url": "https://bear71vr.nfb.ca/",
-    "image": "/bear_71/poster.jpg",
-    "name": "Bear 71"
-  },
-  "a_saturday_night": {
-    "url": "https://aframe.io/a-saturday-night/",
-    "image": "/a_saturday_night/poster.jpg",
-    "name": "A Saturday Night",
-    "description": "Record and share your dance moves",
-    "background_size": "cover"
-  }
 } %}
 
 {% macro browser_platform_support (browser, headset, os) %}
@@ -183,20 +118,26 @@
   {% endif %}
 {% endmacro %}
 
-{% macro demo_item (slug, classes, id) %}
+{% macro demo_item (slug, classes, idAttr) %}
   {% set demo = demos[slug] %}
-  {% set slug = demo.slug or slug %}
-  <li itemprop="demo" itemscope itemtype="http://schema.org/{{ demo.@type }}" data-app-type="{{ demo.@type }}" data-slug="{{ slug }}" class="grid-flex-cell-1of2{% if class %} {{ classes }}{% endif %}"{% if id %} id="{{ id }}"{% endif %}>
+  {% set appType = demo.@type or '--WebApplication' %}
+  {% set appUrl = demo.start_url or demo.url %}
+  {% set appSlug = demo.slug or slug %}
+  {% set demoIdAttr = idAttr or appSlug %}
+  {% set appIcon = demo.icons[0] %}
+  <li itemprop="demo" itemscope itemtype="http://schema.org/{{ appType }}" data-app-type="{{ appType }}" data-slug="{{ appSlug }}" class="grid-flex-cell-1of2{% if classes %} {{ classes }}{% endif %}"{% if demoIdAttr %} id="{{ demoIdAttr }}"{% endif %}>
     <div>
       <div itemprop="details" class="demo-details">
-        <a itemprop="url" href="{{ demo.url }}" class="no-underline">
-          <div itemprop="image" style="background-image: url({{ demo.image }}){%-
-              if demo.background_size -%}; background-size: {{ demo.background_size }}
-            {%- endif %}">
+        <a itemprop="url" href="{{ appUrl }}" class="no-underline">
+          <div itemprop="image"{% if appIcon %} style="background-image: url({{ appIcon.src }}){%-
+              if appIcon.background_size -%}; background-size: {{ appIcon.background_size }}
+            {%- endif %}"{% endif %}>
           </div>
           <span itemprop="name" class="demo-name">{{ demo.name }}</span>
         </a>
-        <span itemprop="description">{{ (demo.description_html or demo.description)|safe }}</span>
+        {% if demo.description -%}
+          <span itemprop="description">{{ demo.description }}</span>
+        {%- endif %}
       </div>
     </div>
   </li>

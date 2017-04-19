@@ -184,6 +184,14 @@
             {% endblock %}
           </section>
         {% endblock %}
+
+        {% block faq_block %}
+          <section id="faq" class="section faq" data-section="faq">
+            <h2><a href="#faq">{{ faq_heading or faq_title or 'FAQ' }}</a></h2>
+            {% block faq %}
+            {% endblock %}
+          </section>
+        {% endblock %}
       </div>
     </main>
 
