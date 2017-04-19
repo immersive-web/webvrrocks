@@ -156,7 +156,8 @@
     "url": "https://aframe.io/a-saturday-night/",
     "image": "/a_saturday_night/poster.jpg",
     "name": "A Saturday Night",
-    "description": "Record and share your dance moves"
+    "description": "Record and share your dance moves",
+    "background_size": "cover"
   }
 } %}
 
@@ -184,11 +185,14 @@
 
 {% macro demo_item (slug, classes, id) %}
   {% set demo = demos[slug] %}
-  <li itemprop="demo" itemscope itemtype="http://schema.org/{{ demo.@type }}" data-app-type="{{ demo.@type }}" data-slug="{{ demo.slug }}" class="grid-flex-cell-1of2{% if class %} {{ classes }}{% endif %}" {% if id %} id="{{ id }}"{% endif %}>
+  {% set slug = demo.slug or slug %}
+  <li itemprop="demo" itemscope itemtype="http://schema.org/{{ demo.@type }}" data-app-type="{{ demo.@type }}" data-slug="{{ slug }}" class="grid-flex-cell-1of2{% if class %} {{ classes }}{% endif %}"{% if id %} id="{{ id }}"{% endif %}>
     <div>
       <div itemprop="details" class="demo-details">
         <a itemprop="url" href="{{ demo.url }}" class="no-underline">
-          <div itemprop="image" style="background-image: url({{ demo.image }})">
+          <div itemprop="image" style="background-image: url({{ demo.image }}){%-
+              if demo.background_size -%}; background-size: {{ demo.background_size }}
+            {%- endif %}">
           </div>
           <span itemprop="name" class="demo-name">{{ demo.name }}</span>
         </a>
@@ -203,7 +207,8 @@
   {% if not browser %}
     {% includeData slug + '.json' as browser %}
   {% endif %}
-  <li itemprop="browser" itemscope itemtype="http://schema.org/{{ browser.@type }}" data-app-type="{{ browser.@type }}" data-slug="{{ browser.slug }}" class="grid-flex-cell-1of2{% if class %} {{ classes }}{% endif %}" {% if id %} id="{{ id }}"{% endif %}>
+  {% set slug = browser.slug or slug %}
+  <li itemprop="browser" itemscope itemtype="http://schema.org/{{ browser.@type }}" data-app-type="{{ browser.@type }}" data-slug="{{ slug }}" class="grid-flex-cell-1of2{% if class %} {{ classes }}{% endif %}" {% if id %} id="{{ id }}"{% endif %}>
     <div>
       <div itemprop="details" class="browser-details">
         <a itemprop="url" href="{{ browser.about }}" class="no-underline">
