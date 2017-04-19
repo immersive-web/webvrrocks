@@ -17,4 +17,4 @@ deploy:
   github_token: $GITHUB_TOKEN  # Set in the https://travis-ci.org/cvan/blog/settings dashboard.
   on:
     branch: master
-  name: Cvan-o-matic-o-tron
+  name: WebVR-Rocks-o-matic-o-tron
