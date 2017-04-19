@@ -1,5 +1,6 @@
-{% from '_helpers.html' import browsers, browser_item, browser_notifications, youtube %}
-{% set page = 'index.html' %}
+{% from '_helpers.html' import browsers, browser_item, browser_notifications, headsets, youtube %}
+{% set page = 'index.html' -%}
+
 <!doctype html>
 <html lang="en" data-layout="home" data-newbie="true">
   <head>
@@ -32,7 +33,7 @@
         <section id="intro" class="section intro" data-section="intro">
           <div class="intro-text">
             <p class="intro-para"><strong>WebVR</strong> is a <a href="https://w3c.github.com/webvr/"><em>JavaScript API</em></a> for creating immersive 3D, <em>Virtual Reality</em> experiences in your <em>browser</em>.</p>
-            <p class="intro-compat">Works with the <a href="/htc_vive">HTC Vive</a>, <a href="/oculus_rift">Oculus Rift</a>, <a href="/samsung_gear_vr">Samsung Gear VR</a>, <a href="/google_daydream">Google Daydream</a>, and <a href="/google_cardboard">Google Cardboard</a>.</p>
+            <p class="intro-compat">Works with the <a href="{{ headsets.htc_vive.about }}">{{ headsets.htc_vive.name }}</a>, <a href="{{ headsets.oculus_rift.about }}">{{ headsets.oculus_rift.name }}</a>, <a href="{{ headsets.samsung_gear_vr.about }}">{{ headsets.samsung_gear_vr.name }}</a>, <a href="{{ headsets.google_daydream.about }}">{{ headsets.google_daydream.name }}</a>, and <a href="{{ headsets.google_cardboard.about }}">{{ headsets.google_cardboard.name }}</a>.</p>
           </div>
           <div class="intro-video">
             <a href="https://www.youtube.com/watch?v=Le8pTXQqM3s" class="button button-approve button-large button-watch-video" aria-controls="modal" data-expands-for>

@@ -1,10 +1,10 @@
 {
   "@context": "http://schema.org",
   "@type": "Product",
-  "name": "HTC Vive",
+  "name": "HTC VIVE",
   "slug": "htc_vive",
-  "description": "Roomscale VR, specially designed for SteamVR (OpenVR)",
-  "description_html": "Roomscale VR, specially designed for <a href=\"http://store.steampowered.com/steamvr\">SteamVR</a> (<a href=\"https://github.com/ValveSoftware/openvr\">OpenVR</a>)",
+  "description": "Roomscale VR for SteamVR and OpenVR",
+  "description_html": "Roomscale VR for <a href=\"http://store.steampowered.com/steamvr\">SteamVR</a> and <a href=\"https://github.com/ValveSoftware/openvr\">OpenVR</a>",
   "operatingSystem": "Windows 7.1+",
   "processorRequirements": "IA64",
   "logo": "/htc_vive/logo.png",
@@ -13,6 +13,11 @@
   "screenshot": "",
   "url": "/htc_vive",
   "about": "/htc_vive",
+  "sameAs": [
+    "https://www.vive.com/",
+    "http://store.steampowered.com/steamvr",
+    "https://github.com/ValveSoftware/openvr"
+  ],
   "creator": [
     {
       "@type": "Company",
@@ -45,7 +50,8 @@
   ],
   "requirements": [
     "https://www3.oculus.com/setup/",
-    "https://www.vive.com/us/setup/"
+    "https://www.vive.com/us/setup/",
+    "http://store.steampowered.com/app/323910"
   ],
   "fileSize": "93 MB",
   "license": "",

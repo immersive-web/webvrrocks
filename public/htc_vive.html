@@ -1,28 +1,20 @@
 {% set slug = 'htc_vive' %}
-
 {% extends '_layout_headset.html' %}
 
 {% block instructions %}
   <ol class="bullets-light">
-    <li><span>Download and run the <a href="http://store.steampowered.com/app/323910/">SteamVR Performance Test</a> to ensure your machine meets the minimum requirements to enjoy VR in the HTC Vive.</span></li>
+    <li><span>Download and run the <a href="http://store.steampowered.com/app/323910/">SteamVR Performance Test</a> to ensure your machine meets the minimum requirements to enjoy VR in the {{ headset.name }}.</span></li>
     <li><span>Download and install a <a href="#browsers">WebVR-capable browser</a>.</span></li>
   </ol>
   <p>You may wish to upgrade your Windows PC manually, order/build a new custom machine, or purchase a <a href="https://www.vive.com/ready/">pre-built Vive-ready PC</a>.</p>
   <p>(If needed, refer to the <a href="http://dl4.htc.com/web_materials/Manual/Vive/Vive_User_Guide.pdf">Vive User Guide</a> or the <a href="https://support.steampowered.com/kb_article.php?ref=5254-FJKZ-7829">SteamVR Support pages</a>.)</p>
 {% endblock %}
 
-<!--
-<img class="headset-icon headset-icon-htc-vive" src="/htc_vive/photo.png" alt="HTC Vive" title="HTC Vive">
-<a class="headset-logo-wrap" href="https://www.vive.com/">
-  <img class="headset-logo headset-logo-htc-vive" src="/htc_vive/logo.svg" alt="HTC Vive" title="HTC Vive">
-</a>
--->
-
 {% block browsers %}
-  <h3><a href="{{ browsers.chromium.about }}" itemprop="aboutUrl">Chromium</a></h3>
-  <p><a class="button button-outlined-approve button-download" href="{{ browser.chromium.about }}" itemprop="aboutUrl">Download</a></p>
-  <h3><a href="{{ browsers.firefox.about }}" itemprop="aboutUrl">Firefox</a></h3>
-  <p><a class="button button-outlined-approve button-download" href="{{ browser.firefox.about }}" itemprop="aboutUrl">Download</a></p>
+  <h3><a href="{{ browsers.firefox.about }}" itemprop="aboutUrl">{{ browsers.firefox.name }}</a></h3>
+  <p><a class="button button-outlined-approve button-download" href="{{ browsers.firefox.about }}" itemprop="aboutUrl">Download</a></p>
+  <h3><a href="{{ browsers.chromium.about }}" itemprop="aboutUrl">{{ browsers.chromium.name }}</a></h3>
+  <p><a class="button button-outlined-approve button-download" href="{{ browsers.chromium.about }}" itemprop="aboutUrl">Download</a></p>
 {% endblock %}
 
 {% block demos %}
@@ -40,9 +32,9 @@
     <dt>Why is Windows the only supported operating system?</dt>
     <dd></dd>
     -->
-    <dt id="when_is_support_landing_in_release_channel_browsers"><a href="#when_is_support_landing_in_release_channel_browsers">When is WebVR support for the HTC Vive landing in release-channel browsers?</a></dt>
-    <dd>WebVR support for the HTC Vive is estimated to ship in mid-2017 in the stable, release-channel versions of both <a href="{{ browsers.firefox.about }}">{{ browsers.firefox.name }}</a> and <a href="{{ browsers.chrome.about }}">{{ browsers.chrome.name }}</a>.</dd>
-    <dt id="can_i_still_use_a_vive_pre_developer_kit"><a href="#can_i_still_use_a_vive_pre_developer_kit">Can I still use a Vive Pre developer kit?</a></dt>
+    <dt id="when_is_support_landing_in_release_channel_browsers"><a href="#when_is_support_landing_in_release_channel_browsers">When is WebVR support for the {{ headset.name }} landing in release-channel browsers?</a></dt>
+    <dd>WebVR support for the {{ headset.name }} is estimated to ship in mid-2017 in the stable, release-channel versions of both <a href="{{ browsers.firefox.about }}">{{ browsers.firefox.name }}</a> and <a href="{{ browsers.chrome.about }}">{{ browsers.chrome.name }}</a>.</dd>
+    <dt id="can_i_still_use_a_vive_pre_developer_kit"><a href="#can_i_still_use_a_vive_pre_developer_kit">Can I still use a VIVE Pre developer kit?</a></dt>
     <dd>
       <p>
         If you have a <a href="https://developer.viveport.com/managed-assets/shared/desktop/vive/Vive_PRE_User_Guide.pdf">Vive Pre development kit</a>, you may still be able to follow these same instructions to use WebVR, but there are no guarantees of stability nor performance.

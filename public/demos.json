@@ -38,7 +38,7 @@
   "puzzle_rain": {
     "@type": "WebApplication",
     "name": "Puzzle Rain",
-    "description": "A musical WebVR journey for the HTC Vive",
+    "description": "A musical WebVR journey for the HTC VIVE",
     "start_url": "https://mozvr.com/puzzle-rain/",
     "icons": [
       {
