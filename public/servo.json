@@ -12,14 +12,35 @@
   "about": "/servo",
   "downloadUrl": "https://github.com/MortimerGoro/servo/releases/download/0.2/servo_gamepad.rar",
   "//downloadUrl": "//https://download.servo.org/nightly/windows/servo-latest.msi",
-  "softwareVersion": "0.2",
   "sameAs": [
     "https://developer.oculus.com/webvr/"
   ],
-  "showDateReleased": false,
+  "showDateReleased": true,
+  "showFileSize": true,
+  "showVersion": true,
+  "dateReleased": {
+    "originalDateTimeString": "16-Dec-2016 9:39",
+    "datetime": 1481909940000,
+    "datetimeString": "Dec 16, 2016, 9:39 AM",
+    "dateString": "Dec 16, 2016",
+    "timeString": "9:39 AM",
+    "isoString": "2016-12-16T17:39:00.000Z"
+  },
+  "softwareVersion": "0.2",
+  "fileSize": "36 MB",
   "releases": {
     "latest": {
-      "url": "https://github.com/MortimerGoro/servo/releases/download/0.2/servo_gamepad.rar"
+      "url": "https://github.com/MortimerGoro/servo/releases/download/0.2/servo_gamepad.rar",
+      "version": "0.2",
+      "fileSize": "36 MB",
+      "dateReleased": {
+        "originalDateTimeString": "16-Dec-2016 9:39",
+        "datetime": 1481909940000,
+        "datetimeString": "Dec 16, 2016, 9:39 AM",
+        "dateString": "Dec 16, 2016",
+        "timeString": "9:39 AM",
+        "isoString": "2016-12-16T17:39:00.000Z"
+      }
     }
   },
   "targetProduct": {

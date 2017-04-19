@@ -36,10 +36,15 @@
         {% if hasDownload or browser.landingUrl or browser.url %}
           <div id="download" class="download dropdown-standalone dropdown-download">
             <a href="{{ browser.landingUrl or browser.url }}" itemprop="downloadUrl" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.releases.latest.buildInfo.buildid or browser.releases.latest.url }}" data-download-available="{{ 'true' if hasDownload else 'false' }}">{{ 'Download' if hasDownload else 'Get started' }} {% include "media/img/download-icon.svg" if hasDownload else "media/img/arrow-forward.svg" %}
-              {%- if browser.showDateReleased and (browser.releases.latest.version or browser.releases.latest.dateReleased) %}
+              {%- if (browser.showVersion and browser.releases.latest.version) or (browser.showDateReleased and browser.releases.latest.dateReleased) %}
                 <span class="download-info c">
-                  <span class="download-date">{{ browser.releases.latest.version or browser.releases.latest.dateReleased.datetimeString }}</span>
-                  {%- if browser.releases.latest.fileSize %}
+                  {% if browser.showVersion and browser.releases.latest.version %}
+                    <span class="download-version">Version {{ browser.releases.latest.version }}</span>
+                  {%- endif %}
+                  {% if browser.showDateReleased and browser.releases.latest.dateReleased %}
+                    <span class="download-date">{{ browser.releases.latest.dateReleased.datetimeString }}</span>
+                  {%- endif %}
+                  {%- if browser.showFileSize and browser.releases.latest.fileSize %}
                     <span class="download-size">{{ browser.releases.latest.fileSize }}</span>
                   {%- endif -%}
                 </span>
