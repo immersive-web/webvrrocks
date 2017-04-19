@@ -268,12 +268,12 @@
 {% endmacro %}
 
 {% macro youtube (video_id, opts) %}
-  {% set width = opts.width or 315 %}
-  {% set height = opts.height or 560 %}
-  {% set classes = opts.classes or '' %}
-  {% set id = opts.id or '' %}
-  <div class="iframe-container{% if classes %} {{ classes }}{% endif %}" {% if id %} id="{{ id }}"{% endif %}>
-    <iframe id="yt-{{ video_id }}" class="iframe" width="{{ width or '560' }}" height="{{ height or '315' }}" src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&origin=http://localhost:3000" frameborder="0" allowfullscreen="true"></iframe>
+  {% set width = opts.width or 560 %}
+  {% set height = opts.height or 315 %}
+  {% set classes = opts.classes or opts.class or opts.className or '' %}
+  {% set id = opts.id or opts.videoId or opts.video_id or '' %}
+  <div class="iframe-container{% if classes %} {{ classes }}{% endif %}"{% if id %} id="{{ id }}"{% endif %}>
+    <iframe id="yt-{{ video_id }}" class="iframe" width="{{ width }}" height="{{ height }}" src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&amp;origin=https://webvr.rocks" frameborder="0" allowfullscreen="true"></iframe>
     <!-- style="background-image: url(https://img.youtube.com/vi/{{ video_id }}/0.jpg)" -->
   </div>
 {% endmacro %}
