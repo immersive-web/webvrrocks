@@ -607,8 +607,16 @@ a.download:visited {
 
 .button-download .download-info {
   clear: both;
-  color: rgba(255,255,255,.6);
   font-size: .5rem;
+}
+
+.button-download .download-version {
+  color: rgba(255,255,255,.8);
+}
+
+.button-download .download-date,
+.button-download .download-size {
+  color: rgba(255,255,255,.6);
 }
 
 .button-download .download-info,
@@ -625,9 +633,13 @@ a.download:visited {
   width: 0;
 }
 
+.download-version,
+.download-date {
+  text-align: left;
+}
+
 .download-date {
   float: left;
-  text-align: left;
 }
 
 .download-size {
