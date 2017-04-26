@@ -14,7 +14,7 @@ deploy:
   provider: pages
   local_dir: _prod
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in this project's Travis CI Settings: https://travis-ci.org/webvrrocks/webvrrocks/settings
+  github_token: $GITHUB_TOKEN  # Set in this project's Travis CI Settings: https://travis-ci.org/WebVRRocks/webvrrocks/settings
   on:
     branch: master
   name: WebVR-Rocks-o-matic-o-tron
