@@ -288,6 +288,7 @@ h1.page-heading {
 .notifications {
   display: flex;
   flex-direction: column-reverse;
+  margin-bottom: 1.5rem;
 }
 
 .notifications .message {
@@ -1618,7 +1619,6 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
   }
 
   .main h1 {
-    border-top: 1px solid #eee;
     padding-top: 3rem;
   }
 
