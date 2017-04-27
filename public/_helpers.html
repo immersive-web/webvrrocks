@@ -76,7 +76,7 @@
   {% set url = learn.url %}
   {% set thumb = learn.thumbnail %}
   {% set author = learn.author %}
-
+  {% set datePublished = learn.date_published %}
   <li>
     <div>
       <div>
@@ -84,7 +84,8 @@
           <img src="{{ thumb }}"/>
           <h3>{{ name }}</h3>
         </a>
-        {{ description }}
+        <time datetime="{{ datePublished }}">{{ datePublished }}</time>
+        <p>{{ description }}</p>
       </div>
     </div>
   </li>

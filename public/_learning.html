@@ -1,7 +1,9 @@
 {% from '_helpers.html' import learning_item %}
 
-<section class="notifications" id="notifications">
+<section class="learning" id="learning">
   {% block learning %}
-    {{ learning_item('progressive-webvr') }}
+    <ul>
+      {{ learning_item('progressive-webvr') }}
+    </ul>
   {% endblock %}
 </section>
