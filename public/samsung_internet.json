@@ -2,11 +2,12 @@
   "@context": "http://schema.org",
   "@type": "MobileApplication",
   "name": "Samsung Internet",
-  "description": "Samsung's browser for Gear VR",
-  "description_html": "<a href=\"https://www.oculus.com/experiences/gear-vr/849609821813454/\">Samsung&rsquo;s browser</a> for <a href=\"https://www.samsung.com/global/galaxy/gear-vr/\">Gear VR</a>",
+  "description": "Samsung's browser for mobile & Gear VR",
+  "description_html": "Samsung's browser for <a href=\"http://developer.samsung.com/internet\">mobile</a> &amp; <a href=\"https://www.oculus.com/experiences/gear-vr/849609821813454/\">Gear VR</a>",
   "slug": "samsung_internet",
   "operatingSystem": "Android 5.1+",
   "headsets": [
+    "google_cardboard",
     "samsung_gear_vr"
   ],
   "showProcessorRequirements": false,
@@ -22,7 +23,7 @@
     "latest": {
       "url": "https://www.oculus.com/experiences/gear-vr/849609821813454/",
       "fileSize": "224.56 MB",
-      "version": "5.2.00-13"
+      "version": "5.2.00-14"
     }
   },
   "fileSize": "",
@@ -59,7 +60,7 @@
       "windows": "headset_unsupported",
       "mac": "headset_unsupported",
       "linux": "headset_unsupported",
-      "android": "browser_unsupported",
+      "android": "supported",
       "ios": "browser_unsupported"
     },
     "windows_mixed_reality": {
