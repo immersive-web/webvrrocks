@@ -44,7 +44,7 @@
                   {% if browser.showDateReleased and browser.releases.latest.dateReleased %}
                     <span class="download-date">{{ browser.releases.latest.dateReleased.datetimeString }}</span>
                   {%- endif %}
-                  {%- if browser.showFileSize and browser.releases.latest.fileSize %}
+                  {%- if browser.showFileSize != true and browser.releases.latest.fileSize %}
                     <span class="download-size">{{ browser.releases.latest.fileSize }}</span>
                   {%- endif -%}
                 </span>
@@ -124,14 +124,16 @@
                     </time>
                   </dd>
                 {% endif %}
-                <dt class="browser-file-size">File size</dt>
-                <dd>
-                  {% if browser.releases.latest.fileSize %}
-                    <span itemprop="fileSize" content="{{ browser.releases.latest.fileSize }}">{{ browser.releases.latest.fileSize }}</span>
-                  {% else %}
-                    <span itemprop="fileSize" content="">Unknown</span>
-                  {% endif %}
-                </dd>
+                {% if browser.showFileSize != false %}
+                  <dt class="browser-file-size">File size</dt>
+                  <dd>
+                    {% if browser.releases.latest.fileSize %}
+                      <span itemprop="fileSize" content="{{ browser.releases.latest.fileSize }}">{{ browser.releases.latest.fileSize }}</span>
+                    {% else %}
+                      <span itemprop="fileSize" content="">Unknown</span>
+                    {% endif %}
+                  </dd>
+                {% endif %}
                 {% if browser.showHeadsets !== false %}
                   <dt class="browser-supported-headsets">Supported headsets</dt>
                   <dd>
