@@ -1018,7 +1018,7 @@ th[data-platform="ios"] a:before {
 }
 
 thead th:first-child {
-  width: 6.85rem;
+  width: 7.5rem;
 }
 
 tr[data-headset] th a {
@@ -1091,6 +1091,7 @@ tr[data-headset="google_cardboard"] th a:before {
 tr[data-headset="windows_mixed_reality"] th a:before {
   background-image: url(../../windows_mixed_reality/logo.svg);
   height: 27px;
+  width: 5.8rem;
 }
 
 /*
