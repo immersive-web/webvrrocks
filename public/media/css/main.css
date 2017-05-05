@@ -311,7 +311,7 @@ h1.page-heading {
 }
 
 .notifications time[itemprop="dateReported"],
-[data-section~="info"] time {
+[data-section~="links"] time {
   color: rgba(0,0,0,.5);
   display: block;
   font-size: .8rem;
@@ -405,7 +405,7 @@ html:not([data-layout~="home"]) .main ol,
 html:not([data-layout~="home"]) .main ul,
 .page-intro {
   margin-bottom: 1.5rem;
-  max-width: 45rem;
+  max-width: 47rem;
 }
 
 .table-responsive {
@@ -1414,6 +1414,11 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a {
 html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
   border-color: rgba(255,255,255,.8);
   color: rgba(255,255,255,.8);
+}
+
+[data-section~="links"] > ul {
+  overflow-y: auto;
+  max-height: 400px;
 }
 
 [data-section~="info"] li + li {

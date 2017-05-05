@@ -203,11 +203,11 @@
           {% endblock %}
         {% endif -%}
 
-        {% block info_block %}
-          <section id="info" class="section info" data-section="info">
-            <div id="links"></div>
-            <h2><a href="#info">{{ info_heading or info_title or 'Info' }}</a></h2>
-            {% block info %}
+        {% block links_block %}
+          <section id="links" class="section info links" data-section="info links">
+            <div id="info"></div>
+            <h2><a href="#links">{{ links_heading or links_title or info_heading or info_title or 'Links' }}</a></h2>
+            {% block links %}
             {% endblock %}
           </section>
         {% endblock %}
