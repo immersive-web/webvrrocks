@@ -20,6 +20,7 @@
     "https://webvr.rocks/microsoft_edge",
     "https://www.microsoft.com/en-us/windows/microsoft-edge"
   ],
+  "showFileSize": false,
   "showDateReleased": false,
   "releases": {
     "latest": {
