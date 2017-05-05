@@ -496,7 +496,6 @@ p.message {
   margin-top: 0;
 }
 
-
 .main dd + dt {
   padding-top: 1rem;
 }
@@ -509,14 +508,28 @@ p.message {
   margin-bottom: 0;
 }
 
-.main [data-section~="info"] dt {
-  cursor: pointer;
+.main [data-section~="info"] dd + dt,
+.main [data-section~="faq"] dd + dt {
+  padding-top: 2rem;
 }
 
-.main [data-section~="info"] dd + dt {
-  padding-top: 1.5rem;
+.main [data-section~="faq"] dt a {
+  color: #333;
 }
 
+.main [data-section~="faq"] dt a:hover {
+  color: #111;
+}
+
+.main [data-section~="faq"] dd {
+  opacity: .7;
+  transition: .15s opacity ease-in-out;
+}
+
+.main [data-section~="faq"] dt:hover + dd,
+.main [data-section~="faq"] dd:hover {
+  opacity: .9;
+}
 
 .main li + li {
   margin-top: .75rem;
@@ -1233,7 +1246,7 @@ a.button-source:after {
   line-height: 1.8;
 }
 
-.note strong {
+.note > strong:first-child {
   color: #666;
   margin-right: .5ch;
   text-transform: uppercase;

@@ -19,9 +19,7 @@
 
         <p class="browser-intro page-intro">{{ (browser.description_html or browser.description)|safe }}</p>
 
-        <p class="message message-alert">
-          <strong>Warning:</strong> WebVR support in <a href="#releases">Chrome for Android</a> is being conducted as an <a href="#chrome_origin_trial">Origin Trial experiment</a> and subject to change!
-        </p>
+        {% include '_notifications.html' %}
 
         {% if browser.releases %}
           <div id="download" class="download dropdown-standalone dropdown-download">
@@ -46,8 +44,8 @@
             <li><span>In the URL bar, load <code>chrome://flags#enable-webvr</code> and toggle the <code>Enable WebVR flag</code>.</span></li>
             <li><span>Enjoy WebVR content!</span></li>
           </ol>
-          <p class="note"><strong>Warning:</strong> Until the stability of WebVR improves (soon in upcoming releases), we recommend avoiding use of WebVR in <a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome for Android</a> and <a href="https://play.google.com/store/apps/details?id=com.chrome.canary">Chrome Canary</a>.</p>
-          <p id="chrome_origin_trial" class="note note-chrome-origin-trial"><strong>Note for Developers:</strong> For your WebVR site to work by default in release-channel Chrome for Android (without users having to manually enable WebVR from `chrome://flags) in the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform">WebVR Origin Trial</a> (<a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">announcement blog post</a>) and contain a <code>&lt;meta&gt;</code> tag or HTTP response header with a valid Origin Trial token.</p>
+          <p class="note"><strong>Warning:</strong> Until the stability of WebVR improves (soon in upcoming releases), we recommend avoiding the use of WebVR in <a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome for Android</a> and <a href="https://play.google.com/store/apps/details?id=com.chrome.canary">Chrome Canary</a>.</p>
+          <p id="chrome_origin_trial" class="note note-chrome-origin-trial"><strong>Note for Developers:</strong> For your WebVR site to work by default in release-channel Chrome for Android (without users having to manually enable WebVR from <code>chrome://flags</code>), you must <a href="https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform"><strong>sign up here</strong> to request a token for your site&rsquo;s origin (domain)</a>. <br><br> You will receive an email containing the token within 24 hours; to <a href="https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin">enable the WebVR Origin Trial</a> for your site, put the token in a <code>&lt;meta http-equiv=&quot;origin-trial&quot; content=&quot;&hellip;&quot;&gt;</code> tag or as an <code>Origin-Trial</code> HTTP response header. You can <a href="https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform">sign up here</a>, and <a href="#what_is_the_webvr_origin_trial">refer to the FAQ for more details</a>.</p>
         </section>
 
         {% block headsets_block %}
@@ -246,18 +244,30 @@
           </ul>
         </section>
 
-        <section id="faq" class="section" data-section="faq">
+        <section id="faq" class="section" data-section="info faq">
           <div id="help"></div>
           <div id="support"></div>
           <h2><a href="#faq">FAQ</a></h2>
           <dl>
-            <dt>What is the difference between Chromium and Chrome?</dt>
+            <dt id="what_is_the_difference_between_chromium_and_chrome"><a href="what_is_the_difference_between_chromium_and_chrome">What is the difference between Chromium and Chrome?</a></dt>
             <dd><a href="https://www.chromium.org/">Chromium</a> is an open-source Web browser project, started and maintained by <a href="https://www.google.com/">Google</a>, for the proprietary, closed-source <a href="https://www.google.com/chrome/">Google Chrome</a> browser. Chromium and Chrome share the majority of code and functionality, though there are some minor differences in features (e.g., video/audio codecs, Speech Recognition/Synthesis APIs, etc.), branding/logos, and licensing.</dd>
-            <dt>What is Blink?</dt>
+            <dt id="what_is_blink"><a href="#what_is_blink">What is Blink?</a></dt>
             <dd><a href="https://www.chromium.org/blink">Blink</a> is the rendering engine used by <a href="https://www.chromium.org/">Chromium</a>.</dd>
-            <dt>Which audio and video codecs are supported?</dt>
+            <dt id="which_audio_and_video_codecs_are_supported"><a href="#which_audio_and_video_codecs_are_supported">Which audio and video codecs are supported?</a></dt>
             <dd>
               <p>Because of licensing issues, only <a href="https://www.chromium.org/audio-video">these open codecs</a> are supported right now. Namely, MP3 and x264 are <strong>not</strong> supported. These formats are supported: Opus audio (<code>audio/opus</code>, <code>audio/ogg</code>), WebM (<code>video/webm</code>), Theora (<code>video/ogg</code>), Vorbis (<code>audio/vorbis</code>), VP8, VP9, and WAV.</p>
+            </dd>
+            <dt id="what_is_the_webvr_origin_trial"><a href="#what_is_the_webvr_origin_trial">What is the WebVR Origin Trial?</a></dt>
+            <dd>
+              <p>
+                An <a href="https://github.com/jpchase/OriginTrials/blob/gh-pages/explainer.md">Origin Trial</a> is a system built into Chrome that allows an API to be available as an experiment, enabled for all users on a particular site&rsquo;s origin (for a fixed period of time, such as three months).
+              </p>
+              <p>
+                On Chrome for Android, <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">WebVR Origin Trial</a> support was introduced in <a href="https://github.com/jpchase/OriginTrials/blob/gh-pages/available-trials.md#current-experimental-features">Chrome M56</a>; the current trial ends on <a href="https://github.com/jpchase/OriginTrials/blob/gh-pages/available-trials.md#current-experimental-features">June 13, 2017</a>.
+              </p>
+              <p>
+                For your WebVR site to work by default in release-channel Chrome for Android (without users having to manually enable WebVR from <code>chrome://flags</code>), you must <a href="https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform"><strong>sign up here</strong> to request a token for your site&rsquo;s origin (domain)</a>. <br><br> You will receive an email containing the token within 24 hours; to <a href="https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin">enable the WebVR Origin Trial</a> for your site, put the token in a <code>&lt;meta http-equiv=&quot;origin-trial&quot; content=&quot;&hellip;&quot;&gt;</code> tag or as an <code>Origin-Trial</code> HTTP response header. You can <strong><a href="https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform">sign up here</a></strong>.
+              </a>
             </dd>
           </dl>
         </section>
