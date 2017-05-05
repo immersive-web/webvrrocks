@@ -3,27 +3,29 @@
 {% macro browser_notifications (browser) %}
   {% if browser.notifications %}
     {% for message in browser.notifications %}
-      {% set type = message.type if (message.type == 'error' or message.type == 'alert' or message.type == 'success') %}
-      {% set message_id = 'message-' + browser.slug + '-' + loop.index %}
-      {% set order = message.order or message.position or message.rank %}
-      <div class="message{{ ' message-' + type if type }}{{ ' message-dismissable' if message.dismissable }}{{ ' message-pinned' if message.pinned }}" aria-expanded="true" id="{{ message_id }}" data-date-reported="{{ message.datePublished.datetime }}"{% if order %} style="order: {{ order }}"{% endif %}{% if message.dismissable %} data-dismissable="true"{% endif %}{% if message.pinned %} data-pinned="true"{% endif %}>
-        <p>
-          {% if message.datePublished %}
-            <time itemprop="dateReported" datetime="{{ message.datePublished.datetime }}">{{ message.datePublished.pretty or message.datePublished.dateString }}</time>
-          {% endif %}
+      {% if message.enabled != false %}
+        {% set type = message.type if (message.type == 'error' or message.type == 'alert' or message.type == 'success') %}
+        {% set message_id = 'message-' + browser.slug + '-' + loop.index %}
+        {% set order = message.order or message.position or message.rank %}
+        <div class="message{{ ' message-' + type if type }}{{ ' message-dismissable' if message.dismissable }}{{ ' message-pinned' if message.pinned }}" aria-expanded="true" id="{{ message_id }}" data-date-reported="{{ message.datePublished.datetime }}"{% if order %} style="order: {{ order }}"{% endif %}{% if message.dismissable %} data-dismissable="true"{% endif %}{% if message.pinned %} data-pinned="true"{% endif %}>
+          <p>
+            {% if message.datePublished %}
+              <time itemprop="dateReported" datetime="{{ message.datePublished.datetime }}">{{ message.datePublished.pretty or message.datePublished.dateString }}</time>
+            {% endif %}
 
-          {% if message.content_html %}
-            {{ message.content_html|safe }}
-          {% elif message.content %}
-            {{ message.content }}
-          {% else %}
-            {{ message }}
+            {% if message.content_html %}
+              {{ message.content_html|safe }}
+            {% elif message.content %}
+              {{ message.content }}
+            {% else %}
+              {{ message }}
+            {% endif %}
+          </p>
+          {% if message.dismissable %}
+            <a class="close" title="close">&times;</a>
           {% endif %}
-        </p>
-        {% if message.dismissable %}
-          <a class="close" title="close">&times;</a>
-        {% endif %}
-      </div>
+        </div>
+      {% endif %}
     {% endfor %}
   {% endif %}
 {% endmacro %}

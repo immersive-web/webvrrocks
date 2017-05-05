@@ -408,8 +408,8 @@
     {
       "type": "error",
       "dismissable": false,
-      "content": "Bug 1359460: New bug in Firefox Nightly; temporary workaround: load `about:config` and set `security.sandbox.gpu.level` to `0`",
-      "content_html": "<a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1359460\"><strong>Bug 1359460:</strong></a> New bug in <a href=\"/firefox#download\">Firefox Nightly</a>; temporary workaround: load <code>about:config</code> and set <code>security.sandbox.gpu.level</code> to <code>0</code>",
+      "content": "WebVR affected by bug in Firefox Nightly; temporary workaround is to load `about:config` and set `security.sandbox.gpu.level` to `0`",
+      "content_html": "<a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1359460\">WebVR affected by bug</a> in <a href=\"/firefox#download\">Firefox Nightly</a>; temporary workaround is to load <code>about:config</code> and set <code>security.sandbox.gpu.level</code> to <code>0</code>",
       "datePublished": {
         "originalDateTimeString": "25-Feb-2017 14:44",
         "datetime": 1488062640000,
@@ -422,6 +422,7 @@
     },
     {
       "type": "success",
+      "enabled": false,
       "dismissable": false,
       "content": "Firefox Nightly now supports Oculus Touch controllers!",
       "content_html": "<a href=\"/firefox#download\">Firefox Nightly</a> now supports <a href=\"https://www.oculus.com/rift/#u_0_g\">Oculus Touch</a> controllers!",

@@ -137,5 +137,29 @@
       "android": "headset_unsupported",
       "ios": "headset_unsupported"
     }
-  }
+  },
+  "notifications": [
+    {
+      "pinned": true,
+      "type": "alert",
+      "content_html": "Warning: WebVR support in Chrome for Android is being conducted as an Origin Trial experiment and subject to change",
+      "content_html": "<strong>Warning:</strong> WebVR support in <a href=\"#releases\">Chrome for Android</a> is being conducted as an <a href=\"#chrome_origin_trial\">Origin Trial experiment</a> and subject to change",
+      "position": 3
+    },
+    {
+      "type": "warning",
+      "dismissable": false,
+      "content": "Developers: Register for new WebVR Origin Trial tokens (Chrome for Android)",
+      "content_html": "Developers: <a href=\"/chrome_for_android#what_is_the_webvr_origin_trial\">Register for new WebVR Origin Trial tokens</a> (Chrome for Android)",
+      "datePublished": {
+        "originalDateTimeString": "2017-05-05T13:34:17.253Z",
+        "datetime": 1493991257253,
+        "datetimeString": "May 5, 2017, 6:34 AM",
+        "dateString": "May 5, 2017",
+        "timeString": "6:34 AM",
+        "isoString": "2017-05-05T13:34:17.253Z"
+      },
+      "position": 2
+    }
+  ]
 }
