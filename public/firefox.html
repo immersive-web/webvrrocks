@@ -29,7 +29,35 @@
   </dd>
 {% endblock %}
 
-{% block info_block %}
+
+{% block links %}
+  <ul class="bullets-light">
+    {% for link in browser.links %}
+      {% if link.enabled != false %}
+        <li>
+          <span>
+            <a href="{{ link.url }}">
+              {% if link.source and link.title %}
+                {{ link.source }}: <em>{{ link.title }}</em>
+              {% elif link.source %}
+                {{ link.source }}
+              {% elif link.title %}
+                <em>{{ link.title }}</em>
+              {% endif %}
+
+              {% if link.date %}
+                <time {% if link.datetime %}datetime="{{ link.datetime }}" {% endif -%}
+                  {% if link.datetime_original %}data-datetime-original="{{ link.datetime_original }}" {% endif -%}
+                  title="{{ link.datetime_title or link.date }}">
+                  {{ link.date }}
+                </time>
+              {% endif %}
+            </a>
+          </span>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
 {% endblock %}
 
 {% block faq_block %}

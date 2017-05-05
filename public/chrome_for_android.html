@@ -20,7 +20,7 @@
         <p class="browser-intro page-intro">{{ (browser.description_html or browser.description)|safe }}</p>
 
         <p class="message message-alert">
-          <strong>Warning:</strong> WebVR support in <a href="#releases">Chrome for Android</a> is being conducted as an <a href="https://groups.google.com/a/chromium.org/d/topic/blink-dev/zGAzqfi0e00/discussion">Origin Trial experiment</a> and subject to change!
+          <strong>Warning:</strong> WebVR support in <a href="#releases">Chrome for Android</a> is being conducted as an <a href="#chrome_origin_trial">Origin Trial experiment</a> and subject to change!
         </p>
 
         {% if browser.releases %}
@@ -43,10 +43,11 @@
           <h2><a href="#setup">Instructions</a></h2>
           <ol class="bullets-light">
             <li><span><a href="{{ browser.downloadUrl }}">Download <strong>Chrome Canary</strong></a> on your mobile device.</span></li>
+            <li><span>In the URL bar, load <code>chrome://flags#enable-webvr</code> and toggle the <code>Enable WebVR flag</code>.</span></li>
             <li><span>Enjoy WebVR content!</span></li>
           </ol>
           <p class="note"><strong>Warning:</strong> Until the stability of WebVR improves (soon in upcoming releases), we recommend avoiding use of WebVR in <a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome for Android</a> and <a href="https://play.google.com/store/apps/details?id=com.chrome.canary">Chrome Canary</a>.</p>
-          <p class="note"><strong>Note:</strong> Any WebVR site you visit must be already enrolled in the <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">WebVR Origin Trial</a> and contain a <code>&lt;meta&gt;</code> tag or HTTP response header with a valid Origin Trial token.</p>
+          <p id="chrome_origin_trial" class="note note-chrome-origin-trial"><strong>Note for Developers:</strong> For your WebVR site to work by default in release-channel Chrome for Android (without users having to manually enable WebVR from `chrome://flags) in the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform">WebVR Origin Trial</a> (<a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">announcement blog post</a>) and contain a <code>&lt;meta&gt;</code> tag or HTTP response header with a valid Origin Trial token.</p>
         </section>
 
         {% block headsets_block %}
@@ -167,32 +168,98 @@
           </ul>
         </section>
 
-        <section id="info" class="section" data-section="info">
-          <div id="links"></div>
-          <h2><a href="#info">Links</a></h2>
+        <section id="links" class="section" data-section="info links">
+          <div id="info"></div>
+          <h2><a href="#links">Links</a></h2>
           <ul class="bullets-light">
             <li>
               <span>
-                <a href="https://blog.google/products/chrome/experience-virtual-reality-web-chrome/">Google Blog: <em>Experience Virtual Reality on the Web with Chrome</em></a>
+                <a href="https://developers.google.com/web/fundamentals/vr/">
+                  Google Web Fundamentals: <em>WebVR</em> <time datetime="2017-04-27T16:15:19.031Z" data-utc-time="1493309719031" title="Wednesday, April 27, 2017 2:54:23 PM PDT">Last updated April 27, 2017</time>
+                </a>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/4RUHehS-0WU/sL7QxikECQAJ">
+                  <!--Blink Development mailing list:--> <em>WebVR Origin Trial results so far (Chrome 57)</em> <time datetime="2017-04-26T21:54:23.000Z" data-utc-time="1493243663000" title="Wednesday, April 26, 2017 2:54:23 PM PDT">April 26, 2017</time>
+                </a>
               </span>
             </li>
             <li>
               <span>
                 <a href="https://blog.google/products/google-vr/come-play-webvr-experiments/">
-                  Google Blog: <em>Come play with WebVR Experiments</em>
+                  Google Blog: <em>Come play with WebVR Experiments</em> <time datetime="2017-04-12T07:00:00.000Z" data-utc-time="1491980400000" title="April 12, 2017">April 12, 2017</time>
+                </a>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/c41q3tyCBJE/I3zWysiXCgAJ">
+                  <!--Blink Development mailing list:--> <em>WebVR Origin Trial results so far</em> <time datetime="2017-03-27T22:51:04.000Z" datetime="1490655064000" title="Monday, March 27, 2017 3:51:04 PM PDT">March 27, 2017</time>
+                </a>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/OnZVNSGwEFU/jugKYkwzCwAJ">
+                  <!--Blink Development mailing list:--> <em>Intent to Continue Experimenting: WebVR</em> <time datetime="2017-03-29T22:20:54.000Z" data-utc-time="1490826054000" title="Wednesday, March 29, 2017 3:20:54 PM PDT">March 27, 2017</time>
+                </a>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a href="https://blog.google/products/chrome/experience-virtual-reality-web-chrome/">
+                  Google Blog: <em>Experience Virtual Reality on the Web with Chrome</em>
+                  <time datetime="2017-02-09T00:00:00.000Z" data-utc-time="1486598400000" title="February 12, 2017">February 9, 2017</time>
+                </a>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a href="http://blog.tojicode.com/2016/12/new-experimental-webvr-builds-for.html">
+                  Brandon Jones&rsquo;s personal blog: <em>New experimental WebVR builds for Android</em> <time datetime="2016-12-14T18:23:00.000Z" data-utc-time="1481739780000" title="Wednesday, December 14, 2016 10:23:00 PST">June 26, 2014</time>
+                </a>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">
+                  Chromium Blog: <em>Introducing the WebVR API in Chrome for Android</em> <time datetime="2017-03-27T22:51:04.000Z" data-utc-time="1490655064000" title="Tuesday, December 13, 2016">December 13, 2016</time>
+                </a>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/zGAzqfi0e00/atXaz8UCAQAJ">
+                  <!--Blink Development mailing list:--> <em>Intent to Experiment: WebVR</em> <time datetime="2016-09-16T18:50:47.000Z" data-utc-time="1474051847000" title="Friday, September 16, 2016 11:50:47 AM PDT">September 16, 2016</time>
+                </a>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/m32Yy87Ggt0/2WYLkbEb43cJ">
+                  <!--Blink Development mailing list:--> <em>Intent to Implement: WebVR</em> <time datetime="2014-06-26T22:44:41.000Z" data-utc-time="1403822681000" title="June 26, 2014, 3:44:41 PM PDT">June 26, 2014</time>
                 </a>
               </span>
             </li>
           </ul>
-          <!--
-          <h2>FAQ</h2>
+        </section>
+
+        <section id="faq" class="section" data-section="faq">
+          <div id="help"></div>
+          <div id="support"></div>
+          <h2><a href="#faq">FAQ</a></h2>
           <dl>
-            <dt>How can I help out?</dt>
-            <dd></dd>
-            <dt>How can I test sites?</dt>
-            <dd></dd>
+            <dt>What is the difference between Chromium and Chrome?</dt>
+            <dd><a href="https://www.chromium.org/">Chromium</a> is an open-source Web browser project, started and maintained by <a href="https://www.google.com/">Google</a>, for the proprietary, closed-source <a href="https://www.google.com/chrome/">Google Chrome</a> browser. Chromium and Chrome share the majority of code and functionality, though there are some minor differences in features (e.g., video/audio codecs, Speech Recognition/Synthesis APIs, etc.), branding/logos, and licensing.</dd>
+            <dt>What is Blink?</dt>
+            <dd><a href="https://www.chromium.org/blink">Blink</a> is the rendering engine used by <a href="https://www.chromium.org/">Chromium</a>.</dd>
+            <dt>Which audio and video codecs are supported?</dt>
+            <dd>
+              <p>Because of licensing issues, only <a href="https://www.chromium.org/audio-video">these open codecs</a> are supported right now. Namely, MP3 and x264 are <strong>not</strong> supported. These formats are supported: Opus audio (<code>audio/opus</code>, <code>audio/ogg</code>), WebM (<code>video/webm</code>), Theora (<code>video/ogg</code>), Vorbis (<code>audio/vorbis</code>), VP8, VP9, and WAV.</p>
+            </dd>
           </dl>
-          -->
         </section>
       </div>
     </main>
