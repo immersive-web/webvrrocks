@@ -310,7 +310,8 @@ h1.page-heading {
   line-height: 1.4;
 }
 
-.notifications time[itemprop="dateReported"] {
+.notifications time[itemprop="dateReported"],
+[data-section~="info"] time {
   color: rgba(0,0,0,.5);
   display: block;
   font-size: .8rem;
@@ -508,11 +509,11 @@ p.message {
   margin-bottom: 0;
 }
 
-.main [data-section="info"] dt {
+.main [data-section~="info"] dt {
   cursor: pointer;
 }
 
-.main [data-section="info"] dd + dt {
+.main [data-section~="info"] dd + dt {
   padding-top: 1.5rem;
 }
 
@@ -700,10 +701,10 @@ li > .button:first-child {
 dd code,
 p code,
 li code {
-  background: #eee;
+  background: rgba(17,17,17,.1);
   border-radius: 1px;
-  box-shadow: 1px 1px 0 #ccc;
-  color: #666;
+  box-shadow: 1px 1px 0 rgba(17,17,17,.2);
+  color: rgba(17,17,17,.8);
   margin: 0 1px;
   padding: 2px 6px;
 }
@@ -1415,7 +1416,7 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
   color: rgba(255,255,255,.8);
 }
 
-[data-section="info"] li + li {
+[data-section~="info"] li + li {
   margin-top: .5rem;
 }
 
