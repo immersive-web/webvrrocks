@@ -7,5 +7,14 @@
     "author_url": "unboring.net",
     "thumbnail": "articles/progressive-webvr/thumbnail.png",
     "date_published": "5-April-2017"
+  },
+  "tools": {
+    "name": "Tools for creating WebVR content.",
+    "description": "See all the options available for creating WebVR content",
+    "url": "tools.html",
+    "author": "Casey Yee",
+    "author_url": "twitter.com/whoyee",
+    "thumbnail": "articles/tools/thumbnail.jpg",
+    "date_published": "9-May-2017"
   }
 }
