@@ -407,6 +407,7 @@
     },
     {
       "type": "error",
+      "enabled": false,
       "dismissable": false,
       "content": "WebVR affected by bug in Firefox Nightly; temporary workaround is to load `about:config` and set `security.sandbox.gpu.level` to `0`",
       "content_html": "<a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1359460\">WebVR affected by bug</a> in <a href=\"/firefox#download\">Firefox Nightly</a>; temporary workaround is to load <code>about:config</code> and set <code>security.sandbox.gpu.level</code> to <code>0</code>",
