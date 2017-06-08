@@ -150,6 +150,7 @@
     },
     {
       "type": "warning",
+      "enabled": false,
       "dismissable": false,
       "content": "Developers: Register for new WebVR Origin Trial tokens (Chrome for Android)",
       "content_html": "Developers: <a href=\"/chrome_for_android#what_is_the_webvr_origin_trial\">Register for new WebVR Origin Trial tokens</a> (Chrome for Android)",
@@ -160,6 +161,21 @@
         "dateString": "May 5, 2017",
         "timeString": "6:34 AM",
         "isoString": "2017-05-05T13:34:17.253Z"
+      },
+      "position": 2
+    },
+    {
+      "type": "warning",
+      "dismissable": false,
+      "content": "Developers: Register for new WebVR Origin Trial tokens (Chrome for Android)",
+      "content_html": "Developers: <a href=\"/chrome_for_android#what_is_the_webvr_origin_trial\">Register for new WebVR Origin Trial tokens</a> (Chrome for Android)",
+      "datePublished": {
+        "originalDateTimeString": "2017-05-05T03:34:10.000Z",
+        "datetime": 1493991257253,
+        "datetimeString": "Jun 8, 2017, 3:34 AM",
+        "dateString": "Jun 8, 2017",
+        "timeString": "3:34 AM",
+        "isoString": "2017-05-05T03:34:10.000Z"
       },
       "position": 2
     }
