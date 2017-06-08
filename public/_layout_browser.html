@@ -1,4 +1,4 @@
-{% from '_helpers.html' import author_item, browser_item, browsers, compat_report_row, demo_item, headsets, site_title, youtube %}
+{% from '_helpers.html' import author_item, browser_item, browsers, bugs_bar, compat_report_row, demo_item, headsets, site_title, youtube %}
 {% set browser = browsers[slug] %}
 {% set page = slug + '.html' %}
 <!doctype html>
@@ -67,6 +67,9 @@
           <section id="setup" class="section setup" data-section="setup">
             <h2><a href="#setup">Setup instructions</a></h2>
             {% block instructions %}
+            {% endblock %}
+            {% block bugs %}
+              {{ bugs_bar(browser) }}
             {% endblock %}
           </section>
         {% endblock %}
@@ -221,6 +224,7 @@
             <h2><a href="#faq">{{ faq_heading or faq_title or 'FAQ' }}</a></h2>
             {% block faq %}
             {% endblock %}
+            {{ bugs_bar(browser) }}
           </section>
         {% endblock %}
       </div>
