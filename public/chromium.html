@@ -1,4 +1,4 @@
-{% from '_helpers.html' import author_item, browsers, compat_report_row, demo_item, site_title %}
+{% from '_helpers.html' import author_item, browsers, bugs_bar, compat_report_row, demo_item, site_title %}
 {% set browser = browsers.chromium %}
 {% set page = 'chromium.html' %}
 <!doctype html>
@@ -57,6 +57,7 @@
             <li><span><span data-headset="htc-vive">Launch the <a href="https://www.vive.com/setup/">SteamVR</a> application.</span></span></li>
             <li><span>Enjoy WebVR content!</span></li>
           </ol>
+          {{ bugs_bar(browser) }}
         </section>
 
         <section id="demos" class="section demos" data-section="demos">
@@ -123,6 +124,7 @@
           <div id="known_issues"></div>
           <div id="known-issues"></div>
           <h2><a href="#compat">Known issues</a></h2>
+          {{ bugs_bar(browser) }}
           <p>These known issues apply to the <a href="#releases">latest published build</a>. Where applicable, the detailed release notes below will list when historic known issues were fixed.</p>
           <p class="note"><strong>Note:</strong> There is no installer for the experimental builds of Chromium. Once the contents of the <code>.zip</code> file is extracted, launch <code>chrome.exe</code> directly from the <code>chrome-bin</code> directory.</p>
           <div class="table-responsive">
@@ -147,6 +149,7 @@
               </tbody>
             </table>
           </div>
+          {{ bugs_bar(browser) }}
         </section>
 
         <section id="faq" class="section faq" data-section="faq">
@@ -154,15 +157,39 @@
           <div id="info"></div>
           <h2><a href="#faq">FAQ</a></h2>
           <dl>
-            <dt>What is the difference between Chromium and Chrome?</dt>
-            <dd><a href="https://www.chromium.org/">Chromium</a> is an open-source Web browser project, started and maintained by <a href="https://www.google.com/">Google</a>, for the proprietary, closed-source <a href="https://www.google.com/chrome/">Google Chrome</a> browser. Chromium and Chrome share the majority of code and functionality, though there are some minor differences in features (e.g., video/audio codecs, Speech Recognition/Synthesis APIs, etc.), branding/logos, and licensing.</dd>
-            <dt>What is Blink?</dt>
-            <dd><a href="https://www.chromium.org/blink">Blink</a> is the rendering engine used by <a href="https://www.chromium.org/">Chromium</a>.</dd>
-            <dt>Which audio and video codecs are supported?</dt>
+            <dt id="what_is_the_difference_between_chromium_and_chrome"><a href="#what_is_the_difference_between_chromium_and_chrome">What is the difference between Chromium and Chrome?</a></dt>
+            <dd>
+              <p>
+                <a href="https://www.chromium.org/">Chromium</a> is an open-source Web browser project, started and maintained by <a href="https://www.google.com/">Google</a>, for the proprietary, closed-source <a href="https://www.google.com/chrome/">Google Chrome</a> browser. Chromium and Chrome share the majority of code and functionality, though there are some minor differences in features (e.g., video/audio codecs, Speech Recognition/Synthesis APIs, etc.), branding/logos, and licensing.
+              </p>
+            </dd>
+            <dt id="what_is_blink"><a href="#what_is_blink">What is Blink?</a></dt>
+            <dd>
+              <p>
+                <a href="https://www.chromium.org/blink">Blink</a> is the rendering engine used by <a href="https://www.chromium.org/">Chromium</a>.
+              </p>
+            </dd>
+            <dt id="which_audio_and_video_codecs_are_supported"><a href="which_audio_and_video_codecs_are_supported">Which audio and video codecs are supported?</a></dt>
             <dd>
               <p>Because of licensing issues, only <a href="https://www.chromium.org/audio-video">these open codecs</a> are supported right now. Namely, MP3 and x264 are <strong>not</strong> supported. These formats are supported: Opus audio (<code>audio/opus</code>, <code>audio/ogg</code>), WebM (<code>video/webm</code>), Theora (<code>video/ogg</code>), Vorbis (<code>audio/vorbis</code>), VP8, VP9, and WAV.</p>
             </dd>
+            <dt id="where_can_i_find_the_list_of_known_bugs"><a href="#where_can_i_find_the_list_of_known_bugs">Where can I find the list of known bugs?</a></dt>
+            <dd>
+              <p>
+                You can find a list of the <a href="#compat">known issues above</a>. You can also search the <a href="{{ browser.bugsUrl }}">issues listed in the <code>toji/chrome-webvr-issues</code> GitHub repository</a> WebVR bugs for the experimental Chromium builds (<em>not</em> <a href="{{ browsers.chrome_for_android.about }}#compat">Chrome for Android</a>).
+              </p>
+            </dd>
+            <dt id="how_can_i_report_a_bug"><a href="#how_can_i_report_a_bug">How can I report a bug?</a></dt>
+            <dd>
+              <p>
+                First, refer to the <a href="#compat">known issues above</a> and the <a href="{{ browser.bugsUrl }}">issues listed in the <code>toji/chrome-webvr-issues</code> GitHub repository</a> WebVR bugs for the experimental Chromium builds (<em>not</em> <a href="{{ browsers.chrome_for_android.about }}#compat">Chrome for Android</a>).
+              </p>
+              <p>
+                If you still don&rsquo;t see your issue reported for the experimental Chromium builds (<em>not</em> <a href="{{ browsers.chrome_for_android.about }}#compat">Chrome for Android</a>), you can <a href="{{ browser.bugsReportUrl }}">file a new bug in the <code>toji/chrome-webvr-issues</code> GitHub repository</a>. Or, if you&rsquo;d prefer, you can file a bug on <strong><a href="https://webcompat.com/">WebCompat.com</a></strong>.
+              </p>
+            </dd>
           </dl>
+          {{ bugs_bar(browser) }}
         </section>
       </div>
     </main>
