@@ -1438,6 +1438,19 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
   margin-top: .5rem;
 }
 
+*[class*='button-outlined'].button-small {
+  padding: .25rem .5rem;
+}
+
+.button-bugs {
+  display: block;
+  margin-top: 1rem;
+}
+
+.button-bugs-report {
+  font-weight: bold;
+}
+
 /**
  * Breakpoints
  *
@@ -1614,6 +1627,11 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
   }
   .matrix [itemprop="browser"][data-slug="microsoft_edge"] [itemprop="url"]:hover {
     color: rgba(25,118,210,1);
+  }
+
+  .button-bugs {
+    display: inline-block;
+    margin-right: .75rem;
   }
 }
 
