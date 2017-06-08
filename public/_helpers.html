@@ -279,3 +279,15 @@
     <!-- style="background-image: url(https://img.youtube.com/vi/{{ video_id }}/0.jpg)" -->
   </div>
 {% endmacro %}
+
+{% macro bugs_bar (browser) %}
+  {% if browser.bugsUrl or browser.bugsReportUrl %}
+    <p>
+      {%- if browser.bugsUrl -%}
+        <a class="button button-outlined-neutral button-small button-bugs button-bugs-list" href="{{ browser.bugsUrl }}">View list of bugs</a>
+      {%- endif -%}
+      {%- if browser.bugsReportUrl %} <a class="button button-outlined-warn button-small button-bugs button-bugs-report" href="{{ browser.bugsReportUrl }}">Report a bug</a>
+      {%- endif -%}
+    </p>
+  {% endif %}
+{% endmacro %}
