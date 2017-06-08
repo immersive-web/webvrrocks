@@ -16,6 +16,8 @@
   "screenshot": "",
   "url": "/chromium",
   "about": "/chromium",
+  "bugsUrl": "https://github.com/toji/chrome-webvr-issues/issues",
+  "bugsReportUrl": "https://github.com/toji/chrome-webvr-issues/issues/new",
   "sameAs": [
     "https://webvr.rocks/chrome",
     "https://webvr.info/get-chrome/"
