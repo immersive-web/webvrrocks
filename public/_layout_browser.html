@@ -176,29 +176,33 @@
               <div id="known_issues"></div>
               <div id="known-issues"></div>
               <h2><a href="#compat">Known issues</a></h2>
-              <div class="table-responsive">
-                <table>
-                  <thead>
-                    <tr>
-                      <th data-report-key="browserVersion">Version</th>
-                      <th data-report-key="browserBuildId">Browser build</th>
-                      <th data-report-key="headset">Headset</th>
-                      <th data-report-key="description">Description</th>
-                      <th data-report-key="dateReported">Reported</th>
-                      <th data-report-key="dateUpdated">Updated</th>
-                      <th data-report-key="status">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {% for report in browser.reports %}
-                      {{ compat_report_row(report) }}
-                    {% endfor %}
+              {% block reports_content %}
+                {% block reports_table %}
+                  <div class="table-responsive">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th data-report-key="browserVersion">Version</th>
+                          <th data-report-key="browserBuildId">Browser build</th>
+                          <th data-report-key="headset">Headset</th>
+                          <th data-report-key="description">Description</th>
+                          <th data-report-key="dateReported">Reported</th>
+                          <th data-report-key="dateUpdated">Updated</th>
+                          <th data-report-key="status">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for report in browser.reports %}
+                          {{ compat_report_row(report) }}
+                        {% endfor %}
 
-                    {% block reports %}
-                    {% endblock %}
-                  </tbody>
-                </table>
-              </div>
+                        {% block reports %}
+                        {% endblock %}
+                      </tbody>
+                    </table>
+                  </div>
+                {% endblock %}
+              {% endblock %}
             </section>
           {% endblock %}
         {% endif -%}

@@ -46,6 +46,7 @@
           </ol>
           <p class="note"><strong>Warning:</strong> Until the stability of WebVR improves (soon in upcoming releases), we recommend avoiding the use of WebVR in <a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome for Android</a> and <a href="https://play.google.com/store/apps/details?id=com.chrome.canary">Chrome Canary</a>.</p>
           <p id="chrome_origin_trial" class="note note-chrome-origin-trial"><strong>Note for Developers:</strong> For your WebVR site to work by default in release-channel Chrome for Android (without users having to manually enable WebVR from <code>chrome://flags</code>), you must <a href="https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform"><strong>sign up here</strong> to request a token for your site&rsquo;s origin (domain)</a>. <br><br> You will receive an email containing the token within 24 hours; to <a href="https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin">enable the WebVR Origin Trial</a> for your site, put the token in a <code>&lt;meta http-equiv=&quot;origin-trial&quot; content=&quot;&hellip;&quot;&gt;</code> tag or as an <code>Origin-Trial</code> HTTP response header. You can <a href="https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform">sign up here</a>, and <a href="#what_is_the_webvr_origin_trial">refer to the FAQ for more details</a>.</p>
+          <p><a class="button button-outlined-neutral button-small button-bugs button-bugs-list" href="https://bugs.chromium.org/p/chromium/issues/list?q=component%3ABlink%3EWebVR">View list of bugs</a> <a class="button button-outlined-warn button-small button-bugs button-bugs-report" href="https://bugs.chromium.org/p/chromium/issues/entryafterlogin">Report a bug</a></p>
         </section>
 
         {% block headsets_block %}
@@ -153,17 +154,16 @@
           <div id="known_issues"></div>
           <div id="known-issues"></div>
           <h2><a href="#compat">Known issues</a></h2>
+          <p><a class="button button-outlined-neutral button-small button-bugs button-bugs-list" href="https://bugs.chromium.org/p/chromium/issues/list?q=component%3ABlink%3EWebVR">View list of bugs</a> <a class="button button-outlined-warn button-small button-bugs button-bugs-report" href="https://bugs.chromium.org/p/chromium/issues/entryafterlogin">Report a bug</a></p>
           <p>These known issues apply to the <a href="#releases">latest published build</a>. Where applicable, the detailed release notes below will list when historic known issues were fixed.</p>
           <ul class="bullets-light">
-            <li><span><strong>Warning:</strong> Until the stability of WebVR improves (soon in upcoming releases), we recommend avoiding use of WebVR in <a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome for Android</a> and <a href="https://play.google.com/store/apps/details?id=com.chrome.canary">Chrome Canary</a>.</span></li>
             <li><span><strong>Note:</strong> Any WebVR site you visit must be already enrolled in the <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">WebVR Origin Trial</a> and contain a <code>&lt;meta&gt;</code> tag or HTTP response header with a valid Origin Trial token.</span></li>
-            <li><span>There is no installer for the experimental <code>.apk</code> builds of Chromium for Android.</span></li>
             <li><span><strong>Warning:</strong> Do <em>not</em> use the “Skip VR entry screens” setting in Daydream’s Developer options. It can cause a black screen or inconsistent behavior when trying to enter VR, for example when the controller firmware is out of date. As an alternative, you can double-tap the “Place your phone into the Daydream headset” screen to bypass it.</span></li>
-            <li><span>Currently only works with <a href="https://vr.google.com/daydream/phones/">Daydream-ready devices</a>, though it can be used in either Daydream or Cardboard mode on those devices (depending on your configured viewer).</span></li>
             <li><span>Content is being rendered at &asymp;1000&times;1200 per eye on a <a href="https://madeby.google.com/phone/">Pixel XL</a>, significantly lower than that of the 1:1 render resolution of 1803&times;2268. (The default render resolution is going to change in the future; consider implementing <a href="https://webvr.info/samples/08-dynamic-resolution.html">dynamic-resolution scaling</a> to tune performance. You can also choose to set the <code>&lt;canvas&gt;</code> size to larger or smaller than that of the recommended render resolution during initialization.)</span></li>
             <li><span>The <a href="https://www.google.com/nexus/6p/">Nexus 6P</a> may work adequately as a developer-preview experience, but the phone is slower than that of the <a href="https://madeby.google.com/phone/">Pixel phones</a>, and the Nexus 6P may degrade in performance during extended VR use due to thermal throttling. It is not representative of the performance of <a href="https://vr.google.com/daydream/phones/">Daydream-ready devices</a>.</span></li>
             <li><span>Modifying the <code>&lt;canvas&gt;</code> GL context or content after <a href="https://w3c.github.io/webvr/#dom-vrdisplay-submitframe"><code>VRDisplay#submitFrame</code></a> may cause corrupted frames, among other issues. Please wait for the next <a href="https://w3c.github.io/webvr/#dom-vrdisplay-requestanimationframe"><code>VRDisplay#requestAnimationFrame</code></a> callback before doing so. Also, check the <a href="https://w3c.github.io/webvr/#dom-vrdisplaycapabilities-hasexternaldisplay"><code>VRDisplayCapabilities#hasExternalDisplay</code> property</a> to know when to disable display mirroring (and, if <code>false</code>, any features that reuse the <code>&lt;canvas&gt;</code> post-submission).</span></li>
           </ul>
+          <p><a class="button button-outlined-neutral button-small button-bugs button-bugs-list" href="https://bugs.chromium.org/p/chromium/issues/list?q=component%3ABlink%3EWebVR">View list of bugs</a> <a class="button button-outlined-warn button-small button-bugs button-bugs-report" href="https://bugs.chromium.org/p/chromium/issues/entryafterlogin">Report a bug</a></p>
         </section>
 
         <section id="links" class="section" data-section="info links">
@@ -268,6 +268,21 @@
               <p>
                 For your WebVR site to work by default in release-channel Chrome for Android (without users having to manually enable WebVR from <code>chrome://flags</code>), you must <a href="https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform"><strong>sign up here</strong> to request a token for your site&rsquo;s origin (domain)</a>. <br><br> You will receive an email containing the token within 24 hours; to <a href="https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin">enable the WebVR Origin Trial</a> for your site, put the token in a <code>&lt;meta http-equiv=&quot;origin-trial&quot; content=&quot;&hellip;&quot;&gt;</code> tag or as an <code>Origin-Trial</code> HTTP response header. You can <strong><a href="https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform">sign up here</a></strong>.
               </a>
+            </dd>
+            <dt id="where_can_i_find_the_list_of_known_bugs"><a href="#where_can_i_find_the_list_of_known_bugs">Where can I find the list of known bugs?</a></dt>
+            <dd>
+              <p>
+                You can find a list of the <a href="#compat">known issues above</a>. You can also search the <a href="https://bugs.chromium.org/p/chromium/issues/list?q=component%3ABlink%3EWebVR">Chromium bug tracker for bugs in the <code>Blink &gt; WebVR</code> component</a>.
+              </p>
+            </dd>
+            <dt id="how_can_i_report_a_bug"><a href="#how_can_i_report_a_bug">How can I report a bug?</a></dt>
+            <dd>
+              <p>
+                First, refer to the <a href="#compat">known issues above</a> and the <a href="https://bugs.chromium.org/p/chromium/issues/list?q=component%3ABlink%3EWebVR">WebVR bugs in the Chromium bug tracker (labeled with the <code>Blink &gt; WebVR</code> component)</a>.
+              </p>
+              <p>
+                If you still don&rsquo;t see your issue reported, you can <a href="https://bugs.chromium.org/p/chromium/issues/entryafterlogin">file a new bug in the Chromium bug tracker</a>. Or, if you&rsquo;d prefer, you can file a bug on <strong><a href="https://webcompat.com/">WebCompat.com</a></strong>.
+              </p>
             </dd>
           </dl>
         </section>
