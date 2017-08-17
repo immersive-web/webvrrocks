@@ -3,53 +3,31 @@
   "@type": "SoftwareApplication",
   "name": "Firefox",
   "slug": "firefox",
-  "description_html": "<a href=\"https://www.mozilla.org/\">Mozilla</a>’s <a href=\"https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly\">bleeding-edge version</a> of <a href=\"https://www.mozilla.org/en-US/firefox/\">Firefox</a>",
+  "description": "Mozilla’s desktop browser",
+  "description_html": "<a href=\"https://www.mozilla.org/\">Mozilla</a>’s <a href=\"https://www.mozilla.org/en-US/firefox/new/\">desktop browser</a>",
   "operatingSystem": "Windows 7.1+",
   "processorRequirements": "IA64",
   "headsets": [
     "htc_vive",
     "oculus_rift"
   ],
-  "logo": "/firefox/icon-nightly.png",
-  "url": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly",
+  "logo": "/firefox/icon.png",
+  "url": "https://www.mozilla.org/en-US/firefox/new/",
   "about": "/firefox",
-  "landingUrl": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly",
-  "downloadUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-55.0a1.en-US.win64.installer.exe",
+  "landingUrl": "https://www.mozilla.org/en-US/firefox/new/",
+  "downloadUrl": "https://www.mozilla.org/en-US/firefox/new/?scene=2",
   "sourceCodeUrl": "https://dxr.mozilla.org/mozilla-central/source/dom/vr",
   "bugsUrl": "https://bugzilla.mozilla.org/buglist.cgi?quicksearch=%5Bwebvr%5D",
   "bugsReportUrl": "https://bugzilla.mozilla.org/enter_bug.cgi?product=Core&component=General&status_whiteboard=[webvr]&cc=kgilbert@mozilla.com",
   "sameAs": [
     "https://webvr.rocks/firefox",
-    "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly"
+    "https://www.mozilla.org/en-US/firefox/new/"
   ],
   "showDateReleased": false,
   "releases": {
     "latest": {
       "status": "experimental",
-      "landingUrl": "https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly",
-      "buildInfo": {
-        "as": "ml64.exe",
-        "buildid": "20170308030207",
-        "cc": "c:/builds/moz2_slave/m-cen-w64-ntly-000000000000000/build/src/vs2015u3/VC/bin/amd64/cl.exe",
-        "cxx": "c:/builds/moz2_slave/m-cen-w64-ntly-000000000000000/build/src/vs2015u3/VC/bin/amd64/cl.exe",
-        "host_alias": "x86_64-pc-mingw32",
-        "host_cpu": "x86_64",
-        "host_os": "mingw32",
-        "host_vendor": "pc",
-        "moz_app_id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
-        "moz_app_maxversion": "55.0a1",
-        "moz_app_name": "firefox",
-        "moz_app_vendor": "Mozilla",
-        "moz_app_version": "55.0a1",
-        "moz_pkg_platform": "win64",
-        "moz_source_repo": "MOZ_SOURCE_REPO=https://hg.mozilla.org/mozilla-central",
-        "moz_source_stamp": "58753259bfeb3b818eac7870871b0aae1f8de64a",
-        "moz_update_channel": "nightly",
-        "target_alias": "x86_64-pc-mingw32",
-        "target_cpu": "x86_64",
-        "target_os": "mingw32",
-        "target_vendor": "pc"
-      },
+      "landingUrl": "https://www.mozilla.org/en-US/firefox/new/",
       "buildInfoFilename": "firefox-55.0a1.en-US.win64.json",
       "buildInfoUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-55.0a1.en-US.win64.json",
       "downloadUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-55.0a1.en-US.win64.installer.exe",
@@ -132,6 +110,18 @@
   },
   "links": [
     {
+      "title": "WebVR and new speedy features in Firefox 55",
+      "url": "https://blog.mozilla.org/blog/2017/08/08/webvr-new-speedy-features/",
+      "source": "Mozilla Blog",
+      "date": "August 8, 2017"
+    },
+    {
+      "title": "Firefox 55: first desktop browser to support WebVR",
+      "url": "https://hacks.mozilla.org/2017/08/firefox-55-supports-webvr/",
+      "source": "Mozilla Hacks",
+      "date": "August 8, 2017"
+    },
+    {
       "title": "vr.mozilla.org",
       "url": "https://vr.mozilla.org/",
       "source": "Mozilla VR"
@@ -188,14 +178,14 @@
       "datetime": "2016-10-25T14:29:12-07:00"
     },
     {
-      "title": "Experimental HTC Vive Support in Firefox Nightly",
+      "title": "Experimental HTC VIVE Support in Firefox Nightly",
       "source": "Medium",
       "url": "https://medium.com/mozilla-tech/experimental-htc-vive-support-in-firefox-nightly-3ab9eeb5dfd9",
       "date": "September 2, 2016",
       "enabled": false
     },
     {
-      "title": "Experimental HTC Vive Support in Firefox Nightly",
+      "title": "Experimental HTC VIVE Support in Firefox Nightly",
       "source": "Mozilla VR Blog",
       "url": "https://blog.mozvr.com/experimental-htc-vive-support-in-firefox-nightly/",
       "datetime": "2016-09-02T02:00:00.000Z",
@@ -343,33 +333,6 @@
       "webcompatUrl": "https://webcompat.com/issues/4528"
     }
   ],
-  "buildInfo": {
-    "as": "ml64.exe",
-    "buildid": "20170308030207",
-    "cc": "c:/builds/moz2_slave/m-cen-w64-ntly-000000000000000/build/src/vs2015u3/VC/bin/amd64/cl.exe",
-    "cxx": "c:/builds/moz2_slave/m-cen-w64-ntly-000000000000000/build/src/vs2015u3/VC/bin/amd64/cl.exe",
-    "host_alias": "x86_64-pc-mingw32",
-    "host_cpu": "x86_64",
-    "host_os": "mingw32",
-    "host_vendor": "pc",
-    "moz_app_id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
-    "moz_app_maxversion": "55.0a1",
-    "moz_app_name": "firefox",
-    "moz_app_vendor": "Mozilla",
-    "moz_app_version": "55.0a1",
-    "moz_pkg_platform": "win64",
-    "moz_source_repo": "MOZ_SOURCE_REPO=https://hg.mozilla.org/mozilla-central",
-    "moz_source_stamp": "58753259bfeb3b818eac7870871b0aae1f8de64a",
-    "moz_update_channel": "nightly",
-    "target_alias": "x86_64-pc-mingw32",
-    "target_cpu": "x86_64",
-    "target_os": "mingw32",
-    "target_vendor": "pc"
-  },
-  "buildInfoFilename": "firefox-55.0a1.en-US.win64.json",
-  "buildInfoUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-55.0a1.en-US.win64.json",
-  "downloadInstallerUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-55.0a1.en-US.win64.installer.exe",
-  "downloadZipUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-55.0a1.en-US.win64.zip",
   "dateReleased": {
     "originalDateTimeString": "08-Mar-2017 12:38",
     "datetime": 1489005480000,
@@ -401,13 +364,6 @@
   "fileSizeZip": "57 MB",
   "notifications": [
     {
-      "pinned": true,
-      "type": "alert",
-      "content_html": "Warning: WebVR support in Firefox Nightly is experimental and subject to change",
-      "content_html": "<strong>Warning:</strong> WebVR support in <a href=\"#releases\">Firefox Nightly</a> is experimental and subject to change",
-      "position": 3
-    },
-    {
       "type": "error",
       "enabled": false,
       "dismissable": false,
@@ -438,6 +394,34 @@
         "isoString": "2017-02-18T20:27:05.000Z"
       },
       "position": -1
+    },
+    {
+      "type": "success",
+      "dismissable": false,
+      "content": "Mac is supported in Firefox.",
+      "content_html": "Mac is supported in Firefox.",
+      "datePublished": {
+        "originalDateTimeString": "07-Aug-2017 08:00:00",
+        "datetimeString": "Aug 7, 2017, 8:00 Am",
+        "dateString": "Aug 8, 2017",
+        "timeString": "8:00 AM",
+        "isoString": "2017-08-07T08:00:00.000Z"
+      },
+      "position": 1
+    },
+    {
+      "type": "success",
+      "dismissable": false,
+      "content": "WebVR has shipped in Firefox 55 on Windows! Check it out on your Oculus Rift or HTC VIVE.",
+      "content_html": "WebVR has shipped in <strong>Firefox 55 for Windows</strong>! Check it out on your Oculus Rift or HTC VIVE.",
+      "datePublished": {
+        "originalDateTimeString": "08-Aug-2017 06:00:00",
+        "datetimeString": "Aug 8, 2017, 6:00 AM",
+        "dateString": "Aug 8, 2017",
+        "timeString": "6:00 AM",
+        "isoString": "2017-08-08T06:00:00.000Z"
+      },
+      "position": 2
     }
   ]
 }

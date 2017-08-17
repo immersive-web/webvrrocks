@@ -166,6 +166,7 @@
     },
     {
       "type": "warning",
+      "enabled": false,
       "dismissable": false,
       "content": "Developers: Register for new WebVR Origin Trial tokens (Chrome for Android)",
       "content_html": "Developers: <a href=\"/chrome_for_android#what_is_the_webvr_origin_trial\">Register for new WebVR Origin Trial tokens</a> (Chrome for Android)",
