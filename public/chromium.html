@@ -131,10 +131,18 @@
             <table>
               <thead>
                 <tr>
-                  <th data-report-key="browserVersion">Version</th>
+                  <th data-report-key="description">Description</th>
+                  {% set show_version = false %}
+                  {%- for report in browser.reports -%}
+                    {% if report.enabled and report.browserUserAgent %}
+                      {% set show_version = true %}
+                    {% endif %}
+                  {%- endfor %}
+                  {% if show_version %}
+                    <th data-report-key="browserVersion">Version</th>
+                  {% endif %}
                   <th data-report-key="browserBuildId">Browser build</th>
                   <th data-report-key="headset">Headset</th>
-                  <th data-report-key="description">Description</th>
                   <th data-report-key="dateReported">Reported</th>
                   <th data-report-key="dateUpdated">Updated</th>
                   <th data-report-key="status">Status</th>
