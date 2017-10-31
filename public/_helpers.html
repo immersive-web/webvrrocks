@@ -122,15 +122,18 @@
 
 {% macro demo_item (slug, classes, idAttr) %}
   {% set demo = demos[slug] %}
+
   {% set appType = demo.@type or '--WebApplication' %}
   {% set appUrl = demo.start_url or demo.url %}
   {% set appSlug = demo.slug or slug %}
+
   {% set demoIdAttr = idAttr or appSlug %}
   {% set appIcon = demo.icons[0] %}
+
   <li itemprop="demo" itemscope itemtype="http://schema.org/{{ appType }}" data-app-type="{{ appType }}" data-slug="{{ appSlug }}" class="grid-flex-cell-1of2{% if classes %} {{ classes }}{% endif %}"{% if demoIdAttr %} id="{{ demoIdAttr }}"{% endif %}>
     <div>
       <div itemprop="details" class="demo-details">
-        <a itemprop="url" href="{{ appUrl }}" class="no-underline">
+        <a itemprop="url" href="{{ appUrl }}" class="no-underline" data-href="{{ appUrl }}">
           <div itemprop="image"{% if appIcon %} style="background-image: url({{ appIcon.src }}){%-
               if appIcon.background_size -%}; background-size: {{ appIcon.background_size }}
             {%- endif %}"{% endif %}>
@@ -244,12 +247,15 @@
 {% endmacro %}
 
 {% macro compat_report_row (report) %}
-  {% if report.type == 'bug' or report.type == 'feature' %}
+  {% if (report.type == 'bug' or report.type == 'feature') and report.enabled != false %}
     <tr data-report-type="{{ report.type }}"
         itemprop="{{ report.type }}"
         class="{{ 'table-cell-success' if report.status|lower == 'fixed' else ('table-cell-error' if report.type == 'bug' else 'table-cell-alert') }}"
         data-archived="{{ 'true' if report.archived else 'false' }}">
-      <td data-report-key="browserVersion">{% if report.type == 'bug' %}<span itemprop="userAgent" title="{{ report.browserUserAgent }}">{{ report.browserVersion }} <br> <small title="{{ report.browserDate }}">({{ report.browserDate }})</small></span>{% endif %}</td>
+      <td data-report-key="description"><a href="{{ report.bug or report.bugUrl or report.url }}" itemprop="description">{{ report.description }}</a></td>
+      {% if report.browserUserAgent %}
+        <td data-report-key="browserVersion">{% if report.type == 'bug' %}<span itemprop="userAgent" title="{{ report.browserUserAgent }}">{{ report.browserVersion }} <br> <small title="{{ report.browserDate }}">({{ report.browserDate }})</small></span>{% endif %}</td>
+      {% endif %}
       <td data-report-key="browserBuildId"><span itemprop="buildId">{{ report.browserDate }}</span></td>
       <td data-report-key="headsets">
         {% if report.headsets %}
@@ -261,7 +267,6 @@
           </span>
         {% endif %}
       </td>
-      <td data-report-key="description"><a href="{{ report.bug or report.bugUrl or report.url }}" itemprop="description">{{ report.description }}</a></td>
       <td data-report-key="dateReported"><time itemprop="dateReported" datetime="{{ report.dateReported.datetime }}">{{ report.dateReported.pretty or report.dateReported.dateString }}</time></td>
       <td data-report-key="dateUpdated"><time itemprop="dateUpdated" datetime="{{ report.dateUpdated.datetime }}">{{ report.dateUpdated.pretty or report.dateUpdated.dateString }}</time></td>
       <td data-report-key="status"><span itemprop="status">{{ report.status }}</span></td>

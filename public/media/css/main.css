@@ -1863,3 +1863,7 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
     color: darkgreen;
   }
 }
+
+[data-report-key="description"] {
+  width: 100%;
+}

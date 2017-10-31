@@ -172,43 +172,49 @@
           </section>
         {% endblock %}
 
-        {% if reports_block %}
-          {% block reports_block %}
-            <section id="compat" class="section" data-section="compat">
-              <div id="compatibility"></div>
-              <div id="known_issues"></div>
-              <div id="known-issues"></div>
-              <h2><a href="#compat">Known issues</a></h2>
-              {% block reports_content %}
-                {% block reports_table %}
-                  <div class="table-responsive">
-                    <table>
-                      <thead>
-                        <tr>
+        {% block reports_block %}
+          <section id="compat" class="section" data-section="compat">
+            <div id="compatibility"></div>
+            <div id="known_issues"></div>
+            <div id="known-issues"></div>
+            <h2><a href="#compat">Implementation Status</a></h2>
+            {% block reports_content %}
+              {% block reports_table %}
+                <div class="table-responsive">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th data-report-key="description">Description</th>
+                        {% set show_version = false %}
+                        {%- for report in browser.reports -%}
+                          {% if report.enabled and report.browserUserAgent %}
+                            {% set show_version = true %}
+                          {% endif %}
+                        {%- endfor %}
+                        {% if show_version %}
                           <th data-report-key="browserVersion">Version</th>
-                          <th data-report-key="browserBuildId">Browser build</th>
-                          <th data-report-key="headset">Headset</th>
-                          <th data-report-key="description">Description</th>
-                          <th data-report-key="dateReported">Reported</th>
-                          <th data-report-key="dateUpdated">Updated</th>
-                          <th data-report-key="status">Status</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {% for report in browser.reports %}
-                          {{ compat_report_row(report) }}
-                        {% endfor %}
+                        {% endif %}
+                        <th data-report-key="browserBuildId">Browser build</th>
+                        <th data-report-key="headset">Headset</th>
+                        <th data-report-key="dateReported">Reported</th>
+                        <th data-report-key="dateUpdated">Updated</th>
+                        <th data-report-key="status">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for report in browser.reports %}
+                        {{ compat_report_row(report) }}
+                      {% endfor %}
 
-                        {% block reports %}
-                        {% endblock %}
-                      </tbody>
-                    </table>
-                  </div>
-                {% endblock %}
+                      {% block reports %}
+                      {% endblock %}
+                    </tbody>
+                  </table>
+                </div>
               {% endblock %}
-            </section>
-          {% endblock %}
-        {% endif -%}
+            {% endblock %}
+          </section>
+        {% endblock %}
 
         {% block links_block %}
           <section id="links" class="section info links" data-section="info links">
