@@ -1644,6 +1644,14 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
     margin-bottom: 0;
     position: absolute;
   }
+
+  #download:empty ~ .download-block + .download-block .download {
+    margin-top: 1rem;
+  }
+
+  .download-block {
+    margin-right: 1.5rem;
+  }
 }
 
 @media all and (min-width: 45rem) {
@@ -1849,6 +1857,28 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
   }
 }
 
+[data-report-key="description"] {
+  width: 100%;
+}
+
+.download-block {
+  display: inline-block;
+}
+
+.download-block p {
+  margin-bottom: .5rem;
+}
+
+.download-block .download {
+  margin-top: 1.5rem;
+}
+
+.c:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
 @media all and (min-width: 70rem) {
   .table-support /*a*/.supported strong {
     color: #3d9970;
@@ -1861,8 +1891,4 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
   .table-support /*a*/.supported:hover strong {
     color: darkgreen;
   }
-}
-
-[data-report-key="description"] {
-  width: 100%;
 }
