@@ -5,7 +5,7 @@
   "slug": "firefox",
   "description": "Mozilla’s desktop browser",
   "description_html": "<a href=\"https://www.mozilla.org/\">Mozilla</a>’s <a href=\"https://www.mozilla.org/en-US/firefox/new/\">desktop browser</a>",
-  "operatingSystem": "Windows 7.1+",
+  "operatingSystem": "Windows 7.1+ or macOS",
   "processorRequirements": "IA64",
   "headsets": [
     "htc_vive",
@@ -67,7 +67,7 @@
   "platforms": {
     "htc_vive": {
       "windows": "supported",
-      "mac": "headset_unsupported",
+      "mac": "supported",
       "linux": "headset_unsupported",
       "android": "headset_unsupported",
       "ios": "headset_unsupported"
@@ -120,6 +120,12 @@
       "url": "https://hacks.mozilla.org/2017/08/firefox-55-supports-webvr/",
       "source": "Mozilla Hacks",
       "date": "August 8, 2017"
+    },
+    {
+      "title": "Announcing WebVR on Mac via Firefox Nightly",
+      "url": "https://hacks.mozilla.org/2017/06/announcing-webvr-on-mac/",
+      "source": "Mozilla Hacks",
+      "date": "June 5, 2017"
     },
     {
       "title": "vr.mozilla.org",
@@ -486,7 +492,7 @@
       "enabled": false,
       "dismissable": false,
       "content": "WebVR affected by bug in Firefox Nightly; temporary workaround is to load `about:config` and set `security.sandbox.gpu.level` to `0`",
-      "content_html": "<a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1359460\">WebVR affected by bug</a> in <a href=\"/firefox#download\">Firefox Nightly</a>; temporary workaround is to load <code>about:config</code> and set <code>security.sandbox.gpu.level</code> to <code>0</code>",
+      "content_html": "<a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1359460\" rel=\"noreferrer noopener\">WebVR affected by bug</a> in <a href=\"/firefox#download\">Firefox Nightly</a>; temporary workaround is to load <code>about:config</code> and set <code>security.sandbox.gpu.level</code> to <code>0</code>",
       "datePublished": {
         "originalDateTimeString": "25-Feb-2017 14:44",
         "datetime": 1488062640000,
@@ -502,7 +508,7 @@
       "enabled": false,
       "dismissable": false,
       "content": "Firefox Nightly now supports Oculus Touch controllers!",
-      "content_html": "<a href=\"/firefox#download\">Firefox Nightly</a> now supports <a href=\"https://www.oculus.com/rift/#u_0_g\">Oculus Touch</a> controllers!",
+      "content_html": "<a href=\"/firefox#download\">Firefox Nightly</a> now supports <a href=\"https://www.oculus.com/rift/#u_0_g\" rel=\"noreferrer noopener\">Oculus Touch</a> controllers!",
       "datePublished": {
         "originalDateTimeString": "18-Feb-2017 12:27:05",
         "datetime": 1487449625000,
@@ -516,8 +522,8 @@
     {
       "type": "success",
       "dismissable": false,
-      "content": "Mac is supported in Firefox.",
-      "content_html": "Mac is supported in Firefox.",
+      "content": "Firefox is now experimentally supported on macOS.",
+      "content_html": "Firefox is now experimentally supported on <a href=\"https://hacks.mozilla.org/2017/06/announcing-webvr-on-mac/\" rel=\"noreferrer noopener\">macOS</a>.",
       "datePublished": {
         "originalDateTimeString": "07-Aug-2017 08:00:00",
         "datetimeString": "Aug 7, 2017, 8:00 Am",
@@ -531,7 +537,7 @@
       "type": "success",
       "dismissable": false,
       "content": "WebVR has shipped in Firefox 55 on Windows! Check it out on your Oculus Rift or HTC VIVE.",
-      "content_html": "WebVR has shipped in <strong>Firefox 55 for Windows</strong>! Check it out on your Oculus Rift or HTC VIVE.",
+      "content_html": "WebVR has shipped in <a href=\"https://blog.mozilla.org/blog/2017/08/08/webvr-new-speedy-features/\" rel=\"noreferrer noopener\"><strong>Firefox 55 for Windows</strong></a>! Check it out on your Oculus Rift or HTC VIVE.",
       "datePublished": {
         "originalDateTimeString": "08-Aug-2017 06:00:00",
         "datetimeString": "Aug 8, 2017, 6:00 AM",
