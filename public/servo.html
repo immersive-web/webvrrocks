@@ -1,4 +1,4 @@
-{% from '_helpers.html' import author_item, browsers, site_title %}
+{% from '_helpers.html' import author_item, browsers, headsets, site_title %}
 {% set browser = browsers.servo %}
 {% set page = 'servo.html' %}
 <!doctype html>
@@ -9,7 +9,7 @@
   </head>
   <body>
     <header id="header" class="header" role="banner">
-      <div class="container section">
+      <div class="container section c">
         {% include '_logo.html' %}
 
         <a class="page-heading-link" href="{{ browser.about }}">
@@ -23,24 +23,62 @@
           <strong>Warning:</strong> All <a href="#releases">Servo WebVR builds posted here</a> are highly experimental and subject to change!
         </p>
 
-        <div id="download" class="download dropdown-standalone dropdown-download">
-          <a href="{{ browser.downloadUrl }}" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">Download {% include "media/img/download-icon.svg" %}
-            <span class="download-info c">
-              {% if browser.showVersion and browser.releases.latest.version %}
-                <span class="download-version">Version {{ browser.releases.latest.version }}</span>
-              {%- endif %}
-              {% if browser.showDateReleased and browser.releases.latest.dateReleased %}
-                <span class="download-date">{{ browser.releases.latest.dateReleased.datetimeString }}</span>
-              {%- endif %}
-              {%- if browser.showFileSize and browser.releases.latest.fileSize %}
-                <span class="download-size">{{ browser.releases.latest.fileSize }}</span>
-              {%- endif -%}
-            </span>
-          </a>
+        <div id="download"></div>
+
+        <div class="download-block">
+          <div class="download dropdown-standalone dropdown-download">
+            <a href="{{ browser.downloadUrl }}" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">Download {% include "media/img/download-icon.svg" %}
+              <span class="download-info c">
+                <span class="download-version">{{ headsets.samsung_gear_vr.name }}</span>
+                {% if browser.showDateReleased and browser.releases.samsung_gear_vr.dateReleased %}
+                  <span class="download-date">{{ browser.releases.samsung_gear_vr.dateReleased.datetimeString }}</span>
+                {%- endif %}
+                {%- if browser.showFileSize and browser.releases.samsung_gear_vr.fileSize %}
+                  <span class="download-size">{{ browser.releases.samsung_gear_vr.fileSize }}</span>
+                {%- endif -%}
+              </span>
+            </a>
+          </div>
+          <p class="view-source">
+            <a href="https://github.com/MortimerGoro/servo/tree/webvr_api" class="button-source no-underline">View source</a>
+          </p>
         </div>
-        <p class="view-source">
-          <a href="https://github.com/MortimerGoro/servo/tree/webvr_api" class="button-source no-underline">View source</a>
-        </p>
+        <div class="download-block">
+          <div class="download dropdown-standalone dropdown-download">
+            <a href="{{ browser.downloadUrl }}" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">Download {% include "media/img/download-icon.svg" %}
+              <span class="download-info c">
+                <span class="download-version">{{ headsets.google_daydream.name }}</span>
+                {% if browser.showDateReleased and browser.releases.google_daydream.dateReleased %}
+                  <span class="download-date">{{ browser.releases.google_daydream.dateReleased.datetimeString }}</span>
+                {%- endif %}
+                {%- if browser.showFileSize and browser.releases.google_daydream.fileSize %}
+                  <span class="download-size">{{ browser.releases.google_daydream.fileSize }}</span>
+                {%- endif -%}
+              </span>
+            </a>
+          </div>
+          <p class="view-source">
+            <a href="{{ browser.releases.google_daydream.sourceCodeUrl }}" class="button-source no-underline">View source</a>
+          </p>
+        </div>
+        <div class="download-block">
+          <div class="download dropdown-standalone dropdown-download">
+            <a href="{{ browser.downloadUrl }}" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">Download {% include "media/img/download-icon.svg" %}
+              <span class="download-info c">
+                <span class="download-version">{{ headsets.htc_vive.name }}</span>
+                {% if browser.showDateReleased and browser.releases.htc_vive.dateReleased %}
+                  <span class="download-date">{{ browser.releases.htc_vive.dateReleased.datetimeString }}</span>
+                {%- endif %}
+                {%- if browser.showFileSize and browser.releases.htc_vive.fileSize %}
+                  <span class="download-size">{{ browser.releases.htc_vive.fileSize }}</span>
+                {%- endif -%}
+              </span>
+            </a>
+          </div>
+          <p class="view-source">
+            <a href="{{ browser.releases.htc_vive.sourceCodeUrl }}" class="button-source no-underline">View source</a>
+          </p>
+        </div>
       </div>
     </header>
 
@@ -61,32 +99,12 @@
         </section>
 
         <section id="releases" class="section" data-section="releases">
-          <h2><a href="#releases">Latest version</a></h2>
+          <h2><a href="#releases">Releases</a></h2>
           <article itemscope itemtype="http://schema.org/SoftwareApplication">
             <dl>
               <dt class="browser-download">Download</dt>
               <dd>
-                <a class="button button-outlined-approve button-download" href="{{ browser.downloadUrl }}" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}" itemprop="downloadUrl">Download</a>
-              </dd>
-              <dt class="browser-date-released">Date released</dt>
-              <dd>
-                <time itemprop="datePublished" datetime="2016-12-16T9:39:00Z">
-                  Dec 16, 2016
-                </time>
-              </dd>
-              <dt class="browser-system-requirements">System requirements</dt>
-              <dd>
-                <span class="operatingSystems">Windows</span>
-              </dd>
-              <dt class="browser-file-size">File size</dt>
-              <dd>
-                <span itemprop="fileSize" content="36MB">36 MB</span>
-              </dd>
-              <dt class="browser-release-notes">Release notes</dt>
-              <dd>
-                <ul class="release-notes bullets-light">
-                  <li><span>Currently works with the <a href="/htc_vive">HTC Vive</a> only.</span></li>
-                </ul>
+                <a class="button button-outlined-approve button-download" href="#download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}" itemprop="downloadUrl">Download</a>
               </dd>
             </dl>
           </article>
@@ -112,6 +130,8 @@
           <div id="info"></div>
           <h2><a href="#info">Links</a></h2>
           <ul class="bullets-light">
+            <li><span><a href="https://blog.mozvr.com/samsung-gear-vr-support-lands-in-servo/">Mozilla VR Blog: <em>WebVR Support for Samsung Gear VR Lands in Servo:</em> <time data-datetime-original="2017-08-16T00:00:00-07:00">August 16, 2017</time></a></span></li>
+            <li><span><a href="https://blog.mozvr.com/webvr-daydream-support-lands-in-servo/">Mozilla VR Blog: <em>WebVR Support for Google Daydream Lands in Servo</em> <time data-datetime-original="2017-04-19T00:00:00-07:00">April 19, 2017</time></a></span></li>
             <li><span><a href="http://www.androidpolice.com/2017/04/20/mozillas-experimental-servo-engine-adds-webvr-support/">Android Police: <em>Mozilla’s experimental Servo engine adds WebVR support with Daydream VR</em> <time data-datetime-original="2017-04-20T11:40:46-07:00">April 20, 2017</time></a></span></li>
             <li><span><a href="https://blog.mozvr.com/webvr-daydream-support-lands-in-servo/">Mozilla VR Blog: <em>WebVR Google Daydream support lands in Servo</em> <time>April 19, 2017</time></a></span></li>
             <li><span><a href="https://blog.mozvr.com/webvr-servo-architecture-and-latency-optimizations/">Mozilla VR Blog: <em>WebVR Coming to Servo: Architecture and Latency Optimizations</em> <time>November 29, 2016</time></a></span></li>
