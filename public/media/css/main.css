@@ -954,7 +954,6 @@ html[data-layout] [data-section="demos"] ul.matrix {
   display: table-cell;
 }
 
-[itemprop="browser"] [data-platform="mac"],
 [itemprop="browser"] [data-platform="linux"],
 [itemprop="browser"][data-slug="firefox"] tr[data-headset="samsung_gear_vr"],
 [itemprop="browser"][data-slug="firefox"] tr[data-headset="google_daydream"],
