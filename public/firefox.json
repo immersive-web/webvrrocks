@@ -291,32 +291,148 @@
   "reports": [
     {
       "type": "bug",
+      "enabled": false,
       "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0",
       "browserVersion": "Nightly 50.0",
       "browserBuildId": "20161104212021",
       "browserDate": "2016-11-04",
+      "platforms": [
+        "windows"
+      ],
       "headsets": [
         "htc_vive"
       ],
       "description": "Scene wobbles as headset rotates",
-      "status": "Needs STR",
+      "status": "Fixed",
       "dateReported": {
         "datetime": "2016-11-27T19:41:34",
         "pretty": "Nov 27, 2016"
       },
       "dateUpdated": {
-        "datetime": "2017-01-31T09:21:05",
-        "pretty": "Jan 31, 2017"
+        "datetime": "2017-10-25T12:25:00",
+        "pretty": "Oct 25, 2017"
       },
       "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1334977"
     },
     {
+      "type": "bug",
+      "description": "Implement onvrdisplaypointerrestricted and onvrdisplaypointerunrestricted events for Windows Mixed Reality",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1411065",
+      "status": "Filed",
+      "priority": "P1",
+      "platforms": [
+        "windows"
+      ],
+      "headsets": [
+        "windows_mixed_reality"
+      ],
+      "dateReported": {
+        "datetime": "2017-10-23T14:59:64",
+        "pretty": "Oct 23, 2017"
+      },
+      "dateUpdated": {
+        "datetime": "2017-10-26T10:02:00",
+        "pretty": "Oct 26, 2017"
+      }
+    },
+    {
+      "type": "bug",
+      "description": "Expose full OpenVR name string for Microsoft Mixed Reality headsets",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1411059",
+      "status": "Filed",
+      "priority": null,
+      "platforms": [
+        "windows"
+      ],
+      "headsets": [
+        "windows_mixed_reality"
+      ],
+      "dateReported": {
+        "datetime": "2017-10-23T14:47:00",
+        "pretty": "Oct 23, 2017"
+      },
+      "dateUpdated": {
+        "datetime": "2017-10-26T10:01:00",
+        "pretty": "Oct 26, 2017"
+      }
+    },
+    {
+      "type": "bug",
+      "description": "Ensure that the first button returned for VR controllers is the primary button",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1411061",
+      "status": "Filed",
+      "priority": null,
+      "platforms": [
+        "windows",
+        "mac"
+      ],
+      "headsets": [
+        "oculus_rift",
+        "htc_vive",
+        "windows_mixed_reality"
+      ],
+      "dateReported": {
+        "datetime": "2017-10-23T14:52:00",
+        "pretty": "Oct 23, 2017"
+      },
+      "dateUpdated": {
+        "datetime": "2017-10-24T01:44:00",
+        "pretty": "Oct 26, 2017"
+      }
+    },
+    {
+      "type": "bug",
+      "description": "Ensure that WebVR content runs on the most optimal display adapter",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1411058",
+      "status": "Filed",
+      "priority": "P1",
+      "platforms": [
+        "windows",
+        "mac"
+      ],
+      "headsets": [
+        "oculus_rift",
+        "htc_vive",
+        "windows_mixed_reality"
+      ],
+      "dateReported": {
+        "datetime": "2017-10-23T14:41:00",
+        "pretty": "Oct 23, 2017"
+      },
+      "dateUpdated": {
+        "datetime": "2017-10-23T14:41:00",
+        "pretty": "Oct 23, 2017"
+      }
+    },
+    {
+      "type": "bug",
+      "description": "WebVR content does not present when using Oculus Home before launching Firefox",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1384279",
+      "status": "Filed",
+      "priority": "P1",
+      "platforms": [
+        "windows"
+      ],
+      "headsets": [
+        "oculus_rift"
+      ],
+      "dateReported": {
+        "datetime": "2017-07-25T13:05:00",
+        "pretty": "Jul 25, 2017"
+      },
+      "dateUpdated": {
+        "datetime": "2017-10-23T14:33:00",
+        "pretty": "Oct 23, 2017"
+      }
+    },
+    {
+      "enabled": false,
       "type": "feature",
       "headsets": [
         "oculus_rift"
       ],
       "description": "Oculus Remote support",
-      "status": "TBD",
+      "status": "Fixed",
       "dateReported": {
         "datetime": "2016-03-29T14:46:00",
         "pretty": "Mar 3, 2016"
@@ -328,7 +444,9 @@
       "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1260561"
     },
     {
+      "enabled": false,
       "type": "site",
+      "status": "Fixed",
       "description": "05 Roomscale not loading",
       "webcompatUrl": "https://webcompat.com/issues/4528"
     }

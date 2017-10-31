@@ -382,8 +382,8 @@
       }
       if (playPauseCounter >= 4) {
         if (debug) {
-        console.log('YouTube Video "%s" was paused/played a few times');
-      }
+          console.log('YouTube Video "%s" was paused/played a few times');
+        }
         storage.increment('videos:what_is_webvr:plays', {once: true});
       }
     };
