@@ -8,7 +8,6 @@
 
 302   /htc_vive/order     /htc_vive/buy
 
-302   /oculus_carmel  https://www.oculus.com/experiences/gear-vr/1290985657630933/
 302   /oculus_rift  https://www.oculus.com/rift/
 302   /osvr  http://www.osvr.org/hdk2.html
 302   /samsung_gear_vr  https://www.samsung.com/global/galaxy/gear-vr/
@@ -177,10 +176,9 @@
 302   /chrome-for-android/download  /chrome_for_android/download
 302   /chrome_for_android/download  https://play.google.com/store/apps/details?id=com.android.chrome
 
-302   /carmel  /oculus_carmel
-
+302   /carmel  /oculus_browser
 302   /oculus-browser  /oculus_browser
-
+302   /oculus_carmel  /oculus_browser
 302   /oculus-carmel  /oculus_browser
 
 302   /oculus-carmel/ford  /oculus_browser/ford
@@ -198,6 +196,10 @@
 302   /carmel/ford  /oculus_browser/ford
 302   /carmel/fog  /oculus_browser/fog
 302   /carmel/kadjar  /oculus_browser/kadjar
+
+302   /oculus-carmel/ford  https://static.oculus.com/webvr/production/97f2fc11c8a96114547e8edc8453878b5f9c5653/Samples/FordDemo/index.html
+302   /oculus-carmel/fog  https://aframe.io/aframe/examples/showcase/spheres-and-fog/
+302   /oculus-carmel/kadjar  http://kadjar-vr.littleworkshop.fr/
 
 302   /oculus_carmel/ford  https://static.oculus.com/webvr/production/97f2fc11c8a96114547e8edc8453878b5f9c5653/Samples/FordDemo/index.html
 302   /oculus_carmel/fog  https://aframe.io/aframe/examples/showcase/spheres-and-fog/
