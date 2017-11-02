@@ -1,32 +1,30 @@
-{% set slug = 'oculus_carmel' %}
+{% set slug = 'oculus_browser' %}
 {% extends '_layout_browser.html' %}
-
-{% set browser = browsers.oculus_carmel %}
 
 {% block instructions %}
   <ol class="bullets-light">
     <li>
       <span>
-        <p>Search for and <strong>install <a href="{{ browser.url }}">Carmel Developer Preview</a></strong> from the <strong>Oculus Gear VR store</strong>.</p>
-        <figure class="media-outlined">
-          <img src="oculus_carmel/app.png" width="200" alt="Oculus Carmel installation screen">
-          <figcaption>Installation screen</figcaption>
-        </figure>
+        Insert your <a href="#phones">supported Android phone</a> into the <a href="{{ headsets.samsung_gear_vr.about }}">Samsung Gear VR</a> headset.
+        <ul>
+          <li>
+            <span>If prompted, eject your phone and proceed to complete the Gear VR installation or upgrade process.</span></li>
+          </ul>
       </span>
     </li>
     <li>
       <span>
-        Launch <strong>Carmel Developer Preview</strong> from your Gear VR Library.
+        Launch the <strong>Oculus Browser</strong> from the <strong>Oculus Home</strong> lobby.
       </span>
     </li>
     <li>
       <span>
-        <p><stong>Enjoy the included WebVR demos!</stong></p>
-        <figure class="media-outlined">
-          <img src="https://dl.airtable.com/ZtmdSF5gRBqzuICpspK6_full_12386444_1799525440318007_1635011178193223680_n.jpg" width="300" alt="Oculus Carmel demos">
-          <figcaption>WebVR demos from Carmel main lobby space</figcaption>
-        </figure>
+        <p>Load <a href="https://aframe.io/" rel="noreferrer noopener">aframe.io</a> or <a href="https://webvr.rocks/" rel="noreferrer noopener">webvr.rocks</a></p>
       </span>
+      <li>
+        <span>
+          Enjoy WebVR content!
+        </span>
     </li>
   </ol>
 {% endblock %}
@@ -40,6 +38,7 @@
 
 {% block links %}
   <ul class="bullets-light">
+    <li><span><a href="https://www.oculus.com/blog/mobile-vr-is-better-than-ever/">Mobile VR Is Better than Ever</a></span></li>
     <li><span><a href="https://developer.oculus.com/webvr/">Oculus WebVR Developer Center</a></span></li>
     <li><span><a href="https://developer3.oculus.com/documentation/vrweb/latest/">Oculus WebVR Guide</a></span></li>
     <li><span><a href="https://developer3.oculus.com/documentation/vrweb/latest/concepts/carmel-launching-content/">Launching WebVR content in Carmel</a></span></li>

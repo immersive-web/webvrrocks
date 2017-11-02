@@ -179,31 +179,41 @@
 
 302   /carmel  /oculus_carmel
 
-302   /oculus-carmel  /oculus_carmel
+302   /oculus-browser  /oculus_browser
 
-302   /oculus-carmel/ford  /oculus_carmel/ford
-302   /oculus-carmel/fog  /oculus_carmel/fog
-302   /oculus-carmel/kadjar  /oculus_carmel/kadjar
+302   /oculus-carmel  /oculus_browser
 
-302   /carmel/ford  /oculus_carmel/ford
-302   /carmel/fog  /oculus_carmel/fog
-302   /carmel/kadjar  /oculus_carmel/kadjar
+302   /oculus-carmel/ford  /oculus_browser/ford
+302   /oculus-carmel/fog  /oculus_browser/fog
+302   /oculus-carmel/kadjar  /oculus_browser/kadjar
 
-302   /oculus_carmel/ford  ovrweb:http://static.oculus.com/webvr/production/97f2fc11c8a96114547e8edc8453878b5f9c5653/Samples/FordDemo/index.html
-302   /oculus_carmel/fog  ovrweb:http://aframe.io/aframe/examples/showcase/spheres-and-fog/
-302   /oculus_carmel/kadjar  ovrweb:http://kadjar.littleworkshop.fr/
+302   /oculus-browser/ford  /oculus_browser/ford
+302   /oculus-browser/fog  /oculus_browser/fog
+302   /oculus-browser/kadjar  /oculus_browser/kadjar
+
+302   /oculus/ford  /oculus_browser/ford
+302   /oculus/fog  /oculus_browser/fog
+302   /oculus/kadjar  /oculus_browser/kadjar
+
+302   /carmel/ford  /oculus_browser/ford
+302   /carmel/fog  /oculus_browser/fog
+302   /carmel/kadjar  /oculus_browser/kadjar
+
+302   /oculus_carmel/ford  https://static.oculus.com/webvr/production/97f2fc11c8a96114547e8edc8453878b5f9c5653/Samples/FordDemo/index.html
+302   /oculus_carmel/fog  https://aframe.io/aframe/examples/showcase/spheres-and-fog/
+302   /oculus_carmel/kadjar  http://kadjar-vr.littleworkshop.fr/
 
 302   /chat  /slack
 
 302   /browsers  /#browsers
 302   /browsers/  /#browsers
 
+302   /Browsers  /browsers
+302   /Browsers/  /browsers/
+
 302   /posters  https://github.com/WebVRRocks/posters
 302   /poster  https://raw.githubusercontent.com/WebVRRocks/posters/master/rocks-webvr-browsers.png
 302   /poster.png  https://raw.githubusercontent.com/WebVRRocks/posters/master/rocks-webvr-browsers.png
-
-302   /Browsers  /browsers
-302   /Browsers/  /browsers/
 
 302   /compat/submit  https://airtable.com/shrGtVbhfoadJ47c8
 302   /compat  /compat/submit

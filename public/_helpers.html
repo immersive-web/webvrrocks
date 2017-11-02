@@ -46,7 +46,7 @@
 {% includeData 'chromium.json' as chromium %}
 {% includeData 'firefox.json' as firefox %}
 {% includeData 'samsung_internet.json' as samsung_internet %}
-{% includeData 'oculus_carmel.json' as oculus_carmel %}
+{% includeData 'oculus_browser.json' as oculus_browser %}
 {% includeData 'chrome_for_android.json' as chrome_for_android %}
 {% includeData 'microsoft_edge.json' as microsoft_edge %}
 {% includeData 'servo.json' as servo %}
@@ -74,7 +74,7 @@
   chromium: chromium,
   firefox: firefox,
   samsung_internet: samsung_internet,
-  oculus_carmel: oculus_carmel,
+  oculus_browser: oculus_browser,
   chrome_for_android: chrome_for_android,
   microsoft_edge: microsoft_edge,
   servo: servo
@@ -96,6 +96,45 @@
     "about": "/google_cardboard"
   },
   windows_mixed_reality: windows_mixed_reality
+} %}
+
+{% set phones = {
+  "samsung_galaxy_note8": {
+    "name": "Samsung Galaxy Note8",
+    "about": "https://www.samsung.com/global/galaxy/galaxy-note8/"
+  },
+  "samsung_galaxy_s8": {
+    "name": "Samsung Galaxy S8",
+    "about": "https://www.samsung.com/global/galaxy/gallery/galaxy-s8/"
+  },
+  "samsung_galaxy_s8_plus": {
+    "name": "Samsung Galaxy S8+",
+    "about": "https://www.samsung.com/global/galaxy/gallery/galaxy-s8/"
+  },
+  "samsung_galaxy_s7": {
+    "name": "Samsung Galaxy S7",
+    "about": "https://www.samsung.com/global/galaxy/gallery/galaxy-s7/"
+  },
+  "samsung_galaxy_s7_edge": {
+    "name": "Samsung Galaxy S7 Edge",
+    "about": "https://www.samsung.com/global/galaxy/gallery/galaxy-s7/"
+  },
+  "samsung_galaxy_note5": {
+    "name": "Samsung Galaxy Note5",
+    "about": "http://www.samsung.com/global/galaxy/galaxy-note5/"
+  },
+  "samsung_galaxy_s6_edge_plus": {
+    "name": "Samsung Galaxy S6 Edge+",
+    "about": "http://www.samsung.com/global/galaxy/galaxy-s6-edge-plus/"
+  },
+  "samsung_galaxy_s6": {
+    "name": "Samsung Galaxy S6",
+    "about": "http://www.samsung.com/global/galaxy/galaxys6/galaxy-s6/"
+  },
+  "samsung_galaxy_s6_edge": {
+    "name": "Samsung Galaxy S6 Edge",
+    "about": "http://www.samsung.com/global/galaxy/galaxys6/galaxy-s6-edge/"
+  }
 } %}
 
 {% macro browser_platform_support (browser, headset, os) %}
