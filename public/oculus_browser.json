@@ -1,31 +1,48 @@
 {
   "@context": "http://schema.org",
   "@type": "MobileApplication",
-  "name": "Oculus Carmel",
-  "slug": "oculus_carmel",
-  "description": "Oculus' VR browser for Gear VR",
-  "description_html": "<a href=\"https://www.oculus.com/\">Oculus</a>&rsquo; <a href=\"https://www.oculus.com/experiences/gear-vr/1290985657630933/\">VR browser</a> for <a href=\"https://www.samsung.com/global/galaxy/gear-vr/\">Gear VR</a>",
+  "name": "Oculus Browser",
+  "slug": "oculus_browser",
+  "description": "Oculus' VR browser for Samsung Gear VR",
+  "description_html": "<a href=\"https://www.oculus.com/\" rel=\"noreferrer noopener\">Oculus</a>&rsquo; <a href=\"https://www.oculus.com/experiences/gear-vr/1290985657630933/\" rel=\"noreferrer noopener\">VR browser</a> for <a href=\"https://www.samsung.com/global/galaxy/gear-vr/\" rel=\"noreferrer noopener\">Samsung Gear VR</a>",
   "operatingSystem": "Android 5.1+",
   "headsets": [
     "samsung_gear_vr"
   ],
+  "phones": [
+    "samsung_galaxy_note8",
+    "samsung_galaxy_s8",
+    "samsung_galaxy_s8_plus",
+    "samsung_galaxy_s7",
+    "samsung_galaxy_s7_edge",
+    "samsung_galaxy_note5",
+    "samsung_galaxy_s6_edge_plus",
+    "samsung_galaxy_s6",
+    "samsung_galaxy_s6_edge"
+  ],
+  "showPhones": true,
   "showProcessorRequirements": false,
   "processorRequirements": "",
-  "logo": "/oculus_carmel/icon.png",
-  "image": "/oculus_carmel/cover.png",
-  "url": "https://www.oculus.com/experiences/gear-vr/1290985657630933/",
-  "about": "/oculus_carmel",
-  "downloadUrl": "https://www.oculus.com/experiences/gear-vr/1290985657630933/",
-  "landingUrl": "https://www.oculus.com/experiences/gear-vr/1290985657630933/",
+  "logo": "/oculus_browser/icon.png",
+  "image": "/oculus_browser/cover.png",
+  "url": "https://www.oculus.com/experiences/gear-vr/1257988667656584/",
+  "about": "/oculus_browser",
+  "downloadUrl": "https://www.oculus.com/experiences/gear-vr/1257988667656584/",
+  "landingUrl": "https://www.oculus.com/experiences/gear-vr/1257988667656584/",
   "sameAs": [
-    "https://webvr.rocks/oculus_carmel",
+    "https://webvr.rocks/oculus_browser",
     "https://developer.oculus.com/webvr/"
   ],
   "showDateReleased": true,
   "showFileSize": true,
-  "softwareVersion": "0.2-004016",
+  "softwareVersion": "4.0.0.19",
   "releases": {
-    "latest": {
+    "4.0.0.19": {
+      "url": "https://www.oculus.com/experiences/gear-vr/1257988667656584/",
+      "fileSize": "79.83 MB",
+      "version": "4.0.0.19"
+    },
+    "0.2-004016": {
       "url": "https://www.oculus.com/experiences/gear-vr/1290985657630933/",
       "fileSize": "87.74 MB",
       "version": "0.2-004016"

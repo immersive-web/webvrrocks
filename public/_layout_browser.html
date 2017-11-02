@@ -1,4 +1,4 @@
-{% from '_helpers.html' import author_item, browser_item, browsers, bugs_bar, compat_report_row, demo_item, headsets, site_title, youtube %}
+{% from '_helpers.html' import author_item, browser_item, browsers, bugs_bar, compat_report_row, demo_item, headsets, phones, site_title, youtube %}
 {% set browser = browsers[slug] %}
 {% set page = slug + '.html' %}
 <!doctype html>
@@ -87,6 +87,23 @@
           </section>
         {% endblock %}
 
+        {% block phones_block %}
+          {% if browser.phones %}
+            <section id="phones" class="section phones" data-section="phones">
+              <h2><a href="#phones">Supported phones</a></h2>
+              {% block phones %}
+                <ul class="bullets-light">
+                  {% for slug in browser.phones -%}
+                    <li><span><a href="{{ phones[slug].about }}" itemprop="aboutUrl">{{ phones[slug].name }}</a></span></li>
+                  {%- endfor %}
+                </ul>
+              {% endblock %}
+            </section>
+          {% else %}
+            <div id="phones"></div>
+          {% endif %}
+        {% endblock %}
+
         {% block demos_block %}
           <section id="demos" class="section demos" data-section="demos">
             <h2><a href="#demos">Demos</a></h2>
@@ -142,6 +159,15 @@
                   <dd>
                     {% for slug in browser.headsets %}
                       <a href="{{ headsets[slug].about }}">{{ headsets[slug].name }}</a>
+                      {%- if loop.revindex > 1 %},{% endif %}
+                    {% endfor %}
+                  </dd>
+                {% endif %}
+                {% if browser.showPhones === true %}
+                  <dt class="browser-supported-phones">Supported phones</dt>
+                  <dd>
+                    {% for slug in browser.phones %}
+                      <a href="{{ phones[slug].about }}">{{ phones[slug].name }}</a>
                       {%- if loop.revindex > 1 %},{% endif %}
                     {% endfor %}
                   </dd>

@@ -356,6 +356,10 @@ h1.page-heading {
   min-width: 70px;
 }
 
+[data-layout~="oculus_browser"] .browser-icon {
+  border-radius: 6px;
+}
+
 .headset-icon {
   display: inline-block;
   margin-bottom: 1rem;
@@ -1576,16 +1580,17 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
     color: rgba(151,126,254,1);
   }
 
-  .matrix [itemprop="browser"][data-slug="oculus_carmel"] [itemprop="image"] {
+  .matrix [itemprop="browser"][data-slug="oculus_browser"] [itemprop="image"] {
+    background-color: rgb(33,33,35);
     border-color: rgba(60,61,62,.3);
   }
-  .matrix [itemprop="browser"][data-slug="oculus_carmel"]:hover [itemprop="image"] {
+  .matrix [itemprop="browser"][data-slug="oculus_browser"]:hover [itemprop="image"] {
     border-color: rgba(60,61,62,.6);
   }
-  .matrix [itemprop="browser"][data-slug="oculus_carmel"] [itemprop="url"] {
+  .matrix [itemprop="browser"][data-slug="oculus_browser"] [itemprop="url"] {
     color: rgba(60,61,62,.8);
   }
-  .matrix [itemprop="browser"][data-slug="oculus_carmel"] [itemprop="url"]:hover {
+  .matrix [itemprop="browser"][data-slug="oculus_browser"] [itemprop="url"]:hover {
     color: rgba(60,61,62,1);
   }
 
