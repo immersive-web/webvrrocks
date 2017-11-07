@@ -25,7 +25,7 @@
         </figure>
 
         <div id="download" class="download dropdown-standalone dropdown-download">
-          <a href="{{ browser.url }}" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">Version 5.2.00-14</span> <span class="download-size">53.95 MB</span></span></a>
+          <a href="{{ browser.url }}" class="button button-unstyled button-large button-download" data-download-name="{{ browser.slug }}" data-download-id="{{ browser.softwareVersion }}">Download {% include "media/img/download-icon.svg" %} <span class="download-info c"><span class="download-date">Version 5.4.10.4</span> <span class="download-size">226.79 MB</span></span></a>
         </div>
       </div>
     </header>
@@ -50,9 +50,17 @@
                 Launch <strong>Samsung Internet</strong> from your Gear VR Library.
               </span>
             </li>
-            <li><span>Navigate to <strong><code>internet://flags</code></strong>.</span></li>
-            <li><span>Enable the <strong>WebVR</strong> flag.</span></li>
-            <li><span>Relaunch the browser.</span></li>
+            <li><span>
+              <p>Samsung Internet for Gear VR automatically detects web pages that use the WebVR API and prompts users to enable WebVR when the page is loaded. You can also enable or disable WebVR via the <strong>Labs</strong> menu.<p>
+              <figure class="media-outlined">
+                <img src="samsung_internet/labs-menu.jpg" width="270" alt="Labs menu for Samsung Internet Browser for Gear VR">
+                <figcaption>Labs menu</figcaption>
+              </figure>
+              <figure class="media-outlined">
+                <img src="samsung_internet/webvr-menu.jpg" width="391" alt="WebVR menu for Samsung Internet Browser for Gear VR">
+                <figcaption>WebVR menu</figcaption>
+              </figure>
+            </li>
           </ol>
         </section>
 
@@ -87,7 +95,7 @@
               <dt class="browser-release-notes">Release notes</dt>
               <dd>
                 <ul class="release-notes bullets-light">
-                  <li><span>WebVR is an experimental feature and can be enabled by visiting <code>internet://flags</code>, enabling <strong>WebVR</strong>, and then relaunching the browser.</span></li>
+                  <li><span>WebVR is an experimental feature and can be enabled via the <strong>Labs</strong> menu.</span></li>
                 </ul>
               </dd>
             </dl>
