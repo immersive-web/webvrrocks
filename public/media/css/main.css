@@ -1122,6 +1122,14 @@ tr[data-headset="windows_mixed_reality"] th a:before {
   margin-top: 1.5rem;
 }
 
+.db {
+  display: block;
+}
+
+.w-100 {
+  width: 100%;
+}
+
 .button-source {
   display: block;
   font-size: .8rem;
@@ -1452,6 +1460,15 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
 
 .button-bugs-report {
   font-weight: bold;
+}
+
+[data-section~="setup"] figure {
+  background: #fafafa;
+  margin-right: 1.5rem;
+}
+
+[data-section~="setup"] figure + figure {
+  margin-top: 1.5em;
 }
 
 /**
@@ -1839,6 +1856,12 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
   .intro-para {
     font-size: 1.2rem;
     line-height: 1.6;
+  }
+}
+
+@media all and (min-width: 52.8rem) {
+  [data-section~="setup"] figure + figure {
+    margin-top: 0;
   }
 }
 
