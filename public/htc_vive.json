@@ -2,6 +2,7 @@
   "@context": "http://schema.org",
   "@type": "Product",
   "name": "HTC VIVE",
+  "alternateName": "Vive",
   "slug": "htc_vive",
   "description": "Roomscale VR for SteamVR and OpenVR",
   "description_html": "Roomscale VR for <a href=\"http://store.steampowered.com/steamvr\">SteamVR</a> and <a href=\"https://github.com/ValveSoftware/openvr\">OpenVR</a>",
@@ -35,22 +36,22 @@
     "Headset"
   ],
   "releaseNotes": "/htc_vive/release_notes.json",
-  "dateCreated": "",
-  "datePublished": "",
-  "video": "https://webvr.rocks/chromium/video.json",
-  "downloadUrl": "https://docs.google.com/uc?id=0BzudLt22BqGRRElMNmVqQjJWS2c&export=download",
-  "fileFormat": "application/zip",
-  "learningResourceType": "https://webvr.rocks/chromium",
-  "discussionUrl": "https://webvr.rocks/chromium#comments",
-  "softwareHelp": "https://webvr.rocks/chromium#help",
-  "version": "",
+  "dateCreated": null,
+  "datePublished": null,
+  "video": "https://webvr.rocks/htc_vive/video.json",
+  "downloadUrl": "http://dl4.htc.com/vive/ViveSetup.exe",
+  "fileFormat": "application/vnd.microsoft.portable-executable",
+  "learningResourceType": "https://webvr.rocks/htc_vive",
+  "discussionUrl": "https://webvr.rocks/htc_vive#comments",
+  "softwareHelp": "https://webvr.rocks/htc_vive#help",
+  "version": null,
   "softwareRequirements": [
-    "https://www3.oculus.com/setup/",
-    "https://www.vive.com/us/setup/"
+    "https://www.vive.com/setup/",
+    "https://www3.oculus.com/setup/"
   ],
   "requirements": [
-    "https://www3.oculus.com/setup/",
     "https://www.vive.com/us/setup/",
+    "https://www3.oculus.com/setup/",
     "http://store.steampowered.com/app/323910"
   ],
   "fileSize": "93 MB",
@@ -61,51 +62,18 @@
   "sourceOrganization": "",
   "softwareAddOn": "",
   "device": "",
-  "alternateName": "Chromium WebVR",
   "audio": "",
   "platforms": {
-    "htc_vive": {
-      "windows": "supported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "headset_unsupported",
-      "ios": "headset_unsupported"
-    },
-    "oculus_rift": {
-      "windows": "supported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "headset_unsupported",
-      "ios": "headset_unsupported"
-    },
-    "samsung_gear_vr": {
-      "windows": "headset_unsupported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "browser_unsupported",
-      "ios": "headset_unsupported"
-    },
-    "google_daydream": {
-      "windows": "headset_unsupported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "supported",
-      "ios": "headset_unsupported"
-    },
-    "google_cardboard": {
-      "windows": "headset_unsupported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "supported",
-      "ios": "browser_unsupported"
-    },
-    "windows_mixed_reality": {
-      "windows": "browser_unsupported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "headset_unsupported",
-      "ios": "headset_unsupported"
-    }
+    "windows": [
+      "firefox",
+      "chromium"
+    ],
+    "mac": [
+      "firefox"
+    ],
+    "linux": [],
+    "android": [],
+    "ios": []
   },
   "reports": [
     {

@@ -377,7 +377,6 @@ html[data-layout~="headset"][data-layout~="htc_vive"] body {
 }
 
 html[data-layout~="headset"][data-layout~="htc_vive"] .page-heading {
-  /*color: #00718d;*/
   color: #111;
 }
 
@@ -386,7 +385,26 @@ html[data-layout~="headset"][data-layout~="htc_vive"] h3 a {
   color: #777;
 }
 
-html[data-layout~="headset"][data-layout~="htc_vive"] [data-section]:not(:last-child),
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] [data-section]:not(:last-child),
+.header {
+  border-bottom-color: rgba(0,0,0,.1);
+}
+
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"],
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] body {
+  background-color: #e7f5fe;
+}
+
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] .page-heading {
+  color: #111;
+}
+
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] h3,
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] h3 a {
+  color: #777;
+}
+
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] [data-section]:not(:last-child),
 .header {
   border-bottom-color: rgba(0,0,0,.1);
 }
@@ -397,6 +415,10 @@ a[itemprop="pictogram"] svg {
 
 a[itemprop="pictogram"] svg path {
   fill: #00b5e2;
+}
+
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] a[itemprop="pictogram"] svg path {
+  fill: #3b80de;
 }
 
 .main h2,
@@ -513,25 +535,25 @@ p.message {
 }
 
 .main [data-section~="info"] dd + dt,
-.main [data-section~="faq"] dd + dt {
+.main [data-section~="help"] dd + dt {
   padding-top: 2rem;
 }
 
-.main [data-section~="faq"] dt a {
+.main [data-section~="help"] dt a {
   color: #333;
 }
 
-.main [data-section~="faq"] dt a:hover {
+.main [data-section~="help"] dt a:hover {
   color: #111;
 }
 
-.main [data-section~="faq"] dd {
+.main [data-section~="help"] dd {
   opacity: .7;
   transition: .15s opacity ease-in-out;
 }
 
-.main [data-section~="faq"] dt:hover + dd,
-.main [data-section~="faq"] dd:hover {
+.main [data-section~="help"] dt:hover + dd,
+.main [data-section~="help"] dd:hover {
   opacity: .9;
 }
 
