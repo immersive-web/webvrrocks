@@ -5,7 +5,7 @@
   <ol class="bullets-light">
     <li>
       <span>
-        Insert your <a href="#phones">supported Android phone</a> into the <a href="{{ headsets.samsung_gear_vr.about }}">Samsung Gear VR</a> headset.
+        Insert your <a href="#phones">supported Android phone</a> into the <a href="{{ headsets.samsung_gear_vr.about }}">{{ headsets.samsung_gear_vr.name }}</a> headset.
         <ul>
           <li>
             <span>If prompted, eject your phone and proceed to complete the Gear VR installation or upgrade process.</span>
@@ -15,17 +15,18 @@
     </li>
     <li>
       <span>
-        Launch the <strong>Oculus Browser</strong> from the <strong>Oculus Home</strong> lobby.
+        Launch the <strong>Oculus Browser</strong> from the <strong>Oculus Lobby</strong>.
       </span>
     </li>
     <li>
       <span>
-        <p>Load <a href="https://aframe.io/" rel="noreferrer noopener">aframe.io</a> or <a href="https://webvr.rocks/" rel="noreferrer noopener">webvr.rocks</a></p>
+        Load <a href="https://aframe.io/" rel="noreferrer noopener"><strong>aframe.io</strong></a> or <a href="https://webvr.rocks/" rel="noreferrer noopener"><strong>webvr.rocks</strong></a>.
       </span>
-      <li>
-        <span>
-          Enjoy WebVR content!
-        </span>
+    </li>
+    <li>
+      <span>
+        Enjoy WebVR content!
+      </span>
     </li>
   </ol>
 {% endblock %}
@@ -47,13 +48,13 @@
   </ul>
 {% endblock %}
 
-{% block faq %}
+{% block help %}
   <dl>
-    <dt id="faq_name">
-      <a href="#faq_name">What is “Carmel” vs. “Oculus Browser”?</a>
+    <dt id="what_is_carmel">
+      <a href="#what_is_carmel">What is “Carmel” vs. “Oculus Browser”?</a>
     </dt>
     <dd>
-      “Carmel” was the codename for a preview of the VR browser from Oculus. This release focused on running 3D, WebVR API content in VR; comprehensive 2D support is planned for a later release. You can currently use the Oculus Browser to check out WebVR projects from other developers as well as test your own experiences.
+      “Carmel” was the former codename for a developer preview of Oculus&rsquo; VR browser. This release focused on running 3D, WebVR API content in VR; comprehensive 2D support is planned for a later release. Now, you should use only the official <strong>Oculus Browser</strong> for browsing with the {{ headsets.samsung_gear_vr.name }}.
     </dd>
     <dt id="faq_viewing">
       <a href="#faq_viewing">How do I view 2D content in the Oculus Browser?</a>

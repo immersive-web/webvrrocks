@@ -201,6 +201,8 @@
         {% block reports_block %}
           <section id="compat" class="section" data-section="compat">
             <div id="compatibility"></div>
+            <div id="bugs"></div>
+            <div id="issues"></div>
             <div id="known_issues"></div>
             <div id="known-issues"></div>
             <h2><a href="#compat">Implementation Status</a></h2>
@@ -251,12 +253,14 @@
           </section>
         {% endblock %}
 
-        {% block faq_block %}
-          <section id="faq" class="section faq" data-section="faq">
-            <h2><a href="#faq">{{ faq_heading or faq_title or 'FAQ' }}</a></h2>
-            {% block faq %}
+        {% block help_block %}
+          <section id="help" class="section help" data-section="help">
+            <div id="faq"></div>
+            <div id="info"></div>
+            <div id="support"></div>
+            <h2><a href="#help">{{ help_heading or help_title or 'Help' }}</a></h2>
+            {% block help %}
             {% endblock %}
-            {{ bugs_bar(browser) }}
           </section>
         {% endblock %}
       </div>

@@ -1484,13 +1484,48 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
   font-weight: bold;
 }
 
-[data-section~="setup"] figure {
+[data-layout~="secondary"] [data-section~="setup"] figure,
+[data-layout~="secondary"] [data-section~="help"] figure {
   background: #fafafa;
   margin-right: 1.5rem;
 }
 
-[data-section~="setup"] figure + figure {
+[data-layout~="secondary"] [data-section~="setup"] figure + figure,
+[data-layout~="secondary"] [data-section~="help"] figure + figure {
   margin-top: 1.5em;
+}
+
+[data-layout~="secondary"] [data-section~="setup"] figure strong:first-child,
+[data-layout~="secondary"] [data-section~="help"] figure strong:first-child {
+  color: #555;
+  display: block;
+}
+
+.figure-stretched img {
+  background-color: #fff;
+  object-fit: contain;
+  padding: 1rem 1rem 0;
+  width: 100%;
+}
+
+img.cover {
+  object-fit: cover;
+}
+
+.pt0 {
+  padding-top: 0 !important;
+}
+
+.pb0 {
+  padding-bottom: 0 !important;
+}
+
+.mt0 {
+  margin-top: 0 !important;
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
 }
 
 /**
@@ -1882,7 +1917,8 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
 }
 
 @media all and (min-width: 52.8rem) {
-  [data-section~="setup"] figure + figure {
+  [data-layout~="secondary"] [data-section~="setup"] figure:first-child + figure,
+  [data-layout~="secondary"] [data-section~="help"] figure:first-child + figure {
     margin-top: 0;
   }
 }
