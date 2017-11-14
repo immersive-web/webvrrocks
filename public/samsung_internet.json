@@ -7,7 +7,6 @@
   "slug": "samsung_internet",
   "operatingSystem": "Android 5.1+",
   "headsets": [
-    "google_cardboard",
     "samsung_gear_vr"
   ],
   "showProcessorRequirements": false,
