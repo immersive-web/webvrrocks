@@ -1,0 +1,88 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Samsung Gear VR",
+  "alternateName": "Gear VR",
+  "slug": "samsung_gear_vr",
+  "description": "Android-compatible <a href=\"https://www.samsung.com/global/galaxy/gear-vr/\" rel=\"noreferrer noopener\">headset</a> with a 3DoF motion controller",
+  "description_html": "Android-compatible <a href=\"https://www.samsung.com/global/galaxy/gear-vr/\" rel=\"noreferrer noopener\">headset</a> with <a href=\"https://www.samsung.com/global/galaxy/gear-vr/#controller\" rel=\"noreferrer noopener\">3DoF motion controller</a>",
+  "operatingSystem": "Windows 7.1+",
+  "processorRequirements": "IA64",
+  "logo": "/samsung_gear_vr/logo.png",
+  "image": "/samsung_gear_vr/photo.png",
+  "pictogram": "/samsung_gear_vr/pictogram.svg",
+  "screenshot": "",
+  "url": "/samsung_gear_vr",
+  "about": "/samsung_gear_vr",
+  "sameAs": [
+    "https://www.samsung.com/global/galaxy/gear-vr/"
+  ],
+  "phones": [
+    "samsung_galaxy_note8",
+    "samsung_galaxy_s8",
+    "samsung_galaxy_s8_plus",
+    "samsung_galaxy_s7",
+    "samsung_galaxy_s7_edge",
+    "samsung_galaxy_note5",
+    "samsung_galaxy_s6_edge_plus",
+    "samsung_galaxy_s6",
+    "samsung_galaxy_s6_edge"
+  ],
+  "showPhones": true,
+  "creator": [
+    {
+      "@type": "Company",
+      "name": "Samsung",
+      "sameAs": "https://www.samsung.com/"
+    },
+    {
+      "@type": "Company",
+      "name": "Oculus",
+      "sameAs": "https://www.oculus.com/"
+    }
+  ],
+  "keywords": "headset",
+  "applicationCategory": [
+    "Headset"
+  ],
+  "releaseNotes": "/samsung_gear_vr/release_notes.json",
+  "dateCreated": null,
+  "datePublished": null,
+  "video": "https://webvr.rocks/samsung_gear_vr/video.json",
+  "downloadUrl": null,
+  "fileFormat": null,
+  "learningResourceType": "https://webvr.rocks/chromium",
+  "discussionUrl": "https://webvr.rocks/chromium#comments",
+  "softwareHelp": "https://webvr.rocks/chromium#help",
+  "version": null,
+  "softwareRequirements": [
+    "https://support.oculus.com/guides/gear-vr/latest/concepts/gsg-b-sw-software-setup/#gsg-b-sw-software-setup"
+  ],
+  "requirements": [
+    "https://support.oculus.com/guides/gear-vr/latest/concepts/book-gsg/",
+    "https://www.samsung.com/global/galaxy/gear-vr/#compatibility"
+  ],
+  "fileSize": "",
+  "license": "",
+  "contributor": [],
+  "thumbnailUrl": "",
+  "softwareVersion": "",
+  "sourceOrganization": "",
+  "softwareAddOn": "",
+  "device": "",
+  "audio": "",
+  "platforms": {
+    "windows": [],
+    "mac": [],
+    "linux": [],
+    "android": [
+      "oculus_browser",
+      "samsung_internet"
+    ],
+    "ios": []
+  },
+  "reports": [
+  ],
+  "notifications": [
+  ]
+}

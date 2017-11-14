@@ -253,6 +253,17 @@
   };
   var handleHashchange = function () {
     hash = window.location.hash.substr(1);
+
+    if (hash === 'faq' || hash === 'info' || hash === 'support') {
+      window.location.hash = '#help';
+      return;
+    }
+
+    if (hash === 'compatibility' || hash === 'bugs' || hash === 'issues' || hash === 'known_issues' || hash === 'known-issues') {
+      window.location.hash = '#compat';
+      return;
+    }
+
     if (hash) {
       html.setAttribute('data-hash', hash);
     }

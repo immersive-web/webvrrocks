@@ -1,4 +1,4 @@
-{% from '_helpers.html' import author_item, browser_item, browsers, compat_report_row, demo_item, headsets, site_title, youtube %}
+{% from '_helpers.html' import browser_item, browsers, demo_item, headsets, phones, site_title %}
 {% set headset = headsets[slug] %}
 {% set page = slug + '.html' %}
 <!doctype html>
@@ -68,8 +68,37 @@
           <section id="browsers" class="section browsers" data-section="browsers">
             <h2><a href="#browsers">{{ demos_heading or demos_title or 'Supported browsers' }}</a></h2>
             {% block browsers %}
+              {% set browsers_list = [] %}
+              {% for os, browsers in headset.platforms %}
+                {% for browser in browsers %}
+                  {% if browser not in browsers_list %}
+                    {% set browsers_list = (browsers_list.push(browser), browsers_list) %}
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+              {% for browser in browsers_list %}
+                <h3><a href="{{ browsers[browser].about }}" itemprop="aboutUrl">{{ browsers[browser].name }}</a></h3>
+                <p><a class="button button-outlined-approve button-download" href="{{ browsers[browser].about }}" itemprop="aboutUrl">Download</a></p>
+              {% endfor %}
             {% endblock %}
           </section>
+        {% endblock %}
+
+        {% block phones_block %}
+          {% if headset.phones %}
+            <section id="phones" class="section phones" data-section="phones">
+              <h2><a href="#phones">Supported phones</a></h2>
+              {% block phones %}
+                <ul class="bullets-light">
+                  {% for slug in headset.phones -%}
+                    <li><span><a href="{{ phones[slug].about }}" itemprop="aboutUrl">{{ phones[slug].name }}</a></span></li>
+                  {%- endfor %}
+                </ul>
+              {% endblock %}
+            </section>
+          {% else %}
+            <div id="phones"></div>
+          {% endif %}
         {% endblock %}
 
         {% block demos_block %}
@@ -84,17 +113,19 @@
 
         {% block links_block %}
           <section id="links" class="section info links" data-section="info links">
-            <div id="info"></div>
             <h2><a href="#links">{{ links_heading or links_title or info_heading or info_title or 'Links' }}</a></h2>
             {% block links %}
             {% endblock %}
           </section>
         {% endblock %}
 
-        {% block faq_block %}
-          <section id="faq" class="section faq" data-section="faq">
-            <h2><a href="#faq">{{ faq_heading or faq_title or 'FAQ' }}</a></h2>
-            {% block faq %}
+        {% block help_block %}
+          <section id="help" class="section help" data-section="help">
+            <div id="faq"></div>
+            <div id="info"></div>
+            <div id="support"></div>
+            <h2><a href="#help">{{ help_heading or help_title or 'Help' }}</a></h2>
+            {% block help %}
             {% endblock %}
           </section>
         {% endblock %}

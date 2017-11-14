@@ -186,6 +186,22 @@ figure {
   figure img + figcaption:not(:only-child) {
     margin-right: 0;
   }
+
+  .pt0-ns {
+    padding-top: 0 !important;
+  }
+
+  .pb0-ns {
+    padding-bottom: 0 !important;
+  }
+
+  .mt0-ns {
+    margin-top: 0 !important;
+  }
+
+  .mb0-ns {
+    margin-bottom: 0 !important;
+  }
 }
 
 @media screen and (min-width: 481px) {
@@ -377,7 +393,6 @@ html[data-layout~="headset"][data-layout~="htc_vive"] body {
 }
 
 html[data-layout~="headset"][data-layout~="htc_vive"] .page-heading {
-  /*color: #00718d;*/
   color: #111;
 }
 
@@ -386,9 +401,24 @@ html[data-layout~="headset"][data-layout~="htc_vive"] h3 a {
   color: #777;
 }
 
-html[data-layout~="headset"][data-layout~="htc_vive"] [data-section]:not(:last-child),
-.header {
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] [data-section]:not(:last-child),
+.header,
+[data-section]:not(:last-child) {
   border-bottom-color: rgba(0,0,0,.1);
+}
+
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"],
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] body {
+  background-color: #e7f5fe;
+}
+
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] .page-heading {
+  color: #111;
+}
+
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] h3,
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] h3 a {
+  color: #777;
 }
 
 a[itemprop="pictogram"] svg {
@@ -397,6 +427,10 @@ a[itemprop="pictogram"] svg {
 
 a[itemprop="pictogram"] svg path {
   fill: #00b5e2;
+}
+
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] a[itemprop="pictogram"] svg path {
+  fill: #3b80de;
 }
 
 .main h2,
@@ -513,25 +547,30 @@ p.message {
 }
 
 .main [data-section~="info"] dd + dt,
-.main [data-section~="faq"] dd + dt {
+.main [data-section~="help"] dd + dt {
   padding-top: 2rem;
 }
 
-.main [data-section~="faq"] dt a {
+.main [data-section~="info"] dt,
+.main [data-section~="help"] dt {
+  padding-bottom: .25rem;
+}
+
+.main [data-section~="help"] dt a {
   color: #333;
 }
 
-.main [data-section~="faq"] dt a:hover {
+.main [data-section~="help"] dt a:hover {
   color: #111;
 }
 
-.main [data-section~="faq"] dd {
+.main [data-section~="help"] dd {
   opacity: .7;
   transition: .15s opacity ease-in-out;
 }
 
-.main [data-section~="faq"] dt:hover + dd,
-.main [data-section~="faq"] dd:hover {
+.main [data-section~="help"] dt:hover + dd,
+.main [data-section~="help"] dd:hover {
   opacity: .9;
 }
 
@@ -1462,13 +1501,54 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
   font-weight: bold;
 }
 
-[data-section~="setup"] figure {
+[data-layout~="secondary"] [data-section~="setup"] figure,
+[data-layout~="secondary"] [data-section~="help"] figure {
   background: #fafafa;
   margin-right: 1.5rem;
+  margin-top: 1.5rem;
 }
 
-[data-section~="setup"] figure + figure {
-  margin-top: 1.5em;
+[data-layout~="secondary"] [data-section~="setup"] figure:last-child,
+[data-layout~="secondary"] [data-section~="help"] figure:last-child {
+  margin-top: 1rem;
+}
+
+[data-layout~="secondary"] [data-section~="setup"] li figure:last-child,
+[data-layout~="secondary"] [data-section~="help"] li figure:last-child {
+  margin-top: .75rem;
+}
+
+[data-layout~="secondary"] [data-section~="setup"] figure strong:first-child,
+[data-layout~="secondary"] [data-section~="help"] figure strong:first-child {
+  color: #555;
+  display: block;
+}
+
+.figure-stretched img {
+  background-color: #fff;
+  object-fit: contain;
+  padding: 1rem 1rem 0;
+  width: 100%;
+}
+
+img.cover {
+  object-fit: cover;
+}
+
+.pt0 {
+  padding-top: 0 !important;
+}
+
+.pb0 {
+  padding-bottom: 0 !important;
+}
+
+.mt0 {
+  margin-top: 0 !important;
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
 }
 
 /**
@@ -1745,7 +1825,7 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
   }
 
   [data-layout~="secondary"] .main .section:last-child {
-    padding-bottom: 1.5rem;
+    padding-bottom: 0;
   }
 
   .site-header {
@@ -1860,8 +1940,20 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
 }
 
 @media all and (min-width: 52.8rem) {
-  [data-section~="setup"] figure + figure {
-    margin-top: 0;
+  .pt0-l {
+    padding-top: 0 !important;
+  }
+
+  .pb0-l {
+    padding-bottom: 0 !important;
+  }
+
+  .mt0-l {
+    margin-top: 0 !important;
+  }
+
+  .mb0-l {
+    margin-bottom: 0 !important;
   }
 }
 

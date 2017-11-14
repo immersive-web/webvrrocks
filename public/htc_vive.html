@@ -10,13 +10,6 @@
   <p>(If needed, refer to the <a href="http://dl4.htc.com/web_materials/Manual/Vive/Vive_User_Guide.pdf">Vive User Guide</a> or the <a href="https://support.steampowered.com/kb_article.php?ref=5254-FJKZ-7829">SteamVR Support pages</a>.)</p>
 {% endblock %}
 
-{% block browsers %}
-  <h3><a href="{{ browsers.firefox.about }}" itemprop="aboutUrl">{{ browsers.firefox.name }}</a></h3>
-  <p><a class="button button-outlined-approve button-download" href="{{ browsers.firefox.about }}" itemprop="aboutUrl">Download</a></p>
-  <h3><a href="{{ browsers.chromium.about }}" itemprop="aboutUrl">{{ browsers.chromium.name }}</a></h3>
-  <p><a class="button button-outlined-approve button-download" href="{{ browsers.chromium.about }}" itemprop="aboutUrl">Download</a></p>
-{% endblock %}
-
 {% block demos %}
   {{ demo_item('a_blast') }}
   {{ demo_item('a_painter') }}
@@ -27,7 +20,7 @@
 {% block links_block %}
 {% endblock %}
 
-{% block faq %}
+{% block help %}
   <dl>
     <!--
     <dt>Which desktop PC or laptop should I buy?</dt>
@@ -36,7 +29,11 @@
     <dd></dd>
     -->
     <dt id="when_is_support_landing_in_release_channel_browsers"><a href="#when_is_support_landing_in_release_channel_browsers">When is WebVR support for the {{ headset.name }} landing in release-channel browsers?</a></dt>
-    <dd>WebVR support for the {{ headset.name }} is estimated to ship in mid-2017 in the stable, release-channel versions of both <a href="{{ browsers.firefox.about }}">{{ browsers.firefox.name }}</a> and <a href="{{ browsers.chrome.about }}">{{ browsers.chrome.name }}</a>.</dd>
+    <dd>
+      <p>
+        WebVR support for the {{ headset.name }} is estimated to ship in mid-2017 in the stable, release-channel versions of both <a href="{{ browsers.firefox.about }}">{{ browsers.firefox.name }}</a> and <a href="{{ browsers.chrome.about }}">{{ browsers.chrome.name }}</a>.
+      </p>
+    </dd>
     <dt id="can_i_still_use_a_vive_pre_developer_kit"><a href="#can_i_still_use_a_vive_pre_developer_kit">Can I still use a VIVE Pre developer kit?</a></dt>
     <dd>
       <p>

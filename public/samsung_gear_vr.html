@@ -1,0 +1,160 @@
+{% set slug = 'samsung_gear_vr' %}
+{% extends '_layout_headset.html' %}
+
+{% block instructions %}
+  <ol class="bullets-light">
+    <li>
+      <span>
+        Insert your <a href="#phones">supported Android phone</a> into the <a href="{{ headsets.samsung_gear_vr.about }}">Samsung Gear VR</a> headset.
+        <ul>
+          <li>
+            <span>If prompted, eject your phone and proceed to complete the Gear VR installation or upgrade process.</span>
+          </li>
+        </ul>
+      </span>
+    </li>
+    <li>
+      <span>
+        Launch the <a href="{{ browsers.oculus_browser.about }}"><strong>{{ browsers.oculus_browser.name }}</strong></a> (or the <a href="{{ browsers.samsung_internet.about }}#setup">{{ browsers.samsung_internet.name }} browser</a>) from the <strong>Oculus Lobby</strong>.
+      </span>
+    </li>
+    <li>
+      <span>
+        Load <a href="https://aframe.io/" rel="noreferrer noopener"><strong>aframe.io</strong></a> or <a href="https://webvr.rocks/" rel="noreferrer noopener"><strong>webvr.rocks</strong></a>.
+      </span>
+    </li>
+    <li>
+      <span>
+        Enjoy WebVR content!
+      </span>
+    </li>
+  </ol>
+{% endblock %}
+
+{% block demos %}
+  {{ demo_item('a_blast') }}
+  {{ demo_item('the_musical_forest') }}
+  {{ demo_item('konterball') }}
+  {{ demo_item('bear_71') }}
+{% endblock %}
+
+{% block links_block %}
+{% endblock %}
+
+{% block help %}
+  <dl>
+    <dt id="how_do_I_install"><a href="#how_do_I_install">How do I install the {{ headset.alternateName }} software on my Android phone?</a></dt>
+    <dd>
+      <p>
+        It&rsquo;s just plug-and-play! If your <a href="#phones">Android phone is compatible</a> with {{ headset.alternateName }}, simply insert your device into the headset viewer.
+      </p>
+      <p>
+        The models from 2015&ndash;2016 have MicroUSB plugs, although the latest model has a default USB-C plug (i.e., for newer phones such as the Samsung Galaxy S8), but the product box also contains adapters for MicroUSB (for older Android phones that are still compatible with the {{ headset.alternateName }}).
+      </p>
+      <p>
+        Now put the headset on your head. The system will automatically detect if it needs to download and install (or possibly update) the software. (Make sure you&rsquo;re on a WiFi connection before proceeding.)
+      </p>
+    </dd>
+
+    <dt id="can_i_still_use_the_gear_vr_v1"><a href="#can_i_still_use_the_gear_vr_v1">Can I still use the older versions of the {{ headset.alternateName }} (models from 2015&ndash;2016)?</a></dt>
+    <dd>
+      <p>
+        WebVR is still supported in the initial version of the {{ headset.alternateName }} that was released in <a href="https://www.samsung.com/us/mobile/virtual-reality/gear-vr/gear-vr-sm-r322nzwaxar/" rel="noreferrer noopener">2015 model (<code>SM-R322NZWAXAR</code>)</a> or the <a href="https://www.samsung.com/us/mobile/virtual-reality/gear-vr/gear-vr-sm-r322nzwaxar/" rel="noreferrer noopener">earlier 2016 model (<code>SM-R323NBKAXAR</code>)</a>, but it&rsquo;s recommended that you purchase and use the latest model, the <a href="https://www.samsung.com/us/mobile/virtual-reality/gear-vr/gear-vr-with-controller--galaxy-note8-edition--sm-r325nzvaxar/" rel="noreferrer noopener"><em>Gear VR with Controller (Galaxy Note8 Edition)</em> (<code>SM-R323NBKAXAR</code>)</a>.
+      </p>
+      <p>
+        The latest model has a default USB-C plug, but the product box also contains adapters for MicroUSB (for older Android phones that are still compatible with the {{ headset.alternateName }}).
+      </p>
+    </dd>
+
+    <dt id="controller_wont_turn_on"><a href="#controller_wont_turn_on">My controller won&rsquo;t turn on!</a></dt>
+    <dd>
+      <p>You may find yourself pressing buttons on the controller but the indicator light won&rsquo;t turn on. The trick is to <strong>press-and-hold down the Home button</strong> for <strong><em>several</em></strong> seconds.</p>
+      <figure class="media-outlined figure-stretched">
+        <img src="samsung_gear_vr/gear_vr_controller_home_button.png" width="180" height="180" alt="Home button on Gear VR controller">
+        <figcaption><strong>Home button</strong> Press and hold down the Home button.</figcaption>
+      </figure>
+    </dd>
+
+    <dt id="pair_controller"><a href="#pair_controller">How do I pair a new {{ headset.alternateName }} controller?</a></dt>
+    <dd>
+      <ol class="bullets-light">
+        <li>
+          <span>
+            Ensure your phone is properly <a href="#how_do_install">set up for VR</a>.
+          </span>
+        </li>
+        <li>
+          <span>
+            Insert your phone in the headset, hold the controller in your hand, and wait for the <strong>Oculus Lobby</strong> to load.
+          </span>
+        </li>
+        <li>
+          <span>
+            On the controller, press and hold down on the <strong>Home button</strong> for <strong><em>several</em></strong> seconds.
+            <figure class="media-outlined figure-stretched">
+              <img src="samsung_gear_vr/gear_vr_controller_home_button.png" width="180" height="180" alt="Home button on Gear VR controller">
+              <figcaption><strong>Home button</strong> Press and hold down the Home button.</figcaption>
+            </figure>
+          </span>
+        </li>
+        <li>
+          <span>
+            <strong>Remove your phone</strong> from the {{ headset.alternateName }} headset.
+          </span>
+        </li>
+        <li>
+          <span>
+            There will be a system notification that will take you to the pairing flow. (You can also access this from the Android Settings: <code>Settings</code> &gt; <code>Apps</code> &gt; <code>Gear VR Service</code>.)
+          </span>
+        </li>
+        <li>
+          <span>
+            <strong>Insert your phone</strong> back in the {{ headset.alternateName }} headset.
+          </span>
+        </li>
+        <li>
+          <span>
+            To reorient your position in VR and to turn the controller on later, <strong>hold the Home button</strong> for <strong><em>several</em></strong> seconds.
+          </span>
+        </li>
+      </ol>
+    </dd>
+
+    <dt id="how_does_the_controller_work"><a href="#how_does_the_controller_work">How do I use the {{ headset.alternateName }} controller?</a></dt>
+    <dd>
+      <p>
+        You can use the <a href="https://en.wikipedia.org/wiki/Six_degrees_of_freedom" rel="noreferrer noopener">3DoF motion controller</a> that ships with the latest model of the headset, the <a href="https://www.samsung.com/us/mobile/virtual-reality/gear-vr/gear-vr-with-controller--galaxy-note8-edition--sm-r325nzvaxar/" rel="noreferrer noopener"><em>Gear VR with Controller (Galaxy Note8 Edition)</em> (<code>SM-R323NBKAXAR</code>)</a>. You can use only one controller per headset, so you can choose to hold the controller in your left or right hand.
+      </p>
+      <p class="mb0">
+        Here are the controls:
+      </p>
+      <figure class="media-outlined figure-stretched">
+        <img src="samsung_gear_vr/gear_vr_controller_touchpad.png" width="180" height="180" alt="Touchpad on Gear VR controller">
+        <figcaption><strong>Touchpad</strong> Press down to select/click. <br> Swipe to navigate.</figcaption>
+      </figure>
+      <figure class="media-outlined figure-stretched">
+        <img src="samsung_gear_vr/gear_vr_controller_back_home_buttons.png" width="180" height="180" alt="Back and Home buttons on Gear VR controller">
+        <figcaption><strong>Back and Home buttons</strong> Press Back to exit VR mode. <br> Press Home to return to the Oculus Lobby.</figcaption>
+      </figure>
+      <figure class="media-outlined figure-stretched">
+        <img class="pt0 pb0 cover" src="samsung_gear_vr/gear_vr_controller_volume_buttons.png" width="180" height="180" alt="Volume buttons on Gear VR controller">
+        <figcaption><strong>Volume buttons</strong> Push down to raise or lower the audio.</figcaption>
+      </figure>
+      <figure class="media-outlined figure-stretched">
+        <img src="samsung_gear_vr/gear_vr_controller_trigger.png" width="180" height="180" alt="Trigger on Gear VR controller">
+        <figcaption><strong>Trigger</strong> Press to initiate an action.</figcaption>
+      </figure>
+    </dd>
+
+    <dt id="controller_position_is_misplaced"><a href="#controller_position_is_misplaced">My controller position is misplaced in VR. How do I fix this?</a></dt>
+    <dd>
+      <p class="mb0">
+        While in VR, hold your head still, and then press-and-hold down the Home button for several seconds.
+      </p>
+      <figure class="media-outlined figure-stretched">
+        <img src="samsung_gear_vr/gear_vr_controller_home_button.png" width="180" height="180" alt="Home button on Gear VR controller">
+        <figcaption><strong>Home button</strong> Press and hold down the Home button.</figcaption>
+      </figure>
+    </dd>
+  </dl>
+{% endblock %}
