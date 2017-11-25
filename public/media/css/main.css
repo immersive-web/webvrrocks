@@ -1889,6 +1889,14 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
   width: 100%;
 }
 
+blockquote {
+  color: #999;
+  font-family: inherit;
+  font-style: normal;
+  margin: .5rem 0;
+  padding: 0 1.5rem;
+}
+
 .download-block {
   display: inline-block;
 }
@@ -1905,6 +1913,12 @@ html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
   clear: both;
   content: "";
   display: table;
+}
+
+[data-tool~="unity"] .page-heading span {
+  color: #666;
+  display: inline-block;
+  margin: 0 -.4rem;
 }
 
 @media all and (min-width: 70rem) {
