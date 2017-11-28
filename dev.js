@@ -82,6 +82,7 @@ function startServer () {
   })
     .live() // we specify LiveReload *manually*, not in budo options!
     .watch([ // enable the chokidar file watcher
+      'nunjucks-helpers.js',
       'public/**/*', // only watch public for source changes
       '_prod/**/*.{html,css}' // only trigger LiveReload on HTML/CSS changes
     ])
@@ -90,7 +91,9 @@ function startServer () {
 
       var isEntry = file === path.resolve(OPTS.entry);
       var isInput = [
-        OPTS.assets.inputDir, OPTS.nunjucks.inputDir
+        OPTS.assets.inputDir,
+        OPTS.nunjucks.inputDir,
+        OPTS.nunjucks.extensionsFile
       ].some(dir => {
         return file.toLowerCase().indexOf(dir.toLowerCase()) === 0;
       });
@@ -106,7 +109,7 @@ function startServer () {
         var isHTML = /\.html?$/i.test(ext);
 
         var isSharedTemplate = isHTML && path.basename(file).charAt(0) === '_';
-        if (isSharedTemplate || /\.json$/i.test(ext)) {
+        if (file === OPTS.nunjucks.extensionsFile || isSharedTemplate || /\.json$/i.test(ext)) {
           regenerateAllNunjucksTemplates();
         } else if (isHTML) {
           var fileRelativeNunjucks = path.relative(OPTS.nunjucks.inputDir, file);

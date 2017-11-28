@@ -56,6 +56,8 @@
 {% includeData 'google_daydream.json' as google_daydream %}
 {% includeData 'windows_mixed_reality.json' as windows_mixed_reality %}
 
+{% includeData 'unity.json' as unity %}
+
 {% includeData 'demos.json' as demos %}
 
 {# includeData '_db/webvr_scenes.json' as sites #}
@@ -133,6 +135,10 @@
     "name": "Samsung Galaxy S6 Edge",
     "about": "http://www.samsung.com/global/galaxy/galaxys6/galaxy-s6-edge/"
   }
+} %}
+
+{% set tools = {
+  "unity": unity
 } %}
 
 {% macro browser_platform_support (browser, headset, os) %}
