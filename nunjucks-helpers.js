@@ -3,7 +3,7 @@ const nunjucksIncludeData = require('nunjucks-includeData');
 const marky = require('marky-markdown');
 const nunjucksMarkdown = require('nunjucks-markdown');
 
-const replaceEverythingBeforeH2Element = true;
+const stripEverythingBeforeH2Element = true;
 
 const cleanSlug = slug => slug.replace('setup-instructions', 'setup');
 
@@ -18,7 +18,7 @@ module.exports = function (nunjucksEnv) {
     });
 
     // Remove everything before the first `<h2>` element.
-    if (replaceEverythingBeforeH2Element) {
+    if (stripEverythingBeforeH2Element) {
       dirty = dirty.substring(dirty.indexOf('<h2'));
     }
 
