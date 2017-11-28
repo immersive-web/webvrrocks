@@ -64,7 +64,7 @@ module.exports = function (nunjucksEnv) {
     if (sections.length) {
       html += sections.join('\n\n');
     } else {
-      html = $.html();
+      html = $('body').html();
     }
 
     return html;
