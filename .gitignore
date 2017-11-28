@@ -1,7 +1,8 @@
-.DS_Store
-.config/
-.travis.config.tgz
 _prod/
+.config/
+.DS_Store
+.travis.config.tgz
+/public/unity.md
 data/*
 node_modules/
 npm-debug*.log*
