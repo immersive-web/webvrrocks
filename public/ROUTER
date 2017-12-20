@@ -239,3 +239,9 @@
 
 302   /unity3d /unity
 302   /unity3D /unity
+
+302   /contributing  https://github.com/immersive-web/webxr/blob/master/CONTRIBUTING.md
+302   /contribute  https://github.com/immersive-web/webxr/blob/master/CONTRIBUTING.md
+
+302   /spec  https://immersive-web.github.io/webxr/spec/latest/
+302   /explainer  https://github.com/immersive-web/webxr/blob/master/explainer.md
