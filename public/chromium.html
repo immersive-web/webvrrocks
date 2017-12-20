@@ -1,4 +1,4 @@
-{% from '_helpers.html' import author_item, browsers, bugs_bar, compat_report_row, demo_item, site_title %}
+{% from '_helpers.html' import author_item, browsers, bugs_bar, compat_report_row, demo_item, site %}
 {% set browser = browsers.chromium %}
 {% set page = 'chromium.html' %}
 <!doctype html>
@@ -6,7 +6,7 @@
   <head>
     {% include '_head.html' %}
     <meta charset="utf-8">
-    <title>{{ browser.name }} • {{ site_title }}</title>
+    <title>{{ browser.name }} • {{ site.title }}</title>
   </head>
   <body>
     <header id="header" class="header" role="banner">

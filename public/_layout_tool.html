@@ -1,11 +1,11 @@
-{% from '_helpers.html' import author_item, tools, phones, site_title, youtube %}
+{% from '_helpers.html' import author_item, tools, phones, site, youtube %}
 {% set tool = tools[slug] %}
 {% set page = slug + '.html' %}
 <!doctype html>
 <html lang="en" data-layout="secondary tool {{ tool.slug }}" data-tool="{{ tool.slug }}" data-page="{{ page }}">
   <head>
     {% include '_head.html' %}
-    <title>{% block title %}{{ title or tool.name }} • {{ site_title }}{% endblock %}</title>
+    <title>{% block title %}{{ title or tool.name }} • {{ site.title }}{% endblock %}</title>
     {% block head %}{% endblock %}
   </head>
   <body>

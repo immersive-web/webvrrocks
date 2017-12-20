@@ -1,6 +1,7 @@
 {
   "name": "webvrrocks",
   "version": "1.0.0",
+  "productName": "WebVR Rocks",
   "description": "WebVR Rocks: Your guide to Virtual Reality in the browser.",
   "main": "dev.js",
   "license": "CC0-1.0",
@@ -46,7 +47,7 @@
   "engines": {
     "node": "6.9.1"
   },
-  "repository": "webvrrocks/webvrrocks",
+  "repository": "immersive-web/webvrrocks",
   "keywords": [
     "webvr",
     "webvrrocks",

@@ -40,6 +40,6 @@ You can copy, modify, distribute and perform this work, even for commercial purp
 
 For more information, refer to these following links:
 
-* a copy of the [license](LICENSE.md) in [this source-code repository](https://github.com/webvrrocks/webvr-deploy)
+* a copy of the [license](LICENSE.md) in [this source-code repository](https://github.com/immersive-web/webvrrocks)
 * the [human-readable summary](https://creativecommons.org/publicdomain/zero/1.0/) of the [full text of the legal code](https://creativecommons.org/publicdomain/zero/1.0/legalcode)
 * the [full text of the legal code](https://creativecommons.org/publicdomain/zero/1.0/legalcode)

@@ -1,4 +1,5 @@
-{% set site_title = 'WebVR Rocks' %}
+{% includeData 'site.json' as site %}
+{% set site = site %}
 
 {% macro browser_notifications (browser) %}
   {% if browser.notifications %}
