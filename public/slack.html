@@ -1,4 +1,4 @@
-{% from '_helpers.html' import browser_item, site_title, youtube %}
+{% from '_helpers.html' import browser_item, site, youtube %}
 <!doctype html>
 <html lang="en" data-layout="home">
   <head>
@@ -21,7 +21,7 @@
       </style>
     {% endblock %}
     {% include '_head.html' %}
-    <title>Slack Chat • {{ site_title }}</title>
+    <title>Slack Chat • {{ site.title }}</title>
   </head>
   <body>
     <iframe class="iframe" data-source="slack" src="https://slacknow.herokuapp.com/webvr/" frameborder="0"></iframe>

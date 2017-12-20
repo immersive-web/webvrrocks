@@ -1,11 +1,11 @@
-{% from '_helpers.html' import author_item, browser_item, browsers, bugs_bar, compat_report_row, demo_item, headsets, phones, site_title, youtube %}
+{% from '_helpers.html' import author_item, browser_item, browsers, bugs_bar, compat_report_row, demo_item, headsets, phones, site %}
 {% set browser = browsers[slug] %}
 {% set page = slug + '.html' %}
 <!doctype html>
 <html lang="en" data-layout="secondary browser {{ browser.slug }}" data-browser="{{ browser.slug }}" data-page="{{ page }}">
   <head>
     {% include '_head.html' %}
-    <title>{% block title %}{{ title or browser.name }} • {{ site_title }}{% endblock %}</title>
+    <title>{% block title %}{{ title or browser.name }} • {{ site.title }}{% endblock %}</title>
     {% block head %}{% endblock %}
   </head>
   <body>
@@ -113,7 +113,7 @@
               {% endblock %}
             </ul>
 
-            <p class="demos-suggest"><a href="https://github.com/WebVRRocks/webvrrocks/issues/new?title=[{{ browser.name }}]%20Suggested%20demo">Suggest a demo</a></p>
+            <p class="demos-suggest"><a href="{{ site.github_url }}/issues/new?title=[{{ browser.name }}]%20Suggested%20demo">Suggest a demo</a></p>
           </section>
         {% endblock %}
 

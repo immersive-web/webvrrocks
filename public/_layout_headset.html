@@ -1,11 +1,11 @@
-{% from '_helpers.html' import browser_item, browsers, demo_item, headsets, phones, site_title %}
+{% from '_helpers.html' import browser_item, browsers, demo_item, headsets, phones, site %}
 {% set headset = headsets[slug] %}
 {% set page = slug + '.html' %}
 <!doctype html>
 <html lang="en" data-layout="secondary headset {{ headset.slug }}" data-headset="{{ headset.slug }}" data-page="{{ page }}">
   <head>
     {% include '_head.html' %}
-    <title>{% block title %}{{ title or headset.name }} • {{ site_title }}{% endblock %}</title>
+    <title>{% block title %}{{ title or headset.name }} • {{ site.title }}{% endblock %}</title>
     {% block head %}{% endblock %}
   </head>
   <body>

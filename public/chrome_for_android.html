@@ -1,11 +1,11 @@
-{% from '_helpers.html' import author_item, browsers, bugs_bar, demo_item, headsets, site_title %}
+{% from '_helpers.html' import author_item, browsers, bugs_bar, demo_item, headsets, site %}
 {% set browser = browsers.chrome_for_android %}
 {% set page = 'chrome_for_android.html' %}
 <!doctype html>
 <html lang="en" data-layout="secondary" data-browser="{{ browser.slug }}">
   <head>
     {% include '_head.html' %}
-    <title>{{ browser.name }} • {{ site_title }}</title>
+    <title>{{ browser.name }} • {{ site.title }}</title>
   </head>
   <body>
     <header id="header" class="header" role="banner">
@@ -74,7 +74,7 @@
               {% endblock %}
             </ul>
 
-            <p class="demos-suggest"><a href="https://github.com/WebVRRocks/webvrrocks/issues/new?title=[{{ browser.name }}]%20Suggested%20demo">Suggest a demo</a></p>
+            <p class="demos-suggest"><a href="{{ site.github_url }}/issues/new?title=[{{ browser.name }}]%20Suggested%20demo">Suggest a demo</a></p>
           </section>
         {% endblock %}
 

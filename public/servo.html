@@ -1,11 +1,11 @@
-{% from '_helpers.html' import author_item, browsers, headsets, site_title %}
+{% from '_helpers.html' import author_item, browsers, headsets, site %}
 {% set browser = browsers.servo %}
 {% set page = 'servo.html' %}
 <!doctype html>
 <html lang="en" data-layout="secondary" data-browser="{{ browser.slug }}">
   <head>
     {% include '_head.html' %}
-    <title>{{ browser.name }} • {{ site_title }}</title>
+    <title>{{ browser.name }} • {{ site.title }}</title>
   </head>
   <body>
     <header id="header" class="header" role="banner">
