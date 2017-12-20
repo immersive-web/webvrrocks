@@ -15,7 +15,7 @@
   "url": "https://www.mozilla.org/en-US/firefox/new/",
   "about": "/firefox",
   "landingUrl": "https://www.mozilla.org/en-US/firefox/new/",
-  "downloadUrl": "https://www.mozilla.org/en-US/firefox/new/?scene=2",
+  "downloadUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-59.0a1.en-US.win64.installer.exe",
   "sourceCodeUrl": "https://dxr.mozilla.org/mozilla-central/source/dom/vr",
   "bugsUrl": "https://bugzilla.mozilla.org/buglist.cgi?quicksearch=%5Bwebvr%5D",
   "bugsReportUrl": "https://bugzilla.mozilla.org/enter_bug.cgi?product=Core&component=General&status_whiteboard=[webvr]&cc=kgilbert@mozilla.com",
@@ -28,40 +28,63 @@
     "latest": {
       "status": "experimental",
       "landingUrl": "https://www.mozilla.org/en-US/firefox/new/",
-      "buildInfoFilename": "firefox-55.0a1.en-US.win64.json",
-      "buildInfoUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-55.0a1.en-US.win64.json",
-      "downloadUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-55.0a1.en-US.win64.installer.exe",
-      "downloadInstallerUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-55.0a1.en-US.win64.installer.exe",
-      "downloadZipUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-55.0a1.en-US.win64.zip",
+      "buildInfoFilename": "firefox-59.0a1.en-US.win64.json",
+      "buildInfoUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-59.0a1.en-US.win64.json",
+      "downloadUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-59.0a1.en-US.win64.installer.exe",
+      "downloadInstallerUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-59.0a1.en-US.win64.installer.exe",
+      "downloadZipUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-59.0a1.en-US.win64.zip",
       "dateReleased": {
-        "originalDateTimeString": "08-Mar-2017 12:38",
-        "datetime": 1489005480000,
-        "datetimeString": "Mar 8, 2017, 12:38 PM",
-        "dateString": "Mar 8, 2017",
-        "timeString": "12:38 PM",
-        "isoString": "2017-03-08T20:38:00.000Z"
+        "originalDateTimeString": "19-Dec-2017 12:45",
+        "datetime": 1513716300000,
+        "datetimeString": "Dec 19, 2017, 12:45 PM",
+        "dateString": "Dec 19, 2017",
+        "timeString": "12:45 PM",
+        "isoString": "2017-12-19T20:45:00.000Z"
       },
       "dateReleasedInstaller": {
-        "originalDateTimeString": "08-Mar-2017 12:38",
-        "datetime": 1489005480000,
-        "datetimeString": "Mar 8, 2017, 12:38 PM",
-        "dateString": "Mar 8, 2017",
-        "timeString": "12:38 PM",
-        "isoString": "2017-03-08T20:38:00.000Z"
+        "originalDateTimeString": "19-Dec-2017 12:45",
+        "datetime": 1513716300000,
+        "datetimeString": "Dec 19, 2017, 12:45 PM",
+        "dateString": "Dec 19, 2017",
+        "timeString": "12:45 PM",
+        "isoString": "2017-12-19T20:45:00.000Z"
       },
       "dateReleasedZip": {
-        "originalDateTimeString": "08-Mar-2017 12:38",
-        "datetime": 1489005480000,
-        "datetimeString": "Mar 8, 2017, 12:38 PM",
-        "dateString": "Mar 8, 2017",
-        "timeString": "12:38 PM",
-        "isoString": "2017-03-08T20:38:00.000Z"
+        "originalDateTimeString": "19-Dec-2017 12:45",
+        "datetime": 1513716300000,
+        "datetimeString": "Dec 19, 2017, 12:45 PM",
+        "dateString": "Dec 19, 2017",
+        "timeString": "12:45 PM",
+        "isoString": "2017-12-19T20:45:00.000Z"
       },
-      "installerFilename": "firefox-55.0a1.en-US.win64.installer.exe",
-      "zipFilename": "firefox-55.0a1.en-US.win64.zip",
-      "fileSize": "46 MB",
-      "fileSizeInstaller": "46 MB",
-      "fileSizeZip": "57 MB"
+      "installerFilename": "firefox-59.0a1.en-US.win64.installer.exe",
+      "zipFilename": "firefox-59.0a1.en-US.win64.zip",
+      "fileSize": "40 MB",
+      "fileSizeInstaller": "40 MB",
+      "fileSizeZip": "58 MB",
+      "buildInfo": {
+        "as": "ml64.exe",
+        "buildid": "20171219100203",
+        "cc": "z:/build/build/src/vs2017_15.4.2/VC/bin/Hostx64/x64/cl.exe",
+        "cxx": "z:/build/build/src/vs2017_15.4.2/VC/bin/Hostx64/x64/cl.exe",
+        "host_alias": "x86_64-pc-mingw32",
+        "host_cpu": "x86_64",
+        "host_os": "mingw32",
+        "host_vendor": "pc",
+        "moz_app_id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+        "moz_app_maxversion": "59.0a1",
+        "moz_app_name": "firefox",
+        "moz_app_vendor": "Mozilla",
+        "moz_app_version": "59.0a1",
+        "moz_pkg_platform": "win64",
+        "moz_source_repo": "MOZ_SOURCE_REPO=https://hg.mozilla.org/mozilla-central",
+        "moz_source_stamp": "7c4579e705c4a3a3610183fe6f44affff3ad57ef",
+        "moz_update_channel": "nightly",
+        "target_alias": "x86_64-pc-mingw32",
+        "target_cpu": "x86_64",
+        "target_os": "mingw32",
+        "target_vendor": "pc"
+      }
     }
   },
   "platforms": {
@@ -458,34 +481,34 @@
     }
   ],
   "dateReleased": {
-    "originalDateTimeString": "08-Mar-2017 12:38",
-    "datetime": 1489005480000,
-    "datetimeString": "Mar 8, 2017, 12:38 PM",
-    "dateString": "Mar 8, 2017",
-    "timeString": "12:38 PM",
-    "isoString": "2017-03-08T20:38:00.000Z"
+    "originalDateTimeString": "19-Dec-2017 12:45",
+    "datetime": 1513716300000,
+    "datetimeString": "Dec 19, 2017, 12:45 PM",
+    "dateString": "Dec 19, 2017",
+    "timeString": "12:45 PM",
+    "isoString": "2017-12-19T20:45:00.000Z"
   },
   "dateReleasedInstaller": {
-    "originalDateTimeString": "08-Mar-2017 12:38",
-    "datetime": 1489005480000,
-    "datetimeString": "Mar 8, 2017, 12:38 PM",
-    "dateString": "Mar 8, 2017",
-    "timeString": "12:38 PM",
-    "isoString": "2017-03-08T20:38:00.000Z"
+    "originalDateTimeString": "19-Dec-2017 12:45",
+    "datetime": 1513716300000,
+    "datetimeString": "Dec 19, 2017, 12:45 PM",
+    "dateString": "Dec 19, 2017",
+    "timeString": "12:45 PM",
+    "isoString": "2017-12-19T20:45:00.000Z"
   },
   "dateReleasedZip": {
-    "originalDateTimeString": "08-Mar-2017 12:38",
-    "datetime": 1489005480000,
-    "datetimeString": "Mar 8, 2017, 12:38 PM",
-    "dateString": "Mar 8, 2017",
-    "timeString": "12:38 PM",
-    "isoString": "2017-03-08T20:38:00.000Z"
+    "originalDateTimeString": "19-Dec-2017 12:45",
+    "datetime": 1513716300000,
+    "datetimeString": "Dec 19, 2017, 12:45 PM",
+    "dateString": "Dec 19, 2017",
+    "timeString": "12:45 PM",
+    "isoString": "2017-12-19T20:45:00.000Z"
   },
-  "installerFilename": "firefox-55.0a1.en-US.win64.installer.exe",
-  "zipFilename": "firefox-55.0a1.en-US.win64.zip",
-  "fileSize": "46 MB",
-  "fileSizeInstaller": "46 MB",
-  "fileSizeZip": "57 MB",
+  "installerFilename": "firefox-59.0a1.en-US.win64.installer.exe",
+  "zipFilename": "firefox-59.0a1.en-US.win64.zip",
+  "fileSize": "40 MB",
+  "fileSizeInstaller": "40 MB",
+  "fileSizeZip": "58 MB",
   "notifications": [
     {
       "type": "error",
@@ -547,5 +570,32 @@
       },
       "position": 2
     }
-  ]
+  ],
+  "buildInfo": {
+    "as": "ml64.exe",
+    "buildid": "20171219100203",
+    "cc": "z:/build/build/src/vs2017_15.4.2/VC/bin/Hostx64/x64/cl.exe",
+    "cxx": "z:/build/build/src/vs2017_15.4.2/VC/bin/Hostx64/x64/cl.exe",
+    "host_alias": "x86_64-pc-mingw32",
+    "host_cpu": "x86_64",
+    "host_os": "mingw32",
+    "host_vendor": "pc",
+    "moz_app_id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+    "moz_app_maxversion": "59.0a1",
+    "moz_app_name": "firefox",
+    "moz_app_vendor": "Mozilla",
+    "moz_app_version": "59.0a1",
+    "moz_pkg_platform": "win64",
+    "moz_source_repo": "MOZ_SOURCE_REPO=https://hg.mozilla.org/mozilla-central",
+    "moz_source_stamp": "7c4579e705c4a3a3610183fe6f44affff3ad57ef",
+    "moz_update_channel": "nightly",
+    "target_alias": "x86_64-pc-mingw32",
+    "target_cpu": "x86_64",
+    "target_os": "mingw32",
+    "target_vendor": "pc"
+  },
+  "buildInfoFilename": "firefox-59.0a1.en-US.win64.json",
+  "buildInfoUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-59.0a1.en-US.win64.json",
+  "downloadInstallerUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-59.0a1.en-US.win64.installer.exe",
+  "downloadZipUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-59.0a1.en-US.win64.zip"
 }
