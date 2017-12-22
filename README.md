@@ -25,7 +25,9 @@ npm start
 
 ## Deployment
 
-To deploy the static pages to [production](https://webvr.rocks/):
+When commits land on the master branch of this repository, this project is automatically rebuilt and deployed to the [production site](https://webvr.rocks/), served by GitHub Pages (`gh-pages` branch of this repository), using a Travis CI + GitHub integration.
+
+To trigger a manual deployment of the static pages to [production](https://webvr.rocks/):
 
 ```sh
 npm run deploy
