@@ -446,6 +446,11 @@ html:not([data-layout~="home"]) .main ul,
   max-width: 47rem;
 }
 
+html:not([data-layout~="home"]) .main li ul,
+html:not([data-layout~="home"]) .main li ol {
+  margin-bottom: 0;
+}
+
 .table-responsive {
   margin-bottom: 1.5rem;
 }
@@ -576,6 +581,10 @@ p.message {
 
 .main li + li {
   margin-top: .75rem;
+}
+
+.main li li {
+  margin-top: .5rem;
 }
 
 .main dd:empty {
