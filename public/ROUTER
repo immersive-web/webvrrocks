@@ -24,8 +24,10 @@
 302   /showcase/desktop  /showcase/?filter=desktop
 302   /showcase/mobile   /showcase/?filter=mobile
 
+302   /headsets          /#headsets
 302   /buy_headset       /headsets#buy
 302   /buy-headset       /headsets#buy
+
 302   /daydream          /google_daydream
 302   /fove              /fove
 302   /gear              /samsung_gear_vr
