@@ -544,6 +544,7 @@
     },
     {
       "type": "success",
+      "enabled": false,
       "dismissable": false,
       "content": "Firefox is now experimentally supported on macOS.",
       "content_html": "Firefox is now experimentally supported on <a href=\"https://hacks.mozilla.org/2017/06/announcing-webvr-on-mac/\" rel=\"noreferrer noopener\">macOS</a>.",
@@ -558,6 +559,7 @@
     },
     {
       "type": "success",
+      "enabled": false,
       "dismissable": false,
       "content": "WebVR has shipped in Firefox 55 on Windows! Check it out on your Oculus Rift or HTC VIVE.",
       "content_html": "WebVR has shipped in <a href=\"https://blog.mozilla.org/blog/2017/08/08/webvr-new-speedy-features/\" rel=\"noreferrer noopener\"><strong>Firefox 55 for Windows</strong></a>! Check it out on your Oculus Rift or HTC VIVE.",
