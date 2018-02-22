@@ -286,14 +286,20 @@ h1.page-heading {
 }
 
 .main h1,
-.main h2 {
-  font-weight bold;
+.main h2,
+.main h3 {
+  font-weight: bold;
   font-size: 3rem;
 }
 
 .main h1 {
   border-top: 1px solid #eee;
   padding-top: 1.5rem;
+}
+
+.main h3 {
+  opacity: .5;
+  font-size: 1rem;
 }
 
 .page-heading-link {
@@ -433,6 +439,10 @@ html[data-layout~="headset"][data-layout~="samsung_gear_vr"] a[itemprop="pictogr
   fill: #3b80de;
 }
 
+hr {
+  display: none;
+}
+
 .main h2,
 .main h3,
 .main h4,
@@ -441,9 +451,16 @@ html:not([data-layout~="home"]) .main p,
 html:not([data-layout~="home"]) .main dl,
 html:not([data-layout~="home"]) .main ol,
 html:not([data-layout~="home"]) .main ul,
+html:not([data-layout~="home"]) .main table,
 .page-intro {
   margin-bottom: 1.5rem;
   max-width: 47rem;
+}
+
+.main h3 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: .35rem;
+  margin-top: 2.5rem;
 }
 
 html:not([data-layout~="home"]) .main li ul,
