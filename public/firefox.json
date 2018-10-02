@@ -319,6 +319,65 @@
   ],
   "reports": [
     {
+      "enabled": false,
+      "type": "feature",
+      "headsets": [
+        "oculus_rift",
+        "htc_vive",
+        "windows_mixed_reality"
+      ],
+      "status": "Filed",
+      "dateReported": {
+        "datetime": "2017-11-20T15:33:00",
+        "pretty": "Nov 11, 2017"
+      },
+      "dateUpdated": {
+        "datetime": "2018-09-11T13:19:00",
+        "pretty": "Sep 11, 2018"
+      },
+      "description": "Enable WebXR 1.0 by default in release",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1419206"
+    },
+    {
+      "enabled": false,
+      "type": "feature",
+      "headsets": [
+        "oculus_rift",
+        "htc_vive",
+        "windows_mixed_reality"
+      ],
+      "status": "Filed",
+      "dateReported": {
+        "datetime": "2018-07-30T16:12:00",
+        "pretty": "July 30, 2018"
+      },
+      "dateUpdated": {
+        "datetime": "2018-07-31T05:45:00",
+        "pretty": "July 31, 2018"
+      },
+      "description": "Enable WebXR 1.0 by default in Nightly",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1479617"
+    },
+    {
+      "type": "feature",
+      "headsets": [
+        "oculus_rift",
+        "htc_vive",
+        "windows_mixed_reality"
+      ],
+      "status": "Filed",
+      "dateReported": {
+        "datetime": "2017-11-20T14:44:00",
+        "pretty": "Nov 11, 2017"
+      },
+      "dateUpdated": {
+        "datetime": "2018-09-11T13:18:00",
+        "pretty": "Sep 11, 2018"
+      },
+      "description": "Implement WebXR 1.0",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1419190"
+    },
+    {
       "type": "feature",
       "headsets": [
         "oculus_rift",
