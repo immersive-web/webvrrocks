@@ -25,24 +25,24 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
-    "marky-markdown": "^11.3.2",
+    "marky-markdown": "^12.0.0",
     "nunjucks-cli": "github:cvan/nunjucks-cli#214cea4",
     "nunjucks-includeData": "0.0.9",
     "nunjucks-markdown": "^2.0.1",
-    "shelljs": "^0.7.6",
-    "shx": "^0.2.1",
+    "shelljs": "^0.8.2",
+    "shx": "^0.3.2",
     "yonder": "^0.2.0"
   },
   "devDependencies": {
-    "browserify": "^14.0.0",
-    "budo": "github:mattdesl/budo#feature/livereload-rework",
-    "cross-env": "^3.1.4",
-    "fs-extra": "^2.0.0",
+    "browserify": "^16.2.3",
+    "budo": "^11.3.2",
+    "cross-env": "^5.2.0",
+    "fs-extra": "^7.0.0",
     "ghpages": "^0.0.10",
-    "opn": "^4.0.2",
-    "request": "^2.79.0",
-    "request-promise": "^4.1.1",
-    "uglify-js": "^2.7.5"
+    "opn": "^5.4.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "uglify-js": "^3.4.9"
   },
   "engines": {
     "node": "6.9.1"
