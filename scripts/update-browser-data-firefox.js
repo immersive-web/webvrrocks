@@ -2,9 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const urllib = require('url');
 
-const rp = require('request-promise');
-
 const cheerio = require('cheerio');
+const rp = require('request-promise');
 
 const BROWSER_DATA_FILE = path.join(__dirname, '..', 'public', 'firefox.json');
 const BROWSER_RELEASES_INDEX_URI = 'https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/';
