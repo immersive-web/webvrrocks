@@ -72,6 +72,12 @@
           </div>
         {% endif -%}
 
+        {% if tool.buyUrl %}
+          <p class="view-source">
+            <a href="{{ tool.buyUrl }}" class="button-source button-buy no-underline">Buy at {{ tool.buyUrl|replace('https://', '') }}</a>
+          </p>
+        {% endif %}
+
         {% if tool.sourceCodeUrl %}
           <p class="view-source">
             <a href="{{ tool.sourceCodeUrl }}" class="button-source no-underline">View project on GitHub</a>

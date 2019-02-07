@@ -58,6 +58,7 @@
 {% includeData 'windows_mixed_reality.json' as windows_mixed_reality %}
 
 {% includeData 'unity.json' as unity %}
+{% includeData 'krpano.json' as krpano %}
 
 {% includeData 'demos.json' as demos %}
 
@@ -139,7 +140,8 @@
 } %}
 
 {% set tools = {
-  "unity": unity
+  "unity": unity,
+  "krpano": krpano
 } %}
 
 {% macro browser_platform_support (browser, headset, os) %}

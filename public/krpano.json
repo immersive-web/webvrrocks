@@ -1,0 +1,11 @@
+{
+  "slug": "krpano",
+  "name": "krpano Panorama Viewer",
+  "description": "Using krpano Viewer for panoramic images and interactive virtual tours.",
+  "description_html": "Using <a href=\"https://krpano.com/docu/html5/\" rel=\"noreferrer noopener\">krpano Viewer</a> for panoramic images and interactive virtual tours.",
+  "about": "https://krpano.com/docu/html5/",
+  "landingUrl": "https://krpano.com/",
+  "buyUrl": "https://krpano.com/buy/",
+  "downloadUrl": "https://krpano.com/download/",
+  "logo": "/krpano/wordmark.png"
+}
