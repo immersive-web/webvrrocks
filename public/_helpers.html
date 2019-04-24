@@ -88,13 +88,20 @@
   htc_vive: htc_vive,
   "oculus_rift": {
     "name": "Oculus Rift",
-    "about": "/oculus_rift"
+    "about": "/oculus_rift",
+    "platforms": [
+      "windows"
+    ]
   },
   samsung_gear_vr: samsung_gear_vr,
   google_daydream: google_daydream,
   "google_cardboard": {
     "name": "Google Cardboard",
-    "about": "/google_cardboard"
+    "about": "/google_cardboard",
+    "platforms": [
+      "android",
+      "ios"
+    ]
   },
   windows_mixed_reality: windows_mixed_reality
 } %}
@@ -207,12 +214,14 @@
       {% set supported_headsets = [] %}
       {% set supported_platforms = [] %}
       {% for os, os_headsets in browser.platforms %}
-        {% for headset, _ in headsets %}
-          {% if os not in supported_platforms %}
-            {% set supported_platforms = supported_platforms.concat([os]) %}
-          {% endif %}
-          {% if headset not in supported_headsets %}
-            {% set supported_headsets = supported_headsets.concat([headset]) %}
+        {% for headset, headset_data in headsets %}
+          {% if os in headset_data.platforms %}
+            {% if os not in supported_platforms %}
+              {% set supported_platforms = supported_platforms.concat([os]) %}
+            {% endif %}
+            {% if headset not in supported_headsets %}
+              {% set supported_headsets = supported_headsets.concat([headset]) %}
+            {% endif %}
           {% endif %}
         {% endfor %}
       {% endfor %}

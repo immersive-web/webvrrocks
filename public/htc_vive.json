@@ -63,18 +63,10 @@
   "softwareAddOn": "",
   "device": "",
   "audio": "",
-  "platforms": {
-    "windows": [
-      "firefox",
-      "chromium"
-    ],
-    "mac": [
-      "firefox"
-    ],
-    "linux": [],
-    "android": [],
-    "ios": []
-  },
+  "platforms": [
+    "windows",
+    "mac"
+  ],
   "reports": [
     {
       "type": "bug",
