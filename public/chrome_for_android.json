@@ -97,48 +97,10 @@
     }
   },
   "platforms": {
-    "htc_vive": {
-      "windows": "headset_unsupported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "browser_unsupported",
-      "ios": "browser_unsupported"
-    },
-    "oculus_rift": {
-      "windows": "headset_unsupported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "browser_unsupported",
-      "ios": "browser_unsupported"
-    },
-    "samsung_gear_vr": {
-      "windows": "headset_unsupported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "browser_unsupported",
-      "ios": "headset_unsupported"
-    },
-    "google_daydream": {
-      "windows": "headset_unsupported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "supported",
-      "ios": "browser_unsupported"
-    },
-    "google_cardboard": {
-      "windows": "headset_unsupported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "supported",
-      "ios": "browser_unsupported"
-    },
-    "windows_mixed_reality": {
-      "windows": "browser_unsupported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "headset_unsupported",
-      "ios": "headset_unsupported"
-    }
+    "android": [
+      "google_daydream",
+      "google_cardboard"
+    ]
   },
   "notifications": [
     {
