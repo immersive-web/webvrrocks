@@ -1,0 +1,44 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "Kearwood \"Kip\" Gilbert",
+  "jobTitle": "WebVR Platform Engineer",
+  "affiliation": "Mozilla",
+  "additionalName": "kearwoodgilbert",
+  "url": "https://kearwood.com/",
+  "twitter_url": "https://twitter.com/kearwoodgilbert",
+  "image": "https://mozvr.com/assets/img/team/kip.jpg",
+  "website": [
+    {
+      "@type": "Twitter",
+      "url": "https://twitter.com/kearwoodgilbert"
+    },
+    {
+      "@type": "GitHub",
+      "url": "https://github.com/kearwood"
+    },
+    {
+      "@type": "WebSite",
+      "url": "https://kearwood.com/"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Vancouver",
+    "addressRegion": "Canada",
+    "addressCountry": "CA"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Mozilla",
+    "url": "https://www.mozilla.org/",
+    "sameAs": [
+      "https://mozvr.com/"
+    ]
+  },
+  "colleague": [
+    "https://webvr.rocks/cvan.json",
+    "https://webvr.rocks/caseyyee.json",
+    "https://webvr.rocks/daoshengmu.json"
+  ]
+}

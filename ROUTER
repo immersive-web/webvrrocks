@@ -1,0 +1,249 @@
+302   /google_cardboard   https://vr.google.com/cardboard/
+302   /google_daydream    https://vr.google.com/daydream/
+302   /htc_vive/buy       https://www.vive.com/order/
+302   /htc_vive/external  https://www.vive.com/
+302   /htc_vive/product   https://www.vive.com/us/product/
+302   /htc_vive/setup     https://www.vive.com/us/setup/
+302   /htc_vive/test      https://dl4.htc.com/vive/ViveCheck/ViveCheck.exe
+
+302   /htc_vive/order     /htc_vive/buy
+
+302   /oculus_rift  https://www.oculus.com/rift/
+302   /osvr  http://www.osvr.org/hdk2.html
+302   /windows_mixed_reality  https://developer.microsoft.com/en-us/windows/mixed-reality
+
+302   /ios  https://www.apple.com/ios/
+302   /android  https://www.android.com/
+302   /windows  https://www.microsoft.com/windows/
+302   /linux  https://en.wikipedia.org/wiki/Linux
+302   /mac  https://www.apple.com/macos/
+302   /macos  https://www.apple.com/macos/
+
+302   /desktop           /showcase/?filter=desktop
+302   /mobile            /showcase/?filter=mobile
+302   /showcase/desktop  /showcase/?filter=desktop
+302   /showcase/mobile   /showcase/?filter=mobile
+
+302   /headsets          /#headsets
+302   /buy_headset       /headsets#buy
+302   /buy-headset       /headsets#buy
+
+302   /daydream          /google_daydream
+302   /fove              /fove
+302   /gear              /samsung_gear_vr
+302   /gear_vr           /samsung_gear_vr
+302   /gear-vr           /samsung_gear_vr
+302   /gearvr            /samsung_gear_vr
+302   /google_daydream   /google_daydream
+302   /google-daydream   /google_daydream
+302   /headset_buy       /headsets#buy
+302   /headset-buy       /headsets#buy
+302   /headsets_buy      /headsets#buy
+302   /headsets-buy      /headsets#buy
+302   /headset/buy       /headsets#buy
+302   /headsets/buy      /headsets#buy
+302   /htc-vive          /htc_vive
+302   /htcvive           /htc_vive
+302   /oculus            /oculus_rift
+302   /oculus-rift       /oculus_rift
+302   /osvr              /osvr-hdk2
+302   /osvr_hdk          /osvr_hdk2
+302   /osvr-hdk          /osvr_hdk2
+302   /osvr-hdk2         /osvr_hdk2
+302   /psvr              /psvr
+302   /rift              /oculus_rift
+302   /samsung_gear      /samsung_gear_vr
+302   /samsung-gear      /samsung_gear_vr
+302   /samsung_gear_vr   /samsung_gear_vr
+302   /samsung-gear-vr   /samsung_gear_vr
+302   /samsung_gearvr    /samsung_gear_vr
+302   /samsung-gearvr    /samsung_gear_vr
+302   /steam             /htc_vive#steamvr
+302   /steam_vr          /htc_vive#steamvr
+302   /steam-vr          /htc_vive#steamvr
+302   /steamvr           /htc_vive#steamvr
+302   /vive              /htc_vive
+
+302   /chrome                  /chromium
+302   /chrome_desktop          /chromium?desktop
+302   /chrome-desktop          /chromium?desktop
+302   /chromium_desktop        /chromium?desktop
+302   /chromium-desktop        /chromium?desktop
+
+302   /chromium_android        /chrome_for_android?android
+302   /chromium-android        /chrome_for_android?android
+302   /chromium_mobile         /chrome_for_android?mobile
+302   /chromium-mobile         /chrome_for_android?mobile
+302   /chromium_daydream       /chrome_for_android?daydream
+302   /chromium-daydream       /chrome_for_android?daydream
+302   /chrome_android          /chrome_for_android?android
+302   /chrome-android          /chrome_for_android?android
+302   /chrome_mobile           /chrome_for_android?mobile
+302   /chrome-mobile           /chrome_for_android?mobile
+302   /chrome_daydream         /chrome_for_android?daydream
+302   /chrome-daydream         /chrome_for_android?daydream
+
+302   /firefox_android         /firefox?android
+302   /firefox-android         /firefox?android
+302   /firefox_desktop         /firefox?desktop
+302   /firefox-desktop         /firefox?desktop
+302   /firefox_mobile          /firefox?mobile
+302   /firefox-mobile          /firefox?mobile
+302   /firefox_nightly         /firefox?nightly
+302   /firefox-nightly         /firefox?nightly
+302   /firefox_windows         /firefox?windows
+302   /firefox-windows         /firefox?windows
+302   /firefox_win             /firefox?win
+302   /firefox-win             /firefox?win
+302   /firefox_win10           /firefox?win10
+302   /firefox-win10           /firefox?win10
+302   /firefox_mac             /firefox?mac
+302   /firefox-mac             /firefox?mac
+302   /firefox_macos           /firefox?mac
+302   /firefox-macos           /firefox?mac
+302   /firefox_macosx          /firefox?mac
+302   /firefox-macosx          /firefox?mac
+302   /firefox_osx             /firefox?mac
+302   /firefox-osx             /firefox?mac
+302   /firefox_darwin          /firefox?mac
+302   /firefox_linux           /firefox?linux
+302   /firefox-linux           /firefox?linux
+302   /mozilla_servo           /servo
+302   /mozilla-servo           /servo
+302   /servo                   /servo
+302   /nightly                 /firefox?nightly
+
+302   /edge                    /microsoft_edge
+302   /microsoft-edge          /microsoft_edge
+
+302   /hololens  /windows_mixed_reality
+302   /hololense  /windows_mixed_reality
+302   /holo_lens  /windows_mixed_reality
+302   /holo-lens  /windows_mixed_reality
+302   /holo_lense  /windows_mixed_reality
+302   /holo-lense  /windows_mixed_reality
+302   /microsoft_hololens  /windows_mixed_reality
+302   /microsoft-hololens  /windows_mixed_reality
+302   /win_holographic  /windows_mixed_reality
+302   /win-holographic  /windows_mixed_reality
+302   /microsoft_holographic  /windows_mixed_reality
+302   /microsoft_holographic  /windows_mixed_reality
+302   /ms_holographic  /windows_mixed_reality
+302   /ms-holographic  /windows_mixed_reality
+302   /holographic  /windows_mixed_reality
+302   /holograph  /windows_mixed_reality
+302   /windows_holo  /windows_mixed_reality
+302   /windows-holo  /windows_mixed_reality
+302   /win_holo  /windows_mixed_reality
+302   /win-holo  /windows_mixed_reality
+302   /microsoft_holo  /windows_mixed_reality
+302   /microsoft-holo  /windows_mixed_reality
+302   /ms_holo  /windows_mixed_reality
+302   /ms-holo  /windows_mixed_reality
+302   /holo  /windows_mixed_reality
+
+302   /samsung                               /samsung_internet
+302   /samsung_gear_browser                  /samsung_internet
+302   /samsung-gear-browser                  /samsung_internet
+302   /samsung_gearvr_browser                /samsung_internet
+302   /samsung-gearvr-browser                /samsung_internet
+302   /samsung_gear_vr_browser               /samsung_internet
+302   /samsung-gear-vr-browser               /samsung_internet
+302   /samsung_gear_internet                 /samsung_internet
+302   /samsung-gear-internet                 /samsung_internet
+302   /samsung_gearvr_internet               /samsung_internet
+302   /samsung-gearvr-internet               /samsung_internet
+302   /samsung_gear_vr_internet              /samsung_internet
+302   /samsung-gear-vr-internet              /samsung_internet
+302   /samsung-internet                      /samsung_internet
+302   /samsung_internet_browser              /samsung_internet
+302   /samsung-internet-browser              /samsung_internet
+302   /samsung_internet_browser_for_gear_vr  /samsung_internet
+302   /samsung-internet-browser-for-gear-vr  /samsung_internet
+302   /samsung_internet_browser_for_gearvr   /samsung_internet
+302   /samsung-internet-browser-for-gearvr   /samsung_internet
+302   /samsung_internet_for_gear_vr          /samsung_internet
+302   /samsung-internet-for-gear-vr          /samsung_internet
+302   /samsung_internet_for_gearvr           /samsung_internet
+302   /samsung-internet-for-gearvr           /samsung_internet
+302   /samsung_internet_for_gear_vr          /samsung_internet
+302   /samsung-internet-for-gear-vr          /samsung_internet
+302   /samsung_internet_for_gearvr           /samsung_internet
+302   /samsung-internet-for-gearvr           /samsung_internet
+
+302   /chrome/download    /chromium/download
+302   /chromium/download  https://drive.google.com/uc?export=download&id=0BzudLt22BqGRRElMNmVqQjJWS2c
+
+302   /chrome-for-android/download  /chrome_for_android/download
+302   /chrome_for_android/download  https://play.google.com/store/apps/details?id=com.android.chrome
+
+302   /carmel  /oculus_browser
+302   /oculus-browser  /oculus_browser
+302   /oculus_carmel  /oculus_browser
+302   /oculus-carmel  /oculus_browser
+
+302   /oculus-carmel/ford  /oculus_browser/ford
+302   /oculus-carmel/fog  /oculus_browser/fog
+302   /oculus-carmel/kadjar  /oculus_browser/kadjar
+
+302   /oculus-browser/ford  /oculus_browser/ford
+302   /oculus-browser/fog  /oculus_browser/fog
+302   /oculus-browser/kadjar  /oculus_browser/kadjar
+
+302   /oculus/ford  /oculus_browser/ford
+302   /oculus/fog  /oculus_browser/fog
+302   /oculus/kadjar  /oculus_browser/kadjar
+
+302   /carmel/ford  /oculus_browser/ford
+302   /carmel/fog  /oculus_browser/fog
+302   /carmel/kadjar  /oculus_browser/kadjar
+
+302   /oculus-carmel/ford  https://static.oculus.com/webvr/production/97f2fc11c8a96114547e8edc8453878b5f9c5653/Samples/FordDemo/index.html
+302   /oculus-carmel/fog  https://aframe.io/aframe/examples/showcase/spheres-and-fog/
+302   /oculus-carmel/kadjar  http://kadjar-vr.littleworkshop.fr/
+
+302   /oculus_carmel/ford  https://static.oculus.com/webvr/production/97f2fc11c8a96114547e8edc8453878b5f9c5653/Samples/FordDemo/index.html
+302   /oculus_carmel/fog  https://aframe.io/aframe/examples/showcase/spheres-and-fog/
+302   /oculus_carmel/kadjar  http://kadjar-vr.littleworkshop.fr/
+
+302   /chat  /slack
+
+302   /browsers  /#browsers
+302   /browsers/  /#browsers
+
+302   /Browsers  /browsers
+302   /Browsers/  /browsers/
+
+302   /posters  https://github.com/WebVRRocks/posters
+302   /poster  https://raw.githubusercontent.com/WebVRRocks/posters/master/rocks-webvr-browsers.png
+302   /poster.png  https://raw.githubusercontent.com/WebVRRocks/posters/master/rocks-webvr-browsers.png
+
+302   /compat/submit  https://airtable.com/shrGtVbhfoadJ47c8
+302   /compat  /compat/submit
+302   /compatability/submit  /compat/submit
+302   /compat_report  /compat/submit
+302   /compat-report  /compat/submit
+302   /compat_reports/submit  /compat/submit
+302   /compat-reports/submit  /compat/submit
+302   /compatibility_report  /compat/submit
+302   /compatibility-report  /compat/submit
+302   /compatibility_report/submit  /compat/submit
+302   /compatibility-report/submit  /compat/submit
+302   /submit_compat  /compat/submit
+302   /submit-compat  /compat/submit
+302   /submit_compat-report  /compat/submit
+302   /submit-compat-report  /compat/submit
+302   /submit_compatibility_report  /compat/submit
+302   /submit-compatibility-report  /compat/submit
+
+302   /experiences  https://airtable.com/shrgEfRA6IWkrbFZX/tblZbV2S0W0T5DDth?backgroundColor=yellow&viewControls=on
+302   /showcase  https://airtable.com/shrgEfRA6IWkrbFZX/tblZbV2S0W0T5DDth?backgroundColor=yellow&viewControls=on
+
+302   /unity3d /unity
+302   /unity3D /unity
+
+302   /contributing  https://github.com/immersive-web/webxr/blob/master/CONTRIBUTING.md
+302   /contribute  https://github.com/immersive-web/webxr/blob/master/CONTRIBUTING.md
+
+302   /spec  https://immersive-web.github.io/webxr/spec/latest/
+302   /explainer  https://github.com/immersive-web/webxr/blob/master/explainer.md

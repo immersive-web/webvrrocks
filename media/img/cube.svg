@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="152px" height="168px" viewBox="0 0 152 168" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>cube</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="cube" stroke="#FFFFFF">
+            <g>
+                <polygon id="Path-6" stroke-width="4" fill="#FF5D5D" points="0.325444561 126.199219 0.325444561 43.0986297 76.6794587 0.12890625 151.941619 42.928125 151.941619 125.248879 76.2372516 167.423438"></polygon>
+                <polyline id="Path-7" stroke-width="1.2" points="3.22836036 44.4785156 75.9167756 84.328125 150.418737 43.3746094"></polyline>
+                <path d="M76.055897,165.724219 L76.055897,84.7568767" id="Path-8" stroke-width="1.2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

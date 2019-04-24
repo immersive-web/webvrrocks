@@ -1,0 +1,62 @@
+{
+  "@context": "http://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Microsoft Edge",
+  "description": "Microsoft's Windows 10 browser",
+  "description_html": "<a href=\"https://www.microsoft.com/\">Microsoft</a>&rsquo;s <a href=\"https://www.microsoft.com/en-us/windows/get-windows-10\">Windows 10</a> <a href=\"https://www.microsoft.com/windows/microsoft-edge\">browser</a>",
+  "slug": "microsoft_edge",
+  "headsets": [
+    "windows_mixed_reality"
+  ],
+  "operatingSystem": "Windows 10",
+  "processorRequirements": "IA64",
+  "logo": "/microsoft_edge/icon.png",
+  "image": "/microsoft_edge/mixed-reality-headset.jpg",
+  "url": "https://www.microsoft.com/en-us/windows/microsoft-edge",
+  "about": "/microsoft_edge",
+  "downloadUrl": null,
+  "landingUrl": "https://developer.microsoft.com/en-us/windows/mixed-reality/immersive_headset_setup#setting_up_your_pc",
+  "sameAs": [
+    "https://webvr.rocks/microsoft_edge",
+    "https://www.microsoft.com/en-us/windows/microsoft-edge"
+  ],
+  "showFileSize": false,
+  "showDateReleased": false,
+  "releases": {
+    "latest": {
+      "url": ""
+    }
+  },
+  "targetProduct": {
+    "@type": "Product",
+    "name": "windows-mixed-reality",
+    "brand": "Microsoft",
+    "manufacturer": "Microsoft",
+    "model": "windows-mixed-reality",
+    "category": "headset",
+    "description": "Mixed-reality smart-glasses"
+  },
+  "platforms": {
+    "windows": [
+      "windows_mixed_reality"
+    ]
+  },
+  "notifications": [
+    {
+      "type": "success",
+      "enabled": false,
+      "dismissable": false,
+      "content": "As of the Windows 10 Creators update, Edge browser now supports the WebVR 1.1 specification!",
+      "content_html": "As of the Windows 10 Creators update, Edge browser now <a href=\"https://blogs.windows.com/msedgedev/2017/04/11/introducing-edgehtml-15/#8e8xdJQ1oybkrxB8.97\">supports the WebVR 1.1</a> specification!",
+      "datePublished": {
+        "originalDateTimeString": "12-Apr-2017 13:21:28",
+        "datetime": 1492028488000,
+        "datetimeString": "Apr 12, 2017, 1:21 PM",
+        "dateString": "Apr 12, 2017",
+        "timeString": "1:21 PM",
+        "isoString": "2017-04-12T20:21:28.000Z"
+      },
+      "position": 1
+    }
+  ]
+}

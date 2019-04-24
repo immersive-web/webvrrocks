@@ -1,0 +1,43 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "Daosheng Mu",
+  "jobTitle": "WebVR Platform Engineer",
+  "affiliation": "Mozilla",
+  "additionalName": "daoshengmu",
+  "url": "http://dsmu.me/",
+  "twitter_url": "https://twitter.com/daoshengmu",
+  "image": "https://mozvr.com/assets/img/team/daosheng.jpg",
+  "website": [
+    {
+      "@type": "Twitter",
+      "url": "https://twitter.com/daoshengmu"
+    },
+    {
+      "@type": "GitHub",
+      "url": "https://github.com/daoshengmu"
+    },
+    {
+      "@type": "WebSite",
+      "url": "http://dsmu.me/"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Taipei",
+    "addressCountry": "TW"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Mozilla",
+    "url": "https://www.mozilla.org/",
+    "sameAs": [
+      "https://mozvr.com/"
+    ]
+  },
+  "colleague": [
+    "https://webvr.rocks/cvan.json",
+    "https://webvr.rocks/caseyyee.json",
+    "https://webvr.rocks/kearwoodgilbert.json"
+  ]
+}

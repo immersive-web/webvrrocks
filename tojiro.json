@@ -1,0 +1,47 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "Brandon Jones",
+  "jobTitle": "WebVR & WebGL Developer",
+  "affiliation": "Google",
+  "additionalName": "tojiro",
+  "url": "http://blog.tojicode.com",
+  "twitter_url": "https://twitter.com/tojiro",
+  "image": "http://www.gravatar.com/avatar/0bdcb3845785bc5b032ae688d2d76bcb?s=256",
+  "website": [
+    {
+      "@type": "Twitter",
+      "url": "https://twitter.com/tojiro"
+    },
+    {
+      "@type": "GitHub",
+      "url": "https://github.com/tojiro"
+    },
+    {
+      "@type": "WebSite",
+      "url": "http://tojicode.com"
+    },
+    {
+      "@type": "Blog",
+      "url": "http://blog.tojicode.com"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "San Jose",
+    "addressRegion": "California",
+    "addressCountry": "USA"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Google",
+    "url": "https://www.google.com/",
+    "sameAs": [
+      "https://vr.google.com/"
+    ]
+  },
+  "email": "bajones@google.com",
+  "colleague": [
+    "https://webvr.rocks/klausweidner.json"
+  ]
+}

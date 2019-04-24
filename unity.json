@@ -1,0 +1,17 @@
+{
+  "slug": "unity",
+  "name": "Unity → WebVR Exporter",
+  "name_html": "Unity <span>→</span> WebVR Exporter",
+  "description": "Unity Asset package for exporting Unity3D projects to WebVR.",
+  "description_html": "Unity Asset package for exporting <a href=\"https://unity3d.com/\" rel=\"noreferrer noopener\">Unity3D</a> projects to <a href=\"https://webvr.rocks/\" rel=\"noreferrer noopener\">WebVR</a>.",
+  "about": "https://github.com/mozilla/unity-webvr-export",
+  "landingUrl": "https://github.com/mozilla/unity-webvr-export",
+  "sourceCodeUrl": "https://github.com/mozilla/unity-webvr-export",
+  "githubUrl": "https://github.com/mozilla/unity-webvr-export",
+  "downloadUrl": "https://github.com/mozilla/unity-webvr-export/archive/master.zip",
+  "logo": "/unity/unity-master-black.svg",
+  "image": {
+    "src": "https://raw.githubusercontent.com/caseyyee/unity-webvr-export/master/img/preview.gif",
+    "alt": "Preview of Unity WebVR-exported project in the browser"
+  }
+}

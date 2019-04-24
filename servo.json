@@ -1,0 +1,80 @@
+{
+  "@context": "http://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Servo",
+  "slug": "servo",
+  "description": "Mozilla's next-generation parallel, embedded browser engine",
+  "description_html": "<a href=\"https://www.mozilla.org/\" rel=\"noreferrer noopener\">Mozilla</a>&rsquo;s next-generation parallel, embedded <a href=\"https://servo.org/\" rel=\"noreferrer noopener\">browser engine</a>",
+  "operatingSystem": "Windows 10 or Android",
+  "processorRequirements": "IA64",
+  "logo": "/servo/icon.png",
+  "url": "https://servo.org/",
+  "about": "/servo",
+  "downloadUrl": "https://github.com/MortimerGoro/servo/releases/download/0.9/gear_vr_apk.zip",
+  "//downloadUrl": "//https://download.servo.org/nightly/windows/servo-latest.msi",
+  "sameAs": [
+    "https://developer.oculus.com/webvr/"
+  ],
+  "showDateReleased": true,
+  "showFileSize": true,
+  "showVersion": true,
+  "softwareVersion": "0.9",
+  "fileSize": "34.2 MB",
+  "releases": {
+    "samsung_gear_vr": {
+      "url": "https://github.com/MortimerGoro/servo/releases/download/0.9/gear_vr_apk.zip",
+      "sourceCodeUrl": "https://github.com/MortimerGoro/servo/tree/0.9/",
+      "aboutUrl": "https://blog.mozvr.com/samsung-gear-vr-support-lands-in-servo/",
+      "version": "0.9",
+      "fileSize": "34.2 MB",
+      "dateReleased": {
+        "originalDateTimeString": "16-Aug-2017 7:48",
+        "datetime": 1481909940000,
+        "datetimeString": "Aug 16, 2016, 7:48 AM",
+        "dateString": "Aug 16, 2016",
+        "timeString": "7:48 AM",
+        "isoString": "2017-08-16T07:48:00.000Z"
+      }
+    },
+    "google_daydream": {
+      "url": "https://github.com/MortimerGoro/servo/releases/download/daydream/servo_rollercoaster.apk",
+      "sourceCodeUrl": "https://github.com/MortimerGoro/servo/tree/daydream/",
+      "aboutUrl": "https://blog.mozvr.com/webvr-daydream-support-lands-in-servo/",
+      "version": "daydream",
+      "fileSize": "28.9 MB",
+      "dateReleased": {
+        "originalDateTimeString": "19-Apr-2017 8:13",
+        "datetime": 1481909940000,
+        "datetimeString": "Apr 19, 2016, 8:13 AM",
+        "dateString": "Apr 19, 2016",
+        "timeString": "8:13 AM",
+        "isoString": "2017-08-16T08:13:00.000Z"
+      }
+    },
+    "htc_vive": {
+      "url": "https://github.com/MortimerGoro/servo/releases/download/0.2/servo_gamepad.rar",
+      "version": "0.2",
+      "fileSize": "36 MB",
+      "dateReleased": {
+        "originalDateTimeString": "16-Dec-2016 9:39",
+        "datetime": 1481909940000,
+        "datetimeString": "Dec 16, 2016, 9:39 AM",
+        "dateString": "Dec 16, 2016",
+        "timeString": "9:39 AM",
+        "isoString": "2016-12-16T17:39:00.000Z"
+      }
+    }
+  },
+  "platforms": {
+    "windows": [
+      "htc_vive"
+    ],
+    "mac": [],
+    "linux": [],
+    "android": [
+      "samsung_gear_vr",
+      "google_daydream"
+    ],
+    "ios": []
+  }
+}

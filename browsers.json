@@ -1,0 +1,15 @@
+{
+  "browsers": [
+    {
+      "name": "Firefox",
+      "url": "/firefox",
+      "icon": "/firefox/icon.png",
+      "url": "https://www.mozilla.org/en-US/firefox/new/",
+      "releases": {
+        "latest": {
+          "url": "https://www.mozilla.org/en-US/firefox/new/?scene=2"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "@context": "http://schema.org",
+  "@type": "MobileApplication",
+  "name": "Chrome for Android",
+  "slug": "chrome_for_android",
+  "description": "WebVR in Chrome for Android mobile",
+  "description_html": "WebVR in <a href=\"https://www.google.com/chrome/browser/mobile/\">Chrome for Android</a> mobile",
+  "operatingSystem": "Android",
+  "headsets": [
+    "google_daydream",
+    "google_cardboard"
+  ],
+  "showProcessorRequirements": false,
+  "processorRequirements": "",
+  "logo": "/chrome_for_android/icon.png",
+  "image": "",
+  "screenshot": "",
+  "url": "https://play.google.com/store/apps/details?id=com.chrome.canary",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.chrome.canary",
+  "bugsUrl": "https://bugs.chromium.org/p/chromium/issues/list?q=component%3ABlink%3EWebVR",
+  "bugsReportUrl": "https://bugs.chromium.org/p/chromium/issues/entryafterlogin",
+  "about": "/chrome_for_android",
+  "dateCreated": "",
+  "datePublished": "",
+  "dateModified": "2017-04-17",
+  "softwareVersion": "2017-04-17",
+  "sameAs": [
+    "https://webvr.rocks/chrome_for_android",
+    "https://www.google.com/chrome/browser/mobile/"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Brandon Jones",
+      "sameAs": "https://webvr.rocks/people/tojiro.json"
+    },
+    {
+      "@type": "Person",
+      "name": "Klaus Weidner",
+      "sameAs": "https://webvr.rocks/people/klausweidner.json"
+    }
+  ],
+  "accountablePerson": [
+    {
+      "@type": "Person",
+      "name": "Klaus Weidner",
+      "sameAs": "https://webvr.rocks/people/klausweidner.json"
+    }
+  ],
+  "keywords": "browser",
+  "applicationCategory": [
+    "Browser"
+  ],
+  "releaseNotes": null,
+  "video": null,
+  "fileFormat": "application/vnd.android.package-archive",
+  "learningResourceType": "https://webvr.rocks/chrome_for_android",
+  "discussionUrl": "https://webvr.rocks/chrome_for_android#comments",
+  "softwareHelp": "https://webvr.rocks/chrome_for_android#help",
+  "version": "",
+  "softwareRequirements": [
+  ],
+  "requirements": [
+    "https://vr.google.com/cardboard/",
+    "https://vr.google.com/daydream/"
+  ],
+  "fileSize": "Varies with device",
+  "license": "",
+  "contributor": [],
+  "thumbnailUrl": "",
+  "sourceOrganization": {
+    "@type": "Organization",
+    "name": "Google",
+    "url": "https://www.google.com/"
+  },
+  "softwareAddOn": {
+    "@type": "MobileApplication",
+    "name": "Google VR Services",
+    "url": "https://play.google.com/store/apps/details?id=com.google.vr.vrcore",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.google.vr.vrcore",
+    "learningResourceType": "https://play.google.com/store/apps/details?id=com.google.vr.vrcore",
+    "fileFormat": "application/vnd.android.package-archive",
+    "softwareVersion": "2016-12-15",
+    "dateModified": "2016-12-15"
+  },
+  "device": "Android",
+  "alternateName": "Chrome for Android WebVR",
+  "audio": "",
+  "showDateReleased": false,
+  "releases": {
+    "latest": {
+      "status": "origin-trial",
+      "landingUrl": "https://play.google.com/store/apps/details?id=com.chrome.canary",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.chrome.canary",
+      "dateReleased": {
+      }
+    }
+  },
+  "platforms": {
+    "android": [
+      "google_daydream",
+      "google_cardboard"
+    ]
+  },
+  "notifications": [
+    {
+      "pinned": true,
+      "type": "alert",
+      "content_html": "Warning: WebVR support in Chrome for Android is being conducted as an Origin Trial experiment and subject to change",
+      "content_html": "<strong>Warning:</strong> WebVR support in <a href=\"#releases\">Chrome for Android</a> is being conducted as an <a href=\"#chrome_origin_trial\">Origin Trial experiment</a> and subject to change",
+      "position": 3
+    },
+    {
+      "type": "warning",
+      "enabled": false,
+      "dismissable": false,
+      "content": "Developers: Register for new WebVR Origin Trial tokens (Chrome for Android)",
+      "content_html": "Developers: <a href=\"/chrome_for_android#what_is_the_webvr_origin_trial\">Register for new WebVR Origin Trial tokens</a> (Chrome for Android)",
+      "datePublished": {
+        "originalDateTimeString": "2017-05-05T13:34:17.253Z",
+        "datetime": 1493991257253,
+        "datetimeString": "May 5, 2017, 6:34 AM",
+        "dateString": "May 5, 2017",
+        "timeString": "6:34 AM",
+        "isoString": "2017-05-05T13:34:17.253Z"
+      },
+      "position": 2
+    },
+    {
+      "type": "warning",
+      "enabled": false,
+      "dismissable": false,
+      "content": "Developers: Register for new WebVR Origin Trial tokens (Chrome for Android)",
+      "content_html": "Developers: <a href=\"/chrome_for_android#what_is_the_webvr_origin_trial\">Register for new WebVR Origin Trial tokens</a> (Chrome for Android)",
+      "datePublished": {
+        "originalDateTimeString": "2017-05-05T03:34:10.000Z",
+        "datetime": 1493991257253,
+        "datetimeString": "Jun 8, 2017, 3:34 AM",
+        "dateString": "Jun 8, 2017",
+        "timeString": "3:34 AM",
+        "isoString": "2017-05-05T03:34:10.000Z"
+      },
+      "position": 2
+    }
+  ]
+}

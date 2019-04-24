@@ -1,0 +1,139 @@
+{% from '_helpers.html' import browser_item, browsers, demo_item, headsets, phones, site %}
+{% set headset = headsets[slug] %}
+{% set page = slug + '.html' %}
+<!doctype html>
+<html lang="en" data-layout="secondary headset {{ headset.slug }}" data-headset="{{ headset.slug }}" data-page="{{ page }}">
+  <head>
+    {% include '_head.html' %}
+    <title>{% block title %}{{ title or headset.name }} • {{ site.title }}{% endblock %}</title>
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <header id="header" class="header" role="banner">
+      <div class="container section">
+        {% include '_logo.html' %}
+
+        <a class="page-heading-link" href="{{ headset.about }}">
+          <h1 class="headset-name page-heading">{{ headset.name }}</h1>
+          <img class="headset-icon page-heading-icon" src="{{ headset.logo }}" alt="{{ headset.name }}" title="{{ headset.name }}">
+        </a>
+
+        {% if headset.description_html or headset.description %}
+          <p class="headset-intro page-intro">{{ headset.description_html|safe if headset.description_html else description }}</p>
+        {% endif %}
+
+        {% if headset.updates %}
+          <div class="headset-updates">
+            {% block headset_updates %}
+              {% for message in headset.updates %}
+                {% if message.description %}
+                  <p class="message{{ ' message-' + message.type if message.type }}">
+                    {{ message.description }}
+                  </p>
+                {% endif %}
+              {% endfor %}
+            {% endblock %}
+          </div>
+        {% endif %}
+
+        {% if headset.image %}
+          <!--
+          <figure class="media">
+            <a href="{{ headset.image }}"><img src="{{ headset.image }}" alt="{{ headset.name }}" width="450"></a>
+            <figcaption class="hidden-text">{{ headset.name }}</figcaption>
+          </figure>
+          -->
+        {% endif %}
+
+        {% if headset.pictogram %}
+          <figure class="media">
+            <a itemprop="pictogram" href="{{ headset.pictogram }}">{% include headset.pictogram.replace('/' + headset.slug, headset.slug) %}</a>
+            <figcaption class="hidden-text">{{ headset.name }}</figcaption>
+          </figure>
+        {% endif %}
+      </div>
+    </header>
+
+    <main id="main" class="main" role="main">
+      <div class="container">
+        {% block instructions_block %}
+          <section id="setup" class="section setup" data-section="setup">
+            <h2><a href="#setup">{{ instructions_heading or instructions_title or 'Setup instructions' }}</a></h2>
+            {% block instructions %}
+            {% endblock %}
+          </section>
+        {% endblock %}
+
+        {% block browsers_block %}
+          <section id="browsers" class="section browsers" data-section="browsers">
+            <h2><a href="#browsers">{{ demos_heading or demos_title or 'Supported browsers' }}</a></h2>
+            {% block browsers %}
+              {% set browsers_list = [] %}
+              {% for browser, browser_data in browsers %}
+                {% for os, browser_headsets in browser_data.platforms %}
+                  {% if headset.slug in browser_headsets and browser not in browsers_list %}
+                    {% set browsers_list = (browsers_list.push(browser), browsers_list) %}
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+              {% for browser in browsers_list %}
+                <h3><a href="{{ browsers[browser].about }}" itemprop="aboutUrl">{{ browsers[browser].name }}</a></h3>
+                <p><a class="button button-outlined-approve button-download" href="{{ browsers[browser].about }}" itemprop="aboutUrl">Download</a></p>
+              {% endfor %}
+            {% endblock %}
+          </section>
+        {% endblock %}
+
+        {% block phones_block %}
+          {% if headset.phones %}
+            <section id="phones" class="section phones" data-section="phones">
+              <h2><a href="#phones">Supported phones</a></h2>
+              {% block phones %}
+                <ul class="bullets-light">
+                  {% for slug in headset.phones -%}
+                    <li><span><a href="{{ phones[slug].about }}" itemprop="aboutUrl">{{ phones[slug].name }}</a></span></li>
+                  {%- endfor %}
+                </ul>
+              {% endblock %}
+            </section>
+          {% else %}
+            <div id="phones"></div>
+          {% endif %}
+        {% endblock %}
+
+        {% block demos_block %}
+          <section id="demos" class="section demos" data-section="demos">
+            <h2><a href="#demos">{{ demos_heading or demos_title or 'Demos' }}</a></h2>
+            <ul data-section="demos" class="matrix grid-flex-container">
+              {% block demos %}
+              {% endblock %}
+            </ul>
+          </section>
+        {% endblock %}
+
+        {% block links_block %}
+          <section id="links" class="section info links" data-section="info links">
+            <h2><a href="#links">{{ links_heading or links_title or info_heading or info_title or 'Links' }}</a></h2>
+            {% block links %}
+            {% endblock %}
+          </section>
+        {% endblock %}
+
+        {% block help_block %}
+          <section id="help" class="section help" data-section="help">
+            <div id="faq"></div>
+            <div id="info"></div>
+            <div id="support"></div>
+            <h2><a href="#help">{{ help_heading or help_title or 'Help' }}</a></h2>
+            {% block help %}
+            {% endblock %}
+          </section>
+        {% endblock %}
+      </div>
+    </main>
+
+    {% block footer_block %}
+      {% include '_footer.html' %}
+    {% endblock %}
+  </body>
+</html>

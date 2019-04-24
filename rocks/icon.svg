@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 11">
+  <title>
+    vr-mode
+  </title>
+  <defs>
+    <linearGradient id="linearGradient-1" x1="0%" x2="0%" y1="0%" y2="100%">
+      <stop stop-color="#989898" offset="0%"/>
+      <stop stop-color="gray" offset="100%"/>
+    </linearGradient>
+    <linearGradient id="linearGradient-2" x1="0%" x2="0%" y1="0%" y2="100%">
+      <stop stop-color="#FF9300" offset="0%"/>
+      <stop stop-color="#F50" offset="100%"/>
+    </linearGradient>
+    <linearGradient id="linearGradient-3" x1="0%" x2="0%" y1="0%" y2="100%">
+      <stop stop-color="#24AEF4" offset="0%"/>
+      <stop stop-color="#177BDB" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <g id="vr-mode">
+      <path id="vr-mode-orange" fill="url(#linearGradient-2)" d="M15.4 0H.6C.3 0 0 .3 0 .7v9.6c0 .3.3.7.6.7h14.8c.4 0 .6-.4.6-.8V.7c0-.4-.3-.7-.6-.7zM11 9H2V2h12v7h-3zm0-2c.828 0 1.5-.672 1.5-1.5S11.828 4 11 4s-1.5.672-1.5 1.5S10.172 7 11 7zM5 7c.828 0 1.5-.672 1.5-1.5S5.828 4 5 4s-1.5.672-1.5 1.5S4.172 7 5 7z" transform="translate(32)"/>
+      <path id="vr-mode-blue" fill="url(#linearGradient-3)" d="M15.4 0H.6C.3 0 0 .3 0 .7v9.6c0 .3.3.7.6.7h14.8c.4 0 .6-.4.6-.8V.7c0-.4-.3-.7-.6-.7zM11 9H2V2h12v7h-3zm0-2c.828 0 1.5-.672 1.5-1.5S11.828 4 11 4s-1.5.672-1.5 1.5S10.172 7 11 7zM5 7c.828 0 1.5-.672 1.5-1.5S5.828 4 5 4s-1.5.672-1.5 1.5S4.172 7 5 7z" transform="translate(16)"/>
+      <path id="vr-mode-gray" fill="url(#linearGradient-1)" d="M15.4 0H.6C.3 0 0 .3 0 .7v9.6c0 .3.3.7.6.7h14.8c.4 0 .6-.4.6-.8V.7c0-.4-.3-.7-.6-.7zM11 9H2V2h12v7h-3zm0-2c.828 0 1.5-.672 1.5-1.5S11.828 4 11 4s-1.5.672-1.5 1.5S10.172 7 11 7zM5 7c.828 0 1.5-.672 1.5-1.5S5.828 4 5 4s-1.5.672-1.5 1.5S4.172 7 5 7z"/>
+    </g>
+  </g>
+</svg>

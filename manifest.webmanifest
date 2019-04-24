@@ -1,0 +1,36 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "name": "WebVR Rocks",
+  "short_name": "WebVR",
+  "description": "Your guide to VR on the Web.",
+  "start_url": "./?src=manifest",
+  "display": "fullscreen",
+  "theme_color": "#24aef4",
+  "background_color": "#fff",
+  "icons": [
+    {
+      "src": "/rocks/logo-256.svg",
+      "sizes": "256x256",
+      "type": "image/svg"
+    },
+    {
+      "src": "/rocks/logo-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48 64x64 256x256",
+      "type": "image/x-icon"
+    }
+  ],
+  "vr_default_display": "HTC Vive",
+  "vr_available_displays": [
+    "HTC Vive",
+    "Oculus Rift",
+    "Google Daydream",
+    "Samsung Gear VR",
+    "Google Cardboard"
+  ]
+}

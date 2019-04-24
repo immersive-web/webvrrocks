@@ -1,0 +1,571 @@
+{
+  "@context": "http://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Firefox",
+  "slug": "firefox",
+  "description": "Mozilla’s desktop browser",
+  "description_html": "<a href=\"https://www.mozilla.org/\">Mozilla</a>’s <a href=\"https://www.mozilla.org/en-US/firefox/new/\">desktop browser</a>",
+  "operatingSystem": "Windows 7.1+ or macOS",
+  "processorRequirements": "IA64",
+  "headsets": [
+    "htc_vive",
+    "oculus_rift"
+  ],
+  "logo": "/firefox/icon.png",
+  "url": "https://www.mozilla.org/en-US/firefox/new/",
+  "about": "/firefox",
+  "landingUrl": "https://www.mozilla.org/en-US/firefox/new/",
+  "downloadUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-68.0a1.en-US.win64.installer.exe",
+  "sourceCodeUrl": "https://dxr.mozilla.org/mozilla-central/source/dom/vr",
+  "bugsUrl": "https://bugzilla.mozilla.org/buglist.cgi?quicksearch=%5Bwebvr%5D",
+  "bugsReportUrl": "https://bugzilla.mozilla.org/enter_bug.cgi?product=Core&component=General&status_whiteboard=[webvr]&cc=kgilbert@mozilla.com",
+  "sameAs": [
+    "https://webvr.rocks/firefox",
+    "https://www.mozilla.org/en-US/firefox/new/"
+  ],
+  "showDateReleased": false,
+  "releases": {
+    "latest": {
+      "status": "experimental",
+      "landingUrl": "https://www.mozilla.org/en-US/firefox/new/",
+      "buildInfoFilename": "firefox-68.0a1.en-US.win64.json",
+      "buildInfoUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-68.0a1.en-US.win64.json",
+      "downloadUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-68.0a1.en-US.win64.installer.exe",
+      "downloadInstallerUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-68.0a1.en-US.win64.installer.exe",
+      "downloadZipUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-68.0a1.en-US.win64.zip",
+      "dateReleased": {
+        "originalDateTimeString": "24-Apr-2019 01:00",
+        "datetime": 1556067600000,
+        "datetimeString": "Apr 24, 2019, 1:00 AM",
+        "dateString": "Apr 24, 2019",
+        "timeString": "1:00 AM",
+        "isoString": "2019-04-24T01:00:00.000Z"
+      },
+      "dateReleasedInstaller": {
+        "originalDateTimeString": "24-Apr-2019 01:00",
+        "datetime": 1556067600000,
+        "datetimeString": "Apr 24, 2019, 1:00 AM",
+        "dateString": "Apr 24, 2019",
+        "timeString": "1:00 AM",
+        "isoString": "2019-04-24T01:00:00.000Z"
+      },
+      "dateReleasedZip": {
+        "originalDateTimeString": "24-Apr-2019 01:00",
+        "datetime": 1556067600000,
+        "datetimeString": "Apr 24, 2019, 1:00 AM",
+        "dateString": "Apr 24, 2019",
+        "timeString": "1:00 AM",
+        "isoString": "2019-04-24T01:00:00.000Z"
+      },
+      "installerFilename": "firefox-68.0a1.en-US.win64.installer.exe",
+      "zipFilename": "firefox-68.0a1.en-US.win64.zip",
+      "fileSize": "45 MB",
+      "fileSizeInstaller": "45 MB",
+      "fileSizeZip": "67 MB",
+      "buildInfo": {
+        "as": "z:/task_1556057993/build/src/vs2017_15.8.4/VC/bin/HostX64/x64/ml64.exe",
+        "buildid": "20190423221610",
+        "cc": "z:/task_1556057993/build/src/clang/bin/clang-cl.exe -Xclang -std=gnu99",
+        "cxx": "z:/task_1556057993/build/src/clang/bin/clang-cl.exe",
+        "host_alias": "x86_64-pc-mingw32",
+        "host_cpu": "x86_64",
+        "host_os": "mingw32",
+        "host_vendor": "pc",
+        "moz_app_id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+        "moz_app_maxversion": "68.0a1",
+        "moz_app_name": "firefox",
+        "moz_app_vendor": "Mozilla",
+        "moz_app_version": "68.0a1",
+        "moz_pkg_platform": "win64",
+        "moz_source_repo": "https://hg.mozilla.org/mozilla-central",
+        "moz_source_stamp": "4b0811d7b8e1591d4e48a26bdb8666a1bc5ccf61",
+        "moz_update_channel": "nightly",
+        "target_alias": "x86_64-pc-mingw32",
+        "target_cpu": "x86_64",
+        "target_os": "mingw32",
+        "target_vendor": "pc"
+      }
+    }
+  },
+  "platforms": {
+    "windows": [
+      "htc_vive",
+      "oculus_rift"
+    ],
+    "mac": [
+      "htc_vive"
+    ],
+    "linux": [],
+    "android": [],
+    "ios": []
+  },
+  "links": [
+    {
+      "title": "WebVR and new speedy features in Firefox 55",
+      "url": "https://blog.mozilla.org/blog/2017/08/08/webvr-new-speedy-features/",
+      "source": "Mozilla Blog",
+      "date": "August 8, 2017"
+    },
+    {
+      "title": "Firefox 55: first desktop browser to support WebVR",
+      "url": "https://hacks.mozilla.org/2017/08/firefox-55-supports-webvr/",
+      "source": "Mozilla Hacks",
+      "date": "August 8, 2017"
+    },
+    {
+      "title": "Announcing WebVR on Mac via Firefox Nightly",
+      "url": "https://hacks.mozilla.org/2017/06/announcing-webvr-on-mac/",
+      "source": "Mozilla Hacks",
+      "date": "June 5, 2017"
+    },
+    {
+      "title": "vr.mozilla.org",
+      "url": "https://vr.mozilla.org/",
+      "source": "Mozilla VR"
+    },
+    {
+      "source": "Mozilla VR Blog",
+      "url": "https://blog.mozvr.com/"
+    },
+    {
+      "title": "WebVR and A-Frame Bringing VR to Web at the Virtuleap Hackathon",
+      "source": "Mozilla VR Blog",
+      "url": "https://blog.mozilla.org/blog/2017/03/20/webvr-aframe-bringing-vr-web-virtuleap-hackathon/",
+      "date": "March 20, 2017"
+    },
+    {
+      "title": "Opening Up Virtual Reality Development with WebVR",
+      "source": "Linux.com",
+      "url": "https://www.linux.com/news/event/open-networking-summit/2017/3/opening-virtual-reality-development-webvr",
+      "datetime": "2017-03-13T07:42:47-07:00",
+      "date": "March 13, 2017"
+    },
+    {
+      "title": "Intent to ship: WebVR on Windows in Release",
+      "source_verbose": "Firefox Developer mailing list",
+      "url": "https://groups.google.com/d/msg/mozilla.dev.platform/TB2gVavDe6w/Be2oSxwdAgAJ",
+      "date": "March 1, 2017"
+    },
+    {
+      "title": "5 incredible tools that let you paint in VR",
+      "url": "http://www.digitalartsonline.co.uk/features/hacking-maker/5-tools-that-let-you-paint-in-vr/",
+      "source": "Digital Arts",
+      "datetime": "2017-02-08T14:34:00Z",
+      "date": "February 8, 2017"
+    },
+    {
+      "title": "W3C Workshop on Web and Virtual Reality: A Look Ahead",
+      "source": "Mozilla Hacks",
+      "url": "https://hacks.mozilla.org/2016/12/w3c-workshop-on-web-and-virtual-reality-a-look-ahead/",
+      "date": "December 9, 2016",
+      "datetime": "2016-12-09T09:07:07-07:00"
+    },
+    {
+      "title": "Connecting Virtual Worlds: Hyperlinks in WebVR",
+      "source": "Mozilla VR Blog",
+      "url": "https://blog.mozvr.com/connecting-virtual-worlds-hyperlinks-in-webvr/",
+      "datetime": "2016-11-01T19:15:00.000Z",
+      "date": "November 1, 2016"
+    },
+    {
+      "title": "The World’s Largest WebVR Hackathon Is Launching Online This November",
+      "url": "https://uploadvr.com/worlds-largest-vr-hackathon-launching-online-november/",
+      "source": "UploadVR",
+      "date": "October 25, 2016",
+      "datetime": "2016-10-25T14:29:12-07:00"
+    },
+    {
+      "title": "Experimental HTC VIVE Support in Firefox Nightly",
+      "source": "Medium",
+      "url": "https://medium.com/mozilla-tech/experimental-htc-vive-support-in-firefox-nightly-3ab9eeb5dfd9",
+      "date": "September 2, 2016",
+      "enabled": false
+    },
+    {
+      "title": "Experimental HTC VIVE Support in Firefox Nightly",
+      "source": "Mozilla VR Blog",
+      "url": "https://blog.mozvr.com/experimental-htc-vive-support-in-firefox-nightly/",
+      "datetime": "2016-09-02T02:00:00.000Z",
+      "date": "September 2, 2016"
+    },
+    {
+      "title": "WebVR 1.0 available in Firefox Nightly",
+      "source": "Medium",
+      "url": "https://medium.com/mozilla-tech/webvr-1-0-available-in-firefox-nightly-7a3bf26fcb99",
+      "date": "August 17, 2016",
+      "enabled": false
+    },
+    {
+      "title": "WebVR 1.0 available in Firefox Nightly",
+      "source": "Mozilla VR Blog",
+      "url": "https://blog.mozvr.com/webvr-1-0-available-in-firefox-nightly/",
+      "date": "August 16, 2016",
+      "datetime": "2016-08-16T23:37:53.000Z"
+    },
+    {
+      "title": "WebVR API Transitions to W3C Incubation",
+      "source": "Mozilla VR Blog",
+      "url": "https://blog.mozvr.com/webvr-api-transitions-to-w3c-standard/",
+      "datetime": "2016-06-02T12:56:54.000Z",
+      "date": "June 2, 2016"
+    },
+    {
+      "title": "Everything you wanted to know about Oculus CV1, Oculus Home, 1.3 runtime and WebVR",
+      "source": "Mozilla VR Blog",
+      "url": "https://blog.mozvr.com/oculus-home-rift-cv1-webvr/",
+      "date": "April 5, 2016",
+      "datetime": "2016-04-05T04:22:00.000Z"
+    },
+    {
+      "title": "WebVR Enabled by Default in Firefox Nightly",
+      "source": "Mozilla VR Blog",
+      "url": "https://blog.mozvr.com/webvr-enabled-by-default-in-firefox-nightly/",
+      "date": "January 5, 2016"
+    },
+    {
+      "title": "Mozilla Launches A-Frame: VR-capable Websites Starting with One Line of Code",
+      "source": "Road to VR",
+      "url": "http://www.roadtovr.com/mozilla-a-frame-webvr-virtual-reality-website-web-development/",
+      "date": "December 16, 2015"
+    },
+    {
+      "title": "Introducing A-Frame: Building Blocks for WebVR",
+      "source": "Mozilla VR Blog",
+      "url": "https://blog.mozvr.com/introducing-aframe/",
+      "datetime": "2015-12-16T23:00:00.000Z",
+      "date": "December 16, 2015"
+    },
+    {
+      "title": "Intent to ship: WebVR",
+      "source_verbose": "Firefox Developer mailing list",
+      "url": "https://groups.google.com/d/msg/mozilla.dev.platform/BeVaHGEgZNA/vIVnbrLgBwAJ",
+      "date": "September 26, 2015"
+    },
+    {
+      "title": "WebVR Lands in Firefox Nightly",
+      "source": "Mozilla VR Blog",
+      "url": "https://blog.mozvr.com/webvr-lands-in-firefox-nightly/",
+      "date": "January 15, 2015"
+    },
+    {
+      "title": "Mozilla’s new site brings virtual reality to the web",
+      "source": "Engadget",
+      "url": "https://www.engadget.com/2014/11/11/mozilla-vr-experience/",
+      "date": "November 11, 2014",
+      "datetime_original": "2014-11-11T20:59:00-05:00"
+    },
+    {
+      "title": "Updated Firefox VR Builds",
+      "source": "Vladimir Vukićević’s personal blog",
+      "url": "https://web-beta.archive.org/web/20140828065602/http://blog.bitops.com:80/blog/2014/08/20/updated-firefox-vr-builds/",
+      "date": "August 20, 2014"
+    },
+    {
+      "title": "VR and CSS Integration in Firefox",
+      "source": "Vladimir Vukićević’s personal blog",
+      "url": "https://web-beta.archive.org/web/20140810182738/http://blog.bitops.com/blog/2014/07/31/css-and-vr-integration/",
+      "date": "July 31, 2014"
+    },
+    {
+      "title": "Initial bug filed to add VR support to Firefox",
+      "source": "Firefox Bugzilla",
+      "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1036600",
+      "date": "July 9, 2014"
+    },
+    {
+      "title": "First Steps for VR on the Web",
+      "source": "Vladimir Vukićević’s personal blog",
+      "url": "https://web-beta.archive.org/web/20140628202048/http://blog.bitops.com/blog/2014/06/26/first-steps-for-vr-on-the-web/",
+      "date": "June 26, 2014"
+    },
+    {
+      "title": "Welcome to VR",
+      "source": "web-vr-discuss mailing list",
+      "url": "https://mail.mozilla.org/pipermail/web-vr-discuss/2014-May/000000.html",
+      "date": "May 22, 2014"
+    }
+  ],
+  "reports": [
+    {
+      "type": "bug",
+      "enabled": false,
+      "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0",
+      "browserVersion": "Nightly 50.0",
+      "browserBuildId": "20161104212021",
+      "browserDate": "2016-11-04",
+      "platforms": [
+        "windows"
+      ],
+      "headsets": [
+        "htc_vive"
+      ],
+      "description": "Scene wobbles as headset rotates",
+      "status": "Fixed",
+      "dateReported": {
+        "datetime": "2016-11-27T19:41:34",
+        "pretty": "Nov 27, 2016"
+      },
+      "dateUpdated": {
+        "datetime": "2017-10-25T12:25:00",
+        "pretty": "Oct 25, 2017"
+      },
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1334977"
+    },
+    {
+      "type": "bug",
+      "description": "Implement onvrdisplaypointerrestricted and onvrdisplaypointerunrestricted events for Windows Mixed Reality",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1411065",
+      "status": "Filed",
+      "priority": "P1",
+      "platforms": [
+        "windows"
+      ],
+      "headsets": [
+        "windows_mixed_reality"
+      ],
+      "dateReported": {
+        "datetime": "2017-10-23T14:59:64",
+        "pretty": "Oct 23, 2017"
+      },
+      "dateUpdated": {
+        "datetime": "2017-10-26T10:02:00",
+        "pretty": "Oct 26, 2017"
+      }
+    },
+    {
+      "type": "bug",
+      "description": "Expose full OpenVR name string for Microsoft Mixed Reality headsets",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1411059",
+      "status": "Filed",
+      "priority": null,
+      "platforms": [
+        "windows"
+      ],
+      "headsets": [
+        "windows_mixed_reality"
+      ],
+      "dateReported": {
+        "datetime": "2017-10-23T14:47:00",
+        "pretty": "Oct 23, 2017"
+      },
+      "dateUpdated": {
+        "datetime": "2017-10-26T10:01:00",
+        "pretty": "Oct 26, 2017"
+      }
+    },
+    {
+      "type": "bug",
+      "description": "Ensure that the first button returned for VR controllers is the primary button",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1411061",
+      "status": "Filed",
+      "priority": null,
+      "platforms": [
+        "windows",
+        "mac"
+      ],
+      "headsets": [
+        "oculus_rift",
+        "htc_vive",
+        "windows_mixed_reality"
+      ],
+      "dateReported": {
+        "datetime": "2017-10-23T14:52:00",
+        "pretty": "Oct 23, 2017"
+      },
+      "dateUpdated": {
+        "datetime": "2017-10-24T01:44:00",
+        "pretty": "Oct 26, 2017"
+      }
+    },
+    {
+      "type": "bug",
+      "description": "Ensure that WebVR content runs on the most optimal display adapter",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1411058",
+      "status": "Filed",
+      "priority": "P1",
+      "platforms": [
+        "windows",
+        "mac"
+      ],
+      "headsets": [
+        "oculus_rift",
+        "htc_vive",
+        "windows_mixed_reality"
+      ],
+      "dateReported": {
+        "datetime": "2017-10-23T14:41:00",
+        "pretty": "Oct 23, 2017"
+      },
+      "dateUpdated": {
+        "datetime": "2017-10-23T14:41:00",
+        "pretty": "Oct 23, 2017"
+      }
+    },
+    {
+      "type": "bug",
+      "description": "WebVR content does not present when using Oculus Home before launching Firefox",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1384279",
+      "status": "Filed",
+      "priority": "P1",
+      "platforms": [
+        "windows"
+      ],
+      "headsets": [
+        "oculus_rift"
+      ],
+      "dateReported": {
+        "datetime": "2017-07-25T13:05:00",
+        "pretty": "Jul 25, 2017"
+      },
+      "dateUpdated": {
+        "datetime": "2017-10-23T14:33:00",
+        "pretty": "Oct 23, 2017"
+      }
+    },
+    {
+      "enabled": false,
+      "type": "feature",
+      "headsets": [
+        "oculus_rift"
+      ],
+      "description": "Oculus Remote support",
+      "status": "Fixed",
+      "dateReported": {
+        "datetime": "2016-03-29T14:46:00",
+        "pretty": "Mar 3, 2016"
+      },
+      "dateUpdated": {
+        "datetime": "2016-09-27T05:29:00",
+        "pretty": "Aug 27, 2016"
+      },
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1260561"
+    },
+    {
+      "enabled": false,
+      "type": "site",
+      "status": "Fixed",
+      "description": "05 Roomscale not loading",
+      "webcompatUrl": "https://webcompat.com/issues/4528"
+    }
+  ],
+  "dateReleased": {
+    "originalDateTimeString": "24-Apr-2019 01:00",
+    "datetime": 1556067600000,
+    "datetimeString": "Apr 24, 2019, 1:00 AM",
+    "dateString": "Apr 24, 2019",
+    "timeString": "1:00 AM",
+    "isoString": "2019-04-24T01:00:00.000Z"
+  },
+  "dateReleasedInstaller": {
+    "originalDateTimeString": "24-Apr-2019 01:00",
+    "datetime": 1556067600000,
+    "datetimeString": "Apr 24, 2019, 1:00 AM",
+    "dateString": "Apr 24, 2019",
+    "timeString": "1:00 AM",
+    "isoString": "2019-04-24T01:00:00.000Z"
+  },
+  "dateReleasedZip": {
+    "originalDateTimeString": "24-Apr-2019 01:00",
+    "datetime": 1556067600000,
+    "datetimeString": "Apr 24, 2019, 1:00 AM",
+    "dateString": "Apr 24, 2019",
+    "timeString": "1:00 AM",
+    "isoString": "2019-04-24T01:00:00.000Z"
+  },
+  "installerFilename": "firefox-68.0a1.en-US.win64.installer.exe",
+  "zipFilename": "firefox-68.0a1.en-US.win64.zip",
+  "fileSize": "45 MB",
+  "fileSizeInstaller": "45 MB",
+  "fileSizeZip": "67 MB",
+  "notifications": [
+    {
+      "type": "error",
+      "enabled": false,
+      "dismissable": false,
+      "content": "WebVR affected by bug in Firefox Nightly; temporary workaround is to load `about:config` and set `security.sandbox.gpu.level` to `0`",
+      "content_html": "<a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1359460\" rel=\"noreferrer noopener\">WebVR affected by bug</a> in <a href=\"/firefox#download\">Firefox Nightly</a>; temporary workaround is to load <code>about:config</code> and set <code>security.sandbox.gpu.level</code> to <code>0</code>",
+      "datePublished": {
+        "originalDateTimeString": "25-Feb-2017 14:44",
+        "datetime": 1488062640000,
+        "datetimeString": "Feb 25, 2017, 2:44 PM",
+        "dateString": "Feb 25, 2017",
+        "timeString": "2:44 PM",
+        "isoString": "2017-02-25T22:44:00.000Z"
+      },
+      "position": 2
+    },
+    {
+      "type": "success",
+      "enabled": false,
+      "dismissable": false,
+      "content": "Firefox Nightly now supports Oculus Touch controllers!",
+      "content_html": "<a href=\"/firefox#download\">Firefox Nightly</a> now supports <a href=\"https://www.oculus.com/rift/#u_0_g\" rel=\"noreferrer noopener\">Oculus Touch</a> controllers!",
+      "datePublished": {
+        "originalDateTimeString": "18-Feb-2017 12:27:05",
+        "datetime": 1487449625000,
+        "datetimeString": "Feb 18, 2017, 12:27 PM",
+        "dateString": "Feb 18, 2017",
+        "timeString": "12:27 PM",
+        "isoString": "2017-02-18T20:27:05.000Z"
+      },
+      "position": -1
+    },
+    {
+      "type": "success",
+      "enabled": false,
+      "dismissable": false,
+      "content": "Firefox is now experimentally supported on macOS.",
+      "content_html": "Firefox is now experimentally supported on <a href=\"https://hacks.mozilla.org/2017/06/announcing-webvr-on-mac/\" rel=\"noreferrer noopener\">macOS</a>.",
+      "datePublished": {
+        "originalDateTimeString": "07-Aug-2017 08:00:00",
+        "datetimeString": "Aug 7, 2017, 8:00 Am",
+        "dateString": "Aug 8, 2017",
+        "timeString": "8:00 AM",
+        "isoString": "2017-08-07T08:00:00.000Z"
+      },
+      "position": 1
+    },
+    {
+      "type": "success",
+      "enabled": false,
+      "dismissable": false,
+      "content": "WebVR has shipped in Firefox 55 on Windows! Check it out on your Oculus Rift or HTC VIVE.",
+      "content_html": "WebVR has shipped in <a href=\"https://blog.mozilla.org/blog/2017/08/08/webvr-new-speedy-features/\" rel=\"noreferrer noopener\"><strong>Firefox 55 for Windows</strong></a>! Check it out on your Oculus Rift or HTC VIVE.",
+      "datePublished": {
+        "originalDateTimeString": "08-Aug-2017 06:00:00",
+        "datetimeString": "Aug 8, 2017, 6:00 AM",
+        "dateString": "Aug 8, 2017",
+        "timeString": "6:00 AM",
+        "isoString": "2017-08-08T06:00:00.000Z"
+      },
+      "position": 2
+    }
+  ],
+  "buildInfo": {
+    "as": "z:/task_1556057993/build/src/vs2017_15.8.4/VC/bin/HostX64/x64/ml64.exe",
+    "buildid": "20190423221610",
+    "cc": "z:/task_1556057993/build/src/clang/bin/clang-cl.exe -Xclang -std=gnu99",
+    "cxx": "z:/task_1556057993/build/src/clang/bin/clang-cl.exe",
+    "host_alias": "x86_64-pc-mingw32",
+    "host_cpu": "x86_64",
+    "host_os": "mingw32",
+    "host_vendor": "pc",
+    "moz_app_id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+    "moz_app_maxversion": "68.0a1",
+    "moz_app_name": "firefox",
+    "moz_app_vendor": "Mozilla",
+    "moz_app_version": "68.0a1",
+    "moz_pkg_platform": "win64",
+    "moz_source_repo": "https://hg.mozilla.org/mozilla-central",
+    "moz_source_stamp": "4b0811d7b8e1591d4e48a26bdb8666a1bc5ccf61",
+    "moz_update_channel": "nightly",
+    "target_alias": "x86_64-pc-mingw32",
+    "target_cpu": "x86_64",
+    "target_os": "mingw32",
+    "target_vendor": "pc"
+  },
+  "buildInfoFilename": "firefox-68.0a1.en-US.win64.json",
+  "buildInfoUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-68.0a1.en-US.win64.json",
+  "downloadInstallerUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-68.0a1.en-US.win64.installer.exe",
+  "downloadZipUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-68.0a1.en-US.win64.zip"
+}

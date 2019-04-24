@@ -1,0 +1,201 @@
+{
+  "a_painter": {
+    "@type": "WebApplication",
+    "name": "A-Painter",
+    "description": "Paint and sketch in VR by Mozilla A-Frame team",
+    "start_url": "https://aframe.io/a-painter/",
+    "icons": [
+      {
+        "src": "https://dl.airtable.com/RPPe979wRAil2X0OfUND_full_apainter.png",
+        "type": "image/png"
+      }
+    ]
+  },
+  "a_blast": {
+    "@type": "WebApplication",
+    "name": "A-Blast",
+    "description": "Save the world from the cutest creatures in the universe",
+    "start_url": "https://aframe.io/a-blast/",
+    "icons": [
+      {
+        "src": "/a_blast/poster.png",
+        "type": "image/png"
+      }
+    ]
+  },
+  "dark_haze": {
+    "@type": "WebApplication",
+    "name": "Dark Haze",
+    "description": "Where dust, smoke and other dry particles obscure the clarity of the sky",
+    "start_url": "https://christmasexperiments.com/2016/24/dark-haze/",
+    "icons": [
+      {
+        "src": "https://dl.airtable.com/63CkdQtS6OQszVONa4vr_full_dh1%2Clarge.2x.1482557323.jpg",
+        "type": "image/jpg"
+      }
+    ]
+  },
+  "puzzle_rain": {
+    "@type": "WebApplication",
+    "name": "Puzzle Rain",
+    "description": "A musical WebVR journey for the HTC VIVE",
+    "start_url": "https://mozvr.com/puzzle-rain/",
+    "icons": [
+      {
+        "src": "/puzzle_rain/poster.png",
+        "type": "image/png"
+      }
+    ]
+  },
+  "stagevr": {
+    "@type": "WebApplication",
+    "name": "Stage VR",
+    "description": "Practice your next talk on the big stage",
+    "start_url": "https://jonathanzwhite.github.io/stagevr/",
+    "icons": [
+      {
+        "src": "/stage_vr/poster.png",
+        "type": "image/png"
+      }
+    ]
+  },
+  "three_examples": {
+    "@type": "WebApplication",
+    "name": "Three.js WebVR examples",
+    "start_url": "https://threejs.org/examples/?q=webvr",
+    "icons": [
+      {
+        "src": "/three/poster.png",
+        "type": "image/png"
+      }
+    ]
+  },
+  "aframe_examples": {
+    "@type": "WebApplication",
+    "name": "A-Frame WebVR examples",
+    "start_url": "https://aframe.io/examples/",
+    "icons": [
+      {
+        "src": "/aframe/poster.png",
+        "type": "image/png"
+      }
+    ]
+  },
+  "the_musical_forest": {
+    "@type": "WebApplication",
+    "name": "The Musical Forest",
+    "start_url": "https://forest.webvrexperiments.com/",
+    "icons": [
+      {
+        "src": "/the_musical_forest/poster.jpg",
+        "type": "image/jpg"
+      }
+    ]
+  },
+  "konterball": {
+    "@type": "WebApplication",
+    "name": "Konterball",
+    "start_url": "https://konterball.com/",
+    "icons": [
+      {
+        "src": "/konterball/poster.jpg",
+        "type": "image/jpg"
+      }
+    ]
+  },
+  "under_neon_lights": {
+    "@type": "WebApplication",
+    "name": "Under Neon Lights",
+    "start_url": "https://with.in/watch/under-neon-lights/",
+    "icons": [
+      {
+        "src": "/under_neon_lights/poster.png",
+        "type": "image/png"
+      }
+    ]
+  },
+  "bear_71": {
+    "@type": "WebApplication",
+    "name": "Bear 71",
+    "start_url": "https://bear71vr.nfb.ca/",
+    "icons": [
+      {
+        "src": "/bear_71/poster.jpg",
+        "type": "image/jpg"
+      }
+    ]
+  },
+  "a_saturday_night": {
+    "@type": "WebApplication",
+    "name": "A Saturday Night",
+    "description": "Record and share your dance moves",
+    "start_url": "https://aframe.io/a-saturday-night/",
+    "icons": [
+      {
+        "src": "/a_saturday_night/poster.jpg",
+        "type": "image/jpg",
+        "background_size": "cover"
+      }
+    ]
+  },
+  "the_british_museum": {
+    "@type": "WebApplication",
+    "name": "The British Museum",
+    "start_url": "https://www.youtube.com/watch?v=2h4iFJl3OoU",
+    "icons": [
+      {
+        "src": "/the_british_museum/poster.jpg",
+        "type": "image/jpg"
+      }
+    ],
+    "videos": {
+      "src": "https://www.youtube.com/watch?v=2h4iFJl3OoU",
+      "platform": "youtube"
+    }
+  },
+  "the_new_york_times": {
+    "@type": "WebApplication",
+    "name": "The New York Times",
+    "start_url": "https://www.youtube.com/watch?v=lTwueK7wuEI",
+    "icons": [
+      {
+        "src": "/the_new_york_times/poster.jpg",
+        "type": "image/jpg"
+      }
+    ],
+    "videos": {
+      "src": "https://www.youtube.com/watch?v=lTwueK7wuEI",
+      "platform": "youtube"
+    }
+  },
+  "usa_today": {
+    "@type": "WebApplication",
+    "name": "USA Today",
+    "start_url": "https://www.youtube.com/watch?v=c3BO0-CNJcQ",
+    "icons": [
+      {
+        "src": "/usa_today/poster.jpg",
+        "type": "image/jpg"
+      }
+    ],
+    "videos": {
+      "src": "https://www.youtube.com/watch?v=c3BO0-CNJcQ",
+      "platform": "youtube"
+    }
+  },
+  "discover_dubai": {
+    "@type": "WebApplication",
+    "name": "Discover Dubai",
+    "start_url": "https://www.youtube.com/watch?v=2h4iFJl3OoU",
+    "icons": [
+      {
+        "src": "/discover_dubai/poster.jpg",
+        "type": "image/jpg"
+      }
+    ],
+    "videos": {
+      "src": "https://www.youtube.com/watch?v=2h4iFJl3OoU",
+      "platform": "youtube"
+    }
+  }
+}

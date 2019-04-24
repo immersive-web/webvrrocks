@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="723px" height="748px" viewBox="0 0 723 748" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>cubes</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="cubes" stroke="#FF5D5D">
+            <g id="cube" transform="translate(187.000000, 0.000000)">
+                <polygon id="Path-6" stroke-width="2" fill="#FF7474" points="0.149177444 445.673973 0.149177444 152.2033 269.762873 0.455233885 535.521123 151.601161 535.521123 442.317837 268.201395 591.25777"></polygon>
+                <polyline id="Path-7" stroke-width="10" points="1.34446023 153.177925 267.069763 297.805731 530.143674 153.177925"></polyline>
+                <path d="M268,584.937087 L268,299" id="Path-8" stroke-width="10"></path>
+            </g>
+            <g id="cube" transform="translate(0.000000, 298.000000)">
+                <polygon id="Path-6" stroke-width="10" fill="#FF7474" points="1.87337486 338.792885 1.87337486 115.702056 206.779784 0.346060148 408.756053 115.244321 408.756053 336.241614 205.593061 449.46292"></polygon>
+                <polyline id="Path-7" stroke-width="10" points="0.610839844 116.064464 204.73302 226.386257 408.472656 115.431651"></polyline>
+                <path d="M205,444.36394 L205,227" id="Path-8" stroke-width="12"></path>
+            </g>
+        </g>
+    </g>
+</svg>

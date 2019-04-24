@@ -1,0 +1,98 @@
+{% from '_helpers.html' import author_item, tools, phones, site, youtube %}
+{% set tool = tools[slug] %}
+{% set page = slug + '.html' %}
+<!doctype html>
+<html lang="en" data-layout="secondary tool {{ tool.slug }}" data-tool="{{ tool.slug }}" data-page="{{ page }}">
+  <head>
+    {% include '_head.html' %}
+    <title>{% block title %}{{ title or tool.name }} • {{ site.title }}{% endblock %}</title>
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <header id="header" class="header" role="banner">
+      <div class="container section">
+        {% include '_logo.html' %}
+
+        <a class="page-heading-link" href="{{ tool.about }}">
+          <h1 class="page-heading">{{ tool.name_html|safe if tool.name_html else tool.name }}</h1>
+          <img class="page-heading-icon" src="{{ tool.logo }}" alt="{{ tool.name }}" title="{{ tool.name }}">
+        </a>
+
+        {% if tool.description_html or tool.description %}
+          <p class="page-intro">{{ tool.description_html|safe if tool.description_html else description }}</p>
+        {% endif %}
+
+        {% if tool.updates %}
+          <div class="page-updates">
+            {% block headset_updates %}
+              {% for message in tool.updates %}
+                {% if message.description %}
+                  <p class="message{{ ' message-' + message.type if message.type }}">
+                    {{ message.description }}
+                  </p>
+                {% endif %}
+              {% endfor %}
+            {% endblock %}
+          </div>
+        {% endif %}
+
+        {% if tool.image %}
+          <figure class="media">
+            <a href="{{ tool.landingUrl or tool.image }}"><img src="{{ tool.image.src or tool.image }}" alt="{{ tool.image.alt or tool.name }}" width="450"></a>
+            <figcaption class="hidden-text">{{ tool.image.caption or tool.name }}</figcaption>
+          </figure>
+        {% endif %}
+
+        {% if tool.pictogram %}
+          <figure class="media">
+            <a itemprop="pictogram" href="{{ tool.pictogram }}">{% include tool.pictogram.replace('/' + tool.slug, tool.slug) %}</a>
+            <figcaption class="hidden-text">{{ tool.name }}</figcaption>
+          </figure>
+        {% endif %}
+
+        {% set hasDownload = tool.downloadUrl %}
+
+        {% if hasDownload or tool.landingUrl or tool.url %}
+          <div id="download" class="download dropdown-standalone dropdown-download">
+            <a href="{{ tool.downloadUrl or tool.landingUrl or tool.url }}" itemprop="downloadUrl" class="button button-unstyled button-large button-download" data-download-name="{{ tool.slug }}" data-download-id="{{ tool.releases.latest.buildInfo.buildid or tool.releases.latest.url }}" data-download-available="{{ 'true' if hasDownload else 'false' }}">{{ 'Download' if hasDownload else 'Get started' }} {% include "media/img/download-icon.svg" if hasDownload else "media/img/arrow-forward.svg" %}
+              {%- if (tool.showVersion and tool.releases.latest.version) or (tool.showDateReleased and tool.releases.latest.dateReleased) %}
+                <span class="download-info c">
+                  {% if tool.showVersion and tool.releases.latest.version %}
+                    <span class="download-version">Version {{ tool.releases.latest.version }}</span>
+                  {%- endif %}
+                  {% if tool.showDateReleased and tool.releases.latest.dateReleased %}
+                    <span class="download-date">{{ tool.releases.latest.dateReleased.datetimeString }}</span>
+                  {%- endif %}
+                  {%- if tool.showFileSize != true and tool.releases.latest.fileSize %}
+                    <span class="download-size">{{ tool.releases.latest.fileSize }}</span>
+                  {%- endif -%}
+                </span>
+              {% endif -%}
+            </a>
+          </div>
+        {% endif -%}
+
+        {% if tool.sourceCodeUrl %}
+          <p class="view-source">
+            <a href="{{ tool.sourceCodeUrl }}" class="button-source no-underline">View project on GitHub</a>
+          </p>
+        {% endif %}
+      </div>
+    </header>
+
+    <main id="main" class="main" role="main">
+      <div class="container">
+        {% block content_block %}
+          <!-- BEGIN CONTENT -->
+          {% block content %}
+          {% endblock %}
+          <!-- END CONTENT -->
+        {% endblock %}
+      </div>
+    </main>
+
+    {% block footer_block %}
+      {% include '_footer.html' %}
+    {% endblock %}
+  </body>
+</html>

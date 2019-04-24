@@ -1,0 +1,2036 @@
+@import 'andlight.css';
+@import 'common.css';
+
+/*@import url(https://fonts.googleapis.com/css?family=Libre+Franklin:200,300,400,500,600,700,800,900);*/
+
+/* Source: https://github.com/jonathantneal/system-font-css/blob/gh-pages/system-font.css */
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+  font-family: system;
+  font-style: italic;
+  font-weight: 300;
+  src: local(".SFNSText-LightItalic"), local(".HelveticaNeueDeskInterface-Italic"), local(".LucidaGrandeUI"), local("Ubuntu Light Italic"), local("Segoe UI Light Italic"), local("Roboto-LightItalic"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 400;
+  src: local(".SFNSText-Regular"), local(".HelveticaNeueDeskInterface-Regular"), local(".LucidaGrandeUI"), local("Ubuntu"), local("Segoe UI"), local("Roboto-Regular"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+  font-family: system;
+  font-style: italic;
+  font-weight: 400;
+  src: local(".SFNSText-Italic"), local(".HelveticaNeueDeskInterface-Italic"), local(".LucidaGrandeUI"), local("Ubuntu Italic"), local("Segoe UI Italic"), local("Roboto-Italic"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 500;
+  src: local(".SFNSText-Medium"), local(".HelveticaNeueDeskInterface-MediumP4"), local(".LucidaGrandeUI"), local("Ubuntu Medium"), local("Segoe UI Semibold"), local("Roboto-Medium"), local("DroidSans-Bold"), local("Tahoma Bold");
+}
+
+@font-face {
+  font-family: system;
+  font-style: italic;
+  font-weight: 500;
+  src: local(".SFNSText-MediumItalic"), local(".HelveticaNeueDeskInterface-MediumItalicP4"), local(".LucidaGrandeUI"), local("Ubuntu Medium Italic"), local("Segoe UI Semibold Italic"), local("Roboto-MediumItalic"), local("DroidSans-Bold"), local("Tahoma Bold");
+}
+
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 700;
+  src: local(".SFNSText-Bold"), local(".HelveticaNeueDeskInterface-Bold"), local(".LucidaGrandeUI"), local("Ubuntu Bold"), local("Roboto-Bold"), local("DroidSans-Bold"), local("Segoe UI Bold"), local("Tahoma Bold");
+}
+
+@font-face {
+  font-family: system;
+  font-style: italic;
+  font-weight: 700;
+  src: local(".SFNSText-BoldItalic"), local(".HelveticaNeueDeskInterface-BoldItalic"), local(".LucidaGrandeUI"), local("Ubuntu Bold Italic"), local("Roboto-BoldItalic"), local("DroidSans-Bold"), local("Segoe UI Bold Italic"), local("Tahoma Bold");
+}
+
+body {
+  font-family: system, Helvetica Neue, Helvetica, sans-serif;
+  min-width: 10rem;
+}
+
+/*
+.fonts-loaded body {
+  font-family: Libre Franklin, Helvetica Neue, Helvetica, sans-serif;
+}
+*/
+
+.hidden-text {
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: -10px;
+  width: 1px;
+}
+
+td a:not(.no-underline):not(.button):hover,
+p a:not(.no-underline):not(.button):hover,
+dd a:not(.no-underline):not(.button):hover,
+li a:not(.no-underline):not(.button):hover {
+  border-bottom: 1px solid currentColor;
+}
+
+p a:not(.no-underline):not(.button):active,
+dd a:not(.no-underline):not(.button):active,
+li a:not(.no-underline):not(.button):active {
+  border-bottom-color: magenta;
+  color: magenta;
+}
+
+td a:not(.no-underline):not(.button):active {
+  border-bottom-color: #000;
+  color: #000;
+}
+
+.browser-type,
+.browser-type + dd,
+.browser-version,
+.browser-version + dd,
+.browser-download {
+  display: none;
+}
+
+/* begin reset */
+header {
+  border-bottom-width: 0;
+  padding-bottom: 0;
+}
+
+header p {
+  font-size: 1rem;
+}
+
+header .button,
+table {
+  margin: 0;
+}
+
+strong {
+  color: inherit;
+}
+
+.button {
+  transition-property: background, border-color, color;
+}
+
+.button:not([class*='button-outlined']) {
+  padding: 0;
+}
+
+section {
+  padding: 0;
+}
+
+figure {
+  text-align: left;
+}
+
+/**
+ * Breakpoints
+ *
+ *   breakpoint-smartphone: 480px
+ *   breakpoint-mid-mobile: 600px
+ *       breakpoint-tablet: 768px
+ *      breakpoint-desktop: 900px
+ * breakpoint-desktop-wide: 1200px
+ */
+
+/* tablet */
+@media all and (max-width: 768px) {
+  body {
+    border-width: 0;
+  }
+}
+
+@media all and (min-width: 769px) {
+  body {
+    border-width: 0;
+  }
+}
+
+/* mid-sized mobile */
+@media all and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* larger than tablet but smaller than desktop */
+@media all and (min-width: 481px) and (max-width: 900px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  figure img:not(:last-child):not(:only-child) {
+    margin-right: 0;
+  }
+
+  figure img + figcaption:not(:only-child) {
+    margin-right: 0;
+  }
+
+  .pt0-ns {
+    padding-top: 0 !important;
+  }
+
+  .pb0-ns {
+    padding-bottom: 0 !important;
+  }
+
+  .mt0-ns {
+    margin-top: 0 !important;
+  }
+
+  .mb0-ns {
+    margin-bottom: 0 !important;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  figure img:not(:only-child) {
+    margin-top: 0;
+  }
+
+  figure img + figcaption {
+    margin-bottom: 0;
+  }
+}
+
+/* desktop */
+@media all and (min-width: 901px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.grid-flex-container {
+  margin: -1.5rem 0 1.5rem -1.5rem;
+}
+
+[class^="grid-flex-cell"],
+[class*=" grid-flex-cell"] {
+  padding: 1.5rem 0 0 1.5rem;
+}
+
+section:not(:last-child) {
+  border-bottom-width: 0;
+}
+/* end reset */
+
+[data-section]:not(:last-child),
+.header {
+  border-bottom: 1px solid #f2f4f6;
+}
+
+.section {
+  padding: 1.5rem;
+}
+
+.header .section {
+  position: relative;
+}
+
+.main .section:empty {
+  border-bottom-width: 0;
+  display: none;
+}
+
+.main ol,
+.main ul:not(.matrix) {
+  padding-left: 2.25rem;
+}
+
+.main ol li,
+.main ul:not(.matrix) li {
+  padding-left: .5rem;
+}
+
+.main ul.not-copy,
+.main ul.not-copy,
+.main .not-copy ol,
+.main .not-copy ul,
+.main .not-copy ol li,
+.main .not-copy ul li {
+  padding-left: 0;
+}
+
+.bullets-light {
+  color: rgba(17,17,17,.5);
+}
+
+.bullets-light li > span:only-child {
+  color: #111;
+  display: block;
+}
+
+h1.page-heading {
+  margin: 0;
+}
+
+.main h1,
+.main h2,
+.main h3 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.main h1 {
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
+.main h3 {
+  opacity: .5;
+  font-size: 1rem;
+}
+
+.page-heading-link {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.notifications {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.notifications .message {
+  margin-top: .25rem;
+}
+
+[data-layout~="home"] .message {
+  margin-top: .5rem;
+}
+
+[data-layout~="home"] .message-pinned {
+  display: none;
+}
+
+.notifications + .section[data-section="intro"] {
+  padding-top: 1.5rem;
+}
+
+.notifications p {
+  line-height: 1.4;
+}
+
+.notifications time[itemprop="dateReported"],
+[data-section~="links"] time {
+  color: rgba(0,0,0,.5);
+  display: block;
+  font-size: .8rem;
+  padding: .25rem 0 .25rem;
+}
+
+.media {
+  margin-top: 1.5rem;
+}
+
+.section[data-section="intro"] {
+  border-width: 0;
+}
+
+.intro-compat {
+  opacity: .8;
+}
+
+[data-layout~="home"] .main h1,
+.main h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+[data-layout~="home"] .main h1 a,
+.main h2 a {
+  color: #001f3f;
+  display: block;
+}
+
+.page-heading-icon {
+  border-radius: 0;
+  display: block;
+  margin-bottom: .5rem;
+  max-width: 100px;
+  opacity: .9;
+  transition: .15s opacity ease-in-out;
+}
+
+.browser-icon {
+  min-height: 70px;
+  min-width: 70px;
+}
+
+[data-layout~="oculus_browser"] .browser-icon {
+  border-radius: 6px;
+}
+
+.headset-icon {
+  display: inline-block;
+  margin-bottom: 1rem;
+  max-width: 40px;
+}
+
+[data-supports-touch="true"] .page-heading-link:active .page-heading-icon,
+[data-supports-touch="false"] .page-heading-link:hover .page-heading-icon {
+  opacity: 1;
+}
+
+html[data-layout~="headset"][data-layout~="htc_vive"],
+html[data-layout~="headset"][data-layout~="htc_vive"] body {
+  background-color: #eafbff;
+}
+
+html[data-layout~="headset"][data-layout~="htc_vive"] .page-heading {
+  color: #111;
+}
+
+html[data-layout~="headset"][data-layout~="htc_vive"] h3,
+html[data-layout~="headset"][data-layout~="htc_vive"] h3 a {
+  color: #777;
+}
+
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] [data-section]:not(:last-child),
+.header,
+[data-section]:not(:last-child) {
+  border-bottom-color: rgba(0,0,0,.1);
+}
+
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"],
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] body {
+  background-color: #e7f5fe;
+}
+
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] .page-heading {
+  color: #111;
+}
+
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] h3,
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] h3 a {
+  color: #777;
+}
+
+a[itemprop="pictogram"] svg {
+  width: 80px;
+}
+
+a[itemprop="pictogram"] svg path {
+  fill: #00b5e2;
+}
+
+html[data-layout~="headset"][data-layout~="samsung_gear_vr"] a[itemprop="pictogram"] svg path {
+  fill: #3b80de;
+}
+
+hr {
+  display: none;
+}
+
+.main h2,
+.main h3,
+.main h4,
+.main h5,
+html:not([data-layout~="home"]) .main p,
+html:not([data-layout~="home"]) .main dl,
+html:not([data-layout~="home"]) .main ol,
+html:not([data-layout~="home"]) .main ul,
+html:not([data-layout~="home"]) .main table,
+.page-intro {
+  margin-bottom: 1.5rem;
+  max-width: 47rem;
+}
+
+.main h3 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: .35rem;
+  margin-top: 2.5rem;
+}
+
+html:not([data-layout~="home"]) .main li ul,
+html:not([data-layout~="home"]) .main li ol {
+  margin-bottom: 0;
+}
+
+.table-responsive {
+  margin-bottom: 1.5rem;
+}
+
+.main h2 a:only-child,
+.main h3 a:only-child,
+.main h4 a:only-child,
+.main h5 a:only-child {
+  display: block;
+}
+
+html[data-layout~="headset"] .main [data-section="browsers"] h4 {
+  margin-bottom: 1rem;
+}
+
+.intro-para {
+  border-width: 1px 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 -1.5rem 1.5rem;
+  padding: 1.5rem;
+}
+
+.intro-para a {
+  color: inherit;
+}
+
+.intro-para em {
+  background: #ffea35;
+  border-radius: .15rem;
+  color: #111;
+  font-style: normal;
+  padding: .125rem .3rem;
+  white-space: pre;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 0;
+}
+
+.section > *:last-child.intro-video {
+  margin-bottom: 1.5rem;
+}
+
+.button.button-watch-video {
+  display: none;
+}
+
+html .main dt:first-child *:first-child,
+.main li:first-child p:first-child {
+  margin-top: 0;
+}
+
+html .intro p:last-child,
+html .main ol,
+html .main li:last-child p:last-child,
+html .main li:last-child > span:only-child p:last-child,
+html .main dd ol,
+html .main dd ul,
+html .main dd:last-child p:last-child,
+html .main dd:last-child > span:only-child p:last-child,
+html .main dd:last-child *:last-child,
+html .main dd > *:only-child,
+html .container > *:last-child {
+  margin-bottom: 0;
+}
+
+.page-intro {
+  opacity: .7;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+p.message {
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+[data-layout~="home"] .section h2 {
+  margin: 0;
+}
+
+.section > *:first-child {
+  margin-top: 0;
+}
+
+.main dd + dt {
+  padding-top: 1rem;
+}
+
+.main dd p:first-child {
+  margin-top: 0;
+}
+
+.main dd p:last-child {
+  margin-bottom: 0;
+}
+
+.main [data-section~="info"] dd + dt,
+.main [data-section~="help"] dd + dt {
+  padding-top: 2rem;
+}
+
+.main [data-section~="info"] dt,
+.main [data-section~="help"] dt {
+  padding-bottom: .25rem;
+}
+
+.main [data-section~="help"] dt a {
+  color: #333;
+}
+
+.main [data-section~="help"] dt a:hover {
+  color: #111;
+}
+
+.main [data-section~="help"] dd {
+  opacity: .7;
+  transition: .15s opacity ease-in-out;
+}
+
+.main [data-section~="help"] dt:hover + dd,
+.main [data-section~="help"] dd:hover {
+  opacity: .9;
+}
+
+.main li + li {
+  margin-top: .75rem;
+}
+
+.main li li {
+  margin-top: .5rem;
+}
+
+.main dd:empty {
+  display: none;
+}
+
+dd .button-download {
+  margin-bottom: 1rem;
+}
+
+dd .button-download,
+p > .button-download:only-child {
+  transition-duration: .15s;
+  padding: .5rem 1rem;
+}
+
+dd .button-download:hover,
+p > .button-download:only-child:hover {
+  background: #43bb6e;
+  color: #fff;
+}
+
+a.download[data-download-is-new="true"],
+a.download:not(:visited) {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+a.download[data-download-is-new="false"],
+a.download:visited {
+  animation: none;
+}
+
+/* Neon glow adapted from https://codepen.io/FelixRilling/pen/qzfoc */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #bf0, 0 0 35px #bf0, 0 0 40px #bf0;
+  }
+  to {
+    box-shadow: 0 0 2.5px #fff, 0 0 5px #fff, 0 0 7.5px #fff, 0 0 10px #bf0, 0 0 17.5px #bf0, 0 0 20px #bf0;
+  }
+}
+
+.download .button-download {
+  min-width: 10rem;
+}
+
+.button-download {
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  text-align: left;
+  z-index: 1;
+}
+
+.button-download .download-info,
+.button-download svg {
+  pointer-events: none;
+}
+
+.button-download svg {
+  fill: darkgreen;
+  float: right;
+  position: relative;
+  top: .25rem;
+  vertical-align: middle;
+  width: 24px;
+}
+
+.button-download[data-download-available="false"] svg {
+  top: .5rem;
+  width: 18px;
+}
+
+.download:hover svg {
+  fill: #86ff86;
+}
+
+.download-size {
+  color: darkgreen;
+  transition: .15s color ease-in-out;
+}
+
+.download:hover .download-size {
+  color: #86ff86;
+}
+
+.button-download .download-info {
+  clear: both;
+  font-size: .5rem;
+}
+
+.button-download .download-version {
+  color: rgba(255,255,255,.8);
+}
+
+.button-download .download-date,
+.button-download .download-size {
+  color: rgba(255,255,255,.6);
+}
+
+.button-download .download-info,
+.button-download .download-info * {
+  display: block;
+}
+
+/* clearfix */
+.c:after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+}
+
+.download-version,
+.download-date {
+  text-align: left;
+}
+
+.download-date {
+  float: left;
+}
+
+.download-size {
+  float: right;
+  text-align: right;
+}
+
+.authors-list,
+.release-notes {
+  margin-top: .75rem;
+}
+
+figcaption {
+  padding-top: .5rem;
+}
+
+.authors-list li {
+  list-style-type: none;
+}
+
+.authors-list li + li,
+.release-notes li + li {
+  margin-top: 1rem;
+}
+
+*[class*='button-outlined'].button-small {
+  padding: 3px 5px;
+}
+
+.footer a[rel="license"] ~ span {
+  color: #444;
+  font-weight: bold;
+}
+
+html[data-layout~="headset"][data-layout~="htc_vive"] .footer a[rel="license"] ~ span {
+  color: rgba(255,255,255,.9);
+}
+
+.footer a[rel="license"] ~ span.by,
+.footer [property="cc:attributionName"] {
+  display: none;
+}
+
+/*
+[class].button {
+  padding: 5px 10px;
+}
+*/
+
+li > .button {
+  margin: 0 5px;
+}
+
+li > .button:first-child {
+  margin-left: 0;
+}
+
+dd code,
+p code,
+li code {
+  background: rgba(17,17,17,.1);
+  border-radius: 1px;
+  box-shadow: 1px 1px 0 rgba(17,17,17,.2);
+  color: rgba(17,17,17,.8);
+  margin: 0 1px;
+  padding: 2px 6px;
+}
+
+.site-nav {
+  margin: -1.5rem;
+}
+
+.site-header .section {
+  padding-bottom: 0;
+}
+
+ul.site-nav-list {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+ul.site-nav-list li {
+  list-style-type: none;
+  position: relative;
+}
+
+.site-nav a {
+  padding: 5px 1.5rem;
+}
+
+.site-nav li:first-child a {
+  padding-top: 1.5rem;
+}
+
+.site-nav li:last-child a {
+  padding-bottom: 1.5rem;
+}
+
+.site-nav a {
+  display: block;
+}
+
+.site-logo {
+  display: block;
+  z-index: 1;
+  width: 100%;
+}
+
+.site-logo svg {
+  height: 100%;
+  margin: 0 1.5rem 1rem 0;
+  max-width: 5rem;
+  width: 100%;
+}
+
+.site-logo svg path,
+.download svg {
+  transition: .15s fill ease-in-out;
+}
+
+[data-layout~="secondary"] .site-logo {
+  opacity: .9;
+}
+
+[data-layout~="secondary"] .site-logo svg {
+  opacity: .8;
+  max-width: calc(2rem + 4vw);
+  width: auto;
+}
+
+[data-layout~="secondary"] .site-logo svg path {
+  fill: #989898;
+}
+
+[data-supports-touch="true"][data-layout~="secondary"] .site-logo:active,
+[data-supports-touch="false"][data-layout~="secondary"] .site-logo:hover {
+  opacity: 1;
+}
+
+[data-supports-touch="true"][data-layout~="secondary"] .site-logo:active svg path,
+[data-supports-touch="false"][data-layout~="secondary"] .site-logo:hover svg path {
+  fill: #24aef4;
+}
+
+[data-layout~="secondary"] .site-logo:active svg path {
+  fill: magenta;
+}
+
+.rocks-wordmark {
+  display: none;
+}
+
+ul.matrix {
+  align-items: stretch;
+  padding-left: 0;
+}
+
+.not-copy ul li,
+.not-copy ol li,
+ul.matrix li {
+  list-style-type: none;
+}
+
+ul.matrix li + li {
+  padding-top: .75rem;
+}
+
+.matrix li > div {
+  border-radius: 3px;
+  height: 100%;
+  position: relative;
+}
+
+.matrix [itemprop="name"] {
+  display: block;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: .125rem;
+}
+
+.matrix [itemprop="url"] {
+  display: block;
+}
+
+/* Nice, big click targets */
+.matrix [itemprop="url"]:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.matrix [itemprop="details"] {
+  min-height: 4rem;
+  position: relative;
+}
+
+.matrix [itemprop="image"] {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 4rem;
+  margin-right: .75rem;
+  margin-bottom: .75rem;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.demos-suggest {
+  filter: grayscale(1);
+  font-size: .9rem;
+  margin-top: 1.5rem;
+}
+
+html[data-layout] [data-section="demos"] ul.matrix {
+  border-bottom-width: 0;
+  max-width: 100%;
+}
+
+[data-section="demos"] .matrix [itemprop="image"] {
+  background-position: center;
+  background-size: auto 124%;
+  border: 1px solid #333;
+  border-radius: 3px;
+  padding: 0;
+  width: 6rem;
+}
+
+.matrix [itemprop="description"] {
+  color: #666;
+  display: block;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.matrix [itemprop="description"] a {
+  color: inherit;
+  position: relative;
+}
+
+[data-archived="true"] {
+  display: none;
+}
+
+.table-support {
+  font-size: .7rem;
+  margin: .5rem 0 1rem;
+  table-layout: fixed;
+}
+
+/* Emulates a `border-bottom` on the table
+   (since because some rows may be hidden with CSS,
+   we can't target `:last-child`) */
+.table-support [itemprop="browser"] > div:after {
+  border-bottom: 1px solid #ccc;
+  content: "";
+  display: block;
+  height: 0;
+  margin-top: -1px;
+  position: relative;
+  top: -1rem;
+  width: 100%;
+}
+
+.table-support th {
+  /*background: #f0f0f0;*/
+}
+
+.table-support thead th {
+  background: #fff;
+  border-bottom-color: #bbb;
+}
+
+.table-support.table-verbose tr[data-headset],
+.table-support.table-verbose td[data-platform],
+.table-support.table-verbose th[data-platform] {
+  /*display: none;*/
+  opacity: 0;
+}
+
+.table-support.table-verbose[data-supported-headsets~="htc_vive"] tr[data-headset="htc_vive"],
+.table-support.table-verbose[data-supported-headsets~="oculus_rift"] tr[data-headset="oculus_rift"],
+.table-support.table-verbose[data-supported-headsets~="samsung_gear_vr"] tr[data-headset="samsung_gear_vr"],
+.table-support.table-verbose[data-supported-headsets~="google_daydream"] tr[data-headset="google_daydream"],
+.table-support.table-verbose[data-supported-headsets~="google_cardboard"] tr[data-headset="google_cardboard"],
+.table-support.table-verbose[data-supported-headsets~="windows_mixed_reality"] tr[data-headset="windows_mixed_reality"] {
+  display: table-row;
+}
+
+.table-support.table-verbose[data-supported-platforms~="windows"] [data-platform="windows"],
+.table-support.table-verbose[data-supported-platforms~="mac"] [data-platform="mac"],
+.table-support.table-verbose[data-supported-platforms~="linux"] [data-platform="linux"],
+.table-support.table-verbose[data-supported-platforms~="android"] [data-platform="android"],
+.table-support.table-verbose[data-supported-platforms~="ios"] [data-platform="ios"] {
+  display: table-cell;
+}
+
+.table-support .unsupported {
+  cursor: not-allowed;
+}
+
+.table-support /*a*/.supported strong {
+  display: none;
+}
+
+th[data-platform] a:before {
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  background-size: auto 60%;
+  content: "";
+  display: block;
+  height: 30px;
+  margin: .25rem 0;
+  width: 100%;
+}
+
+th[data-platform="windows"] a:before {
+  background-image: url(../../windows/logo.svg);
+}
+
+th[data-platform="mac"] a:before {
+  background-image: url(../../mac/logo.svg);
+}
+
+th[data-platform="linux"] a:before {
+  background-image: url(../../linux/logo.svg);
+}
+
+th[data-platform="android"] a:before {
+  background-image: url(../../android/logo.svg);
+}
+
+th[data-platform="ios"] a:before {
+  background-image: url(../../ios/logo.svg);
+}
+
+.table-support td,
+.table-support th {
+  padding: 0;
+}
+
+.table-support th > a,
+.table-support td > a {
+  display: table;
+  /*text-align: center;*/
+  width: 100%;
+}
+
+.table-support tbody td > a span {
+  display: table-cell;
+  /*text-align: center;*/
+  vertical-align: middle;
+  width: 100%;
+}
+
+thead th:first-child {
+  width: 7.5rem;
+}
+
+tr[data-headset] th a {
+  display: block;
+}
+
+th[data-platform]:before,
+tr[data-headset] th a:before,
+tr[data-headset] td {
+  opacity: .8;
+  transition: .15s opacity ease-in-out;
+}
+
+th[data-platform],
+tr[data-headset]:hover > th a:before,
+tr[data-headset]:hover td {
+  opacity: 1;
+}
+
+th[data-platform] a:before {
+  opacity: .75;
+}
+
+tr[data-headset] th a:before {
+  filter: grayscale(100%);
+}
+
+th[data-platform] a:before,
+tr[data-headset] a:before {
+  transition: .15s filter, opacity ease-in-out;
+}
+
+table:hover th[data-platform] a:before,
+table:hover tr[data-headset] a:before {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+tr[data-headset] th a:before {
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 18px;
+  margin: .5rem .75rem;
+  width: 4.6rem;
+}
+
+tr[data-headset="htc_vive"] th a:before {
+  background-image: url(../../htc_vive/logo.svg);
+}
+
+tr[data-headset="oculus_rift"] th a:before {
+  background-image: url(../../oculus_rift/logo.png);
+}
+
+tr[data-headset="samsung_gear_vr"] th a:before {
+  background-image: url(../../samsung_gear_vr/logo.png);
+}
+
+tr[data-headset="google_daydream"] th a:before {
+  background-image: url(../../google_daydream/logo.svg);
+}
+
+tr[data-headset="google_cardboard"] th a:before {
+  background-image: url(../../google_cardboard/logo.svg);
+}
+
+tr[data-headset="windows_mixed_reality"] th a:before {
+  background-image: url(../../windows_mixed_reality/logo.svg);
+  height: 27px;
+  width: 5.8rem;
+}
+
+/*
+[data-supports-touch="true"] [data-section] a[itemprop="url"]:active,
+[data-supports-touch="false"] [data-section] a[itemprop="url"]:hover {
+  color: #111;
+}
+*/
+
+.download {
+  margin-top: 1.5rem;
+}
+
+.db {
+  display: block;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.button-source {
+  display: block;
+  font-size: .8rem;
+  padding-top: .75rem;
+}
+
+a.button-source {
+  color: #666;
+}
+
+[data-supports-touch="true"] a.button-source:active,
+[data-supports-touch="false"] a.button-source:hover {
+  color: #111;
+}
+
+a.button-source {
+  position: relative;
+}
+
+a.button-source:after {
+  color: #999;
+  content: '→';
+  display: inline-block;
+  opacity: 0;
+  padding-left: .5rem;
+  pointer-events: none;
+  position: absolute;
+  transform: scale(0);
+  transition: .15s all ease-in-out;
+  visibility: hidden;
+}
+
+[data-supports-touch="true"] a.button-source:active:after,
+[data-supports-touch="false"] a.button-source:hover:after {
+  font-weight: 800;
+  opacity: 1;
+  pointer-events: visible;
+  transform: scale(1);
+  visibility: visible;
+}
+
+.dropdown-download,
+.dropdown-download .dropdown {
+  background-color: #43bb6e;
+}
+
+.dropdown-download {
+  padding-left: 15px;
+  padding-right: 15px;
+  z-index: 1;
+}
+
+.dropdown-download.dropdown-with-children {
+  min-width: 10rem;
+}
+
+.dropdown-download .button {
+  background-color: transparent;
+}
+
+.dropdown-download .button-unstyled,
+.dropdown-download .dropdown a {
+  color: #fff;
+}
+
+.dropdown-download .icon-arrow-down {
+  border-top-color: #fff;
+  right: auto;
+  top: -4px;
+}
+
+.dropdown-with-children[aria-expanded="false"] .dropdown,
+.message[aria-expanded="false"] {
+  display: none;
+}
+
+.dropdown-download .dropdown li {
+  font-size: .8rem;
+}
+
+.dropdown-download .dropdown li:not(:last-child) {
+  border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+[data-supports-touch="true"] .dropdown-download:not(.dropdown-with-children).active,
+[data-supports-touch="true"] .dropdown-download:not(.dropdown-with-children):active,
+[data-supports-touch="false"] .dropdown-download:not(.dropdown-with-children):hover {
+  border-radius: 3px;
+}
+
+.dropdown-download .dropdown li:last-child,
+.dropdown-download .dropdown li:last-child a {
+  border-radius: 0 0 3px 3px;
+}
+
+.dropdown-standalone:hover .dropdown a {
+  padding: auto;
+}
+
+.dropdown-download .dropdown a,
+.dropdown-download:hover .dropdown a {
+  padding: .5rem 15px;
+}
+
+.dropdown-download .dropdown a {
+  color: #e8f7ef;
+}
+
+[data-supports-touch="true"] .dropdown-download .dropdown a.active,
+[data-supports-touch="true"] .dropdown-download .dropdown a:active,
+[data-supports-touch="false"] .dropdown-download .dropdown a:hover {
+  background-color: #3fae67;
+  color: #fff;
+}
+
+[data-supports-touch="true"] .dropdown-download.active,
+[data-supports-touch="true"] .dropdown-download:active,
+[data-supports-touch="false"] .dropdown-download:hover {
+  background-color: #369658;
+}
+
+.note {
+  color: #999;
+  font-size: .7rem;
+  line-height: 1.8;
+}
+
+.note > strong:first-child {
+  color: #666;
+  margin-right: .5ch;
+  text-transform: uppercase;
+}
+
+[data-section="compat"] td {
+  vertical-align: top;
+}
+
+[data-report-key="browserVersion"],
+[data-report-key="headsets"],
+[data-report-key="dateReported"],
+[data-report-key="dateUpdated"] {
+  white-space: nowrap;
+}
+
+[data-report-key="browserBuildId"],
+[data-report-key="dateReported"],
+[data-report-key="dateUpdated"] {
+  display: none;
+}
+
+td[data-report-key="dateReported"],
+td[data-report-key="dateUpdated"] {
+  font-size: .8rem;
+  line-height: 2;
+}
+
+[data-report-key] a {
+  font-weight: 600;
+}
+
+.iframe-container {
+  height: 0;
+  position: relative;
+  padding-bottom: 56%;  /* 16:9 */
+}
+
+/* We place the YouTube poster image behind `<iframe>` as it loads. */
+.intro-video-inner iframe {
+  background: rgb(53,176,230) 50% 50% no-repeat;
+  /*background-size: 100% 468px;*/
+  background-size: fill;
+}
+
+.iframe-container > * {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+[data-debug] .site-logo {
+  background: yellow;
+}
+
+[data-debug][data-layout~="secondary"] .site-logo {
+  background: goldenrod;
+}
+
+[data-debug][data-layout~="secondary"] .site-logo svg {
+  background: red;
+}
+
+[data-debug][data-layout~="secondary"] body {
+  background: red;
+}
+
+[data-debug] .section {
+  background-color: orange;
+}
+
+[data-debug] .matrix [itemprop="name"] {
+  background: yellow;
+}
+
+[data-debug] .matrix [itemprop="url"] {
+  background: orange;
+}
+
+[data-debug] .matrix [itemprop="description"] {
+  background-color: red;
+}
+
+.social-link {
+  font-size: 0;
+  position: relative;
+}
+
+.social-link:before {
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  position: relative;
+  height: 1rem;
+  top: 1px;
+  width: 1.5rem;
+}
+
+.social-link b {
+  font-size: 1rem;
+}
+
+[data-slug="slack"] a:before {
+  background-image: url(/media/img/slack-color.svg);
+}
+
+.site-nav li[data-slug="twitter"] a {
+  padding-right: 0;
+}
+
+[data-slug="twitter"] a:before {
+  background-image: url(/media/img/twitter.svg);
+}
+
+.main .container {
+  display: flex;
+  flex-direction: column;
+  /*width: 100%;*/
+}
+
+.main .container .section {
+  /*flex: 1;*/
+}
+
+.footer {
+  background: #e3e3e3;
+  color: #666;
+  font-size: .85rem;
+  opacity: .7;
+  padding-top: .5rem;
+}
+
+html[data-layout~="headset"][data-layout~="htc_vive"] .footer {
+  background: #111820;
+  opacity: 1;
+  color: rgba(255,255,255,.6);
+}
+
+html[data-layout~="headset"][data-layout~="htc_vive"] .footer a {
+  color: #666;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a[rel="license"] svg {
+  display: block;
+  margin-bottom: .75rem;
+  max-width: 6rem;
+}
+
+.footer .license,
+.edit-page a {
+  position: relative;
+  z-index: 1;
+}
+
+.edit-page {
+  padding-top: .75rem;
+}
+
+.edit-page a {
+  border-color: #666;
+  color: #666;
+  font-size: .6rem;
+}
+
+html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a {
+  border-color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.5);
+}
+
+html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
+  border-color: rgba(255,255,255,.8);
+  color: rgba(255,255,255,.8);
+}
+
+[data-section~="links"] > ul {
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+[data-section~="info"] li + li {
+  margin-top: .5rem;
+}
+
+*[class*='button-outlined'].button-small {
+  padding: .25rem .5rem;
+}
+
+.button-bugs {
+  display: block;
+  margin-top: 1rem;
+}
+
+.button-bugs-report {
+  font-weight: bold;
+}
+
+[data-layout~="secondary"] [data-section~="setup"] figure,
+[data-layout~="secondary"] [data-section~="help"] figure {
+  background: #fafafa;
+  margin-right: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+[data-layout~="secondary"] [data-section~="setup"] figure:last-child,
+[data-layout~="secondary"] [data-section~="help"] figure:last-child {
+  margin-top: 1rem;
+}
+
+[data-layout~="secondary"] [data-section~="setup"] li figure:last-child,
+[data-layout~="secondary"] [data-section~="help"] li figure:last-child {
+  margin-top: .75rem;
+}
+
+[data-layout~="secondary"] [data-section~="setup"] figure strong:first-child,
+[data-layout~="secondary"] [data-section~="help"] figure strong:first-child {
+  color: #555;
+  display: block;
+}
+
+.figure-stretched img {
+  background-color: #fff;
+  object-fit: contain;
+  padding: 1rem 1rem 0;
+  width: 100%;
+}
+
+img.cover {
+  object-fit: cover;
+}
+
+.pt0 {
+  padding-top: 0 !important;
+}
+
+.pb0 {
+  padding-bottom: 0 !important;
+}
+
+.mt0 {
+  margin-top: 0 !important;
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+/**
+ * Breakpoints
+ *
+ *   breakpoint-smartphone: 480px
+ *   breakpoint-mid-mobile: 600px
+ *       breakpoint-tablet: 768px
+ *      breakpoint-desktop: 900px
+ * breakpoint-desktop-wide: 1200px
+ */
+
+/**
+ * Mobile-first media queries
+ */
+
+@media all and (max-width: 44.999rem) {
+  /*.table-support,
+  [itemprop="browser"] > div:after {
+    display: none;
+  }*/
+}
+
+@media all and (min-width: 18rem) {
+  /*
+  .site-logo:hover svg path {
+    fill: #ff9300;
+  }
+  */
+
+  [data-supports-touch="false"] .site-logo:hover svg path {
+    fill: #0b94da;
+  }
+
+  .site-logo:active svg path {
+    fill: magenta;
+  }
+}
+
+@media all and (min-width: 20rem) {
+  .site-header .section {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: stretch;
+  }
+
+  .site-nav {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  .site-title {
+    width: calc(7rem + 8vw);
+  }
+
+  .site-logo {
+    max-width: 50vw;  /* Big click target. */
+    padding-top: 3rem;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: -3rem;
+    transition: .15s opacity ease-in-out;
+  }
+
+  .site-logo svg {
+    margin: 1.5rem;
+  }
+}
+
+@media all and (min-width: 22rem) {
+  .matrix [itemprop="image"] {
+    background-position: center;
+    background-size: auto 75%;
+    border: 1px solid #e6eaed;
+    border-radius: 3px;
+    width: 6rem;
+  }
+
+  .matrix [itemprop="browser"] {
+    opacity: .9;
+  }
+  .matrix [itemprop="browser"]:hover {
+    opacity: 1;
+  }
+
+  .matrix [itemprop="browser"][data-slug="firefox"] [itemprop="image"] {
+    border-color: rgba(78,178,230,.3);
+  }
+  .matrix [itemprop="browser"][data-slug="firefox"]:hover [itemprop="image"] {
+    border-color: rgba(78,178,230,.6);
+  }
+  .matrix [itemprop="browser"][data-slug="firefox"] [itemprop="url"] {
+    color: rgba(78,178,230,.8);
+  }
+  .matrix [itemprop="browser"][data-slug="firefox"] [itemprop="url"]:hover {
+    color: rgba(78,178,230,1);
+  }
+
+  .matrix [itemprop="browser"][data-slug="chromium"] [itemprop="image"] {
+    border-color: rgba(63,102,196,.3);
+  }
+  .matrix [itemprop="browser"][data-slug="chromium"]:hover [itemprop="image"] {
+    border-color: rgba(63,102,196,.6);
+  }
+  .matrix [itemprop="browser"][data-slug="chromium"] [itemprop="url"] {
+    color: rgba(63,102,196,.8);
+  }
+  .matrix [itemprop="browser"][data-slug="chromium"] [itemprop="url"]:hover {
+    color: rgba(63,102,196,1);
+  }
+
+  .matrix [itemprop="browser"][data-slug="samsung_internet"] [itemprop="image"] {
+    border-color: rgba(151,126,254,.3);
+  }
+  .matrix [itemprop="browser"][data-slug="samsung_internet"]:hover [itemprop="image"] {
+    border-color: rgba(151,126,254,.6);
+  }
+  .matrix [itemprop="browser"][data-slug="samsung_internet"] [itemprop="url"] {
+    color: rgba(151,126,254,.8);
+  }
+  .matrix [itemprop="browser"][data-slug="samsung_internet"] [itemprop="url"]:hover {
+    color: rgba(151,126,254,1);
+  }
+
+  .matrix [itemprop="browser"][data-slug="oculus_browser"] [itemprop="image"] {
+    background-color: rgb(33,33,35);
+    border-color: rgba(60,61,62,.3);
+  }
+  .matrix [itemprop="browser"][data-slug="oculus_browser"]:hover [itemprop="image"] {
+    border-color: rgba(60,61,62,.6);
+  }
+  .matrix [itemprop="browser"][data-slug="oculus_browser"] [itemprop="url"] {
+    color: rgba(60,61,62,.8);
+  }
+  .matrix [itemprop="browser"][data-slug="oculus_browser"] [itemprop="url"]:hover {
+    color: rgba(60,61,62,1);
+  }
+
+  .matrix [itemprop="browser"][data-slug="chrome_for_android"] [itemprop="image"] {
+    border-color: rgba(36,160,98,.3);
+  }
+  .matrix [itemprop="browser"][data-slug="chrome_for_android"]:hover [itemprop="image"] {
+    border-color: rgba(36,160,98,.6);
+  }
+  .matrix [itemprop="browser"][data-slug="chrome_for_android"] [itemprop="url"] {
+    color: rgba(36,160,98,.8);
+  }
+  .matrix [itemprop="browser"][data-slug="chrome_for_android"] [itemprop="url"]:hover {
+    color: rgba(36,160,98,1);
+  }
+
+  .matrix [itemprop="browser"][data-slug="servo"] [itemprop="image"] {
+    border-color: rgba(180,127,49,.3);
+  }
+  .matrix [itemprop="browser"][data-slug="servo"]:hover [itemprop="image"] {
+    border-color: rgba(180,127,49,.6);
+  }
+  .matrix [itemprop="browser"][data-slug="servo"] [itemprop="url"] {
+    color: rgba(180,127,49,.8);
+  }
+  .matrix [itemprop="browser"][data-slug="servo"] [itemprop="url"]:hover {
+    color: rgba(180,127,49,1);
+  }
+
+  .matrix [itemprop="browser"][data-slug="microsoft_edge"] [itemprop="image"] {
+    border-color: rgba(25,118,210,.3);
+  }
+  .matrix [itemprop="browser"][data-slug="microsoft_edge"]:hover [itemprop="image"] {
+    border-color: rgba(25,118,210,.6);
+  }
+  .matrix [itemprop="browser"][data-slug="microsoft_edge"] [itemprop="url"] {
+    color: rgba(25,118,210,.8);
+  }
+  .matrix [itemprop="browser"][data-slug="microsoft_edge"] [itemprop="url"]:hover {
+    color: rgba(25,118,210,1);
+  }
+
+  .button-bugs {
+    display: inline-block;
+    margin-right: .75rem;
+  }
+}
+
+@media all and (min-width: 25rem) {
+  .matrix [itemprop="name"],
+  .matrix [itemprop="description"] {
+    padding-left: 6.75rem;
+  }
+
+  .matrix [itemprop="image"] {
+    margin-bottom: 0;
+    position: absolute;
+  }
+
+  #download:empty ~ .download-block + .download-block .download {
+    margin-top: 1rem;
+  }
+
+  .download-block {
+    margin-right: 1.5rem;
+  }
+}
+
+@media all and (min-width: 45rem) {
+  [data-layout~="home"] .main h1,
+  .main h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .main h1 {
+    border-top: 1px solid #eee;
+    padding-top: 3rem;
+  }
+
+  .site-header .section {
+    flex-direction: row;
+    padding-top: 0;
+  }
+
+  .site-nav {
+    margin: 0;
+  }
+
+  ul.site-nav-list {
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0;
+  }
+
+  .site-nav-list a {
+    display: block;
+    padding: 1rem;
+    height: 100%;
+    line-height: 1.5rem;
+  }
+
+  .site-nav li:first-child a {
+    padding-top: 1rem;
+  }
+
+  .site-nav li:last-child a {
+    padding-bottom: 1rem;
+  }
+
+  body {
+    padding: 3rem;
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+
+  .section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .header .section {
+    padding-top: 0;
+  }
+
+  [data-layout~="secondary"] .header .section {
+    padding-bottom: 3rem;
+  }
+
+  [data-layout~="secondary"] .main .section {
+    padding-top: 3rem;
+  }
+
+  [data-layout~="secondary"] .main .section:last-child {
+    padding-bottom: 0;
+  }
+
+  .site-header {
+    margin-left: -1.5rem;
+    margin-top: -1.5rem;
+  }
+
+  [data-layout~="home"] .site-logo {
+    position: static;
+    max-width: 100%;
+    padding: 0 0 1.5rem;
+    text-align: left;
+  }
+
+  [data-layout~="secondary"] .site-logo {
+    right: -1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .intro-para {
+    font-size: 1.6rem;
+    line-height: 1.7;
+  }
+
+  .intro-para em {
+    border-radius: .3rem;
+    padding: .2rem .45rem;
+  }
+
+  .intro {
+    flex-direction: row;
+  }
+
+  .intro > * {
+    flex: 1;
+  }
+
+  .intro-video {
+    margin-left: 3rem;
+    position: relative;
+    text-align: right;
+  }
+
+  .button.button-watch-video {
+    min-width: 15rem;
+    padding: .5rem .25rem;
+  }
+
+  .button.button-watch-video svg {
+    height: 1.2rem;
+    margin-right: .75ch;
+    position: relative;
+    top: .15rem;
+  }
+
+  .button.button-watch-video path {
+    fill: rgba(255,255,255,.85);
+  }
+
+  .matrix [itemprop="details"] {
+    margin-bottom: 0;
+  }
+
+  [data-report-key="dateReported"],
+  [data-report-key="dateUpdated"] {
+    display: table-cell;
+  }
+
+  .footer,
+  html[data-layout~="headset"][data-layout~="htc_vive"] .footer {
+    background: none;
+  }
+
+  .footer {
+    background: none;
+    border-top: 1px solid #ddd;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  html[data-layout~="headset"][data-layout~="htc_vive"] .footer {
+    border-top-color: rgba(0,0,0,.2);
+    color: rgba(0,0,0,.45);
+  }
+
+  html[data-layout~="headset"][data-layout~="htc_vive"] .footer a[rel="license"] ~ span {
+    color: rgba(0,0,0,.9);
+  }
+
+  html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a {
+    border-color: rgba(0,0,0,.5);
+    color: rgba(0,0,0,.5);
+  }
+
+  html[data-layout~="headset"][data-layout~="htc_vive"] .edit-page a:hover {
+    border-color: rgba(0,0,0,.8);
+    color: rgba(0,0,0,.8);
+  }
+
+  .notifications time[itemprop="dateReported"] {
+    display: inline-block;
+    padding: 0 1.5ch .15rem 0;
+    min-width: 4rem;
+  }
+}
+
+@media all and (min-width: 44.999rem) and (max-width: 52.499rem) {
+  .intro-para {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+}
+
+@media all and (min-width: 52.8rem) {
+  .pt0-l {
+    padding-top: 0 !important;
+  }
+
+  .pb0-l {
+    padding-bottom: 0 !important;
+  }
+
+  .mt0-l {
+    margin-top: 0 !important;
+  }
+
+  .mb0-l {
+    margin-bottom: 0 !important;
+  }
+}
+
+@media all and (min-width: 60rem) {
+  .intro-para {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+
+  .notifications time[itemprop="dateReported"] {
+    border-right: 1px dotted rgba(0,0,0,.25);
+    margin-right: 1.25ch;
+    padding-right: 1.5ch;
+    min-width: 5rem;
+  }
+
+  .edit-page {
+    position: relative;
+    text-align: right;
+    top: -3rem;
+  }
+}
+
+[data-report-key="description"] {
+  width: 100%;
+}
+
+blockquote {
+  color: #999;
+  font-family: inherit;
+  font-style: normal;
+  margin: .5rem 0;
+  padding: 0 1.5rem;
+}
+
+.download-block {
+  display: inline-block;
+}
+
+.download-block p {
+  margin-bottom: .5rem;
+}
+
+.download-block .download {
+  margin-top: 1.5rem;
+}
+
+.c:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+[data-tool~="unity"] .page-heading span {
+  color: #666;
+  display: inline-block;
+  margin: 0 -.4rem;
+}
+
+@media all and (min-width: 70rem) {
+  .table-support /*a*/.supported strong {
+    color: #3d9970;
+    display: inline;
+    font-size: .6rem;
+    font-weight: 500;
+    padding-left: .25ch;
+  }
+
+  .table-support /*a*/.supported:hover strong {
+    color: darkgreen;
+  }
+}

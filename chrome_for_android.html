@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en" data-layout="secondary" data-browser="chrome_for_android">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#24aef4">
+      <link rel="stylesheet" href="/media/css/main.css">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="icon" sizes="256x256" href="/rocks/logo-256.png">
+    <link rel="icon" sizes="256x256" href="/rocks/logo-256.svg">
+    <link rel="mask-icon" href="/rocks/mask-84.svg" color="#24aef4">
+    <meta property="og:title" content="WebVR Rocks">
+    <meta property="og:site_name" content="WebVR Rocks">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://webvr.rocks/">
+    <meta property="og:description" content="Your guide to VR on the Web.">
+    <meta property="og:image" content="https://webvr.rocks/rocks/card.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@WebVRRocks">
+    <meta name="twitter:creator" content="@WebVRRocks">
+    <meta name="twitter:title" content="WebVR Rocks">
+    <meta name="twitter:description" content="Your guide to VR on the Web.">
+    <meta name="twitter:image" content="https://webvr.rocks/rocks/card.png">
+
+    <link rel="canonical" href="https://webvr.rocks/">
+
+    <script>
+      (function () {
+        try { document.documentElement.dataset.newbie = parseInt(window.localStorage.visits, 10) < 4; } catch (e) {}
+      })();
+    </script>
+    <script src="https://cdn.rawgit.com/GoogleChrome/pwacompat/v1.0.0/pwacompat.min.js" async defer></script>
+    <title>Chrome for Android • WebVR Rocks</title>
+  </head>
+  <body>
+    <header id="header" class="header" role="banner">
+      <div class="container section">
+<h1 class="site-title">
+  <a class="site-logo" href="/">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 11" width="200">
+  <path fill="#24aef4" d="M15.4 0H.6C.3 0 0 .3 0 .7v9.6c0 .3.3.7.6.7h14.8c.4 0 .6-.4.6-.8V.7c0-.4-.3-.7-.6-.7zM11 9H2V2h12v7h-3zm0-2c.828 0 1.5-.672 1.5-1.5S11.828 4 11 4s-1.5.672-1.5 1.5S10.172 7 11 7zM5 7c.828 0 1.5-.672 1.5-1.5S5.828 4 5 4s-1.5.672-1.5 1.5S4.172 7 5 7z"/>
+</svg>
+    <span class="rocks-wordmark">
+      <span class="rocks-wordmark-webvr">WebVR</span> <span class="rocks-wordmark-rocks">Rocks</span>
+    </span>
+  </a>
+</h1>
+
+  <p class="hidden-text"><a href="/" aria-controls="main" tabindex="0">&#xAB; Back to WebVR Rocks home</a></p>
+
+        <a class="page-heading-link" href="/chrome_for_android">
+          <h1 class="browser-name page-heading">Chrome for Android</h1>
+          <img class="browser-icon page-heading-icon" src="/chrome_for_android/icon.png" alt="Chrome for Android" title="Chrome for Android">
+        </a>
+
+        <p class="browser-intro page-intro">WebVR in <a href="https://www.google.com/chrome/browser/mobile/">Chrome for Android</a> mobile</p>
+
+
+<section class="notifications" id="notifications">
+          <div class="message message-alert message-pinned" aria-expanded="true" id="message-chrome_for_android-1" data-date-reported="" style="order: 3" data-pinned="true">
+          <p>
+
+              <strong>Warning:</strong> WebVR support in <a href="#releases">Chrome for Android</a> is being conducted as an <a href="#chrome_origin_trial">Origin Trial experiment</a> and subject to change
+          </p>
+        </div>
+
+</section>
+
+          <div id="download" class="download dropdown-standalone dropdown-download">
+            <a href="https://play.google.com/store/apps/details?id=com.chrome.canary" itemprop="downloadUrl" class="button button-unstyled button-large button-download" data-download-name="chrome_for_android" data-download-id="">Download <svg xmlns="http://www.w3.org/2000/svg" fill="#111" viewBox="0 0 24 24">
+  <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+  <path fill="none" d="M0 0h24v24H0z"/>
+</svg> </a>
+          </div>
+      </div>
+    </header>
+
+    <main id="main" class="main" role="main">
+      <div class="container">
+
+        <section id="setup" class="section setup" data-section="setup">
+          <h2><a href="#setup">Instructions</a></h2>
+          <ol class="bullets-light">
+            <li><span><a href="https://play.google.com/store/apps/details?id=com.chrome.canary">Download <strong>Chrome Canary</strong></a> on your mobile device.</span></li>
+            <li>
+              <span>
+                In the URL bar, load <strong><code>chrome://flags</code></strong>, and set these flags to <strong><code>Enabled</code></strong>:
+                <ul>
+                  <li><span><strong>WebVR:</strong> <code>chrome://flags#enable-webvr</code></span></li>
+                  <li><span><strong>Gamepad Extensions:</strong> <code>chrome://flags#enable-gamepad-extensions</code></span></li>
+                </ul>
+              </span>
+            </li>
+            <li><span>Enjoy WebVR content!</span></li>
+          </ol>
+          <p class="note"><strong>Warning:</strong> Until the stability of WebVR improves (soon in upcoming releases), we recommend avoiding the use of WebVR in <a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome for Android</a> and <a href="https://play.google.com/store/apps/details?id=com.chrome.canary">Chrome Canary</a>.</p>
+          <p id="chrome_origin_trial" class="note note-chrome-origin-trial"><strong>Note for Developers:</strong> For your WebVR site to work by default in release-channel Chrome for Android (without users having to manually enable WebVR from <code>chrome://flags</code>), you must <a href="https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform"><strong>sign up here</strong> to request a token for your site&rsquo;s origin (domain)</a>. <br><br> You will receive an email containing the token within 24 hours; to <a href="https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin">enable the WebVR Origin Trial</a> for your site, put the token in a <code>&lt;meta http-equiv=&quot;origin-trial&quot; content=&quot;&hellip;&quot;&gt;</code> tag or as an <code>Origin-Trial</code> HTTP response header. You can <a href="https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform">sign up here</a>, and <a href="#what_is_the_webvr_origin_trial">refer to the FAQ for more details</a>.</p>
+              <p><a class="button button-outlined-neutral button-small button-bugs button-bugs-list" href="https://bugs.chromium.org/p/chromium/issues/list?q=component%3ABlink%3EWebVR">View list of bugs</a> <a class="button button-outlined-warn button-small button-bugs button-bugs-report" href="https://bugs.chromium.org/p/chromium/issues/entryafterlogin">Report a bug</a></p>
+
+        </section>
+
+          <section id="headsets" class="section headsets" data-section="headsets">
+            <h2><a href="#headsets">Supported headsets</a></h2>
+              <ul class="bullets-light">
+<li><span><a href="/google_daydream" itemprop="aboutUrl">Google Daydream</a></span></li><li><span><a href="/google_cardboard" itemprop="aboutUrl">Google Cardboard</a></span></li>              </ul>
+          </section>
+
+          <section id="demos" class="section demos" data-section="demos">
+            <h2><a href="#demos">Demos</a></h2>
+            <ul data-section="demos" class="matrix grid-flex-container">
+                
+
+
+  <li itemprop="demo" itemscope itemtype="http://schema.org/WebApplication" data-app-type="WebApplication" data-slug="the_musical_forest" class="grid-flex-cell-1of2" id="the_musical_forest">
+    <div>
+      <div itemprop="details" class="demo-details">
+        <a itemprop="url" href="https://forest.webvrexperiments.com/" class="no-underline" data-href="https://forest.webvrexperiments.com/">
+          <div itemprop="image" style="background-image: url(/the_musical_forest/poster.jpg)">
+          </div>
+          <span itemprop="name" class="demo-name">The Musical Forest</span>
+        </a>
+      </div>
+    </div>
+  </li>
+
+                
+
+
+  <li itemprop="demo" itemscope itemtype="http://schema.org/WebApplication" data-app-type="WebApplication" data-slug="under_neon_lights" class="grid-flex-cell-1of2" id="under_neon_lights">
+    <div>
+      <div itemprop="details" class="demo-details">
+        <a itemprop="url" href="https://with.in/watch/under-neon-lights/" class="no-underline" data-href="https://with.in/watch/under-neon-lights/">
+          <div itemprop="image" style="background-image: url(/under_neon_lights/poster.png)">
+          </div>
+          <span itemprop="name" class="demo-name">Under Neon Lights</span>
+        </a>
+      </div>
+    </div>
+  </li>
+
+                
+
+
+  <li itemprop="demo" itemscope itemtype="http://schema.org/WebApplication" data-app-type="WebApplication" data-slug="konterball" class="grid-flex-cell-1of2" id="konterball">
+    <div>
+      <div itemprop="details" class="demo-details">
+        <a itemprop="url" href="https://konterball.com/" class="no-underline" data-href="https://konterball.com/">
+          <div itemprop="image" style="background-image: url(/konterball/poster.jpg)">
+          </div>
+          <span itemprop="name" class="demo-name">Konterball</span>
+        </a>
+      </div>
+    </div>
+  </li>
+
+                
+
+
+  <li itemprop="demo" itemscope itemtype="http://schema.org/WebApplication" data-app-type="WebApplication" data-slug="bear_71" class="grid-flex-cell-1of2" id="bear_71">
+    <div>
+      <div itemprop="details" class="demo-details">
+        <a itemprop="url" href="https://bear71vr.nfb.ca/" class="no-underline" data-href="https://bear71vr.nfb.ca/">
+          <div itemprop="image" style="background-image: url(/bear_71/poster.jpg)">
+          </div>
+          <span itemprop="name" class="demo-name">Bear 71</span>
+        </a>
+      </div>
+    </div>
+  </li>
+
+            </ul>
+
+            <p class="demos-suggest"><a href="https://github.com/immersive-web/webvrrocks/issues/new?title=[Chrome for Android]%20Suggested%20demo">Suggest a demo</a></p>
+          </section>
+
+        <section id="releases" class="section" data-section="releases">
+          <h2><a href="#releases">Latest version</a></h2>
+          <article itemscope itemtype="http://schema.org/SoftwareApplication">
+            <dl>
+              <dt class="browser-download">Download</dt>
+              <dd>
+                <a class="button button-outlined-approve button-download" href="https://play.google.com/store/apps/details?id=com.chrome.canary" itemprop="downloadUrl" data-download-name="chrome_for_android" data-download-id="">Download</a>
+              </dd>
+                <dt class="browser-supported-headsets">Supported headsets</dt>
+                <dd>
+                    <a href="/google_daydream">Google Daydream</a>,                    <a href="/google_cardboard">Google Cardboard</a>                </dd>
+                <dt class="browser-system-requirements">System requirements</dt>
+                <dd>
+                  <span class="operatingSystems" content="Android">Android</span>
+
+                </dd>
+              <dt class="browser-authors">Authors</dt>
+              <dd class="not-copy">
+                <ul class="authors-list">
+                    <li class="authors__item">
+    <span class="authors__item__author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <figure>
+        <a class="authors__item__url" href="https://twitter.com/tojiro" itemprop="url"><img itemprop="image" class="authors__item__gravatar" src="http://www.gravatar.com/avatar/0bdcb3845785bc5b032ae688d2d76bcb?s=256" alt="Brandon Jones" width="40"></a>
+        <figcaption><a class="authors__item__url" href="https://twitter.com/tojiro" itemprop="url"><span class="authors__item__url" itemprop="name">Brandon Jones</span></a> (<a href="https://www.google.com/" itemprop="organization">Google</a>)</figcaption>
+      </figure>
+    </span>
+  </li>
+
+                    <li class="authors__item">
+    <span class="authors__item__author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <figure>
+        <a class="authors__item__url" href="https://twitter.com/klausweidner" itemprop="url"><img itemprop="image" class="authors__item__gravatar" src="https://avatars2.githubusercontent.com/u/1392351?size=256" alt="Klaus Weidner" width="40"></a>
+        <figcaption><a class="authors__item__url" href="https://twitter.com/klausweidner" itemprop="url"><span class="authors__item__url" itemprop="name">Klaus Weidner</span></a> (<a href="https://www.google.com/" itemprop="organization">Google</a>)</figcaption>
+      </figure>
+    </span>
+  </li>
+
+                </ul>
+              </dd>
+              <!--
+              <dt class="browser-release-notes">Release notes</dt>
+              <dd>
+              </dd>
+              -->
+            </dl>
+          </article>
+        </section>
+
+        <section id="compat" class="section" data-section="compat">
+          <div id="compatibility"></div>
+          <div id="known_issues"></div>
+          <div id="known-issues"></div>
+          <h2><a href="#compat">Known issues</a></h2>
+              <p><a class="button button-outlined-neutral button-small button-bugs button-bugs-list" href="https://bugs.chromium.org/p/chromium/issues/list?q=component%3ABlink%3EWebVR">View list of bugs</a> <a class="button button-outlined-warn button-small button-bugs button-bugs-report" href="https://bugs.chromium.org/p/chromium/issues/entryafterlogin">Report a bug</a></p>
+
+          <p>These known issues apply to the <a href="#releases">latest published build</a>. Where applicable, the detailed release notes below will list when historic known issues were fixed.</p>
+          <ul class="bullets-light">
+            <li><span><strong>Note:</strong> Any WebVR site you visit must be already enrolled in the <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">WebVR Origin Trial</a> and contain a <code>&lt;meta&gt;</code> tag or HTTP response header with a valid Origin Trial token.</span></li>
+            <li><span><strong>Warning:</strong> Do <em>not</em> use the “Skip VR entry screens” setting in Daydream’s Developer options. It can cause a black screen or inconsistent behavior when trying to enter VR, for example when the controller firmware is out of date. As an alternative, you can double-tap the “Place your phone into the Daydream headset” screen to bypass it.</span></li>
+            <li><span>Content is being rendered at &asymp;1000&times;1200 per eye on a <a href="https://madeby.google.com/phone/">Pixel XL</a>, significantly lower than that of the 1:1 render resolution of 1803&times;2268. (The default render resolution is going to change in the future; consider implementing <a href="https://webvr.info/samples/08-dynamic-resolution.html">dynamic-resolution scaling</a> to tune performance. You can also choose to set the <code>&lt;canvas&gt;</code> size to larger or smaller than that of the recommended render resolution during initialization.)</span></li>
+            <li><span>The <a href="https://www.google.com/nexus/6p/">Nexus 6P</a> may work adequately as a developer-preview experience, but the phone is slower than that of the <a href="https://madeby.google.com/phone/">Pixel phones</a>, and the Nexus 6P may degrade in performance during extended VR use due to thermal throttling. It is not representative of the performance of <a href="https://vr.google.com/daydream/phones/">Daydream-ready devices</a>.</span></li>
+            <li><span>Modifying the <code>&lt;canvas&gt;</code> GL context or content after <a href="https://w3c.github.io/webvr/#dom-vrdisplay-submitframe"><code>VRDisplay#submitFrame</code></a> may cause corrupted frames, among other issues. Please wait for the next <a href="https://w3c.github.io/webvr/#dom-vrdisplay-requestanimationframe"><code>VRDisplay#requestAnimationFrame</code></a> callback before doing so. Also, check the <a href="https://w3c.github.io/webvr/#dom-vrdisplaycapabilities-hasexternaldisplay"><code>VRDisplayCapabilities#hasExternalDisplay</code> property</a> to know when to disable display mirroring (and, if <code>false</code>, any features that reuse the <code>&lt;canvas&gt;</code> post-submission).</span></li>
+          </ul>
+              <p><a class="button button-outlined-neutral button-small button-bugs button-bugs-list" href="https://bugs.chromium.org/p/chromium/issues/list?q=component%3ABlink%3EWebVR">View list of bugs</a> <a class="button button-outlined-warn button-small button-bugs button-bugs-report" href="https://bugs.chromium.org/p/chromium/issues/entryafterlogin">Report a bug</a></p>
+
+        </section>
+
+        <section id="links" class="section" data-section="info links">
+          <div id="info"></div>
+          <h2><a href="#links">Links</a></h2>
+          <ul class="bullets-light">
+            <li>
+              <span>
+                <a href="https://developers.google.com/web/fundamentals/vr/">
+                  Google Web Fundamentals: <em>WebVR</em> <time datetime="2017-04-27T16:15:19.031Z" data-utc-time="1493309719031" title="Wednesday, April 27, 2017 2:54:23 PM PDT">Last updated April 27, 2017</time>
+                </a>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/4RUHehS-0WU/sL7QxikECQAJ">
+                  <!--Blink Development mailing list:--> <em>WebVR Origin Trial results so far (Chrome 57)</em> <time datetime="2017-04-26T21:54:23.000Z" data-utc-time="1493243663000" title="Wednesday, April 26, 2017 2:54:23 PM PDT">April 26, 2017</time>
+                </a>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a href="https://blog.google/products/google-vr/come-play-webvr-experiments/">
+                  Google Blog: <em>Come play with WebVR Experiments</em> <time datetime="2017-04-12T07:00:00.000Z" data-utc-time="1491980400000" title="April 12, 2017">April 12, 2017</time>
+                </a>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/c41q3tyCBJE/I3zWysiXCgAJ">
+                  <!--Blink Development mailing list:--> <em>WebVR Origin Trial results so far</em> <time datetime="2017-03-27T22:51:04.000Z" datetime="1490655064000" title="Monday, March 27, 2017 3:51:04 PM PDT">March 27, 2017</time>
+                </a>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/OnZVNSGwEFU/jugKYkwzCwAJ">
+                  <!--Blink Development mailing list:--> <em>Intent to Continue Experimenting: WebVR</em> <time datetime="2017-03-29T22:20:54.000Z" data-utc-time="1490826054000" title="Wednesday, March 29, 2017 3:20:54 PM PDT">March 27, 2017</time>
+                </a>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a href="https://blog.google/products/chrome/experience-virtual-reality-web-chrome/">
+                  Google Blog: <em>Experience Virtual Reality on the Web with Chrome</em>
+                  <time datetime="2017-02-09T00:00:00.000Z" data-utc-time="1486598400000" title="February 12, 2017">February 9, 2017</time>
+                </a>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a href="http://blog.tojicode.com/2016/12/new-experimental-webvr-builds-for.html">
+                  Brandon Jones&rsquo;s personal blog: <em>New experimental WebVR builds for Android</em> <time datetime="2016-12-14T18:23:00.000Z" data-utc-time="1481739780000" title="Wednesday, December 14, 2016 10:23:00 PST">June 26, 2014</time>
+                </a>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">
+                  Chromium Blog: <em>Introducing the WebVR API in Chrome for Android</em> <time datetime="2017-03-27T22:51:04.000Z" data-utc-time="1490655064000" title="Tuesday, December 13, 2016">December 13, 2016</time>
+                </a>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/zGAzqfi0e00/atXaz8UCAQAJ">
+                  <!--Blink Development mailing list:--> <em>Intent to Experiment: WebVR</em> <time datetime="2016-09-16T18:50:47.000Z" data-utc-time="1474051847000" title="Friday, September 16, 2016 11:50:47 AM PDT">September 16, 2016</time>
+                </a>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/m32Yy87Ggt0/2WYLkbEb43cJ">
+                  <!--Blink Development mailing list:--> <em>Intent to Implement: WebVR</em> <time datetime="2014-06-26T22:44:41.000Z" data-utc-time="1403822681000" title="June 26, 2014, 3:44:41 PM PDT">June 26, 2014</time>
+                </a>
+              </span>
+            </li>
+          </ul>
+        </section>
+
+        <section id="help" class="section help" data-section="help">
+          <div id="faq"></div>
+          <div id="info"></div>
+          <div id="support"></div>
+          <h2><a href="#help">Help</a></h2>
+          <dl>
+            <dt id="what_is_the_difference_between_chromium_and_chrome"><a href="what_is_the_difference_between_chromium_and_chrome">What is the difference between Chromium and Chrome?</a></dt>
+            <dd><a href="https://www.chromium.org/">Chromium</a> is an open-source Web browser project, started and maintained by <a href="https://www.google.com/">Google</a>, for the proprietary, closed-source <a href="https://www.google.com/chrome/">Google Chrome</a> browser. Chromium and Chrome share the majority of code and functionality, though there are some minor differences in features (e.g., video/audio codecs, Speech Recognition/Synthesis APIs, etc.), branding/logos, and licensing.</dd>
+            <dt id="what_is_blink"><a href="#what_is_blink">What is Blink?</a></dt>
+            <dd><a href="https://www.chromium.org/blink">Blink</a> is the rendering engine used by <a href="https://www.chromium.org/">Chromium</a>.</dd>
+            <dt id="which_audio_and_video_codecs_are_supported"><a href="#which_audio_and_video_codecs_are_supported">Which audio and video codecs are supported?</a></dt>
+            <dd>
+              <p>Because of licensing issues, only <a href="https://www.chromium.org/audio-video">these open codecs</a> are supported right now. Namely, MP3 and x264 are <strong>not</strong> supported. These formats are supported: Opus audio (<code>audio/opus</code>, <code>audio/ogg</code>), WebM (<code>video/webm</code>), Theora (<code>video/ogg</code>), Vorbis (<code>audio/vorbis</code>), VP8, VP9, and WAV.</p>
+            </dd>
+            <dt id="what_is_the_webvr_origin_trial"><a href="#what_is_the_webvr_origin_trial">What is the WebVR Origin Trial?</a></dt>
+            <dd>
+              <p>
+                An <a href="https://github.com/jpchase/OriginTrials/blob/gh-pages/explainer.md">Origin Trial</a> is a system built into Chrome that allows an API to be available as an experiment, enabled for all users on a particular site&rsquo;s origin (for a fixed period of time, such as three months).
+              </p>
+              <p>
+                On Chrome for Android, <a href="https://blog.chromium.org/2016/12/introducing-webvr-api-in-chrome-for.html">WebVR Origin Trial</a> support was introduced in <a href="https://github.com/jpchase/OriginTrials/blob/gh-pages/available-trials.md#current-experimental-features">Chrome M56</a>; the current trial ends on <a href="https://github.com/jpchase/OriginTrials/blob/gh-pages/available-trials.md#current-experimental-features">June 13, 2017</a>.
+              </p>
+              <p>
+                For your WebVR site to work by default in release-channel Chrome for Android (without users having to manually enable WebVR from <code>chrome://flags</code>), you must <a href="https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform"><strong>sign up here</strong> to request a token for your site&rsquo;s origin (domain)</a>. <br><br> You will receive an email containing the token within 24 hours; to <a href="https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin">enable the WebVR Origin Trial</a> for your site, put the token in a <code>&lt;meta http-equiv=&quot;origin-trial&quot; content=&quot;&hellip;&quot;&gt;</code> tag or as an <code>Origin-Trial</code> HTTP response header. You can <strong><a href="https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform">sign up here</a></strong>.
+              </a>
+            </dd>
+            <dt id="where_can_i_find_the_list_of_known_bugs"><a href="#where_can_i_find_the_list_of_known_bugs">Where can I find the list of known bugs?</a></dt>
+            <dd>
+              <p>
+                You can find a list of the <a href="#compat">known issues above</a>. You can also search the <a href="https://bugs.chromium.org/p/chromium/issues/list?q=component%3ABlink%3EWebVR">Chromium bug tracker for bugs in the <code>Blink &gt; WebVR</code> component</a>.
+              </p>
+            </dd>
+            <dt id="how_can_i_report_a_bug"><a href="#how_can_i_report_a_bug">How can I report a bug?</a></dt>
+            <dd>
+              <p>
+                First, refer to the <a href="#compat">known issues above</a> and the <a href="https://bugs.chromium.org/p/chromium/issues/list?q=component%3ABlink%3EWebVR">WebVR bugs in the Chromium bug tracker (labeled with the <code>Blink &gt; WebVR</code> component)</a>.
+              </p>
+              <p>
+                If you still don&rsquo;t see your issue reported, you can <a href="https://bugs.chromium.org/p/chromium/issues/entryafterlogin">file a new bug in the Chromium bug tracker</a>. Or, if you&rsquo;d prefer, you can file a bug on <strong><a href="https://webcompat.com/">WebCompat.com</a></strong>.
+              </p>
+            </dd>
+          </dl>
+              <p><a class="button button-outlined-neutral button-small button-bugs button-bugs-list" href="https://bugs.chromium.org/p/chromium/issues/list?q=component%3ABlink%3EWebVR">View list of bugs</a> <a class="button button-outlined-warn button-small button-bugs button-bugs-report" href="https://bugs.chromium.org/p/chromium/issues/entryafterlogin">Report a bug</a></p>
+
+        </section>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="section">
+        <p id="license" class="license">
+          <a class="no-underline" rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-.5 -.101 88 31">
+  <path fill="#FFF" d="M1.803.482l83.127.15c1.16 0 2.198-.174 2.198 2.332l-.103 27.556H-.295V2.862c0-1.236.118-2.38 2.098-2.38z"/>
+  <ellipse cx="13.887" cy="15.502" fill="#FFF" rx="11.101" ry="11.174"/>
+  <path d="M23.27 4.06c3.485 2.593 5.755 6.745 5.756 11.44 0 4.273-1.88 8.096-4.842 10.706h62.853V4.06H23.27z"/>
+  <path fill="#FFF" d="M35.74 7.56c.39 0 .727.058 1 .172.277.116.5.268.675.456.173.19.3.405.38.647.078.242.117.494.117.753 0 .253-.04.503-.118.75-.08.243-.206.46-.38.65-.173.188-.396.34-.673.455-.27.114-.61.173-1 .173h-1.45v2.267h-1.38V7.56h2.84zm-.38 2.975c.158 0 .312-.012.457-.035.147-.023.276-.07.388-.137.112-.068.2-.164.27-.288s.1-.287.1-.487-.033-.362-.1-.487c-.068-.12-.158-.22-.27-.28-.11-.07-.24-.11-.388-.14-.146-.02-.3-.03-.457-.03h-1.073v1.9h1.073zm8.39 2.865c-.475.417-1.132.625-1.97.625-.852 0-1.51-.207-1.977-.62-.466-.412-.7-1.052-.7-1.913V7.56h1.382v3.933c0 .17.016.338.045.505.03.165.09.31.185.44.094.125.225.228.392.308.167.08.392.12.673.12.493 0 .833-.11 1.02-.332.19-.222.283-.568.283-1.04V7.56h1.382v3.933c0 .855-.238 1.49-.714 1.907zm5.32-5.84c.3 0 .572.026.818.08.244.054.457.14.633.26.18.122.32.283.41.483.1.2.15.45.15.745 0 .318-.07.584-.21.796-.14.212-.35.388-.64.523.39.112.68.31.87.59.19.28.29.62.29 1.014 0 .32-.06.6-.18.83-.12.23-.29.43-.49.57-.21.15-.44.26-.71.33-.27.07-.54.11-.82.11h-3.05V7.56h2.96zm-.175 2.56c.246 0 .448-.06.607-.18.158-.117.236-.308.236-.575 0-.147-.025-.27-.078-.363-.053-.093-.123-.168-.21-.22-.09-.054-.19-.092-.306-.11-.115-.022-.232-.032-.355-.032h-1.3v1.48h1.4zm.08 2.684c.135 0 .264-.014.387-.04.123-.026.23-.072.326-.133.092-.06.168-.14.226-.25.056-.1.083-.24.083-.4 0-.32-.092-.55-.27-.69-.183-.14-.425-.21-.724-.21h-1.505v1.74h1.48-.003zm5.168-5.244v5.155h3.062v1.168H52.76V7.56h1.383zm5.605 0v6.323h-1.382V7.56h1.382zm5.702 1.687c-.08-.132-.185-.25-.308-.35-.123-.1-.263-.18-.418-.235-.156-.057-.316-.084-.488-.084-.312 0-.574.062-.793.183-.217.12-.394.29-.525.49-.136.21-.232.44-.296.7-.062.26-.093.53-.093.81 0 .27.03.53.09.78s.16.48.29.68c.13.2.31.36.52.49.22.12.48.18.79.18.42 0 .75-.13.99-.39s.38-.6.43-1.03H67c-.034.4-.126.76-.27 1.07-.147.32-.343.6-.583.82-.238.23-.52.4-.845.51-.323.12-.678.18-1.065.18-.48 0-.914-.08-1.297-.25-.385-.17-.71-.39-.973-.69-.265-.29-.468-.64-.607-1.04-.142-.4-.21-.83-.21-1.29 0-.47.068-.91.21-1.31.14-.402.344-.76.607-1.06.264-.3.588-.533.973-.705.384-.17.815-.26 1.297-.26.348 0 .676.05.98.15.31.1.584.246.828.44.243.19.443.43.604.71.15.283.25.61.3.975h-1.34c-.03-.164-.08-.31-.16-.44zm-29.835 7.17c.405 0 .782.063 1.13.193.35.13.652.324.907.585.255.26.455.586.6.975.143.39.215.85.215 1.37 0 .464-.06.89-.176 1.278-.11.39-.29.727-.53 1.012-.24.28-.53.504-.89.668-.35.16-.77.242-1.25.242h-2.71v-6.322h2.71zm-.096 5.155c.19 0 .39-.03.58-.098.18-.062.35-.173.5-.323.14-.15.26-.34.35-.59.09-.24.13-.53.13-.88 0-.31-.03-.6-.1-.86-.06-.25-.16-.48-.31-.66-.14-.18-.33-.32-.56-.42-.23-.1-.52-.14-.86-.14h-.99v3.99h1.23zm4.28-3.282c.14-.404.34-.757.6-1.06.26-.303.59-.538.97-.71.38-.17.81-.256 1.29-.256s.92.086 1.3.257c.38.18.7.41.97.71.26.31.46.66.6 1.06.14.41.21.85.21 1.32 0 .46-.07.89-.22 1.29-.14.4-.35.75-.61 1.04-.268.3-.59.53-.97.7-.38.17-.816.25-1.3.25-.48 0-.91-.08-1.298-.25-.383-.17-.71-.4-.97-.69-.264-.29-.467-.64-.607-1.04-.14-.39-.21-.83-.21-1.29 0-.47.07-.91.21-1.31zm1.26 2.09c.06.25.16.478.29.68.13.2.31.358.52.48.22.122.48.184.79.184.31 0 .57-.062.79-.183.22-.12.39-.28.53-.48.13-.2.23-.43.29-.68.06-.25.09-.51.09-.77 0-.27-.03-.54-.09-.8s-.16-.49-.3-.69c-.14-.2-.31-.36-.53-.48-.22-.12-.48-.18-.79-.18-.31 0-.58.06-.8.19-.217.12-.394.28-.528.48-.13.21-.23.44-.29.7-.06.258-.09.526-.09.8 0 .27.03.53.09.78zm8.03-3.962l1.47 4.348h.02l1.39-4.348h1.94v6.322h-1.29v-4.48h-.02l-1.54 4.48H50l-1.54-4.437h-.02v4.437h-1.29v-6.322h1.944zm9.67 0l2.35 6.322h-1.43l-.48-1.408h-2.35l-.5 1.408h-1.39l2.38-6.322h1.41zm.08 3.88l-.8-2.323h-.02l-.82 2.322h1.63zm4.7-3.88v6.322h-1.38v-6.322h1.38zm3.05 0l2.62 4.242h.02v-4.242h1.29v6.322h-1.38l-2.61-4.234h-.02v4.234h-1.29v-6.322h1.38z"/>
+  <path d="M85.852 0H1.147C.24 0-.5.744-.5 1.658v28.97c0 .206.167.372.372.372h87.256c.205 0 .372-.166.372-.373V1.657C87.5.745 86.762 0 85.852 0zM1.147.75h84.705c.498 0 .902.406.902.908v28.557H.244V1.657c0-.5.406-.908.903-.908z"/>
+  <ellipse cx="14.156" cy="15.661" fill="#FFF" rx="11.004" ry="11.076"/>
+  <path d="M14.22 8.746c-3.862 0-4.834 3.67-4.834 6.78 0 3.11.97 6.778 4.834 6.778 3.863 0 4.834-3.67 4.834-6.78 0-3.11-.97-6.778-4.834-6.778zm0 2.555c.157 0 .3.03.435.06.278.24.414.58.147 1.04l-2.572 4.76c-.08-.6-.09-1.19-.09-1.63 0-1.37.093-4.22 2.08-4.22zm1.926 2.2c.137.73.155 1.5.155 2.03 0 1.37-.09 4.23-2.08 4.23-.15 0-.3-.01-.43-.05-.02-.01-.05-.02-.07-.02-.04-.01-.08-.02-.12-.04-.44-.19-.72-.53-.32-1.14l2.88-5z"/>
+  <path d="M14.195 3.748c-3.245 0-5.98 1.137-8.21 3.422-1.128 1.135-1.99 2.43-2.59 3.876-.584 1.43-.875 2.92-.875 4.478 0 1.57.29 3.062.876 4.48s1.434 2.69 2.548 3.825c1.128 1.12 2.395 1.98 3.802 2.58 1.42.59 2.903.88 4.45.88 1.546 0 3.05-.31 4.498-.91 1.448-.61 2.74-1.47 3.883-2.61 1.1-1.08 1.934-2.32 2.49-3.72.57-1.42.853-2.94.853-4.55 0-1.6-.28-3.11-.852-4.53-.57-1.43-1.407-2.7-2.507-3.8-2.29-2.31-5.09-3.45-8.36-3.45zm.05 2.12c2.645 0 4.903.943 6.783 2.835.906.912 1.6 1.954 2.073 3.12.48 1.163.72 2.397.72 3.702 0 2.707-.92 4.952-2.74 6.746-.94.93-2.01 1.64-3.19 2.13-1.17.49-2.37.73-3.63.73-1.27 0-2.48-.23-3.64-.71-1.15-.49-2.19-1.19-3.11-2.1-.92-.92-1.63-1.97-2.13-3.13-.48-1.18-.73-2.39-.73-3.65 0-1.27.25-2.49.74-3.66.5-1.17 1.21-2.23 2.13-3.17 1.83-1.87 4.08-2.82 6.75-2.82z"/>
+</svg>
+</a> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">WebVR Rocks</span> <span class="by">by</span> <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/immersive-web/webvrrocks/graphs/contributors" property="cc:attributionName" rel="cc:attributionURL">WebVR Rocks authors</a> is licensed under a <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero v1.0 Universal license</a>.<br><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/immersive-web/webvrrocks" rel="dct:source">Source on GitHub</a> <b>&nbsp;&middot;&nbsp;</b> <a href="/code_of_conduct">Code of Conduct</a>
+        </p>
+        <p id="edit-page" class="edit-page">
+          <a href="https://github.com/immersive-web/webvrrocks/edit/master/public/chrome_for_android.html" title="Suggest a change" class="button button-primary button-outlined button-small">Suggest a change</a>
+        </p>
+      </div>
+    </footer>
+    <script src="/media/js/main.js"></script>
+  </body>
+</html>

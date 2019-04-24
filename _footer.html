@@ -1,0 +1,14 @@
+{% from '_helpers.html' import site %}
+    <footer id="footer" class="footer">
+      <div class="section">
+        <p id="license" class="license">
+          <a class="no-underline" rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">{% include "media/img/cc0.svg" %}</a> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">{{ site.title }}</span> <span class="by">by</span> <a xmlns:cc="http://creativecommons.org/ns#" href="{{ site.github_url }}/graphs/contributors" property="cc:attributionName" rel="cc:attributionURL">{{ site.title }} authors</a> is licensed under a <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero v1.0 Universal license</a>.<br><a xmlns:dct="http://purl.org/dc/terms/" href="{{ site.github_url }}" rel="dct:source">Source on GitHub</a> <b>&nbsp;&middot;&nbsp;</b> <a href="/code_of_conduct">Code of Conduct</a>
+        </p>
+        <p id="edit-page" class="edit-page">
+          <a href="{{ site.github_url }}{% if page %}/edit/master/public/{{ page }}{% endif %}" title="Suggest a change" class="button button-primary button-outlined button-small">Suggest a change</a>
+        </p>
+        {% block footer %}
+        {% endblock %}
+      </div>
+    </footer>
+    <script src="/media/js/main.js"></script>

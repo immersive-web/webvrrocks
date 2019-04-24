@@ -1,0 +1,35 @@
+{
+  "@context": "http://schema.org",
+  "@type": "MobileApplication",
+  "name": "Samsung Internet",
+  "description": "Samsung's browser for mobile & Gear VR",
+  "description_html": "Samsung&rsquo;s browser for <a href=\"http://developer.samsung.com/internet\">mobile</a> &amp; <a href=\"https://www.oculus.com/experiences/gear-vr/849609821813454/\">Gear VR</a>",
+  "slug": "samsung_internet",
+  "operatingSystem": "Android 5.1+",
+  "headsets": [
+    "samsung_gear_vr"
+  ],
+  "showProcessorRequirements": false,
+  "processorRequirements": "",
+  "logo": "/samsung_internet/icon.png",
+  "image": "/samsung_internet/screenshot.jpg",
+  "url": "https://www.oculus.com/experiences/gear-vr/849609821813454/",
+  "about": "/samsung_internet",
+  "downloadUrl": "https://www.oculus.com/experiences/gear-vr/849609821813454/",
+  "showVersion": true,
+  "showFileSize": true,
+  "releases": {
+    "latest": {
+      "url": "https://www.oculus.com/experiences/gear-vr/849609821813454/",
+      "fileSize": "226.79 MB",
+      "version": "5.4.10.4"
+    }
+  },
+  "fileSize": "",
+  "platforms": {
+    "android": [
+      "samsung_gear_vr",
+      "google_cardboard"
+    ]
+  }
+}

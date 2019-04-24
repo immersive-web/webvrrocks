@@ -1,0 +1,45 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "Christopher Van Wiemeersch",
+  "jobTitle": "WebVR Developer",
+  "affiliation": "Mozilla",
+  "additionalName": "cvan",
+  "url": "https://cvan.io/",
+  "twitter_url": "https://twitter.com/cvanw",
+  "image": "http://www.gravatar.com/avatar/7134935af23db2ae5a40cd8cc4d02fa3?s=256",
+  "website": [
+    {
+      "@type": "Twitter",
+      "url": "https://twitter.com/cvanw"
+    },
+    {
+      "@type": "GitHub",
+      "url": "https://github.com/cvan"
+    },
+    {
+      "@type": "WebSite",
+      "url": "https://cvan.io/"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "San Francisco",
+    "addressRegion": "California",
+    "addressCountry": "USA"
+  },
+  "email": "hearcomestreble@gmail.com",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Mozilla",
+    "url": "https://www.mozilla.org/",
+    "sameAs": [
+      "https://mozvr.com/"
+    ]
+  },
+  "colleague": [
+    "https://webvr.rocks/caseyyee.json",
+    "https://webvr.rocks/kearwoodgilbert.json",
+    "https://webvr.rocks/daoshengmu.json"
+  ]
+}
