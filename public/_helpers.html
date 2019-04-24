@@ -154,9 +154,13 @@
     {% set classes = 'no-underline supported' %}
     {% set title = 'Supported' %}
     {% set text = '✅ <strong>Supported</strong>'|safe %}
+  {% elif os not in headsets[headset].platforms %}
+    {% set classes = 'no-underline unsupported headset-unsupported' %}
+    {% set title = 'Unsupported OS by headset maker' %}
+    {% set text = '<i>N/A</i>'|safe %}
   {% else %}
-    {% set classes = 'no-underline unsupported' %}
-    {% set title = 'Unsupported' %}
+    {% set classes = 'no-underline unsupported browser-unsupported' %}
+    {% set title = 'Unsupported browser support' %}
     {% set text = '❌' %}
   {% endif %}
   {% if title %}
