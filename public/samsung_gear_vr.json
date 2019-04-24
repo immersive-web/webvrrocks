@@ -71,16 +71,9 @@
   "softwareAddOn": "",
   "device": "",
   "audio": "",
-  "platforms": {
-    "windows": [],
-    "mac": [],
-    "linux": [],
-    "android": [
-      "oculus_browser",
-      "samsung_internet"
-    ],
-    "ios": []
-  },
+  "platforms": [
+    "android"
+  ],
   "reports": [
   ],
   "notifications": [

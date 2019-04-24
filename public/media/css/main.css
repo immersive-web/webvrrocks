@@ -1023,24 +1023,6 @@ html[data-layout] [data-section="demos"] ul.matrix {
   display: table-cell;
 }
 
-[itemprop="browser"] [data-platform="linux"],
-[itemprop="browser"][data-slug="firefox"] tr[data-headset="samsung_gear_vr"],
-[itemprop="browser"][data-slug="firefox"] tr[data-headset="google_daydream"],
-[itemprop="browser"][data-slug="firefox"] tr[data-headset="google_cardboard"],
-[itemprop="browser"][data-slug="chromium"] tr[data-headset="samsung_gear_vr"],
-[itemprop="browser"][data-app-type="MobileApplication"] tr[data-headset="htc_vive"],
-[itemprop="browser"][data-app-type="MobileApplication"] tr[data-headset="oculus_rift"],
-[itemprop="browser"][data-app-type="MobileApplication"] tr[data-headset="windows_mixed_reality"],
-[itemprop="browser"][data-app-type="MobileApplication"] [data-platform="windows"],
-[itemprop="browser"][data-app-type="MobileApplication"] [data-platform="mac"],
-[itemprop="browser"][data-app-type="MobileApplication"] [data-platform="linux"],
-[itemprop="browser"][data-slug="microsoft_edge"] tr[data-headset="samsung_gear_vr"],
-[itemprop="browser"][data-slug="microsoft_edge"] tr[data-headset="google_daydream"],
-[itemprop="browser"][data-slug="microsoft_edge"] tr[data-headset="google_cardboard"],
-[itemprop="browser"][data-slug="microsoft_edge"] [data-platform]:not([data-platform="windows"]) {
-  display: none;
-}
-
 .table-support .unsupported {
   cursor: not-allowed;
 }

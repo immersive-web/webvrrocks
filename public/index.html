@@ -49,13 +49,9 @@
         <section id="browsers" class="section browsers" data-section="browsers">
           <h1><a href="#browsers">WebVR Browsers</a></h1>
           <ul data-section="browsers" class="matrix grid-flex-container">
-            {{ browser_item('firefox') }}
-            {{ browser_item('microsoft_edge') }}
-            {{ browser_item('chrome_for_android') }}
-            {{ browser_item('chromium') }}
-            {{ browser_item('samsung_internet') }}
-            {{ browser_item('oculus_browser') }}
-            {{ browser_item('servo') }}
+              {% for _, browser in browsers %}
+                {{ browser_item(browser.slug) }}
+              {% endfor %}
           </ul>
         </section>
       </div>

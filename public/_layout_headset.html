@@ -69,9 +69,9 @@
             <h2><a href="#browsers">{{ demos_heading or demos_title or 'Supported browsers' }}</a></h2>
             {% block browsers %}
               {% set browsers_list = [] %}
-              {% for os, browsers in headset.platforms %}
-                {% for browser in browsers %}
-                  {% if browser not in browsers_list %}
+              {% for browser, browser_data in browsers %}
+                {% for os, browser_headsets in browser_data.platforms %}
+                  {% if headset.slug in browser_headsets and browser not in browsers_list %}
                     {% set browsers_list = (browsers_list.push(browser), browsers_list) %}
                   {% endif %}
                 {% endfor %}

@@ -70,48 +70,17 @@
   "alternateName": "Chromium WebVR",
   "audio": "",
   "platforms": {
-    "htc_vive": {
-      "windows": "supported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "headset_unsupported",
-      "ios": "headset_unsupported"
-    },
-    "oculus_rift": {
-      "windows": "supported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "headset_unsupported",
-      "ios": "headset_unsupported"
-    },
-    "samsung_gear_vr": {
-      "windows": "headset_unsupported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "browser_unsupported",
-      "ios": "headset_unsupported"
-    },
-    "google_daydream": {
-      "windows": "headset_unsupported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "supported",
-      "ios": "headset_unsupported"
-    },
-    "google_cardboard": {
-      "windows": "headset_unsupported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "supported",
-      "ios": "browser_unsupported"
-    },
-    "windows_mixed_reality": {
-      "windows": "browser_unsupported",
-      "mac": "headset_unsupported",
-      "linux": "headset_unsupported",
-      "android": "headset_unsupported",
-      "ios": "headset_unsupported"
-    }
+    "windows": [
+      "htc_vive",
+      "oculus_rift"
+    ],
+    "mac": [],
+    "linux": [],
+    "android": [
+      "google_daydream",
+      "google_cardboard"
+    ],
+    "ios": []
   },
   "reports": [
     {
