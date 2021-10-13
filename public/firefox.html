@@ -3,9 +3,18 @@
 
 {% block instructions %}
   <ol class="bullets-light">
-    <li><span>Download and launch <a href="https://www.mozilla.org/en-US/firefox/new/?scene=2"><strong>Firefox</strong></a>.</span></li>
-    <li data-headset="oculus_rift"><span>Ensure that your <em>Oculus Home</em> settings allow for <a href="https://blog.mozvr.com/oculus-home-rift-cv1-webvr/#enablingunknownsources">Unknown Sources</a>.</span></li>
-    <li><span>For PCs (especially laptops) using NVIDIA chipsets, there are several methods of <a href="https://alteredqualia.com/texts/optimus/">enabling the discrete GPU</a>. One way is from the <a href="https://www.nvidia.com/Download/Find.aspx">NVIDIA Control Panel</a>: Load <code>3D Settings</code> <code>&gt;</code> <code>Manage 3D Settings</code> <code>&gt;</code> <code>Program Settings</code> tab, and select <strong>Mozilla Firefox (<code>firefox.exe</code>)</strong> (with the Firefox icon) as the program to customize, and select <strong>&ldquo;High-performance NVIDIA processor&rdquo;</strong> as the preferred graphics processor.</span></li>
+    <li><span>Download and launch <a href="{{ browser.url }}"><strong>Firefox</strong></a>.</span></li>
+    <li id="setup-oculus-unknown-sources" data-headset="oculus_rift"><span>
+      <p>For the <strong data-headset="oculus_rift">Oculus Rift</strong>,
+      enable <strong>Unknown Sources</strong> in your Oculus Settings.</p>
+      <p>Launch the <strong data-headset="oculus_rift">Oculus desktop app</strong> and navigate to <code>Settings &gt; General &gt; Unknown Sources</code>.</p>
+      <p><img class="db" src="/oculus_rift/oculus-unknown-sources-settings.gif" alt="Animation of Oculus 'Unknown Sources' instructions"></p>
+    </span></li>
+    <li id="setup-nvidia"><span>
+      <p>For PCs using NVIDIA chipsets, there are several methods of <a href="https://alteredqualia.com/texts/optimus/">enabling the discrete GPU</a>.</p>
+      <p>One way is from the <a href="https://www.nvidia.com/Download/Find.aspx">NVIDIA Control Panel</a>: Open <code>3D Settings &gt; Manage 3D settings &gt; Program Settings</code>, and select <strong>Mozilla Firefox (firefox.exe)</strong> as the program to customize, and select <strong>&ldquo;High-performance NVIDIA processor&rdquo;</strong> as the preferred graphics processor.</p>
+      <p><img class="db" src="/firefox/firefox-nvidia-settings.png" alt="Screenshot of NVIDIA Settings for Firefox"></p>
+    </span></li>
     <li><span>Restart Firefox.</span></li>
     <li><span>Enjoy WebVR content!</span></li>
   </ol>
@@ -61,16 +70,40 @@
 
 {% block help %}
 <dl>
+  <dt id="webvr_does_not_work"><a href="#webvr_does_not_work">Why does WebVR content not work for me?</a></dt>
+  <dd>
+    <p>Here are a few troubleshooting recommendations:</p>
+    <ul class="bullets-light">
+      <li>
+        <span>
+          Make sure you are running the <a href="https://support.mozilla.org/kb/switch-32-bit-64-bit">64-bit version of Firefox</a>.
+        </span>
+      </li>
+      <li data-headset="oculus_rift">
+        <span>
+          If you are using the Oculus Rift, make sure you have enabled <a href="#setup-oculus-unknown-sources">Unauthorized Sources</a>.
+        </span>
+      </li>
+      <li>
+        <span>
+          If you are using a laptop/PC with an NVIDIA graphics card, make sure you have enabled the <a href="#setup-nvidia">discrete GPU for Firefox</a>.
+        </span>
+      </li>
+    </ul>
+    <p>
+      If you still don&rsquo;t see your issue reported, you can <a href="{{ browser.bugsReportUrl }}">file a new bug in the Firefox bug tracker</a>. Or, if you&rsquo;d prefer, you can file a bug on <strong><a href="https://webcompat.com/">WebCompat.com</a></strong>.
+    </p>
+  </dd>
   <dt id="where_can_i_find_the_list_of_known_bugs"><a href="#where_can_i_find_the_list_of_known_bugs">Where can I find the list of known bugs?</a></dt>
   <dd>
     <p>
-      Above is a list of <a href="#compat">bugs and features that are being actively worked on</a>. You can find the full list of filed bugs and planned features by searching the <a href="{{ browser.bugsUrl }}">Firefox Bugzilla bug tracker for bugs with the whiteboard keyword <code>[webvr]</code></a>.
+      Above is a list of <a href="#compat">bugs and features that are being actively worked on</a>. You can find the full list of filed bugs and planned features by searching the <a href="{{ browser.bugsUrl }}">Firefox Bugzilla bug tracker for bugs</a>.
     </p>
   </dd>
   <dt id="how_can_i_report_a_bug"><a href="#how_can_i_report_a_bug">How can I report a bug?</a></dt>
   <dd>
     <p>
-      First, refer to the <a href="#compat">known issues above</a> and the <a href="{{ browser.bugsUrl }}">WebVR bugs in the Firefox Bugzilla bug tracker (labeled with the whiteboard keyword <code>[webvr]</code>)</a>.
+      First, refer to the <a href="#compat">known issues above</a> and the <a href="{{ browser.bugsUrl }}">WebVR bugs in the Firefox Bugzilla bug tracker</a>.
     </p>
     <p>
       If you still don&rsquo;t see your issue reported, you can <a href="{{ browser.bugsReportUrl }}">file a new bug in the Firefox bug tracker</a>. Or, if you&rsquo;d prefer, you can file a bug on <strong><a href="https://webcompat.com/">WebCompat.com</a></strong>.

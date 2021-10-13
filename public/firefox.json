@@ -5,80 +5,80 @@
   "slug": "firefox",
   "description": "Mozilla’s desktop browser",
   "description_html": "<a href=\"https://www.mozilla.org/\">Mozilla</a>’s <a href=\"https://www.mozilla.org/en-US/firefox/new/\">desktop browser</a>",
-  "operatingSystem": "Windows 7.1+ or macOS",
+  "operatingSystem": "Windows 10+ or macOS",
   "processorRequirements": "IA64",
   "headsets": [
     "htc_vive",
     "oculus_rift"
   ],
   "logo": "/firefox/icon.png",
-  "url": "https://www.mozilla.org/en-US/firefox/new/",
+  "icon": "/firefox/icon.svg",
+  "url": "https://www.mozilla.org/en-US/firefox/",
   "about": "/firefox",
-  "landingUrl": "https://www.mozilla.org/en-US/firefox/new/",
-  "downloadUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-60.0a1.en-US.win64.installer.exe",
+  "landingUrl": "https://www.mozilla.org/en-US/firefox/",
+  "downloadUrl": "https://download.mozilla.org/?product=firefox-latest",
   "sourceCodeUrl": "https://dxr.mozilla.org/mozilla-central/source/dom/vr",
-  "bugsUrl": "https://bugzilla.mozilla.org/buglist.cgi?quicksearch=%5Bwebvr%5D",
-  "bugsReportUrl": "https://bugzilla.mozilla.org/enter_bug.cgi?product=Core&component=General&status_whiteboard=[webvr]&cc=kgilbert@mozilla.com",
+  "bugsUrl": "https://bugzilla.mozilla.org/buglist.cgi?quicksearch=component%3AWebVR",
+  "bugsReportUrl": "https://bugzilla.mozilla.org/enter_bug.cgi?product=Core&component=WebVR&status_whiteboard=[webvr]&cc=kgilbert@mozilla.com",
   "sameAs": [
-    "https://webvr.rocks/firefox",
-    "https://www.mozilla.org/en-US/firefox/new/"
+    "https://webvr.rocks/firefox"
   ],
   "showDateReleased": false,
   "releases": {
     "latest": {
       "status": "experimental",
       "landingUrl": "https://www.mozilla.org/en-US/firefox/new/",
-      "buildInfoFilename": "firefox-60.0a1.en-US.win64.json",
-      "buildInfoUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-60.0a1.en-US.win64.json",
-      "downloadUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-60.0a1.en-US.win64.installer.exe",
-      "downloadInstallerUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-60.0a1.en-US.win64.installer.exe",
-      "downloadZipUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-60.0a1.en-US.win64.zip",
+      "buildInfoFilename": "firefox-64.0a1.en-US.win64.json",
+      "buildInfoUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-64.0a1.en-US.win64.json",
+      "downloadUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-64.0a1.en-US.win64.installer.exe",
+      "downloadInstallerUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-64.0a1.en-US.win64.installer.exe",
+      "downloadZipUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-64.0a1.en-US.win64.zip",
       "dateReleased": {
-        "originalDateTimeString": "22-Feb-2018 00:28",
-        "datetime": 1519288080000,
-        "datetimeString": "Feb 22, 2018, 12:28 AM",
-        "dateString": "Feb 22, 2018",
-        "timeString": "12:28 AM",
-        "isoString": "2018-02-22T08:28:00.000Z"
+        "originalDateTimeString": "02-Oct-2018 12:20",
+        "datetime": 1538508000000,
+        "datetimeString": "Oct 2, 2018, 12:20 PM",
+        "dateString": "Oct 2, 2018",
+        "timeString": "12:20 PM",
+        "isoString": "2018-10-02T19:20:00.000Z"
       },
       "dateReleasedInstaller": {
-        "originalDateTimeString": "22-Feb-2018 00:28",
-        "datetime": 1519288080000,
-        "datetimeString": "Feb 22, 2018, 12:28 AM",
-        "dateString": "Feb 22, 2018",
-        "timeString": "12:28 AM",
-        "isoString": "2018-02-22T08:28:00.000Z"
+        "originalDateTimeString": "02-Oct-2018 12:20",
+        "datetime": 1538508000000,
+        "datetimeString": "Oct 2, 2018, 12:20 PM",
+        "dateString": "Oct 2, 2018",
+        "timeString": "12:20 PM",
+        "isoString": "2018-10-02T19:20:00.000Z"
       },
       "dateReleasedZip": {
-        "originalDateTimeString": "22-Feb-2018 00:28",
-        "datetime": 1519288080000,
-        "datetimeString": "Feb 22, 2018, 12:28 AM",
-        "dateString": "Feb 22, 2018",
-        "timeString": "12:28 AM",
-        "isoString": "2018-02-22T08:28:00.000Z"
+        "originalDateTimeString": "02-Oct-2018 12:20",
+        "datetime": 1538508000000,
+        "datetimeString": "Oct 2, 2018, 12:20 PM",
+        "dateString": "Oct 2, 2018",
+        "timeString": "12:20 PM",
+        "isoString": "2018-10-02T19:20:00.000Z"
       },
-      "installerFilename": "firefox-60.0a1.en-US.win64.installer.exe",
-      "zipFilename": "firefox-60.0a1.en-US.win64.zip",
-      "fileSize": "40 MB",
-      "fileSizeInstaller": "40 MB",
-      "fileSizeZip": "59 MB",
+      "installerFilename": "firefox-64.0a1.en-US.win64.installer.exe",
+      "zipFilename": "firefox-64.0a1.en-US.win64.zip",
+      "fileSize": "43 MB",
+      "fileSizeInstaller": "43 MB",
+      "fileSizeZip": "65 MB",
       "buildInfo": {
         "as": "ml64.exe",
-        "buildid": "20180221220150",
-        "cc": "z:/build/build/src/vs2017_15.4.2/VC/bin/Hostx64/x64/cl.exe",
-        "cxx": "z:/build/build/src/vs2017_15.4.2/VC/bin/Hostx64/x64/cl.exe",
+        "buildid": "20181002100236",
+        "cc": "z:/build/build/src/clang/bin/clang-cl.exe -Xclang -std=gnu99 -fms-compatibility-version=19.15.26726",
+        "cxx": "z:/build/build/src/clang/bin/clang-cl.exe -fms-compatibility-version=19.15.26726",
         "host_alias": "x86_64-pc-mingw32",
         "host_cpu": "x86_64",
         "host_os": "mingw32",
         "host_vendor": "pc",
         "moz_app_id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
-        "moz_app_maxversion": "60.0a1",
+        "moz_app_maxversion": "64.0a1",
         "moz_app_name": "firefox",
         "moz_app_vendor": "Mozilla",
-        "moz_app_version": "60.0a1",
+        "moz_app_version": "64.0a1",
         "moz_pkg_platform": "win64",
         "moz_source_repo": "https://hg.mozilla.org/mozilla-central",
-        "moz_source_stamp": "994a684a7564c2735d98d6910a78d079a68f0b25",
+        "moz_source_stamp": "7cda6e1eb528ba81b10548e858f91689b36dfe3b",
         "moz_update_channel": "nightly",
         "target_alias": "x86_64-pc-mingw32",
         "target_cpu": "x86_64",
@@ -289,6 +289,105 @@
   ],
   "reports": [
     {
+      "enabled": false,
+      "type": "feature",
+      "headsets": [
+        "oculus_rift",
+        "htc_vive",
+        "windows_mixed_reality"
+      ],
+      "status": "Filed",
+      "dateReported": {
+        "datetime": "2017-11-20T15:33:00",
+        "pretty": "Nov 11, 2017"
+      },
+      "dateUpdated": {
+        "datetime": "2018-09-11T13:19:00",
+        "pretty": "Sep 11, 2018"
+      },
+      "description": "Enable WebXR 1.0 by default in release",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1419206"
+    },
+    {
+      "enabled": false,
+      "type": "feature",
+      "headsets": [
+        "oculus_rift",
+        "htc_vive",
+        "windows_mixed_reality"
+      ],
+      "status": "Filed",
+      "dateReported": {
+        "datetime": "2018-07-30T16:12:00",
+        "pretty": "July 30, 2018"
+      },
+      "dateUpdated": {
+        "datetime": "2018-07-31T05:45:00",
+        "pretty": "July 31, 2018"
+      },
+      "description": "Enable WebXR 1.0 by default in Nightly",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1479617"
+    },
+    {
+      "type": "feature",
+      "headsets": [
+        "oculus_rift",
+        "htc_vive",
+        "windows_mixed_reality"
+      ],
+      "status": "Filed",
+      "dateReported": {
+        "datetime": "2017-11-20T14:44:00",
+        "pretty": "Nov 11, 2017"
+      },
+      "dateUpdated": {
+        "datetime": "2018-09-11T13:18:00",
+        "pretty": "Sep 11, 2018"
+      },
+      "description": "Implement WebXR 1.0",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1419190"
+    },
+    {
+      "type": "feature",
+      "headsets": [
+        "oculus_rift",
+        "htc_vive",
+        "windows_mixed_reality"
+      ],
+      "status": "In Active Development",
+      "dateReported": {
+        "datetime": "2016-03-29T14:46:00",
+        "pretty": "Mar 3, 2016"
+      },
+      "dateUpdated": {
+        "datetime": "2018-09-26T22:07:00",
+        "pretty": "Aug 26, 2018"
+      },
+      "description": "Implement Linux support for OpenVR",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1310663"
+    },
+    {
+      "type": "bug",
+      "description": "WebVR content does not present when using Oculus Home before launching Firefox",
+      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1384279",
+      "status": "Fixed",
+      "priority": "P1",
+      "platforms": [
+        "windows"
+      ],
+      "headsets": [
+        "oculus_rift"
+      ],
+      "dateReported": {
+        "datetime": "2017-07-25T13:05:00",
+        "pretty": "Jul 25, 2017"
+      },
+      "dateUpdated": {
+        "datetime": "2018-02-13T07:20:00",
+        "pretty": "Feb 13, 2018"
+      }
+    },
+    {
       "type": "bug",
       "enabled": false,
       "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0",
@@ -404,27 +503,6 @@
       }
     },
     {
-      "type": "bug",
-      "description": "WebVR content does not present when using Oculus Home before launching Firefox",
-      "bugUrl": "https://bugzilla.mozilla.org/show_bug.cgi?id=1384279",
-      "status": "Filed",
-      "priority": "P1",
-      "platforms": [
-        "windows"
-      ],
-      "headsets": [
-        "oculus_rift"
-      ],
-      "dateReported": {
-        "datetime": "2017-07-25T13:05:00",
-        "pretty": "Jul 25, 2017"
-      },
-      "dateUpdated": {
-        "datetime": "2017-10-23T14:33:00",
-        "pretty": "Oct 23, 2017"
-      }
-    },
-    {
       "enabled": false,
       "type": "feature",
       "headsets": [
@@ -451,34 +529,34 @@
     }
   ],
   "dateReleased": {
-    "originalDateTimeString": "22-Feb-2018 00:28",
-    "datetime": 1519288080000,
-    "datetimeString": "Feb 22, 2018, 12:28 AM",
-    "dateString": "Feb 22, 2018",
-    "timeString": "12:28 AM",
-    "isoString": "2018-02-22T08:28:00.000Z"
+    "originalDateTimeString": "02-Oct-2018 12:20",
+    "datetime": 1538508000000,
+    "datetimeString": "Oct 2, 2018, 12:20 PM",
+    "dateString": "Oct 2, 2018",
+    "timeString": "12:20 PM",
+    "isoString": "2018-10-02T19:20:00.000Z"
   },
   "dateReleasedInstaller": {
-    "originalDateTimeString": "22-Feb-2018 00:28",
-    "datetime": 1519288080000,
-    "datetimeString": "Feb 22, 2018, 12:28 AM",
-    "dateString": "Feb 22, 2018",
-    "timeString": "12:28 AM",
-    "isoString": "2018-02-22T08:28:00.000Z"
+    "originalDateTimeString": "02-Oct-2018 12:20",
+    "datetime": 1538508000000,
+    "datetimeString": "Oct 2, 2018, 12:20 PM",
+    "dateString": "Oct 2, 2018",
+    "timeString": "12:20 PM",
+    "isoString": "2018-10-02T19:20:00.000Z"
   },
   "dateReleasedZip": {
-    "originalDateTimeString": "22-Feb-2018 00:28",
-    "datetime": 1519288080000,
-    "datetimeString": "Feb 22, 2018, 12:28 AM",
-    "dateString": "Feb 22, 2018",
-    "timeString": "12:28 AM",
-    "isoString": "2018-02-22T08:28:00.000Z"
+    "originalDateTimeString": "02-Oct-2018 12:20",
+    "datetime": 1538508000000,
+    "datetimeString": "Oct 2, 2018, 12:20 PM",
+    "dateString": "Oct 2, 2018",
+    "timeString": "12:20 PM",
+    "isoString": "2018-10-02T19:20:00.000Z"
   },
-  "installerFilename": "firefox-60.0a1.en-US.win64.installer.exe",
-  "zipFilename": "firefox-60.0a1.en-US.win64.zip",
-  "fileSize": "40 MB",
-  "fileSizeInstaller": "40 MB",
-  "fileSizeZip": "59 MB",
+  "installerFilename": "firefox-64.0a1.en-US.win64.installer.exe",
+  "zipFilename": "firefox-64.0a1.en-US.win64.zip",
+  "fileSize": "43 MB",
+  "fileSizeInstaller": "43 MB",
+  "fileSizeZip": "65 MB",
   "notifications": [
     {
       "type": "error",
@@ -545,29 +623,29 @@
   ],
   "buildInfo": {
     "as": "ml64.exe",
-    "buildid": "20180221220150",
-    "cc": "z:/build/build/src/vs2017_15.4.2/VC/bin/Hostx64/x64/cl.exe",
-    "cxx": "z:/build/build/src/vs2017_15.4.2/VC/bin/Hostx64/x64/cl.exe",
+    "buildid": "20181002100236",
+    "cc": "z:/build/build/src/clang/bin/clang-cl.exe -Xclang -std=gnu99 -fms-compatibility-version=19.15.26726",
+    "cxx": "z:/build/build/src/clang/bin/clang-cl.exe -fms-compatibility-version=19.15.26726",
     "host_alias": "x86_64-pc-mingw32",
     "host_cpu": "x86_64",
     "host_os": "mingw32",
     "host_vendor": "pc",
     "moz_app_id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
-    "moz_app_maxversion": "60.0a1",
+    "moz_app_maxversion": "64.0a1",
     "moz_app_name": "firefox",
     "moz_app_vendor": "Mozilla",
-    "moz_app_version": "60.0a1",
+    "moz_app_version": "64.0a1",
     "moz_pkg_platform": "win64",
     "moz_source_repo": "https://hg.mozilla.org/mozilla-central",
-    "moz_source_stamp": "994a684a7564c2735d98d6910a78d079a68f0b25",
+    "moz_source_stamp": "7cda6e1eb528ba81b10548e858f91689b36dfe3b",
     "moz_update_channel": "nightly",
     "target_alias": "x86_64-pc-mingw32",
     "target_cpu": "x86_64",
     "target_os": "mingw32",
     "target_vendor": "pc"
   },
-  "buildInfoFilename": "firefox-60.0a1.en-US.win64.json",
-  "buildInfoUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-60.0a1.en-US.win64.json",
-  "downloadInstallerUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-60.0a1.en-US.win64.installer.exe",
-  "downloadZipUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-60.0a1.en-US.win64.zip"
+  "buildInfoFilename": "firefox-64.0a1.en-US.win64.json",
+  "buildInfoUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-64.0a1.en-US.win64.json",
+  "downloadInstallerUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-64.0a1.en-US.win64.installer.exe",
+  "downloadZipUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-64.0a1.en-US.win64.zip"
 }

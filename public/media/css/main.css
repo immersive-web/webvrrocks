@@ -298,8 +298,8 @@ h1.page-heading {
 }
 
 .main h3 {
-  opacity: .5;
   font-size: 1rem;
+  opacity: .5;
 }
 
 .page-heading-link {
@@ -410,7 +410,7 @@ html[data-layout~="headset"][data-layout~="htc_vive"] h3 a {
 html[data-layout~="headset"][data-layout~="samsung_gear_vr"] [data-section]:not(:last-child),
 .header,
 [data-section]:not(:last-child) {
-  border-bottom-color: rgba(0,0,0,.1);
+  border-bottom-color: rgba(0,0,0,.05);
 }
 
 html[data-layout~="headset"][data-layout~="samsung_gear_vr"],
@@ -451,16 +451,14 @@ html:not([data-layout~="home"]) .main p,
 html:not([data-layout~="home"]) .main dl,
 html:not([data-layout~="home"]) .main ol,
 html:not([data-layout~="home"]) .main ul,
-html:not([data-layout~="home"]) .main table,
 .page-intro {
   margin-bottom: 1.5rem;
   max-width: 47rem;
 }
 
 .main h3 {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: .35rem;
-  margin-top: 2.5rem;
+  margin: 1.5rem 0 0;
+  padding-bottom: .75rem;
 }
 
 html:not([data-layout~="home"]) .main li ul,
@@ -1138,6 +1136,23 @@ tr[data-headset="htc_vive"] th a:before {
 
 tr[data-headset="oculus_rift"] th a:before {
   background-image: url(../../oculus_rift/logo.png);
+}
+
+li[data-headset~="oculus_rift"] [data-headset~="oculus_rift"] {
+  margin-right: 2px;
+}
+
+li[data-headset~="oculus_rift"] [data-headset~="oculus_rift"]:before {
+  background: url(../../oculus_rift/logo.png) 0 50% no-repeat;
+  background-size: auto 15px;
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+  height: 24px;
+  margin-left: 3px;
+  margin-right: 5px;
+  opacity: .8;
+  width: 24px;
 }
 
 tr[data-headset="samsung_gear_vr"] th a:before {
@@ -1915,7 +1930,7 @@ img.cover {
   }
 
   html[data-layout~="headset"][data-layout~="htc_vive"] .footer {
-    border-top-color: rgba(0,0,0,.2);
+    border-top-color: rgba(0,0,0,.1);
     color: rgba(0,0,0,.45);
   }
 

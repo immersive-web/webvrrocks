@@ -15,7 +15,7 @@
 
         <a class="page-heading-link" href="{{ browser.about }}">
           <h1 class="browser-name page-heading">{{ browser.name }}</h1>
-          <img class="browser-icon page-heading-icon" src="{{ browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
+          <img class="browser-icon page-heading-icon" src="{{ browser.icon or browser.logo }}" alt="{{ browser.name }}" title="{{ browser.name }}">
         </a>
 
         {% if browser.description_html or browser.description %}
