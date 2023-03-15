@@ -35,27 +35,27 @@
       "downloadZipUrl": "https://download-origin.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-113.0a1.en-US.win64.zip",
       "dateReleased": {
         "originalDateTimeString": "14-Mar-2023 22:16",
-        "datetime": 1678799760000,
+        "datetime": 1678832160000,
         "datetimeString": "Mar 14, 2023, 10:16 PM",
         "dateString": "Mar 14, 2023",
         "timeString": "10:16 PM",
-        "isoString": "2023-03-14T13:16:00.000Z"
+        "isoString": "2023-03-14T22:16:00.000Z"
       },
       "dateReleasedInstaller": {
         "originalDateTimeString": "14-Mar-2023 22:16",
-        "datetime": 1678799760000,
+        "datetime": 1678832160000,
         "datetimeString": "Mar 14, 2023, 10:16 PM",
         "dateString": "Mar 14, 2023",
         "timeString": "10:16 PM",
-        "isoString": "2023-03-14T13:16:00.000Z"
+        "isoString": "2023-03-14T22:16:00.000Z"
       },
       "dateReleasedZip": {
         "originalDateTimeString": "14-Mar-2023 22:16",
-        "datetime": 1678799760000,
+        "datetime": 1678832160000,
         "datetimeString": "Mar 14, 2023, 10:16 PM",
         "dateString": "Mar 14, 2023",
         "timeString": "10:16 PM",
-        "isoString": "2023-03-14T13:16:00.000Z"
+        "isoString": "2023-03-14T22:16:00.000Z"
       },
       "installerFilename": "firefox-113.0a1.en-US.win64.installer.exe",
       "zipFilename": "firefox-113.0a1.en-US.win64.zip",
@@ -450,27 +450,27 @@
   ],
   "dateReleased": {
     "originalDateTimeString": "14-Mar-2023 22:16",
-    "datetime": 1678799760000,
+    "datetime": 1678832160000,
     "datetimeString": "Mar 14, 2023, 10:16 PM",
     "dateString": "Mar 14, 2023",
     "timeString": "10:16 PM",
-    "isoString": "2023-03-14T13:16:00.000Z"
+    "isoString": "2023-03-14T22:16:00.000Z"
   },
   "dateReleasedInstaller": {
     "originalDateTimeString": "14-Mar-2023 22:16",
-    "datetime": 1678799760000,
+    "datetime": 1678832160000,
     "datetimeString": "Mar 14, 2023, 10:16 PM",
     "dateString": "Mar 14, 2023",
     "timeString": "10:16 PM",
-    "isoString": "2023-03-14T13:16:00.000Z"
+    "isoString": "2023-03-14T22:16:00.000Z"
   },
   "dateReleasedZip": {
     "originalDateTimeString": "14-Mar-2023 22:16",
-    "datetime": 1678799760000,
+    "datetime": 1678832160000,
     "datetimeString": "Mar 14, 2023, 10:16 PM",
     "dateString": "Mar 14, 2023",
     "timeString": "10:16 PM",
-    "isoString": "2023-03-14T13:16:00.000Z"
+    "isoString": "2023-03-14T22:16:00.000Z"
   },
   "installerFilename": "firefox-113.0a1.en-US.win64.installer.exe",
   "zipFilename": "firefox-113.0a1.en-US.win64.zip",
