@@ -310,6 +310,7 @@ h1.page-heading {
 .notifications {
   display: flex;
   flex-direction: column-reverse;
+  margin-bottom: 1.5rem;
 }
 
 .notifications .message {
@@ -1772,7 +1773,6 @@ img.cover {
   }
 
   .main h1 {
-    border-top: 1px solid #eee;
     padding-top: 3rem;
   }
 

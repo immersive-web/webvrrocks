@@ -22,14 +22,6 @@
 
     <main id="main" class="main" role="main">
       <div class="container">
-        <section class="notifications" id="notifications">
-          {% for _, browser in browsers %}
-            {% if browser.notifications %}
-              {{ browser_notifications(browser) }}
-            {% endif %}
-          {% endfor %}
-        </section>
-
         <section id="intro" class="section intro" data-section="intro">
           <div class="intro-text">
             <p class="intro-para"><strong>WebVR</strong> is a <a href="https://w3c.github.com/webvr/"><em>JavaScript API</em></a> for creating immersive 3D, <em>Virtual Reality</em> experiences in your <em>browser</em>.</p>
@@ -46,8 +38,25 @@
           </div>
         </section>
 
+        <section id="learn" class="section">
+          <h1>Learn about WebVR</h1>
+
+          <ul class="matrix grid-flex-container">
+            {% include '_learning.html' %}
+          </ul>
+        </section>
+
         <section id="browsers" class="section browsers" data-section="browsers">
-          <h1><a href="#browsers">WebVR Browsers</a></h1>
+          <h1><a href="#browsers">Supported Browsers</a></h1>
+
+          <div class="notifications" id="notifications">
+            {% for _, browser in browsers %}
+              {% if browser.notifications %}
+                {{ browser_notifications(browser) }}
+              {% endif %}
+            {% endfor %}
+          </div>
+
           <ul data-section="browsers" class="matrix grid-flex-container">
               {% for _, browser in browsers %}
                 {{ browser_item(browser.slug) }}
