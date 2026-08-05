@@ -29,7 +29,7 @@
     "nunjucks-cli": "github:cvan/nunjucks-cli#214cea4",
     "nunjucks-includeData": "0.0.9",
     "nunjucks-markdown": "^2.0.1",
-    "shelljs": "^0.8.2",
+    "shelljs": "^0.8.5",
     "shx": "^0.3.2",
     "yonder": "^0.2.0"
   },
