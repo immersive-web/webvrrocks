@@ -1,0 +1,36 @@
+{% from '_helpers.html' import author_item, browsers, site_title %}
+{% set browser = browsers.servo %}
+{% set page = 'servo.html' %}
+<!doctype html>
+<html lang="en" data-layout="secondary" data-browser="{{ browser.slug }}">
+  <head>
+    {% include '_head.html' %}
+    <title>Tools</title>
+  </head>
+  <body>
+    <header id="header" class="header" role="banner">
+      <div class="container section">
+        {% include '_logo.html' %}
+
+        <a class="page-heading-link" href="{{ browser.about }}">
+          <h1 class="browser-name page-heading">Tools for creating WebVR content</h1>
+        </a>
+      </div>
+    </header>
+
+    <main id="main" class="main" role="main">
+      <div class="container">
+
+        <section class="section">
+          <h2><a href="#setup">Instructions</a></h2>
+          <ul class="bullets-light">
+            <li><span>Three.js</span></li>
+            <li><span>A-Frame</span></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    {% include '_footer.html' %}
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "progressive-webvr": {
+    "name": "Progressive Enhancement with WebVR.",
+    "description": "Arturo Paracuellos, the creator of Puzzle Rain and other notable WebVR experiences, runs us through how he made a WebVR experience for weather.com that progressively enhances from mobile phones all the way up to full VR systems like the HTC VIVE.",
+    "url": "https://unboring.net/workflows/progressive-enhancement/",
+    "author": "Arturo Paracuellos",
+    "author_url": "unboring.net",
+    "thumbnail": "articles/progressive-webvr/thumbnail.png",
+    "date_published": "5-April-2017"
+  },
+  "tools": {
+    "name": "Tools for creating WebVR content.",
+    "description": "See all the options available for creating WebVR content",
+    "url": "tools.html",
+    "author": "Casey Yee",
+    "author_url": "twitter.com/whoyee",
+    "thumbnail": "articles/tools/thumbnail.jpg",
+    "date_published": "9-May-2017"
+  }
+}

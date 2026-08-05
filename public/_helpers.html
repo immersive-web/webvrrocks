@@ -61,6 +61,8 @@
 
 {% includeData 'demos.json' as demos %}
 
+{% includeData 'learning.json' as learning %}
+
 {# includeData '_db/webvr_scenes.json' as sites #}
 {# includeData '_db/bugs.json' as bugs #}
 {# includeData '_db/compat_reports.json' as compat_reports #}
@@ -72,6 +74,28 @@
   compat_reports: compat_reports,
   people: people
 } #}
+
+{% macro learning_item (slug) %}
+  {% set learn = learning[slug] %}
+  {% set name = learn.name %}
+  {% set description = learn.description %}
+  {% set url = learn.url %}
+  {% set thumb = learn.thumbnail %}
+  {% set author = learn.author %}
+  {% set datePublished = learn.date_published %}
+  <li class="grid-flex-cell-1of2">
+    <div>
+      <div>
+        <a itemprop="url" href="{{ url }}" class="no-underline">
+          <img src="{{ thumb }}"/>
+          <h3>{{ name }}</h3>
+        </a>
+        <time datetime="{{ datePublished }}">{{ datePublished }}</time>
+        <p>{{ description }}</p>
+      </div>
+    </div>
+  </li>
+{% endmacro %}
 
 {% set browsers = {
   chrome: chrome,
